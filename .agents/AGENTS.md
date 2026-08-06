@@ -1,7 +1,7 @@
 # AI Agent & Developer Guidelines (`IMV_Taxo`)
 
 > **Industrial Metaverse Technology Taxonomy 2026**
-> Project of the **ARENA2036 Research Campus**, funded by the **Ministry of Economic Affairs, Labour and Tourism Baden-Württemberg**.
+> Activity of the **Reallabor 2.0** project at the **ARENA2036 Research Campus**, funded by the **Ministry of Economic Affairs, Labour and Tourism Baden-Württemberg**.
 
 ---
 

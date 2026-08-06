@@ -1,7 +1,7 @@
-# Industrial Metaverse Technology Taxonomy
+# Industrial Metaverse Technology Taxonomy 2026 (`industrial-metaverse-taxonomy`)
 
 > **Offenes Forschungs-Audit & Interaktiver Taxonomie-Browser für den Industrial Metaverse Tech Stack**
-> Ein Projekt des **ARENA2036 Forschungscampus**, gefördert durch das **Ministerium für Wirtschaft, Arbeit und Tourismus Baden-Württemberg**.
+> Ein Arbeitsergebnis im Rahmen des übergeordneten Forschungsprojekts **Reallabor 2.0** des **ARENA2036 Forschungscampus**, gefördert durch das **Ministerium für Wirtschaft, Arbeit und Tourismus Baden-Württemberg**.
 
 [![GitHub Pages Deployment](https://github.com/ARENA2036/industrial-metaverse-taxonomy/actions/workflows/deploy.yml/badge.svg)](https://github.com/ARENA2036/industrial-metaverse-taxonomy/actions/workflows/deploy.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-orange.svg)](LICENSE)
