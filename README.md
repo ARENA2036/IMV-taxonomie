@@ -1,4 +1,4 @@
-# Industrial Metaverse Technology Taxonomy 2026 (`IMV_Taxo`)
+# Industrial Metaverse Technology Taxonomy
 
 > **Offenes Forschungs-Audit & Interaktiver Taxonomie-Browser für den Industrial Metaverse Tech Stack**
 > Ein Projekt des **ARENA2036 Forschungscampus**, gefördert durch das **Ministerium für Wirtschaft, Arbeit und Tourismus Baden-Württemberg**.
