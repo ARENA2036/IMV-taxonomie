@@ -1,9 +1,9 @@
-# Industrial Metaverse Technology Taxonomy 2026 (`industrial-metaverse-taxonomy`)
+# Industrial Metaverse Technology Taxonomy 2026 (`IMV-taxonomie`)
 
 > **Offenes Forschungs-Audit & Interaktiver Taxonomie-Browser für den Industrial Metaverse Tech Stack**
 > Ein Arbeitsergebnis im Rahmen des übergeordneten Forschungsprojekts **Reallabor 2.0** des **ARENA2036 Forschungscampus**, gefördert durch das **Ministerium für Wirtschaft, Arbeit und Tourismus Baden-Württemberg**.
 
-[![GitHub Pages Deployment](https://github.com/ARENA2036/industrial-metaverse-taxonomy/actions/workflows/deploy.yml/badge.svg)](https://github.com/ARENA2036/industrial-metaverse-taxonomy/actions/workflows/deploy.yml)
+[![GitHub Pages Deployment](https://github.com/ARENA2036/IMV-taxonomie/actions/workflows/deploy.yml/badge.svg)](https://github.com/ARENA2036/IMV-taxonomie/actions/workflows/deploy.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-orange.svg)](LICENSE)
 [![OpenUSD Ready](https://img.shields.io/badge/OpenUSD-Native-blue.svg)](https://aousd.org/)
 [![Architecture: 5 Layers](https://img.shields.io/badge/Architecture-5%20Layers-orange.svg)](#)
@@ -13,7 +13,7 @@
 
 ## 📌 Projekt-Übersicht & Philosophie
 
-Das Projekt **industrial-metaverse-taxonomy** auditiert und strukturiert **91 Technologien, Protokolle und Standards** für den Aufbau digitaler Zwillinge und vernetzter Industrie-4.0-Fabriken im **Industrial Metaverse**.
+Das Projekt **IMV-taxonomie** auditiert und strukturiert **91 Technologien, Protokolle und Standards** für den Aufbau digitaler Zwillinge und vernetzter Industrie-4.0-Fabriken im **Industrial Metaverse**.
 
 Das System basiert auf dem **5-Schichten-Architekturmodell der ARENA2036**:
 * **Schicht 1: Erfassung & OT-Datenerfassung** (LiDAR/SLAM, 360°, OPC UA, MQTT, IO-Link)
@@ -56,7 +56,7 @@ graph BT
 ## 📁 Bereinigte Repository-Struktur
 
 ```
-industrial-metaverse-taxonomy/
+IMV-taxonomie/
 ├── index.html                  # Minimalist Greeter Landing Page (2-Panel Split Layout)
 ├── browser.html                # Interaktiver Taxonomie-Browser (Fixed Navbar & Dual Scroll Containers)
 ├── architecture.html           # Technische Architektur & 5-Schichten Spezifikation
@@ -146,7 +146,7 @@ Dieses Repository ist explizit als **100% AI Agent-Readable** strukturiert:
 ## 🌐 Deploying to GitHub Pages
 
 Jeder Commit auf den `main`-Branch löst den GitHub-Actions-Workflow `.github/workflows/deploy.yml` aus und schaltet die statische Seite live unter:
-`https://ARENA2036.github.io/industrial-metaverse-taxonomy/`
+`https://ARENA2036.github.io/IMV-taxonomie/`
 
 ---
 

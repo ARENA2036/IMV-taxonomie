@@ -1,6 +1,6 @@
 # Product Requirements Document (`PRD.md`)
 
-> **Industrial Metaverse Technology Taxonomy 2026 (`industrial-metaverse-taxonomy`)**  
+> **Industrial Metaverse Technology Taxonomy 2026 (`IMV-taxonomie`)**  
 > Product Specifications, Target Personas, Cost Tier Models, and Functional Requirements.
 
 ---

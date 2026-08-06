@@ -1,13 +1,13 @@
 # Technical Architecture Specifications (`ARCHITECTURE.md`)
 
-> **Industrial Metaverse Technology Taxonomy 2026 (`IMV_Taxo`)**  
+> **Industrial Metaverse Technology Taxonomy 2026 (`IMV-taxonomie`)**  
 > Pure JSON Architecture, Zero-CORS Dual Loader, Data Pipeline, and 5-Layer Stack Specifications.
 
 ---
 
 ## 1. System Vision & Pure JSON Architecture
 
-The architecture of **IMV_Taxo** enforces a **Single Source of Truth** pattern. All technical metadata exists exclusively in canonical JSON files (`profiles/*.json`), removing code duplication between JavaScript data wrappers and HTML templates.
+The architecture of **IMV-taxonomie** enforces a **Single Source of Truth** pattern. All technical metadata exists exclusively in canonical JSON files (`profiles/*.json`), removing code duplication between JavaScript data wrappers and HTML templates.
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
