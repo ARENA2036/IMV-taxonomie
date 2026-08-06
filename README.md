@@ -1,9 +1,9 @@
-# Industrial Metaverse Technology Taxonomy 2026 (`IMV_Taxo`)
+# Industrial Metaverse Technology Taxonomy 2026 (`industrial-metaverse-taxonomy`)
 
 > **Offenes Forschungs-Audit & Interaktiver Taxonomie-Browser für den Industrial Metaverse Tech Stack**
 > Ein Projekt des **ARENA2036 Forschungscampus**, gefördert durch das **Ministerium für Wirtschaft, Arbeit und Tourismus Baden-Württemberg**.
 
-[![GitHub Pages Deployment](https://github.com/ARENA2036/IMV_Taxo/actions/workflows/deploy.yml/badge.svg)](https://github.com/ARENA2036/IMV_Taxo/actions/workflows/deploy.yml)
+[![GitHub Pages Deployment](https://github.com/ARENA2036/industrial-metaverse-taxonomy/actions/workflows/deploy.yml/badge.svg)](https://github.com/ARENA2036/industrial-metaverse-taxonomy/actions/workflows/deploy.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-orange.svg)](LICENSE)
 [![OpenUSD Ready](https://img.shields.io/badge/OpenUSD-Native-blue.svg)](https://aousd.org/)
 [![Architecture: 5 Layers](https://img.shields.io/badge/Architecture-5%20Layers-orange.svg)](#)
@@ -13,7 +13,7 @@
 
 ## 📌 Projekt-Übersicht & Philosophie
 
-Das Projekt **IMV_Taxo** auditiert und strukturiert **91 Technologien, Protokolle und Standards** für den Aufbau digitaler Zwillinge und vernetzter Industrie-4.0-Fabriken im **Industrial Metaverse**.
+Das Projekt **industrial-metaverse-taxonomy** auditiert und strukturiert **91 Technologien, Protokolle und Standards** für den Aufbau digitaler Zwillinge und vernetzter Industrie-4.0-Fabriken im **Industrial Metaverse**.
 
 Das System basiert auf dem **5-Schichten-Architekturmodell der ARENA2036**:
 * **Schicht 1: Erfassung & OT-Datenerfassung** (LiDAR/SLAM, 360°, OPC UA, MQTT, IO-Link)
@@ -56,8 +56,8 @@ graph BT
 ## 📁 Bereinigte Repository-Struktur
 
 ```
-IMV_Taxo/
-├── index.html                  # Greeter Landing Page & Hero KPI Overview (5 Schichten)
+industrial-metaverse-taxonomy/
+├── index.html                  # Minimalist Greeter Landing Page (2-Panel Split Layout)
 ├── browser.html                # Interaktiver Taxonomie-Browser (Fixed Navbar & Dual Scroll Containers)
 ├── architecture.html           # Technische Architektur & 5-Schichten Spezifikation
 ├── impressum.html              # Impressum & Non-Commercial KMU Disclaimer
@@ -72,7 +72,10 @@ IMV_Taxo/
 │   └── ... (91 JSON-Dateien)
 ├── scripts/
 │   └── generate_profiles.js    # Kanonischer JSON Indexer & Manifest Generator (5 Schichten)
-├── assets/                     # Offizielle ARENA2036 Logo-Bilddateien
+├── assets/                     # 3 Aktive Marken-Logos (ARENA2036, Industrial Metaverse, Wirtschaftsministerium BW)
+│   ├── ARENA2036_combinationmark_orange_black.png
+│   ├── BaWue_WM_Absenderlogo_rgb_pos_Gefoerdert.svg
+│   └── Metaverse Logo bunt.svg
 ├── .agents/
 │   └── AGENTS.md               # AI Agent Guidelines & Repository Architecture Specifications
 ├── .gitignore                  # Git Ignore Konfiguration
@@ -143,7 +146,7 @@ Dieses Repository ist explizit als **100% AI Agent-Readable** strukturiert:
 ## 🌐 Deploying to GitHub Pages
 
 Jeder Commit auf den `main`-Branch löst den GitHub-Actions-Workflow `.github/workflows/deploy.yml` aus und schaltet die statische Seite live unter:
-`https://<organization>.github.io/IMV_Taxo/`
+`https://ARENA2036.github.io/industrial-metaverse-taxonomy/`
 
 ---
 
