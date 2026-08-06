@@ -1,0 +1,73 @@
+{
+  "refCode": "IND-META-2026-PTC-ONSHAPE",
+  "categoryCode": "1.1",
+  "categoryName": "Mechanisches CAD (MCAD)",
+  "name": "PTC Onshape",
+  "subtitle": "Pure Cloud-Native Multi-User CAD",
+  "vendor": "PTC Inc.",
+  "hq": "Boston, MA, USA",
+  "businessModel": "100% Pure Cloud SaaS Subscription",
+  "url": "https://onshape.com",
+  "tier": "Tier 1",
+  "costLabel": "≤ €30k",
+  "status": "EVALUIERT",
+  "overview": "Rein browserbasierte Cloud-CAD- und PDM-Plattform für die synchrone Multi-User-Bearbeitung von 3D-Modellen in Echtzeit.",
+  "features": [
+    {
+      "title": "Multi-User Live Editing",
+      "desc": "Gleichzeitiges kollaboratives Konstruieren im Browser wie in Google Docs."
+    },
+    {
+      "title": "FeatureScript",
+      "desc": "Eigene parametrische Konstruktionsfunktionen mittels offener Skriptsprache."
+    },
+    {
+      "title": "Cloud PDM",
+      "desc": "Revisionsverwaltung ohne Auschecken direkt in der Datenbank."
+    }
+  ],
+  "inputs": [
+    "STEP",
+    "IGES",
+    "Parasolid",
+    "SolidWorks",
+    "STL"
+  ],
+  "outputs": [
+    "OpenUSD (.usd)",
+    "glTF 2.0",
+    "STEP AP242",
+    "OBJ"
+  ],
+  "bridges": [
+    "PTC Arena PLM",
+    "NVIDIA Omniverse Cloud",
+    "WebXR"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Läuft flüssig im Browser; komplexe Berechnungen erfolgen serverseitig."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Zero-Installation-Aufwand und sofortiger API-Zugriff für automatisierte USD-Pipelines."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Setzt dauerhafte Bandbreite und Akzeptanz von Cloud-Hosting voraus."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Web Bridge / API Export",
+    "sovereignty": "SOC2 / US Cloud",
+    "openStandard": "STEP AP242 / glTF 2.0"
+  },
+  "deployment": {
+    "effort": "Sehr Gering (< 1 Tag)",
+    "mode": "Web Browser Native",
+    "maturity": "Produktiv",
+    "area": "Kollaborative Produktentwicklung"
+  },
+  "staffing": "1x Cloud CAD Engineer (25% FTE)"
+}

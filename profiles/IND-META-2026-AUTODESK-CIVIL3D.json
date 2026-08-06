@@ -1,0 +1,72 @@
+{
+  "refCode": "IND-META-2026-AUTODESK-CIVIL3D",
+  "categoryCode": "1.2",
+  "categoryName": "BIM, Bauwesen & Infrastruktur (AEC)",
+  "name": "Autodesk Civil 3D",
+  "subtitle": "Gelände- & Infrastruktur-BIM für Fabrikareale",
+  "vendor": "Autodesk Inc.",
+  "hq": "San Francisco, CA, USA",
+  "businessModel": "Annual Subscription",
+  "url": "https://autodesk.com/civil-3d",
+  "tier": "Tier 2",
+  "costLabel": "≤ €100k",
+  "status": "EVALUIERT",
+  "overview": "Infrastruktur- und Tiefbau-Software für die Erschließungsplanung, digitale Geländemodellierung und Trassierung von Fabrikarealen.",
+  "features": [
+    {
+      "title": "Dynamische Geländemodelle",
+      "desc": "Hochpräzise DTM-Erzeugung für Erdmassenberechnung und Entwässerung."
+    },
+    {
+      "title": "Kanal- & Rohrnetze",
+      "desc": "Unterirdische Versorgungsnetze und Erdkabeltrassen."
+    },
+    {
+      "title": "GIS-Datenintegration",
+      "desc": "Direkte Anbindung von ESRI ArcGIS-Kartenebenen."
+    }
+  ],
+  "inputs": [
+    "DWG",
+    "LandXML",
+    "DEM",
+    "Point Cloud (E57/LAS)"
+  ],
+  "outputs": [
+    "IFC4 Civil",
+    "LandXML",
+    "DWG",
+    "OpenUSD (.usd)"
+  ],
+  "bridges": [
+    "ESRI ArcGIS",
+    "Autodesk InfraWorks",
+    "NVIDIA Omniverse"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Unverzichtbar für großflächige Werksgelände und Logistikanbindungen."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Nahtlose Verbindung von georeferenzierte Geländedaten mit Hochbau-BIM."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Export in 3D-Echtzeit-Engines erfordert Netzvereinfachung."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Extension Bridge",
+    "sovereignty": "SOC2 / ISO Compliant",
+    "openStandard": "LandXML / IFC Civil"
+  },
+  "deployment": {
+    "effort": "Mittel (2-3 Wochen)",
+    "mode": "Desktop App",
+    "maturity": "Produktiv",
+    "area": "Werksinfrastruktur & Erschließung"
+  },
+  "staffing": "1x Infrastrukturingenieur (25% FTE)"
+}

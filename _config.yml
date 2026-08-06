@@ -1,0 +1,31 @@
+# Industrial Metaverse Tech Stack Audit 2026 — Jekyll Configuration for GitHub Pages
+
+title: "Industrial Metaverse Tech Stack Audit 2026"
+description: "Master Spezifikation & Taxonomie Index für das Industrial Metaverse"
+repository: "ARENA2036/IMV_Taxo"
+
+# Theme Configuration
+theme: jekyll-theme-primer
+
+# Build Settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Include static files
+include:
+  - "data"
+  - "profiles"
+  - "assets"
+  - "scripts"
+
+# Exclude unnecessary build files
+exclude:
+  - "node_modules"
+  - ".gemini"
+  - ".agents"
+  - "package-lock.json"

@@ -1,0 +1,71 @@
+{
+  "refCode": "IND-META-2026-HALOCLINE",
+  "categoryCode": "5.0",
+  "categoryName": "Robotik & Fabriksimulation",
+  "name": "Halocline (VR Shopfloor Layouting)",
+  "subtitle": "Interaktive VR-Montage- & Cardboard-Planung",
+  "vendor": "Halocline GmbH",
+  "hq": "Magdeburg, Deutschland (EU)",
+  "businessModel": "Annual Subscription per VR Station",
+  "url": "https://halocline.io",
+  "tier": "Tier 1",
+  "costLabel": "≤ €30k",
+  "status": "EMPFOHLEN",
+  "overview": "Virtual-Reality-Software zur interaktiven Montageplanung in 1:1 Maßstab. Ersetzt Physisches Cardboard Engineering durch VR-Erlebnisse.",
+  "features": [
+    {
+      "title": "1:1 Maßstab Immersiv",
+      "desc": "Direktes Anordnen von Kisten und Regalen im virtuellen Raum."
+    },
+    {
+      "title": "Ergonomische Reichweiten",
+      "desc": "Visuelle Einblendung von Greifräumen und Biegehaltungen."
+    },
+    {
+      "title": "CAD/BIM Ingestion",
+      "desc": "Importiert Gebäudewände und Maschinenmodelle nach VR."
+    }
+  ],
+  "inputs": [
+    "STEP",
+    "OBJ",
+    "FBX",
+    "VR Headset Input"
+  ],
+  "outputs": [
+    "OpenUSD (.usd)",
+    "CAD Modifikationen",
+    "Ergonomic Reports"
+  ],
+  "bridges": [
+    "Meta Quest 3",
+    "HTC Vive",
+    "NVIDIA Omniverse"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Ersetzt physischen Kartonmodellbau und spart Wochen im Planungsprozess."
+    },
+    {
+      "title": "Vorteile",
+      "text": "100% EU-Software mit intuitiver Bedienbarkeit für Werker ohne Programmierkenntnisse."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Erfordert VR-Brillen für alle beteiligten Planer."
+    }
+  ],
+  "compliance": {
+    "omniverse": "OpenXR Integration",
+    "sovereignty": "100% EU Souverän (Deutschland)",
+    "openStandard": "OpenXR / STEP"
+  },
+  "deployment": {
+    "effort": "Gering (1-2 Tage)",
+    "mode": "VR Workstation / Quest",
+    "maturity": "Produktiv",
+    "area": "Immersive Montageplanung"
+  },
+  "staffing": "1x Ergonom / Shopfloor Planer (25% FTE)"
+}

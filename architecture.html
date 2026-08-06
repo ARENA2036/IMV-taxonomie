@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technische Architektur & System-Spezifikation — Industrial Metaverse Taxonomie 2026</title>
+  <meta name="description" content="Technische Architektur-Spezifikation für die Industrial Metaverse Technologie-Taxonomie 2026. 5-Schichten Modell der ARENA2036.">
+  
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Mermaid.js Diagram Engine -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+  <!-- Minimalist Header Navbar -->
+  <header class="app-navbar">
+    <div class="app-brand">
+      <a href="./index.html" style="display: flex; align-items: center; text-decoration: none;">
+        <div class="brand-logos">
+          <img src="./assets/ARENA2036_combinationmark_orange_black.png" alt="ARENA2036 Logo" class="logo-img" title="ARENA2036 Forschungscampus">
+          <div class="logo-divider"></div>
+          <img src="./assets/Metaverse Logo bunt.svg" alt="Industrial Metaverse Logo" class="logo-img" title="Industrial Metaverse 2026">
+          <div class="logo-divider"></div>
+          <img src="./assets/BaWue_WM_Absenderlogo_rgb_pos_Gefoerdert.svg" alt="Gefördert durch Baden-Württemberg" class="logo-img" title="Gefördert durch Ministerium für Wirtschaft, Arbeit und Tourismus Baden-Württemberg">
+        </div>
+      </a>
+      
+      <div class="app-title-group">
+        <h1 class="app-title">IMV TAXONOMIE 2026</h1>
+        <p class="app-subtitle">ARENA2036 <span class="repo-branch-badge"><i class="fa-solid fa-code-branch"></i> main</span></p>
+      </div>
+    </div>
+
+    <div class="nav-actions">
+      <a href="./index.html" class="btn"><i class="fa-solid fa-house"></i> Startseite</a>
+      <a href="./browser.html" class="btn btn-primary"><i class="fa-solid fa-layer-group"></i> Taxonomie Browser</a>
+      <a href="./impressum.html" class="btn"><i class="fa-solid fa-scale-balanced"></i> Impressum</a>
+    </div>
+  </header>
+
+  <main class="greeter-container" style="max-width: 1000px; padding: 40px 20px;">
+    
+    <div style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 12px; padding: 40px; display: flex; flex-direction: column; gap: 32px;">
+      
+      <div>
+        <span class="greeter-tag"><i class="fa-solid fa-diagram-project"></i> ARENA2036 Master-Spezifikation</span>
+        <h1 style="font-family: var(--font-heading); font-size: 28px; font-weight: 900; color: var(--text-heading); margin-top: 8px;">
+          Technische System-Architektur & 5-Schichten Tech-Stack
+        </h1>
+        <p style="font-size: 14px; line-height: 1.6; color: var(--text-body); margin-top: 10px;">
+          Diese Spezifikation beschreibt die technische Architektur des Industrial Metaverse Taxonomie-Browsers. Das System basiert auf einem <strong>statischen 5-Schichten-Modell (Bottom-Up)</strong>, einer reinen <strong>JSON Single Source of Truth</strong> und einer <strong>Zero-CORS Client-Engine</strong> für den direkten Betrieb auf GitHub Pages sowie im lokalen Dateisystem.
+        </p>
+      </div>
+
+      <!-- MERMAID GRAPH SECTION -->
+      <section style="background: var(--bg-subtle); border: 1px solid var(--border-subtle); border-radius: 10px; padding: 24px;">
+        <h2 class="section-heading" style="font-size: 16px; margin-bottom: 12px;">
+          <i class="fa-solid fa-network-wired"></i> 5-Schichten Industrial Metaverse Datenfluss (ARENA2036 Standard)
+        </h2>
+        <p style="font-size: 12.5px; color: var(--text-body); margin-bottom: 20px;">
+          Der digitale Zwilling wird von der physikalischen Erfassung am Shopfloor (Schicht 1) bis zur räumlichen Immersion im Headset (Schicht 5) verarbeitet:
+        </p>
+
+        <div style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 8px; padding: 20px; display: flex; justify-content: center; overflow-x: auto;">
+          <pre class="mermaid">
+            graph BT
+                S1["SCHICHT 1: Erfassung & OT-Datenerfassung<br/><i>(Matterport, FARO, NavVis, OPC UA, MQTT, IO-Link)</i>"]
+                S2["SCHICHT 2: Geometrie & CAD-Pre-Processing<br/><i>(PTC Creo, Revit, Rhino+Grasshopper, Blender, OpenUSD, glTF)</i>"]
+                S3["SCHICHT 3: Semantische Middleware & Datenräume<br/><i>(Eclipse BaSyx AAS, Eclipse Dataspace Components EDC)</i>"]
+                S4["SCHICHT 4: Simulation & Virtuelle Inbetriebnahme<br/><i>(ISG-Virtuos, Visual Components, Ansys, COMSOL, Isaac Sim)</i>"]
+                S5["SCHICHT 5: Räumliche Immersion & Rendering<br/><i>(WebXR, Unity Industry, Unreal Engine 5, NVIDIA Omniverse)</i>"]
+
+                S1 -->|Reale Sensoren & Scans| S2
+                S2 -->|3D Geometrie & CAD Master| S3
+                S1 -->|OT Live-Telemetrie| S3
+                S3 -->|Semantisch Angereicherter Zwilling| S4
+                S4 -->|Echtzeit-Physik & Kinematik| S5
+          </pre>
+        </div>
+      </section>
+
+      <hr style="border: none; border-top: 1px solid var(--border-subtle);">
+
+      <!-- SCHICHTEN DETAIL-ANALYSE -->
+      <section style="display: flex; flex-direction: column; gap: 20px;">
+        <h2 style="font-family: var(--font-heading); font-size: 20px; font-weight: 800; color: var(--text-heading);">
+          1. Detaillierte Spezifikation der 5 Architektur-Schichten
+        </h2>
+
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          
+          <div style="border: 1px solid #FFD8A8; background: #FFF7ED; border-radius: 8px; padding: 18px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <strong style="color: #C2410C; font-family: var(--font-mono); font-size: 12px;">SCHICHT 1</strong>
+              <span style="font-size: 11px; color: var(--text-muted);">Kategorien 6.1–6.5, 6.1-AI, 7.0, 8.1</span>
+            </div>
+            <h3 style="font-size: 15px; font-weight: 800; color: var(--text-heading);">Erfassung & OT-Datenerfassung</h3>
+            <p style="font-size: 13px; line-height: 1.5; color: var(--text-body); margin-top: 6px;">
+              Erfassung der physikalischen Realität ("Ground Truth") mittels 3D-LiDAR-Scanning, Mobile SLAM, Autonomen Drohnen und Fotogrammetrie sowie OT-Feldbus-Anbindung (OPC UA, MQTT, IO-Link).
+            </p>
+          </div>
+
+          <div style="border: 1px solid #A7F3D0; background: #ECFDF5; border-radius: 8px; padding: 18px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <strong style="color: #059669; font-family: var(--font-mono); font-size: 12px;">SCHICHT 2</strong>
+              <span style="font-size: 11px; color: var(--text-muted);">Kategorien 1.1, 1.2, 2.0, 10.0</span>
+            </div>
+            <h3 style="font-size: 15px; font-weight: 800; color: var(--text-heading);">Geometrie & CAD-Pre-Processing</h3>
+            <p style="font-size: 13px; line-height: 1.5; color: var(--text-body); margin-top: 6px;">
+              Erzeugung und Konvertierung der 3D-Mastergeometrie aus OEM-MCAD (Siemens NX, Creo) und BIM (Revit) in offene Standardformate wie OpenUSD, STEP, JT und glTF 2.0.
+            </p>
+          </div>
+
+          <div style="border: 1px solid #BFDBFE; background: #EFF6FF; border-radius: 8px; padding: 18px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <strong style="color: #2563EB; font-family: var(--font-mono); font-size: 12px;">SCHICHT 3</strong>
+              <span style="font-size: 11px; color: var(--text-muted);">Kategorien 8.2, 8.3, 9.0</span>
+            </div>
+            <h3 style="font-size: 15px; font-weight: 800; color: var(--text-heading);">Semantische Middleware & Datenräume</h3>
+            <p style="font-size: 13px; line-height: 1.5; color: var(--text-body); margin-top: 6px;">
+              Hersteller-unabhängige Verknüpfung von Geometrie und OT-Telemetrie über die Verwaltungsschale (Eclipse BaSyx AAS - IEC 63278) sowie souveräne Datenräume (EDC / GAIA-X) für den EU-Produktpass (DPP).
+            </p>
+          </div>
+
+          <div style="border: 1px solid #FDE68A; background: #FEF3C7; border-radius: 8px; padding: 18px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <strong style="color: #D97706; font-family: var(--font-mono); font-size: 12px;">SCHICHT 4</strong>
+              <span style="font-size: 11px; color: var(--text-muted);">Kategorien 4.1, 4.2, 4.3, 5.0</span>
+            </div>
+            <h3 style="font-size: 15px; font-weight: 800; color: var(--text-heading);">Simulation & Virtuelle Inbetriebnahme (VIBn)</h3>
+            <p style="font-size: 13px; line-height: 1.5; color: var(--text-body); margin-top: 6px;">
+              Numerische Solver (Ansys, COMSOL), Hardware-in-the-Loop Echtzeitsimulation (ISG-virtuos), Kinematik und Synthetische Datengenerierung / Physical AI (NVIDIA Isaac Sim).
+            </p>
+          </div>
+
+          <div style="border: 1px solid #DDD6FE; background: #F3E8FF; border-radius: 8px; padding: 18px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <strong style="color: #7C3AED; font-family: var(--font-mono); font-size: 12px;">SCHICHT 5</strong>
+              <span style="font-size: 11px; color: var(--text-muted);">Kategorien 3.0, 11.0</span>
+            </div>
+            <h3 style="font-size: 15px; font-weight: 800; color: var(--text-heading);">Räumliche Immersion & Rendering</h3>
+            <p style="font-size: 13px; line-height: 1.5; color: var(--text-body); margin-top: 6px;">
+              Präsentation und menschliche Interaktion über WebXR, Unreal Engine 5, NVIDIA Omniverse RTX und Spatial Computing Hardware (Apple Vision Pro, Meta Quest 3, Varjo XR-4).
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <hr style="border: none; border-top: 1px solid var(--border-subtle);">
+
+      <!-- 2. REINE JSON DATA ARCHITEKTUR -->
+      <section style="display: flex; flex-direction: column; gap: 16px;">
+        <h2 style="font-family: var(--font-heading); font-size: 20px; font-weight: 800; color: var(--text-heading);">
+          2. Pure JSON Single Source of Truth & Zero-CORS Architektur
+        </h2>
+        <p style="font-size: 13.5px; line-height: 1.6; color: var(--text-body);">
+          Um höchste Flexibilität und maximale Performance als statische GitHub Pages Seite zu garantieren, werden keine Datenbank-Server verwendet:
+        </p>
+
+        <ul style="font-size: 13px; line-height: 1.7; color: var(--text-body); padding-left: 20px;">
+          <li><strong>Kanonische Profil-Dateien:</strong> Jede Technologie ist als einzelne JSON-Datei im Ordner <code>profiles/[refCode].json</code> definiert.</li>
+          <li><strong>Automatisches Indizieren:</strong> Das Skript <code>scripts/generate_profiles.js</code> kompiliert den zentralen Manifest-Index <code>data/index.json</code>.</li>
+          <li><strong>Zero-CORS Fallback:</strong> Für lokale Testläufe über das Dateisystem (<code>file://</code> Protokoll) ohne lokalen Webserver wird zusätzlich <code>data/index_data.js</code> erzeugt (<code>window.INDEX_DATA</code>).</li>
+        </ul>
+      </section>
+
+      <!-- Footer Navigation Button -->
+      <div style="margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center;">
+        <a href="./index.html" class="btn"><i class="fa-solid fa-arrow-left"></i> Zurück zur Startseite</a>
+        <a href="./browser.html" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass-chart"></i> Taxonomie Browser Öffnen →</a>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer style="text-align: center; padding: 24px; font-size: 12px; color: var(--text-muted); border-top: 1px solid var(--border-subtle);">
+    ARENA2036 Industrial Metaverse Taxonomy 2026 — Master Spezifikation
+  </footer>
+
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
+    }
+  </script>
+
+</body>
+</html>

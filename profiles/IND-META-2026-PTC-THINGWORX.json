@@ -1,0 +1,70 @@
+{
+  "refCode": "IND-META-2026-PTC-THINGWORX",
+  "categoryCode": "9.0",
+  "categoryName": "Enterprise Cloud-Zwillinge",
+  "name": "PTC ThingWorx IIoT Platform",
+  "subtitle": "Smart Factory Application Engine & AR Service",
+  "vendor": "PTC Inc.",
+  "hq": "Boston, MA, USA",
+  "businessModel": "Enterprise License / SaaS Subscription",
+  "url": "https://ptc.com/thingworx",
+  "tier": "Tier 3",
+  "costLabel": "> €100k",
+  "status": "EVALUIERT",
+  "overview": "Etablierte Enterprise-IIoT-Plattform für schnelle Industrieanwendungen, Maschinenüberwachung und AR-Außendienst-Bereitstellung.",
+  "features": [
+    {
+      "title": "Kepware OPC Integration",
+      "desc": "Nativer Hochleistungs-Treiber für Industriesteuerungen."
+    },
+    {
+      "title": "Vuforia AR Integration",
+      "desc": "Direkte Bereitstellung von Live-IIoT-Daten in AR-Servicebrillen."
+    },
+    {
+      "title": "Mashup Builder",
+      "desc": "Drag-and-Drop Dashboard-Erstellung für Werkstatt-OEE."
+    }
+  ],
+  "inputs": [
+    "OPC UA (Kepware)",
+    "MQTT",
+    "REST API",
+    "Modbus"
+  ],
+  "outputs": [
+    "ThingWorx REST Services",
+    "Vuforia AR Streams"
+  ],
+  "bridges": [
+    "PTC Windchill",
+    "PTC Creo",
+    "NVIDIA Omniverse"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Reife Enterprise-Plattform installiert in Tausenden Werken weltweit."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Bündelt Kepware-Konnektivität mit Vuforia AR out-of-the-box."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Hoher Lizenzkostenfußabdruck."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Telemetry Bridge",
+    "sovereignty": "SOC2 Compliant",
+    "openStandard": "OPC UA / REST"
+  },
+  "deployment": {
+    "effort": "Hoch (3-4 Wochen)",
+    "mode": "On-Prem Server / Cloud",
+    "maturity": "Produktiv",
+    "area": "IIoT Dashboards & AR Service"
+  },
+  "staffing": "1x ThingWorx Developer (50% FTE)"
+}

@@ -1,0 +1,73 @@
+{
+  "refCode": "IND-META-2026-GLTF-20",
+  "categoryCode": "10.0",
+  "categoryName": "Datenformate & OpenUSD-Standards",
+  "name": "glTF 2.0 (Khronos Group - Runtime 3D Asset)",
+  "subtitle": "Das \"JPEG für 3D\" im Web & Mobile",
+  "vendor": "Khronos Group",
+  "hq": "Beaverton, OR, USA / Global Consortium",
+  "businessModel": "Open Royalty-Free Standard",
+  "url": "https://khronos.org/gltf",
+  "tier": "Tier 1",
+  "costLabel": "Open Standard / €0",
+  "status": "STANDARDIZIERT WEB3D",
+  "overview": "Lizenzfreie Spezifikation für die effiziente Übertragung und das schnelle Laden von 3D-Szenen und PBR-Modellen im Webbrowser und auf Mobilgeräten.",
+  "features": [
+    {
+      "title": "PBR Material Standard",
+      "desc": "Standardisierter Metallic-Roughness PBR-Shading-Workflow."
+    },
+    {
+      "title": "Kompaktes JSON/Binär-Format",
+      "desc": "Ultra-schnelles Laden direkt in GPU-Speicherpuffer."
+    },
+    {
+      "title": "Draco Geometrie-Kompression",
+      "desc": "Reduziert Dateigrößen von 3D-Meshes um bis zu 90%."
+    }
+  ],
+  "inputs": [
+    "Blender",
+    "3ds Max",
+    "Maya",
+    "Revit",
+    "CAD Exporte"
+  ],
+  "outputs": [
+    ".gltf (JSON + Bin)",
+    ".glb (Self-Contained Binary)"
+  ],
+  "bridges": [
+    "WebXR",
+    "Godot Engine",
+    "Unity",
+    "Unreal Engine 5",
+    "NVIDIA Omniverse"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Universelles Laufzeitformat für 3D-Objekte in Webbrowsern und mobilen Tablets."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Wird nativ von allen modernen Webbrowsern ohne Plugins unterstützt."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Ungeeignet für zerstörungsfreies Layer-Editing oder CAD-Historien."
+    }
+  ],
+  "compliance": {
+    "omniverse": "glTF Extension",
+    "sovereignty": "Khronos Open Standard",
+    "openStandard": "ISO/IEC 12113"
+  },
+  "deployment": {
+    "effort": "Sehr Gering (< 1 Tag)",
+    "mode": "Web Delivery Standard",
+    "maturity": "Produktiv",
+    "area": "Web3D Asset-Ausgabe"
+  },
+  "staffing": "1x Web3D Developer (10% FTE)"
+}

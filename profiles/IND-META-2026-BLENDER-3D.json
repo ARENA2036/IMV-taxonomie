@@ -1,0 +1,74 @@
+{
+  "refCode": "IND-META-2026-BLENDER-3D",
+  "categoryCode": "2.0",
+  "categoryName": "DCC & Generatives 3D-Design",
+  "name": "Blender 3D Suite",
+  "subtitle": "Open-Source DCC & OpenUSD Pipeline Workhorse",
+  "vendor": "Blender Foundation",
+  "hq": "Amsterdam, Niederlande (EU)",
+  "businessModel": "Free & Open Source (GPL v3)",
+  "url": "https://blender.org",
+  "tier": "Tier 1",
+  "costLabel": "Open Source / €0",
+  "status": "ESSENTIAL DCC",
+  "overview": "Open-Source 3D-Creation Suite für Modellierung, UV-Unwrapping, Texture-Baking und prozedurale Asset-Aufbereitung. Dient als primäres Bereinigungswerkzeug für digitale Zwillinge.",
+  "features": [
+    {
+      "title": "Geometry Nodes",
+      "desc": "Prozedurale Erzeugung von Schutzzäunen, Rohrleitungen und Fabrik-Requisiten."
+    },
+    {
+      "title": "Cycles & EEVEE Engines",
+      "desc": "Physikalisch basiertes PBR-Material-Preview und Textur-Baking."
+    },
+    {
+      "title": "Nativer OpenUSD I/O",
+      "desc": "Direkter C++ OpenUSD-Export und -Import von Szenengraphen."
+    }
+  ],
+  "inputs": [
+    "FBX",
+    "OBJ",
+    "glTF 2.0",
+    "STL",
+    "USD",
+    "Alembic"
+  ],
+  "outputs": [
+    "OpenUSD (.usda/.usdc/.usdz)",
+    "glTF 2.0",
+    "FBX",
+    "OBJ"
+  ],
+  "bridges": [
+    "NVIDIA Omniverse USD Composer",
+    "Unreal Engine 5",
+    "Unity"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Hohe Skalierbarkeit; per Python-Skripting für automatisiertes Batch-Processing erweiterbar."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Zero-Lizenzkosten mit hervorragender OpenUSD-Kompatibilität und 100% EU-Rechtssicherheit."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Direkter Import nativer CAD-NURBS-Dateien erfordert Add-ons."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Native OpenUSD Core",
+    "sovereignty": "100% EU Souverän (FOSS)",
+    "openStandard": "OpenUSD / glTF 2.0"
+  },
+  "deployment": {
+    "effort": "Mittel (2-3 Wochen)",
+    "mode": "Cross-Platform Desktop",
+    "maturity": "Produktiv",
+    "area": "3D Asset Aufbereitung & Staging"
+  },
+  "staffing": "1x 3D Pipeline Artist (50% FTE)"
+}

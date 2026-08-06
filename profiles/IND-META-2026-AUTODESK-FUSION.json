@@ -1,0 +1,73 @@
+{
+  "refCode": "IND-META-2026-AUTODESK-FUSION",
+  "categoryCode": "1.1",
+  "categoryName": "Mechanisches CAD (MCAD)",
+  "name": "Autodesk Fusion 360",
+  "subtitle": "Cloud-CAD/CAM & Prototyping für KMU",
+  "vendor": "Autodesk Inc.",
+  "hq": "San Francisco, CA, USA",
+  "businessModel": "Low-Cost SaaS Cloud Subscription",
+  "url": "https://autodesk.com/fusion-360",
+  "tier": "Tier 1",
+  "costLabel": "≤ €30k",
+  "status": "EVALUIERT",
+  "overview": "Integrierte Cloud-Plattform für 3D-CAD, CAM, CAE und Leiterplatten-Design. Beliebt bei KMU, Hardware-Startups und Maker-Labs für schnelles Prototyping.",
+  "features": [
+    {
+      "title": "Integrierte 5-Achs-CAM",
+      "desc": "Direkte Erzeugung von CNC-Werkzeugpfaden aus dem CAD-Modell."
+    },
+    {
+      "title": "Cloud Generative Design",
+      "desc": "KI-gestützte Bauteil-Leichtbauoptimierung in der Cloud."
+    },
+    {
+      "title": "Direkter OpenUSD Export",
+      "desc": "Integrierte OpenUSD- und glTF-Exportmodule."
+    }
+  ],
+  "inputs": [
+    "F3D",
+    "STEP",
+    "IGES",
+    "SolidWorks",
+    "SAT"
+  ],
+  "outputs": [
+    "OpenUSD (.usdz/.usd)",
+    "glTF 2.0",
+    "STEP",
+    "STL"
+  ],
+  "bridges": [
+    "Autodesk Fusion Team",
+    "Autodesk Construction Cloud",
+    "Blender"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Hervorragend für Werkzeugbau und Roboter-Greifer; begrenzt bei Werkslayouts im Gigabyte-Bereich."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Extrem niedrige Einstiegshürde und schnelle Bereitstellung im Team."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Erfordert ständige Internetverbindung für fortgeschrittene Solver-Funktionen."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Native Export",
+    "sovereignty": "SOC2 / US Cloud PaaS",
+    "openStandard": "glTF 2.0 / STEP"
+  },
+  "deployment": {
+    "effort": "Gering (1-2 Tage)",
+    "mode": "Cloud Desktop App",
+    "maturity": "Produktiv",
+    "area": "KMU Werkzeugbau & Rapid Prototyping"
+  },
+  "staffing": "1x CAD/CAM Techniker (25% FTE)"
+}

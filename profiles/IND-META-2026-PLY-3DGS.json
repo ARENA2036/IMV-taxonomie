@@ -1,0 +1,69 @@
+{
+  "refCode": "IND-META-2026-PLY-3DGS",
+  "categoryCode": "10.0",
+  "categoryName": "Datenformate & OpenUSD-Standards",
+  "name": "PLY / Splat Files (3D Gaussian Splatting)",
+  "subtitle": "Fotorealistisches 3D-Gaussian-Splatting Format",
+  "vendor": "Open Research Community / Graphics Standards",
+  "hq": "Global Open Community",
+  "businessModel": "Open Standard Format",
+  "url": "https://github.com/graphdeco-inria/gaussian-splatting",
+  "tier": "Tier 1",
+  "costLabel": "Open Standard / €0",
+  "status": "EMPFOHLEN",
+  "overview": "Spezifikation zur Speicherung von 3D Gaussian Splatting Parametern (3D-Position, Transparenz, Skalierung, Rotation und Farbdarstellung).",
+  "features": [
+    {
+      "title": "Spherical Harmonics Storage",
+      "desc": "Speichert blickwinkelabhängige Lichtreflexionen und Glanz."
+    },
+    {
+      "title": "Fotorealismus",
+      "desc": "Rendert transparente und spiegelnde Oberflächen fotorealistisch."
+    },
+    {
+      "title": "GPU Rasterization Friendly",
+      "desc": "Wird direkt in CUDA- oder Vulkan-Puffer geladen."
+    }
+  ],
+  "inputs": [
+    "XGRIDS Studio",
+    "Scaniverse",
+    "COLMAP Photogrammetrie"
+  ],
+  "outputs": [
+    ".ply (3DGS Binary Container)",
+    ".splat (Web Compressed)"
+  ],
+  "bridges": [
+    "NVIDIA Omniverse 3DGS Extension",
+    "Unreal Engine 5",
+    "WebGL Splat Viewers"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Revolutioniert die fotorealistische Visualisierung komplexer Maschinen."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Erfasst spiegelnde Flächen, an denen klassische Photogrammetrie scheitert."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Enthält keine parametrische CAD-Geometrie; erfordert Splat-Renderer."
+    }
+  ],
+  "compliance": {
+    "omniverse": "3DGS Extension",
+    "sovereignty": "Open Graphics Format",
+    "openStandard": "Open PLY Schema"
+  },
+  "deployment": {
+    "effort": "Gering (1-2 Tage)",
+    "mode": "Spatial Splat File",
+    "maturity": "Produktiv",
+    "area": "Fotorealistisches 3D-Gaussian-Splatting"
+  },
+  "staffing": "1x Graphics Engineer (10% FTE)"
+}

@@ -1,0 +1,69 @@
+{
+  "refCode": "IND-META-2026-VARJO-XR4",
+  "categoryCode": "11.0",
+  "categoryName": "Spatial XR & VR/AR Headsets",
+  "name": "Varjo XR-4 Series (Human-Eye Resolution MR)",
+  "subtitle": "Industrielles Mixed-Reality Headset mit 51 PPD",
+  "vendor": "Varjo Technologies Oy",
+  "hq": "Helsinki, Finnland (EU)",
+  "businessModel": "Hardware Purchase + Varjo Subscription / Support",
+  "url": "https://varjo.com/products/xr-4",
+  "tier": "Tier 2",
+  "costLabel": "≤ €100k",
+  "status": "STANDARDIZIERT HIGH-END",
+  "overview": "Kabelgebundenes Mixed-Reality-Headset für Industrieanwendungen mit Auflösung auf menschlichem Augenniveau (51 PPD) und fotorealistischem Video-Pass-Through.",
+  "features": [
+    {
+      "title": "Human-Eye Resolution (51 PPD)",
+      "desc": "Duale Micro-OLED-Displays eliminieren Fliegengittereffekte vollständig."
+    },
+    {
+      "title": "Video Pass-Through",
+      "desc": "Duale 20MP-Kameras für nahtlose Überlagerungen von physischer und digitaler Welt."
+    },
+    {
+      "title": "Integrierter LiDAR",
+      "desc": "Echtzeit-Tiefenkartierung physikalischer Räume."
+    }
+  ],
+  "inputs": [
+    "OpenXR Stream",
+    "NVIDIA RTX Workstation GPU Output"
+  ],
+  "outputs": [
+    "Varjo Eye Tracking Data (120Hz)",
+    "LiDAR Depth Map"
+  ],
+  "bridges": [
+    "Autodesk VRED",
+    "Unreal Engine 5",
+    "Unity Industry",
+    "NVIDIA Omniverse"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Absoluter Goldstandard für Automobil-Designreviews und Flugsimulatoren."
+    },
+    {
+      "title": "Vorteile",
+      "text": "100% EU-souveräne Hardware hergestellt in Helsinki, Finnland."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Erfordert kabelgebundenen Hochleistungs-Desktop-PC mit RTX 4090."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Native OpenXR Extension",
+    "sovereignty": "100% EU Souverän (Finnland)",
+    "openStandard": "OpenXR"
+  },
+  "deployment": {
+    "effort": "Mittel (2-3 Wochen)",
+    "mode": "Tethered RTX Workstation Setup",
+    "maturity": "Produktiv",
+    "area": "Automotive Design & High-End Simulation"
+  },
+  "staffing": "1x XR Simulation Engineer (50% FTE)"
+}

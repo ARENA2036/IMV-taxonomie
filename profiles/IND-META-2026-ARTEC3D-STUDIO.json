@@ -1,0 +1,71 @@
+{
+  "refCode": "IND-META-2026-ARTEC3D-STUDIO",
+  "categoryCode": "6.4",
+  "categoryName": "Handheld 3DGS & Photogrammetrie",
+  "name": "Artec 3D Cloud / Studio (Leo & Eva)",
+  "subtitle": "Messtechnischer 3D-Handscanner für Reverse Engineering",
+  "vendor": "Artec 3D",
+  "hq": "Luxemburg (EU)",
+  "businessModel": "Hardware Purchase + Annual License",
+  "url": "https://artec3d.com",
+  "tier": "Tier 2",
+  "costLabel": "≤ €100k",
+  "status": "STANDARDIZIERT",
+  "overview": "Hochpräzise Handscanner (Artec Leo/Eva) für Reverse Engineering und Qualitätskontrolle mit Sub-Millimeter-Genauigkeit.",
+  "features": [
+    {
+      "title": "Sub-Millimeter Genauigkeit",
+      "desc": "Bis zu 0,05mm 3D-Punktgenauigkeit für Qualitätsprüfungen."
+    },
+    {
+      "title": "Kabelloser Artec Leo Scanner",
+      "desc": "Kabelloser Betrieb mit integriertem HD-Touch-Display."
+    },
+    {
+      "title": "Artec Studio CAD Tools",
+      "desc": "Wandelt dichte Meshes in parametrische CAD-Flächen (NURBS)."
+    }
+  ],
+  "inputs": [
+    "Structured Light Rays",
+    "Blue Laser Lines"
+  ],
+  "outputs": [
+    "STEP",
+    "IGES",
+    "OBJ",
+    "STL",
+    "OpenUSD (.usd)"
+  ],
+  "bridges": [
+    "SolidWorks",
+    "Geomagic Design X",
+    "NVIDIA Omniverse"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Unerlässlich für Reverse Engineering, wenn keine CAD-Modelle alter Maschinen existieren."
+    },
+    {
+      "title": "Vorteile",
+      "text": "100% EU-Fertigung (Luxemburg) mit zertifizierter Messgenauigkeit."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Hoher Preis für rein lokales Komponenten-Scannen."
+    }
+  ],
+  "compliance": {
+    "omniverse": "USD Exporter",
+    "sovereignty": "100% EU Souverän (Luxemburg)",
+    "openStandard": "STEP / STL"
+  },
+  "deployment": {
+    "effort": "Mittel (2-3 Wochen)",
+    "mode": "Handheld Scanner + PC",
+    "maturity": "Produktiv",
+    "area": "Reverse Engineering & Qualitätsprüfung"
+  },
+  "staffing": "1x Messtechniker (50% FTE)"
+}

@@ -1,0 +1,70 @@
+{
+  "refCode": "IND-META-2026-NIANTIC-SCANIVERSE",
+  "categoryCode": "6.4",
+  "categoryName": "Handheld 3DGS & Photogrammetrie",
+  "name": "Scaniverse (Niantic Spatial 3DGS)",
+  "subtitle": "Mobile 3D Gaussian Splatting App",
+  "vendor": "Niantic Inc.",
+  "hq": "San Francisco, CA, USA",
+  "businessModel": "Free Mobile App",
+  "url": "https://scaniverse.com",
+  "tier": "Tier 1",
+  "costLabel": "Kostenfrei / €0",
+  "status": "EMPFOHLEN",
+  "overview": "Kostenlose mobile 3D-Erfassungs-App auf Basis von 3D Gaussian Splatting. Nutzt Smartphones mit LiDAR für schnelles Requisiten-Scannen.",
+  "features": [
+    {
+      "title": "On-Device 3DGS Processing",
+      "desc": "Erzeugt Gaussian Splats lokal auf dem Smartphone."
+    },
+    {
+      "title": "LiDAR Mesh Mode",
+      "desc": "Generiert texturierte OBJ- und glTF-Modelle direkt."
+    },
+    {
+      "title": "Web-Share",
+      "desc": "Exportiert interaktive 3D-Web-Viewer per Link."
+    }
+  ],
+  "inputs": [
+    "Mobile LiDAR Rays",
+    "Video Camera Stream"
+  ],
+  "outputs": [
+    "SPZ",
+    "PLY",
+    "glTF 2.0",
+    "USDZ"
+  ],
+  "bridges": [
+    "Blender 3D",
+    "WebXR Viewers",
+    "NVIDIA Omniverse"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Perfektes Werkzeug für Servicetechniker zum schnellen Erfassen defekter Ersatzteile."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Keine Hardwarekosten bei vorhandenem Smartphone; sofortige Erfassung."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Ungeeignet für komplette Fabrikhallen."
+    }
+  ],
+  "compliance": {
+    "omniverse": "USDZ Native",
+    "sovereignty": "Mobile App Standard",
+    "openStandard": "glTF / USDZ / PLY"
+  },
+  "deployment": {
+    "effort": "Sehr Gering (< 1 Tag)",
+    "mode": "Smartphone App",
+    "maturity": "Produktiv",
+    "area": "Schnelles Bauteil-Scannen"
+  },
+  "staffing": "1x Service-Techniker (5% FTE)"
+}

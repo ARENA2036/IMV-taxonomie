@@ -1,0 +1,71 @@
+{
+  "refCode": "IND-META-2026-OPENFOAM",
+  "categoryCode": "4.1",
+  "categoryName": "CAE & Multiphysik-Simulation",
+  "name": "OpenFOAM Foundation Engine",
+  "subtitle": "Open-Source CFD-Berechnungsumgebung",
+  "vendor": "OpenFOAM Foundation / ESI Group",
+  "hq": "UK / Global Open Source",
+  "businessModel": "Free & Open Source (GPL v3)",
+  "url": "https://openfoam.org",
+  "tier": "Tier 1",
+  "costLabel": "Open Source / €0",
+  "status": "STANDARDIZIERT",
+  "overview": "Leistungsstarkes Open-Source-CFD-Solver-Framework für numerische Strömungsmechanik in Aerodynamik und Thermodynamik.",
+  "features": [
+    {
+      "title": "Massiv Parallele Solver",
+      "desc": "Unbegrenzte Skalierung auf Linux-HPC-Knoten ohne Lizenzgebühren."
+    },
+    {
+      "title": "Quelloffene Kontinuumsphysik",
+      "desc": "C++ Quellcode-Zugriff zur Anpassung der Navier-Stokes-Gleichungen."
+    },
+    {
+      "title": "ParaView Integration",
+      "desc": "Fortgeschrittenes 3D-Postprocessing und Vektorvisualisierung."
+    }
+  ],
+  "inputs": [
+    "STL",
+    "OBJ",
+    "STEP (via Gmsh/salome)",
+    "OpenFOAM dictionary"
+  ],
+  "outputs": [
+    "VTK",
+    "OpenFOAM Format",
+    "OpenUSD (via ParaView)"
+  ],
+  "bridges": [
+    "ParaView",
+    "Blender",
+    "Linux HPC Cluster"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Unbegrenzte Rechenskalierung; von großen Automotive-OEMs genutzt."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Zero Lizenzkosten unabhängig von der Anzahl genutzter Rechenkerne."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Keine grafische Benutzeroberfläche out-of-the-box; erfordert Terminal-Skripting."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Open Source (GPL)",
+    "sovereignty": "100% EU Souverän / Self-Hosted",
+    "openStandard": "VTK / STL"
+  },
+  "deployment": {
+    "effort": "Sehr Hoch (> 1 Monat)",
+    "mode": "Linux HPC Cluster",
+    "maturity": "Produktiv",
+    "area": "Numerische Strömungsmechanik"
+  },
+  "staffing": "1x CFD Specialist (100% FTE)"
+}

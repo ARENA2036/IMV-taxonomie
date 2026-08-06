@@ -1,0 +1,72 @@
+{
+  "refCode": "IND-META-2026-FLEXSIM",
+  "categoryCode": "5.0",
+  "categoryName": "Robotik & Fabriksimulation",
+  "name": "FlexSim (Discrete Event Simulation)",
+  "subtitle": "3D-Ablauf- & Materialflusssimulation",
+  "vendor": "FlexSim Software / Autodesk",
+  "hq": "Orem, UT, USA",
+  "businessModel": "Enterprise License Subscription",
+  "url": "https://flexsim.com",
+  "tier": "Tier 2",
+  "costLabel": "≤ €100k",
+  "status": "EVALUIERT",
+  "overview": "3D-Ablaufsimulationssoftware zur Modellierung, Vorhersage und Visualisierung von Logistik-, Materialfluss- und Fertigungssystemen.",
+  "features": [
+    {
+      "title": "3D-Objektbibliothek",
+      "desc": "Vorgefertigte AGVs, Bediener, Förderbänder und Regale."
+    },
+    {
+      "title": "Statistischer Experimenter",
+      "desc": "Führt Monte-Carlo-Simulationsreihen zur Engpasssuche durch."
+    },
+    {
+      "title": "Emulationsmodul",
+      "desc": "Verbindet virtuelle 3D-Objekte via OPC UA mit physischen SPSen."
+    }
+  ],
+  "inputs": [
+    "DWG",
+    "STEP",
+    "STL",
+    "OPC UA Tags",
+    "SQL Databases"
+  ],
+  "outputs": [
+    "OpenUSD (.usd)",
+    "Web 3D HTML",
+    "Statistical Dashboards"
+  ],
+  "bridges": [
+    "Autodesk Construction Cloud",
+    "OPC UA",
+    "NVIDIA Omniverse"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Hervorragende visuelle 3D-Simulation für Intralogistik und Lagerhäuser."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Kombiniert hohe Visuelität mit fundierter statistischer Kennzahlenanalyse."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Keine Roboterkinematik im Sub-Millisekundenbereich."
+    }
+  ],
+  "compliance": {
+    "omniverse": "USD Connector",
+    "sovereignty": "SOC2 Compliant",
+    "openStandard": "OPC UA / OpenUSD"
+  },
+  "deployment": {
+    "effort": "Mittel (2-3 Wochen)",
+    "mode": "Desktop App",
+    "maturity": "Produktiv",
+    "area": "Materialfluss & Logistik"
+  },
+  "staffing": "1x Materialflussingenieur (50% FTE)"
+}

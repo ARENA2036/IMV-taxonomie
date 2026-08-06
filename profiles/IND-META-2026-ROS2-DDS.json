@@ -1,0 +1,70 @@
+{
+  "refCode": "IND-META-2026-ROS2-DDS",
+  "categoryCode": "7.0",
+  "categoryName": "OT & Sensorik-Feldbusse",
+  "name": "ROS / ROS 2 (DDS Inter-Robot Middleware)",
+  "subtitle": "Open-Source Roboter-Betriebssystem & Middleware",
+  "vendor": "Open Robotics (OSRF)",
+  "hq": "Mountain View, CA, USA / Global Community",
+  "businessModel": "Free & Open Source (Apache 2.0 / BSD)",
+  "url": "https://ros.org",
+  "tier": "Tier 1",
+  "costLabel": "Open Source / €0",
+  "status": "CORE ROBOTICS BACKBONE",
+  "overview": "Open-Source Roboter-Middleware auf Basis von Data Distribution Service (DDS) für die Zero-Copy-Kommunikation in autonomen Robotern und AMRs.",
+  "features": [
+    {
+      "title": "DDS Middleware Engine",
+      "desc": "Echtzeitfähige Peer-to-Peer-Kommunikation zwischen Mikrocontrollern und GPUs."
+    },
+    {
+      "title": "Nav2 & MoveIt 2",
+      "desc": "Produktionsbereite Pakete für Pfadplanung, Hindernisvermeidung und Armkinematik."
+    },
+    {
+      "title": "Isaac Sim Extension",
+      "desc": "Direkte Sub-Millisekunden-Brücke zwischen ROS 2 Nodes und OpenUSD-Simulationsumgebungen."
+    }
+  ],
+  "inputs": [
+    "Sensor Topics (LaserScan, Image, IMU)",
+    "Action Goals"
+  ],
+  "outputs": [
+    "Motor Velocity Commands (Twist)",
+    "Joint Trajectories",
+    "TF Transform Trees"
+  ],
+  "bridges": [
+    "NVIDIA Isaac Sim/Lab",
+    "Hugging Face LeRobot",
+    "Gazebo",
+    "Waveye Radar"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Globale Software-Basis für Physical-AI-Robotik und autonome Transportfahrzeuge."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Riesiges weltweites Open-Source-Ökosystem vorgefertigter Sensortreiber."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Echtzeit-DDS-Tuning erfordert tiefes Robotik-Softwarewissen."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Native Isaac Sim Bridge",
+    "sovereignty": "Open Source Standard",
+    "openStandard": "OMG DDS Standard"
+  },
+  "deployment": {
+    "effort": "Hoch (3-4 Wochen)",
+    "mode": "Embedded Robot Controller / Linux",
+    "maturity": "Produktiv",
+    "area": "Autonome Transport- & Greifroboter"
+  },
+  "staffing": "1x Robotics Software Engineer (100% FTE)"
+}

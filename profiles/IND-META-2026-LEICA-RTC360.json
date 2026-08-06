@@ -1,0 +1,72 @@
+{
+  "refCode": "IND-META-2026-LEICA-RTC360",
+  "categoryCode": "6.2",
+  "categoryName": "Terrestrisches Laserscanning (TLS)",
+  "name": "Leica RTC360 / BLK360 / Cyclone",
+  "subtitle": "High-Speed TLS mit VIS-Echtzeitregistrierung",
+  "vendor": "Leica Geosystems AG / Hexagon",
+  "hq": "Heerbrugg, Schweiz (EU/EFTA)",
+  "businessModel": "Hardware Purchase + Cyclone Subscription",
+  "url": "https://leica-geosystems.com/rtc360",
+  "tier": "Tier 3",
+  "costLabel": "> €100k",
+  "status": "STANDARDIZIERT",
+  "overview": "Hochpräziser terrestrischer 3D-Laserscanner (RTC360). Erfasst 3D-Punktwolken und HDR-Panoramen in unter 45 Sekunden mit automatischer VIS-Echtzeitregistrierung.",
+  "features": [
+    {
+      "title": "VIS Vor-Registrierung",
+      "desc": "Verfolgt den Scannerstandort zwischen Stativaufstellungen automatisch."
+    },
+    {
+      "title": "2 Millionen Pkt/Sek",
+      "desc": "Ultra-hohe Messrate für extrem dichte Punktwolken."
+    },
+    {
+      "title": "Leica Cyclone Suite",
+      "desc": "Enterprise-Software zur Registrierung und Auswertung von Geodaten."
+    }
+  ],
+  "inputs": [
+    "Raw RTC Laser Stream",
+    "Passpunkt-Koordinaten"
+  ],
+  "outputs": [
+    "E57",
+    "LGS",
+    "PTX",
+    "LAS",
+    "OpenUSD Stage"
+  ],
+  "bridges": [
+    "Leica Cyclone",
+    "Hexagon HxDR",
+    "Autodesk Revit",
+    "NVIDIA Omniverse"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Enterprise-Standard für anspruchsvolle Industrieanlagen und Großprojekte."
+    },
+    {
+      "title": "Vorteile",
+      "text": "VIS-Technologie reduziert die manuelle Ausrichtungsarbeit um 80%."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Hohe Investitions- und Software-Subskriptionskosten."
+    }
+  ],
+  "compliance": {
+    "omniverse": "LGS Bridge",
+    "sovereignty": "Schweizer Datensicherheit",
+    "openStandard": "E57 / ASTM E2807"
+  },
+  "deployment": {
+    "effort": "Mittel (2-3 Wochen)",
+    "mode": "Stativ-Hardware + Cyclone",
+    "maturity": "Produktiv",
+    "area": "Hochpräzise Vermessung"
+  },
+  "staffing": "1x Vermessungsingenieur (100% FTE)"
+}

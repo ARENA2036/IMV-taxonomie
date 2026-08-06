@@ -1,0 +1,69 @@
+{
+  "refCode": "IND-META-2026-LEICA-BLK2GO",
+  "categoryCode": "6.1",
+  "categoryName": "Mobile & Wearable SLAM-Scanner",
+  "name": "Leica BLK2GO Handheld SLAM Scanner",
+  "subtitle": "Kompakter Handheld SLAM-Laserscanner",
+  "vendor": "Leica Geosystems AG / Hexagon",
+  "hq": "Heerbrugg, Schweiz (EU/EFTA)",
+  "businessModel": "Hardware Purchase + Cyclone Subscription",
+  "url": "https://leica-geosystems.com/blk2go",
+  "tier": "Tier 2",
+  "costLabel": "≤ €100k",
+  "status": "EVALUIERT",
+  "overview": "Kompakter handgeführter Mobile-SLAM-Scanner mit 2-Achs-LiDAR und Mehrkamera-System zur schnellen Raumdokumentation.",
+  "features": [
+    {
+      "title": "GrandSLAM Technology",
+      "desc": "Kombiniert LiDAR, visuelle Kameras und IMU-Sensorik."
+    },
+    {
+      "title": "Leichtgewicht (770g)",
+      "desc": "Mühelose Ein-Hand-Bedienung beim Gehen."
+    },
+    {
+      "title": "Live iPhone View",
+      "desc": "Echtzeit-3D-Punktwolkenanzeige im Smartphone-Display."
+    }
+  ],
+  "inputs": [
+    "GrandSLAM Raw Stream"
+  ],
+  "outputs": [
+    "E57",
+    "LGS (Leica Format)",
+    "LAS",
+    "OpenUSD"
+  ],
+  "bridges": [
+    "Leica Cyclone REGISTER 360",
+    "Hexagon HxDR",
+    "NVIDIA Omniverse"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Perfekt für schnelle Begehungen enger Gebäudestrukturen."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Schweizer Präzisionstechnik mit Ein-Knopf-Bedienung."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Geringere Punktdichte als große Rucksack-Systeme."
+    }
+  ],
+  "compliance": {
+    "omniverse": "LGS/E57 Importer",
+    "sovereignty": "Schweizer Datensicherheit",
+    "openStandard": "E57"
+  },
+  "deployment": {
+    "effort": "Sehr Gering (< 1 Tag)",
+    "mode": "Handheld Hardware",
+    "maturity": "Produktiv",
+    "area": "Schnellbegehungen & Architektur"
+  },
+  "staffing": "1x Operator (25% FTE)"
+}

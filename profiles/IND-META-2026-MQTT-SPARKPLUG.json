@@ -1,0 +1,70 @@
+{
+  "refCode": "IND-META-2026-MQTT-SPARKPLUG",
+  "categoryCode": "8.1",
+  "categoryName": "Industrial IoT-Protokolle",
+  "name": "MQTT / Sparkplug B",
+  "subtitle": "Leichtgewichtige IIoT Pub/Sub Serialisierung",
+  "vendor": "Eclipse Foundation / OASIS",
+  "hq": "Brüssel, Belgien (EU)",
+  "businessModel": "Open International Standard (ISO/IEC 20922)",
+  "url": "https://sparkplug.eclipse.org",
+  "tier": "Tier 1",
+  "costLabel": "Open Standard / €0",
+  "status": "STANDARDIZIERT",
+  "overview": "Leichtgewichtiges Publish/Subscribe-Protokoll. Sparkplug B bietet Zustandskontrolle, Auto-Discovery von Datentags und strukturierte Protobuf-Payloads für IIoT-Netzwerke.",
+  "features": [
+    {
+      "title": "State Management (BIRTH/DEATH)",
+      "desc": "Erkennt neu verbundene Sensoren im Netzwerk sofort automatisch."
+    },
+    {
+      "title": "Minimaler Overhead",
+      "desc": "Sehr geringer Bandbreitenverbrauch für das Streaming über Mobilfunk."
+    },
+    {
+      "title": "Google Protobuf",
+      "desc": "Hocheffiziente binäre Datenkodierung."
+    }
+  ],
+  "inputs": [
+    "Sensorsignale",
+    "Edge Gateways",
+    "SPS Tags"
+  ],
+  "outputs": [
+    "Sparkplug B Protobuf Payloads",
+    "JSON MQTT Topics"
+  ],
+  "bridges": [
+    "Collectu Engine",
+    "AWS IoT",
+    "Azure Digital Twins",
+    "NVIDIA Omniverse"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "De-facto-Messaging-Standard für leichtgewichtige Sensornetzwerke und Cloud-Ingestion."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Verwaltet unter der europäischen Eclipse Foundation (Brüssel); lizenzkostenfrei."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Bietet ohne Aufsatz weniger semantische Objektbeziehungen als OPC UA."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Native IoT Connector",
+    "sovereignty": "100% EU Governance (Eclipse)",
+    "openStandard": "ISO/IEC 20922"
+  },
+  "deployment": {
+    "effort": "Gering (1-2 Tage)",
+    "mode": "Edge Broker (EMQX/Mosquitto)",
+    "maturity": "Produktiv",
+    "area": "IIoT-Sensor-Streaming"
+  },
+  "staffing": "1x IIoT Integration Developer (25% FTE)"
+}

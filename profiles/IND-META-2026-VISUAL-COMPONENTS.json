@@ -1,0 +1,73 @@
+{
+  "refCode": "IND-META-2026-VISUAL-COMPONENTS",
+  "categoryCode": "5.0",
+  "categoryName": "Robotik & Fabriksimulation",
+  "name": "Visual Components 4.9",
+  "subtitle": "3D-Fabriksimulation & Materialfluss-Planung",
+  "vendor": "Visual Components Oy",
+  "hq": "Espoo, Finnland (EU)",
+  "businessModel": "Annual License (Essentials / Professional / Premium)",
+  "url": "https://visualcomponents.com",
+  "tier": "Tier 2",
+  "costLabel": "≤ €100k",
+  "status": "EMPFOHLEN",
+  "overview": "3D-Fabriksimulationssoftware für Maschinenbauer und Systemintegratoren zur schnellen Layouterstellung, Robotersimulation und Durchsatzüberprüfung.",
+  "features": [
+    {
+      "title": "Modulbarer eCatalog",
+      "desc": "Über 2.500+ vorgefertigte Roboter und Förderbänder per Drag-and-Drop bereit."
+    },
+    {
+      "title": "OPC UA Anbindung",
+      "desc": "Echtzeit-Hardware-in-the-Loop-Verbindung zu virtuellen SPSen."
+    },
+    {
+      "title": "VRC Anbindung",
+      "desc": "Verbindet Robotersteuerungen (KUKA, ABB, Fanuc) zur Offline-Programmierung."
+    }
+  ],
+  "inputs": [
+    "STEP",
+    "IGES",
+    "SolidWorks",
+    "IFC",
+    "Point Cloud"
+  ],
+  "outputs": [
+    "OpenUSD (.usd)",
+    "3D PDF",
+    "MP4 Video",
+    "OPC UA Messages"
+  ],
+  "bridges": [
+    "NVIDIA Omniverse Connector",
+    "KUKA Sim",
+    "Siemens S7 SPS"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Beliebte Wahl im Mittelstand wegen extrem schneller Layouterstellung."
+    },
+    {
+      "title": "Vorteile",
+      "text": "100% EU-souveräne Software mit sehr schneller Einarbeitungszeit."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Physik-Engine auf Schnelligkeit statt FEA-Höchstpräzision optimiert."
+    }
+  ],
+  "compliance": {
+    "omniverse": "USD Exporter",
+    "sovereignty": "100% EU Souverän (Finnland)",
+    "openStandard": "OPC UA / OpenUSD"
+  },
+  "deployment": {
+    "effort": "Mittel (2-3 Wochen)",
+    "mode": "Desktop Windows App",
+    "maturity": "Produktiv",
+    "area": "Fabrik-Layout & Roboterzellen"
+  },
+  "staffing": "1x Simulation Engineer (50% FTE)"
+}

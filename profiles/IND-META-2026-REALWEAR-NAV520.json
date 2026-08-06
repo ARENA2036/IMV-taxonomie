@@ -1,0 +1,71 @@
+{
+  "refCode": "IND-META-2026-REALWEAR-NAV520",
+  "categoryCode": "11.0",
+  "categoryName": "Spatial XR & VR/AR Headsets",
+  "name": "RealWear Navigator 520 (Assisted Reality Wearable)",
+  "subtitle": "Freihand-Mikrodisplay für Instandhaltung & Service",
+  "vendor": "RealWear Inc.",
+  "hq": "Vancouver, WA, USA",
+  "businessModel": "Hardware Purchase + Foresight Cloud MDM",
+  "url": "https://realwear.com/navigator-520",
+  "tier": "Tier 1",
+  "costLabel": "≤ €30k",
+  "status": "STANDARDIZIERT FIELD WORKER",
+  "overview": "Robustes Freihand-Mikrodisplay-Headset zur Montage an Schutzhelmen. Entwickelt für Service-Techniker bei der Fernwartung und Inspektion in rauen Industrieumgebungen.",
+  "features": [
+    {
+      "title": "100% Freihand-Sprachsteuerung",
+      "desc": "Zulässiger Betrieb bei bis zu 100dB Lärm über geräuschunterdrückende Mikrofone."
+    },
+    {
+      "title": "Helm- & PSA-Integration",
+      "desc": "Wird direkt an Standard-Industrieschutzhelmen befestigt."
+    },
+    {
+      "title": "HyperDisplay Optics",
+      "desc": "Mikrodisplay wirkt wie ein 7-Zoll-Tablet auf Armlänge."
+    }
+  ],
+  "inputs": [
+    "Android APK Pakete",
+    "Sprachbefehle",
+    "Remote Video Calls"
+  ],
+  "outputs": [
+    "48MP Kamerastream",
+    "Audio Telemetrie",
+    "PDF Anmerkungen"
+  ],
+  "bridges": [
+    "Microsoft Teams",
+    "Zoom 1Form",
+    "PTC Vuforia",
+    "Siemens Manifest"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Marktführend für freihändige Remote-Unterstützung in Chemieanlagen und Raffinerien."
+    },
+    {
+      "title": "Vorteile",
+      "text": "IP66 wasser/staubgeschützt und aus 2 Metern Sturzhöhe getestet; volle Sicht auf die Umgebung."
+    },
+    {
+      "title": "Engpässe",
+      "text": "2D-Assisted-Reality Display; rendert keine stereoskopische 3D-Grafik im Raum."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Remote Video Bridge",
+    "sovereignty": "IP66 / ATEX Zone 2 Option",
+    "openStandard": "Android Native"
+  },
+  "deployment": {
+    "effort": "Sehr Gering (< 1 Tag)",
+    "mode": "Wearable Micro-Display",
+    "maturity": "Produktiv",
+    "area": "Fernwartung & Instandhaltung"
+  },
+  "staffing": "1x Servicetechniker (10% FTE)"
+}

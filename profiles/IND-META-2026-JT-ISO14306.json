@@ -1,0 +1,69 @@
+{
+  "refCode": "IND-META-2026-JT-ISO14306",
+  "categoryCode": "10.0",
+  "categoryName": "Datenformate & OpenUSD-Standards",
+  "name": "JT ISO 14306 (Lightweight CAD Tessellation)",
+  "subtitle": "Leichtgewichtiges 3D-CAD-Visualisierungsformat",
+  "vendor": "ISO / Siemens DISW",
+  "hq": "Genf, Schweiz (EU/EFTA)",
+  "businessModel": "Open International Standard (ISO 14306)",
+  "url": "https://iso.org/standard/62271.html",
+  "tier": "Tier 1",
+  "costLabel": "Open Standard / €0",
+  "status": "STANDARDIZIERT",
+  "overview": "Leichtgewichtiges 3D-Format für visuelle Produktprüfung, Digital Mockup (DMU) und schnelle Ladezeiten riesiger Maschinenbaugruppen.",
+  "features": [
+    {
+      "title": "Multi-LOD Tessellierung",
+      "desc": "Bettet mehrere Detailstufen (LODs) in einer Datei ein."
+    },
+    {
+      "title": "B-Rep + Mesh Payload",
+      "desc": "Speichert sowohl Leichtbau-Meshes als auch exakte B-Rep Körper."
+    },
+    {
+      "title": "Enterprise PLM",
+      "desc": "Natives Format in Siemens Teamcenter PLM-Umgebungen."
+    }
+  ],
+  "inputs": [
+    "Siemens NX",
+    "CATIA",
+    "Creo",
+    "SolidWorks"
+  ],
+  "outputs": [
+    ".jt (ISO 14306)"
+  ],
+  "bridges": [
+    "Siemens Teamcenter",
+    "Tecnomatix",
+    "NVIDIA Omniverse JT Connector"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Bevorzugtes Format zum Laden kompletter Fahrzeug-Montagelinien."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Extrem kompakte Dateigrößen im Vergleich zu rohem CAD."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Stark an das Siemens DISW Ökosystem gebunden."
+    }
+  ],
+  "compliance": {
+    "omniverse": "JT Connector",
+    "sovereignty": "100% ISO Standard",
+    "openStandard": "ISO 14306"
+  },
+  "deployment": {
+    "effort": "Gering (1-2 Tage)",
+    "mode": "Neutral Tessellation File",
+    "maturity": "Produktiv",
+    "area": "CAD-Tessellierung & DMU"
+  },
+  "staffing": "1x Konvertierungsspezialist (10% FTE)"
+}

@@ -1,0 +1,67 @@
+{
+  "refCode": "IND-META-2026-MODBUS-TCP",
+  "categoryCode": "7.0",
+  "categoryName": "OT & Sensorik-Feldbusse",
+  "name": "Modbus TCP/RTU Protocol",
+  "subtitle": "Legacy-Sensor- & Energiezähler-Protokoll",
+  "vendor": "Modbus Organization",
+  "hq": "Hopkinton, MA, USA / Global",
+  "businessModel": "Open Royalty-Free Protocol",
+  "url": "https://modbus.org",
+  "tier": "Tier 1",
+  "costLabel": "Open Standard / €0",
+  "status": "LEGACY SUPPORT",
+  "overview": "Industrie-Kommunikationsprotokoll aus dem Jahr 1979 zum Auslesen von Energiezählern, Temperaturmessern und Alt-SPSen.",
+  "features": [
+    {
+      "title": "Einfaches Register-Mapping",
+      "desc": "Auslesen von Holding-Registern und diskreten Eingängen."
+    },
+    {
+      "title": "Minimalste Hardwareanforderungen",
+      "desc": "Läuft auf einfachen Seriell-Schnittstellen (RS-485)."
+    },
+    {
+      "title": "Modbus TCP Gatewaying",
+      "desc": "Konvertiert serielle RS-485-Daten in Ethernet-TCP/IP-Pakete."
+    }
+  ],
+  "inputs": [
+    "RS-485 Serial Signals",
+    "TCP Packets"
+  ],
+  "outputs": [
+    "Raw Register Values (Integer/Float)"
+  ],
+  "bridges": [
+    "Collectu Engine",
+    "Node-RED",
+    "OPC UA Gateways"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Unverzichtbar zum Anbinden von Altgeräten und Energiemessern in moderne Zwillinge."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Wird von fast jedem Sensorgerät der letzten 40 Jahre unterstützt."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Keine eingebaute Sicherheit, keine Metadaten."
+    }
+  ],
+  "compliance": {
+    "omniverse": "IoT Edge Gateway",
+    "sovereignty": "Royalty-Free Standard",
+    "openStandard": "Modbus TCP"
+  },
+  "deployment": {
+    "effort": "Sehr Gering (< 1 Tag)",
+    "mode": "Industrial Gateway",
+    "maturity": "Produktiv",
+    "area": "Energiezähler & Altgeräte-Anbindung"
+  },
+  "staffing": "1x Betriebselektriker (10% FTE)"
+}

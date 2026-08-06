@@ -1,0 +1,68 @@
+{
+  "refCode": "IND-META-2026-MTCONNECT",
+  "categoryCode": "7.0",
+  "categoryName": "OT & Sensorik-Feldbusse",
+  "name": "MTConnect Machine Standard",
+  "subtitle": "Offener Standard für CNC-Werkzeugmaschinen",
+  "vendor": "MTConnect Institute",
+  "hq": "McLean, VA, USA",
+  "businessModel": "Open Royalty-Free Standard",
+  "url": "https://mtconnect.org",
+  "tier": "Tier 1",
+  "costLabel": "Open Standard / €0",
+  "status": "EVALUIERT",
+  "overview": "Offenes Protokoll zum Extrahieren struktureller Daten aus CNC-Werkzeugmaschinen und Fräszentren in XML/REST-Formate.",
+  "features": [
+    {
+      "title": "CNC-Datenmodell",
+      "desc": "Vordefinierte Tags für Spindeldrehzahl, Vorschub und Betriebsstatus."
+    },
+    {
+      "title": "RESTful HTTP Architecture",
+      "desc": "Einfache webbasierte Abfragerstruktur für Dashboards."
+    },
+    {
+      "title": "Adapter-Unterstützung",
+      "desc": "Auf CNCs von Mazak, DMG Mori und Haas vorinstalliert."
+    }
+  ],
+  "inputs": [
+    "CNC Controller Memory",
+    "Machine Sensors"
+  ],
+  "outputs": [
+    "MTConnect XML Streams",
+    "HTTP REST Responses"
+  ],
+  "bridges": [
+    "Collectu Data Engine",
+    "MES Systems",
+    "Azure IoT"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Standard in der Fertigung zur OEE-Erfassung."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Standardisiert Zerspanungskennzahlen ohne eigene Treiberentwicklung."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Hauptsächlich für Read-Only Telemetrie gedacht."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Gateway to USD / AAS",
+    "sovereignty": "ANSI Recognized Standard",
+    "openStandard": "MTConnect XML"
+  },
+  "deployment": {
+    "effort": "Gering (1-2 Tage)",
+    "mode": "CNC Edge PC",
+    "maturity": "Produktiv",
+    "area": "CNC-Werkzeugmaschinen OEE"
+  },
+  "staffing": "1x Zerspanungsingenieur (25% FTE)"
+}

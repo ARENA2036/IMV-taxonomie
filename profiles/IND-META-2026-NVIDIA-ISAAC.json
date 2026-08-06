@@ -1,0 +1,71 @@
+{
+  "refCode": "IND-META-2026-NVIDIA-ISAAC",
+  "categoryCode": "5.0",
+  "categoryName": "Robotik & Fabriksimulation",
+  "name": "NVIDIA Isaac Sim / Isaac Lab (Physical AI)",
+  "subtitle": "Physikbasierte Roboter-Simulation & KI-Training",
+  "vendor": "NVIDIA Corporation",
+  "hq": "Santa Clara, CA, USA / EU Support",
+  "businessModel": "Omniverse Enterprise License + Hardware",
+  "url": "https://developer.nvidia.com/isaac-sim",
+  "tier": "Tier 2",
+  "costLabel": "≤ €100k",
+  "status": "CORE SIM STANDARD",
+  "overview": "Roboter-Simulationsanwendung und Physical-AI-Framework auf Omniverse-Basis. Ermöglicht synthetische Datengenerierung (SDG) und Reinforcement Learning für AMRs und Roboterarme.",
+  "features": [
+    {
+      "title": "PhysX 5 GPU Acceleration",
+      "desc": "Sub-Millisekunden-Dynamik für Hunderte Roboter gleichzeitig auf der Shopfloor-Bühne."
+    },
+    {
+      "title": "ROS 2 Native DDS Bridge",
+      "desc": "Latenzfreie Kommunikationsbrücke zu physischen Robotersteuerungen."
+    },
+    {
+      "title": "Omniverse Replicator",
+      "desc": "Generierung synthetischer Kamerabilder mit perfekter semantischer Segmentierung."
+    }
+  ],
+  "inputs": [
+    "URDF",
+    "USD Robot Stage",
+    "ROS 2 Topics (/cmd_vel, /joint_states)"
+  ],
+  "outputs": [
+    "Native OpenUSD Stage",
+    "Sensor Streams (RTSP, ROS 2)",
+    "Tensor Arrays"
+  ],
+  "bridges": [
+    "ROS 2 DDS",
+    "PyTorch",
+    "Hugging Face LeRobot",
+    "Omniverse Kit"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Absoluter Maßstab für den Sim-to-Real-Transfer von KI-Greif- und Navigationsalgorithmen."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Reduziert KI-Kameratrainingszeiten durch synthetische Daten um bis zu 70%."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Erfordert NVIDIA RTX GPU Workstations oder Cloud-Instanzen."
+    }
+  ],
+  "compliance": {
+    "omniverse": "NATIVE OMNIVERSE CORE",
+    "sovereignty": "GAIA-X / SOC2",
+    "openStandard": "OpenUSD / ROS 2 DDS"
+  },
+  "deployment": {
+    "effort": "Hoch (3-4 Wochen)",
+    "mode": "Workstation / Enterprise Cloud",
+    "maturity": "Produktiv",
+    "area": "Autonome Roboter & AMR-Flotten"
+  },
+  "staffing": "1x Robotics Simulation Specialist (100% FTE)"
+}

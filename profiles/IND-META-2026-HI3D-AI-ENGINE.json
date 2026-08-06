@@ -1,0 +1,72 @@
+{
+  "refCode": "IND-META-2026-HI3D-AI-ENGINE",
+  "categoryCode": "2.0",
+  "categoryName": "DCC & Generatives 3D-Design",
+  "name": "Hi3D AI Engine (Generative 3D to Additive)",
+  "subtitle": "KI-3D-Generierung aus Text & 2D-Bildern",
+  "vendor": "Hi3D AI Inc.",
+  "hq": "European Tech Hub (EU)",
+  "businessModel": "Enterprise SaaS / API Usage Model",
+  "url": "https://hi3d.ai",
+  "tier": "Tier 1",
+  "costLabel": "≤ €30k",
+  "status": "TESTBED",
+  "overview": "Generative KI-Engine, die aus Text-Prompts oder 2D-Fotos strukturierte 3D-Meshes erzeugt und wasserdichte Geometrien für den 3D-Druck und das Scene Staging ausgibt.",
+  "features": [
+    {
+      "title": "Image-to-3D Synthesis",
+      "desc": "Sofortige 3D-Asset-Generierung aus einzelnen Werkstatt-Fotos."
+    },
+    {
+      "title": "Wasserdichte Meshes",
+      "desc": "Erzeugt druckbare, manigfaltige 3D-Geometrie."
+    },
+    {
+      "title": "Automatisches USD-Texturing",
+      "desc": "Generiert PBR-Textur-Karten verknüpft mit USD-Modellen."
+    }
+  ],
+  "inputs": [
+    "PNG",
+    "JPG",
+    "Text Prompts",
+    "CAD Skizzen"
+  ],
+  "outputs": [
+    "OpenUSD (.usdz)",
+    "glTF 2.0",
+    "STL",
+    "OBJ"
+  ],
+  "bridges": [
+    "NVIDIA Omniverse AI Extensions",
+    "Blender",
+    "WebXR"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Beschleunigt die Erstellung von Hintergrundelementen (Paletten, Kisten, Handwerkzeug) um 90%."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Reduziert den Arbeitsaufwand von 3D-Artisten drastisch."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Ungeeignet für maßkritische Sub-Millimeter-Maschinenteile."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Native USD Export",
+    "sovereignty": "DSGVO EU Cloud",
+    "openStandard": "OpenUSD / glTF 2.0"
+  },
+  "deployment": {
+    "effort": "Sehr Gering (< 1 Tag)",
+    "mode": "Cloud API / Web Service",
+    "maturity": "Evaluation",
+    "area": "Schnelles 3D-Prop Staging"
+  },
+  "staffing": "1x AI Operator (25% FTE)"
+}

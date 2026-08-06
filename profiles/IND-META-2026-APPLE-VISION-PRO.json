@@ -1,0 +1,69 @@
+{
+  "refCode": "IND-META-2026-APPLE-VISION-PRO",
+  "categoryCode": "11.0",
+  "categoryName": "Spatial XR & VR/AR Headsets",
+  "name": "Apple Vision Pro Enterprise",
+  "subtitle": "High-End Spatial Computing Hardware",
+  "vendor": "Apple Inc.",
+  "hq": "Cupertino, CA, USA",
+  "businessModel": "Hardware Purchase (~€3,999/unit) + visionOS",
+  "url": "https://apple.com/apple-vision-pro",
+  "tier": "Tier 1",
+  "costLabel": "≤ €30k",
+  "status": "PREMIUM SPATIAL DEVICE",
+  "overview": "Spatial Computer mit extrem hochauflösenden Micro-OLED-Displays (23 Millionen Pixel) für gestochen scharfe CAD-Prüfungen und Cloud-Streaming.",
+  "features": [
+    {
+      "title": "Micro-OLED 4K Displays",
+      "desc": "Gestochen scharfe Lesbarkeit komplexer Schaltpläne und CAD-Zeichnungen."
+    },
+    {
+      "title": "Augen- & Handtracking",
+      "desc": "Controller-freie Navigation durch Blick und Geste."
+    },
+    {
+      "title": "Natives USDZ & WebXR",
+      "desc": "Direktes Rendering von OpenUSD-Modellen ohne Konverter."
+    }
+  ],
+  "inputs": [
+    "USDZ",
+    "WebXR",
+    "NVIDIA Omniverse Cloud WebRTC Stream"
+  ],
+  "outputs": [
+    "ARKit Spatial Mesh",
+    "Eye/Hand Pose Telemetry"
+  ],
+  "bridges": [
+    "NVIDIA Omniverse Cloud Streaming App",
+    "PTC Vuforia",
+    "Siemens NX VR"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Beste Visualisierungsqualität für Design-Reviews auf Führungsebene."
+    },
+    {
+      "title": "Vorteile",
+      "text": "WebRTC-Streaming überträgt riesige Omniverse USD-Bühnen direkt auf die Brille."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Hohes Gewicht; externe Batterie auf ca. 2 Stunden Nutzungsdauer begrenzt."
+    }
+  ],
+  "compliance": {
+    "omniverse": "WebRTC Streaming Native",
+    "sovereignty": "SOC2 / Apple Enterprise",
+    "openStandard": "USDZ / WebXR / OpenXR"
+  },
+  "deployment": {
+    "effort": "Sehr Gering (< 1 Tag)",
+    "mode": "Wearable Spatial Computer",
+    "maturity": "Produktiv",
+    "area": "High-End CAD Review & Streaming"
+  },
+  "staffing": "1x Spatial App Specialist (25% FTE)"
+}

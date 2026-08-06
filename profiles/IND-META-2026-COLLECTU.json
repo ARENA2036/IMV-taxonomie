@@ -1,0 +1,73 @@
+{
+  "refCode": "IND-META-2026-COLLECTU",
+  "categoryCode": "8.3",
+  "categoryName": "KI-Datenmotoren & Pipeline-Bridges",
+  "name": "Collectu (No-Code AI Industrial Data Engine)",
+  "subtitle": "No-Code KI-Verknüpfung von Maschinen an 3D-OpenUSD",
+  "vendor": "Collectu / Futuromundo Cyberländ",
+  "hq": "Baden-Württemberg, Deutschland (EU)",
+  "businessModel": "No-Code SaaS / Edge Container License",
+  "url": "https://futuromundo.com/cyberlaend",
+  "tier": "Tier 1",
+  "costLabel": "≤ €30k",
+  "status": "EMPFOHLENE DATA ENGINE",
+  "overview": "KI-gestützte No-Code-Datenengine zur nahtlosen Bindung von Maschinen, Sensoren und SPSen an 3D OpenUSD digitale Zwillinge für geschlossene Regelkreise.",
+  "features": [
+    {
+      "title": "No-Code OPC UA/MQTT Binding",
+      "desc": "Verbindet Feldsignale in Minuten per Drag-and-Drop mit 3D-USD-Attributen."
+    },
+    {
+      "title": "Spatial Context Engine",
+      "desc": "KI-Kontextualisierung ordnet 1D-Sensordaten 3D-Raumkoordinaten zu."
+    },
+    {
+      "title": "Closed-Loop Feedback",
+      "desc": "Sendet Steuerbefehle aus 3D-Metaverse-Interaktionen zurück an physische SPSen."
+    }
+  ],
+  "inputs": [
+    "OPC UA",
+    "MQTT",
+    "Modbus",
+    "REST API",
+    "Siemens S7",
+    "ROS 2 Topics"
+  ],
+  "outputs": [
+    "OpenUSD Live Data Stream",
+    "AASX Twin Packages",
+    "WebSockets JSON"
+  ],
+  "bridges": [
+    "NVIDIA Omniverse Nucleus",
+    "Siemens S7 SPS",
+    "Asset Administration Shell (AAS)"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Extrem schnelle Bereitstellung; reduziert die Anbindungszeit von Datenkonnektoren von Wochen auf Minuten."
+    },
+    {
+      "title": "Vorteile",
+      "text": "100% EU-Entwicklung aus Baden-Württemberg unter strikten DSGVO-Standards."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Laufender Ausbau der Bibliothek für proprietäre Alt-Protokolle."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Native Live Connector",
+    "sovereignty": "100% EU Souverän (Baden-Württemberg)",
+    "openStandard": "OPC UA / AAS / OpenUSD"
+  },
+  "deployment": {
+    "effort": "Gering (1-2 Tage)",
+    "mode": "Edge Container / Cloud",
+    "maturity": "Produktiv",
+    "area": "IT/OT Live-Datenbindung an 3D-Zwilling"
+  },
+  "staffing": "1x IT/OT Systemadministrator (25% FTE)"
+}

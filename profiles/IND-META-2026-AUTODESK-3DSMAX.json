@@ -1,0 +1,74 @@
+{
+  "refCode": "IND-META-2026-AUTODESK-3DSMAX",
+  "categoryCode": "2.0",
+  "categoryName": "DCC & Generatives 3D-Design",
+  "name": "Autodesk 3ds Max",
+  "subtitle": "Industrial DCC & Mesh-Optimierung",
+  "vendor": "Autodesk Inc.",
+  "hq": "San Francisco, CA, USA",
+  "businessModel": "Enterprise Subscription / Token Flex",
+  "url": "https://autodesk.com/3ds-max",
+  "tier": "Tier 2",
+  "costLabel": "≤ €100k",
+  "status": "EVALUIERT",
+  "overview": "Industrielle DCC-Software für Architektur-Visualisierung, CAD-Geometriebereinigung und Echtzeit-Asset-Vorbereitung für Spatial Engines.",
+  "features": [
+    {
+      "title": "Retopology Tools",
+      "desc": "Automatisierte Polygon-Optimierung für hochdichte CAD-Meshes."
+    },
+    {
+      "title": "USD for 3ds Max",
+      "desc": "Zerstörungsfreie OpenUSD-Bühnenbearbeitung und Material-Mapping."
+    },
+    {
+      "title": "Arnold Renderer",
+      "desc": "High-End Photorealistic Raytracing Engine."
+    }
+  ],
+  "inputs": [
+    "MAX",
+    "FBX",
+    "OBJ",
+    "Inventor (.IPT)",
+    "STEP",
+    "Revit (.RVT)"
+  ],
+  "outputs": [
+    "OpenUSD (.usd)",
+    "glTF 2.0",
+    "FBX",
+    "OBJ"
+  ],
+  "bridges": [
+    "NVIDIA Omniverse",
+    "Unreal Engine Datasmith",
+    "Unity"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Standardwerkzeug zur Wandlung schwerer CAD-Architektur in Echtzeit-Assets."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Nativer Import von Autodesk Inventor- und Revit-Formaten unter Beibehaltung der Hierarchie."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Hohe Lizenzkosten pro Arbeitsplatz; nur für Windows verfügbar."
+    }
+  ],
+  "compliance": {
+    "omniverse": "USD Extension",
+    "sovereignty": "SOC2 Compliant",
+    "openStandard": "OpenUSD / glTF 2.0"
+  },
+  "deployment": {
+    "effort": "Mittel (2-3 Wochen)",
+    "mode": "Windows Desktop",
+    "maturity": "Produktiv",
+    "area": "High-End Visualisierung"
+  },
+  "staffing": "1x 3D Visualization Specialist (50% FTE)"
+}

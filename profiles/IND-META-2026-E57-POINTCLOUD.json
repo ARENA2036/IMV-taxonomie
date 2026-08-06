@@ -1,0 +1,69 @@
+{
+  "refCode": "IND-META-2026-E57-POINTCLOUD",
+  "categoryCode": "10.0",
+  "categoryName": "Datenformate & OpenUSD-Standards",
+  "name": "E57 (ASTM E2807 - Punktwolken-Standard)",
+  "subtitle": "Herstellerneutraler Punktwolken-Standard",
+  "vendor": "ASTM International",
+  "hq": "West Conshohocken, PA, USA / Global",
+  "businessModel": "Open International Standard (ASTM E2807)",
+  "url": "https://astm.org/e2807-11.html",
+  "tier": "Tier 1",
+  "costLabel": "Open Standard / €0",
+  "status": "PFLICHTSTANDARD SCAN",
+  "overview": "Herstellerneutrales Binärdateiformat zur Speicherung dichter 3D-Punktwolkendaten, 2D-Panoramabilder und Sensormetadaten von Laserscannern.",
+  "features": [
+    {
+      "title": "Herstellerneutrale Speicherung",
+      "desc": "Standardisiert Punktwolken von Leica, FARO, NavVis und Trimble."
+    },
+    {
+      "title": "Integrierte 360° Panoramen",
+      "desc": "Speichert sphärische Panoramen direkt verknüpft mit den 3D-Punkten."
+    },
+    {
+      "title": "Hohe Koordinatenpräzision",
+      "desc": "Bewahrt geodätische Sub-Millimeter-Koordinaten ohne Rundungsfehler."
+    }
+  ],
+  "inputs": [
+    "Raw Laserscanner Telemetrie",
+    "SLAM-Systeme"
+  ],
+  "outputs": [
+    ".e57 (ASTM E2807 Container)"
+  ],
+  "bridges": [
+    "NavVis IVION",
+    "Leica Cyclone",
+    "FARO Sphere",
+    "Autodesk ReCap",
+    "NVIDIA Omniverse"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Absoluter Universalstandard zum Austausch von Reality-Capture-Daten."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Bewahrt exakte Scanner-Standorte und kalibrierte Fotos."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Große unkomprimierte Dateigrößen erfordern schnelle SSD-Speicher."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Point Cloud Importer",
+    "sovereignty": "ASTM International Standard",
+    "openStandard": "ASTM E2807"
+  },
+  "deployment": {
+    "effort": "Gering (1-2 Tage)",
+    "mode": "Point Cloud Interchange",
+    "maturity": "Produktiv",
+    "area": "Punktwolken-Austausch"
+  },
+  "staffing": "1x Erfassungs-Techniker (10% FTE)"
+}

@@ -1,0 +1,73 @@
+{
+  "refCode": "IND-META-2026-COMSOL-MULTIPHYSICS",
+  "categoryCode": "4.1",
+  "categoryName": "CAE & Multiphysik-Simulation",
+  "name": "COMSOL Multiphysics",
+  "subtitle": "Gekoppelte Feld- & Thermosimulation",
+  "vendor": "COMSOL AB",
+  "hq": "Stockholm, Schweden (EU)",
+  "businessModel": "Floating Network License / Single User",
+  "url": "https://comsol.com",
+  "tier": "Tier 2",
+  "costLabel": "≤ €100k",
+  "status": "EVALUIERT",
+  "overview": "Multiphysik-Simulationssoftware zur Modellierung gekoppelter physikalischer Phänomene (elektrisch, mechanisch, fluidisch, akustisch).",
+  "features": [
+    {
+      "title": "Gekoppelte Multiphysik",
+      "desc": "Simultane Berechnung von thermischen, elektrischen und mechanischen Spannungen."
+    },
+    {
+      "title": "Application Builder",
+      "desc": "Wandelt komplexe Simulationsmodelle in eigenständige Apps um."
+    },
+    {
+      "title": "CAD Import Module",
+      "desc": "Direkter parametrischer Import von Industrie-CAD-Teilen."
+    }
+  ],
+  "inputs": [
+    "STEP",
+    "IGES",
+    "Parasolid",
+    "DXF",
+    "COMSOL MPH"
+  ],
+  "outputs": [
+    "VTK",
+    "OpenUSD (via Mesh Export)",
+    "STL",
+    "Data Matrices"
+  ],
+  "bridges": [
+    "Matlab Simulink",
+    "CAD LiveLinks",
+    "Web Apps"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Außergewöhnlich für Sensordesign, Batteriezellensimulation und Akustik."
+    },
+    {
+      "title": "Vorteile",
+      "text": "100% EU-Entwicklung mit flexiblen gekoppelten Differentialgleichungen."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Rechenintensiv; erfordert Skalierung auf HPC-Cluster-Knoten."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Export Bridge",
+    "sovereignty": "100% EU Souverän (Schweden)",
+    "openStandard": "STEP / VTK"
+  },
+  "deployment": {
+    "effort": "Hoch (3-4 Wochen)",
+    "mode": "Desktop / HPC Cluster",
+    "maturity": "Produktiv",
+    "area": "Gekoppelte Multiphysik-Simulation"
+  },
+  "staffing": "1x Multiphysik-Forscher (50% FTE)"
+}

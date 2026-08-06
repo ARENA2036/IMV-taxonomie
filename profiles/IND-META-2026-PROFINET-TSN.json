@@ -1,0 +1,68 @@
+{
+  "refCode": "IND-META-2026-PROFINET-TSN",
+  "categoryCode": "7.0",
+  "categoryName": "OT & Sensorik-Feldbusse",
+  "name": "PROFINET / TSN (Time-Sensitive Networking)",
+  "subtitle": "Industrieller Echtzeit-Ethernet-Standard",
+  "vendor": "PI (PROFIBUS & PROFINET International)",
+  "hq": "Karlsruhe, Deutschland (EU)",
+  "businessModel": "Open Industrial Ethernet Standard (IEC 61158 / IEC 61784)",
+  "url": "https://profibus.com",
+  "tier": "Tier 1",
+  "costLabel": "Open Standard / €0",
+  "status": "STANDARDIZIERT",
+  "overview": "Führender europäischer Echtzeit-Industrial-Ethernet-Standard. Garantiert in Kombination mit TSN deterministische Taktraten im Mikrosekundenbereich für die Fabrikautomatisierung.",
+  "features": [
+    {
+      "title": "Deterministische Echtzeit",
+      "desc": "Jitterfreie Antriebsregelungstakte bis unter 31.25 Mikrosekunden."
+    },
+    {
+      "title": "TSN Konvergenz",
+      "desc": "Erlaubt harte Echtzeit-I/O und hochbandbreitiges 3D-Streaming auf demselben Kabel."
+    },
+    {
+      "title": "PROFIsafe Integrated",
+      "desc": "TÜV-zertifizierte Sicherheitskommunikation bis SIL3 / PL e."
+    }
+  ],
+  "inputs": [
+    "Ethernet Frames",
+    "Sensorsignale"
+  ],
+  "outputs": [
+    "PROFINET IO Telemetrie",
+    "TSN Deterministische Streams"
+  ],
+  "bridges": [
+    "Siemens S7 SPS",
+    "ISG-Virtuos",
+    "OPC UA PubSub over TSN"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Absolute Rückgrat-Infrastruktur für europäische automatisierte Fertigungslinien."
+    },
+    {
+      "title": "Vorteile",
+      "text": "100% europäischer Industriestandard entwickelt in Karlsruhe."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Erfordert verwaltete TSN-Ethernet-Switches für konvergenten Datenverkehr."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Fieldbus Integration",
+    "sovereignty": "100% EU Standard (IEC 61158)",
+    "openStandard": "PROFINET / IEEE 802.1 TSN"
+  },
+  "deployment": {
+    "effort": "Hoch (3-4 Wochen)",
+    "mode": "Industrial Ethernet Hardware",
+    "maturity": "Produktiv",
+    "area": "Feldbus- & Antriebssteuerung"
+  },
+  "staffing": "1x Netzwerkspezialist (50% FTE)"
+}

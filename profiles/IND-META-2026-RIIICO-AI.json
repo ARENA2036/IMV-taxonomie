@@ -1,0 +1,71 @@
+{
+  "refCode": "IND-META-2026-RIIICO-AI",
+  "categoryCode": "6.1-AI",
+  "categoryName": "Spatial Perzeption & KI-Erkennung",
+  "name": "RIIICO (Factory AI Automated Layout)",
+  "subtitle": "KI-Punktwolken-Segmentierung in 3D-CAD",
+  "vendor": "RIIICO GmbH",
+  "hq": "Düsseldorf, Deutschland (EU)",
+  "businessModel": "SaaS Cloud / On-Premise Enterprise Subscription",
+  "url": "https://riiico.com",
+  "tier": "Tier 2",
+  "costLabel": "≤ €100k",
+  "status": "EMPFOHLEN",
+  "overview": "KI-Software, die rohe 3D-Punktwolken von Bestandsfabriken automatisch in parametrische CAD/BIM-Layouts und einzelne 3D-Objekte umwandelt.",
+  "features": [
+    {
+      "title": "KI-Objekterkennung",
+      "desc": "Erkennt und separiert Maschinen, Förderbänder und Stützen automatisch aus Scans."
+    },
+    {
+      "title": "CAD-Mesh-Generierung",
+      "desc": "Ersetzt dichte Punktwolken durch leichtgewichtige 3D-CAD-Objekte."
+    },
+    {
+      "title": "Revit & Omniverse Sync",
+      "desc": "Direkter Export in Gebäudesoftware und OpenUSD-Bühnen."
+    }
+  ],
+  "inputs": [
+    "E57 Point Cloud",
+    "NavVis Data",
+    "Leica Scans"
+  ],
+  "outputs": [
+    "OpenUSD (.usd)",
+    "IFC",
+    "STEP",
+    "Autodesk Revit (.RVT)"
+  ],
+  "bridges": [
+    "NVIDIA Omniverse",
+    "Autodesk Revit",
+    "Siemens NX"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Löst den wesentlichen Engpass bei der Konvertierung von Scans in nutzbare CAD-Zwillinge."
+    },
+    {
+      "title": "Vorteile",
+      "text": "100% EU-Unternehmen mit deutscher DSGVO-Datenhaltung."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Sehr spezielle Sondermaschinen erfordern kurze manuelle Prüfung."
+    }
+  ],
+  "compliance": {
+    "omniverse": "USD Native Export",
+    "sovereignty": "100% EU DSGVO (Deutschland)",
+    "openStandard": "OpenUSD / IFC"
+  },
+  "deployment": {
+    "effort": "Gering (1-2 Tage)",
+    "mode": "Web SaaS / On-Prem",
+    "maturity": "Produktiv",
+    "area": "Brownfield Layout-Konvertierung"
+  },
+  "staffing": "1x Fabrikplaner (25% FTE)"
+}

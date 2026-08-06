@@ -1,0 +1,70 @@
+{
+  "refCode": "IND-META-2026-MOTIONA",
+  "categoryCode": "5.0",
+  "categoryName": "Robotik & Fabriksimulation",
+  "name": "MotionA Kinematic Optimization",
+  "subtitle": "Roboter-Geschwindigkeits- & Energieoptimierung",
+  "vendor": "Industrial Motion Analytics",
+  "hq": "DACH Region (EU)",
+  "businessModel": "SaaS / License Fee",
+  "url": "https://motiona.io",
+  "tier": "Tier 1",
+  "costLabel": "≤ €30k",
+  "status": "TESTBED",
+  "overview": "Software zur Analyse von Roboter-Bewegungskurven. Berechnet energieoptimierte Bahnkurven für mehrachsige Industrieroboter.",
+  "features": [
+    {
+      "title": "Energieoptimierte Bahnkurve",
+      "desc": "Reduziert den Stromverbrauch durch Glättung von Beschleunigungsspitzen."
+    },
+    {
+      "title": "Schwingungsdämpfung",
+      "desc": "Algorithmatische Filterung verhindert mechanisches Schwingen der Roboterarme."
+    },
+    {
+      "title": "USD Kinematik-Export",
+      "desc": "Gibt geschmeidige Kinematikprofile an OpenUSD-Bühnen aus."
+    }
+  ],
+  "inputs": [
+    "G-Code",
+    "SPS Trajektorienlogs",
+    "CAD Kinematic Joints"
+  ],
+  "outputs": [
+    "OpenUSD Kinematic Attributes",
+    "Smooth G-Code",
+    "CSV Telemetrie"
+  ],
+  "bridges": [
+    "NVIDIA Isaac Sim",
+    "Siemens S7 SPS",
+    "KUKA Sim"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Senkt den Energieverbrauch in Karosseriebaulinien direkt."
+    },
+    {
+      "title": "Vorteile",
+      "text": "100% EU-Entwicklung mit direktem ROI durch Stromersparnis."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Spezialisiert auf dynamische Roboterbahnplanung."
+    }
+  ],
+  "compliance": {
+    "omniverse": "OpenUSD Kinematic Schema",
+    "sovereignty": "100% EU Souverän",
+    "openStandard": "G-Code / OpenUSD"
+  },
+  "deployment": {
+    "effort": "Mittel (2-3 Wochen)",
+    "mode": "Industrial PC / Cloud",
+    "maturity": "Evaluation",
+    "area": "Roboter-Energieoptimierung"
+  },
+  "staffing": "1x Motion Control Specialist (25% FTE)"
+}

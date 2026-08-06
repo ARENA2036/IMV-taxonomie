@@ -1,0 +1,72 @@
+{
+  "refCode": "IND-META-2026-UNREAL-ENGINE-5",
+  "categoryCode": "3.0",
+  "categoryName": "Echtzeit-3D & Spatial Engines",
+  "name": "Unreal Engine 5 Enterprise",
+  "subtitle": "Fotorealistisches Rendering & High-End Visualisierung",
+  "vendor": "Epic Games Inc.",
+  "hq": "Cary, NC, USA / EU Support",
+  "businessModel": "Free Core / Enterprise Seats ($1,500/seat/yr)",
+  "url": "https://unrealengine.com/enterprise",
+  "tier": "Tier 2",
+  "costLabel": "≤ €100k",
+  "status": "EMPFOHLEN",
+  "overview": "High-End 3D-Echtzeit-Engine für fotorealistische Visualisierungen, virtuelle Begehungen und immersives VR-Training von Werksanlagen.",
+  "features": [
+    {
+      "title": "Nanite Virtualized Geometry",
+      "desc": "Direktes Rendering von Millionen-Polygon-CAD-Dateien ohne manuelles Retopologisieren."
+    },
+    {
+      "title": "Lumen Global Illumination",
+      "desc": "Dynamische Global Illumination und Reflexionen in Echtzeit."
+    },
+    {
+      "title": "Datasmith & OpenUSD Import",
+      "desc": "Automatisierte Ingestion von CAD- und BIM-Daten."
+    }
+  ],
+  "inputs": [
+    "OpenUSD",
+    "Datasmith (Revit/SolidWorks/Rhino)",
+    "FBX",
+    "glTF",
+    "Point Clouds"
+  ],
+  "outputs": [
+    "Executable Binaries (Win/Linux)",
+    "Pixel Streaming (WebRTC)",
+    "OpenUSD Stage"
+  ],
+  "bridges": [
+    "NVIDIA Omniverse Connector",
+    "AWS TwinMaker",
+    "ROS 2 DDS"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Unübertroffene visuelle Qualität für Führungskräfte-Reviews und VR."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Nanite bewältigt riesige Punktwolken und rohe CAD-Geometrien flüssig."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Hohe Speichergröße der Anwendungs-Binaries; C++ erforderlich für Tiefenlogik."
+    }
+  ],
+  "compliance": {
+    "omniverse": "OpenUSD Importer / Stage",
+    "sovereignty": "SOC2 / Enterprise SLA",
+    "openStandard": "OpenUSD / glTF / WebRTC"
+  },
+  "deployment": {
+    "effort": "Hoch (3-4 Wochen)",
+    "mode": "Desktop / Pixel Streaming Server",
+    "maturity": "Produktiv",
+    "area": "Fotorealistische Fabrikbegehungen"
+  },
+  "staffing": "1x Technical Artist / Real-Time Developer (100% FTE)"
+}

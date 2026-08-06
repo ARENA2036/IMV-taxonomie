@@ -1,0 +1,72 @@
+{
+  "refCode": "IND-META-2026-SIMSCALE-CFD",
+  "categoryCode": "4.1",
+  "categoryName": "CAE & Multiphysik-Simulation",
+  "name": "SimScale Cloud CFD & FEA",
+  "subtitle": "Cloud-basierte Strömungs- & Thermalsimulation",
+  "vendor": "SimScale GmbH",
+  "hq": "München, Deutschland (EU)",
+  "businessModel": "SaaS Cloud Subscription",
+  "url": "https://simscale.com",
+  "tier": "Tier 1",
+  "costLabel": "≤ €30k",
+  "status": "EMPFOHLEN",
+  "overview": "100% cloudnative FEA-, CFD- und Thermalsimulationsplattform, die parallelisierte Solver direkt im Webbrowser ausführt.",
+  "features": [
+    {
+      "title": "Browser CFD & FEA",
+      "desc": "Sofortiger Zugriff auf parallele Cloud-Solver ohne lokale Hardware-Investition."
+    },
+    {
+      "title": "Reinraum- & HVAC-Sim",
+      "desc": "Spezialisierte Strömungs-Solver für Hallenbelüftung und Thermik."
+    },
+    {
+      "title": "CAD-Neutraler Ingestion",
+      "desc": "Unterstützt alle gängigen neutralen und nativen CAD-Formate."
+    }
+  ],
+  "inputs": [
+    "STEP",
+    "IGES",
+    "Parasolid",
+    "SolidWorks",
+    "STL"
+  ],
+  "outputs": [
+    "WebGL 3D VTK Datasets",
+    "CSV Telemetry",
+    "Downloadable Mesh"
+  ],
+  "bridges": [
+    "Autodesk Fusion",
+    "Onshape",
+    "Web Dashboards"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Eliminiert teure lokale HPC-Hardware-Investitionen für KMU."
+    },
+    {
+      "title": "Vorteile",
+      "text": "100% EU-Unternehmen mit deutscher DSGVO-Datenhaltung."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Setzt gute Internet-Uploadbandbreite für CAD-Modelle voraus."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Web Cloud Native",
+    "sovereignty": "100% EU DSGVO (München)",
+    "openStandard": "STEP AP242 / VTK"
+  },
+  "deployment": {
+    "effort": "Gering (1-2 Tage)",
+    "mode": "Web Browser Access",
+    "maturity": "Produktiv",
+    "area": "Cloud CFD & Belüftungssimulation"
+  },
+  "staffing": "1x Strömungsanalyst (25% FTE)"
+}

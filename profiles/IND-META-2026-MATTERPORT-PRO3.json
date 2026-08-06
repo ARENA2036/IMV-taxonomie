@@ -1,0 +1,70 @@
+{
+  "refCode": "IND-META-2026-MATTERPORT-PRO3",
+  "categoryCode": "6.5",
+  "categoryName": "360°-Erfassung & GIS-Kartierung",
+  "name": "Matterport Pro3 & 360 Spatial Platform",
+  "subtitle": "360° LiDAR-Kamera & Virtuelle Rundgänge",
+  "vendor": "Matterport Inc.",
+  "hq": "Sunnyvale, CA, USA",
+  "businessModel": "Hardware Purchase + Cloud SaaS Subscription",
+  "url": "https://matterport.com",
+  "tier": "Tier 2",
+  "costLabel": "≤ €100k",
+  "status": "STANDARD WALKTHROUGH",
+  "overview": "Führende Plattform für virtuelle 360°-Begehungen. Nutzt die Pro3 LiDAR-Kamera für schnelle Rundgänge in Innen- und Außenbereichen.",
+  "features": [
+    {
+      "title": "Pro3 High-Density LiDAR",
+      "desc": "100m Reichweite auch unter direktem Sonnenlicht."
+    },
+    {
+      "title": "Automatisches Puppenhaus",
+      "desc": "KI-Generierung interaktiver 3D-Grundrisse."
+    },
+    {
+      "title": "Matterport BIM File",
+      "desc": "Direkte automatische Erzeugung von Revit (.RVT) Dateien."
+    }
+  ],
+  "inputs": [
+    "Pro3 LiDAR Scan",
+    "Sphärische 360° Fotos"
+  ],
+  "outputs": [
+    "E57 Point Cloud",
+    "RVT (Revit BIM)",
+    "DWG",
+    "OBJ"
+  ],
+  "bridges": [
+    "Autodesk Construction Cloud",
+    "AWS IoT TwinMaker",
+    "NVIDIA Omniverse"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Demokratisiert die Erfassung; auch Nicht-Spezialisten können Werke erfassen."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Sehr ansprechender Web-Viewer auf jedem Tablet ohne Installation."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Zwingendes Cloud-Hosting; keine reine Offline-Desktop-Verarbeitung."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Connector Bridge",
+    "sovereignty": "SOC2 / ISO 27001",
+    "openStandard": "E57 / RVT"
+  },
+  "deployment": {
+    "effort": "Sehr Gering (< 1 Tag)",
+    "mode": "Stativ Hardware + Cloud",
+    "maturity": "Produktiv",
+    "area": "Virtuelle Fabrik-Rundgänge"
+  },
+  "staffing": "1x Facility Techniker (25% FTE)"
+}

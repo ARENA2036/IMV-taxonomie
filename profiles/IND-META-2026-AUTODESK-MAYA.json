@@ -1,0 +1,74 @@
+{
+  "refCode": "IND-META-2026-AUTODESK-MAYA",
+  "categoryCode": "2.0",
+  "categoryName": "DCC & Generatives 3D-Design",
+  "name": "Autodesk Maya",
+  "subtitle": "Kinematik-Rigging & Worker-Animation",
+  "vendor": "Autodesk Inc.",
+  "hq": "San Francisco, CA, USA",
+  "businessModel": "Enterprise Subscription",
+  "url": "https://autodesk.com/maya",
+  "tier": "Tier 2",
+  "costLabel": "≤ €100k",
+  "status": "EVALUIERT",
+  "overview": "Animations- und Rigging-Software für Ergonomie- und Arbeiter-Animationen sowie komplexe Roboterkinematik im digitalen Zwilling.",
+  "features": [
+    {
+      "title": "Maya USD Integration",
+      "desc": "Tief integrierte Pixar OpenUSD Viewport-Engine."
+    },
+    {
+      "title": "Human Kinematic Rigging",
+      "desc": "Inverse Kinematik (IK) für Werksarbeiter-Ergonomiestudien."
+    },
+    {
+      "title": "Bifrost Procedural Engine",
+      "desc": "Visuelles Programmieren für Partikel und Physik."
+    }
+  ],
+  "inputs": [
+    "MA",
+    "MB",
+    "FBX",
+    "OBJ",
+    "USD",
+    "Alembic"
+  ],
+  "outputs": [
+    "OpenUSD (.usd)",
+    "FBX",
+    "glTF 2.0",
+    "Alembic"
+  ],
+  "bridges": [
+    "NVIDIA Omniverse",
+    "Unreal Engine 5",
+    "OptiTrack Mocap"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Unangefochtener Standard für das Rigging von Humanoiden und Roboter-Kinematiken."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Arbeiten direkt in USD-Attributen im Viewport."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Überkomplex für reine mechanische CAD-Modellierung."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Native USD Viewport",
+    "sovereignty": "SOC2 Compliant",
+    "openStandard": "OpenUSD / Alembic"
+  },
+  "deployment": {
+    "effort": "Hoch (3-4 Wochen)",
+    "mode": "Linux / Windows Desktop",
+    "maturity": "Produktiv",
+    "area": "Kinematik-Rigging & Mocap"
+  },
+  "staffing": "1x Rigging Specialist (50% FTE)"
+}

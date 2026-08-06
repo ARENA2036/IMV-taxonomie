@@ -1,0 +1,74 @@
+{
+  "refCode": "IND-META-2026-TWINMOTION",
+  "categoryCode": "3.0",
+  "categoryName": "Echtzeit-3D & Spatial Engines",
+  "name": "Twinmotion (Real-Time Architecture)",
+  "subtitle": "Schnelle 3D-Visualisierung für AEC & Fabriken",
+  "vendor": "Epic Games Inc.",
+  "hq": "Cary, NC, USA",
+  "businessModel": "Enthalten in Unreal Engine / Enterprise Seat",
+  "url": "https://twinmotion.com",
+  "tier": "Tier 1",
+  "costLabel": "≤ €30k",
+  "status": "EVALUIERT",
+  "overview": "Schnelles 3D-Echtzeit-Visualisierungswerkzeug powered by Unreal Engine. Speziell für AEC-Planer entwickelt, um Fabrikgebäude in Minuten zu begehen.",
+  "features": [
+    {
+      "title": "Direct Revit & Archicad Sync",
+      "desc": "Ein-Klick-Live-Verbindung mit führender BIM-Software."
+    },
+    {
+      "title": "PBR Drag-and-Drop Bibliothek",
+      "desc": "Riesige Bibliothek realistischer Materialien, Pflanzen und Personen."
+    },
+    {
+      "title": "Auto-VR Mode",
+      "desc": "Sofortige One-Click VR-Präsentations-Einrichtung."
+    }
+  ],
+  "inputs": [
+    "RVT",
+    "SKP",
+    "FBX",
+    "OBJ",
+    "glTF",
+    "Datasmith"
+  ],
+  "outputs": [
+    "Executable Presentations",
+    "Panoramas",
+    "MP4 Video",
+    "USD Export"
+  ],
+  "bridges": [
+    "Unreal Engine 5",
+    "Autodesk Revit",
+    "Trimble SketchUp"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Hervorragend für Architekten ohne Programmierkenntnisse zur schnellen Präsentation."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Zero Einarbeitungszeit; erzeugt eindrucksvolle Begehungen."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Keine Skriptfähigkeit und keine Anbindung von OT/SPS-Telemetriedaten."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Datasmith Bridge",
+    "sovereignty": "SOC2 Compliant",
+    "openStandard": "glTF 2.0 / OpenUSD"
+  },
+  "deployment": {
+    "effort": "Sehr Gering (< 1 Tag)",
+    "mode": "Desktop App",
+    "maturity": "Produktiv",
+    "area": "Schnelle Fabrik-Visualisierung"
+  },
+  "staffing": "1x Bauzeichner / Visualisierer (25% FTE)"
+}

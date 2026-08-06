@@ -1,0 +1,70 @@
+{
+  "refCode": "IND-META-2026-HTC-VIVE-FOCUS3",
+  "categoryCode": "11.0",
+  "categoryName": "Spatial XR & VR/AR Headsets",
+  "name": "HTC VIVE Focus 3 Business",
+  "subtitle": "Robustes Standalone VR/AR Headset für Training",
+  "vendor": "HTC Corporation",
+  "hq": "Taoyuan, Taiwan / EU Support",
+  "businessModel": "Hardware Purchase + Vive Business Warranty",
+  "url": "https://business.vive.com/focus3",
+  "tier": "Tier 1",
+  "costLabel": "≤ €30k",
+  "status": "EVALUIERT",
+  "overview": "Robustes Standalone-Enterprise-VR-Headset für industrielles Sicherheitstraining, ergonomische VR-Montagesimulation und Trainingszentren.",
+  "features": [
+    {
+      "title": "5K Display Auflösung",
+      "desc": "Duale 2.88K LCD-Displays mit 4896 x 2448 Gesamtauflösung."
+    },
+    {
+      "title": "Wechselakku am Hinterkopf",
+      "desc": "Schnellwechselakku für den unterbrechungsfreien Schichtbetrieb."
+    },
+    {
+      "title": "Enterprise MDM Management",
+      "desc": "Fernwartung und App-Verteilung über ISO-zertifiziertes MDM."
+    }
+  ],
+  "inputs": [
+    "OpenXR Apps",
+    "PC VR Streaming",
+    "Android APK"
+  ],
+  "outputs": [
+    "6DOF Controller Tracking",
+    "Optional Eye/Face Tracking"
+  ],
+  "bridges": [
+    "Halocline",
+    "Unity Industry",
+    "Unreal Engine 5",
+    "NVIDIA Omniverse"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Etabliertes Enterprise-VR-Headset in Trainingszentren der Automobilindustrie."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Leicht zu reinigende Polster und Wechselakkus für den Ganzjahresbetrieb."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Monochromes Pass-Through begrenzt Mixed-Reality-Anwendungen."
+    }
+  ],
+  "compliance": {
+    "omniverse": "OpenXR Native",
+    "sovereignty": "ISO 27001 Enterprise",
+    "openStandard": "OpenXR"
+  },
+  "deployment": {
+    "effort": "Gering (1-2 Tage)",
+    "mode": "Standalone Enterprise VR",
+    "maturity": "Produktiv",
+    "area": "Sicherheitstraining & VR-Schulungen"
+  },
+  "staffing": "1x VR Coordinator (25% FTE)"
+}

@@ -1,0 +1,68 @@
+{
+  "refCode": "IND-META-2026-ORB360",
+  "categoryCode": "6.5",
+  "categoryName": "360°-Erfassung & GIS-Kartierung",
+  "name": "Orb360 Turntable System",
+  "subtitle": "Automatisierte 360° Bauteil-Fotografie",
+  "vendor": "Orb360 Technologies",
+  "hq": "Deutschland (EU)",
+  "businessModel": "Hardware Kit + Cloud Hosting",
+  "url": "https://orb360.tech",
+  "tier": "Tier 1",
+  "costLabel": "≤ €30k",
+  "status": "EVALUIERT",
+  "overview": "Automatisierter Drehteller zur Erfassung kleiner Industrieteile für Ersatzteilkataloge und 3D-Web-Viewer.",
+  "features": [
+    {
+      "title": "Drehteller-Sync",
+      "desc": "Synchronisiert Auslöser mit der Drehtellerrotation."
+    },
+    {
+      "title": "Freistellung",
+      "desc": "Erzeugt saubere Alpha-Masken zur schnellen 3D-Mesh-Verarbeitung."
+    },
+    {
+      "title": "Web3D Export",
+      "desc": "Erzeugt interaktive 360°-Produktansichten."
+    }
+  ],
+  "inputs": [
+    "High-Res Kamera Fotos"
+  ],
+  "outputs": [
+    "glTF 2.0",
+    "OBJ",
+    "Interactive Web HTML"
+  ],
+  "bridges": [
+    "WooCommerce",
+    "SAP Commerce Cloud",
+    "Blender"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Ideal zum Digitalisieren von Tausenden Kleinteilen im Ersatzteillager."
+    },
+    {
+      "title": "Vorteile",
+      "text": "100% EU-Hardware; automatisiert die Produktfotografie."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Größe auf Objekte beschränkt, die auf den Drehteller passen."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Web Standard Export",
+    "sovereignty": "100% EU Souverän",
+    "openStandard": "glTF 2.0"
+  },
+  "deployment": {
+    "effort": "Gering (1-2 Tage)",
+    "mode": "Hardware Studio Table",
+    "maturity": "Produktiv",
+    "area": "Ersatzteil-Cataloging"
+  },
+  "staffing": "1x Inventory Clerk (25% FTE)"
+}

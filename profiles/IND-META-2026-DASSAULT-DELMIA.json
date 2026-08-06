@@ -1,0 +1,71 @@
+{
+  "refCode": "IND-META-2026-DASSAULT-DELMIA",
+  "categoryCode": "5.0",
+  "categoryName": "Robotik & Fabriksimulation",
+  "name": "Dassault Systèmes DELMIA",
+  "subtitle": "Roboterzellen-Offline-Programmierung",
+  "vendor": "Dassault Systèmes",
+  "hq": "Vélizy-Villacoublay, Frankreich (EU)",
+  "businessModel": "3DEXPERIENCE Enterprise Subscription",
+  "url": "https://3ds.com/delmia",
+  "tier": "Tier 3",
+  "costLabel": "> €100k",
+  "status": "EVALUIERT",
+  "overview": "Fertigungs- und Robotiksimulationssoftware eingebettet in die 3DEXPERIENCE-Plattform für Montageabläufe und Fertigungssteuerung.",
+  "features": [
+    {
+      "title": "Robotics Workcell Layout",
+      "desc": "Hochpräzise Offline-Roboterprogrammierung (OLP)."
+    },
+    {
+      "title": "Ergonomiespezialist",
+      "desc": "Körperhaltungsmodellierung und RULA-Ergonomiebewertung."
+    },
+    {
+      "title": "Prozessplan-Generierung",
+      "desc": "Verknüpft die Konstruktions-BOM direkt mit der Fertigungs-BOM (MBOM)."
+    }
+  ],
+  "inputs": [
+    "CATPart",
+    "STEP",
+    "JT",
+    "3DXML"
+  ],
+  "outputs": [
+    "OpenUSD (via Connector)",
+    "NC Code",
+    "Robot Language"
+  ],
+  "bridges": [
+    "3DEXPERIENCE Platform",
+    "CATIA",
+    "NVIDIA Omniverse"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Unerlässlich für Luftfahrt- und Automobilwerke, die auf Dassault-Tools standardisiert sind."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Direkte Verknüpfung zwischen Konstruktions-CAD und Werkstatt-Ausführung."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Erfordert die vollständige Nutzung des 3DEXPERIENCE-Ökosystems."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Connector Bridge",
+    "sovereignty": "100% EU Souverän (Frankreich)",
+    "openStandard": "STEP AP242 / ISO 10303"
+  },
+  "deployment": {
+    "effort": "Sehr Hoch (> 1 Monat)",
+    "mode": "Cloud / Enterprise Client",
+    "maturity": "Produktiv",
+    "area": "Roboter-Offline-Programmierung"
+  },
+  "staffing": "1x DELMIA Specialist (100% FTE)"
+}

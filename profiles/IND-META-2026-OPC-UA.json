@@ -1,0 +1,71 @@
+{
+  "refCode": "IND-META-2026-OPC-UA",
+  "categoryCode": "7.0",
+  "categoryName": "OT & Sensorik-Feldbusse",
+  "name": "OPC UA (IEC 62541 - Client/Server & PubSub)",
+  "subtitle": "Herstellerunabhängiger OT-Kommunikationsstandard",
+  "vendor": "OPC Foundation",
+  "hq": "Scottsdale, AZ, USA / EU Office",
+  "businessModel": "Open International Standard (IEC 62541)",
+  "url": "https://opcfoundation.org",
+  "tier": "Tier 1",
+  "costLabel": "Open Standard / €0",
+  "status": "CORE OT BACKBONE",
+  "overview": "Herstellerunabhängiges Protokoll für Industrie 4.0. Verbindet SPSen, CNCs und Roboter direkt mit dem 3D-Zwilling im Industrial Metaverse über semantische Companion Specifications.",
+  "features": [
+    {
+      "title": "Companion Specifications",
+      "desc": "Standardisierte Datenmodelle für Robotik (OPC UA for Robotics), Werkzeugmaschinen und Spritzguss."
+    },
+    {
+      "title": "OPC UA PubSub",
+      "desc": "Echtzeitfähiges Publish/Subscribe-Messaging über UDP/TSN-Netzwerke."
+    },
+    {
+      "title": "Integrierte X.509 Sicherheit",
+      "desc": "Durchgängige AES-256 Verschlüsselung und Zertifikats-Authentifizierung."
+    }
+  ],
+  "inputs": [
+    "SPS-Variablen",
+    "Sensor-Register",
+    "Feldbus-Streams"
+  ],
+  "outputs": [
+    "OPC UA XML NodeSets",
+    "JSON PubSub Streams",
+    "Binary Encoded Streams"
+  ],
+  "bridges": [
+    "NVIDIA Omniverse Live Connect",
+    "Siemens S7-1500",
+    "Collectu Data Engine",
+    "Azure IoT"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Unumstrittener weltweiter OT-Protokollstandard für dynamische Telemetrie im digitalen Zwilling."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Eliminiert herstellerspezifische Treiber-Lock-ins vollständig."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Hochfrequente Telemetrie (<1ms) erfordert optimiertes PubSub über TSN-Hardware."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Native Telemetry Bridge",
+    "sovereignty": "100% EU Industrie 4.0 Standard",
+    "openStandard": "IEC 62541"
+  },
+  "deployment": {
+    "effort": "Gering (1-2 Tage)",
+    "mode": "Embedded PLC / Edge Container",
+    "maturity": "Produktiv",
+    "area": "Fabrikweite OT-Kommunikation"
+  },
+  "staffing": "1x OT-Automatisierer (25% FTE)"
+}

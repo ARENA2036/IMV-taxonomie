@@ -1,0 +1,72 @@
+{
+  "refCode": "IND-META-2026-ALTAIR-HYPERWORKS",
+  "categoryCode": "4.1",
+  "categoryName": "CAE & Multiphysik-Simulation",
+  "name": "Altair (HyperWorks / EDEM)",
+  "subtitle": "Struktur- & Partikelsimulation (DEM)",
+  "vendor": "Altair Engineering Inc.",
+  "hq": "Troy, MI, USA / EU Support",
+  "businessModel": "Units-Based Licensing Subscription",
+  "url": "https://altair.com",
+  "tier": "Tier 3",
+  "costLabel": "> €100k",
+  "status": "EVALUIERT",
+  "overview": "Enterprise-Simulationssuite bekannt für HyperMesh-Pre-Processing und EDEM (Discrete Element Method) zur Schüttgut- und Partikelsimulation.",
+  "features": [
+    {
+      "title": "Altair EDEM",
+      "desc": "Diskrete-Elemente-Physikmodellierung für Kies, Pulver und Schüttgüter."
+    },
+    {
+      "title": "HyperMesh",
+      "desc": "Branchenführende FEM-Vernetzungs-Engine für hochdynamische Crashtests."
+    },
+    {
+      "title": "Units-Lizenzmodell",
+      "desc": "Einheiten-Pool schaltet flexible Solver nach Bedarf frei."
+    }
+  ],
+  "inputs": [
+    "STEP",
+    "IGES",
+    "Parasolid",
+    "CATIA",
+    "SolidWorks"
+  ],
+  "outputs": [
+    "Altair H3D",
+    "VTK",
+    "OpenUSD (via EDEM Extension)"
+  ],
+  "bridges": [
+    "NVIDIA Omniverse EDEM Extension",
+    "Siemens Teamcenter",
+    "Ansys"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Unerlässlich für Schwermaschinen, Bergbau und Pharma-Verpackungsanlagen."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Direkte EDEM-zu-Omniverse-Brücke visualisiert Partikeldynamik live auf USD-Bühnen."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Hohe Einstiegskosten für kleinere Ingenieurbüros."
+    }
+  ],
+  "compliance": {
+    "omniverse": "EDEM Connector",
+    "sovereignty": "SOC2 Compliant",
+    "openStandard": "STEP AP242 / H3D"
+  },
+  "deployment": {
+    "effort": "Hoch (3-4 Wochen)",
+    "mode": "Workstation / Compute Server",
+    "maturity": "Produktiv",
+    "area": "Schüttgut- & Partikelsimulation"
+  },
+  "staffing": "1x Partikelsimulations-Ingenieur (50% FTE)"
+}

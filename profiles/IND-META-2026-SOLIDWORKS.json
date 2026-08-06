@@ -1,0 +1,73 @@
+{
+  "refCode": "IND-META-2026-SOLIDWORKS",
+  "categoryCode": "1.1",
+  "categoryName": "Mechanisches CAD (MCAD)",
+  "name": "Dassault SolidWorks",
+  "subtitle": "Parametrisches 3D-CAD für den Mittelstand",
+  "vendor": "Dassault Systèmes",
+  "hq": "Vélizy-Villacoublay, Frankreich (EU)",
+  "businessModel": "Perpetual + Maintenance / 3DEXPERIENCE Cloud Subscription",
+  "url": "https://solidworks.com",
+  "tier": "Tier 2",
+  "costLabel": "≤ €100k",
+  "status": "EVALUIERT",
+  "overview": "Globale 3D-CAD-Standardsoftware für die parametrische Konstruktion im Maschinen- und Werkzeugbau. Weit verbreitet in der Zulieferindustrie und auf Shopfloors zur Anbindung an digitale Zwillinge.",
+  "features": [
+    {
+      "title": "Parametrischer Feature-Baum",
+      "desc": "Historienbasierte Modellierung für Blechbiegeteile und Maschinenkomponenten."
+    },
+    {
+      "title": "Visualize Raytracing",
+      "desc": "PBR-Rendering-Engine für technische Dokumentationen und Montageanleitungen."
+    },
+    {
+      "title": "Omniverse Connector",
+      "desc": "Export- und Live-Sync-Brücke zu OpenUSD-Bühnen."
+    }
+  ],
+  "inputs": [
+    "SLDPRT",
+    "SLDASM",
+    "STEP",
+    "IGES",
+    "Parasolid"
+  ],
+  "outputs": [
+    "OpenUSD (.usd)",
+    "STEP AP242",
+    "glTF 2.0",
+    "IGES"
+  ],
+  "bridges": [
+    "3DEXPERIENCE Cloud",
+    "NVIDIA Omniverse",
+    "DELMIA"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Hervorragend für Komponenten- und Subsystemdesign; stößt bei Werkslayouts (>50k Teile) an Leistungsgrenzen."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Riesiger Fachkräfte-Pool; nativer CAD-Standard bei Tausenden mittelständischen Zulieferern."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Tessellierung vor OpenUSD-Inlining erforderlich; große Baugruppen benötigen Bereinigung."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Connector Plugin",
+    "sovereignty": "EU Cloud (3DEXPERIENCE EU)",
+    "openStandard": "STEP AP242 / glTF 2.0"
+  },
+  "deployment": {
+    "effort": "Mittel (2-3 Wochen)",
+    "mode": "Desktop / Cloud Bridge",
+    "maturity": "Produktiv",
+    "area": "Maschinen- & Werkzeugbau"
+  },
+  "staffing": "1x Konstruktionsingenieur (100% FTE)"
+}

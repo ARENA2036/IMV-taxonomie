@@ -1,0 +1,70 @@
+{
+  "refCode": "IND-META-2026-NAVVIS-VLX3",
+  "categoryCode": "6.1",
+  "categoryName": "Mobile & Wearable SLAM-Scanner",
+  "name": "NavVis VLX 3 / NavVis IVION",
+  "subtitle": "Wearable Mobile Mapping System mit Echtzeit-SLAM",
+  "vendor": "NavVis GmbH",
+  "hq": "München, Deutschland (EU)",
+  "businessModel": "Hardware Purchase + IVION SaaS Subscription",
+  "url": "https://navvis.com/vlx-3",
+  "tier": "Tier 2",
+  "costLabel": "≤ €100k",
+  "status": "EMPFOHLENES MAPPING HARDWARE",
+  "overview": "Wearables Mobile-SLAM-System mit zwei Multi-Layer-LiDAR-Sensoren und 4 HD-Kameras. Erfasst Bestandskonstruktionen (Brownfield) in Schrittgeschwindigkeit mit hoher Genauigkeit.",
+  "features": [
+    {
+      "title": "Präzisions-Mobile-SLAM",
+      "desc": "Zentimetergenaue Punktwolken auch in dynamischen Hallen mit beweglichen Objekten."
+    },
+    {
+      "title": "HD 360° Panoramen",
+      "desc": "Gestochen scharfe Panoramafotos ohne Bewegungsunschärfe."
+    },
+    {
+      "title": "NavVis IVION Web Twin",
+      "desc": "Webbasierte 3D-Streaming-Plattform für die räumliche Fabriknavigation."
+    }
+  ],
+  "inputs": [
+    "Passpunkte (GCP)",
+    "Raw SLAM Telemetrie"
+  ],
+  "outputs": [
+    "E57 Punktwolke",
+    "LAS/LAZ",
+    "NavVis IVION Webformat",
+    "OpenUSD (.usd)"
+  ],
+  "bridges": [
+    "NavVis IVION",
+    "Autodesk Revit",
+    "NVIDIA Omniverse Point Cloud Extension"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Erfasst bis zu 50.000 qm pro Tag; ca. 10x schneller als statische Stativscanner."
+    },
+    {
+      "title": "Vorteile",
+      "text": "100% EU-Hardware aus München; Integration geodätischer Passpunkte."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Setzt IVION-Prozessierungslizenz für die vollständige Registrierung voraus."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Point Cloud Extension",
+    "sovereignty": "100% EU DSGVO (München)",
+    "openStandard": "E57 / LAS"
+  },
+  "deployment": {
+    "effort": "Gering (1-2 Tage)",
+    "mode": "Wearable Hardware",
+    "maturity": "Produktiv",
+    "area": "Brownfield Fabrik-Erfassung"
+  },
+  "staffing": "1x Erfassungs-Techniker (Projektbasiert)"
+}

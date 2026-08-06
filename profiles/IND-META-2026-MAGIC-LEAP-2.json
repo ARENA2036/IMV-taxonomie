@@ -1,0 +1,71 @@
+{
+  "refCode": "IND-META-2026-MAGIC-LEAP-2",
+  "categoryCode": "11.0",
+  "categoryName": "Spatial XR & VR/AR Headsets",
+  "name": "Magic Leap 2 Enterprise AR Glasses",
+  "subtitle": "Ergonomische See-Through AR-Brille für Werksmonteure",
+  "vendor": "Magic Leap Inc.",
+  "hq": "Plantation, FL, USA / EU Support",
+  "businessModel": "Enterprise Hardware Purchase (~€3,500/unit)",
+  "url": "https://magicleap.com",
+  "tier": "Tier 2",
+  "costLabel": "≤ €100k",
+  "status": "EVALUIERT",
+  "overview": "Leichtgewichtige optische See-Through AR-Brille für Werksmonteure mit dynamischer Abdunkelung für helle Fabrikhallen.",
+  "features": [
+    {
+      "title": "Dynamic Segmented Dimming",
+      "desc": "Dunkelt helles Fabriklicht lokal ab, um 3D-Hologramme kontrastreich anzuzeigen."
+    },
+    {
+      "title": "Optical See-Through Safety",
+      "desc": "Bewahrt die direkte optische Sicht auf die reale Umgebung für Arbeitssicherheit."
+    },
+    {
+      "title": "Breites 70° FOV",
+      "desc": "Großes Sichtfeld für optische AR-Brillen."
+    }
+  ],
+  "inputs": [
+    "OpenXR C++ Apps",
+    "Android Native Packages",
+    "WebXR"
+  ],
+  "outputs": [
+    "Spatial Mesh",
+    "Eye Tracking Data",
+    "6DOF Controller Pose"
+  ],
+  "bridges": [
+    "PTC Vuforia Engine",
+    "Siemens Manifest",
+    "Unity Industry",
+    "OpenXR"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Hervorragende Wahl für Schritt-für-Schritt-Montageanleitungen an aktiven Fertigungsstraßen."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Optisches See-Through schützt die Arbeitssicherheit besser als Videodurchsicht."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Rechneinheit wird per Kabel am Gürtel getragen."
+    }
+  ],
+  "compliance": {
+    "omniverse": "OpenXR Compliant",
+    "sovereignty": "Enterprise Safety Certified",
+    "openStandard": "OpenXR / Android Native"
+  },
+  "deployment": {
+    "effort": "Mittel (2-3 Wochen)",
+    "mode": "Enterprise AR Deployment",
+    "maturity": "Produktiv",
+    "area": "Montageanleitung & AR-Unterstützung"
+  },
+  "staffing": "1x AR Developer (50% FTE)"
+}

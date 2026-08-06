@@ -1,0 +1,72 @@
+{
+  "refCode": "IND-META-2026-IPOLOG",
+  "categoryCode": "5.0",
+  "categoryName": "Robotik & Fabriksimulation",
+  "name": "ipolog (Material Flow & Ergonomics)",
+  "subtitle": "Montagelinien-Ergonomie & Behälter-Staging",
+  "vendor": "ipolog GmbH",
+  "hq": "Stuttgart, Deutschland (EU)",
+  "businessModel": "Subscription / Project Seats",
+  "url": "https://ipolog.ai",
+  "tier": "Tier 2",
+  "costLabel": "≤ €100k",
+  "status": "EVALUIERT",
+  "overview": "Spezialsoftware für die Ergonomieplanung an Montagelinien, Logistikrouten und Materialregaloptimierung in Fertigungszellen.",
+  "features": [
+    {
+      "title": "Automatisches Regal-Staging",
+      "desc": "Berechnet die optimale Platzierung von Bauteilen an Montagebändern."
+    },
+    {
+      "title": "Ergonomiebewertung (EAWS)",
+      "desc": "MTM/EAWS-Ergonomiebewertung von Bewegungsabläufen."
+    },
+    {
+      "title": "Arbeiter-Wegeplanung",
+      "desc": "Verhindert räumliche Kollisionen von Werksarbeitern in engen Zellen."
+    }
+  ],
+  "inputs": [
+    "MicroStation",
+    "DWG",
+    "STEP",
+    "Excel BOMs",
+    "MTM Data"
+  ],
+  "outputs": [
+    "3D Animated Mesh",
+    "OpenUSD (.usd)",
+    "Ergonomic Reports (PDF)"
+  ],
+  "bridges": [
+    "Siemens Teamcenter",
+    "NVIDIA Omniverse",
+    "SAP ERP"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Weit verbreitet bei europäischen Automobilherstellern zur Manufakturplanung."
+    },
+    {
+      "title": "Vorteile",
+      "text": "100% EU-Software, die körperliche Belastungen von Arbeitern reduziert."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Fokussiert speziell auf Montage- und Logistikabläufe."
+    }
+  ],
+  "compliance": {
+    "omniverse": "USD Exporter",
+    "sovereignty": "100% EU Souverän (Deutschland)",
+    "openStandard": "EAWS / MTM"
+  },
+  "deployment": {
+    "effort": "Mittel (2-3 Wochen)",
+    "mode": "Desktop Windows App",
+    "maturity": "Produktiv",
+    "area": "Montage-Ergonomie & Logistik"
+  },
+  "staffing": "1x Ergonomist / Fabrikplaner (50% FTE)"
+}

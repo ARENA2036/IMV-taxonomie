@@ -1,0 +1,71 @@
+{
+  "refCode": "IND-META-2026-XGRIDS-PORTALCAM",
+  "categoryCode": "6.4",
+  "categoryName": "Handheld 3DGS & Photogrammetrie",
+  "name": "XGRIDS Portalcam & Studio (LiDAR + 3DGS)",
+  "subtitle": "Handgeführter LiDAR + 3D Gaussian Splatting Scanner",
+  "vendor": "XGRIDS Technology Inc.",
+  "hq": "Shenzhen, China",
+  "businessModel": "Hardware Kit + Desktop Studio Suite",
+  "url": "https://xgrids.com",
+  "tier": "Tier 1",
+  "costLabel": "≤ €30k",
+  "status": "TOP FOTOREALISMUS",
+  "overview": "Handgeführter 3D-Scanner, der LiDAR, Kameras und 3D Gaussian Splatting (3DGS) verbindet, um fotorealistische 3D-Abbilder spiegelnder Objekte zu erstellen.",
+  "features": [
+    {
+      "title": "LiDAR + 3DGS Fusion",
+      "desc": "Verbindet metrische LiDAR-Messung mit fotorealistischen Gaussian Splats."
+    },
+    {
+      "title": "Echtzeit-Display Preview",
+      "desc": "Direktes Punktwolken-Feedback auf dem Handheld-Bildschirm."
+    },
+    {
+      "title": "GPU Reconstruction Studio",
+      "desc": "Automatisierte Rekonstruktion auf lokalen RTX-Grafikkarten."
+    }
+  ],
+  "inputs": [
+    "LiDAR Stream",
+    "4K Video",
+    "GCP Passpunkte"
+  ],
+  "outputs": [
+    "PLY (3DGS / Mesh)",
+    "OpenUSD (.usd)",
+    "E57",
+    "LAS"
+  ],
+  "bridges": [
+    "NVIDIA Omniverse 3DGS Extension",
+    "Unreal Engine 5",
+    "Blender 3D"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Erfasst komplexe, glänzende Maschinen deutlich besser als klassische Photogrammetrie."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Digitalisiert ganze Maschinenräume im Vorbeigehen in 5-10 Minuten."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Riesige Splat-Dateien erfordern starke Grafikkarten (RTX 4090)."
+    }
+  ],
+  "compliance": {
+    "omniverse": "USD & PLY Export",
+    "sovereignty": "Lokale Desktop-Verarbeitung",
+    "openStandard": "OpenUSD / PLY"
+  },
+  "deployment": {
+    "effort": "Gering (1-2 Tage)",
+    "mode": "Handheld Unit + RTX PC",
+    "maturity": "Produktiv",
+    "area": "Fotorealistische Maschinenerfassung"
+  },
+  "staffing": "1x 3D Capture Operator (25% FTE)"
+}

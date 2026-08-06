@@ -1,0 +1,69 @@
+{
+  "refCode": "IND-META-2026-META-SAM3D",
+  "categoryCode": "6.1-AI",
+  "categoryName": "Spatial Perzeption & KI-Erkennung",
+  "name": "Meta Segment Anything 3D (SAM 3D)",
+  "subtitle": "Zero-Shot KI-Segmentierung für 3D-Punktwolken",
+  "vendor": "Meta AI Research",
+  "hq": "Menlo Park, CA, USA",
+  "businessModel": "Free & Open Source AI Weights (Apache 2.0)",
+  "url": "https://github.com/facebookresearch/segment-anything-3d",
+  "tier": "Tier 1",
+  "costLabel": "Open Source / €0",
+  "status": "EMPFOHLEN",
+  "overview": "KI-Modell zur automatischen Segmentierung roher Punktwolken und Meshes in einzelne Objekte (Rohre, Wände, Roboter).",
+  "features": [
+    {
+      "title": "Zero-Shot 3D Segmentierung",
+      "desc": "Erkennt unbeschriftete Objekte ohne vorheriges Training."
+    },
+    {
+      "title": "Point Cloud & Mesh Native",
+      "desc": "Arbeitet direkt auf E57-Punktwolken und OpenUSD-Bühnen."
+    },
+    {
+      "title": "Semantisches Tagging",
+      "desc": "Schreibt Objektbezeichnungen direkt in USD-Metadaten."
+    }
+  ],
+  "inputs": [
+    "Point Clouds (E57/LAS)",
+    "OpenUSD Stage",
+    "RGB-D Frames"
+  ],
+  "outputs": [
+    "Segmented USD Prims",
+    "Bounding Boxes"
+  ],
+  "bridges": [
+    "NVIDIA Omniverse Nucleus",
+    "Blender",
+    "PyTorch"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Reduziert die manuelle Segmentierungszeit von Fabrik-Scans um 85%."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Quelloffen und vollständig auf lokalen GPU-Servern ausführbar."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Erfordert viel VRAM auf Grafikkarten."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Semantic Schema Native",
+    "sovereignty": "Apache 2.0 Open Source",
+    "openStandard": "OpenUSD Semantic Schema"
+  },
+  "deployment": {
+    "effort": "Mittel (2-3 Wochen)",
+    "mode": "GPU Server Execution",
+    "maturity": "Produktiv",
+    "area": "KI-Punktwolken-Segmentierung"
+  },
+  "staffing": "1x Computer Vision Engineer (50% FTE)"
+}

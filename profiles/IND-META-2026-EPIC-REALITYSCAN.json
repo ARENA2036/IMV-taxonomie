@@ -1,0 +1,69 @@
+{
+  "refCode": "IND-META-2026-EPIC-REALITYSCAN",
+  "categoryCode": "6.5",
+  "categoryName": "360°-Erfassung & GIS-Kartierung",
+  "name": "RealityScan (Epic Games / Mobile)",
+  "subtitle": "Kostenlose Mobile Photogrammetrie App",
+  "vendor": "Epic Games Inc. / Capturing Reality",
+  "hq": "Bratislava, Slowakei (EU)",
+  "businessModel": "Free Mobile App + Unreal Engine",
+  "url": "https://capturingreality.com/realityscan",
+  "tier": "Tier 1",
+  "costLabel": "Kostenfrei / €0",
+  "status": "EVALUIERT",
+  "overview": "Mobile Photogrammetrie-App, die Fotoserie auf dem Smartphone in 3D-Modelle umwandelt.",
+  "features": [
+    {
+      "title": "Cloud Photogrammetrie",
+      "desc": "Kostenlose Verarbeitung in der Cloud."
+    },
+    {
+      "title": "AR-Qualitätsfeedback",
+      "desc": "Live-AR-Anzeige zeigt Fotolücken am Objekt an."
+    },
+    {
+      "title": "Sketchfab Export",
+      "desc": "Direkter Upload zu Sketchfab und Unreal Engine."
+    }
+  ],
+  "inputs": [
+    "Smartphone Kamera Fotos"
+  ],
+  "outputs": [
+    "glTF 2.0",
+    "USDZ",
+    "OBJ",
+    "FBX"
+  ],
+  "bridges": [
+    "Unreal Engine 5",
+    "Sketchfab",
+    "Blender"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Super für die schnelle Erfassung kleiner Requisiten und Werkzeuge."
+    },
+    {
+      "title": "Vorteile",
+      "text": "100% EU-Entwicklungsursprung (Slowakei); kostenlos."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Erfordert gute Beleuchtung und mattierte Oberflächen."
+    }
+  ],
+  "compliance": {
+    "omniverse": "USDZ Export",
+    "sovereignty": "100% EU Entwicklung",
+    "openStandard": "glTF / USDZ"
+  },
+  "deployment": {
+    "effort": "Sehr Gering (< 1 Tag)",
+    "mode": "Smartphone App",
+    "maturity": "Produktiv",
+    "area": "Schnelles Werkzeug-Scannen"
+  },
+  "staffing": "1x Mitarbeiter (5% FTE)"
+}

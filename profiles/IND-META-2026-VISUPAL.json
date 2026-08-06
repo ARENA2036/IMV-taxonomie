@@ -1,0 +1,70 @@
+{
+  "refCode": "IND-META-2026-VISUPAL",
+  "categoryCode": "5.0",
+  "categoryName": "Robotik & Fabriksimulation",
+  "name": "VisuPal Palletizing Simulation",
+  "subtitle": "Automatisierte 3D-Palettier-Simulation",
+  "vendor": "VisuPal Systems",
+  "hq": "Deutschland (EU)",
+  "businessModel": "License Fee per Cell",
+  "url": "https://visupal.de",
+  "tier": "Tier 1",
+  "costLabel": "≤ €30k",
+  "status": "EVALUIERT",
+  "overview": "Automatisierte 3D-Palettiersimulations-Software für Verpackungszellen und End-of-Line-Roboter.",
+  "features": [
+    {
+      "title": "Musterberechnung",
+      "desc": "Berechnet stabile Packmuster für Kisten und Packstücke automatisch."
+    },
+    {
+      "title": "Erreichbarkeitsprüfung",
+      "desc": "Überprüft Roboterarm-Arbeitsräume und Drehmomente."
+    },
+    {
+      "title": "SPS-Code-Export",
+      "desc": "Erzeugt komplette Palettier-Logikbausteine für Siemens-SPSen."
+    }
+  ],
+  "inputs": [
+    "Kistenmaße",
+    "Palettengrundmaß",
+    "STEP Roboter CAD"
+  ],
+  "outputs": [
+    "OpenUSD Scene",
+    "PLC Trajectory Blocks",
+    "3D PDF"
+  ],
+  "bridges": [
+    "Siemens TIA Portal",
+    "Beckhoff TwinCAT",
+    "NVIDIA Omniverse"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Verkürzt die Einrichtung von Verpackungszellen von Tagen auf Minuten."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Einfache Benutzeroberfläche speziell für Verpackungsplaner."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Spezifischer Fokus auf Palettieraufgaben."
+    }
+  ],
+  "compliance": {
+    "omniverse": "USD Export",
+    "sovereignty": "100% EU Souverän",
+    "openStandard": "OPC UA / STEP"
+  },
+  "deployment": {
+    "effort": "Gering (1-2 Tage)",
+    "mode": "Desktop Windows App",
+    "maturity": "Produktiv",
+    "area": "Palettier- & Verpackungszellen"
+  },
+  "staffing": "1x Verpackungstechniker (25% FTE)"
+}

@@ -1,0 +1,73 @@
+{
+  "refCode": "IND-META-2026-MATLAB-SIMULINK",
+  "categoryCode": "4.1",
+  "categoryName": "CAE & Multiphysik-Simulation",
+  "name": "Matlab / Simulink",
+  "subtitle": "Mechatronik-Regelung & Modellbasierte Entwicklung",
+  "vendor": "The MathWorks Inc.",
+  "hq": "Natick, MA, USA / EU Support",
+  "businessModel": "Commercial License + Toolbox Add-ons",
+  "url": "https://mathworks.com",
+  "tier": "Tier 2",
+  "costLabel": "≤ €100k",
+  "status": "STANDARDIZIERT",
+  "overview": "Weltweiter Standard für Blockdiagramm-Simulation, Regelungstechnik und modellbasierte Entwicklung mechatronischer Systeme.",
+  "features": [
+    {
+      "title": "Simscape Physical Modeling",
+      "desc": "Modellierung mechanischer, elektrischer und hydraulischer Netzwerke."
+    },
+    {
+      "title": "Automatischer C/C++ Code",
+      "desc": "Generiert SPS-Code (IEC 61131-3) direkt aus Modellschaltplänen."
+    },
+    {
+      "title": "FMI/FMU Co-Simulation",
+      "desc": "Standardisierte Co-Simulationsschnittstelle für digitale Zwillinge."
+    }
+  ],
+  "inputs": [
+    "SLX",
+    "MAT",
+    "C/C++ Code",
+    "OPC UA Nodes",
+    "CAD Assemblies"
+  ],
+  "outputs": [
+    "C/C++ Code",
+    "FMU 2.0/3.0",
+    "OPC UA Data",
+    "CSV/MAT"
+  ],
+  "bridges": [
+    "ISG-Virtuos",
+    "NVIDIA Isaac Sim (via ROS 2 / FMU)",
+    "Siemens S7 SPS"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Rückgrat der Regelungstechnik und mathematischen Systemmodellierung."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Fehlerfreie automatische Codegenerierung für Industriesteuerungen."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Modulares Lizenzmodell macht umfangreiche Toolboxes kostspielig."
+    }
+  ],
+  "compliance": {
+    "omniverse": "FMI/FMU Co-Simulation",
+    "sovereignty": "ISO 26262 ASIL Certified",
+    "openStandard": "FMI 3.0 / OPC UA"
+  },
+  "deployment": {
+    "effort": "Hoch (3-4 Wochen)",
+    "mode": "Desktop / Embedded Deploy",
+    "maturity": "Produktiv",
+    "area": "System-Regelungstechnik & Co-Simulation"
+  },
+  "staffing": "1x Regelungstechniker (100% FTE)"
+}

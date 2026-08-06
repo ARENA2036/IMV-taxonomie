@@ -1,0 +1,70 @@
+{
+  "refCode": "IND-META-2026-HUGGINGFACE-LEROBOT",
+  "categoryCode": "5.0",
+  "categoryName": "Robotik & Fabriksimulation",
+  "name": "Hugging Face LeRobot (Physical AI & Open Imitation)",
+  "subtitle": "Open-Source Physical AI & Roboter-Imitationslernen",
+  "vendor": "Hugging Face Inc.",
+  "hq": "New York, USA / Paris, Frankreich (EU)",
+  "businessModel": "Free & Open Source (Apache 2.0)",
+  "url": "https://github.com/huggingface/lerobot",
+  "tier": "Tier 1",
+  "costLabel": "Open Source / €0",
+  "status": "EMPFOHLEN",
+  "overview": "Open-Source KI-Robotik-Framework für KI-Policy-Training, Imitationslernen und Teleoperation für kostengünstige Industrie-Greifarme.",
+  "features": [
+    {
+      "title": "Open Policy Zoo",
+      "desc": "Vorgefertigte PyTorch-Modelle für Roboter-Greif- und Montageaufgaben."
+    },
+    {
+      "title": "Teleoperation",
+      "desc": "Verbindet Leader-Follower-Arme zur schnellen Erzeugung von Trainingsdatensätzen."
+    },
+    {
+      "title": "Isaac Sim Integration",
+      "desc": "Direkte Brücke zum Laden von KI-Gewichten in OpenUSD-Simulationsarme."
+    }
+  ],
+  "inputs": [
+    "HDF5 Datasets",
+    "Joint Telemetrie",
+    "ROS 2 Messages"
+  ],
+  "outputs": [
+    "PyTorch Model Weights (.pt)",
+    "Action Vector Commands"
+  ],
+  "bridges": [
+    "NVIDIA Isaac Lab",
+    "PyTorch",
+    "ROS 2",
+    "OpenUSD"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Demokratisiert Physical AI für kleine Fertigungszellen."
+    },
+    {
+      "title": "Vorteile",
+      "text": "100% offenes Framework gestützt durch das Hugging Face Ökosystem."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Junges Framework; erfordert Python-KI-Entwicklung."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Open Source (Apache 2.0)",
+    "sovereignty": "100% EU Rechtssicher (Paris HQ)",
+    "openStandard": "Safetensors / ROS 2"
+  },
+  "deployment": {
+    "effort": "Mittel (2-3 Wochen)",
+    "mode": "Linux AI Workstation",
+    "maturity": "Produktiv",
+    "area": "KI-Greifrobotik & Teleoperation"
+  },
+  "staffing": "1x AI Robotics Developer (50% FTE)"
+}

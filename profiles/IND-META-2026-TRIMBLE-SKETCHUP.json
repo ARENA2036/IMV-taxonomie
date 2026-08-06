@@ -1,0 +1,73 @@
+{
+  "refCode": "IND-META-2026-TRIMBLE-SKETCHUP",
+  "categoryCode": "1.2",
+  "categoryName": "BIM, Bauwesen & Infrastruktur (AEC)",
+  "name": "Trimble SketchUp",
+  "subtitle": "Schnelle 3D-Konzeptplanung & Fabrik-Layouting",
+  "vendor": "Trimble Inc.",
+  "hq": "Westminster, CO, USA",
+  "businessModel": "Annual Subscription (Pro/Studio)",
+  "url": "https://sketchup.com",
+  "tier": "Tier 1",
+  "costLabel": "≤ €30k",
+  "status": "EVALUIERT",
+  "overview": "Intuitives 3D-Modellierungswerkzeug für die schnelle konzeptionelle Fabrikplanung, Raumvolumen-Studien und frühe Entwurfsphasen.",
+  "features": [
+    {
+      "title": "Push/Pull Modellierung",
+      "desc": "Schnelle erzeugung flächenbasierter 3D-Geometrie."
+    },
+    {
+      "title": "3D Warehouse",
+      "desc": "Riesige Bibliothek vorgefertigter Maschinen- und Ausrüstungsmodelle."
+    },
+    {
+      "title": "USD & glTF Exporter",
+      "desc": "Integrierte Exportmodule für Echtzeit-Bühnen."
+    }
+  ],
+  "inputs": [
+    "SKP",
+    "DWG",
+    "DXF",
+    "PNG/JPG"
+  ],
+  "outputs": [
+    "OpenUSD (.usd)",
+    "glTF 2.0",
+    "OBJ",
+    "FBX",
+    "IFC"
+  ],
+  "bridges": [
+    "Trimble Connect",
+    "NVIDIA Omniverse",
+    "Unity Industry"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Ideal für schnelles Prototyping; ungeeignet für millimetergenauen Maschinenbau."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Extrem kurze Einarbeitungszeit (1-2 Tage); schnelles Erfassen von Räumen."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Erzeugt bei unachtsamer Nutzung nicht-wasserdichte Mesh-Geometrien."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Connector Plugin",
+    "sovereignty": "SOC2 / US Cloud",
+    "openStandard": "glTF 2.0 / IFC"
+  },
+  "deployment": {
+    "effort": "Sehr Gering (< 1 Tag)",
+    "mode": "Desktop App",
+    "maturity": "Produktiv",
+    "area": "Konzeptionelles Fabrik-Blocking"
+  },
+  "staffing": "1x Layout Planer (25% FTE)"
+}

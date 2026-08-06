@@ -1,0 +1,71 @@
+{
+  "refCode": "IND-META-2026-NEMETSCHEK-ALLPLAN",
+  "categoryCode": "1.2",
+  "categoryName": "BIM, Bauwesen & Infrastruktur (AEC)",
+  "name": "Nemetschek Allplan / Vectorworks",
+  "subtitle": "Europäisches OpenBIM-System für Fertigteilbau",
+  "vendor": "Nemetschek Group",
+  "hq": "München, Deutschland (EU)",
+  "businessModel": "Subscription / Perpetual License",
+  "url": "https://allplan.com",
+  "tier": "Tier 2",
+  "costLabel": "≤ €100k",
+  "status": "EVALUIERT",
+  "overview": "Europäische BIM-Plattform spezialisiert auf konstruktiven Ingenieurbau, Betonfertigteilplanung und hochpräzise Industriegebäude.",
+  "features": [
+    {
+      "title": "Betonfertigteil-Engineering",
+      "desc": "Automatisierte Bewehrungsplanung und Fertigungselement-Detaillierung."
+    },
+    {
+      "title": "OpenBIM Native Architecture",
+      "desc": "Tiefe Integration von IFC- und buildingSMART-Standards."
+    },
+    {
+      "title": "Parasolid Geometrie-Engine",
+      "desc": "Hochpräzise Solid-Modellierung für Tragwerke."
+    }
+  ],
+  "inputs": [
+    "IFC4",
+    "DWG",
+    "DGN",
+    "Point Cloud (E57)"
+  ],
+  "outputs": [
+    "IFC4 ISO 16739",
+    "OpenUSD (.usd)",
+    "PDF/DXF"
+  ],
+  "bridges": [
+    "Bimplus Cloud",
+    "Solibri Model Checker",
+    "NVIDIA Omniverse"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Bevorzugter Standard im DACH-Raum für konstruktiven Ingenieurbau."
+    },
+    {
+      "title": "Vorteile",
+      "text": "100% EU-souveräne Compliance mit strikter OpenBIM-Treue."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Kleineres globales Plugin-Ökosystem im Vergleich zu Autodesk."
+    }
+  ],
+  "compliance": {
+    "omniverse": "OpenBIM Bridge",
+    "sovereignty": "100% EU DSGVO (Deutschland)",
+    "openStandard": "IFC4 / buildingSMART"
+  },
+  "deployment": {
+    "effort": "Mittel (2-3 Wochen)",
+    "mode": "Desktop / Bimplus Cloud",
+    "maturity": "Produktiv",
+    "area": "Tragwerks- & Fertigteilplanung"
+  },
+  "staffing": "1x Tragwerksplaner (50% FTE)"
+}

@@ -1,0 +1,72 @@
+{
+  "refCode": "IND-META-2026-ANSYS-CAE",
+  "categoryCode": "4.1",
+  "categoryName": "CAE & Multiphysik-Simulation",
+  "name": "Ansys (Discovery, Fluent, Mechanical)",
+  "subtitle": "High-End Multiphysik & Strömungsmechanik",
+  "vendor": "Ansys Inc.",
+  "hq": "Canonsburg, PA, USA / EU Support",
+  "businessModel": "Enterprise Licensing / Named Seat",
+  "url": "https://ansys.com",
+  "tier": "Tier 3",
+  "costLabel": "> €100k",
+  "status": "STANDARDIZIERT",
+  "overview": "Umfassende Simulationssuite für Strömungsmechanik (CFD), FEM-Strukturanalyse und Elektromagnetik. Überträgt Berechnungsfelder direkt in den 3D-Zwilling.",
+  "features": [
+    {
+      "title": "Ansys Discovery Real-Time",
+      "desc": "GPU-beschleunigte interaktive Physikberechnung während der CAD-Konstruktion."
+    },
+    {
+      "title": "Ansys Fluent CFD",
+      "desc": "Hochpräzise Strömungssimulation für Reinräume und HVAC-Hallenbelüftung."
+    },
+    {
+      "title": "Omniverse Modeler Bridge",
+      "desc": "Export von Simulationsfeldern als kolorierte volumetrische USD-Attribute."
+    }
+  ],
+  "inputs": [
+    "STEP",
+    "Parasolid",
+    "IGES",
+    "Ansys Geometry"
+  ],
+  "outputs": [
+    "CGNS",
+    "OpenUSD (Volumetric Color Attributes)",
+    "VTK",
+    "FEA Mesh"
+  ],
+  "bridges": [
+    "Siemens PLM",
+    "PTC Windchill",
+    "NVIDIA Omniverse"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Weltweiter Maßstab für physikalische Exaktheit bei kritischen Maschinenbauteilen."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Direkte Omniverse-Brücke visualisiert Thermo- und Strömungsvektoren live auf der USD-Bühne."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Sehr hohe Lizenzkosten; erfordert spezialisierte Berechnungsingenieure."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Physics Extension",
+    "sovereignty": "SOC2 / Enterprise Standard",
+    "openStandard": "CGNS / STEP AP242"
+  },
+  "deployment": {
+    "effort": "Sehr Hoch (> 1 Monat)",
+    "mode": "HPC Compute Cluster",
+    "maturity": "Produktiv",
+    "area": "Thermodynamik & Strukturanalyse"
+  },
+  "staffing": "1x Simulation Specialist / CAE Engineer (100% FTE)"
+}

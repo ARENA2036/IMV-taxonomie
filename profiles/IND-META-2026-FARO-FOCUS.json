@@ -1,0 +1,70 @@
+{
+  "refCode": "IND-META-2026-FARO-FOCUS",
+  "categoryCode": "6.2",
+  "categoryName": "Terrestrisches Laserscanning (TLS)",
+  "name": "FARO Focus Series (Focus Premium / Core)",
+  "subtitle": "Millimetergenauer terrestrischer 3D-Laserscanner",
+  "vendor": "FARO Technologies Inc.",
+  "hq": "Lake Mary, FL, USA / Stuttgart, DE (EU)",
+  "businessModel": "Hardware Purchase + Maintenance",
+  "url": "https://faro.com/focus",
+  "tier": "Tier 2",
+  "costLabel": "≤ €100k",
+  "status": "STANDARDIZIERT",
+  "overview": "Branchenstandard unter den terrestrischen Stativ-Laserscannern. Liefert millimetergenaue 3D-Punktwolken für präzise Umbaumaßnahmen.",
+  "features": [
+    {
+      "title": "Millimeter-Genauigkeit",
+      "desc": "Abweichung unter 1mm auf 10 Metern Entfernung."
+    },
+    {
+      "title": "HDR-Farbüberlagerung",
+      "desc": "Farbechte Einfärbung der Punktwolkenoberflächen."
+    },
+    {
+      "title": "FARO Stream App",
+      "desc": "Vor-Ort-Registrierung per Tablet im Feld."
+    }
+  ],
+  "inputs": [
+    "Laser Phase Measurements",
+    "GCP Target Points"
+  ],
+  "outputs": [
+    "E57",
+    "LAS",
+    "FARO FLS",
+    "OpenUSD"
+  ],
+  "bridges": [
+    "FARO Sphere XG",
+    "Autodesk Revit",
+    "NVIDIA Omniverse"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Unverzichtbar zur Prüfung von Maschinenausrichtungen und Fundamenten."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Unerreichte Punktpräzision und geometrische Treue."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Versetzen des Stativs auf 50.000 qm ist arbeitsintensiv."
+    }
+  ],
+  "compliance": {
+    "omniverse": "E57 Bridge",
+    "sovereignty": "SOC2 / ISO Compliant",
+    "openStandard": "E57 / ASTM E2807"
+  },
+  "deployment": {
+    "effort": "Mittel (2-3 Wochen)",
+    "mode": "Stativ-Hardware",
+    "maturity": "Produktiv",
+    "area": "Hochpräzise Vermessung"
+  },
+  "staffing": "1x Vermessungstechniker (50% FTE)"
+}

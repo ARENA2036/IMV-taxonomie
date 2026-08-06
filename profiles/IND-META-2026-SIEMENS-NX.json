@@ -1,0 +1,71 @@
+{
+  "refCode": "IND-META-2026-SIEMENS-NX",
+  "categoryCode": "1.1",
+  "categoryName": "Mechanisches CAD (MCAD)",
+  "name": "Siemens NX CAD",
+  "subtitle": "High-End OEM MCAD & OpenUSD Live-Kopplung",
+  "vendor": "Siemens DISW",
+  "hq": "Plano, USA / Deutschland (EU)",
+  "businessModel": "Enterprise Subscription / Named User",
+  "url": "https://plm.automation.siemens.com",
+  "tier": "Tier 3",
+  "costLabel": "> €100k",
+  "status": "STANDARDIZIERT",
+  "overview": "High-End MCAD-Plattform für hochkomplexe Baugruppen im Maschinen- und Fahrzeugbau. Dient als primärer Geometrie-Kernel für Automotive-, Luft- und Raumfahrt-OEMs mit nativer Live-Streaming-Anbindung an NVIDIA Omniverse.",
+  "features": [
+    {
+      "title": "Synchronous Technology",
+      "desc": "Direkte Modellierung ohne störende Abhängigkeiten des parametrischen Feature-Baums."
+    },
+    {
+      "title": "JT ISO Format Native",
+      "desc": "Hochleistungs-Tessellierung für gigantische Baugruppen mit über 100.000 Bauteilen."
+    },
+    {
+      "title": "USD Live Sync",
+      "desc": "Bi-direktionales Echtzeit-Streaming von parametrischer Geometrie und Kinematik-Gelenken."
+    }
+  ],
+  "inputs": [
+    "Parasolid (.x_t)",
+    "JT ISO 14306",
+    "STEP AP242",
+    "CATPart"
+  ],
+  "outputs": [
+    "OpenUSD (.usd)",
+    "JT ISO 14306",
+    "STEP AP242"
+  ],
+  "bridges": [
+    "Siemens Teamcenter PLM",
+    "NVIDIA Omniverse",
+    "Tecnomatix Process Simulate"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Weltweiter Industriestandard für Großbaugruppen (>100k Komponenten) ohne Bildrateneinbrüche."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Nativer OpenUSD Live-Connector macht zeitaufwendige Offline-Exporte überflüssig."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Sehr hohe Enterprise-Lizenzkosten; erfordert eine strukturierte PLM-Einbindung."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Native Extension",
+    "sovereignty": "100% EU DSGVO (GAIA-X)",
+    "openStandard": "JT ISO / STEP AP242 / OpenUSD"
+  },
+  "deployment": {
+    "effort": "Sehr Hoch (> 1 Monat)",
+    "mode": "On-Premise / Hybrid PLM",
+    "maturity": "Produktiv",
+    "area": "OEM Fahrzeug- & Maschinenbau"
+  },
+  "staffing": "1x Senior CAD/PLM Ingenieur (100% FTE) | Setup: 4-6 Wochen Schulung"
+}

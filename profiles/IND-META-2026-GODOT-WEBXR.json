@@ -1,0 +1,70 @@
+{
+  "refCode": "IND-META-2026-GODOT-WEBXR",
+  "categoryCode": "3.0",
+  "categoryName": "Echtzeit-3D & Spatial Engines",
+  "name": "Godot Engine / WebXR",
+  "subtitle": "Leichtgewichtige Open-Source 3D/Web Engine",
+  "vendor": "Godot Foundation",
+  "hq": "EU / Global Community",
+  "businessModel": "100% Free & Open Source (MIT License)",
+  "url": "https://godotengine.org",
+  "tier": "Tier 1",
+  "costLabel": "Open Source / €0",
+  "status": "EMPFOHLEN",
+  "overview": "Schlanke, lizenzfreie Open-Source 3D-Engine. Ideal für Web-eingebettete 3D-Dashboards, WebXR-Brillen und leichte Shopfloor-Displays.",
+  "features": [
+    {
+      "title": "Leichtgewichtiger Footprint",
+      "desc": "Editor-Dateigröße unter 100MB; extrem schnelle Ladezeiten."
+    },
+    {
+      "title": "WebXR Native Export",
+      "desc": "Direkte Browser-Darstellung ohne serverseitiges Streaming."
+    },
+    {
+      "title": "GDScript / C# Support",
+      "desc": "Hocheffiziente Skriptsprache für leichtgewichtige IIoT-Hooks."
+    }
+  ],
+  "inputs": [
+    "glTF 2.0 (Native)",
+    "OBJ",
+    "FBX",
+    "OpenUSD (via Extension)"
+  ],
+  "outputs": [
+    "WebGL / WebXR HTML5",
+    "Linux/Windows Binaries"
+  ],
+  "bridges": [
+    "MQTT WebSockets",
+    "OPC UA REST Gateways",
+    "WebXR"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Ideal für leichtgewichtige Shopfloor-Touchscreens und Browser-Dashboards."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Vollkommen frei von Lizenzgebühren, Telemetrie oder Vendor-Lock-in."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Ungeeignet für die direkte Darstellung roher Multi-Gigabyte-CAD-Szenen ohne Vorbearbeitung."
+    }
+  ],
+  "compliance": {
+    "omniverse": "WebXR / glTF Bridge",
+    "sovereignty": "100% EU Souverän (MIT FOSS)",
+    "openStandard": "glTF 2.0 / WebXR / OpenXR"
+  },
+  "deployment": {
+    "effort": "Gering (1-2 Tage)",
+    "mode": "Web Server / Lightweight Client",
+    "maturity": "Produktiv",
+    "area": "Web-Dashboards & Leichtgewicht-VR"
+  },
+  "staffing": "1x WebXR Developer (50% FTE)"
+}

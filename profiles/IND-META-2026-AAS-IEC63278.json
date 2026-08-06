@@ -1,0 +1,72 @@
+{
+  "refCode": "IND-META-2026-AAS-IEC63278",
+  "categoryCode": "8.2",
+  "categoryName": "Verwaltungsschale & Zwillings-Standards",
+  "name": "Asset Administration Shell / AAS (IEC 63278)",
+  "subtitle": "RAMI 4.0 Standard für digitale Verwaltungsschalen",
+  "vendor": "IDTA / Plattform Industrie 4.0",
+  "hq": "Frankfurt, Deutschland (EU)",
+  "businessModel": "Open International Standard (IEC 63278)",
+  "url": "https://industrialdigitaltwin.org",
+  "tier": "Tier 1",
+  "costLabel": "Open Standard / €0",
+  "status": "PFLICHTSTANDARD INTEROP",
+  "overview": "Der offizielle RAMI 4.0 Standard für digitale Zwillings-Metadaten. Kapselt technische Dokumentationen, Zertifikate, CAD-Modelle, CO2-Fußabdrücke und Sensorpunkte eines Industrie-Assets.",
+  "features": [
+    {
+      "title": "Standard-Teilmodelle",
+      "desc": "Vordefinierte Teilmodelle für Digital Product Passport (DPP), CO2-Fußabdruck und CAD."
+    },
+    {
+      "title": "REST API & OPC UA Mapping",
+      "desc": "Standardisierte Abfrage-Endpunkte für die IT/OT-Kommunikation."
+    },
+    {
+      "title": "Herstellerneutraler Container",
+      "desc": "Gekapselt in AASX-Dateipaketen mit XML/JSON-Schema."
+    }
+  ],
+  "inputs": [
+    "XML",
+    "JSON",
+    "AASX Packages",
+    "OPC UA NodeSets",
+    "PDF"
+  ],
+  "outputs": [
+    "AASX Package",
+    "REST API JSON",
+    "RDF Knowledge Graphs"
+  ],
+  "bridges": [
+    "Siemens Operations X",
+    "Collectu Engine",
+    "NVIDIA Omniverse USD Metadata"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Strategische Voraussetzung für EU-Hersteller zur Erfüllung des digitalen Produktpasses."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Eliminiert herstellerspezifische Daten-Silos für Zwillings-Metadaten vollständig."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Erfordert die Zuordnung von CAD-Attributen zu AAS-Teilmodellen."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Metadata Bridge",
+    "sovereignty": "100% EU RAMI 4.0 Standard",
+    "openStandard": "IEC 63278 / IDTA"
+  },
+  "deployment": {
+    "effort": "Mittel (2-3 Wochen)",
+    "mode": "Server Container / Edge Service",
+    "maturity": "Produktiv",
+    "area": "Interoperable Zwillings-Struktur"
+  },
+  "staffing": "1x Digital Twin Architect (50% FTE)"
+}

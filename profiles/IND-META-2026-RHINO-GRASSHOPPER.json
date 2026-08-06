@@ -1,0 +1,75 @@
+{
+  "refCode": "IND-META-2026-RHINO-GRASSHOPPER",
+  "categoryCode": "1.2",
+  "categoryName": "BIM, Bauwesen & Infrastruktur (AEC)",
+  "name": "Rhino 3D + Grasshopper (Parametric AEC)",
+  "subtitle": "Algorithmatisches 3D-Design & Prozedurale Geometrie",
+  "vendor": "Robert McNeel & Associates",
+  "hq": "Seattle, WA, USA",
+  "businessModel": "Perpetual License (Keine Abo-Pflicht)",
+  "url": "https://rhino3d.com",
+  "tier": "Tier 1",
+  "costLabel": "≤ €30k",
+  "status": "EMPFOHLEN",
+  "overview": "Fortgeschrittenes NURBS-Flächenmodellierungssystem gekoppelt mit Grasshopper für die visuelle Programmierung komplexer parametrischer Fabrikarchitekturen.",
+  "features": [
+    {
+      "title": "Grasshopper Skripting",
+      "desc": "Prozedurale Generierung von Dachstrukturen, Förderbändern und Fassaden."
+    },
+    {
+      "title": "NURBS-zu-Mesh Wandlung",
+      "desc": "Feingliedrige Kontrolle über Polygonanzahl und UV-Mapping."
+    },
+    {
+      "title": "Rhino.Inside Engine",
+      "desc": "Bettet die Rhino-Engine direkt in Revit, AutoCAD oder USD-Pipelines ein."
+    }
+  ],
+  "inputs": [
+    "3DM",
+    "STEP",
+    "IGES",
+    "OBJ",
+    "IFC",
+    "Point Clouds"
+  ],
+  "outputs": [
+    "OpenUSD (.usd/.usda)",
+    "glTF 2.0",
+    "STEP",
+    "OBJ",
+    "FBX"
+  ],
+  "bridges": [
+    "NVIDIA Omniverse Connector",
+    "Revit via Rhino.Inside",
+    "Blender"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Unverzichtbar für komplexe Freiform-Dachtragwerke und Förderband-Pfadoptimierung."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Einmalkauf-Modell mit unerreichter mathematischer Flächenpräzision."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Setzt Kenntnisse in der visuellen Programmierung voraus."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Native Extension",
+    "sovereignty": "SOC2 Compliant",
+    "openStandard": "STEP AP242 / glTF / OpenUSD"
+  },
+  "deployment": {
+    "effort": "Mittel (2-3 Wochen)",
+    "mode": "Desktop Application",
+    "maturity": "Produktiv",
+    "area": "Prozedurales & Algorithmisches Design"
+  },
+  "staffing": "1x Computational Design Specialist (50% FTE)"
+}

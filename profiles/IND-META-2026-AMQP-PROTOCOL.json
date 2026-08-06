@@ -1,0 +1,69 @@
+{
+  "refCode": "IND-META-2026-AMQP-PROTOCOL",
+  "categoryCode": "8.1",
+  "categoryName": "Industrial IoT-Protokolle",
+  "name": "AMQP Enterprise Messaging",
+  "subtitle": "Zuverlässiges Enterprise-Messaging für Cloud",
+  "vendor": "OASIS Consortium",
+  "hq": "Boston, MA, USA / Global",
+  "businessModel": "Open International Standard (ISO/IEC 19464)",
+  "url": "https://amqp.org",
+  "tier": "Tier 1",
+  "costLabel": "Open Standard / €0",
+  "status": "EVALUIERT",
+  "overview": "Unternehmensgerechtes Messaging-Protokoll für transaktionssicheres Queuing, Routing und Punkt-zu-Punkt-Zustellung von Nachrichten.",
+  "features": [
+    {
+      "title": "Garantierte Zustellung",
+      "desc": "Transaktionssichere Warteschlangen garantieren Schutz vor Datenverlust."
+    },
+    {
+      "title": "Komplexes Routing",
+      "desc": "Multi-Tenant-Börsen zur gezielten Nachrichtenverteilung."
+    },
+    {
+      "title": "Cloud-Native",
+      "desc": "Kernprotokoll für Azure Service Bus und RabbitMQ."
+    }
+  ],
+  "inputs": [
+    "Telemetrie-Payloads",
+    "ERP Events",
+    "Alerts"
+  ],
+  "outputs": [
+    "AMQP Packets",
+    "Event Triggers"
+  ],
+  "bridges": [
+    "Azure Digital Twins",
+    "RabbitMQ",
+    "ERP Systeme"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Ideal für IT-Event-Queues auf Unternehmensebene."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Hohe Unternehmenssicherheit und Transaktionssicherheit."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Höherer Header-Overhead als leichtes MQTT."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Cloud Bridge",
+    "sovereignty": "ISO/IEC 19464",
+    "openStandard": "AMQP 1.0"
+  },
+  "deployment": {
+    "effort": "Mittel (2-3 Wochen)",
+    "mode": "Enterprise Message Broker",
+    "maturity": "Produktiv",
+    "area": "Enterprise Event Queues"
+  },
+  "staffing": "1x Integration Architect (25% FTE)"
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Industrial Metaverse Taxonomy 2026 — Interaktiver Browser</title>
+  <meta name="description" content="Interaktiver Browser für den Industrial Metaverse Tech Stack 2026. ARENA2036 Forschungs-Taxonomie.">
+  
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body style="overflow: hidden;">
+
+  <!-- Minimalist Header Navbar -->
+  <header class="app-navbar">
+    <div class="app-brand">
+      <a href="./index.html" style="display: flex; align-items: center; text-decoration: none;">
+        <div class="brand-logos">
+          <img src="./assets/ARENA2036_combinationmark_orange_black.png" alt="ARENA2036 Logo" class="logo-img" title="ARENA2036 Forschungscampus">
+          <div class="logo-divider"></div>
+          <img src="./assets/Metaverse Logo bunt.svg" alt="Industrial Metaverse Logo" class="logo-img" title="Industrial Metaverse 2026">
+          <div class="logo-divider"></div>
+          <img src="./assets/BaWue_WM_Absenderlogo_rgb_pos_Gefoerdert.svg" alt="Gefördert durch Baden-Württemberg" class="logo-img" title="Gefördert durch Ministerium für Wirtschaft, Arbeit und Tourismus Baden-Württemberg">
+        </div>
+      </a>
+      
+      <div class="app-title-group">
+        <h1 class="app-title">IMV TAXONOMIE 2026</h1>
+        <p class="app-subtitle">ARENA2036 <span class="repo-branch-badge"><i class="fa-solid fa-code-branch"></i> main</span></p>
+      </div>
+    </div>
+
+    <div class="nav-actions">
+      <a href="./index.html" class="btn"><i class="fa-solid fa-house"></i> Startseite</a>
+      <a href="./architecture.html" class="btn"><i class="fa-solid fa-diagram-project"></i> Architektur</a>
+      <button class="btn" id="btnOverview"><i class="fa-solid fa-table-cells"></i> Matrix Index</button>
+      <button class="btn" id="btnCompare" style="display: none;"><i class="fa-solid fa-code-compare"></i> Vergleichen (<span id="compareCount">0</span>)</button>
+      <a href="./impressum.html" class="btn"><i class="fa-solid fa-scale-balanced"></i> Impressum</a>
+    </div>
+  </header>
+
+  <!-- Application Layout: Sidebar + Viewport -->
+  <div class="app-layout">
+    
+    <!-- Sidebar: 11 Categories Index (5 Schichten) -->
+    <aside class="sidebar">
+      <div class="sidebar-header container-header-bar">
+        <div class="sidebar-title"><i class="fa-solid fa-list-ul" style="color: var(--accent-orange);"></i> Index (11 Kat.)</div>
+        <span class="badge" id="totalCountBadge">91 Elemente</span>
+      </div>
+      <div class="category-tree" id="categoryTree">
+        <!-- Dynamisch gerendert per app.js -->
+      </div>
+    </aside>
+
+    <!-- Main Viewport Area -->
+    <main class="viewport-area">
+      
+      <!-- Sticky Control Bar über der Elemente-Liste -->
+      <div class="items-control-bar container-header-bar">
+        <div class="filter-group">
+          <!-- Live Search Input -->
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="searchInput" class="search-input" placeholder="Technologie, Standard, Lizenz oder Vendor suchen..." autocomplete="off">
+            <button class="search-clear-btn" id="searchClearBtn" title="Suche zurücksetzen"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+
+          <!-- Filter Dropdowns -->
+          <select id="filterTier" class="select-filter" title="Filter nach Kostengruppe">
+            <option value="ALL">Alle Kostengruppen</option>
+            <option value="Tier 1">Tier 1 (≤ €30k / Open Source)</option>
+            <option value="Tier 2">Tier 2 (≤ €100k / Midmarket)</option>
+            <option value="Tier 3">Tier 3 (> €100k / Enterprise)</option>
+          </select>
+
+          <select id="filterStatus" class="select-filter" title="Filter nach Status">
+            <option value="ALL">Alle Status</option>
+            <option value="ETABLIERT">ETABLIERT</option>
+            <option value="STANDARDIZIERT">STANDARDIZIERT</option>
+            <option value="OPEN SOURCE">OPEN SOURCE</option>
+            <option value="EMERGING">EMERGING</option>
+          </select>
+        </div>
+
+        <div class="view-toggle-group">
+          <button class="view-btn active" id="btnGridMode" title="Rasteransicht"><i class="fa-solid fa-border-all"></i> Raster</button>
+          <button class="view-btn" id="btnListMode" title="Listenansicht"><i class="fa-solid fa-list"></i> Liste</button>
+        </div>
+      </div>
+
+      <!-- Result Status Bar -->
+      <div class="status-bar" id="statusBar">
+        Zeige <strong>91</strong> von 91 auditierte Technologien im Index
+      </div>
+
+      <!-- Items Grid / List Container -->
+      <div class="items-container" id="itemsContainer">
+        <!-- Gerendert per app.js -->
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Profil Detail Modal -->
+  <div class="modal-overlay" id="profileModal">
+    <div class="modal-content" style="max-width: 1200px;">
+      <div class="modal-header">
+        <div class="app-brand">
+          <i class="fa-solid fa-cube" style="color: var(--accent-orange); font-size: 20px;"></i>
+          <h2 class="slide-title" id="modalProfileTitle" style="font-size: 16px;">Technologie-Profil Details</h2>
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <a id="modalDirectJsonLink" href="#" target="_blank" class="btn" style="font-size: 11px;"><i class="fa-solid fa-code"></i> JSON Spezifikation</a>
+          <button class="btn" id="btnCloseProfileModal"><i class="fa-solid fa-xmark"></i> Schließen</button>
+        </div>
+      </div>
+      <div class="modal-body" id="modalProfileBody">
+        <!-- Per JS gerendert -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Vergleichs Matrix Modal -->
+  <div class="modal-overlay" id="compareModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="app-brand">
+          <i class="fa-solid fa-code-compare" style="color: var(--accent-orange); font-size: 18px;"></i>
+          <h2 class="slide-title" style="font-size: 16px;">Technologie-Vergleich (Vergleiche ausgewählte Items)</h2>
+        </div>
+        <button class="btn" id="btnCloseCompareModal"><i class="fa-solid fa-xmark"></i> Schließen</button>
+      </div>
+      <div class="modal-body" id="compareModalBody">
+        <div style="overflow-x: auto;">
+          <table class="table-view" id="compareTable">
+            <thead id="compareTableHead">
+              <!-- Gerendert per JS -->
+            </thead>
+            <tbody id="compareTableBody">
+              <!-- Gerendert per JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Matrix Index Modal -->
+  <div class="modal-overlay" id="matrixModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="app-brand">
+          <i class="fa-solid fa-table-cells" style="color: var(--accent-orange); font-size: 18px;"></i>
+          <h2 class="slide-title" style="font-size: 16px;">Vollständige Taxonomie-Matrix (11 Kategorien)</h2>
+        </div>
+        <button class="btn" id="btnCloseMatrixModal"><i class="fa-solid fa-xmark"></i> Schließen</button>
+      </div>
+      <div class="modal-body">
+        <table class="table-view" id="matrixTable">
+          <thead>
+            <tr>
+              <th>Ref Code</th>
+              <th>Kat. Code</th>
+              <th>Kategorie Name</th>
+              <th>Technologie Name</th>
+              <th>Entwickler / Vendor</th>
+              <th>Kostengruppe</th>
+              <th>Status</th>
+              <th>Aktion</th>
+            </tr>
+          </thead>
+          <tbody id="matrixTableBody">
+            <!-- Per JS gerendert -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Static Fallback Daten-Skriptdatei -->
+  <script src="./data/index_data.js"></script>
+
+  <!-- Anwendungslogik -->
+  <script src="./app.js"></script>
+
+</body>
+</html>

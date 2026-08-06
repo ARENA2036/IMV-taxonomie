@@ -1,0 +1,73 @@
+{
+  "refCode": "IND-META-2026-PTC-CREO",
+  "categoryCode": "1.1",
+  "categoryName": "Mechanisches CAD (MCAD)",
+  "name": "PTC Creo Parametric",
+  "subtitle": "High-Precision MCAD & Generative AI",
+  "vendor": "PTC Inc.",
+  "hq": "Boston, MA, USA",
+  "businessModel": "Enterprise SaaS / Subscription",
+  "url": "https://ptc.com/creo",
+  "tier": "Tier 3",
+  "costLabel": "> €100k",
+  "status": "EVALUIERT",
+  "overview": "Hochpräzise parametrische MCAD-Suite für Schwermaschinenbau, Verteidigung und Fahrzeugtechnik mit tiefen KI-Generativfunktionen und Model-Based Definition (MBD).",
+  "features": [
+    {
+      "title": "Generative Design AI",
+      "desc": "Topologieoptimierung unter Berücksichtigung additiver und fertigungstechnischer Randbedingungen."
+    },
+    {
+      "title": "Model-Based Definition (MBD)",
+      "desc": "Direkte 3D-Annotierung von PMI-Fertigungsinformationen am CAD-Modell."
+    },
+    {
+      "title": "Ansys Powered Simulation",
+      "desc": "Echtzeit-Struktur- und Thermosimulation direkt in der Konstruktionsumgebung."
+    }
+  ],
+  "inputs": [
+    "PRT",
+    "ASM",
+    "STEP AP242",
+    "JT",
+    "Inventor"
+  ],
+  "outputs": [
+    "OpenUSD (.usda/.usdc)",
+    "STEP AP242",
+    "JT",
+    "3MF"
+  ],
+  "bridges": [
+    "PTC Windchill PLM",
+    "PTC ThingWorx",
+    "NVIDIA Omniverse"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Meistert komplexe Enterprise-Baugruppen mit robuster Flächenkonstruktion."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Starke MBD-Unterstützung überträgt Fertigungsmetadaten direkt in OpenUSD-Schemas."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Steile Lernkurve; komplexe Lizenzierungsstrukturen."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Connector Plugin",
+    "sovereignty": "SOC2 / ISO 27001",
+    "openStandard": "STEP AP242 / JT ISO"
+  },
+  "deployment": {
+    "effort": "Sehr Hoch (> 1 Monat)",
+    "mode": "On-Premise / Cloud PLM",
+    "maturity": "Produktiv",
+    "area": "Schwermaschinenbau & Automotive"
+  },
+  "staffing": "1x Senior Creo CAD Architect (100% FTE)"
+}

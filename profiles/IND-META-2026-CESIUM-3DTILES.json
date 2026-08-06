@@ -1,0 +1,73 @@
+{
+  "refCode": "IND-META-2026-CESIUM-3DTILES",
+  "categoryCode": "6.5",
+  "categoryName": "360°-Erfassung & GIS-Kartierung",
+  "name": "Cesium (3D Tiles Streaming Platform)",
+  "subtitle": "OGC 3D Tiles Streaming für Geodaten",
+  "vendor": "Cesium GS Inc. / Bentley",
+  "hq": "Philadelphia, PA, USA",
+  "businessModel": "Open Source Library / Cesium ion Cloud",
+  "url": "https://cesium.com",
+  "tier": "Tier 1",
+  "costLabel": "≤ €30k",
+  "status": "STANDARDIZIERT",
+  "overview": "Offene Plattform zum Streaming riesiger 3D-Geodaten und 3D-Tiles-Datensätze in Webbrowser und Echtzeit-Engines.",
+  "features": [
+    {
+      "title": "3D Tiles Open Standard",
+      "desc": "OGC-Standard zum Streaming von Gigabyte-Geländemodellen."
+    },
+    {
+      "title": "Unreal & Omniverse Plugins",
+      "desc": "NATIVE Plugins zum Streamen von Geodaten in 3D-Bühnen."
+    },
+    {
+      "title": "Globale Satellitendaten",
+      "desc": "Hochauflösende weltweite Geländedaten."
+    }
+  ],
+  "inputs": [
+    "LAS",
+    "E57",
+    "KML",
+    "GeoTIFF",
+    "CityGML",
+    "OpenUSD"
+  ],
+  "outputs": [
+    "3D Tiles (B3DM/PNTS)",
+    "Quantized Mesh",
+    "WebGL"
+  ],
+  "bridges": [
+    "NVIDIA Omniverse",
+    "Unreal Engine 5",
+    "ESRI ArcGIS"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Unangefochtener Maßstab zur Darstellung globaler Lieferketten-Zwillinge."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Erfinder des offenen OGC 3D Tiles Standards."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Erfordert Einrichtung räumlicher KoordinatentTransformationen."
+    }
+  ],
+  "compliance": {
+    "omniverse": "3D Tiles Plugin Native",
+    "sovereignty": "OGC Open Standard",
+    "openStandard": "3D Tiles / glTF"
+  },
+  "deployment": {
+    "effort": "Mittel (2-3 Wochen)",
+    "mode": "Web Server / Engine Plugin",
+    "maturity": "Produktiv",
+    "area": "Globale GIS & Geländedaten"
+  },
+  "staffing": "1x GIS Developer (50% FTE)"
+}

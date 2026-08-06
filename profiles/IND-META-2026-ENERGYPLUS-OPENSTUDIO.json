@@ -1,0 +1,72 @@
+{
+  "refCode": "IND-META-2026-ENERGYPLUS-OPENSTUDIO",
+  "categoryCode": "4.3",
+  "categoryName": "Umwelt- & Strömungssimulation",
+  "name": "EnergyPlus / OpenStudio",
+  "subtitle": "Gebäudeenergie & Thermische Hallensimulation",
+  "vendor": "US Dept. of Energy / NREL",
+  "hq": "Washington D.C., USA",
+  "businessModel": "Free & Open Source (BSD License)",
+  "url": "https://energyplus.net",
+  "tier": "Tier 1",
+  "costLabel": "Open Source / €0",
+  "status": "EMPFOHLEN",
+  "overview": "Gebäudeenergiesimulations-Engine zur Berechnung von Heiz- und Kühllasten, Lüftungsströmen, HVAC-Dimensionierung und CO2-Emissionen von Fabrikhallen.",
+  "features": [
+    {
+      "title": "Sub-Hourly Energy Solvers",
+      "desc": "Berechnet Wärmetransport, Beleuchtungslasten und HVAC-Energieverbrauch."
+    },
+    {
+      "title": "OpenStudio SDK",
+      "desc": "Framework zur Verknüpfung von Energiemodellen mit BIM-Geometrie."
+    },
+    {
+      "title": "CO2-Fußabdruck-Analyse",
+      "desc": "Verfolgt den operativen CO2-Ausstoß für ESG-Zertifizierungen."
+    }
+  ],
+  "inputs": [
+    "IDF",
+    "OSM",
+    "gbXML",
+    "IFC",
+    "EPW Weather"
+  ],
+  "outputs": [
+    "CSV Telemetry",
+    "SQL Databases",
+    "HTML Reports"
+  ],
+  "bridges": [
+    "Autodesk Revit",
+    "Rhino Honeybee",
+    "Azure Digital Twins"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Industriestandard zur Zertifizierung klimaneutraler Fabrikgebäude."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Vollkommen quellenoffener Solver gestützt durch jahrzehntelange Validierung."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Textbasierte Eingabedateien erfordern grafische Frontend-Tools."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Open Source (BSD)",
+    "sovereignty": "ASHRAE / EU EPBD Compliant",
+    "openStandard": "gbXML / IFC"
+  },
+  "deployment": {
+    "effort": "Mittel (2-3 Wochen)",
+    "mode": "Desktop / Server Execution",
+    "maturity": "Produktiv",
+    "area": "Fabrikenergie & CO2-Bilanzierung"
+  },
+  "staffing": "1x Gebäudeenergie-Ingenieur (25% FTE)"
+}

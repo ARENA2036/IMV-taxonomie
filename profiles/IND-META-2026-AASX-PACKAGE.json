@@ -1,0 +1,70 @@
+{
+  "refCode": "IND-META-2026-AASX-PACKAGE",
+  "categoryCode": "10.0",
+  "categoryName": "Datenformate & OpenUSD-Standards",
+  "name": "AASX Packages (IDTA / IEC 63278 Container)",
+  "subtitle": "Standardisierter Zwillings-Datencontainer",
+  "vendor": "IDTA / Plattform Industrie 4.0",
+  "hq": "Frankfurt, Deutschland (EU)",
+  "businessModel": "Open International Standard Container (IEC 63278)",
+  "url": "https://industrialdigitaltwin.org",
+  "tier": "Tier 1",
+  "costLabel": "Open Standard / €0",
+  "status": "PFLICHTSTANDARD CONTAINER",
+  "overview": "Zip-Containerformat zur Verpackung vollständiger Verwaltungsschalen-Metadaten, XML/JSON-Teilmodelle, PDF-Handbücher und 3D-CAD-Modelle.",
+  "features": [
+    {
+      "title": "Vollständiger digitaler Zwilling",
+      "desc": "Bündelt Zertifikate, Handbücher und CAD-Daten in einer Datei."
+    },
+    {
+      "title": "Standard-OPC-Verpackung",
+      "desc": "Kompatibel mit Standard-ZIP-Tools und AASX Package Explorer."
+    },
+    {
+      "title": "Digital Product Passport Ready",
+      "desc": "Konformes Paketformat für den EU-Produktpass."
+    }
+  ],
+  "inputs": [
+    "XML",
+    "JSON",
+    "PDF Dokumente",
+    "STEP CAD Datein"
+  ],
+  "outputs": [
+    ".aasx (IDTA Package File)"
+  ],
+  "bridges": [
+    "Collectu Engine",
+    "Siemens Operations X",
+    "AASX Package Explorer",
+    "NVIDIA Omniverse"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "International vorgeschriebenes Paketformat zum Austausch digitaler Zwillinge."
+    },
+    {
+      "title": "Vorteile",
+      "text": "100% EU-souveräner Standard zur Gewährleistung der Interoperabilität."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Erfordert die Umsetzung von IDTA-Teilmodellen in Entwicklerteams."
+    }
+  ],
+  "compliance": {
+    "omniverse": "AAS Bridge",
+    "sovereignty": "100% EU Standard (IEC 63278)",
+    "openStandard": "IEC 63278"
+  },
+  "deployment": {
+    "effort": "Gering (1-2 Tage)",
+    "mode": "Digital Twin Container File",
+    "maturity": "Produktiv",
+    "area": "Verwaltungsschalen-Paketierung"
+  },
+  "staffing": "1x Standards Engineer (10% FTE)"
+}

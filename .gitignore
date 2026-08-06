@@ -1,0 +1,36 @@
+# Operating System Junk
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Node.js & NPM
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm
+
+# IDE & Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# AI Agents & Local Execution Logs
+.gemini/
+.system_generated/
+scratch/
+*.log
+
+# Temporary Build Files
+tmp/
+temp/
+*.tmp

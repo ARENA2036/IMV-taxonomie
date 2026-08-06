@@ -1,0 +1,71 @@
+{
+  "refCode": "IND-META-2026-FARO-SPHERE",
+  "categoryCode": "6.5",
+  "categoryName": "360°-Erfassung & GIS-Kartierung",
+  "name": "FARO Sphere XG (Cloud Spatial Ecosystem)",
+  "subtitle": "Zentrale Reality-Capture Cloud-Plattform",
+  "vendor": "FARO Technologies Inc.",
+  "hq": "Lake Mary, FL, USA / Stuttgart, DE (EU)",
+  "businessModel": "Cloud SaaS Subscription per Project",
+  "url": "https://faro.com/sphere",
+  "tier": "Tier 2",
+  "costLabel": "≤ €100k",
+  "status": "EVALUIERT",
+  "overview": "Zentrale Cloud-Plattform, die statische Laserscans, Mobile-SLAM-Daten und 360°-Fotos in einer gemeinsamen Umgebung zusammenführt.",
+  "features": [
+    {
+      "title": "Zentrale Reality Cloud",
+      "desc": "Vereint Daten von FARO Focus, Orbis und 360-Kameras."
+    },
+    {
+      "title": "Cloud-Registrierung",
+      "desc": "Ausrichtung von Punktwolken in der Cloud ohne PC-Überlastung."
+    },
+    {
+      "title": "BIM-CAD-Vergleich",
+      "desc": "Direkte Überlagerung von 3D-CAD-Modellen mit Scans."
+    }
+  ],
+  "inputs": [
+    "FLS",
+    "E57",
+    "360 Photos",
+    "CAD STEP"
+  ],
+  "outputs": [
+    "E57",
+    "Web 3D Stream",
+    "Deviation Heatmaps"
+  ],
+  "bridges": [
+    "Autodesk Revit",
+    "Navisworks",
+    "NVIDIA Omniverse Cloud"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Sehr gut zur Kollaboration globaler Teams bei Umbaumaßnahmen."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Zentralisiert verschiedene Scanner-Hardwareanbieter in einem Dashboard."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Setzt gute Internet-Uploadbandbreite voraus."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Cloud Stream Extension",
+    "sovereignty": "SOC2 / ISO Compliant",
+    "openStandard": "E57 / STEP"
+  },
+  "deployment": {
+    "effort": "Gering (1-2 Tage)",
+    "mode": "Web SaaS Console",
+    "maturity": "Produktiv",
+    "area": "Zentrales Punktwolken-Management"
+  },
+  "staffing": "1x Data Manager (25% FTE)"
+}

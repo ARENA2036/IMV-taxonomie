@@ -1,0 +1,73 @@
+{
+  "refCode": "IND-META-2026-BENTLEY-ITWIN",
+  "categoryCode": "9.0",
+  "categoryName": "Enterprise Cloud-Zwillinge",
+  "name": "Bentley iTwin Platform",
+  "subtitle": "Infrastruktur- & Prozessanlagen-Zwilling",
+  "vendor": "Bentley Systems Inc.",
+  "hq": "Exton, PA, USA",
+  "businessModel": "Enterprise SaaS / Developer Platform Units",
+  "url": "https://bentley.com/itwin",
+  "tier": "Tier 3",
+  "costLabel": "> €100k",
+  "status": "STANDARDIZIERT",
+  "overview": "Offene digital Zwillingsplattform für Großinfrastruktur, Prozessanlagen, Versorgungsnetze und Fabrikareale.",
+  "features": [
+    {
+      "title": "iModel Open Schema",
+      "desc": "Datenbankschema zur Verfolgung von 3D-Änderungshistorien über Jahrzehnte."
+    },
+    {
+      "title": "Cesium 3D Tiles Streaming",
+      "desc": "Massen-Streaming von Geländedaten und Anlageninfrastruktur."
+    },
+    {
+      "title": "Sync Engine",
+      "desc": "Kontinuierliche Synchronisation mit MicroStation, Revit und OpenUSD."
+    }
+  ],
+  "inputs": [
+    "DGN",
+    "RVT",
+    "IFC",
+    "Point Clouds",
+    "OpenUSD"
+  ],
+  "outputs": [
+    "iModel",
+    "3D Tiles",
+    "WebGL Stream",
+    "OpenUSD Stage"
+  ],
+  "bridges": [
+    "NVIDIA Omniverse",
+    "Cesium GS",
+    "Microsoft Azure Digital Twins"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Unangefochtener Marktführer für Chemieanlagen und Großinfrastruktur."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Verfolgt winzigste 3D-Änderungen über Jahrzehnte."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Ausgerichtet auf Infrastruktur statt Roboterkinematik."
+    }
+  ],
+  "compliance": {
+    "omniverse": "iTwin Connector",
+    "sovereignty": "ISO 19650 Compliant",
+    "openStandard": "iModel / 3D Tiles"
+  },
+  "deployment": {
+    "effort": "Sehr Hoch (> 1 Monat)",
+    "mode": "Enterprise Cloud",
+    "maturity": "Produktiv",
+    "area": "Prozessanlagen & Infrastruktur"
+  },
+  "staffing": "1x Infrastructure Specialist (100% FTE)"
+}

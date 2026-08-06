@@ -1,0 +1,69 @@
+{
+  "refCode": "IND-META-2026-FLYABILITY-ELIOS3",
+  "categoryCode": "6.3",
+  "categoryName": "Autonome Drohnen & AMR-Roboter",
+  "name": "Flyability Elios 3 (Indoor Inspection Drone)",
+  "subtitle": "Kollisionstolerante Hallen- & Tankdrohne",
+  "vendor": "Flyability SA",
+  "hq": "Lausanne, Schweiz (EU/EFTA)",
+  "businessModel": "Hardware Kit + Inspector Software",
+  "url": "https://flyability.com/elios-3",
+  "tier": "Tier 2",
+  "costLabel": "≤ €100k",
+  "status": "EMPFOHLEN",
+  "overview": "Kollisionstolerante Hallendrohne im Käfig für Inspektionen in engen Behältern, Kaminen und unter Hallendächern ohne GPS.",
+  "features": [
+    {
+      "title": "Schutzkäfig",
+      "desc": "Prallt gefahrlos an Hindernissen in engsten Räumen ab."
+    },
+    {
+      "title": "Ouster 3D-LiDAR",
+      "desc": "Echtzeit-Indoor-SLAM-Kartierung ohne GPS-Empfang."
+    },
+    {
+      "title": "Thermal- & 4K-Kamera",
+      "desc": "Gleichzeitige optische und thermische Defekterkennung."
+    }
+  ],
+  "inputs": [
+    "Indoor SLAM Telemetry",
+    "Thermal Stream"
+  ],
+  "outputs": [
+    "E57 Point Cloud",
+    "LAS",
+    "Flyability 3D Model"
+  ],
+  "bridges": [
+    "FARO Sphere XG",
+    "Bentley iTwin",
+    "NVIDIA Omniverse"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Unschlagbar für Inspektionen in gefährlichen Behältern und Schächten."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Schützt Personal vor dem Betreten gefährlicher Engen."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Flugzeit pro Akku auf ca. 12 Minuten begrenzt."
+    }
+  ],
+  "compliance": {
+    "omniverse": "E57 Bridge",
+    "sovereignty": "Schweizer Sicherheitsstandard",
+    "openStandard": "E57"
+  },
+  "deployment": {
+    "effort": "Gering (1-2 Tage)",
+    "mode": "Hand-Launched Drone",
+    "maturity": "Produktiv",
+    "area": "Enge Industriebehälter & Kamine"
+  },
+  "staffing": "1x Inspektionstechniker (25% FTE)"
+}

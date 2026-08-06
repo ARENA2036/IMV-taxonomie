@@ -1,0 +1,71 @@
+{
+  "refCode": "IND-META-2026-CATIA-3DS",
+  "categoryCode": "1.1",
+  "categoryName": "Mechanisches CAD (MCAD)",
+  "name": "Dassault CATIA V5 / 3DEXPERIENCE",
+  "subtitle": "OEM High-End Class-A Surface Master Engine",
+  "vendor": "Dassault Systèmes",
+  "hq": "Vélizy-Villacoublay, Frankreich (EU)",
+  "businessModel": "Enterprise Named License / 3DEXPERIENCE Subscription",
+  "url": "https://3ds.com/catia",
+  "tier": "Tier 3",
+  "costLabel": "> €100k",
+  "status": "EVALUIERT",
+  "overview": "Der weltweite De-facto-Branchenstandard der Luft-, Raumfahrt- und Automobilindustrie für hochkomplexe Class-A-Flächenmodellierung und Gesamtfahrzeugarchitektur.",
+  "features": [
+    {
+      "title": "ICEM Surf Integration",
+      "desc": "High-End Class-A Flächenkonstruktion und ästhetische Lichtreflexions-Validierung."
+    },
+    {
+      "title": "Systems Engineering (SysML)",
+      "desc": "Integrierte mechatronische Systemmodellierung verknüpft mit 3D-CAD."
+    },
+    {
+      "title": "3DEXPERIENCE Twin Pipeline",
+      "desc": "Echtzeit-Fabrikinbetriebnahme in der virtuellen Cloud."
+    }
+  ],
+  "inputs": [
+    "CATPart",
+    "CATProduct",
+    "STEP AP242",
+    "IGES"
+  ],
+  "outputs": [
+    "OpenUSD (.usd)",
+    "STEP AP242",
+    "3DXML"
+  ],
+  "bridges": [
+    "3DEXPERIENCE Platform",
+    "DELMIA",
+    "NVIDIA Omniverse"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Weltweite Referenz für Multi-Millionen-Teile-Projekte in der Luftfahrt und Automobilindustrie."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Unerreichte Flächenpräzision und regelbasierte Konstruktionsautomatisierung."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Proprietäre Datenstruktur erfordert dedizierte Konvertierungspipelines für Echtzeit-Engines."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Extension Bridge",
+    "sovereignty": "100% EU Souverän (Frankreich)",
+    "openStandard": "STEP AP242 / ISO 10303"
+  },
+  "deployment": {
+    "effort": "Sehr Hoch (> 1 Monat)",
+    "mode": "Enterprise Client / Cloud",
+    "maturity": "Produktiv",
+    "area": "Automotive & Aerospace OEM"
+  },
+  "staffing": "1x Enterprise CATIA Systems Engineer (100% FTE)"
+}

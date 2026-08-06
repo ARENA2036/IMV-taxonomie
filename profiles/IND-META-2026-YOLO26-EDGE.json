@@ -1,0 +1,69 @@
+{
+  "refCode": "IND-META-2026-YOLO26-EDGE",
+  "categoryCode": "6.1-AI",
+  "categoryName": "Spatial Perzeption & KI-Erkennung",
+  "name": "YOLO26 Edge Vision & Object Tracking",
+  "subtitle": "Echtzeit-KI-Objekterkennung für Shopfloor-Kameras",
+  "vendor": "Ultralytics / Open Source",
+  "hq": "Global Community",
+  "businessModel": "AGPL v3 Open Source / Enterprise License",
+  "url": "https://ultralytics.com",
+  "tier": "Tier 1",
+  "costLabel": "≤ €30k",
+  "status": "STANDARDIZIERT",
+  "overview": "Echtzeit-Computer-Vision-Modell optimiert für 3D-Bounding-Boxen, Personen-Tracking und Sicherheitszonenüberwachung auf Edge-Geräten.",
+  "features": [
+    {
+      "title": "Sub-Millisekunden Inference",
+      "desc": "Läuft mit 100+ FPS auf eingebetteten NVIDIA Jetson Orin Modulen."
+    },
+    {
+      "title": "3D Bounding Boxes",
+      "desc": "Schätzt die 3D-Position von Staplern und Arbeitern aus 2D-Kamerabildern."
+    },
+    {
+      "title": "Objekt-Tracking",
+      "desc": "Verfolgt Asset-IDs über mehrere Kameras hinweg."
+    }
+  ],
+  "inputs": [
+    "RTSP Video Feeds",
+    "USB Camera Streams"
+  ],
+  "outputs": [
+    "JSON Bounding Box Data",
+    "MQTT Telemetry",
+    "ROS 2 Topics"
+  ],
+  "bridges": [
+    "DeepStream SDK",
+    "NVIDIA Omniverse",
+    "Collectu Data Engine"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Auf Tausenden Kameras zur Sicherheitsüberwachung einsetzbar."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Extrem schnelle Ausführung auf günstiger Edge-Hardware."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Leistung hängt von Ausleuchtung und Blickwinkel ab."
+    }
+  ],
+  "compliance": {
+    "omniverse": "DeepStream Bridge",
+    "sovereignty": "On-Premise Execution",
+    "openStandard": "MQTT / ROS 2"
+  },
+  "deployment": {
+    "effort": "Gering (1-2 Tage)",
+    "mode": "Edge Container (Jetson/Docker)",
+    "maturity": "Produktiv",
+    "area": "Kamera-Sicherheitsüberwachung"
+  },
+  "staffing": "1x Computer Vision Engineer (25% FTE)"
+}

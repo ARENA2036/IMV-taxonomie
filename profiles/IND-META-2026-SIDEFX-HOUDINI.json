@@ -1,0 +1,74 @@
+{
+  "refCode": "IND-META-2026-SIDEFX-HOUDINI",
+  "categoryCode": "2.0",
+  "categoryName": "DCC & Generatives 3D-Design",
+  "name": "SideFX Houdini (Procedural Pipelines)",
+  "subtitle": "Prozeduraler USD-Pipeline-Generator & VFX",
+  "vendor": "SideFX",
+  "hq": "Toronto, Kanada",
+  "businessModel": "Tiered Subscription (Indie / Core / FX)",
+  "url": "https://sidefx.com",
+  "tier": "Tier 2",
+  "costLabel": "≤ €100k",
+  "status": "STANDARDIZIERT",
+  "overview": "Knotenbasierte prozedurale Generierungs- und VFX-Suite. Fungiert als prozedurale Pipeline-Engine für die automatisierte Aufbereitung gewaltiger OpenUSD-Fabrikszenen.",
+  "features": [
+    {
+      "title": "Solaris USD Suite",
+      "desc": "Natives OpenUSD Layout-, Beleuchtungs- und Composition-System."
+    },
+    {
+      "title": "PDG Parallel Processing",
+      "desc": "Massiv parallele Batch-Verarbeitung von CAD-Assets."
+    },
+    {
+      "title": "Prozedurale LODs",
+      "desc": "Automatisierte Erzeugung von Detailstufen (LOD) und Kollisions-Meshes."
+    }
+  ],
+  "inputs": [
+    "HIP",
+    "USD",
+    "BGEO",
+    "STEP",
+    "FBX",
+    "OBJ"
+  ],
+  "outputs": [
+    "OpenUSD (.usd/.usdc)",
+    "glTF 2.0",
+    "FBX",
+    "Alembic"
+  ],
+  "bridges": [
+    "NVIDIA Omniverse Hydra",
+    "Unreal Engine 5 (Houdini Engine)",
+    "Unity"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Branchen-Goldstandard für die Verarbeitung riesiger Punktwolken und CAD-Daten."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Solaris nutzt OpenUSD nativ als interne Datenstruktur."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Steile Lernkurve; erfordert spezialisierte Technical Directors."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Native Solaris USD Engine",
+    "sovereignty": "ISO Compliant",
+    "openStandard": "OpenUSD / Hydra"
+  },
+  "deployment": {
+    "effort": "Sehr Hoch (> 1 Monat)",
+    "mode": "Linux / Windows Workstation",
+    "maturity": "Produktiv",
+    "area": "Automatisierte Pipeline-Generierung"
+  },
+  "staffing": "1x Technical Director (100% FTE)"
+}

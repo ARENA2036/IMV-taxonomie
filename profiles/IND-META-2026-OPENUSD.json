@@ -1,0 +1,75 @@
+{
+  "refCode": "IND-META-2026-OPENUSD",
+  "categoryCode": "10.0",
+  "categoryName": "Datenformate & OpenUSD-Standards",
+  "name": "OpenUSD (Universal Scene Description - ISO)",
+  "subtitle": "Der universelle 3D-Szenenbeschreibungs-Standard",
+  "vendor": "Alliance for OpenUSD (AOUSD)",
+  "hq": "San Francisco, CA, USA / Global Consortium",
+  "businessModel": "Open Source Standard (Apache 2.0) / Pending ISO",
+  "url": "https://aousd.org",
+  "tier": "Tier 1",
+  "costLabel": "Open Standard / €0",
+  "status": "PFLICHTSTANDARD 3D VISUAL",
+  "overview": "Der universelle offene Standard für 3D-Szenengraphen im Industrial Metaverse. Ermöglicht die Darstellung riesiger Fabrikszenen mit zerstörungsfreier Schichtenbearbeitung (Layering).",
+  "features": [
+    {
+      "title": "Zerstörungsfreies Layering",
+      "desc": "Ermöglicht mehreren Ingenieuren das zeitgleiche Bearbeiten derselben Szene."
+    },
+    {
+      "title": "Erweiterbare Schemas",
+      "desc": "Spezifische Schemas für Physik (UsdPhysics), Kinematik und IoT-Metadaten."
+    },
+    {
+      "title": "Hydra Render Framework",
+      "desc": "Flexible Rendering-Architektur (RTX, Storm, Cycles) auf einer einzigen Bühne."
+    }
+  ],
+  "inputs": [
+    "STEP",
+    "JT",
+    "FBX",
+    "glTF",
+    "E57",
+    "Point Clouds"
+  ],
+  "outputs": [
+    ".usd (Binary)",
+    ".usda (ASCII Text)",
+    ".usdc (Binary)",
+    ".usdz (Zip Package)"
+  ],
+  "bridges": [
+    "NVIDIA Omniverse Engine",
+    "Blender",
+    "Unreal Engine 5",
+    "Apple Vision Pro"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Absoluter Grundpfeiler-Standard für alle modernen 3D-Industrial-Metaverse-Architekturen."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Verarbeitet Multi-Millionen-Teile-Baugruppen ohne Speicherduplizierung."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Erfordert Einarbeitung in Kompositionsebenen (References, Payloads, Inherits)."
+    }
+  ],
+  "compliance": {
+    "omniverse": "NATIVE CORE FORMAT",
+    "sovereignty": "ISO Standardisierung (AOUSD)",
+    "openStandard": "Apache 2.0"
+  },
+  "deployment": {
+    "effort": "Gering (1-2 Tage)",
+    "mode": "Core Data Standard",
+    "maturity": "Produktiv",
+    "area": "Zentrales 3D-Szenenformat"
+  },
+  "staffing": "1x 3D Pipeline Architect (25% FTE)"
+}

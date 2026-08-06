@@ -1,0 +1,69 @@
+{
+  "refCode": "IND-META-2026-DEEPROBOTICS-M20",
+  "categoryCode": "6.3",
+  "categoryName": "Autonome Drohnen & AMR-Roboter",
+  "name": "DEEP Robotics M20 Pro (IP66 Quadruped Robot)",
+  "subtitle": "Autonomer 4-beiniger Inspektions-Laufroboter",
+  "vendor": "DEEP Robotics Inc.",
+  "hq": "Hangzhou, China",
+  "businessModel": "Hardware Robot Platform + SDK",
+  "url": "https://deeprobotics.cn",
+  "tier": "Tier 2",
+  "costLabel": "≤ €100k",
+  "status": "TESTBED",
+  "overview": "Industrieller Laufroboter (IP66) für autonome Inspektionsläufe über Treppen, Gitterroste und unwegsames Werksgelände.",
+  "features": [
+    {
+      "title": "IP66 Wasser- & Staubschutz",
+      "desc": "Zuverlässiger Einsatz bei Regen und starkem Staub."
+    },
+    {
+      "title": "20kg Nutzlast",
+      "desc": "Trägt schwere Laserscanner, Gassensoren und Wärmebildkameras."
+    },
+    {
+      "title": "Autonome Ladestation",
+      "desc": "Lädt sich selbstständig auf und lädt Messdaten hoch."
+    }
+  ],
+  "inputs": [
+    "ROS 2 Control Topics",
+    "Navigation Waypoints"
+  ],
+  "outputs": [
+    "ROS 2 Telemetrie",
+    "RTSP Video",
+    "3D SLAM Mesh"
+  ],
+  "bridges": [
+    "ROS 2 DDS",
+    "NVIDIA Isaac Sim",
+    "Collectu Data Engine"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Ersetzt Kontrollgänge in gefährlichen Umspannwerken und Chemiearealen."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Hohe Geländegängigkeit über Treppen im Vergleich zu Räder-AMRs."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Mechanischer Verschleiß an Bein-Aktuatoren erfordert Wartung."
+    }
+  ],
+  "compliance": {
+    "omniverse": "ROS 2 Native Bridge",
+    "sovereignty": "IP66 Zertifiziert",
+    "openStandard": "ROS 2 DDS"
+  },
+  "deployment": {
+    "effort": "Hoch (3-4 Wochen)",
+    "mode": "Autonomer Roboter",
+    "maturity": "Evaluation",
+    "area": "Autonome Werksinspektion"
+  },
+  "staffing": "1x Robotics Operator (50% FTE)"
+}

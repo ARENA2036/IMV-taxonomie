@@ -1,0 +1,73 @@
+{
+  "refCode": "IND-META-2026-AUTODESK-RECAP",
+  "categoryCode": "6.5",
+  "categoryName": "360°-Erfassung & GIS-Kartierung",
+  "name": "Autodesk ReCap Pro",
+  "subtitle": "Punktwolken-Aufbereitung & Photogrammetrie",
+  "vendor": "Autodesk Inc.",
+  "hq": "San Francisco, CA, USA",
+  "businessModel": "Enthalten in AEC Collection / Subscription",
+  "url": "https://autodesk.com/recap",
+  "tier": "Tier 1",
+  "costLabel": "≤ €30k",
+  "status": "EVALUIERT",
+  "overview": "Punktwolken-Software zum Bereinigen, Beschneiden und Umwandeln roher Scans in das Autodesk RCS/RCP-Format.",
+  "features": [
+    {
+      "title": "Punktwolken-Bereinigung",
+      "desc": "Entfernt Rauschen, Personen und störende Objekte aus Scans."
+    },
+    {
+      "title": "Photo-to-3D Mesh",
+      "desc": "Wandelt Drohnenfotos in 3D-Meshes um."
+    },
+    {
+      "title": "RCS-Indexierung",
+      "desc": "Kompression von E57-Dateien für Autodesk Revit."
+    }
+  ],
+  "inputs": [
+    "E57",
+    "LAS",
+    "PTX",
+    "Drone Photos"
+  ],
+  "outputs": [
+    "RCS",
+    "RCP",
+    "OBJ",
+    "OpenUSD"
+  ],
+  "bridges": [
+    "Autodesk Revit",
+    "Inventor",
+    "AutoCAD",
+    "NVIDIA Omniverse"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "De-facto Zwischenschritt vor dem Verknüpfen von Scans in Revit."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Bestandteil fast jeder Autodesk AEC Lizenz."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Einfacher Funktionsumfang verglichen mit Profi-Vermessungssuites."
+    }
+  ],
+  "compliance": {
+    "omniverse": "USD Exporter",
+    "sovereignty": "SOC2 Compliant",
+    "openStandard": "E57 / OBJ"
+  },
+  "deployment": {
+    "effort": "Gering (1-2 Tage)",
+    "mode": "Desktop Windows App",
+    "maturity": "Produktiv",
+    "area": "Punktwolken-Vorverarbeitung"
+  },
+  "staffing": "1x CAD Drafter (25% FTE)"
+}

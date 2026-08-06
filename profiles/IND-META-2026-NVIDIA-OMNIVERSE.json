@@ -1,0 +1,71 @@
+{
+  "refCode": "IND-META-2026-NVIDIA-OMNIVERSE",
+  "categoryCode": "3.0",
+  "categoryName": "Echtzeit-3D & Spatial Engines",
+  "name": "NVIDIA Omniverse Enterprise",
+  "subtitle": "Zentrales Betriebssystem für Digital Twins",
+  "vendor": "NVIDIA Corporation",
+  "hq": "Santa Clara, CA, USA / EU Office",
+  "businessModel": "Enterprise Omniverse Licensing per GPU/User",
+  "url": "https://developer.nvidia.com/omniverse",
+  "tier": "Tier 3",
+  "costLabel": "> €100k",
+  "status": "TARGET CORE ARCHITECTURE",
+  "overview": "Zentrale Simulations- und Aggregationsplattform, die nativ auf OpenUSD und RTX-Raytracing basiert. Dient als primäres Herzstück der Zielarchitektur für den industriellen digitalen Zwilling.",
+  "features": [
+    {
+      "title": "Nativer OpenUSD Kernel",
+      "desc": "Szenengraphen, Materialien und Physik werden durchgängig im OpenUSD-Standard gespeichert."
+    },
+    {
+      "title": "Nucleus Live Collaboration",
+      "desc": "Multi-User-Kollaboration auf gemeinsamen USD-Bühnen in Echtzeit."
+    },
+    {
+      "title": "RTX Real-Time Raytracing",
+      "desc": "Physikalisch exaktes Pfadtracing powered by NVIDIA GPU Hardware."
+    }
+  ],
+  "inputs": [
+    "Native OpenUSD (.usd/.usda/.usdc)",
+    "Connectors für Siemens NX, Revit, Blender, SolidWorks"
+  ],
+  "outputs": [
+    "Native OpenUSD Stage",
+    "WebRTC Cloud Stream",
+    "RTX Render Passes"
+  ],
+  "bridges": [
+    "Isaac Sim",
+    "Siemens Teamcenter",
+    "Azure Digital Twins",
+    "Collectu Engine",
+    "ROS 2"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Absolute Kern-Engine für physikalisch exakte Fabriksimulationen im Gigabyte-Bereich."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Kein Datenverlust bei der Datenzusammenführung dank nativer OpenUSD-Architektur."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Erfordert performante NVIDIA RTX GPU-Infrastruktur (On-Premise oder Cloud)."
+    }
+  ],
+  "compliance": {
+    "omniverse": "NATIVE CORE PLATFORM",
+    "sovereignty": "GAIA-X / On-Premise Execution",
+    "openStandard": "OpenUSD / Hydra / MaterialX"
+  },
+  "deployment": {
+    "effort": "Hoch (3-4 Wochen)",
+    "mode": "RTX Workstations / Enterprise Cloud",
+    "maturity": "Produktiv",
+    "area": "Gesamtfabrik Digital Twin Aggregation"
+  },
+  "staffing": "1x Lead Metaverse Solutions Architect (100% FTE)"
+}

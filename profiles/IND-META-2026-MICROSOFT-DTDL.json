@@ -1,0 +1,68 @@
+{
+  "refCode": "IND-META-2026-MICROSOFT-DTDL",
+  "categoryCode": "8.2",
+  "categoryName": "Verwaltungsschale & Zwillings-Standards",
+  "name": "Digital Twins Definition Language (DTDL)",
+  "subtitle": "JSON-LD basiertes Modellierungsformat für IIoT",
+  "vendor": "Microsoft / Digital Twin Consortium",
+  "hq": "Redmond, WA, USA",
+  "businessModel": "Open W3C Standard Draft / Open License",
+  "url": "https://github.com/Azure/opendigitaltwins-dtdl",
+  "tier": "Tier 1",
+  "costLabel": "Open Standard / €0",
+  "status": "EVALUIERT",
+  "overview": "JSON-LD-basierte Modellierungssprache zur Definition digitaler Zwillingseinheiten, Raumgraphen und Telemetriesignale in Azure Digital Twins.",
+  "features": [
+    {
+      "title": "JSON-LD Graph",
+      "desc": "Definiert Beziehungs-Knoten (z.B. Halle 1 -> enthält -> Roboter A)."
+    },
+    {
+      "title": "Interface-Vererbung",
+      "desc": "Vererbung von Eigenschaften wie in objektorientierter Programmierung."
+    },
+    {
+      "title": "W3C Web of Things",
+      "desc": "Kompatibel mit offenen W3C-Web-Schemas."
+    }
+  ],
+  "inputs": [
+    "JSON-LD Schemas",
+    "DTDL Models"
+  ],
+  "outputs": [
+    "Spatial Knowledge Graphs",
+    "Azure Synapse Tables"
+  ],
+  "bridges": [
+    "Azure Digital Twins",
+    "Bentley iTwin",
+    "Power BI"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Sehr gut zur Erstellung räumlicher Graphnetzwerke in der Cloud."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Lesbare JSON-LD-Syntax unterstützt durch Entwickler-Werkzeuge."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Steht in Konkurrenz zum europäischen AAS-Standard; erfordert Mapping."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Azure Bridge",
+    "sovereignty": "W3C Draft",
+    "openStandard": "W3C JSON-LD"
+  },
+  "deployment": {
+    "effort": "Mittel (2-3 Wochen)",
+    "mode": "Cloud PaaS Deploy",
+    "maturity": "Produktiv",
+    "area": "Graph-basierte Zwillingsmodellierung"
+  },
+  "staffing": "1x Cloud Data Engineer (25% FTE)"
+}

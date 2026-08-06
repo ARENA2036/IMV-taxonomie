@@ -1,0 +1,73 @@
+{
+  "refCode": "IND-META-2026-SIEMENS-TECNOMATIX",
+  "categoryCode": "5.0",
+  "categoryName": "Robotik & Fabriksimulation",
+  "name": "Siemens Tecnomatix (Process Simulate / Plant Sim)",
+  "subtitle": "Virtuelle Inbetriebnahme & Kinematik-Validierung",
+  "vendor": "Siemens DISW",
+  "hq": "Plano, USA / Nürnberg, Deutschland (EU)",
+  "businessModel": "Enterprise License / Named Seat",
+  "url": "https://plm.automation.siemens.com/tecnomatix",
+  "tier": "Tier 3",
+  "costLabel": "> €100k",
+  "status": "STANDARDIZIERT",
+  "overview": "Branchenführende Plattform für Roboter-Kinematik, virtuelle Inbetriebnahme (VRC) und Materialfluss-Simulation in der Automobil- und Fertigungsindustrie.",
+  "features": [
+    {
+      "title": "Virtuelle Inbetriebnahme (VRC)",
+      "desc": "Direkte Kopplung mit echten Siemens S7-1500 SPS-Steuerungen via OPC UA."
+    },
+    {
+      "title": "Plant Simulation",
+      "desc": "Ablaufsimulation zur Engpassanalyse und Durchsatzoptimierung ganzer Fabriken."
+    },
+    {
+      "title": "Ergonomieanalyse (Jack)",
+      "desc": "Bewertung menschlicher Ergonomie nach EAWS-Standards."
+    }
+  ],
+  "inputs": [
+    "JT",
+    "STEP",
+    "CAD",
+    "OPC UA Nodes",
+    "Robcad format"
+  ],
+  "outputs": [
+    "JT ISO",
+    "OpenUSD (via Siemens Connector)",
+    "PLC XML",
+    "Telemetry"
+  ],
+  "bridges": [
+    "Siemens Teamcenter PLM",
+    "Siemens NX",
+    "NVIDIA Omniverse"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Unangefochtener Industrie-Goldstandard für die Inbetriebnahme komplexer Karosseriebaulinien."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Hardware-in-the-Loop-Test verhindert echte Roboter-Kollisionen bei der Linieninbetriebnahme."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Hoher Lizenzpreis und erhebliche Einarbeitungszeit."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Live Bridge",
+    "sovereignty": "100% EU DSGVO (Deutschland)",
+    "openStandard": "OPC UA / JT ISO 14306"
+  },
+  "deployment": {
+    "effort": "Sehr Hoch (> 1 Monat)",
+    "mode": "Enterprise Workstations",
+    "maturity": "Produktiv",
+    "area": "Virtuelle Inbetriebnahme & Roboterzellen"
+  },
+  "staffing": "1x Senior Virtual Commissioning Engineer (100% FTE)"
+}

@@ -1,0 +1,68 @@
+{
+  "refCode": "IND-META-2026-WAVEYE-RADAR",
+  "categoryCode": "6.1-AI",
+  "categoryName": "Spatial Perzeption & KI-Erkennung",
+  "name": "Waveye 4D Imaging Radar (Argus mmWave)",
+  "subtitle": "Hochauflösende 4D-Radar Perzeption für AMRs",
+  "vendor": "Waveye Inc.",
+  "hq": "Palo Alto, USA / Stuttgart, Deutschland (EU)",
+  "businessModel": "Hardware Radar Sensor + Embedded AI SDK",
+  "url": "https://waveye.com",
+  "tier": "Tier 1",
+  "costLabel": "≤ €30k",
+  "status": "EMPFOHLENER 4D SENSOR",
+  "overview": "Ultra-hochauflösender 4D-Imaging-Radarsensor (Argus) für die Roboterwahrnehmung. Generiert dichte 4D-Punktwolken inklusive Doppler-Geschwindigkeitsvektoren für autonome Systeme.",
+  "features": [
+    {
+      "title": "Argus 4D Resolution",
+      "desc": "Hohe Winkelauflösung mit breitem Sichtfeld (FOV)."
+    },
+    {
+      "title": "All-Wetter Robustheit",
+      "desc": "Unbeeinflusst von Staub, Dampf, Ölnebel oder Dunkelheit im Werk."
+    },
+    {
+      "title": "Embedded Radar AI",
+      "desc": "Berechnet Geschwindigkeitsvektoren direkt auf dem Sensor-Chip."
+    }
+  ],
+  "inputs": [
+    "Raw mmWave RF Signals",
+    "Doppler Telemetrie"
+  ],
+  "outputs": [
+    "4D Point Cloud (X, Y, Z, Velocity)",
+    "ROS 2 PointCloud2 Topics"
+  ],
+  "bridges": [
+    "ROS 2 DDS",
+    "NVIDIA Isaac Sim / Lab",
+    "DeepHub Flowcate"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Erfasst AGVs und Arbeiter zuverlässig in rauen Gießereiumgebungen, wo optische Scanner versagen."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Entwicklung in Stuttgart; 100% DSGVO-konform (keine identifizierbaren Personenbilder)."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Geringere Punktwolkendichte als optisches LiDAR; erfordert Radar-SDK."
+    }
+  ],
+  "compliance": {
+    "omniverse": "ROS 2 Bridge",
+    "sovereignty": "100% EU DSGVO-Konform",
+    "openStandard": "ROS 2 DDS"
+  },
+  "deployment": {
+    "effort": "Mittel (2-3 Wochen)",
+    "mode": "Edge Sensor Hardware",
+    "maturity": "Produktiv",
+    "area": "Autonome Transportroboter (AMR)"
+  },
+  "staffing": "1x Robotics Hardware Engineer (50% FTE)"
+}

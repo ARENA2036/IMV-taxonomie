@@ -1,0 +1,71 @@
+{
+  "refCode": "IND-META-2026-AZURE-TWINS",
+  "categoryCode": "9.0",
+  "categoryName": "Enterprise Cloud-Zwillinge",
+  "name": "Microsoft Azure Digital Twins",
+  "subtitle": "Cloud-Graphendienst für Fabriken",
+  "vendor": "Microsoft Corporation",
+  "hq": "Redmond, WA, USA",
+  "businessModel": "Cloud Consumption PaaS",
+  "url": "https://azure.microsoft.com/services/digital-twins",
+  "tier": "Tier 2",
+  "costLabel": "≤ €100k",
+  "status": "EVALUIERT",
+  "overview": "PaaS-Plattform zum Erstellen graphbasierter digitaler Modelle kompletter Fertigungsnetzwerke und Lieferketten.",
+  "features": [
+    {
+      "title": "DTDL Spatial Graph",
+      "desc": "Modelliert räumliche Hierarchien (Konzern -> Werk -> Linie -> Roboter)."
+    },
+    {
+      "title": "Azure IoT Hub Ingestion",
+      "desc": "Massen-Ingestion von Millionen MQTT/AMQP-Sensornachrichten."
+    },
+    {
+      "title": "3D Scene Studio",
+      "desc": "Web-Visualisierer überlagert Telemetrie auf glTF/USD-Assets."
+    }
+  ],
+  "inputs": [
+    "DTDL v3 Schemas",
+    "MQTT",
+    "AMQP",
+    "REST JSON"
+  ],
+  "outputs": [
+    "Azure Synapse Events",
+    "Event Grid Notifications",
+    "3D Web Overlay"
+  ],
+  "bridges": [
+    "NVIDIA Omniverse Cloud",
+    "Power BI",
+    "Bentley iTwin"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Ausgezeichnet für internationale Fertigungsstandorte."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Nahtlose Integration in Microsoft Enterprise Cloud und Power BI."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Rein cloudbasiert; begrenzte lokale On-Premise Ausführungsoptionen."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Cloud Streaming Extension",
+    "sovereignty": "DSGVO Cloud (Frankfurt)",
+    "openStandard": "DTDL / JSON-LD"
+  },
+  "deployment": {
+    "effort": "Mittel (2-3 Wochen)",
+    "mode": "Azure Cloud PaaS",
+    "maturity": "Produktiv",
+    "area": "Werksübergreifende Zwillingsgraphen"
+  },
+  "staffing": "1x Azure Cloud Architect (50% FTE)"
+}

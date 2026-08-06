@@ -1,0 +1,71 @@
+{
+  "refCode": "IND-META-2026-ISG-VIRTUOS",
+  "categoryCode": "5.0",
+  "categoryName": "Robotik & Fabriksimulation",
+  "name": "ISG-Virtuos (Hard Real-Time VIBn / HiL)",
+  "subtitle": "Echtzeit-Hardware-in-the-Loop Simulationsengine",
+  "vendor": "ISG Industrielle Steuerungstechnik GmbH",
+  "hq": "Stuttgart, Deutschland (EU)",
+  "businessModel": "Enterprise Software License + Real-Time Target",
+  "url": "https://isg-stuttgart.de",
+  "tier": "Tier 2",
+  "costLabel": "≤ €100k",
+  "status": "STANDARDIZIERT",
+  "overview": "Deterministische Harte-Echtzeit-Simulationsengine für Taktraten unter 1 Millisekunde zur Hardware-in-the-Loop-Inbetriebnahme von Werkzeugmaschinen.",
+  "features": [
+    {
+      "title": "Harte Echtzeit",
+      "desc": "Garantierte mikrosekundengenaue Ausführung gekoppelt an Feldbusse."
+    },
+    {
+      "title": "Feldbus-Emulation",
+      "desc": "Emuliert PROFINET-, EtherCAT- und CANopen-Teilnehmer direkt auf der Hardware."
+    },
+    {
+      "title": "Spanabtragssimulation",
+      "desc": "Simuliert 3D-CNC-Spanabtrag und Laserschneiden in Echtzeit."
+    }
+  ],
+  "inputs": [
+    "STEP",
+    "CAD",
+    "Feldbus XML",
+    "Matlab Simulink FMUs"
+  ],
+  "outputs": [
+    "Echtzeit Feldbus-Streams (EtherCAT/PROFINET)",
+    "OpenUSD Telemetrie"
+  ],
+  "bridges": [
+    "Siemens Sinumerik",
+    "Beckhoff TwinCAT",
+    "Bosch Rexroth",
+    "NVIDIA Omniverse"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Absoluter Standard im DACH-Raum für HiL-Tests hochdynamischer CNC-Maschinen."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Garantierte Harte Echtzeit, die normale 3D-Game-Engines nicht erreichen."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Erfordert Spezialwissen in der Steuerungstechnik und Feldbushardware."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Live Telemetry Sync",
+    "sovereignty": "100% EU Souverän (Stuttgart)",
+    "openStandard": "EtherCAT / FMI"
+  },
+  "deployment": {
+    "effort": "Hoch (3-4 Wochen)",
+    "mode": "Real-Time Industrial PC Target",
+    "maturity": "Produktiv",
+    "area": "Werkzeugmaschinen & HiL-Testing"
+  },
+  "staffing": "1x Echtzeit-Steuerungstechniker (50% FTE)"
+}

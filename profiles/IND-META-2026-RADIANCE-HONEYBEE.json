@@ -1,0 +1,71 @@
+{
+  "refCode": "IND-META-2026-RADIANCE-HONEYBEE",
+  "categoryCode": "4.3",
+  "categoryName": "Umwelt- & Strömungssimulation",
+  "name": "Radiance / Honeybee / DIVA",
+  "subtitle": "Tageslicht- & Blendungs-Simulation",
+  "vendor": "Lawrence Berkeley National Lab / Ladybug Tools",
+  "hq": "Berkeley, CA, USA",
+  "businessModel": "Free & Open Source Framework",
+  "url": "https://ladybug.tools",
+  "tier": "Tier 1",
+  "costLabel": "Open Source / €0",
+  "status": "EVALUIERT",
+  "overview": "Präzise Raytracing-Engine zur Berechnung von Tageslichtquotienten, solaren Wärmeeintrags- und Blendungsvorhersagen in Fertigungshallen.",
+  "features": [
+    {
+      "title": "Backward Raytracing",
+      "desc": "Berechnet exakte Lux-Werte und Tageslicht-Autonomie-Prozentsätze."
+    },
+    {
+      "title": "Honeybee Grasshopper Plugin",
+      "desc": "Algorithmatische Tageslichtoptimierung gekoppelt mit Rhino 3D."
+    },
+    {
+      "title": "Blendungsanalyse (DGP)",
+      "desc": "Schützt die Ergonomie durch Blendungsvorhersagen an Arbeitsplätzen."
+    }
+  ],
+  "inputs": [
+    "RAD Files",
+    "OBJ",
+    "Rhino 3D Geometry",
+    "EPW Weather"
+  ],
+  "outputs": [
+    "HDR False-Color Maps",
+    "Lux Matrix Files",
+    "OpenUSD Overlay"
+  ],
+  "bridges": [
+    "Rhino 3D + Grasshopper",
+    "Revit",
+    "EnergyPlus"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Wichtig für die ergonomische Ausleuchtung von Montagebändern mit natürlichem Skylight."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Wissenschaftlich validierte Beleuchtungs-Engine."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Raytracing-Berechnungen für große Fabrikdächer erfordern Rechenzeit."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Open Source",
+    "sovereignty": "EN 17037 Daylight Standard",
+    "openStandard": "RAD / OBJ"
+  },
+  "deployment": {
+    "effort": "Mittel (2-3 Wochen)",
+    "mode": "Desktop / Scripting",
+    "maturity": "Produktiv",
+    "area": "Lichtplanung & Hallenergonomie"
+  },
+  "staffing": "1x Lichtplaner (25% FTE)"
+}

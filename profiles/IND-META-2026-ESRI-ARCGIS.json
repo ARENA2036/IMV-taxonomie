@@ -1,0 +1,72 @@
+{
+  "refCode": "IND-META-2026-ESRI-ARCGIS",
+  "categoryCode": "6.5",
+  "categoryName": "360°-Erfassung & GIS-Kartierung",
+  "name": "ESRI ArcGIS Spatial Platform",
+  "subtitle": "Enterprise GIS & Geoinformationssystem",
+  "vendor": "ESRI Inc.",
+  "hq": "Redlands, CA, USA / EU Support",
+  "businessModel": "Enterprise GIS Licensing / Named User",
+  "url": "https://esri.com/arcgis",
+  "tier": "Tier 3",
+  "costLabel": "> €100k",
+  "status": "STANDARDIZIERT",
+  "overview": "Marktführendes Geoinformationssystem (GIS) zur Verwaltung von Standortdaten, Werksnetzen und regionaler Infrastruktur.",
+  "features": [
+    {
+      "title": "ArcGIS Maps SDK",
+      "desc": "Bettet GIS-Kartenebenen direkt in Unreal Engine und Omniverse ein."
+    },
+    {
+      "title": "BIM-GIS Integration",
+      "desc": "Direkte Verknüpfung mit Autodesk Revit- und Civil 3D-Modellen."
+    },
+    {
+      "title": "Räumliche Analysen",
+      "desc": "Umwelt- und Logistikroutenanalysen für Standorte."
+    }
+  ],
+  "inputs": [
+    "Shapefiles",
+    "Geodatabase",
+    "IFC",
+    "DWG",
+    "Satellite Data"
+  ],
+  "outputs": [
+    "I3S (Indexed 3D Scene Layers)",
+    "GeoJSON",
+    "Web Maps"
+  ],
+  "bridges": [
+    "Autodesk Construction Cloud",
+    "NVIDIA Omniverse",
+    "SAP HANA GIS"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Zwingende Enterprise-Infrastruktur für Konzerne mit vielen Fabrikstandorten."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Verbindet globale Makro-Logistik mit mikroskopischen 3D-Shopfloors."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Hohe Software-Lizenzkosten."
+    }
+  ],
+  "compliance": {
+    "omniverse": "ArcGIS Extension",
+    "sovereignty": "ISO 19100 Series",
+    "openStandard": "I3S / OGC"
+  },
+  "deployment": {
+    "effort": "Sehr Hoch (> 1 Monat)",
+    "mode": "Enterprise GIS Server",
+    "maturity": "Produktiv",
+    "area": "Werksnetzwerke & GIS"
+  },
+  "staffing": "1x GIS Architect (100% FTE)"
+}

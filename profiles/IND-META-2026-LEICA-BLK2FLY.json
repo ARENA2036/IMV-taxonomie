@@ -1,0 +1,70 @@
+{
+  "refCode": "IND-META-2026-LEICA-BLK2FLY",
+  "categoryCode": "6.3",
+  "categoryName": "Autonome Drohnen & AMR-Roboter",
+  "name": "Leica BLK2FLY Autonomous Flying LiDAR",
+  "subtitle": "Autonome Flugdrohne mit 3D-LiDAR-Scanner",
+  "vendor": "Leica Geosystems AG / Hexagon",
+  "hq": "Heerbrugg, Schweiz (EU/EFTA)",
+  "businessModel": "Hardware Purchase + Flying Subscription",
+  "url": "https://leica-geosystems.com/blk2fly",
+  "tier": "Tier 3",
+  "costLabel": "> €100k",
+  "status": "EVALUIERT",
+  "overview": "Autonome Flugdrohne mit LiDAR-Scanner. Erfasst Dächer, Fassaden und hochgelegene Rohrbrücken vollautomatisch ohne Gerüstbau.",
+  "features": [
+    {
+      "title": "5-Kamera-Hindernisvermeidung",
+      "desc": "Sensoren verhindern Kollisionen mit Masten und Kabeln."
+    },
+    {
+      "title": "Autonome Pfadplanung",
+      "desc": "Berechnet Flugrouten basierend auf dem 3D-Zielvolumen."
+    },
+    {
+      "title": "Dual-Axis Dome LiDAR",
+      "desc": "Erfasst 420.000 Punkte pro Sekunde rundum."
+    }
+  ],
+  "inputs": [
+    "GNSS Telemetrie",
+    "LiDAR Stream"
+  ],
+  "outputs": [
+    "E57",
+    "LGS",
+    "LAS",
+    "OpenUSD"
+  ],
+  "bridges": [
+    "Hexagon HxDR",
+    "Leica Cyclone",
+    "NVIDIA Omniverse"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Scannt Fabrikdächer und Außenanlagen ohne Hebebühnen."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Eliminiert Risiken für Personal bei Arbeiten in großer Höhe."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Unterliegt Drohnen-Fluggesetzen (EASA in EU); wetterabhängig."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Extension Bridge",
+    "sovereignty": "EASA zertifiziert",
+    "openStandard": "E57"
+  },
+  "deployment": {
+    "effort": "Mittel (2-3 Wochen)",
+    "mode": "Autonome Flugdrohne",
+    "maturity": "Produktiv",
+    "area": "Außenanlagen & Dächer"
+  },
+  "staffing": "1x EASA Drohnenpilot (25% FTE)"
+}

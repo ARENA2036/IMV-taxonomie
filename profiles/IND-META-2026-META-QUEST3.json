@@ -1,0 +1,70 @@
+{
+  "refCode": "IND-META-2026-META-QUEST3",
+  "categoryCode": "11.0",
+  "categoryName": "Spatial XR & VR/AR Headsets",
+  "name": "Meta Quest 3 / Quest Pro (SME Spatial Review)",
+  "subtitle": "Kabelloses Mixed-Reality Headset für den Mittelstand",
+  "vendor": "Meta Platforms Inc.",
+  "hq": "Menlo Park, CA, USA",
+  "businessModel": "Low-Cost Hardware Purchase (~€549/unit)",
+  "url": "https://meta.com/quest",
+  "tier": "Tier 1",
+  "costLabel": "≤ €30k",
+  "status": "EMPFOHLEN SME",
+  "overview": "Vielseitiges kabelloses Standalone MR/VR-Headset. Weit verbreitet im Mittelstand für kostengünstige Werksbegehungen, VR-Training und Remote-Kollaboration.",
+  "features": [
+    {
+      "title": "Pancake-Optik & Color Pass-Through",
+      "desc": "Klares Bild mit Vollfarb-Mixed-Reality-Pass-Through."
+    },
+    {
+      "title": "Wireless Wi-Fi 6E AirLink",
+      "desc": "Drahtloses PC-VR-Streaming vom lokalen Grafikrechner."
+    },
+    {
+      "title": "OpenXR Standard SDK",
+      "desc": "Breite Kompatibilität mit Enterprise-Spatial-Apps."
+    }
+  ],
+  "inputs": [
+    "OpenXR Executables",
+    "WebXR Browser",
+    "PC VR Streaming"
+  ],
+  "outputs": [
+    "Hand Tracking Telemetrie",
+    "Head Pose Telemetrie"
+  ],
+  "bridges": [
+    "Halocline",
+    "Unity",
+    "Unreal Engine 5",
+    "NVIDIA Omniverse WebRTC"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Günstigster Einstieg zur Skalierung räumlicher 3D-Prüfungen über mehrere Standorte."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Kabelloses Design mit sehr schneller Einsatzbereitschaft."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Mobilprozessor begrenzt das lokale Rendering ungeprüfter riesiger CAD-Szenen."
+    }
+  ],
+  "compliance": {
+    "omniverse": "WebRTC Stream",
+    "sovereignty": "SOC2 Enterprise",
+    "openStandard": "OpenXR / WebXR"
+  },
+  "deployment": {
+    "effort": "Sehr Gering (< 1 Tag)",
+    "mode": "Standalone Wireless Headset",
+    "maturity": "Produktiv",
+    "area": "KMU 3D-Begehung & VR-Training"
+  },
+  "staffing": "1x IT / XR Support Specialist (15% FTE)"
+}

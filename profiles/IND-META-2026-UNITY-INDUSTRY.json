@@ -1,0 +1,72 @@
+{
+  "refCode": "IND-META-2026-UNITY-INDUSTRY",
+  "categoryCode": "3.0",
+  "categoryName": "Echtzeit-3D & Spatial Engines",
+  "name": "Unity Industry Suite",
+  "subtitle": "Cross-Platform 3D-Laufzeitumgebung & AR/VR HMI",
+  "vendor": "Unity Technologies",
+  "hq": "San Francisco, CA, USA / EU Support",
+  "businessModel": "Enterprise Subscription (Unity Industry Tier)",
+  "url": "https://unity.com/industry",
+  "tier": "Tier 2",
+  "costLabel": "≤ €100k",
+  "status": "EVALUIERT",
+  "overview": "Multi-Plattform Echtzeit-3D-Plattform für plattformübergreifende Industrie-Apps, AR/VR-Headsets, Mobilgeräte und WebGL.",
+  "features": [
+    {
+      "title": "Pixyz CAD Ingestion",
+      "desc": "Automatisierte CAD-Übersetzung, Tessellierung und LOD-Erstellung."
+    },
+    {
+      "title": "Cross-Platform Runtime",
+      "desc": "Einzige Codebasis für Quest 3, Apple Vision Pro, iOS und PC."
+    },
+    {
+      "title": "Unity Industry Templates",
+      "desc": "Vorgefertigte Vorlagen für AR-Montagetraining und interaktive HMI."
+    }
+  ],
+  "inputs": [
+    "Pixyz Supported (STEP, JT, RVT, SolidWorks)",
+    "OpenUSD",
+    "glTF",
+    "FBX"
+  ],
+  "outputs": [
+    "WebGL",
+    "OpenXR Executables",
+    "Android/iOS App Packages",
+    "USD Stage"
+  ],
+  "bridges": [
+    "PTC Vuforia",
+    "Microsoft Azure Digital Twins",
+    "NVIDIA Omniverse"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Erstklassige Wahl für interaktive Anwendungen auf Mobilgeräten und autonomen XR-Brillen."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Hochflexible C#-Skripting-API und geringer Speicherverbrauch."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Komplexere Lizenzierungsmodelle bei Enterprise-Kunden."
+    }
+  ],
+  "compliance": {
+    "omniverse": "OpenUSD Import Package",
+    "sovereignty": "SOC2 Compliant",
+    "openStandard": "OpenXR / glTF / OpenUSD"
+  },
+  "deployment": {
+    "effort": "Mittel (2-3 Wochen)",
+    "mode": "Desktop / Mobile Deployment",
+    "maturity": "Produktiv",
+    "area": "Cross-Platform AR/VR & HMI"
+  },
+  "staffing": "1x Unity C# Developer (100% FTE)"
+}

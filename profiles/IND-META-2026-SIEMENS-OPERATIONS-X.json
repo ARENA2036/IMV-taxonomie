@@ -1,0 +1,71 @@
+{
+  "refCode": "IND-META-2026-SIEMENS-OPERATIONS-X",
+  "categoryCode": "9.0",
+  "categoryName": "Enterprise Cloud-Zwillinge",
+  "name": "Siemens Industrial Operations X",
+  "subtitle": "Industrial IoT Edge-to-Cloud Plattform",
+  "vendor": "Siemens AG",
+  "hq": "München / Nürnberg, Deutschland (EU)",
+  "businessModel": "Enterprise Cloud / SaaS Consumption",
+  "url": "https://siemens.com/operations-x",
+  "tier": "Tier 3",
+  "costLabel": "> €100k",
+  "status": "STANDARDIZIERT",
+  "overview": "Offenes, interoperables Industrial-IoT-Portfolio zur Automatisierung, Analyse und Optimierung des Shopfloor-Betriebs von der Edge bis zur Cloud.",
+  "features": [
+    {
+      "title": "Industrial Edge Management",
+      "desc": "Zentrales Verteilnetzwerk für Docker-App-Container auf Shopfloor-SPSen."
+    },
+    {
+      "title": "MindSphere IIoT Analytics",
+      "desc": "Cloud-Module für vorausschauende Instandhaltung und Energieanalysen."
+    },
+    {
+      "title": "Omniverse Integration",
+      "desc": "Überträgt Shopfloor-Telemetrie live in NVIDIA Omniverse USD-Bühnen."
+    }
+  ],
+  "inputs": [
+    "OPC UA",
+    "S7 Protocol",
+    "MQTT",
+    "Industrial Edge Data"
+  ],
+  "outputs": [
+    "OpenUSD Attributes",
+    "AASX Packages",
+    "Cloud Analytics Dashboards"
+  ],
+  "bridges": [
+    "Siemens Teamcenter",
+    "NVIDIA Omniverse",
+    "AWS / Azure Cloud"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Führende Enterprise-PaaS für große Fertigungsstandorte mit Siemens-Hardware."
+    },
+    {
+      "title": "Vorteile",
+      "text": "100% EU-souveräne Industrieplattform mit tiefer SPS-Hardware-Integration."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Erfordert eine langfristige Bindung an das Siemens-Ökosystem."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Live Cloud Bridge",
+    "sovereignty": "100% EU Souverän (GAIA-X)",
+    "openStandard": "OPC UA / AAS"
+  },
+  "deployment": {
+    "effort": "Sehr Hoch (> 1 Monat)",
+    "mode": "Enterprise Edge / Cloud",
+    "maturity": "Produktiv",
+    "area": "Werkweites IIoT & Cloud-Flottenmanagement"
+  },
+  "staffing": "1x Enterprise IIoT Architect (100% FTE)"
+}

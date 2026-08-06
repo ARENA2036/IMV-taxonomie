@@ -1,0 +1,68 @@
+{
+  "refCode": "IND-META-2026-STEP-AP242",
+  "categoryCode": "10.0",
+  "categoryName": "Datenformate & OpenUSD-Standards",
+  "name": "STEP AP242 (ISO 10303 - Parametrisches CAD)",
+  "subtitle": "ISO-Standard für CAD-Geometrie & PMI",
+  "vendor": "ISO (International Organization for Standardization)",
+  "hq": "Genf, Schweiz (EU/EFTA)",
+  "businessModel": "Open International Standard (ISO 10303-242)",
+  "url": "https://step-smsc.org",
+  "tier": "Tier 1",
+  "costLabel": "Open Standard / €0",
+  "status": "PFLICHTSTANDARD CAD",
+  "overview": "Der offizielle ISO-Standard für den parametrischen CAD-Geometrieaustausch und die Einbettung von Product Manufacturing Information (PMI) sowie Fertigungstoleranzen.",
+  "features": [
+    {
+      "title": "Exakte NURBS-Geometrie",
+      "desc": "Bewahrt exakte mathematische Flächen ohne Tessellierungsverlust."
+    },
+    {
+      "title": "PMI / GD&T Integration",
+      "desc": "Bettet Fertigungstoleranzen direkt in die 3D-Geometriedatei ein."
+    },
+    {
+      "title": "Langzeitarchivierung (LOTAR)",
+      "desc": "Zertifiziert für rechtssichere 30+ Jahre Archivierung in der Luftfahrt."
+    }
+  ],
+  "inputs": [
+    "Native MCAD Dateiformate (NX, CATIA, Creo, SolidWorks)"
+  ],
+  "outputs": [
+    ".stp",
+    ".step (ISO 10303-242)"
+  ],
+  "bridges": [
+    "Alle führenden CAD-Systeme",
+    "Siemens NX",
+    "CATIA",
+    "OpenUSD Converters"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Universelles Austauschformat für den verlustfreien CAD-Datenaustausch in der Lieferkette."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Rechtssicherer Langzeitstandard zertifiziert durch internationale ISO-Gremien."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Dateien sind groß; erfordert Wandlung in Meshes vor dem Rendering in Echtzeit-Engines."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Native Conversion to USD",
+    "sovereignty": "100% ISO International Standard",
+    "openStandard": "ISO 10303-242"
+  },
+  "deployment": {
+    "effort": "Gering (1-2 Tage)",
+    "mode": "Neutral Interchange File",
+    "maturity": "Produktiv",
+    "area": "CAD-Datenaustausch & Langzeitarchivierung"
+  },
+  "staffing": "1x CAD / Archivierungsingenieur (10% FTE)"
+}

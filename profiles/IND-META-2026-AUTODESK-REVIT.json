@@ -1,0 +1,72 @@
+{
+  "refCode": "IND-META-2026-AUTODESK-REVIT",
+  "categoryCode": "1.2",
+  "categoryName": "BIM, Bauwesen & Infrastruktur (AEC)",
+  "name": "Autodesk Revit",
+  "subtitle": "BIM Master-System für digitale Fabrikgebäude",
+  "vendor": "Autodesk Inc.",
+  "hq": "San Francisco, CA, USA",
+  "businessModel": "Annual Subscription / Enterprise Flex",
+  "url": "https://autodesk.com/revit",
+  "tier": "Tier 2",
+  "costLabel": "≤ €100k",
+  "status": "STANDARDIZIERT",
+  "overview": "Der globale Standard für Building Information Modeling (BIM). Generiert intelligente 3D-Gebäudemodelle mit architektonischen, strukturellen und TGA-Informationen.",
+  "features": [
+    {
+      "title": "BIM Metadaten (COBie)",
+      "desc": "Umfassende semantische Bauteileigenschaften für das Facility Management."
+    },
+    {
+      "title": "TGA/MEP Trassenplanung",
+      "desc": "Detaillierte Modellierung von Lüftungs-, Elektro- und Rohrleitungssystemen."
+    },
+    {
+      "title": "Omniverse Connector Plugin",
+      "desc": "Bi-direktionaler Live-Sync zu NVIDIA Omniverse OpenUSD-Bühnen."
+    }
+  ],
+  "inputs": [
+    "RVT",
+    "IFC",
+    "DWG",
+    "Point Cloud (.RCS/.RCP)"
+  ],
+  "outputs": [
+    "OpenUSD (.usd)",
+    "IFC4 ISO 16739",
+    "DWG",
+    "FBX"
+  ],
+  "bridges": [
+    "Autodesk Construction Cloud (ACC)",
+    "NVIDIA Omniverse",
+    "NavVis IVION"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "De-facto-Standard für Fabrikhüllen und TGA-Infrastruktur."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Direktes USD-Plugin wandelt BIM-Parameter ohne Datenverlust in OpenUSD Prim-Attribute um."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Hoher RAM-Bedarf; erfordert Geometrie-Vereinfachung für Echtzeit-VR."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Connector Plugin",
+    "sovereignty": "ISO 19650 BIM Standard",
+    "openStandard": "IFC4 / OpenUSD"
+  },
+  "deployment": {
+    "effort": "Mittel (2-3 Wochen)",
+    "mode": "Desktop / Cloud ACC",
+    "maturity": "Produktiv",
+    "area": "Fabrikgebäude & TGA-Planung"
+  },
+  "staffing": "1x BIM-Koordinator / Spatial Engineer (50% FTE)"
+}

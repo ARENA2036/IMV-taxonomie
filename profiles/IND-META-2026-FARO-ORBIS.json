@@ -1,0 +1,71 @@
+{
+  "refCode": "IND-META-2026-FARO-ORBIS",
+  "categoryCode": "6.1",
+  "categoryName": "Mobile & Wearable SLAM-Scanner",
+  "name": "FARO Orbis Hybrid Mobile Scanner",
+  "subtitle": "Hybrid-Mobile SLAM & Flash TLS Scanner",
+  "vendor": "FARO Technologies Inc.",
+  "hq": "Lake Mary, FL, USA / Stuttgart, DE (EU)",
+  "businessModel": "Hardware Kit + FARO Sphere Cloud",
+  "url": "https://faro.com/orbis",
+  "tier": "Tier 2",
+  "costLabel": "≤ €100k",
+  "status": "EVALUIERT",
+  "overview": "Hybrider mobiler SLAM- und statischer Laserscanner. Wechselt fliegend zwischen Gehen und hochdichtem Stativscannen.",
+  "features": [
+    {
+      "title": "Flash Technology",
+      "desc": "Erstellt hochdichte Scans in nur 15 Sekunden während des Gehens."
+    },
+    {
+      "title": "GeoSLAM Algorithmus",
+      "desc": "Robuste SLAM-Verfolgung in engen Rohrgängen und Unterverteilungen."
+    },
+    {
+      "title": "FARO Sphere Sync",
+      "desc": "Direkter Cloud-Upload der Punktwolken fürs Team."
+    }
+  ],
+  "inputs": [
+    "SLAM Telemetrie",
+    "Static LiDAR Rays",
+    "GCP"
+  ],
+  "outputs": [
+    "E57",
+    "LAS",
+    "FARO Project File",
+    "OpenUSD"
+  ],
+  "bridges": [
+    "FARO Sphere XG",
+    "Autodesk ReCap",
+    "NVIDIA Omniverse"
+  ],
+  "evaluations": [
+    {
+      "title": "Skalierbarkeit",
+      "text": "Sehr vielseitig für komplexe Anlagen mit Breiten- und Engebereichen."
+    },
+    {
+      "title": "Vorteile",
+      "text": "Kombiniert mobile Geschwindigkeit mit statischer Punktdichte."
+    },
+    {
+      "title": "Engpässe",
+      "text": "Akkuwechsel bei ganztägigen Dauererfassungen erforderlich."
+    }
+  ],
+  "compliance": {
+    "omniverse": "Extension Bridge",
+    "sovereignty": "SOC2 / ISO Compliant",
+    "openStandard": "E57 / LAS"
+  },
+  "deployment": {
+    "effort": "Gering (1-2 Tage)",
+    "mode": "Handheld / Mobile Unit",
+    "maturity": "Produktiv",
+    "area": "Hybride Bestandsaufnahme"
+  },
+  "staffing": "1x Reality Capture Technician (25% FTE)"
+}
