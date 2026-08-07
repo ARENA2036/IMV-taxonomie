@@ -18,7 +18,7 @@
 </head>
 <body style="overflow-y: auto; background: var(--bg-subtle);">
 
-  <!-- Minimalist Centered Header Navbar -->
+  <!-- Minimalist Clean Header Navbar with Hamburger Menu -->
   <header class="app-navbar">
     <div class="nav-brand-left">
       <a href="./index.html" style="display: flex; align-items: center; text-decoration: none;">
@@ -38,10 +38,22 @@
     </div>
 
     <div class="nav-actions">
+      <!-- Startseite Button -->
       <a href="./index.html" class="btn"><i class="fa-solid fa-house"></i> Startseite</a>
-      <a href="./browser.html" class="btn"><i class="fa-solid fa-layer-group"></i> Taxonomie Browser</a>
-      <a href="./examples.html" class="btn"><i class="fa-solid fa-sitemap"></i> Use Cases</a>
-      <a href="./architecture.html" class="btn"><i class="fa-solid fa-diagram-project"></i> Architektur</a>
+
+      <!-- Hamburger Menu Button & Dropdown Container -->
+      <div class="hamburger-menu-container">
+        <button class="btn btn-icon" id="hamburgerBtn" title="Menü öffnen"><i class="fa-solid fa-bars"></i></button>
+
+        <div class="hamburger-dropdown" id="hamburgerDropdown">
+          <a href="./index.html" class="hamburger-item"><i class="fa-solid fa-house"></i> Startseite</a>
+          <a href="./browser.html" class="hamburger-item"><i class="fa-solid fa-layer-group"></i> Taxonomie Browser</a>
+          <a href="./examples.html" class="hamburger-item"><i class="fa-solid fa-sitemap"></i> Beispiele & Use Cases</a>
+          <a href="./architecture.html" class="hamburger-item"><i class="fa-solid fa-diagram-project"></i> Architektur Spezifikation</a>
+          <div class="hamburger-divider"></div>
+          <a href="./impressum.html" class="hamburger-item"><i class="fa-solid fa-scale-balanced"></i> Impressum & Rechtliches</a>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -118,5 +130,6 @@
     ARENA2036 Industrial Metaverse Taxonomy — <a href="./examples.html" style="color: var(--text-body); font-weight: 600; text-decoration: none;">Use Cases</a> | <a href="./architecture.html" style="color: var(--text-body); font-weight: 600; text-decoration: none;">Architektur</a> | <a href="./browser.html" style="color: var(--text-body); font-weight: 600; text-decoration: none;">Browser</a>
   </footer>
 
+  <script src="./app.js"></script>
 </body>
 </html>

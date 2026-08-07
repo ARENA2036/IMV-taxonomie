@@ -124,7 +124,7 @@ body {
 .nav-brand-left {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   z-index: 2;
 }
 
@@ -135,49 +135,111 @@ body {
   text-align: center;
   pointer-events: none;
   z-index: 1;
+  max-width: 45%;
 }
 
 .centered-header-title {
   font-family: var(--font-heading);
-  font-size: 15px;
+  font-size: 14.5px;
   font-weight: 800;
   color: var(--text-heading);
   letter-spacing: -0.2px;
   margin: 0;
   white-space: nowrap;
-}
-
-.app-brand {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .brand-logos {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .logo-img {
-  height: 26px;
+  height: 22px;
   width: auto;
   object-fit: contain;
 }
 
 .logo-divider {
-  height: 16px;
+  height: 14px;
   width: 1px;
   background-color: var(--border-subtle);
 }
 
-.app-title-group {
-  display: flex;
-  flex-direction: column;
+/* Hamburger Dropdown Menu */
+.hamburger-menu-container {
+  position: relative;
+  display: inline-block;
 }
 
-.app-title {
+.hamburger-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 250px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hamburger-dropdown.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.hamburger-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 6px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-heading);
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+  box-sizing: border-box;
+}
+
+.hamburger-item i {
+  width: 18px;
+  text-align: center;
+  font-size: 13.5px;
+  color: var(--text-muted);
+}
+
+.hamburger-item:hover {
+  background: var(--bg-subtle);
+  color: var(--accent-orange);
+}
+
+.hamburger-item:hover i {
+  color: var(--accent-orange);
+}
+
+.hamburger-divider {
+  height: 1px;
+  background: var(--border-subtle);
+  margin: 4px 0;
+}
   font-family: var(--font-heading);
   font-size: 14px;
   font-weight: 900;
