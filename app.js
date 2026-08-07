@@ -672,12 +672,22 @@ document.addEventListener('DOMContentLoaded', () => {
    */
   function showBsModal(el) {
     if (!el) return;
+    document.body.classList.add('modal-open');
     if (window.bootstrap && window.bootstrap.Modal) {
       const bsModal = window.bootstrap.Modal.getOrCreateInstance(el);
       bsModal.show();
     } else {
       el.classList.add('show');
       el.style.display = 'block';
+    }
+    
+    let backdrop = document.querySelector('.modal-backdrop');
+    if (!backdrop) {
+      backdrop = document.createElement('div');
+      backdrop.className = 'modal-backdrop fade show';
+      document.body.appendChild(backdrop);
+    } else {
+      backdrop.classList.add('show');
     }
   }
 
@@ -687,12 +697,18 @@ document.addEventListener('DOMContentLoaded', () => {
    */
   function hideBsModal(el) {
     if (!el) return;
+    document.body.classList.remove('modal-open');
     if (window.bootstrap && window.bootstrap.Modal) {
       const bsModal = window.bootstrap.Modal.getOrCreateInstance(el);
       bsModal.hide();
     } else {
       el.classList.remove('show');
       el.style.display = 'none';
+    }
+
+    const backdrop = document.querySelector('.modal-backdrop');
+    if (backdrop) {
+      backdrop.remove();
     }
   }
 
