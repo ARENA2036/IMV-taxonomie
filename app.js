@@ -364,8 +364,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="flow-columns-wrapper">
               ${flowColumnsHtml}
             </div>
-            <div class="mt-3 p-3 bg-light rounded border border-start border-3 border-success small">
-              <strong class="text-success me-1"><i class="fa-solid fa-bullseye"></i> ${uc.goal}</strong>
+            <div class="mt-3 p-3 rounded small text-dark" style="border: 1px solid rgba(255, 80, 0, 0.3); border-left: 3px solid #FF5000 !important; background-color: #FFFDFB;">
+              <strong style="color: #FF5000;" class="me-1"><i class="fa-solid fa-bullseye"></i> Betrieblicher Nutzen:</strong> <span class="text-dark">${uc.goal}</span>
             </div>
           </div>
         </div>
