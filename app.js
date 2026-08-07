@@ -409,20 +409,21 @@ document.addEventListener('DOMContentLoaded', () => {
     itemsContainerEl.classList.add('list-view-mode');
 
     let html = `
-      <table class="table-view" style="width: 100%;">
-        <thead>
-          <tr>
-            <th style="width: 30px;"></th>
-            <th>Ref Code</th>
-            <th>Kat. Code</th>
-            <th>Technologie Name</th>
-            <th>Entwickler / Vendor</th>
-            <th>Kostengruppe</th>
-            <th>Status</th>
-            <th style="text-align: right;">Aktion</th>
-          </tr>
-        </thead>
-        <tbody>
+      <div class="table-responsive border rounded bg-white shadow-sm">
+        <table class="table table-bordered table-striped table-hover align-middle mb-0" style="width: 100%; font-size: 13.5px;">
+          <thead class="table-dark font-monospace">
+            <tr>
+              <th style="width: 40px;" class="text-center">#</th>
+              <th style="width: 170px;">Ref Code</th>
+              <th style="width: 80px;">Kat.</th>
+              <th>Technologie Name</th>
+              <th>Entwickler / Vendor</th>
+              <th style="width: 140px;">Kostengruppe</th>
+              <th style="width: 120px;">Status</th>
+              <th style="width: 110px;" class="text-end">Aktion</th>
+            </tr>
+          </thead>
+          <tbody>
     `;
 
     filteredItems.forEach(item => {
@@ -431,15 +432,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
       html += `
         <tr>
-          <td><input type="checkbox" class="chk-compare" data-ref="${item.refCode}" ${isChecked ? 'checked' : ''}></td>
-          <td><code style="font-family: var(--font-mono); font-size: 10px;">${item.refCode}</code></td>
-          <td><strong>${item.categoryCode}</strong></td>
-          <td><strong>${item.name}</strong> <span style="font-size: 11px; color: var(--text-muted);">(${item.subtitle})</span></td>
+          <td class="text-center"><input type="checkbox" class="chk-compare form-check-input" data-ref="${item.refCode}" ${isChecked ? 'checked' : ''}></td>
+          <td><code class="text-muted font-monospace fw-bold">${item.refCode}</code></td>
+          <td><span class="badge bg-secondary font-monospace">${item.categoryCode}</span></td>
+          <td><strong class="text-dark">${item.name}</strong> <small class="text-muted">(${item.subtitle})</small></td>
           <td>${item.vendor}</td>
           <td><span class="tier-badge ${tierClass}">${item.tier}</span></td>
-          <td><span class="status-pill">${item.status}</span></td>
-          <td style="text-align: right;">
-            <button class="btn btn-primary btn-inspect" data-ref="${item.refCode}" style="padding: 3px 8px; font-size: 10px;">
+          <td><span class="badge bg-light text-dark border">${item.status}</span></td>
+          <td class="text-end">
+            <button class="btn btn-outline-primary btn-sm btn-inspect py-1 px-2" data-ref="${item.refCode}" style="font-size: 11px;">
               Details →
             </button>
           </td>
@@ -447,7 +448,7 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
     });
 
-    html += `</tbody></table>`;
+    html += `</tbody></table></div>`;
     itemsContainerEl.innerHTML = html;
 
     itemsContainerEl.querySelectorAll('.btn-inspect').forEach(btn => {
