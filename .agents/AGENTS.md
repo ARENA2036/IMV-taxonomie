@@ -1,15 +1,14 @@
-# AI Agent & Developer Guidelines (`IMV-taxonomie`)
+# AI Agent & LLM Developer Guidelines (`IMV-taxonomie`)
 
-> **Industrial Metaverse Technology Taxonomy 2026**
+> **Industrial Metaverse Technology Taxonomy**  
 > Activity of the **Reallabor 2.0** project at the **ARENA2036 Research Campus**, funded by the **Ministry of Economic Affairs, Labour and Tourism Baden-Württemberg**.
 
 ---
 
 ## 📌 1. Project Purpose & Architecture
 
-This repository contains the open research taxonomy and interactive web browser for **91 Industrial Metaverse technologies, standards, and protocols**.
+This repository contains the open research taxonomy and interactive web browser for **91 Industrial Metaverse technologies, standards, and protocols** across the **ARENA2036 5-Schichten Industrial Metaverse Tech-Stack**:
 
-The project strictly follows the **ARENA2036 5-Schichten Industrial Metaverse Tech-Stack**:
 1. **Schicht 1: Erfassung & OT-Datenerfassung** *(Categories 6.1–6.5, 6.1-AI, 7.0, 8.1)*
 2. **Schicht 2: Geometrie & CAD-Pre-Processing** *(Categories 1.1, 1.2, 2.0, 10.0)*
 3. **Schicht 3: Semantische Middleware & Datenräume** *(Categories 8.2, 8.3, 9.0)*
@@ -20,11 +19,11 @@ The project strictly follows the **ARENA2036 5-Schichten Industrial Metaverse Te
 
 ## 💾 2. Single Source of Truth & Data Pipeline
 
-The data architecture is **100% JSON-driven** without external databases:
+The data architecture is **100% JSON-driven** without external database requirements:
 
 ```
-profiles/                     <- Canonical JSON profile specifications (91 JSON files)
-usecases/                     <- Canonical JSON Use Case specifications (6 JSON files)
+profiles/*.json               <- Canonical JSON profile specifications (91 JSON files)
+usecases/*.json               <- Canonical Baukasten Use Case specifications (6 JSON files)
        │
        ▼ [Run node scripts/generate_profiles.js]
 data/
@@ -37,13 +36,13 @@ data/
 - **To add or update a technology profile**: Modify or create the corresponding `.json` file inside `profiles/`.
 - **To add or update a Use Case**: Modify or create a `.json` file inside `usecases/`.
 - **To rebuild the index manifest**: Run `node scripts/generate_profiles.js`.
-- Do **NOT** manually edit `data/index.json` or `data/index_data.js` — they are auto-generated.
+- Do **NOT** manually edit `data/index.json` or `data/index_data.js` — they are auto-generated build deliverables.
 
 ---
 
-## ⚙️ 3. JSON Profile Schema Standard
+## ⚙️ 3. JSON Profile Schema Standard (19 Canonical Fields)
 
-Every profile JSON in `profiles/` must follow this schema:
+Every profile JSON in `profiles/` must strictly adhere to the 19 canonical schema fields:
 
 ```json
 {
@@ -88,31 +87,21 @@ Every profile JSON in `profiles/` must follow this schema:
 
 ## 🎨 4. UI & Design System Guidelines
 
-- **Design Aesthetic**: Minimalist, clean Vercel/Linear style.
-- **Typography**: Inter (Body), JetBrains Mono (Codes & Badges).
+- **Typography Standard**:
+  - Headings & Brand Titles: **`Arial Black`** (`'Arial Black', 'Arial Bold', sans-serif`).
+  - Body Text & Lead Paragraphs: **`Montserrat`** (Google Font `Montserrat:wght@300..900`).
+  - Technical Badges & RefCodes: **`JetBrains Mono`** (`'JetBrains Mono'`, monospace).
 - **Color Palette**:
   - Primary Accent: `#FF5000` (ARENA2036 Orange)
-  - Borders: `#E5E7EB` (Subtle) & `#111827` (Dark contrast)
-  - Backgrounds: `#FFFFFF` (Canvas) & `#FAFAFA` (Subtle container fill)
-- **Zero CORS Policy**: All pages (`index.html`, `browser.html`, `architecture.html`, `impressum.html`) must work both on HTTP web servers and directly via local `file://` execution using `data/index_data.js`.
+  - Borders: `#E5E7EB` (Subtle) & `rgba(255, 80, 0, 0.3)` (Accent thin frames)
+  - Canvas Fill: `#FFFFFF` & `#FAFAFA`
+- **Zero CORS Policy**: All pages (`index.html`, `browser.html`, `examples.html`, `architecture.html`, `impressum.html`) must work both on HTTP web servers and directly via local `file://` execution using `data/index_data.js`.
 
 ---
 
 ## 🧪 5. Verification Checklist Before Commit
 
-Before pushing any changes to git:
+Before pushing any changes:
 1. Run `node scripts/generate_profiles.js` to ensure the manifest is synced.
-2. Confirm zero console errors on `index.html` and `browser.html`.
-3. Ensure no hardcoded profile counts or dead asset references remain.
-
----
-
-## 🤖 6. AI Agent-Assisted Development & Agent-Readability
-
-> **AI Agent-Assisted Development Disclaimer**:  
-> Parts of the codebase, taxonomy profile JSON files, indexer scripts, and technical documentation were developed with the assistance of autonomous AI coding agents (Google DeepMind Antigravity / Gemini Agentic Workflow).
-
-### Agent-Readable Repository Standards:
-- **Zero SQL / DB Requirement**: All profile data is serialized in deterministic JSON under `profiles/*.json`.
-- **Schema Conformity**: Subagents and LLM tools MUST preserve the 19 canonical fields defined in Section 3.
-- **Build Synchronization**: Always invoke `node scripts/generate_profiles.js` after creating or editing `.json` profile files.
+2. Run `node -c app.js` to verify zero JavaScript syntax errors.
+3. Confirm zero console errors across all 5 HTML pages.
