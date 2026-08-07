@@ -182,8 +182,9 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
 
     ['1', '2', '3', '4', '5'].forEach(layerKey => {
-      const catCodes = layerCategoryMap[layerKey];
+      const catCodes = layerCategoryMap[layerKey] || [];
       const layerCats = categories.filter(c => catCodes.includes(c.code));
+      layerCats.sort((a, b) => a.code.localeCompare(b.code, undefined, { numeric: true }));
       
       html += `
         <div class="sidebar-layer-group">
