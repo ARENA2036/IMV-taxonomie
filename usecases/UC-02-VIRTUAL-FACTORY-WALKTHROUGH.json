@@ -4,7 +4,7 @@
   "tier": "Tier 1",
   "tierLabel": "Tier 1 (≤ €30k / Starter & Open Source)",
   "shortDesc": "Wie umsetzen? Mobiles SLAM-Scanning bestehender Werksbereiche im Gehen. Überführung der Geometrie in OpenUSD/glTF und Verknüpfung mit Maschinendaten in einer Eclipse BaSyx Verwaltungsschale (AAS).",
-  "goal": "ROI & Amortisation: Einsparung von bis zu 80% der Reisekosten und Reisezeiten bei Standort-Audits und Zulieferer-Reviews. Nutzung auf vorhandenen PCs/Tablets ohne Neuanschaffung teurer Spezialhardware.",
+  "goal": "Betrieblicher Nutzen: Deutliche Reduzierung von Reisekosten und Reisezeiten bei Standort-Audits und Zulieferer-Reviews. Nutzung auf vorhandenen PCs/Tablets ohne teure Spezialhardware.",
   "flow": [
     {
       "layer": "1",

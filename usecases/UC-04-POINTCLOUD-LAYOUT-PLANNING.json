@@ -4,7 +4,7 @@
   "tier": "Tier 2",
   "tierLabel": "Tier 2 (≤ €100k / Mittelstand)",
   "shortDesc": "Wie umsetzen? Hochpräziser 3D-Laserscan der Hallenstruktur (Leica RTC360). Überlagerung der Ist-Punktwolke mit neuen CAD-BIM-Planungsdaten (Revit/Creo) in Visual Components zur Kollisionsprüfung.",
-  "goal": "ROI & Amortisation: 100%ige Vermeidung teurer Vor-Ort-Kollisionen bei der Neumontage von Fördertechnik. Verhindert ungeplante Produktionsunterbrechungen im Wert von bis zu mehreren 100k €.",
+  "goal": "Betrieblicher Nutzen: Vorab-Kollisionsprüfung bei der Neumontage von Fördertechnik zur Vermeidung ungeplanter Produktionsunterbrechungen und Nachbearbeitungen vor Ort.",
   "flow": [
     {
       "layer": "1",

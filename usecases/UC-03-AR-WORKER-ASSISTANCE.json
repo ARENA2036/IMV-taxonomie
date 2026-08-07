@@ -4,7 +4,7 @@
   "tier": "Tier 2",
   "tierLabel": "Tier 2 (≤ €100k / Mittelstand)",
   "shortDesc": "Wie umsetzen? Anbindung bestehender SPS-Steuerungen über OPC UA an eine Eclipse BaSyx Verwaltungsschale. Visualisierung von Live-Sensorwerten und Reparaturanweisungen in Unity Industry für AR-Brillen.",
-  "goal": "ROI & Amortisation: Reduzierung der Einarbeitungszeit neuer Fachkräfte um 50% und Vermeidung teurer Bedienerfehler im Wartungsprozess. Amortisation innerhalb von 6 bis 9 Monaten.",
+  "goal": "Betrieblicher Nutzen: Effizientere Einarbeitung von Fachkräften und Vermeidung von Bedienerfehlern im Wartungsprozess durch freihändige AR-Werkerführung im räumlichen Kontext.",
   "flow": [
     {
       "layer": "1",

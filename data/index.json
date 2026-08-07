@@ -3322,7 +3322,7 @@
       "tier": "Tier 1",
       "tierLabel": "Tier 1 (≤ €30k / Starter & Open Source)",
       "shortDesc": "Wie umsetzen? Schnelle optische 360°-Bestandserfassung im Shopfloor ohne Maschinenstillstand. Die Aufnahmen werden in FARO Sphere XG verortet und lösen automatisiert Instandhaltungstickets im Enterprise-System (Jira / SAP) aus.",
-      "goal": "ROI & Amortisation: Reduzierung der Störungsbehebungszeit um bis zu 60% durch exakte 3D-Fehlerortung ohne manuelle Wegezeiten. Investition amortisiert sich typischerweise nach 3 bis 6 Monaten.",
+      "goal": "Betrieblicher Nutzen: Schnelle 3D-Fehlerortung im Werk ohne manuelle Wegezeiten zur Beschleunigung des Instandhaltungsprozesses. (Indikativer Forschungs-Benchmark, keine Finanzberatung).",
       "flow": [
         {
           "layer": "1",
@@ -3367,7 +3367,7 @@
       "tier": "Tier 1",
       "tierLabel": "Tier 1 (≤ €30k / Starter & Open Source)",
       "shortDesc": "Wie umsetzen? Mobiles SLAM-Scanning bestehender Werksbereiche im Gehen. Überführung der Geometrie in OpenUSD/glTF und Verknüpfung mit Maschinendaten in einer Eclipse BaSyx Verwaltungsschale (AAS).",
-      "goal": "ROI & Amortisation: Einsparung von bis zu 80% der Reisekosten und Reisezeiten bei Standort-Audits und Zulieferer-Reviews. Nutzung auf vorhandenen PCs/Tablets ohne Neuanschaffung teurer Spezialhardware.",
+      "goal": "Betrieblicher Nutzen: Deutliche Reduzierung von Reisekosten und Reisezeiten bei Standort-Audits und Zulieferer-Reviews. Nutzung auf vorhandenen PCs/Tablets ohne teure Spezialhardware.",
       "flow": [
         {
           "layer": "1",
@@ -3412,7 +3412,7 @@
       "tier": "Tier 2",
       "tierLabel": "Tier 2 (≤ €100k / Mittelstand)",
       "shortDesc": "Wie umsetzen? Anbindung bestehender SPS-Steuerungen über OPC UA an eine Eclipse BaSyx Verwaltungsschale. Visualisierung von Live-Sensorwerten und Reparaturanweisungen in Unity Industry für AR-Brillen.",
-      "goal": "ROI & Amortisation: Reduzierung der Einarbeitungszeit neuer Fachkräfte um 50% und Vermeidung teurer Bedienerfehler im Wartungsprozess. Amortisation innerhalb von 6 bis 9 Monaten.",
+      "goal": "Betrieblicher Nutzen: Effizientere Einarbeitung von Fachkräften und Vermeidung von Bedienerfehlern im Wartungsprozess durch freihändige AR-Werkerführung im räumlichen Kontext.",
       "flow": [
         {
           "layer": "1",
@@ -3457,7 +3457,7 @@
       "tier": "Tier 2",
       "tierLabel": "Tier 2 (≤ €100k / Mittelstand)",
       "shortDesc": "Wie umsetzen? Hochpräziser 3D-Laserscan der Hallenstruktur (Leica RTC360). Überlagerung der Ist-Punktwolke mit neuen CAD-BIM-Planungsdaten (Revit/Creo) in Visual Components zur Kollisionsprüfung.",
-      "goal": "ROI & Amortisation: 100%ige Vermeidung teurer Vor-Ort-Kollisionen bei der Neumontage von Fördertechnik. Verhindert ungeplante Produktionsunterbrechungen im Wert von bis zu mehreren 100k €.",
+      "goal": "Betrieblicher Nutzen: Vorab-Kollisionsprüfung bei der Neumontage von Fördertechnik zur Vermeidung ungeplanter Produktionsunterbrechungen und Nachbearbeitungen vor Ort.",
       "flow": [
         {
           "layer": "1",
@@ -3502,7 +3502,7 @@
       "tier": "Tier 3",
       "tierLabel": "Tier 3 (> €100k / Enterprise OEM)",
       "shortDesc": "Wie umsetzen? Automatisierte Überführung von OEM-CAD-Baugruppen (Siemens NX / CATIA) via OpenUSD in NVIDIA Omniverse. Simulation physikalisch exakter Greifprozesse in Isaac Sim zum KI-Training vor dem physischen Aufbau.",
-      "goal": "ROI & Amortisation: Verkürzung der Roboter-Inbetriebnahmezeit von 4 Wochen auf wenige Tage. Risikofreies Anlernen neuer Teilevarianten im virtuellen Raum ohne Belegungszeiten der physischen Zelle.",
+      "goal": "Betrieblicher Nutzen: Signifikante Verkürzung der Roboter-Inbetriebnahmezeit durch virtuelles KI-Training ohne Belegungszeiten der physischen Zelle.",
       "flow": [
         {
           "layer": "1",
@@ -3547,7 +3547,7 @@
       "tier": "Tier 3",
       "tierLabel": "Tier 3 (> €100k / Enterprise OEM)",
       "shortDesc": "Wie umsetzen? Harte Feldbus-Kopplung (PROFINET TSN / OPC UA) über MQTT Sparkplug B und Eclipse Dataspace Components (EDC) in ISG-virtuos HiL. Echtzeit-Rendering in Unreal Engine 5 zur bi-direktionalen Steuerung.",
-      "goal": "ROI & Amortisation: 100% virtuelle Schatten-Inbetriebnahme kompletter Fertigungsstraßen und Fernsteuerung in harter Echtzeit. Verhindert teure Produktionsausfälle bei Hochläufen neuer Serien.",
+      "goal": "Betrieblicher Nutzen: Virtuelle Schatten-Inbetriebnahme kompletter Fertigungsstraßen und Fernsteuerung in Echtzeit zur Risikominimierung bei Serienanläufen.",
       "flow": [
         {
           "layer": "1",

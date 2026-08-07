@@ -4,7 +4,7 @@
   "tier": "Tier 1",
   "tierLabel": "Tier 1 (≤ €30k / Starter & Open Source)",
   "shortDesc": "Wie umsetzen? Schnelle optische 360°-Bestandserfassung im Shopfloor ohne Maschinenstillstand. Die Aufnahmen werden in FARO Sphere XG verortet und lösen automatisiert Instandhaltungstickets im Enterprise-System (Jira / SAP) aus.",
-  "goal": "ROI & Amortisation: Reduzierung der Störungsbehebungszeit um bis zu 60% durch exakte 3D-Fehlerortung ohne manuelle Wegezeiten. Investition amortisiert sich typischerweise nach 3 bis 6 Monaten.",
+  "goal": "Betrieblicher Nutzen: Schnelle 3D-Fehlerortung im Werk ohne manuelle Wegezeiten zur Beschleunigung des Instandhaltungsprozesses. (Indikativer Forschungs-Benchmark, keine Finanzberatung).",
   "flow": [
     {
       "layer": "1",

@@ -4,7 +4,7 @@
   "tier": "Tier 3",
   "tierLabel": "Tier 3 (> €100k / Enterprise OEM)",
   "shortDesc": "Wie umsetzen? Automatisierte Überführung von OEM-CAD-Baugruppen (Siemens NX / CATIA) via OpenUSD in NVIDIA Omniverse. Simulation physikalisch exakter Greifprozesse in Isaac Sim zum KI-Training vor dem physischen Aufbau.",
-  "goal": "ROI & Amortisation: Verkürzung der Roboter-Inbetriebnahmezeit von 4 Wochen auf wenige Tage. Risikofreies Anlernen neuer Teilevarianten im virtuellen Raum ohne Belegungszeiten der physischen Zelle.",
+  "goal": "Betrieblicher Nutzen: Signifikante Verkürzung der Roboter-Inbetriebnahmezeit durch virtuelles KI-Training ohne Belegungszeiten der physischen Zelle.",
   "flow": [
     {
       "layer": "1",

@@ -4,7 +4,7 @@
   "tier": "Tier 3",
   "tierLabel": "Tier 3 (> €100k / Enterprise OEM)",
   "shortDesc": "Wie umsetzen? Harte Feldbus-Kopplung (PROFINET TSN / OPC UA) über MQTT Sparkplug B und Eclipse Dataspace Components (EDC) in ISG-virtuos HiL. Echtzeit-Rendering in Unreal Engine 5 zur bi-direktionalen Steuerung.",
-  "goal": "ROI & Amortisation: 100% virtuelle Schatten-Inbetriebnahme kompletter Fertigungsstraßen und Fernsteuerung in harter Echtzeit. Verhindert teure Produktionsausfälle bei Hochläufen neuer Serien.",
+  "goal": "Betrieblicher Nutzen: Virtuelle Schatten-Inbetriebnahme kompletter Fertigungsstraßen und Fernsteuerung in Echtzeit zur Risikominimierung bei Serienanläufen.",
   "flow": [
     {
       "layer": "1",
