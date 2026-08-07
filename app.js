@@ -850,6 +850,19 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
+    // Global Listener for ALL modal close X-buttons (.btn-close and [data-bs-dismiss="modal"])
+    document.querySelectorAll('.btn-close, [data-bs-dismiss="modal"]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const modalEl = btn.closest('.modal');
+        if (modalEl) {
+          hideBsModal(modalEl);
+          if (modalEl.id === 'profileModal') {
+            window.location.hash = '';
+          }
+        }
+      });
+    });
+
     // Robust Hamburger Menu Toggle Handler (Works with Bootstrap 5 and direct click)
     const hamburgerBtns = document.querySelectorAll('#hamburgerBtn, .dropdown-toggle');
     hamburgerBtns.forEach(btn => {
