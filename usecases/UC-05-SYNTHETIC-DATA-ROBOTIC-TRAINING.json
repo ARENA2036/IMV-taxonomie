@@ -2,9 +2,9 @@
   "id": "UC-05-SYNTHETIC-DATA-ROBOTIC-TRAINING",
   "title": "Synthetische Datengenerierung & Roboter-KI-Training",
   "tier": "Tier 3",
-  "tierLabel": "> €100k / Enterprise OEM",
-  "shortDesc": "Automatische Konvertierung komplexer OEM-MCAD Baugruppen (Siemens NX / CATIA) via OpenUSD in NVIDIA Omniverse. Durchführung physikalisch exakter Reinforcement-Learning-Simulationen in Isaac Sim / Isaac Lab zum autonomen Anlernen von Roboter-Greifskills.",
-  "goal": "Verkürzung der Roboter-Inbetriebnahmezeit von Wochen auf Stunden; Zero-Risk KI-Training vor Auslieferung der physischen Zelle.",
+  "tierLabel": "Tier 3 (> €100k / Enterprise OEM)",
+  "shortDesc": "Wie umsetzen? Automatisierte Überführung von OEM-CAD-Baugruppen (Siemens NX / CATIA) via OpenUSD in NVIDIA Omniverse. Simulation physikalisch exakter Greifprozesse in Isaac Sim zum KI-Training vor dem physischen Aufbau.",
+  "goal": "ROI & Amortisation: Verkürzung der Roboter-Inbetriebnahmezeit von 4 Wochen auf wenige Tage. Risikofreies Anlernen neuer Teilevarianten im virtuellen Raum ohne Belegungszeiten der physischen Zelle.",
   "flow": [
     {
       "layer": "1",

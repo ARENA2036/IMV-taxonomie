@@ -2,9 +2,9 @@
   "id": "UC-06-BIDIRECTIONAL-REALTIME-TWIN",
   "title": "Bi-direktionaler Echtzeit-Digitaler-Zwilling einer Produktionslinie",
   "tier": "Tier 3",
-  "tierLabel": "> €100k / Enterprise OEM",
-  "shortDesc": "Hartherzige Kopplung von Feldbussignalen (PROFINET TSN / OPC UA) über MQTT Sparkplug B und Eclipse Dataspace Components (EDC) in eine ISG-virtuos HiL-Simulation. Die Steuersignale werden bi-direktional in Unreal Engine 5 visualisiert und zurück an die SPS übermittelt.",
-  "goal": "Vollständige Fernsteuerung und virtuelle Schatten-Inbetriebnahme kompletter Fertigungsstraßen in harter Echtzeit mit 100% EU-Datensouveränität.",
+  "tierLabel": "Tier 3 (> €100k / Enterprise OEM)",
+  "shortDesc": "Wie umsetzen? Harte Feldbus-Kopplung (PROFINET TSN / OPC UA) über MQTT Sparkplug B und Eclipse Dataspace Components (EDC) in ISG-virtuos HiL. Echtzeit-Rendering in Unreal Engine 5 zur bi-direktionalen Steuerung.",
+  "goal": "ROI & Amortisation: 100% virtuelle Schatten-Inbetriebnahme kompletter Fertigungsstraßen und Fernsteuerung in harter Echtzeit. Verhindert teure Produktionsausfälle bei Hochläufen neuer Serien.",
   "flow": [
     {
       "layer": "1",

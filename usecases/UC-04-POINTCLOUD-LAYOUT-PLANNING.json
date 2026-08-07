@@ -2,9 +2,9 @@
   "id": "UC-04-POINTCLOUD-LAYOUT-PLANNING",
   "title": "Punktwolken-Vergleich für die Fabrik-Layoutplanung",
   "tier": "Tier 2",
-  "tierLabel": "≤ €100k / Industrieller Mittelstand",
-  "shortDesc": "Präzises Überlagern von Ist-Punktwolken bestehender Werksbereiche mit neuen CAD-Planungsmodellen aus Revit/Creo zur Vorab-Kollisionsprüfung von Rohrleitungen und Fördertechnik.",
-  "goal": "Vermeidung teurer Umbaufehler und Kollisionen beim Installieren neuer Produktionslinien vor Ort.",
+  "tierLabel": "Tier 2 (≤ €100k / Mittelstand)",
+  "shortDesc": "Wie umsetzen? Hochpräziser 3D-Laserscan der Hallenstruktur (Leica RTC360). Überlagerung der Ist-Punktwolke mit neuen CAD-BIM-Planungsdaten (Revit/Creo) in Visual Components zur Kollisionsprüfung.",
+  "goal": "ROI & Amortisation: 100%ige Vermeidung teurer Vor-Ort-Kollisionen bei der Neumontage von Fördertechnik. Verhindert ungeplante Produktionsunterbrechungen im Wert von bis zu mehreren 100k €.",
   "flow": [
     {
       "layer": "1",

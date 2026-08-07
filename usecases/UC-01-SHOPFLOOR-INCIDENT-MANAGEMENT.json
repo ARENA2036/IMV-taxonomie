@@ -2,16 +2,16 @@
   "id": "UC-01-SHOPFLOOR-INCIDENT-MANAGEMENT",
   "title": "Digitales Shopfloor-Incident-Management",
   "tier": "Tier 1",
-  "tierLabel": "≤ €30k / KMU Starter",
-  "shortDesc": "Schnelle optische Erfassung von Anomalien und Instandhaltungs-Befunden in der Fertigung mittels 360°-Kamera / Terrestrik-Scan. Die Aufnahmen werden auf einer zentralen Web-Plattform lokalisiert und automatisiert als Instandhaltungsticket im Enterprise-System angelegt.",
-  "goal": "Reduzierung der Störungsbehebungszeit um bis zu 60% durch präzise 3D-Ortung des Fehlers ohne manuelle Befunddokumentation vor Ort.",
+  "tierLabel": "Tier 1 (≤ €30k / KMU Starter)",
+  "shortDesc": "Wie umsetzen? Schnelle optische 360°-Bestandserfassung im Shopfloor ohne Maschinenstillstand. Die Aufnahmen werden in FARO Sphere XG verortet und lösen automatisiert Instandhaltungstickets im Enterprise-System (Jira / SAP) aus.",
+  "goal": "ROI & Amortisation: Reduzierung der Störungsbehebungszeit um bis zu 60% durch exakte 3D-Fehlerortung ohne manuelle Wegezeiten. Investition amortisiert sich typischerweise nach 3 bis 6 Monaten.",
   "flow": [
     {
       "layer": "1",
       "layerTitle": "Schicht 1: Erfassung",
       "refCode": "IND-META-2026-FARO-ORBIS",
       "nodeName": "FARO Orbis / Matterport",
-      "role": "Mobile 360° LiDAR-Erfassung vor Ort"
+      "role": "Mobile 360° LiDAR-Erfassung im Werk"
     },
     {
       "layer": "2",

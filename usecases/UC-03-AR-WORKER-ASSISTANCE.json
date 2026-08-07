@@ -2,9 +2,9 @@
   "id": "UC-03-AR-WORKER-ASSISTANCE",
   "title": "AR-gestützte Werkerassistenz mit IoT-Echtzeitdaten",
   "tier": "Tier 2",
-  "tierLabel": "≤ €100k / Industrieller Mittelstand",
-  "shortDesc": "Live-Kopplung von Maschinen-Telemetrie aus der SPS über OPC UA in eine Eclipse BaSyx Verwaltungsschale. Die Daten werden im räumlichen Kontext einer AR-Brille (RealWear / Meta Quest 3) direkt an der physischen Anlage eingeblendet.",
-  "goal": "Fehlerminimierung bei der Wartung komplexer Werkzeugmaschinen durch freihändige Schritt-für-Schritt-Anleitung und Live-Sensorwerte.",
+  "tierLabel": "Tier 2 (≤ €100k / Mittelstand)",
+  "shortDesc": "Wie umsetzen? Anbindung bestehender SPS-Steuerungen über OPC UA an eine Eclipse BaSyx Verwaltungsschale. Visualisierung von Live-Sensorwerten und Reparaturanweisungen in Unity Industry für AR-Brillen.",
+  "goal": "ROI & Amortisation: Reduzierung der Einarbeitungszeit neuer Fachkräfte um 50% und Vermeidung teurer Bedienerfehler im Wartungsprozess. Amortisation innerhalb von 6 bis 9 Monaten.",
   "flow": [
     {
       "layer": "1",
