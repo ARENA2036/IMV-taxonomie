@@ -1,0 +1,29 @@
+{
+  "name": "imv-taxonomie",
+  "version": "1.0.0",
+  "description": "Industrial Metaverse Technology Taxonomy 2026 — ARENA2036 Reallabor 2.0",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/generate_profiles.js",
+    "test": "node scripts/generate_profiles.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ARENA2036/IMV-taxonomie.git"
+  },
+  "keywords": [
+    "industrial-metaverse",
+    "arena2036",
+    "openusd",
+    "asset-administration-shell",
+    "digital-twin",
+    "industry-40"
+  ],
+  "author": "ARENA2036",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ARENA2036/IMV-taxonomie/issues"
+  },
+  "homepage": "https://ARENA2036.github.io/IMV-taxonomie/"
+}
