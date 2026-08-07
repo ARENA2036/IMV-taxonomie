@@ -1,6 +1,6 @@
 {
   "refCode": "IND-META-2026-RIIICO-AI",
-  "categoryCode": "6.1-AI",
+  "categoryCode": "1.6",
   "categoryName": "Spatial Perzeption & KI-Erkennung",
   "name": "RIIICO (Factory AI Automated Layout)",
   "subtitle": "KI-Punktwolken-Segmentierung in 3D-CAD",

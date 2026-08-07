@@ -1,6 +1,6 @@
 {
   "refCode": "IND-META-2026-MQTT-SPARKPLUG",
-  "categoryCode": "8.1",
+  "categoryCode": "1.8",
   "categoryName": "Industrial IoT-Protokolle",
   "name": "MQTT / Sparkplug B",
   "subtitle": "Leichtgewichtige IIoT Pub/Sub Serialisierung",

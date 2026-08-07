@@ -1,7 +1,8 @@
 # AI Agent & LLM Developer Guidelines (`IMV-taxonomie`)
 
 > **Industrial Metaverse Technology Taxonomy**  
-> Activity of the **Reallabor 2.0** project at the **ARENA2036 Research Campus**, funded by the **Ministry of Economic Affairs, Labour and Tourism Baden-Württemberg**.
+> Activity of the **Reallabor 2.0** project at the **ARENA2036 Research Campus**, funded by the **Ministry of Economic Affairs, Labour and Tourism Baden-Württemberg**.  
+> *Developed and maintained partially using Agentic AI Workflows.*
 
 ---
 
@@ -9,11 +10,11 @@
 
 This repository contains the open research taxonomy and interactive web browser for **91 Industrial Metaverse technologies, standards, and protocols** across the **ARENA2036 5-Schichten Industrial Metaverse Tech-Stack**:
 
-1. **Schicht 1: Erfassung & OT-Datenerfassung** *(Categories 6.1–6.5, 6.1-AI, 7.0, 8.1)*
-2. **Schicht 2: Geometrie & CAD-Pre-Processing** *(Categories 1.1, 1.2, 2.0, 10.0)*
-3. **Schicht 3: Semantische Middleware & Datenräume** *(Categories 8.2, 8.3, 9.0)*
-4. **Schicht 4: Simulation & Virtuelle Inbetriebnahme** *(Categories 4.1, 4.2, 4.3, 5.0)*
-5. **Schicht 5: Räumliche Immersion & Rendering** *(Categories 3.0, 11.0)*
+1. **Schicht 1: Erfassung & OT-Datenerfassung** *(Categories 1.1–1.8)*
+2. **Schicht 2: Geometrie & CAD-Pre-Processing** *(Categories 2.1–2.4)*
+3. **Schicht 3: Semantische Middleware & Datenräume** *(Categories 3.1–3.3)*
+4. **Schicht 4: Simulation & Virtuelle Inbetriebnahme** *(Categories 4.1–4.4)*
+5. **Schicht 5: Räumliche Immersion & Rendering** *(Categories 5.1–5.2)*
 
 ---
 

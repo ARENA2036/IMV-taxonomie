@@ -1,6 +1,6 @@
 {
   "refCode": "IND-META-2026-CESIUM-3DTILES",
-  "categoryCode": "6.5",
+  "categoryCode": "1.5",
   "categoryName": "360°-Erfassung & GIS-Kartierung",
   "name": "Cesium (3D Tiles Streaming Platform)",
   "subtitle": "OGC 3D Tiles Streaming für Geodaten",

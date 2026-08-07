@@ -1,6 +1,6 @@
 {
   "refCode": "IND-META-2026-PROFINET-TSN",
-  "categoryCode": "7.0",
+  "categoryCode": "1.7",
   "categoryName": "OT & Sensorik-Feldbusse",
   "name": "PROFINET / TSN (Time-Sensitive Networking)",
   "subtitle": "Industrieller Echtzeit-Ethernet-Standard",

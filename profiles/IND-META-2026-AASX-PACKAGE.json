@@ -1,6 +1,6 @@
 {
   "refCode": "IND-META-2026-AASX-PACKAGE",
-  "categoryCode": "10.0",
+  "categoryCode": "2.4",
   "categoryName": "Datenformate & OpenUSD-Standards",
   "name": "AASX Packages (IDTA / IEC 63278 Container)",
   "subtitle": "Standardisierter Zwillings-Datencontainer",

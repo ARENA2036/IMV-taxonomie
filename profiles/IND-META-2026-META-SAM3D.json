@@ -1,6 +1,6 @@
 {
   "refCode": "IND-META-2026-META-SAM3D",
-  "categoryCode": "6.1-AI",
+  "categoryCode": "1.6",
   "categoryName": "Spatial Perzeption & KI-Erkennung",
   "name": "Meta Segment Anything 3D (SAM 3D)",
   "subtitle": "Zero-Shot KI-Segmentierung für 3D-Punktwolken",

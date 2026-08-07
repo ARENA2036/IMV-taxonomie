@@ -1,6 +1,6 @@
 {
   "refCode": "IND-META-2026-PLY-3DGS",
-  "categoryCode": "10.0",
+  "categoryCode": "2.4",
   "categoryName": "Datenformate & OpenUSD-Standards",
   "name": "PLY / Splat Files (3D Gaussian Splatting)",
   "subtitle": "Fotorealistisches 3D-Gaussian-Splatting Format",

@@ -1,6 +1,6 @@
 {
   "refCode": "IND-META-2026-AMQP-PROTOCOL",
-  "categoryCode": "8.1",
+  "categoryCode": "1.8",
   "categoryName": "Industrial IoT-Protokolle",
   "name": "AMQP Enterprise Messaging",
   "subtitle": "Zuverlässiges Enterprise-Messaging für Cloud",

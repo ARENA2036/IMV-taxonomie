@@ -7,15 +7,29 @@
 
 ## 📌 1. Executive Summary
 
-This repository contains the open research taxonomy, interactive web browser, and Baukasten Use Case specifications for **91 audited Industrial Metaverse technologies, standards, and protocols** structured strictly into the **ARENA2036 5-Schichten Industrial Metaverse Tech-Stack**:
+This repository contains the open research taxonomy, interactive web browser, and Baukasten Use Case specifications for **91 audited Industrial Metaverse technologies, standards, and protocols** structured strictly into the **ARENA2036 5-Schichten Industrial Metaverse Tech-Stack** and **1:1 Layer-to-Category Decimal System (Categories 1.1–5.2)**:
 
 ```
-[ SCHICHT 1: Erfassung & OT ] ──► [ SCHICHT 2: Geometrie & CAD ] ──► [ SCHICHT 3: Middleware & AAS ] ──► [ SCHICHT 4: Simulation & VIBn ] ──► [ SCHICHT 5: Spatial Immersion ]
+[ SCHICHT 1: Erfassung (1.1–1.8) ] ──► [ SCHICHT 2: Geometrie (2.1–2.4) ] ──► [ SCHICHT 3: Middleware (3.1–3.3) ] ──► [ SCHICHT 4: Simulation (4.1–4.4) ] ──► [ SCHICHT 5: Immersion (5.1–5.2) ]
 ```
 
 ---
 
-## 🛠️ 2. Technology Stack & Design System
+## 📚 2. Centralized Documentation Index
+
+All technical, product, and agent documentation files are standardized and centralized:
+
+| Document | Description / Purpose | Location |
+| :--- | :--- | :--- |
+| **System Architecture** | 5-Layer Stack Technical Specs (Left-to-Right Flow & 1:1 Decimal Codes) | [`docs/ARCHITECTURE.md`](file:///Users/michael/dev/IMV_Taxo/docs/ARCHITECTURE.md) |
+| **Baukasten Use Cases** | Multi-Stage Workflow Model & PR Contribution Guide | [`docs/USECASES.md`](file:///Users/michael/dev/IMV_Taxo/docs/USECASES.md) |
+| **Product Requirements** | PRD Specifications, Target Personas & Cost Tier Models | [`docs/PRD.md`](file:///Users/michael/dev/IMV_Taxo/docs/PRD.md) |
+| **AI Agent Guidelines** | LLM Developer Instructions, Prompt Rules & Schema Specifications | [`.agents/AGENTS.md`](file:///Users/michael/dev/IMV_Taxo/.agents/AGENTS.md) |
+| **Audit & Changelog** | Itemized Quality Audit Report & Deliverables Log | [`AUDIT_LOG.md`](file:///Users/michael/dev/IMV_Taxo/AUDIT_LOG.md) |
+
+---
+
+## 🛠️ 3. Technology Stack & Design System
 
 - **UI Framework**: HTML5, Vanilla JavaScript (ES6+), **Bootstrap 5.3**.
 - **Typography Standard**:
@@ -27,7 +41,7 @@ This repository contains the open research taxonomy, interactive web browser, an
 
 ---
 
-## 💾 3. Data Architecture & Pipeline
+## 💾 4. Data Architecture & Pipeline
 
 The application is **100% JSON-driven** without external database overhead:
 
@@ -44,7 +58,7 @@ data/
 
 ---
 
-## ⚙️ 4. Local Development & Setup
+## ⚙️ 5. Local Development & Setup
 
 ### Prerequisites
 - Node.js (v18+) installed locally.
@@ -65,7 +79,7 @@ Then open `http://localhost:8080` in your web browser.
 
 ---
 
-## 📁 5. Directory Mapping
+## 📁 6. Directory Structure
 
 ```
 ├── index.html               # Full-Canvas Greeter Landing Page
@@ -81,13 +95,23 @@ Then open `http://localhost:8080` in your web browser.
 │   └── generate_profiles.js # Node Data Pipeline Indexer
 ├── docs/
 │   ├── ARCHITECTURE.md      # 5-Layer Stack Technical Specs (Left-to-Right Flow)
-│   └── USECASES.md          # Use Case Model & PR Contribution Guide
+│   ├── USECASES.md          # Use Case Model & PR Contribution Guide
+│   └── PRD.md               # Product Requirements Document & Target Personas
 ├── .agents/
-│   └── AGENTS.md            # AI Agent Guidelines & Schema Rules
+│   └── AGENTS.md            # AI Agent Developer Guidelines & Schema Rules
 ├── .gitignore               # Production-Grade Git Ignore Rules
 ├── AUDIT_LOG.md             # Itemized End-to-End Audit Log
-└── README.md                # Root Enterprise Documentation
+└── README.md                # Root Enterprise Documentation Index
 ```
+
+---
+
+## 🤖 7. AI & Agentic Workflows
+
+This project is co-developed and maintained partially using **Agentic AI Workflows**. Autonomous agentic workflows assist with:
+- **Canonical Data Pipeline & Profile Indexing**: Automated compilation and schema validation across 91 JSON technology profiles and 6 Baukasten Use Cases.
+- **Architectural & Design Consistency**: Automated visual auditing, responsive UI alignment, and 1:1 Layer-to-Category decimal system restructuring.
+- **Documentation & Repository Hygiene**: Automated synchronization of technical documentation (`docs/`), agent guidelines (`.agents/AGENTS.md`), and production git rules (`.gitignore`).
 
 ---
 

@@ -3,27 +3,93 @@ window.INDEX_DATA = {
   "categories": [
     {
       "code": "1.1",
+      "name": "Mobile & Wearable SLAM-Scanner",
+      "desc": "Tragbare Mobile-Mapping-Systeme mit Echtzeit-SLAM.",
+      "layer": "1"
+    },
+    {
+      "code": "1.2",
+      "name": "Terrestrisches Laserscanning (TLS)",
+      "desc": "Hochpräzise stationäre 3D-Laserscanner.",
+      "layer": "1"
+    },
+    {
+      "code": "1.3",
+      "name": "Autonome Drohnen & AMR-Roboter",
+      "desc": "Autonome Erfassung per Drohnen und Roboterplattformen.",
+      "layer": "1"
+    },
+    {
+      "code": "1.4",
+      "name": "Handheld 3DGS & Photogrammetrie",
+      "desc": "Handgeführte 3D-Gaussian-Splatting Scanner.",
+      "layer": "1"
+    },
+    {
+      "code": "1.5",
+      "name": "360°-Erfassung & GIS-Kartierung",
+      "desc": "Panorama-Bilddokumentation und Geoinformationssysteme.",
+      "layer": "1"
+    },
+    {
+      "code": "1.6",
+      "name": "Spatial Perzeption & KI-Erkennung",
+      "desc": "KI-gestützte Objekt- und Raumsegmentierung.",
+      "layer": "1"
+    },
+    {
+      "code": "1.7",
+      "name": "OT & Sensorik-Feldbusse",
+      "desc": "Operative Feldbus-Systeme und SPS-Kommunikation.",
+      "layer": "1"
+    },
+    {
+      "code": "1.8",
+      "name": "Industrial IoT-Protokolle",
+      "desc": "Nachrichtenprotokolle für industrielle IoT-Netzwerke.",
+      "layer": "1"
+    },
+    {
+      "code": "2.1",
       "name": "Mechanisches CAD (MCAD)",
       "desc": "Parametrische 3D-CAD-Systeme für den Maschinen- und Fahrzeugbau.",
       "layer": "2"
     },
     {
-      "code": "1.2",
+      "code": "2.2",
       "name": "BIM, Bauwesen & Infrastruktur (AEC)",
       "desc": "Bauwerksdatenmodellierung für Fabrik- und Gebäudestrukturen.",
       "layer": "2"
     },
     {
-      "code": "2.0",
+      "code": "2.3",
       "name": "DCC & Generatives 3D-Design",
       "desc": "Digital Content Creation und prozedurale 3D-Modellierung.",
       "layer": "2"
     },
     {
-      "code": "3.0",
-      "name": "Echtzeit-3D & Spatial Engines",
-      "desc": "Echtzeit-Rendering und 3D-Visualisierungs-Engines.",
-      "layer": "5"
+      "code": "2.4",
+      "name": "Datenformate & OpenUSD-Standards",
+      "desc": "Offene Datenformate und Szenen-Spezifikationen.",
+      "layer": "2"
+    },
+    {
+      "code": "3.1",
+      "name": "Verwaltungsschale & Zwillings-Standards",
+      "desc": "Asset Administration Shell (AAS) und Interoperabilitäts-Standards.",
+      "layer": "3"
+    },
+    {
+      "code": "3.2",
+      "name": "KI-Datenmotoren & Pipeline-Bridges",
+      "desc": "KI-Trainings-Pipelines und Datenbrücken.",
+      "layer": "3"
+    },
+    {
+      "code": "3.3",
+      "name": "Enterprise Cloud-Zwillinge",
+      "desc": "Skalierbare Cloud-Plattformen für digitale Zwillinge.",
+      "layer": "3"
     },
     {
       "code": "4.1",
@@ -44,85 +110,19 @@ window.INDEX_DATA = {
       "layer": "4"
     },
     {
-      "code": "5.0",
+      "code": "4.4",
       "name": "Robotik & Fabriksimulation",
       "desc": "Kinematik-, Roboter- und Materialfluss-Simulation.",
       "layer": "4"
     },
     {
-      "code": "6.1",
-      "name": "Mobile & Wearable SLAM-Scanner",
-      "desc": "Tragbare Mobile-Mapping-Systeme mit Echtzeit-SLAM.",
-      "layer": "1"
+      "code": "5.1",
+      "name": "Echtzeit-3D & Spatial Engines",
+      "desc": "Echtzeit-Rendering und 3D-Visualisierungs-Engines.",
+      "layer": "5"
     },
     {
-      "code": "6.2",
-      "name": "Terrestrisches Laserscanning (TLS)",
-      "desc": "Hochpräzise stationäre 3D-Laserscanner.",
-      "layer": "1"
-    },
-    {
-      "code": "6.3",
-      "name": "Autonome Drohnen & AMR-Roboter",
-      "desc": "Autonome Erfassung per Drohnen und Roboterplattformen.",
-      "layer": "1"
-    },
-    {
-      "code": "6.4",
-      "name": "Handheld 3DGS & Photogrammetrie",
-      "desc": "Handgeführte 3D-Gaussian-Splatting Scanner.",
-      "layer": "1"
-    },
-    {
-      "code": "6.5",
-      "name": "360°-Erfassung & GIS-Kartierung",
-      "desc": "Panorama-Bilddokumentation und Geoinformationssysteme.",
-      "layer": "1"
-    },
-    {
-      "code": "6.1-AI",
-      "name": "Spatial Perzeption & KI-Erkennung",
-      "desc": "KI-gestützte Objekt- und Raumsegmentierung.",
-      "layer": "1"
-    },
-    {
-      "code": "7.0",
-      "name": "OT & Sensorik-Feldbusse",
-      "desc": "Operative Feldbus-Systeme und SPS-Kommunikation.",
-      "layer": "1"
-    },
-    {
-      "code": "8.1",
-      "name": "Industrial IoT-Protokolle",
-      "desc": "Nachrichtenprotokolle für industrielle IoT-Netzwerke.",
-      "layer": "1"
-    },
-    {
-      "code": "8.2",
-      "name": "Verwaltungsschale & Zwillings-Standards",
-      "desc": "Asset Administration Shell (AAS) und Interoperabilitäts-Standards.",
-      "layer": "3"
-    },
-    {
-      "code": "8.3",
-      "name": "KI-Datenmotoren & Pipeline-Bridges",
-      "desc": "KI-Trainings-Pipelines und Datenbrücken.",
-      "layer": "3"
-    },
-    {
-      "code": "9.0",
-      "name": "Enterprise Cloud-Zwillinge",
-      "desc": "Skalierbare Cloud-Plattformen für digitale Zwillinge.",
-      "layer": "3"
-    },
-    {
-      "code": "10.0",
-      "name": "Datenformate & OpenUSD-Standards",
-      "desc": "Offene Datenformate und Szenen-Spezifikationen.",
-      "layer": "2"
-    },
-    {
-      "code": "11.0",
+      "code": "5.2",
       "name": "Spatial XR & VR/AR Headsets",
       "desc": "Immersive Headsets und Spatial-Computing-Hardware.",
       "layer": "5"
@@ -130,8 +130,992 @@ window.INDEX_DATA = {
   ],
   "items": [
     {
-      "refCode": "IND-META-2026-AUTODESK-FUSION",
+      "refCode": "IND-META-2026-FARO-ORBIS",
       "categoryCode": "1.1",
+      "categoryName": "Mobile & Wearable SLAM-Scanner",
+      "name": "FARO Orbis Hybrid Mobile Scanner",
+      "subtitle": "Hybrid-Mobile SLAM & Flash TLS Scanner",
+      "vendor": "FARO Technologies Inc.",
+      "hq": "Lake Mary, FL, USA / Stuttgart, DE (EU)",
+      "tier": "Tier 2",
+      "costLabel": "≤ €100k",
+      "status": "EVALUIERT",
+      "url": "https://faro.com/orbis",
+      "overview": "Hybrider mobiler SLAM- und statischer Laserscanner. Wechselt fliegend zwischen Gehen und hochdichtem Stativscannen.",
+      "inputs": [
+        "SLAM Telemetrie",
+        "Static LiDAR Rays",
+        "GCP"
+      ],
+      "outputs": [
+        "E57",
+        "LAS",
+        "FARO Project File",
+        "OpenUSD"
+      ],
+      "bridges": [
+        "FARO Sphere XG",
+        "Autodesk ReCap",
+        "NVIDIA Omniverse"
+      ],
+      "compliance": {
+        "omniverse": "Extension Bridge",
+        "sovereignty": "SOC2 / ISO Compliant",
+        "openStandard": "E57 / LAS"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-LEICA-BLK2GO",
+      "categoryCode": "1.1",
+      "categoryName": "Mobile & Wearable SLAM-Scanner",
+      "name": "Leica BLK2GO Handheld SLAM Scanner",
+      "subtitle": "Kompakter Handheld SLAM-Laserscanner",
+      "vendor": "Leica Geosystems AG / Hexagon",
+      "hq": "Heerbrugg, Schweiz (EU/EFTA)",
+      "tier": "Tier 2",
+      "costLabel": "≤ €100k",
+      "status": "EVALUIERT",
+      "url": "https://leica-geosystems.com/blk2go",
+      "overview": "Kompakter handgeführter Mobile-SLAM-Scanner mit 2-Achs-LiDAR und Mehrkamera-System zur schnellen Raumdokumentation.",
+      "inputs": [
+        "GrandSLAM Raw Stream"
+      ],
+      "outputs": [
+        "E57",
+        "LGS (Leica Format)",
+        "LAS",
+        "OpenUSD"
+      ],
+      "bridges": [
+        "Leica Cyclone REGISTER 360",
+        "Hexagon HxDR",
+        "NVIDIA Omniverse"
+      ],
+      "compliance": {
+        "omniverse": "LGS/E57 Importer",
+        "sovereignty": "Schweizer Datensicherheit",
+        "openStandard": "E57"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-NAVVIS-VLX3",
+      "categoryCode": "1.1",
+      "categoryName": "Mobile & Wearable SLAM-Scanner",
+      "name": "NavVis VLX 3 / NavVis IVION",
+      "subtitle": "Wearable Mobile Mapping System mit Echtzeit-SLAM",
+      "vendor": "NavVis GmbH",
+      "hq": "München, Deutschland (EU)",
+      "tier": "Tier 2",
+      "costLabel": "≤ €100k",
+      "status": "EMPFOHLENES MAPPING HARDWARE",
+      "url": "https://navvis.com/vlx-3",
+      "overview": "Wearables Mobile-SLAM-System mit zwei Multi-Layer-LiDAR-Sensoren und 4 HD-Kameras. Erfasst Bestandskonstruktionen (Brownfield) in Schrittgeschwindigkeit mit hoher Genauigkeit.",
+      "inputs": [
+        "Passpunkte (GCP)",
+        "Raw SLAM Telemetrie"
+      ],
+      "outputs": [
+        "E57 Punktwolke",
+        "LAS/LAZ",
+        "NavVis IVION Webformat",
+        "OpenUSD (.usd)"
+      ],
+      "bridges": [
+        "NavVis IVION",
+        "Autodesk Revit",
+        "NVIDIA Omniverse Point Cloud Extension"
+      ],
+      "compliance": {
+        "omniverse": "Point Cloud Extension",
+        "sovereignty": "100% EU DSGVO (München)",
+        "openStandard": "E57 / LAS"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-FARO-FOCUS",
+      "categoryCode": "1.2",
+      "categoryName": "Terrestrisches Laserscanning (TLS)",
+      "name": "FARO Focus Series (Focus Premium / Core)",
+      "subtitle": "Millimetergenauer terrestrischer 3D-Laserscanner",
+      "vendor": "FARO Technologies Inc.",
+      "hq": "Lake Mary, FL, USA / Stuttgart, DE (EU)",
+      "tier": "Tier 2",
+      "costLabel": "≤ €100k",
+      "status": "STANDARDIZIERT",
+      "url": "https://faro.com/focus",
+      "overview": "Branchenstandard unter den terrestrischen Stativ-Laserscannern. Liefert millimetergenaue 3D-Punktwolken für präzise Umbaumaßnahmen.",
+      "inputs": [
+        "Laser Phase Measurements",
+        "GCP Target Points"
+      ],
+      "outputs": [
+        "E57",
+        "LAS",
+        "FARO FLS",
+        "OpenUSD"
+      ],
+      "bridges": [
+        "FARO Sphere XG",
+        "Autodesk Revit",
+        "NVIDIA Omniverse"
+      ],
+      "compliance": {
+        "omniverse": "E57 Bridge",
+        "sovereignty": "SOC2 / ISO Compliant",
+        "openStandard": "E57 / ASTM E2807"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-LEICA-RTC360",
+      "categoryCode": "1.2",
+      "categoryName": "Terrestrisches Laserscanning (TLS)",
+      "name": "Leica RTC360 / BLK360 / Cyclone",
+      "subtitle": "High-Speed TLS mit VIS-Echtzeitregistrierung",
+      "vendor": "Leica Geosystems AG / Hexagon",
+      "hq": "Heerbrugg, Schweiz (EU/EFTA)",
+      "tier": "Tier 3",
+      "costLabel": "> €100k",
+      "status": "STANDARDIZIERT",
+      "url": "https://leica-geosystems.com/rtc360",
+      "overview": "Hochpräziser terrestrischer 3D-Laserscanner (RTC360). Erfasst 3D-Punktwolken und HDR-Panoramen in unter 45 Sekunden mit automatischer VIS-Echtzeitregistrierung.",
+      "inputs": [
+        "Raw RTC Laser Stream",
+        "Passpunkt-Koordinaten"
+      ],
+      "outputs": [
+        "E57",
+        "LGS",
+        "PTX",
+        "LAS",
+        "OpenUSD Stage"
+      ],
+      "bridges": [
+        "Leica Cyclone",
+        "Hexagon HxDR",
+        "Autodesk Revit",
+        "NVIDIA Omniverse"
+      ],
+      "compliance": {
+        "omniverse": "LGS Bridge",
+        "sovereignty": "Schweizer Datensicherheit",
+        "openStandard": "E57 / ASTM E2807"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-DEEPROBOTICS-M20",
+      "categoryCode": "1.3",
+      "categoryName": "Autonome Drohnen & AMR-Roboter",
+      "name": "DEEP Robotics M20 Pro (IP66 Quadruped Robot)",
+      "subtitle": "Autonomer 4-beiniger Inspektions-Laufroboter",
+      "vendor": "DEEP Robotics Inc.",
+      "hq": "Hangzhou, China",
+      "tier": "Tier 2",
+      "costLabel": "≤ €100k",
+      "status": "TESTBED",
+      "url": "https://deeprobotics.cn",
+      "overview": "Industrieller Laufroboter (IP66) für autonome Inspektionsläufe über Treppen, Gitterroste und unwegsames Werksgelände.",
+      "inputs": [
+        "ROS 2 Control Topics",
+        "Navigation Waypoints"
+      ],
+      "outputs": [
+        "ROS 2 Telemetrie",
+        "RTSP Video",
+        "3D SLAM Mesh"
+      ],
+      "bridges": [
+        "ROS 2 DDS",
+        "NVIDIA Isaac Sim",
+        "Collectu Data Engine"
+      ],
+      "compliance": {
+        "omniverse": "ROS 2 Native Bridge",
+        "sovereignty": "IP66 Zertifiziert",
+        "openStandard": "ROS 2 DDS"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-FLYABILITY-ELIOS3",
+      "categoryCode": "1.3",
+      "categoryName": "Autonome Drohnen & AMR-Roboter",
+      "name": "Flyability Elios 3 (Indoor Inspection Drone)",
+      "subtitle": "Kollisionstolerante Hallen- & Tankdrohne",
+      "vendor": "Flyability SA",
+      "hq": "Lausanne, Schweiz (EU/EFTA)",
+      "tier": "Tier 2",
+      "costLabel": "≤ €100k",
+      "status": "EMPFOHLEN",
+      "url": "https://flyability.com/elios-3",
+      "overview": "Kollisionstolerante Hallendrohne im Käfig für Inspektionen in engen Behältern, Kaminen und unter Hallendächern ohne GPS.",
+      "inputs": [
+        "Indoor SLAM Telemetry",
+        "Thermal Stream"
+      ],
+      "outputs": [
+        "E57 Point Cloud",
+        "LAS",
+        "Flyability 3D Model"
+      ],
+      "bridges": [
+        "FARO Sphere XG",
+        "Bentley iTwin",
+        "NVIDIA Omniverse"
+      ],
+      "compliance": {
+        "omniverse": "E57 Bridge",
+        "sovereignty": "Schweizer Sicherheitsstandard",
+        "openStandard": "E57"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-LEICA-BLK2FLY",
+      "categoryCode": "1.3",
+      "categoryName": "Autonome Drohnen & AMR-Roboter",
+      "name": "Leica BLK2FLY Autonomous Flying LiDAR",
+      "subtitle": "Autonome Flugdrohne mit 3D-LiDAR-Scanner",
+      "vendor": "Leica Geosystems AG / Hexagon",
+      "hq": "Heerbrugg, Schweiz (EU/EFTA)",
+      "tier": "Tier 3",
+      "costLabel": "> €100k",
+      "status": "EVALUIERT",
+      "url": "https://leica-geosystems.com/blk2fly",
+      "overview": "Autonome Flugdrohne mit LiDAR-Scanner. Erfasst Dächer, Fassaden und hochgelegene Rohrbrücken vollautomatisch ohne Gerüstbau.",
+      "inputs": [
+        "GNSS Telemetrie",
+        "LiDAR Stream"
+      ],
+      "outputs": [
+        "E57",
+        "LGS",
+        "LAS",
+        "OpenUSD"
+      ],
+      "bridges": [
+        "Hexagon HxDR",
+        "Leica Cyclone",
+        "NVIDIA Omniverse"
+      ],
+      "compliance": {
+        "omniverse": "Extension Bridge",
+        "sovereignty": "EASA zertifiziert",
+        "openStandard": "E57"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-ARTEC3D-STUDIO",
+      "categoryCode": "1.4",
+      "categoryName": "Handheld 3DGS & Photogrammetrie",
+      "name": "Artec 3D Cloud / Studio (Leo & Eva)",
+      "subtitle": "Messtechnischer 3D-Handscanner für Reverse Engineering",
+      "vendor": "Artec 3D",
+      "hq": "Luxemburg (EU)",
+      "tier": "Tier 2",
+      "costLabel": "≤ €100k",
+      "status": "STANDARDIZIERT",
+      "url": "https://artec3d.com",
+      "overview": "Hochpräzise Handscanner (Artec Leo/Eva) für Reverse Engineering und Qualitätskontrolle mit Sub-Millimeter-Genauigkeit.",
+      "inputs": [
+        "Structured Light Rays",
+        "Blue Laser Lines"
+      ],
+      "outputs": [
+        "STEP",
+        "IGES",
+        "OBJ",
+        "STL",
+        "OpenUSD (.usd)"
+      ],
+      "bridges": [
+        "SolidWorks",
+        "Geomagic Design X",
+        "NVIDIA Omniverse"
+      ],
+      "compliance": {
+        "omniverse": "USD Exporter",
+        "sovereignty": "100% EU Souverän (Luxemburg)",
+        "openStandard": "STEP / STL"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-NIANTIC-SCANIVERSE",
+      "categoryCode": "1.4",
+      "categoryName": "Handheld 3DGS & Photogrammetrie",
+      "name": "Scaniverse (Niantic Spatial 3DGS)",
+      "subtitle": "Mobile 3D Gaussian Splatting App",
+      "vendor": "Niantic Inc.",
+      "hq": "San Francisco, CA, USA",
+      "tier": "Tier 1",
+      "costLabel": "Kostenfrei / €0",
+      "status": "EMPFOHLEN",
+      "url": "https://scaniverse.com",
+      "overview": "Kostenlose mobile 3D-Erfassungs-App auf Basis von 3D Gaussian Splatting. Nutzt Smartphones mit LiDAR für schnelles Requisiten-Scannen.",
+      "inputs": [
+        "Mobile LiDAR Rays",
+        "Video Camera Stream"
+      ],
+      "outputs": [
+        "SPZ",
+        "PLY",
+        "glTF 2.0",
+        "USDZ"
+      ],
+      "bridges": [
+        "Blender 3D",
+        "WebXR Viewers",
+        "NVIDIA Omniverse"
+      ],
+      "compliance": {
+        "omniverse": "USDZ Native",
+        "sovereignty": "Mobile App Standard",
+        "openStandard": "glTF / USDZ / PLY"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-XGRIDS-PORTALCAM",
+      "categoryCode": "1.4",
+      "categoryName": "Handheld 3DGS & Photogrammetrie",
+      "name": "XGRIDS Portalcam & Studio (LiDAR + 3DGS)",
+      "subtitle": "Handgeführter LiDAR + 3D Gaussian Splatting Scanner",
+      "vendor": "XGRIDS Technology Inc.",
+      "hq": "Shenzhen, China",
+      "tier": "Tier 1",
+      "costLabel": "≤ €30k",
+      "status": "TOP FOTOREALISMUS",
+      "url": "https://xgrids.com",
+      "overview": "Handgeführter 3D-Scanner, der LiDAR, Kameras und 3D Gaussian Splatting (3DGS) verbindet, um fotorealistische 3D-Abbilder spiegelnder Objekte zu erstellen.",
+      "inputs": [
+        "LiDAR Stream",
+        "4K Video",
+        "GCP Passpunkte"
+      ],
+      "outputs": [
+        "PLY (3DGS / Mesh)",
+        "OpenUSD (.usd)",
+        "E57",
+        "LAS"
+      ],
+      "bridges": [
+        "NVIDIA Omniverse 3DGS Extension",
+        "Unreal Engine 5",
+        "Blender 3D"
+      ],
+      "compliance": {
+        "omniverse": "USD & PLY Export",
+        "sovereignty": "Lokale Desktop-Verarbeitung",
+        "openStandard": "OpenUSD / PLY"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-AUTODESK-RECAP",
+      "categoryCode": "1.5",
+      "categoryName": "360°-Erfassung & GIS-Kartierung",
+      "name": "Autodesk ReCap Pro",
+      "subtitle": "Punktwolken-Aufbereitung & Photogrammetrie",
+      "vendor": "Autodesk Inc.",
+      "hq": "San Francisco, CA, USA",
+      "tier": "Tier 1",
+      "costLabel": "≤ €30k",
+      "status": "EVALUIERT",
+      "url": "https://autodesk.com/recap",
+      "overview": "Punktwolken-Software zum Bereinigen, Beschneiden und Umwandeln roher Scans in das Autodesk RCS/RCP-Format.",
+      "inputs": [
+        "E57",
+        "LAS",
+        "PTX",
+        "Drone Photos"
+      ],
+      "outputs": [
+        "RCS",
+        "RCP",
+        "OBJ",
+        "OpenUSD"
+      ],
+      "bridges": [
+        "Autodesk Revit",
+        "Inventor",
+        "AutoCAD",
+        "NVIDIA Omniverse"
+      ],
+      "compliance": {
+        "omniverse": "USD Exporter",
+        "sovereignty": "SOC2 Compliant",
+        "openStandard": "E57 / OBJ"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-CESIUM-3DTILES",
+      "categoryCode": "1.5",
+      "categoryName": "360°-Erfassung & GIS-Kartierung",
+      "name": "Cesium (3D Tiles Streaming Platform)",
+      "subtitle": "OGC 3D Tiles Streaming für Geodaten",
+      "vendor": "Cesium GS Inc. / Bentley",
+      "hq": "Philadelphia, PA, USA",
+      "tier": "Tier 1",
+      "costLabel": "≤ €30k",
+      "status": "STANDARDIZIERT",
+      "url": "https://cesium.com",
+      "overview": "Offene Plattform zum Streaming riesiger 3D-Geodaten und 3D-Tiles-Datensätze in Webbrowser und Echtzeit-Engines.",
+      "inputs": [
+        "LAS",
+        "E57",
+        "KML",
+        "GeoTIFF",
+        "CityGML",
+        "OpenUSD"
+      ],
+      "outputs": [
+        "3D Tiles (B3DM/PNTS)",
+        "Quantized Mesh",
+        "WebGL"
+      ],
+      "bridges": [
+        "NVIDIA Omniverse",
+        "Unreal Engine 5",
+        "ESRI ArcGIS"
+      ],
+      "compliance": {
+        "omniverse": "3D Tiles Plugin Native",
+        "sovereignty": "OGC Open Standard",
+        "openStandard": "3D Tiles / glTF"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-ESRI-ARCGIS",
+      "categoryCode": "1.5",
+      "categoryName": "360°-Erfassung & GIS-Kartierung",
+      "name": "ESRI ArcGIS Spatial Platform",
+      "subtitle": "Enterprise GIS & Geoinformationssystem",
+      "vendor": "ESRI Inc.",
+      "hq": "Redlands, CA, USA / EU Support",
+      "tier": "Tier 3",
+      "costLabel": "> €100k",
+      "status": "STANDARDIZIERT",
+      "url": "https://esri.com/arcgis",
+      "overview": "Marktführendes Geoinformationssystem (GIS) zur Verwaltung von Standortdaten, Werksnetzen und regionaler Infrastruktur.",
+      "inputs": [
+        "Shapefiles",
+        "Geodatabase",
+        "IFC",
+        "DWG",
+        "Satellite Data"
+      ],
+      "outputs": [
+        "I3S (Indexed 3D Scene Layers)",
+        "GeoJSON",
+        "Web Maps"
+      ],
+      "bridges": [
+        "Autodesk Construction Cloud",
+        "NVIDIA Omniverse",
+        "SAP HANA GIS"
+      ],
+      "compliance": {
+        "omniverse": "ArcGIS Extension",
+        "sovereignty": "ISO 19100 Series",
+        "openStandard": "I3S / OGC"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-FARO-SPHERE",
+      "categoryCode": "1.5",
+      "categoryName": "360°-Erfassung & GIS-Kartierung",
+      "name": "FARO Sphere XG (Cloud Spatial Ecosystem)",
+      "subtitle": "Zentrale Reality-Capture Cloud-Plattform",
+      "vendor": "FARO Technologies Inc.",
+      "hq": "Lake Mary, FL, USA / Stuttgart, DE (EU)",
+      "tier": "Tier 2",
+      "costLabel": "≤ €100k",
+      "status": "EVALUIERT",
+      "url": "https://faro.com/sphere",
+      "overview": "Zentrale Cloud-Plattform, die statische Laserscans, Mobile-SLAM-Daten und 360°-Fotos in einer gemeinsamen Umgebung zusammenführt.",
+      "inputs": [
+        "FLS",
+        "E57",
+        "360 Photos",
+        "CAD STEP"
+      ],
+      "outputs": [
+        "E57",
+        "Web 3D Stream",
+        "Deviation Heatmaps"
+      ],
+      "bridges": [
+        "Autodesk Revit",
+        "Navisworks",
+        "NVIDIA Omniverse Cloud"
+      ],
+      "compliance": {
+        "omniverse": "Cloud Stream Extension",
+        "sovereignty": "SOC2 / ISO Compliant",
+        "openStandard": "E57 / STEP"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-MATTERPORT-PRO3",
+      "categoryCode": "1.5",
+      "categoryName": "360°-Erfassung & GIS-Kartierung",
+      "name": "Matterport Pro3 & 360 Spatial Platform",
+      "subtitle": "360° LiDAR-Kamera & Virtuelle Rundgänge",
+      "vendor": "Matterport Inc.",
+      "hq": "Sunnyvale, CA, USA",
+      "tier": "Tier 2",
+      "costLabel": "≤ €100k",
+      "status": "STANDARD WALKTHROUGH",
+      "url": "https://matterport.com",
+      "overview": "Führende Plattform für virtuelle 360°-Begehungen. Nutzt die Pro3 LiDAR-Kamera für schnelle Rundgänge in Innen- und Außenbereichen.",
+      "inputs": [
+        "Pro3 LiDAR Scan",
+        "Sphärische 360° Fotos"
+      ],
+      "outputs": [
+        "E57 Point Cloud",
+        "RVT (Revit BIM)",
+        "DWG",
+        "OBJ"
+      ],
+      "bridges": [
+        "Autodesk Construction Cloud",
+        "AWS IoT TwinMaker",
+        "NVIDIA Omniverse"
+      ],
+      "compliance": {
+        "omniverse": "Connector Bridge",
+        "sovereignty": "SOC2 / ISO 27001",
+        "openStandard": "E57 / RVT"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-ORB360",
+      "categoryCode": "1.5",
+      "categoryName": "360°-Erfassung & GIS-Kartierung",
+      "name": "Orb360 Turntable System",
+      "subtitle": "Automatisierte 360° Bauteil-Fotografie",
+      "vendor": "Orb360 Technologies",
+      "hq": "Deutschland (EU)",
+      "tier": "Tier 1",
+      "costLabel": "≤ €30k",
+      "status": "EVALUIERT",
+      "url": "https://orb360.tech",
+      "overview": "Automatisierter Drehteller zur Erfassung kleiner Industrieteile für Ersatzteilkataloge und 3D-Web-Viewer.",
+      "inputs": [
+        "High-Res Kamera Fotos"
+      ],
+      "outputs": [
+        "glTF 2.0",
+        "OBJ",
+        "Interactive Web HTML"
+      ],
+      "bridges": [
+        "WooCommerce",
+        "SAP Commerce Cloud",
+        "Blender"
+      ],
+      "compliance": {
+        "omniverse": "Web Standard Export",
+        "sovereignty": "100% EU Souverän",
+        "openStandard": "glTF 2.0"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-EPIC-REALITYSCAN",
+      "categoryCode": "1.5",
+      "categoryName": "360°-Erfassung & GIS-Kartierung",
+      "name": "RealityScan (Epic Games / Mobile)",
+      "subtitle": "Kostenlose Mobile Photogrammetrie App",
+      "vendor": "Epic Games Inc. / Capturing Reality",
+      "hq": "Bratislava, Slowakei (EU)",
+      "tier": "Tier 1",
+      "costLabel": "Kostenfrei / €0",
+      "status": "EVALUIERT",
+      "url": "https://capturingreality.com/realityscan",
+      "overview": "Mobile Photogrammetrie-App, die Fotoserie auf dem Smartphone in 3D-Modelle umwandelt.",
+      "inputs": [
+        "Smartphone Kamera Fotos"
+      ],
+      "outputs": [
+        "glTF 2.0",
+        "USDZ",
+        "OBJ",
+        "FBX"
+      ],
+      "bridges": [
+        "Unreal Engine 5",
+        "Sketchfab",
+        "Blender"
+      ],
+      "compliance": {
+        "omniverse": "USDZ Export",
+        "sovereignty": "100% EU Entwicklung",
+        "openStandard": "glTF / USDZ"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-META-SAM3D",
+      "categoryCode": "1.6",
+      "categoryName": "Spatial Perzeption & KI-Erkennung",
+      "name": "Meta Segment Anything 3D (SAM 3D)",
+      "subtitle": "Zero-Shot KI-Segmentierung für 3D-Punktwolken",
+      "vendor": "Meta AI Research",
+      "hq": "Menlo Park, CA, USA",
+      "tier": "Tier 1",
+      "costLabel": "Open Source / €0",
+      "status": "EMPFOHLEN",
+      "url": "https://github.com/facebookresearch/segment-anything-3d",
+      "overview": "KI-Modell zur automatischen Segmentierung roher Punktwolken und Meshes in einzelne Objekte (Rohre, Wände, Roboter).",
+      "inputs": [
+        "Point Clouds (E57/LAS)",
+        "OpenUSD Stage",
+        "RGB-D Frames"
+      ],
+      "outputs": [
+        "Segmented USD Prims",
+        "Bounding Boxes"
+      ],
+      "bridges": [
+        "NVIDIA Omniverse Nucleus",
+        "Blender",
+        "PyTorch"
+      ],
+      "compliance": {
+        "omniverse": "Semantic Schema Native",
+        "sovereignty": "Apache 2.0 Open Source",
+        "openStandard": "OpenUSD Semantic Schema"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-RIIICO-AI",
+      "categoryCode": "1.6",
+      "categoryName": "Spatial Perzeption & KI-Erkennung",
+      "name": "RIIICO (Factory AI Automated Layout)",
+      "subtitle": "KI-Punktwolken-Segmentierung in 3D-CAD",
+      "vendor": "RIIICO GmbH",
+      "hq": "Düsseldorf, Deutschland (EU)",
+      "tier": "Tier 2",
+      "costLabel": "≤ €100k",
+      "status": "EMPFOHLEN",
+      "url": "https://riiico.com",
+      "overview": "KI-Software, die rohe 3D-Punktwolken von Bestandsfabriken automatisch in parametrische CAD/BIM-Layouts und einzelne 3D-Objekte umwandelt.",
+      "inputs": [
+        "E57 Point Cloud",
+        "NavVis Data",
+        "Leica Scans"
+      ],
+      "outputs": [
+        "OpenUSD (.usd)",
+        "IFC",
+        "STEP",
+        "Autodesk Revit (.RVT)"
+      ],
+      "bridges": [
+        "NVIDIA Omniverse",
+        "Autodesk Revit",
+        "Siemens NX"
+      ],
+      "compliance": {
+        "omniverse": "USD Native Export",
+        "sovereignty": "100% EU DSGVO (Deutschland)",
+        "openStandard": "OpenUSD / IFC"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-WAVEYE-RADAR",
+      "categoryCode": "1.6",
+      "categoryName": "Spatial Perzeption & KI-Erkennung",
+      "name": "Waveye 4D Imaging Radar (Argus mmWave)",
+      "subtitle": "Hochauflösende 4D-Radar Perzeption für AMRs",
+      "vendor": "Waveye Inc.",
+      "hq": "Palo Alto, USA / Stuttgart, Deutschland (EU)",
+      "tier": "Tier 1",
+      "costLabel": "≤ €30k",
+      "status": "EMPFOHLENER 4D SENSOR",
+      "url": "https://waveye.com",
+      "overview": "Ultra-hochauflösender 4D-Imaging-Radarsensor (Argus) für die Roboterwahrnehmung. Generiert dichte 4D-Punktwolken inklusive Doppler-Geschwindigkeitsvektoren für autonome Systeme.",
+      "inputs": [
+        "Raw mmWave RF Signals",
+        "Doppler Telemetrie"
+      ],
+      "outputs": [
+        "4D Point Cloud (X, Y, Z, Velocity)",
+        "ROS 2 PointCloud2 Topics"
+      ],
+      "bridges": [
+        "ROS 2 DDS",
+        "NVIDIA Isaac Sim / Lab",
+        "DeepHub Flowcate"
+      ],
+      "compliance": {
+        "omniverse": "ROS 2 Bridge",
+        "sovereignty": "100% EU DSGVO-Konform",
+        "openStandard": "ROS 2 DDS"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-YOLO26-EDGE",
+      "categoryCode": "1.6",
+      "categoryName": "Spatial Perzeption & KI-Erkennung",
+      "name": "YOLO26 Edge Vision & Object Tracking",
+      "subtitle": "Echtzeit-KI-Objekterkennung für Shopfloor-Kameras",
+      "vendor": "Ultralytics / Open Source",
+      "hq": "Global Community",
+      "tier": "Tier 1",
+      "costLabel": "≤ €30k",
+      "status": "STANDARDIZIERT",
+      "url": "https://ultralytics.com",
+      "overview": "Echtzeit-Computer-Vision-Modell optimiert für 3D-Bounding-Boxen, Personen-Tracking und Sicherheitszonenüberwachung auf Edge-Geräten.",
+      "inputs": [
+        "RTSP Video Feeds",
+        "USB Camera Streams"
+      ],
+      "outputs": [
+        "JSON Bounding Box Data",
+        "MQTT Telemetry",
+        "ROS 2 Topics"
+      ],
+      "bridges": [
+        "DeepStream SDK",
+        "NVIDIA Omniverse",
+        "Collectu Data Engine"
+      ],
+      "compliance": {
+        "omniverse": "DeepStream Bridge",
+        "sovereignty": "On-Premise Execution",
+        "openStandard": "MQTT / ROS 2"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-MODBUS-TCP",
+      "categoryCode": "1.7",
+      "categoryName": "OT & Sensorik-Feldbusse",
+      "name": "Modbus TCP/RTU Protocol",
+      "subtitle": "Legacy-Sensor- & Energiezähler-Protokoll",
+      "vendor": "Modbus Organization",
+      "hq": "Hopkinton, MA, USA / Global",
+      "tier": "Tier 1",
+      "costLabel": "Open Standard / €0",
+      "status": "LEGACY SUPPORT",
+      "url": "https://modbus.org",
+      "overview": "Industrie-Kommunikationsprotokoll aus dem Jahr 1979 zum Auslesen von Energiezählern, Temperaturmessern und Alt-SPSen.",
+      "inputs": [
+        "RS-485 Serial Signals",
+        "TCP Packets"
+      ],
+      "outputs": [
+        "Raw Register Values (Integer/Float)"
+      ],
+      "bridges": [
+        "Collectu Engine",
+        "Node-RED",
+        "OPC UA Gateways"
+      ],
+      "compliance": {
+        "omniverse": "IoT Edge Gateway",
+        "sovereignty": "Royalty-Free Standard",
+        "openStandard": "Modbus TCP"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-MTCONNECT",
+      "categoryCode": "1.7",
+      "categoryName": "OT & Sensorik-Feldbusse",
+      "name": "MTConnect Machine Standard",
+      "subtitle": "Offener Standard für CNC-Werkzeugmaschinen",
+      "vendor": "MTConnect Institute",
+      "hq": "McLean, VA, USA",
+      "tier": "Tier 1",
+      "costLabel": "Open Standard / €0",
+      "status": "EVALUIERT",
+      "url": "https://mtconnect.org",
+      "overview": "Offenes Protokoll zum Extrahieren struktureller Daten aus CNC-Werkzeugmaschinen und Fräszentren in XML/REST-Formate.",
+      "inputs": [
+        "CNC Controller Memory",
+        "Machine Sensors"
+      ],
+      "outputs": [
+        "MTConnect XML Streams",
+        "HTTP REST Responses"
+      ],
+      "bridges": [
+        "Collectu Data Engine",
+        "MES Systems",
+        "Azure IoT"
+      ],
+      "compliance": {
+        "omniverse": "Gateway to USD / AAS",
+        "sovereignty": "ANSI Recognized Standard",
+        "openStandard": "MTConnect XML"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-OPC-UA",
+      "categoryCode": "1.7",
+      "categoryName": "OT & Sensorik-Feldbusse",
+      "name": "OPC UA (IEC 62541 - Client/Server & PubSub)",
+      "subtitle": "Herstellerunabhängiger OT-Kommunikationsstandard",
+      "vendor": "OPC Foundation",
+      "hq": "Scottsdale, AZ, USA / EU Office",
+      "tier": "Tier 1",
+      "costLabel": "Open Standard / €0",
+      "status": "CORE OT BACKBONE",
+      "url": "https://opcfoundation.org",
+      "overview": "Herstellerunabhängiges Protokoll für Industrie 4.0. Verbindet SPSen, CNCs und Roboter direkt mit dem 3D-Zwilling im Industrial Metaverse über semantische Companion Specifications.",
+      "inputs": [
+        "SPS-Variablen",
+        "Sensor-Register",
+        "Feldbus-Streams"
+      ],
+      "outputs": [
+        "OPC UA XML NodeSets",
+        "JSON PubSub Streams",
+        "Binary Encoded Streams"
+      ],
+      "bridges": [
+        "NVIDIA Omniverse Live Connect",
+        "Siemens S7-1500",
+        "Collectu Data Engine",
+        "Azure IoT"
+      ],
+      "compliance": {
+        "omniverse": "Native Telemetry Bridge",
+        "sovereignty": "100% EU Industrie 4.0 Standard",
+        "openStandard": "IEC 62541"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-PROFINET-TSN",
+      "categoryCode": "1.7",
+      "categoryName": "OT & Sensorik-Feldbusse",
+      "name": "PROFINET / TSN (Time-Sensitive Networking)",
+      "subtitle": "Industrieller Echtzeit-Ethernet-Standard",
+      "vendor": "PI (PROFIBUS & PROFINET International)",
+      "hq": "Karlsruhe, Deutschland (EU)",
+      "tier": "Tier 1",
+      "costLabel": "Open Standard / €0",
+      "status": "STANDARDIZIERT",
+      "url": "https://profibus.com",
+      "overview": "Führender europäischer Echtzeit-Industrial-Ethernet-Standard. Garantiert in Kombination mit TSN deterministische Taktraten im Mikrosekundenbereich für die Fabrikautomatisierung.",
+      "inputs": [
+        "Ethernet Frames",
+        "Sensorsignale"
+      ],
+      "outputs": [
+        "PROFINET IO Telemetrie",
+        "TSN Deterministische Streams"
+      ],
+      "bridges": [
+        "Siemens S7 SPS",
+        "ISG-Virtuos",
+        "OPC UA PubSub over TSN"
+      ],
+      "compliance": {
+        "omniverse": "Fieldbus Integration",
+        "sovereignty": "100% EU Standard (IEC 61158)",
+        "openStandard": "PROFINET / IEEE 802.1 TSN"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-ROS2-DDS",
+      "categoryCode": "1.7",
+      "categoryName": "OT & Sensorik-Feldbusse",
+      "name": "ROS / ROS 2 (DDS Inter-Robot Middleware)",
+      "subtitle": "Open-Source Roboter-Betriebssystem & Middleware",
+      "vendor": "Open Robotics (OSRF)",
+      "hq": "Mountain View, CA, USA / Global Community",
+      "tier": "Tier 1",
+      "costLabel": "Open Source / €0",
+      "status": "CORE ROBOTICS BACKBONE",
+      "url": "https://ros.org",
+      "overview": "Open-Source Roboter-Middleware auf Basis von Data Distribution Service (DDS) für die Zero-Copy-Kommunikation in autonomen Robotern und AMRs.",
+      "inputs": [
+        "Sensor Topics (LaserScan, Image, IMU)",
+        "Action Goals"
+      ],
+      "outputs": [
+        "Motor Velocity Commands (Twist)",
+        "Joint Trajectories",
+        "TF Transform Trees"
+      ],
+      "bridges": [
+        "NVIDIA Isaac Sim/Lab",
+        "Hugging Face LeRobot",
+        "Gazebo",
+        "Waveye Radar"
+      ],
+      "compliance": {
+        "omniverse": "Native Isaac Sim Bridge",
+        "sovereignty": "Open Source Standard",
+        "openStandard": "OMG DDS Standard"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-AMQP-PROTOCOL",
+      "categoryCode": "1.8",
+      "categoryName": "Industrial IoT-Protokolle",
+      "name": "AMQP Enterprise Messaging",
+      "subtitle": "Zuverlässiges Enterprise-Messaging für Cloud",
+      "vendor": "OASIS Consortium",
+      "hq": "Boston, MA, USA / Global",
+      "tier": "Tier 1",
+      "costLabel": "Open Standard / €0",
+      "status": "EVALUIERT",
+      "url": "https://amqp.org",
+      "overview": "Unternehmensgerechtes Messaging-Protokoll für transaktionssicheres Queuing, Routing und Punkt-zu-Punkt-Zustellung von Nachrichten.",
+      "inputs": [
+        "Telemetrie-Payloads",
+        "ERP Events",
+        "Alerts"
+      ],
+      "outputs": [
+        "AMQP Packets",
+        "Event Triggers"
+      ],
+      "bridges": [
+        "Azure Digital Twins",
+        "RabbitMQ",
+        "ERP Systeme"
+      ],
+      "compliance": {
+        "omniverse": "Cloud Bridge",
+        "sovereignty": "ISO/IEC 19464",
+        "openStandard": "AMQP 1.0"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-MQTT-SPARKPLUG",
+      "categoryCode": "1.8",
+      "categoryName": "Industrial IoT-Protokolle",
+      "name": "MQTT / Sparkplug B",
+      "subtitle": "Leichtgewichtige IIoT Pub/Sub Serialisierung",
+      "vendor": "Eclipse Foundation / OASIS",
+      "hq": "Brüssel, Belgien (EU)",
+      "tier": "Tier 1",
+      "costLabel": "Open Standard / €0",
+      "status": "STANDARDIZIERT",
+      "url": "https://sparkplug.eclipse.org",
+      "overview": "Leichtgewichtiges Publish/Subscribe-Protokoll. Sparkplug B bietet Zustandskontrolle, Auto-Discovery von Datentags und strukturierte Protobuf-Payloads für IIoT-Netzwerke.",
+      "inputs": [
+        "Sensorsignale",
+        "Edge Gateways",
+        "SPS Tags"
+      ],
+      "outputs": [
+        "Sparkplug B Protobuf Payloads",
+        "JSON MQTT Topics"
+      ],
+      "bridges": [
+        "Collectu Engine",
+        "AWS IoT",
+        "Azure Digital Twins",
+        "NVIDIA Omniverse"
+      ],
+      "compliance": {
+        "omniverse": "Native IoT Connector",
+        "sovereignty": "100% EU Governance (Eclipse)",
+        "openStandard": "ISO/IEC 20922"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-AUTODESK-FUSION",
+      "categoryCode": "2.1",
       "categoryName": "Mechanisches CAD (MCAD)",
       "name": "Autodesk Fusion 360",
       "subtitle": "Cloud-CAD/CAM & Prototyping für Entwicklungsteams",
@@ -168,7 +1152,7 @@ window.INDEX_DATA = {
     },
     {
       "refCode": "IND-META-2026-CATIA-3DS",
-      "categoryCode": "1.1",
+      "categoryCode": "2.1",
       "categoryName": "Mechanisches CAD (MCAD)",
       "name": "Dassault CATIA V5 / 3DEXPERIENCE",
       "subtitle": "OEM High-End Class-A Surface Master Engine",
@@ -203,7 +1187,7 @@ window.INDEX_DATA = {
     },
     {
       "refCode": "IND-META-2026-SOLIDWORKS",
-      "categoryCode": "1.1",
+      "categoryCode": "2.1",
       "categoryName": "Mechanisches CAD (MCAD)",
       "name": "Dassault SolidWorks",
       "subtitle": "Parametrisches 3D-CAD für den Mittelstand",
@@ -240,7 +1224,7 @@ window.INDEX_DATA = {
     },
     {
       "refCode": "IND-META-2026-PTC-CREO",
-      "categoryCode": "1.1",
+      "categoryCode": "2.1",
       "categoryName": "Mechanisches CAD (MCAD)",
       "name": "PTC Creo Parametric",
       "subtitle": "High-Precision MCAD & Generative AI",
@@ -277,7 +1261,7 @@ window.INDEX_DATA = {
     },
     {
       "refCode": "IND-META-2026-PTC-ONSHAPE",
-      "categoryCode": "1.1",
+      "categoryCode": "2.1",
       "categoryName": "Mechanisches CAD (MCAD)",
       "name": "PTC Onshape",
       "subtitle": "Pure Cloud-Native Multi-User CAD",
@@ -314,7 +1298,7 @@ window.INDEX_DATA = {
     },
     {
       "refCode": "IND-META-2026-SIEMENS-NX",
-      "categoryCode": "1.1",
+      "categoryCode": "2.1",
       "categoryName": "Mechanisches CAD (MCAD)",
       "name": "Siemens NX CAD",
       "subtitle": "High-End OEM MCAD & OpenUSD Live-Kopplung",
@@ -349,7 +1333,7 @@ window.INDEX_DATA = {
     },
     {
       "refCode": "IND-META-2026-AUTODESK-CIVIL3D",
-      "categoryCode": "1.2",
+      "categoryCode": "2.2",
       "categoryName": "BIM, Bauwesen & Infrastruktur (AEC)",
       "name": "Autodesk Civil 3D",
       "subtitle": "Gelände- & Infrastruktur-BIM für Fabrikareale",
@@ -385,7 +1369,7 @@ window.INDEX_DATA = {
     },
     {
       "refCode": "IND-META-2026-AUTODESK-REVIT",
-      "categoryCode": "1.2",
+      "categoryCode": "2.2",
       "categoryName": "BIM, Bauwesen & Infrastruktur (AEC)",
       "name": "Autodesk Revit",
       "subtitle": "BIM Master-System für digitale Fabrikgebäude",
@@ -421,7 +1405,7 @@ window.INDEX_DATA = {
     },
     {
       "refCode": "IND-META-2026-NEMETSCHEK-ALLPLAN",
-      "categoryCode": "1.2",
+      "categoryCode": "2.2",
       "categoryName": "BIM, Bauwesen & Infrastruktur (AEC)",
       "name": "Nemetschek Allplan / Vectorworks",
       "subtitle": "Europäisches OpenBIM-System für Fertigteilbau",
@@ -456,7 +1440,7 @@ window.INDEX_DATA = {
     },
     {
       "refCode": "IND-META-2026-RHINO-GRASSHOPPER",
-      "categoryCode": "1.2",
+      "categoryCode": "2.2",
       "categoryName": "BIM, Bauwesen & Infrastruktur (AEC)",
       "name": "Rhino 3D + Grasshopper (Parametric AEC)",
       "subtitle": "Algorithmatisches 3D-Design & Prozedurale Geometrie",
@@ -495,7 +1479,7 @@ window.INDEX_DATA = {
     },
     {
       "refCode": "IND-META-2026-TRIMBLE-SKETCHUP",
-      "categoryCode": "1.2",
+      "categoryCode": "2.2",
       "categoryName": "BIM, Bauwesen & Infrastruktur (AEC)",
       "name": "Trimble SketchUp",
       "subtitle": "Schnelle 3D-Konzeptplanung & Fabrik-Layouting",
@@ -531,8 +1515,196 @@ window.INDEX_DATA = {
       }
     },
     {
+      "refCode": "IND-META-2026-AUTODESK-3DSMAX",
+      "categoryCode": "2.3",
+      "categoryName": "DCC & Generatives 3D-Design",
+      "name": "Autodesk 3ds Max",
+      "subtitle": "Industrial DCC & Mesh-Optimierung",
+      "vendor": "Autodesk Inc.",
+      "hq": "San Francisco, CA, USA",
+      "tier": "Tier 2",
+      "costLabel": "≤ €100k",
+      "status": "EVALUIERT",
+      "url": "https://autodesk.com/3ds-max",
+      "overview": "Industrielle DCC-Software für Architektur-Visualisierung, CAD-Geometriebereinigung und Echtzeit-Asset-Vorbereitung für Spatial Engines.",
+      "inputs": [
+        "MAX",
+        "FBX",
+        "OBJ",
+        "Inventor (.IPT)",
+        "STEP",
+        "Revit (.RVT)"
+      ],
+      "outputs": [
+        "OpenUSD (.usd)",
+        "glTF 2.0",
+        "FBX",
+        "OBJ"
+      ],
+      "bridges": [
+        "NVIDIA Omniverse",
+        "Unreal Engine Datasmith",
+        "Unity"
+      ],
+      "compliance": {
+        "omniverse": "USD Extension",
+        "sovereignty": "SOC2 Compliant",
+        "openStandard": "OpenUSD / glTF 2.0"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-AUTODESK-MAYA",
+      "categoryCode": "2.3",
+      "categoryName": "DCC & Generatives 3D-Design",
+      "name": "Autodesk Maya",
+      "subtitle": "Kinematik-Rigging & Worker-Animation",
+      "vendor": "Autodesk Inc.",
+      "hq": "San Francisco, CA, USA",
+      "tier": "Tier 2",
+      "costLabel": "≤ €100k",
+      "status": "EVALUIERT",
+      "url": "https://autodesk.com/maya",
+      "overview": "Animations- und Rigging-Software für Ergonomie- und Arbeiter-Animationen sowie komplexe Roboterkinematik im digitalen Zwilling.",
+      "inputs": [
+        "MA",
+        "MB",
+        "FBX",
+        "OBJ",
+        "USD",
+        "Alembic"
+      ],
+      "outputs": [
+        "OpenUSD (.usd)",
+        "FBX",
+        "glTF 2.0",
+        "Alembic"
+      ],
+      "bridges": [
+        "NVIDIA Omniverse",
+        "Unreal Engine 5",
+        "OptiTrack Mocap"
+      ],
+      "compliance": {
+        "omniverse": "Native USD Viewport",
+        "sovereignty": "SOC2 Compliant",
+        "openStandard": "OpenUSD / Alembic"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-BLENDER-3D",
+      "categoryCode": "2.3",
+      "categoryName": "DCC & Generatives 3D-Design",
+      "name": "Blender 3D Suite",
+      "subtitle": "Open-Source DCC & OpenUSD Pipeline Workhorse",
+      "vendor": "Blender Foundation",
+      "hq": "Amsterdam, Niederlande (EU)",
+      "tier": "Tier 1",
+      "costLabel": "Open Source / €0",
+      "status": "ESSENTIAL DCC",
+      "url": "https://blender.org",
+      "overview": "Open-Source 3D-Creation Suite für Modellierung, UV-Unwrapping, Texture-Baking und prozedurale Asset-Aufbereitung. Dient als primäres Bereinigungswerkzeug für digitale Zwillinge.",
+      "inputs": [
+        "FBX",
+        "OBJ",
+        "glTF 2.0",
+        "STL",
+        "USD",
+        "Alembic"
+      ],
+      "outputs": [
+        "OpenUSD (.usda/.usdc/.usdz)",
+        "glTF 2.0",
+        "FBX",
+        "OBJ"
+      ],
+      "bridges": [
+        "NVIDIA Omniverse USD Composer",
+        "Unreal Engine 5",
+        "Unity"
+      ],
+      "compliance": {
+        "omniverse": "Native OpenUSD Core",
+        "sovereignty": "100% EU Souverän (FOSS)",
+        "openStandard": "OpenUSD / glTF 2.0"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-HI3D-AI-ENGINE",
+      "categoryCode": "2.3",
+      "categoryName": "DCC & Generatives 3D-Design",
+      "name": "Hi3D AI Engine (Generative 3D to Additive)",
+      "subtitle": "KI-3D-Generierung aus Text & 2D-Bildern",
+      "vendor": "Hi3D AI Inc.",
+      "hq": "European Tech Hub (EU)",
+      "tier": "Tier 1",
+      "costLabel": "≤ €30k",
+      "status": "TESTBED",
+      "url": "https://hi3d.ai",
+      "overview": "Generative KI-Engine, die aus Text-Prompts oder 2D-Fotos strukturierte 3D-Meshes erzeugt und wasserdichte Geometrien für den 3D-Druck und das Scene Staging ausgibt.",
+      "inputs": [
+        "PNG",
+        "JPG",
+        "Text Prompts",
+        "CAD Skizzen"
+      ],
+      "outputs": [
+        "OpenUSD (.usdz)",
+        "glTF 2.0",
+        "STL",
+        "OBJ"
+      ],
+      "bridges": [
+        "NVIDIA Omniverse AI Extensions",
+        "Blender",
+        "WebXR"
+      ],
+      "compliance": {
+        "omniverse": "Native USD Export",
+        "sovereignty": "DSGVO EU Cloud",
+        "openStandard": "OpenUSD / glTF 2.0"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-SIDEFX-HOUDINI",
+      "categoryCode": "2.3",
+      "categoryName": "DCC & Generatives 3D-Design",
+      "name": "SideFX Houdini (Procedural Pipelines)",
+      "subtitle": "Prozeduraler USD-Pipeline-Generator & VFX",
+      "vendor": "SideFX",
+      "hq": "Toronto, Kanada",
+      "tier": "Tier 2",
+      "costLabel": "≤ €100k",
+      "status": "STANDARDIZIERT",
+      "url": "https://sidefx.com",
+      "overview": "Knotenbasierte prozedurale Generierungs- und VFX-Suite. Fungiert als prozedurale Pipeline-Engine für die automatisierte Aufbereitung gewaltiger OpenUSD-Fabrikszenen.",
+      "inputs": [
+        "HIP",
+        "USD",
+        "BGEO",
+        "STEP",
+        "FBX",
+        "OBJ"
+      ],
+      "outputs": [
+        "OpenUSD (.usd/.usdc)",
+        "glTF 2.0",
+        "FBX",
+        "Alembic"
+      ],
+      "bridges": [
+        "NVIDIA Omniverse Hydra",
+        "Unreal Engine 5 (Houdini Engine)",
+        "Unity"
+      ],
+      "compliance": {
+        "omniverse": "Native Solaris USD Engine",
+        "sovereignty": "ISO Compliant",
+        "openStandard": "OpenUSD / Hydra"
+      }
+    },
+    {
       "refCode": "IND-META-2026-AASX-PACKAGE",
-      "categoryCode": "10.0",
+      "categoryCode": "2.4",
       "categoryName": "Datenformate & OpenUSD-Standards",
       "name": "AASX Packages (IDTA / IEC 63278 Container)",
       "subtitle": "Standardisierter Zwillings-Datencontainer",
@@ -566,7 +1738,7 @@ window.INDEX_DATA = {
     },
     {
       "refCode": "IND-META-2026-E57-POINTCLOUD",
-      "categoryCode": "10.0",
+      "categoryCode": "2.4",
       "categoryName": "Datenformate & OpenUSD-Standards",
       "name": "E57 (ASTM E2807 - Punktwolken-Standard)",
       "subtitle": "Herstellerneutraler Punktwolken-Standard",
@@ -599,7 +1771,7 @@ window.INDEX_DATA = {
     },
     {
       "refCode": "IND-META-2026-GLTF-20",
-      "categoryCode": "10.0",
+      "categoryCode": "2.4",
       "categoryName": "Datenformate & OpenUSD-Standards",
       "name": "glTF 2.0 (Khronos Group - Runtime 3D Asset)",
       "subtitle": "Das \"JPEG für 3D\" im Web & Mobile",
@@ -636,7 +1808,7 @@ window.INDEX_DATA = {
     },
     {
       "refCode": "IND-META-2026-JT-ISO14306",
-      "categoryCode": "10.0",
+      "categoryCode": "2.4",
       "categoryName": "Datenformate & OpenUSD-Standards",
       "name": "JT ISO 14306 (Lightweight CAD Tessellation)",
       "subtitle": "Leichtgewichtiges 3D-CAD-Visualisierungsformat",
@@ -669,7 +1841,7 @@ window.INDEX_DATA = {
     },
     {
       "refCode": "IND-META-2026-OPENUSD",
-      "categoryCode": "10.0",
+      "categoryCode": "2.4",
       "categoryName": "Datenformate & OpenUSD-Standards",
       "name": "OpenUSD (Universal Scene Description - ISO)",
       "subtitle": "Der universelle 3D-Szenenbeschreibungs-Standard",
@@ -708,7 +1880,7 @@ window.INDEX_DATA = {
     },
     {
       "refCode": "IND-META-2026-PLY-3DGS",
-      "categoryCode": "10.0",
+      "categoryCode": "2.4",
       "categoryName": "Datenformate & OpenUSD-Standards",
       "name": "PLY / Splat Files (3D Gaussian Splatting)",
       "subtitle": "Fotorealistisches 3D-Gaussian-Splatting Format",
@@ -741,7 +1913,7 @@ window.INDEX_DATA = {
     },
     {
       "refCode": "IND-META-2026-STEP-AP242",
-      "categoryCode": "10.0",
+      "categoryCode": "2.4",
       "categoryName": "Datenformate & OpenUSD-Standards",
       "name": "STEP AP242 (ISO 10303 - Parametrisches CAD)",
       "subtitle": "ISO-Standard für CAD-Geometrie & PMI",
@@ -772,574 +1944,283 @@ window.INDEX_DATA = {
       }
     },
     {
-      "refCode": "IND-META-2026-APPLE-VISION-PRO",
-      "categoryCode": "11.0",
-      "categoryName": "Spatial XR & VR/AR Headsets",
-      "name": "Apple Vision Pro Enterprise",
-      "subtitle": "High-End Spatial Computing Hardware",
-      "vendor": "Apple Inc.",
-      "hq": "Cupertino, CA, USA",
+      "refCode": "IND-META-2026-AAS-IEC63278",
+      "categoryCode": "3.1",
+      "categoryName": "Verwaltungsschale & Zwillings-Standards",
+      "name": "Asset Administration Shell / AAS (IEC 63278)",
+      "subtitle": "RAMI 4.0 Standard für digitale Verwaltungsschalen",
+      "vendor": "IDTA / Plattform Industrie 4.0",
+      "hq": "Frankfurt, Deutschland (EU)",
       "tier": "Tier 1",
-      "costLabel": "≤ €30k",
-      "status": "PREMIUM SPATIAL DEVICE",
-      "url": "https://apple.com/apple-vision-pro",
-      "overview": "Spatial Computer mit extrem hochauflösenden Micro-OLED-Displays (23 Millionen Pixel) für gestochen scharfe CAD-Prüfungen und Cloud-Streaming.",
+      "costLabel": "Open Standard / €0",
+      "status": "PFLICHTSTANDARD INTEROP",
+      "url": "https://industrialdigitaltwin.org",
+      "overview": "Der offizielle RAMI 4.0 Standard für digitale Zwillings-Metadaten. Kapselt technische Dokumentationen, Zertifikate, CAD-Modelle, CO2-Fußabdrücke und Sensorpunkte eines Industrie-Assets.",
       "inputs": [
-        "USDZ",
-        "WebXR",
-        "NVIDIA Omniverse Cloud WebRTC Stream"
+        "XML",
+        "JSON",
+        "AASX Packages",
+        "OPC UA NodeSets",
+        "PDF"
       ],
       "outputs": [
-        "ARKit Spatial Mesh",
-        "Eye/Hand Pose Telemetry"
+        "AASX Package",
+        "REST API JSON",
+        "RDF Knowledge Graphs"
       ],
       "bridges": [
-        "NVIDIA Omniverse Cloud Streaming App",
-        "PTC Vuforia",
-        "Siemens NX VR"
+        "Siemens Operations X",
+        "Collectu Engine",
+        "NVIDIA Omniverse USD Metadata"
       ],
       "compliance": {
-        "omniverse": "WebRTC Streaming Native",
-        "sovereignty": "SOC2 / Apple Enterprise",
-        "openStandard": "USDZ / WebXR / OpenXR"
+        "omniverse": "Metadata Bridge",
+        "sovereignty": "100% EU RAMI 4.0 Standard",
+        "openStandard": "IEC 63278 / IDTA"
       }
     },
     {
-      "refCode": "IND-META-2026-HTC-VIVE-FOCUS3",
-      "categoryCode": "11.0",
-      "categoryName": "Spatial XR & VR/AR Headsets",
-      "name": "HTC VIVE Focus 3 Business",
-      "subtitle": "Robustes Standalone VR/AR Headset für Training",
-      "vendor": "HTC Corporation",
-      "hq": "Taoyuan, Taiwan / EU Support",
+      "refCode": "IND-META-2026-MICROSOFT-DTDL",
+      "categoryCode": "3.1",
+      "categoryName": "Verwaltungsschale & Zwillings-Standards",
+      "name": "Digital Twins Definition Language (DTDL)",
+      "subtitle": "JSON-LD basiertes Modellierungsformat für IIoT",
+      "vendor": "Microsoft / Digital Twin Consortium",
+      "hq": "Redmond, WA, USA",
       "tier": "Tier 1",
-      "costLabel": "≤ €30k",
+      "costLabel": "Open Standard / €0",
       "status": "EVALUIERT",
-      "url": "https://business.vive.com/focus3",
-      "overview": "Robustes Standalone-Enterprise-VR-Headset für industrielles Sicherheitstraining, ergonomische VR-Montagesimulation und Trainingszentren.",
+      "url": "https://github.com/Azure/opendigitaltwins-dtdl",
+      "overview": "JSON-LD-basierte Modellierungssprache zur Definition digitaler Zwillingseinheiten, Raumgraphen und Telemetriesignale in Azure Digital Twins.",
       "inputs": [
-        "OpenXR Apps",
-        "PC VR Streaming",
-        "Android APK"
+        "JSON-LD Schemas",
+        "DTDL Models"
       ],
       "outputs": [
-        "6DOF Controller Tracking",
-        "Optional Eye/Face Tracking"
+        "Spatial Knowledge Graphs",
+        "Azure Synapse Tables"
       ],
       "bridges": [
-        "Halocline",
-        "Unity Industry",
-        "Unreal Engine 5",
-        "NVIDIA Omniverse"
+        "Azure Digital Twins",
+        "Bentley iTwin",
+        "Power BI"
       ],
       "compliance": {
-        "omniverse": "OpenXR Native",
-        "sovereignty": "ISO 27001 Enterprise",
-        "openStandard": "OpenXR"
+        "omniverse": "Azure Bridge",
+        "sovereignty": "W3C Draft",
+        "openStandard": "W3C JSON-LD"
       }
     },
     {
-      "refCode": "IND-META-2026-MAGIC-LEAP-2",
-      "categoryCode": "11.0",
-      "categoryName": "Spatial XR & VR/AR Headsets",
-      "name": "Magic Leap 2 Enterprise AR Glasses",
-      "subtitle": "Ergonomische See-Through AR-Brille für Werksmonteure",
-      "vendor": "Magic Leap Inc.",
-      "hq": "Plantation, FL, USA / EU Support",
+      "refCode": "IND-META-2026-COLLECTU",
+      "categoryCode": "3.2",
+      "categoryName": "KI-Datenmotoren & Pipeline-Bridges",
+      "name": "Collectu (No-Code AI Industrial Data Engine)",
+      "subtitle": "No-Code KI-Verknüpfung von Maschinen an 3D-OpenUSD",
+      "vendor": "Collectu / Futuromundo Cyberländ",
+      "hq": "Baden-Württemberg, Deutschland (EU)",
+      "tier": "Tier 1",
+      "costLabel": "≤ €30k",
+      "status": "EMPFOHLENE DATA ENGINE",
+      "url": "https://futuromundo.com/cyberlaend",
+      "overview": "KI-gestützte No-Code-Datenengine zur nahtlosen Bindung von Maschinen, Sensoren und SPSen an 3D OpenUSD digitale Zwillinge für geschlossene Regelkreise.",
+      "inputs": [
+        "OPC UA",
+        "MQTT",
+        "Modbus",
+        "REST API",
+        "Siemens S7",
+        "ROS 2 Topics"
+      ],
+      "outputs": [
+        "OpenUSD Live Data Stream",
+        "AASX Twin Packages",
+        "WebSockets JSON"
+      ],
+      "bridges": [
+        "NVIDIA Omniverse Nucleus",
+        "Siemens S7 SPS",
+        "Asset Administration Shell (AAS)"
+      ],
+      "compliance": {
+        "omniverse": "Native Live Connector",
+        "sovereignty": "100% EU Souverän (Baden-Württemberg)",
+        "openStandard": "OPC UA / AAS / OpenUSD"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-AWS-TWINMAKER",
+      "categoryCode": "3.3",
+      "categoryName": "Enterprise Cloud-Zwillinge",
+      "name": "AWS IoT TwinMaker",
+      "subtitle": "Cloud-Plattform für 3D-Digital-Twins",
+      "vendor": "Amazon Web Services Inc.",
+      "hq": "Seattle, WA, USA",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
       "status": "EVALUIERT",
-      "url": "https://magicleap.com",
-      "overview": "Leichtgewichtige optische See-Through AR-Brille für Werksmonteure mit dynamischer Abdunkelung für helle Fabrikhallen.",
+      "url": "https://aws.amazon.com/iot-twinmaker",
+      "overview": "Cloud-Plattform, die Entwicklern das Erstellen digitaler Zwillinge ermöglicht durch Aggregation bestehender AWS-Datenspeicher.",
       "inputs": [
-        "OpenXR C++ Apps",
-        "Android Native Packages",
-        "WebXR"
-      ],
-      "outputs": [
-        "Spatial Mesh",
-        "Eye Tracking Data",
-        "6DOF Controller Pose"
-      ],
-      "bridges": [
-        "PTC Vuforia Engine",
-        "Siemens Manifest",
-        "Unity Industry",
-        "OpenXR"
-      ],
-      "compliance": {
-        "omniverse": "OpenXR Compliant",
-        "sovereignty": "Enterprise Safety Certified",
-        "openStandard": "OpenXR / Android Native"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-META-QUEST3",
-      "categoryCode": "11.0",
-      "categoryName": "Spatial XR & VR/AR Headsets",
-      "name": "Meta Quest 3 / Quest Pro (SME Spatial Review)",
-      "subtitle": "Kabelloses Mixed-Reality Headset für den Mittelstand",
-      "vendor": "Meta Platforms Inc.",
-      "hq": "Menlo Park, CA, USA",
-      "tier": "Tier 1",
-      "costLabel": "≤ €30k",
-      "status": "EMPFOHLEN SME",
-      "url": "https://meta.com/quest",
-      "overview": "Vielseitiges kabelloses Standalone MR/VR-Headset. Weit verbreitet im Mittelstand für kostengünstige Werksbegehungen, VR-Training und Remote-Kollaboration.",
-      "inputs": [
-        "OpenXR Executables",
-        "WebXR Browser",
-        "PC VR Streaming"
-      ],
-      "outputs": [
-        "Hand Tracking Telemetrie",
-        "Head Pose Telemetrie"
-      ],
-      "bridges": [
-        "Halocline",
-        "Unity",
-        "Unreal Engine 5",
-        "NVIDIA Omniverse WebRTC"
-      ],
-      "compliance": {
-        "omniverse": "WebRTC Stream",
-        "sovereignty": "SOC2 Enterprise",
-        "openStandard": "OpenXR / WebXR"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-REALWEAR-NAV520",
-      "categoryCode": "11.0",
-      "categoryName": "Spatial XR & VR/AR Headsets",
-      "name": "RealWear Navigator 520 (Assisted Reality Wearable)",
-      "subtitle": "Freihand-Mikrodisplay für Instandhaltung & Service",
-      "vendor": "RealWear Inc.",
-      "hq": "Vancouver, WA, USA",
-      "tier": "Tier 1",
-      "costLabel": "≤ €30k",
-      "status": "STANDARDIZIERT FIELD WORKER",
-      "url": "https://realwear.com/navigator-520",
-      "overview": "Robustes Freihand-Mikrodisplay-Headset zur Montage an Schutzhelmen. Entwickelt für Service-Techniker bei der Fernwartung und Inspektion in rauen Industrieumgebungen.",
-      "inputs": [
-        "Android APK Pakete",
-        "Sprachbefehle",
-        "Remote Video Calls"
-      ],
-      "outputs": [
-        "48MP Kamerastream",
-        "Audio Telemetrie",
-        "PDF Anmerkungen"
-      ],
-      "bridges": [
-        "Microsoft Teams",
-        "Zoom 1Form",
-        "PTC Vuforia",
-        "Siemens Manifest"
-      ],
-      "compliance": {
-        "omniverse": "Remote Video Bridge",
-        "sovereignty": "IP66 / ATEX Zone 2 Option",
-        "openStandard": "Android Native"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-VARJO-XR4",
-      "categoryCode": "11.0",
-      "categoryName": "Spatial XR & VR/AR Headsets",
-      "name": "Varjo XR-4 Series (Human-Eye Resolution MR)",
-      "subtitle": "Industrielles Mixed-Reality Headset mit 51 PPD",
-      "vendor": "Varjo Technologies Oy",
-      "hq": "Helsinki, Finnland (EU)",
-      "tier": "Tier 2",
-      "costLabel": "≤ €100k",
-      "status": "STANDARDIZIERT HIGH-END",
-      "url": "https://varjo.com/products/xr-4",
-      "overview": "Kabelgebundenes Mixed-Reality-Headset für Industrieanwendungen mit Auflösung auf menschlichem Augenniveau (51 PPD) und fotorealistischem Video-Pass-Through.",
-      "inputs": [
-        "OpenXR Stream",
-        "NVIDIA RTX Workstation GPU Output"
-      ],
-      "outputs": [
-        "Varjo Eye Tracking Data (120Hz)",
-        "LiDAR Depth Map"
-      ],
-      "bridges": [
-        "Autodesk VRED",
-        "Unreal Engine 5",
-        "Unity Industry",
-        "NVIDIA Omniverse"
-      ],
-      "compliance": {
-        "omniverse": "Native OpenXR Extension",
-        "sovereignty": "100% EU Souverän (Finnland)",
-        "openStandard": "OpenXR"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-AUTODESK-3DSMAX",
-      "categoryCode": "2.0",
-      "categoryName": "DCC & Generatives 3D-Design",
-      "name": "Autodesk 3ds Max",
-      "subtitle": "Industrial DCC & Mesh-Optimierung",
-      "vendor": "Autodesk Inc.",
-      "hq": "San Francisco, CA, USA",
-      "tier": "Tier 2",
-      "costLabel": "≤ €100k",
-      "status": "EVALUIERT",
-      "url": "https://autodesk.com/3ds-max",
-      "overview": "Industrielle DCC-Software für Architektur-Visualisierung, CAD-Geometriebereinigung und Echtzeit-Asset-Vorbereitung für Spatial Engines.",
-      "inputs": [
-        "MAX",
-        "FBX",
-        "OBJ",
-        "Inventor (.IPT)",
-        "STEP",
-        "Revit (.RVT)"
-      ],
-      "outputs": [
+        "AWS SiteWise Data",
+        "Kinesis Streams",
         "OpenUSD (.usd)",
-        "glTF 2.0",
-        "FBX",
-        "OBJ"
+        "glTF 2.0"
+      ],
+      "outputs": [
+        "Grafana 3D Visualisations",
+        "AWS IoT Events"
       ],
       "bridges": [
-        "NVIDIA Omniverse",
-        "Unreal Engine Datasmith",
-        "Unity"
+        "NVIDIA Omniverse Cloud",
+        "Matterport",
+        "Amazon Grafana"
       ],
       "compliance": {
-        "omniverse": "USD Extension",
-        "sovereignty": "SOC2 Compliant",
+        "omniverse": "Cloud Stream Connector",
+        "sovereignty": "SOC2 / ISO 27001",
         "openStandard": "OpenUSD / glTF 2.0"
       }
     },
     {
-      "refCode": "IND-META-2026-AUTODESK-MAYA",
-      "categoryCode": "2.0",
-      "categoryName": "DCC & Generatives 3D-Design",
-      "name": "Autodesk Maya",
-      "subtitle": "Kinematik-Rigging & Worker-Animation",
-      "vendor": "Autodesk Inc.",
-      "hq": "San Francisco, CA, USA",
-      "tier": "Tier 2",
-      "costLabel": "≤ €100k",
-      "status": "EVALUIERT",
-      "url": "https://autodesk.com/maya",
-      "overview": "Animations- und Rigging-Software für Ergonomie- und Arbeiter-Animationen sowie komplexe Roboterkinematik im digitalen Zwilling.",
-      "inputs": [
-        "MA",
-        "MB",
-        "FBX",
-        "OBJ",
-        "USD",
-        "Alembic"
-      ],
-      "outputs": [
-        "OpenUSD (.usd)",
-        "FBX",
-        "glTF 2.0",
-        "Alembic"
-      ],
-      "bridges": [
-        "NVIDIA Omniverse",
-        "Unreal Engine 5",
-        "OptiTrack Mocap"
-      ],
-      "compliance": {
-        "omniverse": "Native USD Viewport",
-        "sovereignty": "SOC2 Compliant",
-        "openStandard": "OpenUSD / Alembic"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-BLENDER-3D",
-      "categoryCode": "2.0",
-      "categoryName": "DCC & Generatives 3D-Design",
-      "name": "Blender 3D Suite",
-      "subtitle": "Open-Source DCC & OpenUSD Pipeline Workhorse",
-      "vendor": "Blender Foundation",
-      "hq": "Amsterdam, Niederlande (EU)",
-      "tier": "Tier 1",
-      "costLabel": "Open Source / €0",
-      "status": "ESSENTIAL DCC",
-      "url": "https://blender.org",
-      "overview": "Open-Source 3D-Creation Suite für Modellierung, UV-Unwrapping, Texture-Baking und prozedurale Asset-Aufbereitung. Dient als primäres Bereinigungswerkzeug für digitale Zwillinge.",
-      "inputs": [
-        "FBX",
-        "OBJ",
-        "glTF 2.0",
-        "STL",
-        "USD",
-        "Alembic"
-      ],
-      "outputs": [
-        "OpenUSD (.usda/.usdc/.usdz)",
-        "glTF 2.0",
-        "FBX",
-        "OBJ"
-      ],
-      "bridges": [
-        "NVIDIA Omniverse USD Composer",
-        "Unreal Engine 5",
-        "Unity"
-      ],
-      "compliance": {
-        "omniverse": "Native OpenUSD Core",
-        "sovereignty": "100% EU Souverän (FOSS)",
-        "openStandard": "OpenUSD / glTF 2.0"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-HI3D-AI-ENGINE",
-      "categoryCode": "2.0",
-      "categoryName": "DCC & Generatives 3D-Design",
-      "name": "Hi3D AI Engine (Generative 3D to Additive)",
-      "subtitle": "KI-3D-Generierung aus Text & 2D-Bildern",
-      "vendor": "Hi3D AI Inc.",
-      "hq": "European Tech Hub (EU)",
-      "tier": "Tier 1",
-      "costLabel": "≤ €30k",
-      "status": "TESTBED",
-      "url": "https://hi3d.ai",
-      "overview": "Generative KI-Engine, die aus Text-Prompts oder 2D-Fotos strukturierte 3D-Meshes erzeugt und wasserdichte Geometrien für den 3D-Druck und das Scene Staging ausgibt.",
-      "inputs": [
-        "PNG",
-        "JPG",
-        "Text Prompts",
-        "CAD Skizzen"
-      ],
-      "outputs": [
-        "OpenUSD (.usdz)",
-        "glTF 2.0",
-        "STL",
-        "OBJ"
-      ],
-      "bridges": [
-        "NVIDIA Omniverse AI Extensions",
-        "Blender",
-        "WebXR"
-      ],
-      "compliance": {
-        "omniverse": "Native USD Export",
-        "sovereignty": "DSGVO EU Cloud",
-        "openStandard": "OpenUSD / glTF 2.0"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-SIDEFX-HOUDINI",
-      "categoryCode": "2.0",
-      "categoryName": "DCC & Generatives 3D-Design",
-      "name": "SideFX Houdini (Procedural Pipelines)",
-      "subtitle": "Prozeduraler USD-Pipeline-Generator & VFX",
-      "vendor": "SideFX",
-      "hq": "Toronto, Kanada",
-      "tier": "Tier 2",
-      "costLabel": "≤ €100k",
-      "status": "STANDARDIZIERT",
-      "url": "https://sidefx.com",
-      "overview": "Knotenbasierte prozedurale Generierungs- und VFX-Suite. Fungiert als prozedurale Pipeline-Engine für die automatisierte Aufbereitung gewaltiger OpenUSD-Fabrikszenen.",
-      "inputs": [
-        "HIP",
-        "USD",
-        "BGEO",
-        "STEP",
-        "FBX",
-        "OBJ"
-      ],
-      "outputs": [
-        "OpenUSD (.usd/.usdc)",
-        "glTF 2.0",
-        "FBX",
-        "Alembic"
-      ],
-      "bridges": [
-        "NVIDIA Omniverse Hydra",
-        "Unreal Engine 5 (Houdini Engine)",
-        "Unity"
-      ],
-      "compliance": {
-        "omniverse": "Native Solaris USD Engine",
-        "sovereignty": "ISO Compliant",
-        "openStandard": "OpenUSD / Hydra"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-GODOT-WEBXR",
-      "categoryCode": "3.0",
-      "categoryName": "Echtzeit-3D & Spatial Engines",
-      "name": "Godot Engine / WebXR",
-      "subtitle": "Leichtgewichtige Open-Source 3D/Web Engine",
-      "vendor": "Godot Foundation",
-      "hq": "EU / Global Community",
-      "tier": "Tier 1",
-      "costLabel": "Open Source / €0",
-      "status": "EMPFOHLEN",
-      "url": "https://godotengine.org",
-      "overview": "Schlanke, lizenzfreie Open-Source 3D-Engine. Ideal für Web-eingebettete 3D-Dashboards, WebXR-Brillen und leichte Shopfloor-Displays.",
-      "inputs": [
-        "glTF 2.0 (Native)",
-        "OBJ",
-        "FBX",
-        "OpenUSD (via Extension)"
-      ],
-      "outputs": [
-        "WebGL / WebXR HTML5",
-        "Linux/Windows Binaries"
-      ],
-      "bridges": [
-        "MQTT WebSockets",
-        "OPC UA REST Gateways",
-        "WebXR"
-      ],
-      "compliance": {
-        "omniverse": "WebXR / glTF Bridge",
-        "sovereignty": "100% EU Souverän (MIT FOSS)",
-        "openStandard": "glTF 2.0 / WebXR / OpenXR"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-NVIDIA-OMNIVERSE",
-      "categoryCode": "3.0",
-      "categoryName": "Echtzeit-3D & Spatial Engines",
-      "name": "NVIDIA Omniverse Enterprise",
-      "subtitle": "Zentrales Betriebssystem für Digital Twins",
-      "vendor": "NVIDIA Corporation",
-      "hq": "Santa Clara, CA, USA / EU Office",
+      "refCode": "IND-META-2026-BENTLEY-ITWIN",
+      "categoryCode": "3.3",
+      "categoryName": "Enterprise Cloud-Zwillinge",
+      "name": "Bentley iTwin Platform",
+      "subtitle": "Infrastruktur- & Prozessanlagen-Zwilling",
+      "vendor": "Bentley Systems Inc.",
+      "hq": "Exton, PA, USA",
       "tier": "Tier 3",
       "costLabel": "> €100k",
-      "status": "TARGET CORE ARCHITECTURE",
-      "url": "https://developer.nvidia.com/omniverse",
-      "overview": "Zentrale Simulations- und Aggregationsplattform, die nativ auf OpenUSD und RTX-Raytracing basiert. Dient als primäres Herzstück der Zielarchitektur für den industriellen digitalen Zwilling.",
+      "status": "STANDARDIZIERT",
+      "url": "https://bentley.com/itwin",
+      "overview": "Offene digital Zwillingsplattform für Großinfrastruktur, Prozessanlagen, Versorgungsnetze und Fabrikareale.",
       "inputs": [
-        "Native OpenUSD (.usd/.usda/.usdc)",
-        "Connectors für Siemens NX, Revit, Blender, SolidWorks"
-      ],
-      "outputs": [
-        "Native OpenUSD Stage",
-        "WebRTC Cloud Stream",
-        "RTX Render Passes"
-      ],
-      "bridges": [
-        "Isaac Sim",
-        "Siemens Teamcenter",
-        "Azure Digital Twins",
-        "Collectu Engine",
-        "ROS 2"
-      ],
-      "compliance": {
-        "omniverse": "NATIVE CORE PLATFORM",
-        "sovereignty": "GAIA-X / On-Premise Execution",
-        "openStandard": "OpenUSD / Hydra / MaterialX"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-TWINMOTION",
-      "categoryCode": "3.0",
-      "categoryName": "Echtzeit-3D & Spatial Engines",
-      "name": "Twinmotion (Real-Time Architecture)",
-      "subtitle": "Schnelle 3D-Visualisierung für AEC & Fabriken",
-      "vendor": "Epic Games Inc.",
-      "hq": "Cary, NC, USA",
-      "tier": "Tier 1",
-      "costLabel": "≤ €30k",
-      "status": "EVALUIERT",
-      "url": "https://twinmotion.com",
-      "overview": "Schnelles 3D-Echtzeit-Visualisierungswerkzeug powered by Unreal Engine. Speziell für AEC-Planer entwickelt, um Fabrikgebäude in Minuten zu begehen.",
-      "inputs": [
+        "DGN",
         "RVT",
-        "SKP",
-        "FBX",
-        "OBJ",
-        "glTF",
-        "Datasmith"
+        "IFC",
+        "Point Clouds",
+        "OpenUSD"
       ],
       "outputs": [
-        "Executable Presentations",
-        "Panoramas",
-        "MP4 Video",
-        "USD Export"
-      ],
-      "bridges": [
-        "Unreal Engine 5",
-        "Autodesk Revit",
-        "Trimble SketchUp"
-      ],
-      "compliance": {
-        "omniverse": "Datasmith Bridge",
-        "sovereignty": "SOC2 Compliant",
-        "openStandard": "glTF 2.0 / OpenUSD"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-UNITY-INDUSTRY",
-      "categoryCode": "3.0",
-      "categoryName": "Echtzeit-3D & Spatial Engines",
-      "name": "Unity Industry Suite",
-      "subtitle": "Cross-Platform 3D-Laufzeitumgebung & AR/VR HMI",
-      "vendor": "Unity Technologies",
-      "hq": "San Francisco, CA, USA / EU Support",
-      "tier": "Tier 2",
-      "costLabel": "≤ €100k",
-      "status": "EVALUIERT",
-      "url": "https://unity.com/industry",
-      "overview": "Multi-Plattform Echtzeit-3D-Plattform für plattformübergreifende Industrie-Apps, AR/VR-Headsets, Mobilgeräte und WebGL.",
-      "inputs": [
-        "Pixyz Supported (STEP, JT, RVT, SolidWorks)",
-        "OpenUSD",
-        "glTF",
-        "FBX"
-      ],
-      "outputs": [
-        "WebGL",
-        "OpenXR Executables",
-        "Android/iOS App Packages",
-        "USD Stage"
-      ],
-      "bridges": [
-        "PTC Vuforia",
-        "Microsoft Azure Digital Twins",
-        "NVIDIA Omniverse"
-      ],
-      "compliance": {
-        "omniverse": "OpenUSD Import Package",
-        "sovereignty": "SOC2 Compliant",
-        "openStandard": "OpenXR / glTF / OpenUSD"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-UNREAL-ENGINE-5",
-      "categoryCode": "3.0",
-      "categoryName": "Echtzeit-3D & Spatial Engines",
-      "name": "Unreal Engine 5 Enterprise",
-      "subtitle": "Fotorealistisches Rendering & High-End Visualisierung",
-      "vendor": "Epic Games Inc.",
-      "hq": "Cary, NC, USA / EU Support",
-      "tier": "Tier 2",
-      "costLabel": "≤ €100k",
-      "status": "EMPFOHLEN",
-      "url": "https://unrealengine.com/enterprise",
-      "overview": "High-End 3D-Echtzeit-Engine für fotorealistische Visualisierungen, virtuelle Begehungen und immersives VR-Training von Werksanlagen.",
-      "inputs": [
-        "OpenUSD",
-        "Datasmith (Revit/SolidWorks/Rhino)",
-        "FBX",
-        "glTF",
-        "Point Clouds"
-      ],
-      "outputs": [
-        "Executable Binaries (Win/Linux)",
-        "Pixel Streaming (WebRTC)",
+        "iModel",
+        "3D Tiles",
+        "WebGL Stream",
         "OpenUSD Stage"
       ],
       "bridges": [
-        "NVIDIA Omniverse Connector",
-        "AWS TwinMaker",
-        "ROS 2 DDS"
+        "NVIDIA Omniverse",
+        "Cesium GS",
+        "Microsoft Azure Digital Twins"
       ],
       "compliance": {
-        "omniverse": "OpenUSD Importer / Stage",
-        "sovereignty": "SOC2 / Enterprise SLA",
-        "openStandard": "OpenUSD / glTF / WebRTC"
+        "omniverse": "iTwin Connector",
+        "sovereignty": "ISO 19650 Compliant",
+        "openStandard": "iModel / 3D Tiles"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-AZURE-TWINS",
+      "categoryCode": "3.3",
+      "categoryName": "Enterprise Cloud-Zwillinge",
+      "name": "Microsoft Azure Digital Twins",
+      "subtitle": "Cloud-Graphendienst für Fabriken",
+      "vendor": "Microsoft Corporation",
+      "hq": "Redmond, WA, USA",
+      "tier": "Tier 2",
+      "costLabel": "≤ €100k",
+      "status": "EVALUIERT",
+      "url": "https://azure.microsoft.com/services/digital-twins",
+      "overview": "PaaS-Plattform zum Erstellen graphbasierter digitaler Modelle kompletter Fertigungsnetzwerke und Lieferketten.",
+      "inputs": [
+        "DTDL v3 Schemas",
+        "MQTT",
+        "AMQP",
+        "REST JSON"
+      ],
+      "outputs": [
+        "Azure Synapse Events",
+        "Event Grid Notifications",
+        "3D Web Overlay"
+      ],
+      "bridges": [
+        "NVIDIA Omniverse Cloud",
+        "Power BI",
+        "Bentley iTwin"
+      ],
+      "compliance": {
+        "omniverse": "Cloud Streaming Extension",
+        "sovereignty": "DSGVO Cloud (Frankfurt)",
+        "openStandard": "DTDL / JSON-LD"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-PTC-THINGWORX",
+      "categoryCode": "3.3",
+      "categoryName": "Enterprise Cloud-Zwillinge",
+      "name": "PTC ThingWorx IIoT Platform",
+      "subtitle": "Smart Factory Application Engine & AR Service",
+      "vendor": "PTC Inc.",
+      "hq": "Boston, MA, USA",
+      "tier": "Tier 3",
+      "costLabel": "> €100k",
+      "status": "EVALUIERT",
+      "url": "https://ptc.com/thingworx",
+      "overview": "Etablierte Enterprise-IIoT-Plattform für schnelle Industrieanwendungen, Maschinenüberwachung und AR-Außendienst-Bereitstellung.",
+      "inputs": [
+        "OPC UA (Kepware)",
+        "MQTT",
+        "REST API",
+        "Modbus"
+      ],
+      "outputs": [
+        "ThingWorx REST Services",
+        "Vuforia AR Streams"
+      ],
+      "bridges": [
+        "PTC Windchill",
+        "PTC Creo",
+        "NVIDIA Omniverse"
+      ],
+      "compliance": {
+        "omniverse": "Telemetry Bridge",
+        "sovereignty": "SOC2 Compliant",
+        "openStandard": "OPC UA / REST"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-SIEMENS-OPERATIONS-X",
+      "categoryCode": "3.3",
+      "categoryName": "Enterprise Cloud-Zwillinge",
+      "name": "Siemens Industrial Operations X",
+      "subtitle": "Industrial IoT Edge-to-Cloud Plattform",
+      "vendor": "Siemens AG",
+      "hq": "München / Nürnberg, Deutschland (EU)",
+      "tier": "Tier 3",
+      "costLabel": "> €100k",
+      "status": "STANDARDIZIERT",
+      "url": "https://siemens.com/operations-x",
+      "overview": "Offenes, interoperables Industrial-IoT-Portfolio zur Automatisierung, Analyse und Optimierung des Shopfloor-Betriebs von der Edge bis zur Cloud.",
+      "inputs": [
+        "OPC UA",
+        "S7 Protocol",
+        "MQTT",
+        "Industrial Edge Data"
+      ],
+      "outputs": [
+        "OpenUSD Attributes",
+        "AASX Packages",
+        "Cloud Analytics Dashboards"
+      ],
+      "bridges": [
+        "Siemens Teamcenter",
+        "NVIDIA Omniverse",
+        "AWS / Azure Cloud"
+      ],
+      "compliance": {
+        "omniverse": "Live Cloud Bridge",
+        "sovereignty": "100% EU Souverän (GAIA-X)",
+        "openStandard": "OPC UA / AAS"
       }
     },
     {
@@ -1665,7 +2546,7 @@ window.INDEX_DATA = {
     },
     {
       "refCode": "IND-META-2026-DASSAULT-DELMIA",
-      "categoryCode": "5.0",
+      "categoryCode": "4.4",
       "categoryName": "Robotik & Fabriksimulation",
       "name": "Dassault Systèmes DELMIA",
       "subtitle": "Roboterzellen-Offline-Programmierung",
@@ -1700,7 +2581,7 @@ window.INDEX_DATA = {
     },
     {
       "refCode": "IND-META-2026-FLEXSIM",
-      "categoryCode": "5.0",
+      "categoryCode": "4.4",
       "categoryName": "Robotik & Fabriksimulation",
       "name": "FlexSim (Discrete Event Simulation)",
       "subtitle": "3D-Ablauf- & Materialflusssimulation",
@@ -1736,7 +2617,7 @@ window.INDEX_DATA = {
     },
     {
       "refCode": "IND-META-2026-HALOCLINE",
-      "categoryCode": "5.0",
+      "categoryCode": "4.4",
       "categoryName": "Robotik & Fabriksimulation",
       "name": "Halocline (VR Shopfloor Layouting)",
       "subtitle": "Interaktive VR-Montage- & Cardboard-Planung",
@@ -1771,7 +2652,7 @@ window.INDEX_DATA = {
     },
     {
       "refCode": "IND-META-2026-HUGGINGFACE-LEROBOT",
-      "categoryCode": "5.0",
+      "categoryCode": "4.4",
       "categoryName": "Robotik & Fabriksimulation",
       "name": "Hugging Face LeRobot (Physical AI & Open Imitation)",
       "subtitle": "Open-Source Physical AI & Roboter-Imitationslernen",
@@ -1805,7 +2686,7 @@ window.INDEX_DATA = {
     },
     {
       "refCode": "IND-META-2026-IPOLOG",
-      "categoryCode": "5.0",
+      "categoryCode": "4.4",
       "categoryName": "Robotik & Fabriksimulation",
       "name": "ipolog (Material Flow & Ergonomics)",
       "subtitle": "Montagelinien-Ergonomie & Behälter-Staging",
@@ -1841,7 +2722,7 @@ window.INDEX_DATA = {
     },
     {
       "refCode": "IND-META-2026-ISG-VIRTUOS",
-      "categoryCode": "5.0",
+      "categoryCode": "4.4",
       "categoryName": "Robotik & Fabriksimulation",
       "name": "ISG-Virtuos (Hard Real-Time VIBn / HiL)",
       "subtitle": "Echtzeit-Hardware-in-the-Loop Simulationsengine",
@@ -1876,7 +2757,7 @@ window.INDEX_DATA = {
     },
     {
       "refCode": "IND-META-2026-MOTIONA",
-      "categoryCode": "5.0",
+      "categoryCode": "4.4",
       "categoryName": "Robotik & Fabriksimulation",
       "name": "MotionA Kinematic Optimization",
       "subtitle": "Roboter-Geschwindigkeits- & Energieoptimierung",
@@ -1910,7 +2791,7 @@ window.INDEX_DATA = {
     },
     {
       "refCode": "IND-META-2026-NVIDIA-ISAAC",
-      "categoryCode": "5.0",
+      "categoryCode": "4.4",
       "categoryName": "Robotik & Fabriksimulation",
       "name": "NVIDIA Isaac Sim / Isaac Lab (Physical AI)",
       "subtitle": "Physikbasierte Roboter-Simulation & KI-Training",
@@ -1945,7 +2826,7 @@ window.INDEX_DATA = {
     },
     {
       "refCode": "IND-META-2026-SIEMENS-TECNOMATIX",
-      "categoryCode": "5.0",
+      "categoryCode": "4.4",
       "categoryName": "Robotik & Fabriksimulation",
       "name": "Siemens Tecnomatix (Process Simulate / Plant Sim)",
       "subtitle": "Virtuelle Inbetriebnahme & Kinematik-Validierung",
@@ -1982,7 +2863,7 @@ window.INDEX_DATA = {
     },
     {
       "refCode": "IND-META-2026-VISUAL-COMPONENTS",
-      "categoryCode": "5.0",
+      "categoryCode": "4.4",
       "categoryName": "Robotik & Fabriksimulation",
       "name": "Visual Components 4.9",
       "subtitle": "3D-Fabriksimulation & Materialfluss-Planung",
@@ -2019,7 +2900,7 @@ window.INDEX_DATA = {
     },
     {
       "refCode": "IND-META-2026-VISUPAL",
-      "categoryCode": "5.0",
+      "categoryCode": "4.4",
       "categoryName": "Robotik & Fabriksimulation",
       "name": "VisuPal Palletizing Simulation",
       "subtitle": "Automatisierte 3D-Palettier-Simulation",
@@ -2052,1267 +2933,386 @@ window.INDEX_DATA = {
       }
     },
     {
-      "refCode": "IND-META-2026-FARO-ORBIS",
-      "categoryCode": "6.1",
-      "categoryName": "Mobile & Wearable SLAM-Scanner",
-      "name": "FARO Orbis Hybrid Mobile Scanner",
-      "subtitle": "Hybrid-Mobile SLAM & Flash TLS Scanner",
-      "vendor": "FARO Technologies Inc.",
-      "hq": "Lake Mary, FL, USA / Stuttgart, DE (EU)",
-      "tier": "Tier 2",
-      "costLabel": "≤ €100k",
-      "status": "EVALUIERT",
-      "url": "https://faro.com/orbis",
-      "overview": "Hybrider mobiler SLAM- und statischer Laserscanner. Wechselt fliegend zwischen Gehen und hochdichtem Stativscannen.",
-      "inputs": [
-        "SLAM Telemetrie",
-        "Static LiDAR Rays",
-        "GCP"
-      ],
-      "outputs": [
-        "E57",
-        "LAS",
-        "FARO Project File",
-        "OpenUSD"
-      ],
-      "bridges": [
-        "FARO Sphere XG",
-        "Autodesk ReCap",
-        "NVIDIA Omniverse"
-      ],
-      "compliance": {
-        "omniverse": "Extension Bridge",
-        "sovereignty": "SOC2 / ISO Compliant",
-        "openStandard": "E57 / LAS"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-LEICA-BLK2GO",
-      "categoryCode": "6.1",
-      "categoryName": "Mobile & Wearable SLAM-Scanner",
-      "name": "Leica BLK2GO Handheld SLAM Scanner",
-      "subtitle": "Kompakter Handheld SLAM-Laserscanner",
-      "vendor": "Leica Geosystems AG / Hexagon",
-      "hq": "Heerbrugg, Schweiz (EU/EFTA)",
-      "tier": "Tier 2",
-      "costLabel": "≤ €100k",
-      "status": "EVALUIERT",
-      "url": "https://leica-geosystems.com/blk2go",
-      "overview": "Kompakter handgeführter Mobile-SLAM-Scanner mit 2-Achs-LiDAR und Mehrkamera-System zur schnellen Raumdokumentation.",
-      "inputs": [
-        "GrandSLAM Raw Stream"
-      ],
-      "outputs": [
-        "E57",
-        "LGS (Leica Format)",
-        "LAS",
-        "OpenUSD"
-      ],
-      "bridges": [
-        "Leica Cyclone REGISTER 360",
-        "Hexagon HxDR",
-        "NVIDIA Omniverse"
-      ],
-      "compliance": {
-        "omniverse": "LGS/E57 Importer",
-        "sovereignty": "Schweizer Datensicherheit",
-        "openStandard": "E57"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-NAVVIS-VLX3",
-      "categoryCode": "6.1",
-      "categoryName": "Mobile & Wearable SLAM-Scanner",
-      "name": "NavVis VLX 3 / NavVis IVION",
-      "subtitle": "Wearable Mobile Mapping System mit Echtzeit-SLAM",
-      "vendor": "NavVis GmbH",
-      "hq": "München, Deutschland (EU)",
-      "tier": "Tier 2",
-      "costLabel": "≤ €100k",
-      "status": "EMPFOHLENES MAPPING HARDWARE",
-      "url": "https://navvis.com/vlx-3",
-      "overview": "Wearables Mobile-SLAM-System mit zwei Multi-Layer-LiDAR-Sensoren und 4 HD-Kameras. Erfasst Bestandskonstruktionen (Brownfield) in Schrittgeschwindigkeit mit hoher Genauigkeit.",
-      "inputs": [
-        "Passpunkte (GCP)",
-        "Raw SLAM Telemetrie"
-      ],
-      "outputs": [
-        "E57 Punktwolke",
-        "LAS/LAZ",
-        "NavVis IVION Webformat",
-        "OpenUSD (.usd)"
-      ],
-      "bridges": [
-        "NavVis IVION",
-        "Autodesk Revit",
-        "NVIDIA Omniverse Point Cloud Extension"
-      ],
-      "compliance": {
-        "omniverse": "Point Cloud Extension",
-        "sovereignty": "100% EU DSGVO (München)",
-        "openStandard": "E57 / LAS"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-META-SAM3D",
-      "categoryCode": "6.1-AI",
-      "categoryName": "Spatial Perzeption & KI-Erkennung",
-      "name": "Meta Segment Anything 3D (SAM 3D)",
-      "subtitle": "Zero-Shot KI-Segmentierung für 3D-Punktwolken",
-      "vendor": "Meta AI Research",
-      "hq": "Menlo Park, CA, USA",
+      "refCode": "IND-META-2026-GODOT-WEBXR",
+      "categoryCode": "5.1",
+      "categoryName": "Echtzeit-3D & Spatial Engines",
+      "name": "Godot Engine / WebXR",
+      "subtitle": "Leichtgewichtige Open-Source 3D/Web Engine",
+      "vendor": "Godot Foundation",
+      "hq": "EU / Global Community",
       "tier": "Tier 1",
       "costLabel": "Open Source / €0",
       "status": "EMPFOHLEN",
-      "url": "https://github.com/facebookresearch/segment-anything-3d",
-      "overview": "KI-Modell zur automatischen Segmentierung roher Punktwolken und Meshes in einzelne Objekte (Rohre, Wände, Roboter).",
+      "url": "https://godotengine.org",
+      "overview": "Schlanke, lizenzfreie Open-Source 3D-Engine. Ideal für Web-eingebettete 3D-Dashboards, WebXR-Brillen und leichte Shopfloor-Displays.",
       "inputs": [
-        "Point Clouds (E57/LAS)",
-        "OpenUSD Stage",
-        "RGB-D Frames"
-      ],
-      "outputs": [
-        "Segmented USD Prims",
-        "Bounding Boxes"
-      ],
-      "bridges": [
-        "NVIDIA Omniverse Nucleus",
-        "Blender",
-        "PyTorch"
-      ],
-      "compliance": {
-        "omniverse": "Semantic Schema Native",
-        "sovereignty": "Apache 2.0 Open Source",
-        "openStandard": "OpenUSD Semantic Schema"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-RIIICO-AI",
-      "categoryCode": "6.1-AI",
-      "categoryName": "Spatial Perzeption & KI-Erkennung",
-      "name": "RIIICO (Factory AI Automated Layout)",
-      "subtitle": "KI-Punktwolken-Segmentierung in 3D-CAD",
-      "vendor": "RIIICO GmbH",
-      "hq": "Düsseldorf, Deutschland (EU)",
-      "tier": "Tier 2",
-      "costLabel": "≤ €100k",
-      "status": "EMPFOHLEN",
-      "url": "https://riiico.com",
-      "overview": "KI-Software, die rohe 3D-Punktwolken von Bestandsfabriken automatisch in parametrische CAD/BIM-Layouts und einzelne 3D-Objekte umwandelt.",
-      "inputs": [
-        "E57 Point Cloud",
-        "NavVis Data",
-        "Leica Scans"
-      ],
-      "outputs": [
-        "OpenUSD (.usd)",
-        "IFC",
-        "STEP",
-        "Autodesk Revit (.RVT)"
-      ],
-      "bridges": [
-        "NVIDIA Omniverse",
-        "Autodesk Revit",
-        "Siemens NX"
-      ],
-      "compliance": {
-        "omniverse": "USD Native Export",
-        "sovereignty": "100% EU DSGVO (Deutschland)",
-        "openStandard": "OpenUSD / IFC"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-WAVEYE-RADAR",
-      "categoryCode": "6.1-AI",
-      "categoryName": "Spatial Perzeption & KI-Erkennung",
-      "name": "Waveye 4D Imaging Radar (Argus mmWave)",
-      "subtitle": "Hochauflösende 4D-Radar Perzeption für AMRs",
-      "vendor": "Waveye Inc.",
-      "hq": "Palo Alto, USA / Stuttgart, Deutschland (EU)",
-      "tier": "Tier 1",
-      "costLabel": "≤ €30k",
-      "status": "EMPFOHLENER 4D SENSOR",
-      "url": "https://waveye.com",
-      "overview": "Ultra-hochauflösender 4D-Imaging-Radarsensor (Argus) für die Roboterwahrnehmung. Generiert dichte 4D-Punktwolken inklusive Doppler-Geschwindigkeitsvektoren für autonome Systeme.",
-      "inputs": [
-        "Raw mmWave RF Signals",
-        "Doppler Telemetrie"
-      ],
-      "outputs": [
-        "4D Point Cloud (X, Y, Z, Velocity)",
-        "ROS 2 PointCloud2 Topics"
-      ],
-      "bridges": [
-        "ROS 2 DDS",
-        "NVIDIA Isaac Sim / Lab",
-        "DeepHub Flowcate"
-      ],
-      "compliance": {
-        "omniverse": "ROS 2 Bridge",
-        "sovereignty": "100% EU DSGVO-Konform",
-        "openStandard": "ROS 2 DDS"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-YOLO26-EDGE",
-      "categoryCode": "6.1-AI",
-      "categoryName": "Spatial Perzeption & KI-Erkennung",
-      "name": "YOLO26 Edge Vision & Object Tracking",
-      "subtitle": "Echtzeit-KI-Objekterkennung für Shopfloor-Kameras",
-      "vendor": "Ultralytics / Open Source",
-      "hq": "Global Community",
-      "tier": "Tier 1",
-      "costLabel": "≤ €30k",
-      "status": "STANDARDIZIERT",
-      "url": "https://ultralytics.com",
-      "overview": "Echtzeit-Computer-Vision-Modell optimiert für 3D-Bounding-Boxen, Personen-Tracking und Sicherheitszonenüberwachung auf Edge-Geräten.",
-      "inputs": [
-        "RTSP Video Feeds",
-        "USB Camera Streams"
-      ],
-      "outputs": [
-        "JSON Bounding Box Data",
-        "MQTT Telemetry",
-        "ROS 2 Topics"
-      ],
-      "bridges": [
-        "DeepStream SDK",
-        "NVIDIA Omniverse",
-        "Collectu Data Engine"
-      ],
-      "compliance": {
-        "omniverse": "DeepStream Bridge",
-        "sovereignty": "On-Premise Execution",
-        "openStandard": "MQTT / ROS 2"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-FARO-FOCUS",
-      "categoryCode": "6.2",
-      "categoryName": "Terrestrisches Laserscanning (TLS)",
-      "name": "FARO Focus Series (Focus Premium / Core)",
-      "subtitle": "Millimetergenauer terrestrischer 3D-Laserscanner",
-      "vendor": "FARO Technologies Inc.",
-      "hq": "Lake Mary, FL, USA / Stuttgart, DE (EU)",
-      "tier": "Tier 2",
-      "costLabel": "≤ €100k",
-      "status": "STANDARDIZIERT",
-      "url": "https://faro.com/focus",
-      "overview": "Branchenstandard unter den terrestrischen Stativ-Laserscannern. Liefert millimetergenaue 3D-Punktwolken für präzise Umbaumaßnahmen.",
-      "inputs": [
-        "Laser Phase Measurements",
-        "GCP Target Points"
-      ],
-      "outputs": [
-        "E57",
-        "LAS",
-        "FARO FLS",
-        "OpenUSD"
-      ],
-      "bridges": [
-        "FARO Sphere XG",
-        "Autodesk Revit",
-        "NVIDIA Omniverse"
-      ],
-      "compliance": {
-        "omniverse": "E57 Bridge",
-        "sovereignty": "SOC2 / ISO Compliant",
-        "openStandard": "E57 / ASTM E2807"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-LEICA-RTC360",
-      "categoryCode": "6.2",
-      "categoryName": "Terrestrisches Laserscanning (TLS)",
-      "name": "Leica RTC360 / BLK360 / Cyclone",
-      "subtitle": "High-Speed TLS mit VIS-Echtzeitregistrierung",
-      "vendor": "Leica Geosystems AG / Hexagon",
-      "hq": "Heerbrugg, Schweiz (EU/EFTA)",
-      "tier": "Tier 3",
-      "costLabel": "> €100k",
-      "status": "STANDARDIZIERT",
-      "url": "https://leica-geosystems.com/rtc360",
-      "overview": "Hochpräziser terrestrischer 3D-Laserscanner (RTC360). Erfasst 3D-Punktwolken und HDR-Panoramen in unter 45 Sekunden mit automatischer VIS-Echtzeitregistrierung.",
-      "inputs": [
-        "Raw RTC Laser Stream",
-        "Passpunkt-Koordinaten"
-      ],
-      "outputs": [
-        "E57",
-        "LGS",
-        "PTX",
-        "LAS",
-        "OpenUSD Stage"
-      ],
-      "bridges": [
-        "Leica Cyclone",
-        "Hexagon HxDR",
-        "Autodesk Revit",
-        "NVIDIA Omniverse"
-      ],
-      "compliance": {
-        "omniverse": "LGS Bridge",
-        "sovereignty": "Schweizer Datensicherheit",
-        "openStandard": "E57 / ASTM E2807"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-DEEPROBOTICS-M20",
-      "categoryCode": "6.3",
-      "categoryName": "Autonome Drohnen & AMR-Roboter",
-      "name": "DEEP Robotics M20 Pro (IP66 Quadruped Robot)",
-      "subtitle": "Autonomer 4-beiniger Inspektions-Laufroboter",
-      "vendor": "DEEP Robotics Inc.",
-      "hq": "Hangzhou, China",
-      "tier": "Tier 2",
-      "costLabel": "≤ €100k",
-      "status": "TESTBED",
-      "url": "https://deeprobotics.cn",
-      "overview": "Industrieller Laufroboter (IP66) für autonome Inspektionsläufe über Treppen, Gitterroste und unwegsames Werksgelände.",
-      "inputs": [
-        "ROS 2 Control Topics",
-        "Navigation Waypoints"
-      ],
-      "outputs": [
-        "ROS 2 Telemetrie",
-        "RTSP Video",
-        "3D SLAM Mesh"
-      ],
-      "bridges": [
-        "ROS 2 DDS",
-        "NVIDIA Isaac Sim",
-        "Collectu Data Engine"
-      ],
-      "compliance": {
-        "omniverse": "ROS 2 Native Bridge",
-        "sovereignty": "IP66 Zertifiziert",
-        "openStandard": "ROS 2 DDS"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-FLYABILITY-ELIOS3",
-      "categoryCode": "6.3",
-      "categoryName": "Autonome Drohnen & AMR-Roboter",
-      "name": "Flyability Elios 3 (Indoor Inspection Drone)",
-      "subtitle": "Kollisionstolerante Hallen- & Tankdrohne",
-      "vendor": "Flyability SA",
-      "hq": "Lausanne, Schweiz (EU/EFTA)",
-      "tier": "Tier 2",
-      "costLabel": "≤ €100k",
-      "status": "EMPFOHLEN",
-      "url": "https://flyability.com/elios-3",
-      "overview": "Kollisionstolerante Hallendrohne im Käfig für Inspektionen in engen Behältern, Kaminen und unter Hallendächern ohne GPS.",
-      "inputs": [
-        "Indoor SLAM Telemetry",
-        "Thermal Stream"
-      ],
-      "outputs": [
-        "E57 Point Cloud",
-        "LAS",
-        "Flyability 3D Model"
-      ],
-      "bridges": [
-        "FARO Sphere XG",
-        "Bentley iTwin",
-        "NVIDIA Omniverse"
-      ],
-      "compliance": {
-        "omniverse": "E57 Bridge",
-        "sovereignty": "Schweizer Sicherheitsstandard",
-        "openStandard": "E57"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-LEICA-BLK2FLY",
-      "categoryCode": "6.3",
-      "categoryName": "Autonome Drohnen & AMR-Roboter",
-      "name": "Leica BLK2FLY Autonomous Flying LiDAR",
-      "subtitle": "Autonome Flugdrohne mit 3D-LiDAR-Scanner",
-      "vendor": "Leica Geosystems AG / Hexagon",
-      "hq": "Heerbrugg, Schweiz (EU/EFTA)",
-      "tier": "Tier 3",
-      "costLabel": "> €100k",
-      "status": "EVALUIERT",
-      "url": "https://leica-geosystems.com/blk2fly",
-      "overview": "Autonome Flugdrohne mit LiDAR-Scanner. Erfasst Dächer, Fassaden und hochgelegene Rohrbrücken vollautomatisch ohne Gerüstbau.",
-      "inputs": [
-        "GNSS Telemetrie",
-        "LiDAR Stream"
-      ],
-      "outputs": [
-        "E57",
-        "LGS",
-        "LAS",
-        "OpenUSD"
-      ],
-      "bridges": [
-        "Hexagon HxDR",
-        "Leica Cyclone",
-        "NVIDIA Omniverse"
-      ],
-      "compliance": {
-        "omniverse": "Extension Bridge",
-        "sovereignty": "EASA zertifiziert",
-        "openStandard": "E57"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-ARTEC3D-STUDIO",
-      "categoryCode": "6.4",
-      "categoryName": "Handheld 3DGS & Photogrammetrie",
-      "name": "Artec 3D Cloud / Studio (Leo & Eva)",
-      "subtitle": "Messtechnischer 3D-Handscanner für Reverse Engineering",
-      "vendor": "Artec 3D",
-      "hq": "Luxemburg (EU)",
-      "tier": "Tier 2",
-      "costLabel": "≤ €100k",
-      "status": "STANDARDIZIERT",
-      "url": "https://artec3d.com",
-      "overview": "Hochpräzise Handscanner (Artec Leo/Eva) für Reverse Engineering und Qualitätskontrolle mit Sub-Millimeter-Genauigkeit.",
-      "inputs": [
-        "Structured Light Rays",
-        "Blue Laser Lines"
-      ],
-      "outputs": [
-        "STEP",
-        "IGES",
+        "glTF 2.0 (Native)",
         "OBJ",
-        "STL",
-        "OpenUSD (.usd)"
-      ],
-      "bridges": [
-        "SolidWorks",
-        "Geomagic Design X",
-        "NVIDIA Omniverse"
-      ],
-      "compliance": {
-        "omniverse": "USD Exporter",
-        "sovereignty": "100% EU Souverän (Luxemburg)",
-        "openStandard": "STEP / STL"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-NIANTIC-SCANIVERSE",
-      "categoryCode": "6.4",
-      "categoryName": "Handheld 3DGS & Photogrammetrie",
-      "name": "Scaniverse (Niantic Spatial 3DGS)",
-      "subtitle": "Mobile 3D Gaussian Splatting App",
-      "vendor": "Niantic Inc.",
-      "hq": "San Francisco, CA, USA",
-      "tier": "Tier 1",
-      "costLabel": "Kostenfrei / €0",
-      "status": "EMPFOHLEN",
-      "url": "https://scaniverse.com",
-      "overview": "Kostenlose mobile 3D-Erfassungs-App auf Basis von 3D Gaussian Splatting. Nutzt Smartphones mit LiDAR für schnelles Requisiten-Scannen.",
-      "inputs": [
-        "Mobile LiDAR Rays",
-        "Video Camera Stream"
+        "FBX",
+        "OpenUSD (via Extension)"
       ],
       "outputs": [
-        "SPZ",
-        "PLY",
-        "glTF 2.0",
-        "USDZ"
+        "WebGL / WebXR HTML5",
+        "Linux/Windows Binaries"
       ],
       "bridges": [
-        "Blender 3D",
-        "WebXR Viewers",
-        "NVIDIA Omniverse"
+        "MQTT WebSockets",
+        "OPC UA REST Gateways",
+        "WebXR"
       ],
       "compliance": {
-        "omniverse": "USDZ Native",
-        "sovereignty": "Mobile App Standard",
-        "openStandard": "glTF / USDZ / PLY"
+        "omniverse": "WebXR / glTF Bridge",
+        "sovereignty": "100% EU Souverän (MIT FOSS)",
+        "openStandard": "glTF 2.0 / WebXR / OpenXR"
       }
     },
     {
-      "refCode": "IND-META-2026-XGRIDS-PORTALCAM",
-      "categoryCode": "6.4",
-      "categoryName": "Handheld 3DGS & Photogrammetrie",
-      "name": "XGRIDS Portalcam & Studio (LiDAR + 3DGS)",
-      "subtitle": "Handgeführter LiDAR + 3D Gaussian Splatting Scanner",
-      "vendor": "XGRIDS Technology Inc.",
-      "hq": "Shenzhen, China",
+      "refCode": "IND-META-2026-NVIDIA-OMNIVERSE",
+      "categoryCode": "5.1",
+      "categoryName": "Echtzeit-3D & Spatial Engines",
+      "name": "NVIDIA Omniverse Enterprise",
+      "subtitle": "Zentrales Betriebssystem für Digital Twins",
+      "vendor": "NVIDIA Corporation",
+      "hq": "Santa Clara, CA, USA / EU Office",
+      "tier": "Tier 3",
+      "costLabel": "> €100k",
+      "status": "TARGET CORE ARCHITECTURE",
+      "url": "https://developer.nvidia.com/omniverse",
+      "overview": "Zentrale Simulations- und Aggregationsplattform, die nativ auf OpenUSD und RTX-Raytracing basiert. Dient als primäres Herzstück der Zielarchitektur für den industriellen digitalen Zwilling.",
+      "inputs": [
+        "Native OpenUSD (.usd/.usda/.usdc)",
+        "Connectors für Siemens NX, Revit, Blender, SolidWorks"
+      ],
+      "outputs": [
+        "Native OpenUSD Stage",
+        "WebRTC Cloud Stream",
+        "RTX Render Passes"
+      ],
+      "bridges": [
+        "Isaac Sim",
+        "Siemens Teamcenter",
+        "Azure Digital Twins",
+        "Collectu Engine",
+        "ROS 2"
+      ],
+      "compliance": {
+        "omniverse": "NATIVE CORE PLATFORM",
+        "sovereignty": "GAIA-X / On-Premise Execution",
+        "openStandard": "OpenUSD / Hydra / MaterialX"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-TWINMOTION",
+      "categoryCode": "5.1",
+      "categoryName": "Echtzeit-3D & Spatial Engines",
+      "name": "Twinmotion (Real-Time Architecture)",
+      "subtitle": "Schnelle 3D-Visualisierung für AEC & Fabriken",
+      "vendor": "Epic Games Inc.",
+      "hq": "Cary, NC, USA",
       "tier": "Tier 1",
       "costLabel": "≤ €30k",
-      "status": "TOP FOTOREALISMUS",
-      "url": "https://xgrids.com",
-      "overview": "Handgeführter 3D-Scanner, der LiDAR, Kameras und 3D Gaussian Splatting (3DGS) verbindet, um fotorealistische 3D-Abbilder spiegelnder Objekte zu erstellen.",
+      "status": "EVALUIERT",
+      "url": "https://twinmotion.com",
+      "overview": "Schnelles 3D-Echtzeit-Visualisierungswerkzeug powered by Unreal Engine. Speziell für AEC-Planer entwickelt, um Fabrikgebäude in Minuten zu begehen.",
       "inputs": [
-        "LiDAR Stream",
-        "4K Video",
-        "GCP Passpunkte"
+        "RVT",
+        "SKP",
+        "FBX",
+        "OBJ",
+        "glTF",
+        "Datasmith"
       ],
       "outputs": [
-        "PLY (3DGS / Mesh)",
-        "OpenUSD (.usd)",
-        "E57",
-        "LAS"
+        "Executable Presentations",
+        "Panoramas",
+        "MP4 Video",
+        "USD Export"
       ],
       "bridges": [
-        "NVIDIA Omniverse 3DGS Extension",
         "Unreal Engine 5",
-        "Blender 3D"
-      ],
-      "compliance": {
-        "omniverse": "USD & PLY Export",
-        "sovereignty": "Lokale Desktop-Verarbeitung",
-        "openStandard": "OpenUSD / PLY"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-AUTODESK-RECAP",
-      "categoryCode": "6.5",
-      "categoryName": "360°-Erfassung & GIS-Kartierung",
-      "name": "Autodesk ReCap Pro",
-      "subtitle": "Punktwolken-Aufbereitung & Photogrammetrie",
-      "vendor": "Autodesk Inc.",
-      "hq": "San Francisco, CA, USA",
-      "tier": "Tier 1",
-      "costLabel": "≤ €30k",
-      "status": "EVALUIERT",
-      "url": "https://autodesk.com/recap",
-      "overview": "Punktwolken-Software zum Bereinigen, Beschneiden und Umwandeln roher Scans in das Autodesk RCS/RCP-Format.",
-      "inputs": [
-        "E57",
-        "LAS",
-        "PTX",
-        "Drone Photos"
-      ],
-      "outputs": [
-        "RCS",
-        "RCP",
-        "OBJ",
-        "OpenUSD"
-      ],
-      "bridges": [
         "Autodesk Revit",
-        "Inventor",
-        "AutoCAD",
-        "NVIDIA Omniverse"
+        "Trimble SketchUp"
       ],
       "compliance": {
-        "omniverse": "USD Exporter",
+        "omniverse": "Datasmith Bridge",
         "sovereignty": "SOC2 Compliant",
-        "openStandard": "E57 / OBJ"
+        "openStandard": "glTF 2.0 / OpenUSD"
       }
     },
     {
-      "refCode": "IND-META-2026-CESIUM-3DTILES",
-      "categoryCode": "6.5",
-      "categoryName": "360°-Erfassung & GIS-Kartierung",
-      "name": "Cesium (3D Tiles Streaming Platform)",
-      "subtitle": "OGC 3D Tiles Streaming für Geodaten",
-      "vendor": "Cesium GS Inc. / Bentley",
-      "hq": "Philadelphia, PA, USA",
-      "tier": "Tier 1",
-      "costLabel": "≤ €30k",
-      "status": "STANDARDIZIERT",
-      "url": "https://cesium.com",
-      "overview": "Offene Plattform zum Streaming riesiger 3D-Geodaten und 3D-Tiles-Datensätze in Webbrowser und Echtzeit-Engines.",
-      "inputs": [
-        "LAS",
-        "E57",
-        "KML",
-        "GeoTIFF",
-        "CityGML",
-        "OpenUSD"
-      ],
-      "outputs": [
-        "3D Tiles (B3DM/PNTS)",
-        "Quantized Mesh",
-        "WebGL"
-      ],
-      "bridges": [
-        "NVIDIA Omniverse",
-        "Unreal Engine 5",
-        "ESRI ArcGIS"
-      ],
-      "compliance": {
-        "omniverse": "3D Tiles Plugin Native",
-        "sovereignty": "OGC Open Standard",
-        "openStandard": "3D Tiles / glTF"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-ESRI-ARCGIS",
-      "categoryCode": "6.5",
-      "categoryName": "360°-Erfassung & GIS-Kartierung",
-      "name": "ESRI ArcGIS Spatial Platform",
-      "subtitle": "Enterprise GIS & Geoinformationssystem",
-      "vendor": "ESRI Inc.",
-      "hq": "Redlands, CA, USA / EU Support",
-      "tier": "Tier 3",
-      "costLabel": "> €100k",
-      "status": "STANDARDIZIERT",
-      "url": "https://esri.com/arcgis",
-      "overview": "Marktführendes Geoinformationssystem (GIS) zur Verwaltung von Standortdaten, Werksnetzen und regionaler Infrastruktur.",
-      "inputs": [
-        "Shapefiles",
-        "Geodatabase",
-        "IFC",
-        "DWG",
-        "Satellite Data"
-      ],
-      "outputs": [
-        "I3S (Indexed 3D Scene Layers)",
-        "GeoJSON",
-        "Web Maps"
-      ],
-      "bridges": [
-        "Autodesk Construction Cloud",
-        "NVIDIA Omniverse",
-        "SAP HANA GIS"
-      ],
-      "compliance": {
-        "omniverse": "ArcGIS Extension",
-        "sovereignty": "ISO 19100 Series",
-        "openStandard": "I3S / OGC"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-FARO-SPHERE",
-      "categoryCode": "6.5",
-      "categoryName": "360°-Erfassung & GIS-Kartierung",
-      "name": "FARO Sphere XG (Cloud Spatial Ecosystem)",
-      "subtitle": "Zentrale Reality-Capture Cloud-Plattform",
-      "vendor": "FARO Technologies Inc.",
-      "hq": "Lake Mary, FL, USA / Stuttgart, DE (EU)",
+      "refCode": "IND-META-2026-UNITY-INDUSTRY",
+      "categoryCode": "5.1",
+      "categoryName": "Echtzeit-3D & Spatial Engines",
+      "name": "Unity Industry Suite",
+      "subtitle": "Cross-Platform 3D-Laufzeitumgebung & AR/VR HMI",
+      "vendor": "Unity Technologies",
+      "hq": "San Francisco, CA, USA / EU Support",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
       "status": "EVALUIERT",
-      "url": "https://faro.com/sphere",
-      "overview": "Zentrale Cloud-Plattform, die statische Laserscans, Mobile-SLAM-Daten und 360°-Fotos in einer gemeinsamen Umgebung zusammenführt.",
+      "url": "https://unity.com/industry",
+      "overview": "Multi-Plattform Echtzeit-3D-Plattform für plattformübergreifende Industrie-Apps, AR/VR-Headsets, Mobilgeräte und WebGL.",
       "inputs": [
-        "FLS",
-        "E57",
-        "360 Photos",
-        "CAD STEP"
-      ],
-      "outputs": [
-        "E57",
-        "Web 3D Stream",
-        "Deviation Heatmaps"
-      ],
-      "bridges": [
-        "Autodesk Revit",
-        "Navisworks",
-        "NVIDIA Omniverse Cloud"
-      ],
-      "compliance": {
-        "omniverse": "Cloud Stream Extension",
-        "sovereignty": "SOC2 / ISO Compliant",
-        "openStandard": "E57 / STEP"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-MATTERPORT-PRO3",
-      "categoryCode": "6.5",
-      "categoryName": "360°-Erfassung & GIS-Kartierung",
-      "name": "Matterport Pro3 & 360 Spatial Platform",
-      "subtitle": "360° LiDAR-Kamera & Virtuelle Rundgänge",
-      "vendor": "Matterport Inc.",
-      "hq": "Sunnyvale, CA, USA",
-      "tier": "Tier 2",
-      "costLabel": "≤ €100k",
-      "status": "STANDARD WALKTHROUGH",
-      "url": "https://matterport.com",
-      "overview": "Führende Plattform für virtuelle 360°-Begehungen. Nutzt die Pro3 LiDAR-Kamera für schnelle Rundgänge in Innen- und Außenbereichen.",
-      "inputs": [
-        "Pro3 LiDAR Scan",
-        "Sphärische 360° Fotos"
-      ],
-      "outputs": [
-        "E57 Point Cloud",
-        "RVT (Revit BIM)",
-        "DWG",
-        "OBJ"
-      ],
-      "bridges": [
-        "Autodesk Construction Cloud",
-        "AWS IoT TwinMaker",
-        "NVIDIA Omniverse"
-      ],
-      "compliance": {
-        "omniverse": "Connector Bridge",
-        "sovereignty": "SOC2 / ISO 27001",
-        "openStandard": "E57 / RVT"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-ORB360",
-      "categoryCode": "6.5",
-      "categoryName": "360°-Erfassung & GIS-Kartierung",
-      "name": "Orb360 Turntable System",
-      "subtitle": "Automatisierte 360° Bauteil-Fotografie",
-      "vendor": "Orb360 Technologies",
-      "hq": "Deutschland (EU)",
-      "tier": "Tier 1",
-      "costLabel": "≤ €30k",
-      "status": "EVALUIERT",
-      "url": "https://orb360.tech",
-      "overview": "Automatisierter Drehteller zur Erfassung kleiner Industrieteile für Ersatzteilkataloge und 3D-Web-Viewer.",
-      "inputs": [
-        "High-Res Kamera Fotos"
-      ],
-      "outputs": [
-        "glTF 2.0",
-        "OBJ",
-        "Interactive Web HTML"
-      ],
-      "bridges": [
-        "WooCommerce",
-        "SAP Commerce Cloud",
-        "Blender"
-      ],
-      "compliance": {
-        "omniverse": "Web Standard Export",
-        "sovereignty": "100% EU Souverän",
-        "openStandard": "glTF 2.0"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-EPIC-REALITYSCAN",
-      "categoryCode": "6.5",
-      "categoryName": "360°-Erfassung & GIS-Kartierung",
-      "name": "RealityScan (Epic Games / Mobile)",
-      "subtitle": "Kostenlose Mobile Photogrammetrie App",
-      "vendor": "Epic Games Inc. / Capturing Reality",
-      "hq": "Bratislava, Slowakei (EU)",
-      "tier": "Tier 1",
-      "costLabel": "Kostenfrei / €0",
-      "status": "EVALUIERT",
-      "url": "https://capturingreality.com/realityscan",
-      "overview": "Mobile Photogrammetrie-App, die Fotoserie auf dem Smartphone in 3D-Modelle umwandelt.",
-      "inputs": [
-        "Smartphone Kamera Fotos"
-      ],
-      "outputs": [
-        "glTF 2.0",
-        "USDZ",
-        "OBJ",
+        "Pixyz Supported (STEP, JT, RVT, SolidWorks)",
+        "OpenUSD",
+        "glTF",
         "FBX"
       ],
-      "bridges": [
-        "Unreal Engine 5",
-        "Sketchfab",
-        "Blender"
-      ],
-      "compliance": {
-        "omniverse": "USDZ Export",
-        "sovereignty": "100% EU Entwicklung",
-        "openStandard": "glTF / USDZ"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-MODBUS-TCP",
-      "categoryCode": "7.0",
-      "categoryName": "OT & Sensorik-Feldbusse",
-      "name": "Modbus TCP/RTU Protocol",
-      "subtitle": "Legacy-Sensor- & Energiezähler-Protokoll",
-      "vendor": "Modbus Organization",
-      "hq": "Hopkinton, MA, USA / Global",
-      "tier": "Tier 1",
-      "costLabel": "Open Standard / €0",
-      "status": "LEGACY SUPPORT",
-      "url": "https://modbus.org",
-      "overview": "Industrie-Kommunikationsprotokoll aus dem Jahr 1979 zum Auslesen von Energiezählern, Temperaturmessern und Alt-SPSen.",
-      "inputs": [
-        "RS-485 Serial Signals",
-        "TCP Packets"
-      ],
       "outputs": [
-        "Raw Register Values (Integer/Float)"
+        "WebGL",
+        "OpenXR Executables",
+        "Android/iOS App Packages",
+        "USD Stage"
       ],
       "bridges": [
-        "Collectu Engine",
-        "Node-RED",
-        "OPC UA Gateways"
-      ],
-      "compliance": {
-        "omniverse": "IoT Edge Gateway",
-        "sovereignty": "Royalty-Free Standard",
-        "openStandard": "Modbus TCP"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-MTCONNECT",
-      "categoryCode": "7.0",
-      "categoryName": "OT & Sensorik-Feldbusse",
-      "name": "MTConnect Machine Standard",
-      "subtitle": "Offener Standard für CNC-Werkzeugmaschinen",
-      "vendor": "MTConnect Institute",
-      "hq": "McLean, VA, USA",
-      "tier": "Tier 1",
-      "costLabel": "Open Standard / €0",
-      "status": "EVALUIERT",
-      "url": "https://mtconnect.org",
-      "overview": "Offenes Protokoll zum Extrahieren struktureller Daten aus CNC-Werkzeugmaschinen und Fräszentren in XML/REST-Formate.",
-      "inputs": [
-        "CNC Controller Memory",
-        "Machine Sensors"
-      ],
-      "outputs": [
-        "MTConnect XML Streams",
-        "HTTP REST Responses"
-      ],
-      "bridges": [
-        "Collectu Data Engine",
-        "MES Systems",
-        "Azure IoT"
-      ],
-      "compliance": {
-        "omniverse": "Gateway to USD / AAS",
-        "sovereignty": "ANSI Recognized Standard",
-        "openStandard": "MTConnect XML"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-OPC-UA",
-      "categoryCode": "7.0",
-      "categoryName": "OT & Sensorik-Feldbusse",
-      "name": "OPC UA (IEC 62541 - Client/Server & PubSub)",
-      "subtitle": "Herstellerunabhängiger OT-Kommunikationsstandard",
-      "vendor": "OPC Foundation",
-      "hq": "Scottsdale, AZ, USA / EU Office",
-      "tier": "Tier 1",
-      "costLabel": "Open Standard / €0",
-      "status": "CORE OT BACKBONE",
-      "url": "https://opcfoundation.org",
-      "overview": "Herstellerunabhängiges Protokoll für Industrie 4.0. Verbindet SPSen, CNCs und Roboter direkt mit dem 3D-Zwilling im Industrial Metaverse über semantische Companion Specifications.",
-      "inputs": [
-        "SPS-Variablen",
-        "Sensor-Register",
-        "Feldbus-Streams"
-      ],
-      "outputs": [
-        "OPC UA XML NodeSets",
-        "JSON PubSub Streams",
-        "Binary Encoded Streams"
-      ],
-      "bridges": [
-        "NVIDIA Omniverse Live Connect",
-        "Siemens S7-1500",
-        "Collectu Data Engine",
-        "Azure IoT"
-      ],
-      "compliance": {
-        "omniverse": "Native Telemetry Bridge",
-        "sovereignty": "100% EU Industrie 4.0 Standard",
-        "openStandard": "IEC 62541"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-PROFINET-TSN",
-      "categoryCode": "7.0",
-      "categoryName": "OT & Sensorik-Feldbusse",
-      "name": "PROFINET / TSN (Time-Sensitive Networking)",
-      "subtitle": "Industrieller Echtzeit-Ethernet-Standard",
-      "vendor": "PI (PROFIBUS & PROFINET International)",
-      "hq": "Karlsruhe, Deutschland (EU)",
-      "tier": "Tier 1",
-      "costLabel": "Open Standard / €0",
-      "status": "STANDARDIZIERT",
-      "url": "https://profibus.com",
-      "overview": "Führender europäischer Echtzeit-Industrial-Ethernet-Standard. Garantiert in Kombination mit TSN deterministische Taktraten im Mikrosekundenbereich für die Fabrikautomatisierung.",
-      "inputs": [
-        "Ethernet Frames",
-        "Sensorsignale"
-      ],
-      "outputs": [
-        "PROFINET IO Telemetrie",
-        "TSN Deterministische Streams"
-      ],
-      "bridges": [
-        "Siemens S7 SPS",
-        "ISG-Virtuos",
-        "OPC UA PubSub over TSN"
-      ],
-      "compliance": {
-        "omniverse": "Fieldbus Integration",
-        "sovereignty": "100% EU Standard (IEC 61158)",
-        "openStandard": "PROFINET / IEEE 802.1 TSN"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-ROS2-DDS",
-      "categoryCode": "7.0",
-      "categoryName": "OT & Sensorik-Feldbusse",
-      "name": "ROS / ROS 2 (DDS Inter-Robot Middleware)",
-      "subtitle": "Open-Source Roboter-Betriebssystem & Middleware",
-      "vendor": "Open Robotics (OSRF)",
-      "hq": "Mountain View, CA, USA / Global Community",
-      "tier": "Tier 1",
-      "costLabel": "Open Source / €0",
-      "status": "CORE ROBOTICS BACKBONE",
-      "url": "https://ros.org",
-      "overview": "Open-Source Roboter-Middleware auf Basis von Data Distribution Service (DDS) für die Zero-Copy-Kommunikation in autonomen Robotern und AMRs.",
-      "inputs": [
-        "Sensor Topics (LaserScan, Image, IMU)",
-        "Action Goals"
-      ],
-      "outputs": [
-        "Motor Velocity Commands (Twist)",
-        "Joint Trajectories",
-        "TF Transform Trees"
-      ],
-      "bridges": [
-        "NVIDIA Isaac Sim/Lab",
-        "Hugging Face LeRobot",
-        "Gazebo",
-        "Waveye Radar"
-      ],
-      "compliance": {
-        "omniverse": "Native Isaac Sim Bridge",
-        "sovereignty": "Open Source Standard",
-        "openStandard": "OMG DDS Standard"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-AMQP-PROTOCOL",
-      "categoryCode": "8.1",
-      "categoryName": "Industrial IoT-Protokolle",
-      "name": "AMQP Enterprise Messaging",
-      "subtitle": "Zuverlässiges Enterprise-Messaging für Cloud",
-      "vendor": "OASIS Consortium",
-      "hq": "Boston, MA, USA / Global",
-      "tier": "Tier 1",
-      "costLabel": "Open Standard / €0",
-      "status": "EVALUIERT",
-      "url": "https://amqp.org",
-      "overview": "Unternehmensgerechtes Messaging-Protokoll für transaktionssicheres Queuing, Routing und Punkt-zu-Punkt-Zustellung von Nachrichten.",
-      "inputs": [
-        "Telemetrie-Payloads",
-        "ERP Events",
-        "Alerts"
-      ],
-      "outputs": [
-        "AMQP Packets",
-        "Event Triggers"
-      ],
-      "bridges": [
-        "Azure Digital Twins",
-        "RabbitMQ",
-        "ERP Systeme"
-      ],
-      "compliance": {
-        "omniverse": "Cloud Bridge",
-        "sovereignty": "ISO/IEC 19464",
-        "openStandard": "AMQP 1.0"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-MQTT-SPARKPLUG",
-      "categoryCode": "8.1",
-      "categoryName": "Industrial IoT-Protokolle",
-      "name": "MQTT / Sparkplug B",
-      "subtitle": "Leichtgewichtige IIoT Pub/Sub Serialisierung",
-      "vendor": "Eclipse Foundation / OASIS",
-      "hq": "Brüssel, Belgien (EU)",
-      "tier": "Tier 1",
-      "costLabel": "Open Standard / €0",
-      "status": "STANDARDIZIERT",
-      "url": "https://sparkplug.eclipse.org",
-      "overview": "Leichtgewichtiges Publish/Subscribe-Protokoll. Sparkplug B bietet Zustandskontrolle, Auto-Discovery von Datentags und strukturierte Protobuf-Payloads für IIoT-Netzwerke.",
-      "inputs": [
-        "Sensorsignale",
-        "Edge Gateways",
-        "SPS Tags"
-      ],
-      "outputs": [
-        "Sparkplug B Protobuf Payloads",
-        "JSON MQTT Topics"
-      ],
-      "bridges": [
-        "Collectu Engine",
-        "AWS IoT",
-        "Azure Digital Twins",
+        "PTC Vuforia",
+        "Microsoft Azure Digital Twins",
         "NVIDIA Omniverse"
       ],
       "compliance": {
-        "omniverse": "Native IoT Connector",
-        "sovereignty": "100% EU Governance (Eclipse)",
-        "openStandard": "ISO/IEC 20922"
+        "omniverse": "OpenUSD Import Package",
+        "sovereignty": "SOC2 Compliant",
+        "openStandard": "OpenXR / glTF / OpenUSD"
       }
     },
     {
-      "refCode": "IND-META-2026-AAS-IEC63278",
-      "categoryCode": "8.2",
-      "categoryName": "Verwaltungsschale & Zwillings-Standards",
-      "name": "Asset Administration Shell / AAS (IEC 63278)",
-      "subtitle": "RAMI 4.0 Standard für digitale Verwaltungsschalen",
-      "vendor": "IDTA / Plattform Industrie 4.0",
-      "hq": "Frankfurt, Deutschland (EU)",
-      "tier": "Tier 1",
-      "costLabel": "Open Standard / €0",
-      "status": "PFLICHTSTANDARD INTEROP",
-      "url": "https://industrialdigitaltwin.org",
-      "overview": "Der offizielle RAMI 4.0 Standard für digitale Zwillings-Metadaten. Kapselt technische Dokumentationen, Zertifikate, CAD-Modelle, CO2-Fußabdrücke und Sensorpunkte eines Industrie-Assets.",
-      "inputs": [
-        "XML",
-        "JSON",
-        "AASX Packages",
-        "OPC UA NodeSets",
-        "PDF"
-      ],
-      "outputs": [
-        "AASX Package",
-        "REST API JSON",
-        "RDF Knowledge Graphs"
-      ],
-      "bridges": [
-        "Siemens Operations X",
-        "Collectu Engine",
-        "NVIDIA Omniverse USD Metadata"
-      ],
-      "compliance": {
-        "omniverse": "Metadata Bridge",
-        "sovereignty": "100% EU RAMI 4.0 Standard",
-        "openStandard": "IEC 63278 / IDTA"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-MICROSOFT-DTDL",
-      "categoryCode": "8.2",
-      "categoryName": "Verwaltungsschale & Zwillings-Standards",
-      "name": "Digital Twins Definition Language (DTDL)",
-      "subtitle": "JSON-LD basiertes Modellierungsformat für IIoT",
-      "vendor": "Microsoft / Digital Twin Consortium",
-      "hq": "Redmond, WA, USA",
-      "tier": "Tier 1",
-      "costLabel": "Open Standard / €0",
-      "status": "EVALUIERT",
-      "url": "https://github.com/Azure/opendigitaltwins-dtdl",
-      "overview": "JSON-LD-basierte Modellierungssprache zur Definition digitaler Zwillingseinheiten, Raumgraphen und Telemetriesignale in Azure Digital Twins.",
-      "inputs": [
-        "JSON-LD Schemas",
-        "DTDL Models"
-      ],
-      "outputs": [
-        "Spatial Knowledge Graphs",
-        "Azure Synapse Tables"
-      ],
-      "bridges": [
-        "Azure Digital Twins",
-        "Bentley iTwin",
-        "Power BI"
-      ],
-      "compliance": {
-        "omniverse": "Azure Bridge",
-        "sovereignty": "W3C Draft",
-        "openStandard": "W3C JSON-LD"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-COLLECTU",
-      "categoryCode": "8.3",
-      "categoryName": "KI-Datenmotoren & Pipeline-Bridges",
-      "name": "Collectu (No-Code AI Industrial Data Engine)",
-      "subtitle": "No-Code KI-Verknüpfung von Maschinen an 3D-OpenUSD",
-      "vendor": "Collectu / Futuromundo Cyberländ",
-      "hq": "Baden-Württemberg, Deutschland (EU)",
-      "tier": "Tier 1",
-      "costLabel": "≤ €30k",
-      "status": "EMPFOHLENE DATA ENGINE",
-      "url": "https://futuromundo.com/cyberlaend",
-      "overview": "KI-gestützte No-Code-Datenengine zur nahtlosen Bindung von Maschinen, Sensoren und SPSen an 3D OpenUSD digitale Zwillinge für geschlossene Regelkreise.",
-      "inputs": [
-        "OPC UA",
-        "MQTT",
-        "Modbus",
-        "REST API",
-        "Siemens S7",
-        "ROS 2 Topics"
-      ],
-      "outputs": [
-        "OpenUSD Live Data Stream",
-        "AASX Twin Packages",
-        "WebSockets JSON"
-      ],
-      "bridges": [
-        "NVIDIA Omniverse Nucleus",
-        "Siemens S7 SPS",
-        "Asset Administration Shell (AAS)"
-      ],
-      "compliance": {
-        "omniverse": "Native Live Connector",
-        "sovereignty": "100% EU Souverän (Baden-Württemberg)",
-        "openStandard": "OPC UA / AAS / OpenUSD"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-AWS-TWINMAKER",
-      "categoryCode": "9.0",
-      "categoryName": "Enterprise Cloud-Zwillinge",
-      "name": "AWS IoT TwinMaker",
-      "subtitle": "Cloud-Plattform für 3D-Digital-Twins",
-      "vendor": "Amazon Web Services Inc.",
-      "hq": "Seattle, WA, USA",
+      "refCode": "IND-META-2026-UNREAL-ENGINE-5",
+      "categoryCode": "5.1",
+      "categoryName": "Echtzeit-3D & Spatial Engines",
+      "name": "Unreal Engine 5 Enterprise",
+      "subtitle": "Fotorealistisches Rendering & High-End Visualisierung",
+      "vendor": "Epic Games Inc.",
+      "hq": "Cary, NC, USA / EU Support",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "EVALUIERT",
-      "url": "https://aws.amazon.com/iot-twinmaker",
-      "overview": "Cloud-Plattform, die Entwicklern das Erstellen digitaler Zwillinge ermöglicht durch Aggregation bestehender AWS-Datenspeicher.",
+      "status": "EMPFOHLEN",
+      "url": "https://unrealengine.com/enterprise",
+      "overview": "High-End 3D-Echtzeit-Engine für fotorealistische Visualisierungen, virtuelle Begehungen und immersives VR-Training von Werksanlagen.",
       "inputs": [
-        "AWS SiteWise Data",
-        "Kinesis Streams",
-        "OpenUSD (.usd)",
-        "glTF 2.0"
+        "OpenUSD",
+        "Datasmith (Revit/SolidWorks/Rhino)",
+        "FBX",
+        "glTF",
+        "Point Clouds"
       ],
       "outputs": [
-        "Grafana 3D Visualisations",
-        "AWS IoT Events"
-      ],
-      "bridges": [
-        "NVIDIA Omniverse Cloud",
-        "Matterport",
-        "Amazon Grafana"
-      ],
-      "compliance": {
-        "omniverse": "Cloud Stream Connector",
-        "sovereignty": "SOC2 / ISO 27001",
-        "openStandard": "OpenUSD / glTF 2.0"
-      }
-    },
-    {
-      "refCode": "IND-META-2026-BENTLEY-ITWIN",
-      "categoryCode": "9.0",
-      "categoryName": "Enterprise Cloud-Zwillinge",
-      "name": "Bentley iTwin Platform",
-      "subtitle": "Infrastruktur- & Prozessanlagen-Zwilling",
-      "vendor": "Bentley Systems Inc.",
-      "hq": "Exton, PA, USA",
-      "tier": "Tier 3",
-      "costLabel": "> €100k",
-      "status": "STANDARDIZIERT",
-      "url": "https://bentley.com/itwin",
-      "overview": "Offene digital Zwillingsplattform für Großinfrastruktur, Prozessanlagen, Versorgungsnetze und Fabrikareale.",
-      "inputs": [
-        "DGN",
-        "RVT",
-        "IFC",
-        "Point Clouds",
-        "OpenUSD"
-      ],
-      "outputs": [
-        "iModel",
-        "3D Tiles",
-        "WebGL Stream",
+        "Executable Binaries (Win/Linux)",
+        "Pixel Streaming (WebRTC)",
         "OpenUSD Stage"
       ],
       "bridges": [
-        "NVIDIA Omniverse",
-        "Cesium GS",
-        "Microsoft Azure Digital Twins"
+        "NVIDIA Omniverse Connector",
+        "AWS TwinMaker",
+        "ROS 2 DDS"
       ],
       "compliance": {
-        "omniverse": "iTwin Connector",
-        "sovereignty": "ISO 19650 Compliant",
-        "openStandard": "iModel / 3D Tiles"
+        "omniverse": "OpenUSD Importer / Stage",
+        "sovereignty": "SOC2 / Enterprise SLA",
+        "openStandard": "OpenUSD / glTF / WebRTC"
       }
     },
     {
-      "refCode": "IND-META-2026-AZURE-TWINS",
-      "categoryCode": "9.0",
-      "categoryName": "Enterprise Cloud-Zwillinge",
-      "name": "Microsoft Azure Digital Twins",
-      "subtitle": "Cloud-Graphendienst für Fabriken",
-      "vendor": "Microsoft Corporation",
-      "hq": "Redmond, WA, USA",
-      "tier": "Tier 2",
-      "costLabel": "≤ €100k",
-      "status": "EVALUIERT",
-      "url": "https://azure.microsoft.com/services/digital-twins",
-      "overview": "PaaS-Plattform zum Erstellen graphbasierter digitaler Modelle kompletter Fertigungsnetzwerke und Lieferketten.",
+      "refCode": "IND-META-2026-APPLE-VISION-PRO",
+      "categoryCode": "5.2",
+      "categoryName": "Spatial XR & VR/AR Headsets",
+      "name": "Apple Vision Pro Enterprise",
+      "subtitle": "High-End Spatial Computing Hardware",
+      "vendor": "Apple Inc.",
+      "hq": "Cupertino, CA, USA",
+      "tier": "Tier 1",
+      "costLabel": "≤ €30k",
+      "status": "PREMIUM SPATIAL DEVICE",
+      "url": "https://apple.com/apple-vision-pro",
+      "overview": "Spatial Computer mit extrem hochauflösenden Micro-OLED-Displays (23 Millionen Pixel) für gestochen scharfe CAD-Prüfungen und Cloud-Streaming.",
       "inputs": [
-        "DTDL v3 Schemas",
-        "MQTT",
-        "AMQP",
-        "REST JSON"
+        "USDZ",
+        "WebXR",
+        "NVIDIA Omniverse Cloud WebRTC Stream"
       ],
       "outputs": [
-        "Azure Synapse Events",
-        "Event Grid Notifications",
-        "3D Web Overlay"
+        "ARKit Spatial Mesh",
+        "Eye/Hand Pose Telemetry"
       ],
       "bridges": [
-        "NVIDIA Omniverse Cloud",
-        "Power BI",
-        "Bentley iTwin"
+        "NVIDIA Omniverse Cloud Streaming App",
+        "PTC Vuforia",
+        "Siemens NX VR"
       ],
       "compliance": {
-        "omniverse": "Cloud Streaming Extension",
-        "sovereignty": "DSGVO Cloud (Frankfurt)",
-        "openStandard": "DTDL / JSON-LD"
+        "omniverse": "WebRTC Streaming Native",
+        "sovereignty": "SOC2 / Apple Enterprise",
+        "openStandard": "USDZ / WebXR / OpenXR"
       }
     },
     {
-      "refCode": "IND-META-2026-PTC-THINGWORX",
-      "categoryCode": "9.0",
-      "categoryName": "Enterprise Cloud-Zwillinge",
-      "name": "PTC ThingWorx IIoT Platform",
-      "subtitle": "Smart Factory Application Engine & AR Service",
-      "vendor": "PTC Inc.",
-      "hq": "Boston, MA, USA",
-      "tier": "Tier 3",
-      "costLabel": "> €100k",
+      "refCode": "IND-META-2026-HTC-VIVE-FOCUS3",
+      "categoryCode": "5.2",
+      "categoryName": "Spatial XR & VR/AR Headsets",
+      "name": "HTC VIVE Focus 3 Business",
+      "subtitle": "Robustes Standalone VR/AR Headset für Training",
+      "vendor": "HTC Corporation",
+      "hq": "Taoyuan, Taiwan / EU Support",
+      "tier": "Tier 1",
+      "costLabel": "≤ €30k",
       "status": "EVALUIERT",
-      "url": "https://ptc.com/thingworx",
-      "overview": "Etablierte Enterprise-IIoT-Plattform für schnelle Industrieanwendungen, Maschinenüberwachung und AR-Außendienst-Bereitstellung.",
+      "url": "https://business.vive.com/focus3",
+      "overview": "Robustes Standalone-Enterprise-VR-Headset für industrielles Sicherheitstraining, ergonomische VR-Montagesimulation und Trainingszentren.",
       "inputs": [
-        "OPC UA (Kepware)",
-        "MQTT",
-        "REST API",
-        "Modbus"
+        "OpenXR Apps",
+        "PC VR Streaming",
+        "Android APK"
       ],
       "outputs": [
-        "ThingWorx REST Services",
-        "Vuforia AR Streams"
+        "6DOF Controller Tracking",
+        "Optional Eye/Face Tracking"
       ],
       "bridges": [
-        "PTC Windchill",
-        "PTC Creo",
+        "Halocline",
+        "Unity Industry",
+        "Unreal Engine 5",
         "NVIDIA Omniverse"
       ],
       "compliance": {
-        "omniverse": "Telemetry Bridge",
-        "sovereignty": "SOC2 Compliant",
-        "openStandard": "OPC UA / REST"
+        "omniverse": "OpenXR Native",
+        "sovereignty": "ISO 27001 Enterprise",
+        "openStandard": "OpenXR"
       }
     },
     {
-      "refCode": "IND-META-2026-SIEMENS-OPERATIONS-X",
-      "categoryCode": "9.0",
-      "categoryName": "Enterprise Cloud-Zwillinge",
-      "name": "Siemens Industrial Operations X",
-      "subtitle": "Industrial IoT Edge-to-Cloud Plattform",
-      "vendor": "Siemens AG",
-      "hq": "München / Nürnberg, Deutschland (EU)",
-      "tier": "Tier 3",
-      "costLabel": "> €100k",
-      "status": "STANDARDIZIERT",
-      "url": "https://siemens.com/operations-x",
-      "overview": "Offenes, interoperables Industrial-IoT-Portfolio zur Automatisierung, Analyse und Optimierung des Shopfloor-Betriebs von der Edge bis zur Cloud.",
+      "refCode": "IND-META-2026-MAGIC-LEAP-2",
+      "categoryCode": "5.2",
+      "categoryName": "Spatial XR & VR/AR Headsets",
+      "name": "Magic Leap 2 Enterprise AR Glasses",
+      "subtitle": "Ergonomische See-Through AR-Brille für Werksmonteure",
+      "vendor": "Magic Leap Inc.",
+      "hq": "Plantation, FL, USA / EU Support",
+      "tier": "Tier 2",
+      "costLabel": "≤ €100k",
+      "status": "EVALUIERT",
+      "url": "https://magicleap.com",
+      "overview": "Leichtgewichtige optische See-Through AR-Brille für Werksmonteure mit dynamischer Abdunkelung für helle Fabrikhallen.",
       "inputs": [
-        "OPC UA",
-        "S7 Protocol",
-        "MQTT",
-        "Industrial Edge Data"
+        "OpenXR C++ Apps",
+        "Android Native Packages",
+        "WebXR"
       ],
       "outputs": [
-        "OpenUSD Attributes",
-        "AASX Packages",
-        "Cloud Analytics Dashboards"
+        "Spatial Mesh",
+        "Eye Tracking Data",
+        "6DOF Controller Pose"
       ],
       "bridges": [
-        "Siemens Teamcenter",
-        "NVIDIA Omniverse",
-        "AWS / Azure Cloud"
+        "PTC Vuforia Engine",
+        "Siemens Manifest",
+        "Unity Industry",
+        "OpenXR"
       ],
       "compliance": {
-        "omniverse": "Live Cloud Bridge",
-        "sovereignty": "100% EU Souverän (GAIA-X)",
-        "openStandard": "OPC UA / AAS"
+        "omniverse": "OpenXR Compliant",
+        "sovereignty": "Enterprise Safety Certified",
+        "openStandard": "OpenXR / Android Native"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-META-QUEST3",
+      "categoryCode": "5.2",
+      "categoryName": "Spatial XR & VR/AR Headsets",
+      "name": "Meta Quest 3 / Quest Pro (SME Spatial Review)",
+      "subtitle": "Kabelloses Mixed-Reality Headset für den Mittelstand",
+      "vendor": "Meta Platforms Inc.",
+      "hq": "Menlo Park, CA, USA",
+      "tier": "Tier 1",
+      "costLabel": "≤ €30k",
+      "status": "EMPFOHLEN SME",
+      "url": "https://meta.com/quest",
+      "overview": "Vielseitiges kabelloses Standalone MR/VR-Headset. Weit verbreitet im Mittelstand für kostengünstige Werksbegehungen, VR-Training und Remote-Kollaboration.",
+      "inputs": [
+        "OpenXR Executables",
+        "WebXR Browser",
+        "PC VR Streaming"
+      ],
+      "outputs": [
+        "Hand Tracking Telemetrie",
+        "Head Pose Telemetrie"
+      ],
+      "bridges": [
+        "Halocline",
+        "Unity",
+        "Unreal Engine 5",
+        "NVIDIA Omniverse WebRTC"
+      ],
+      "compliance": {
+        "omniverse": "WebRTC Stream",
+        "sovereignty": "SOC2 Enterprise",
+        "openStandard": "OpenXR / WebXR"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-REALWEAR-NAV520",
+      "categoryCode": "5.2",
+      "categoryName": "Spatial XR & VR/AR Headsets",
+      "name": "RealWear Navigator 520 (Assisted Reality Wearable)",
+      "subtitle": "Freihand-Mikrodisplay für Instandhaltung & Service",
+      "vendor": "RealWear Inc.",
+      "hq": "Vancouver, WA, USA",
+      "tier": "Tier 1",
+      "costLabel": "≤ €30k",
+      "status": "STANDARDIZIERT FIELD WORKER",
+      "url": "https://realwear.com/navigator-520",
+      "overview": "Robustes Freihand-Mikrodisplay-Headset zur Montage an Schutzhelmen. Entwickelt für Service-Techniker bei der Fernwartung und Inspektion in rauen Industrieumgebungen.",
+      "inputs": [
+        "Android APK Pakete",
+        "Sprachbefehle",
+        "Remote Video Calls"
+      ],
+      "outputs": [
+        "48MP Kamerastream",
+        "Audio Telemetrie",
+        "PDF Anmerkungen"
+      ],
+      "bridges": [
+        "Microsoft Teams",
+        "Zoom 1Form",
+        "PTC Vuforia",
+        "Siemens Manifest"
+      ],
+      "compliance": {
+        "omniverse": "Remote Video Bridge",
+        "sovereignty": "IP66 / ATEX Zone 2 Option",
+        "openStandard": "Android Native"
+      }
+    },
+    {
+      "refCode": "IND-META-2026-VARJO-XR4",
+      "categoryCode": "5.2",
+      "categoryName": "Spatial XR & VR/AR Headsets",
+      "name": "Varjo XR-4 Series (Human-Eye Resolution MR)",
+      "subtitle": "Industrielles Mixed-Reality Headset mit 51 PPD",
+      "vendor": "Varjo Technologies Oy",
+      "hq": "Helsinki, Finnland (EU)",
+      "tier": "Tier 2",
+      "costLabel": "≤ €100k",
+      "status": "STANDARDIZIERT HIGH-END",
+      "url": "https://varjo.com/products/xr-4",
+      "overview": "Kabelgebundenes Mixed-Reality-Headset für Industrieanwendungen mit Auflösung auf menschlichem Augenniveau (51 PPD) und fotorealistischem Video-Pass-Through.",
+      "inputs": [
+        "OpenXR Stream",
+        "NVIDIA RTX Workstation GPU Output"
+      ],
+      "outputs": [
+        "Varjo Eye Tracking Data (120Hz)",
+        "LiDAR Depth Map"
+      ],
+      "bridges": [
+        "Autodesk VRED",
+        "Unreal Engine 5",
+        "Unity Industry",
+        "NVIDIA Omniverse"
+      ],
+      "compliance": {
+        "omniverse": "Native OpenXR Extension",
+        "sovereignty": "100% EU Souverän (Finnland)",
+        "openStandard": "OpenXR"
       }
     }
   ],
@@ -3592,7 +3592,7 @@ window.INDEX_DATA = {
 window.PROFILES_DATA = {
   "IND-META-2026-AAS-IEC63278": {
     "refCode": "IND-META-2026-AAS-IEC63278",
-    "categoryCode": "8.2",
+    "categoryCode": "3.1",
     "categoryName": "Verwaltungsschale & Zwillings-Standards",
     "name": "Asset Administration Shell / AAS (IEC 63278)",
     "subtitle": "RAMI 4.0 Standard für digitale Verwaltungsschalen",
@@ -3664,7 +3664,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-AASX-PACKAGE": {
     "refCode": "IND-META-2026-AASX-PACKAGE",
-    "categoryCode": "10.0",
+    "categoryCode": "2.4",
     "categoryName": "Datenformate & OpenUSD-Standards",
     "name": "AASX Packages (IDTA / IEC 63278 Container)",
     "subtitle": "Standardisierter Zwillings-Datencontainer",
@@ -3806,7 +3806,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-AMQP-PROTOCOL": {
     "refCode": "IND-META-2026-AMQP-PROTOCOL",
-    "categoryCode": "8.1",
+    "categoryCode": "1.8",
     "categoryName": "Industrial IoT-Protokolle",
     "name": "AMQP Enterprise Messaging",
     "subtitle": "Zuverlässiges Enterprise-Messaging für Cloud",
@@ -3947,7 +3947,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-APPLE-VISION-PRO": {
     "refCode": "IND-META-2026-APPLE-VISION-PRO",
-    "categoryCode": "11.0",
+    "categoryCode": "5.2",
     "categoryName": "Spatial XR & VR/AR Headsets",
     "name": "Apple Vision Pro Enterprise",
     "subtitle": "High-End Spatial Computing Hardware",
@@ -4016,7 +4016,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-ARTEC3D-STUDIO": {
     "refCode": "IND-META-2026-ARTEC3D-STUDIO",
-    "categoryCode": "6.4",
+    "categoryCode": "1.4",
     "categoryName": "Handheld 3DGS & Photogrammetrie",
     "name": "Artec 3D Cloud / Studio (Leo & Eva)",
     "subtitle": "Messtechnischer 3D-Handscanner für Reverse Engineering",
@@ -4087,7 +4087,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-AUTODESK-3DSMAX": {
     "refCode": "IND-META-2026-AUTODESK-3DSMAX",
-    "categoryCode": "2.0",
+    "categoryCode": "2.3",
     "categoryName": "DCC & Generatives 3D-Design",
     "name": "Autodesk 3ds Max",
     "subtitle": "Industrial DCC & Mesh-Optimierung",
@@ -4161,7 +4161,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-AUTODESK-CIVIL3D": {
     "refCode": "IND-META-2026-AUTODESK-CIVIL3D",
-    "categoryCode": "1.2",
+    "categoryCode": "2.2",
     "categoryName": "BIM, Bauwesen & Infrastruktur (AEC)",
     "name": "Autodesk Civil 3D",
     "subtitle": "Gelände- & Infrastruktur-BIM für Fabrikareale",
@@ -4233,7 +4233,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-AUTODESK-FUSION": {
     "refCode": "IND-META-2026-AUTODESK-FUSION",
-    "categoryCode": "1.1",
+    "categoryCode": "2.1",
     "categoryName": "Mechanisches CAD (MCAD)",
     "name": "Autodesk Fusion 360",
     "subtitle": "Cloud-CAD/CAM & Prototyping für Entwicklungsteams",
@@ -4306,7 +4306,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-AUTODESK-MAYA": {
     "refCode": "IND-META-2026-AUTODESK-MAYA",
-    "categoryCode": "2.0",
+    "categoryCode": "2.3",
     "categoryName": "DCC & Generatives 3D-Design",
     "name": "Autodesk Maya",
     "subtitle": "Kinematik-Rigging & Worker-Animation",
@@ -4380,7 +4380,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-AUTODESK-RECAP": {
     "refCode": "IND-META-2026-AUTODESK-RECAP",
-    "categoryCode": "6.5",
+    "categoryCode": "1.5",
     "categoryName": "360°-Erfassung & GIS-Kartierung",
     "name": "Autodesk ReCap Pro",
     "subtitle": "Punktwolken-Aufbereitung & Photogrammetrie",
@@ -4453,7 +4453,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-AUTODESK-REVIT": {
     "refCode": "IND-META-2026-AUTODESK-REVIT",
-    "categoryCode": "1.2",
+    "categoryCode": "2.2",
     "categoryName": "BIM, Bauwesen & Infrastruktur (AEC)",
     "name": "Autodesk Revit",
     "subtitle": "BIM Master-System für digitale Fabrikgebäude",
@@ -4525,7 +4525,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-AWS-TWINMAKER": {
     "refCode": "IND-META-2026-AWS-TWINMAKER",
-    "categoryCode": "9.0",
+    "categoryCode": "3.3",
     "categoryName": "Enterprise Cloud-Zwillinge",
     "name": "AWS IoT TwinMaker",
     "subtitle": "Cloud-Plattform für 3D-Digital-Twins",
@@ -4595,7 +4595,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-AZURE-TWINS": {
     "refCode": "IND-META-2026-AZURE-TWINS",
-    "categoryCode": "9.0",
+    "categoryCode": "3.3",
     "categoryName": "Enterprise Cloud-Zwillinge",
     "name": "Microsoft Azure Digital Twins",
     "subtitle": "Cloud-Graphendienst für Fabriken",
@@ -4666,7 +4666,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-BENTLEY-ITWIN": {
     "refCode": "IND-META-2026-BENTLEY-ITWIN",
-    "categoryCode": "9.0",
+    "categoryCode": "3.3",
     "categoryName": "Enterprise Cloud-Zwillinge",
     "name": "Bentley iTwin Platform",
     "subtitle": "Infrastruktur- & Prozessanlagen-Zwilling",
@@ -4739,7 +4739,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-BLENDER-3D": {
     "refCode": "IND-META-2026-BLENDER-3D",
-    "categoryCode": "2.0",
+    "categoryCode": "2.3",
     "categoryName": "DCC & Generatives 3D-Design",
     "name": "Blender 3D Suite",
     "subtitle": "Open-Source DCC & OpenUSD Pipeline Workhorse",
@@ -4813,7 +4813,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-CATIA-3DS": {
     "refCode": "IND-META-2026-CATIA-3DS",
-    "categoryCode": "1.1",
+    "categoryCode": "2.1",
     "categoryName": "Mechanisches CAD (MCAD)",
     "name": "Dassault CATIA V5 / 3DEXPERIENCE",
     "subtitle": "OEM High-End Class-A Surface Master Engine",
@@ -4884,7 +4884,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-CESIUM-3DTILES": {
     "refCode": "IND-META-2026-CESIUM-3DTILES",
-    "categoryCode": "6.5",
+    "categoryCode": "1.5",
     "categoryName": "360°-Erfassung & GIS-Kartierung",
     "name": "Cesium (3D Tiles Streaming Platform)",
     "subtitle": "OGC 3D Tiles Streaming für Geodaten",
@@ -4957,7 +4957,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-COLLECTU": {
     "refCode": "IND-META-2026-COLLECTU",
-    "categoryCode": "8.3",
+    "categoryCode": "3.2",
     "categoryName": "KI-Datenmotoren & Pipeline-Bridges",
     "name": "Collectu (No-Code AI Industrial Data Engine)",
     "subtitle": "No-Code KI-Verknüpfung von Maschinen an 3D-OpenUSD",
@@ -5103,7 +5103,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-DASSAULT-DELMIA": {
     "refCode": "IND-META-2026-DASSAULT-DELMIA",
-    "categoryCode": "5.0",
+    "categoryCode": "4.4",
     "categoryName": "Robotik & Fabriksimulation",
     "name": "Dassault Systèmes DELMIA",
     "subtitle": "Roboterzellen-Offline-Programmierung",
@@ -5174,7 +5174,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-DEEPROBOTICS-M20": {
     "refCode": "IND-META-2026-DEEPROBOTICS-M20",
-    "categoryCode": "6.3",
+    "categoryCode": "1.3",
     "categoryName": "Autonome Drohnen & AMR-Roboter",
     "name": "DEEP Robotics M20 Pro (IP66 Quadruped Robot)",
     "subtitle": "Autonomer 4-beiniger Inspektions-Laufroboter",
@@ -5243,7 +5243,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-E57-POINTCLOUD": {
     "refCode": "IND-META-2026-E57-POINTCLOUD",
-    "categoryCode": "10.0",
+    "categoryCode": "2.4",
     "categoryName": "Datenformate & OpenUSD-Standards",
     "name": "E57 (ASTM E2807 - Punktwolken-Standard)",
     "subtitle": "Herstellerneutraler Punktwolken-Standard",
@@ -5384,7 +5384,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-EPIC-REALITYSCAN": {
     "refCode": "IND-META-2026-EPIC-REALITYSCAN",
-    "categoryCode": "6.5",
+    "categoryCode": "1.5",
     "categoryName": "360°-Erfassung & GIS-Kartierung",
     "name": "RealityScan (Epic Games / Mobile)",
     "subtitle": "Kostenlose Mobile Photogrammetrie App",
@@ -5453,7 +5453,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-ESRI-ARCGIS": {
     "refCode": "IND-META-2026-ESRI-ARCGIS",
-    "categoryCode": "6.5",
+    "categoryCode": "1.5",
     "categoryName": "360°-Erfassung & GIS-Kartierung",
     "name": "ESRI ArcGIS Spatial Platform",
     "subtitle": "Enterprise GIS & Geoinformationssystem",
@@ -5525,7 +5525,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-FARO-FOCUS": {
     "refCode": "IND-META-2026-FARO-FOCUS",
-    "categoryCode": "6.2",
+    "categoryCode": "1.2",
     "categoryName": "Terrestrisches Laserscanning (TLS)",
     "name": "FARO Focus Series (Focus Premium / Core)",
     "subtitle": "Millimetergenauer terrestrischer 3D-Laserscanner",
@@ -5595,7 +5595,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-FARO-ORBIS": {
     "refCode": "IND-META-2026-FARO-ORBIS",
-    "categoryCode": "6.1",
+    "categoryCode": "1.1",
     "categoryName": "Mobile & Wearable SLAM-Scanner",
     "name": "FARO Orbis Hybrid Mobile Scanner",
     "subtitle": "Hybrid-Mobile SLAM & Flash TLS Scanner",
@@ -5666,7 +5666,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-FARO-SPHERE": {
     "refCode": "IND-META-2026-FARO-SPHERE",
-    "categoryCode": "6.5",
+    "categoryCode": "1.5",
     "categoryName": "360°-Erfassung & GIS-Kartierung",
     "name": "FARO Sphere XG (Cloud Spatial Ecosystem)",
     "subtitle": "Zentrale Reality-Capture Cloud-Plattform",
@@ -5737,7 +5737,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-FLEXSIM": {
     "refCode": "IND-META-2026-FLEXSIM",
-    "categoryCode": "5.0",
+    "categoryCode": "4.4",
     "categoryName": "Robotik & Fabriksimulation",
     "name": "FlexSim (Discrete Event Simulation)",
     "subtitle": "3D-Ablauf- & Materialflusssimulation",
@@ -5809,7 +5809,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-FLYABILITY-ELIOS3": {
     "refCode": "IND-META-2026-FLYABILITY-ELIOS3",
-    "categoryCode": "6.3",
+    "categoryCode": "1.3",
     "categoryName": "Autonome Drohnen & AMR-Roboter",
     "name": "Flyability Elios 3 (Indoor Inspection Drone)",
     "subtitle": "Kollisionstolerante Hallen- & Tankdrohne",
@@ -5878,7 +5878,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-GLTF-20": {
     "refCode": "IND-META-2026-GLTF-20",
-    "categoryCode": "10.0",
+    "categoryCode": "2.4",
     "categoryName": "Datenformate & OpenUSD-Standards",
     "name": "glTF 2.0 (Khronos Group - Runtime 3D Asset)",
     "subtitle": "Das \"JPEG für 3D\" im Web & Mobile",
@@ -5951,7 +5951,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-GODOT-WEBXR": {
     "refCode": "IND-META-2026-GODOT-WEBXR",
-    "categoryCode": "3.0",
+    "categoryCode": "5.1",
     "categoryName": "Echtzeit-3D & Spatial Engines",
     "name": "Godot Engine / WebXR",
     "subtitle": "Leichtgewichtige Open-Source 3D/Web Engine",
@@ -6021,7 +6021,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-HALOCLINE": {
     "refCode": "IND-META-2026-HALOCLINE",
-    "categoryCode": "5.0",
+    "categoryCode": "4.4",
     "categoryName": "Robotik & Fabriksimulation",
     "name": "Halocline (VR Shopfloor Layouting)",
     "subtitle": "Interaktive VR-Montage- & Cardboard-Planung",
@@ -6092,7 +6092,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-HI3D-AI-ENGINE": {
     "refCode": "IND-META-2026-HI3D-AI-ENGINE",
-    "categoryCode": "2.0",
+    "categoryCode": "2.3",
     "categoryName": "DCC & Generatives 3D-Design",
     "name": "Hi3D AI Engine (Generative 3D to Additive)",
     "subtitle": "KI-3D-Generierung aus Text & 2D-Bildern",
@@ -6164,7 +6164,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-HTC-VIVE-FOCUS3": {
     "refCode": "IND-META-2026-HTC-VIVE-FOCUS3",
-    "categoryCode": "11.0",
+    "categoryCode": "5.2",
     "categoryName": "Spatial XR & VR/AR Headsets",
     "name": "HTC VIVE Focus 3 Business",
     "subtitle": "Robustes Standalone VR/AR Headset für Training",
@@ -6234,7 +6234,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-HUGGINGFACE-LEROBOT": {
     "refCode": "IND-META-2026-HUGGINGFACE-LEROBOT",
-    "categoryCode": "5.0",
+    "categoryCode": "4.4",
     "categoryName": "Robotik & Fabriksimulation",
     "name": "Hugging Face LeRobot (Physical AI & Open Imitation)",
     "subtitle": "Open-Source Physical AI & Roboter-Imitationslernen",
@@ -6304,7 +6304,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-IPOLOG": {
     "refCode": "IND-META-2026-IPOLOG",
-    "categoryCode": "5.0",
+    "categoryCode": "4.4",
     "categoryName": "Robotik & Fabriksimulation",
     "name": "ipolog (Material Flow & Ergonomics)",
     "subtitle": "Montagelinien-Ergonomie & Behälter-Staging",
@@ -6376,7 +6376,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-ISG-VIRTUOS": {
     "refCode": "IND-META-2026-ISG-VIRTUOS",
-    "categoryCode": "5.0",
+    "categoryCode": "4.4",
     "categoryName": "Robotik & Fabriksimulation",
     "name": "ISG-Virtuos (Hard Real-Time VIBn / HiL)",
     "subtitle": "Echtzeit-Hardware-in-the-Loop Simulationsengine",
@@ -6447,7 +6447,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-JT-ISO14306": {
     "refCode": "IND-META-2026-JT-ISO14306",
-    "categoryCode": "10.0",
+    "categoryCode": "2.4",
     "categoryName": "Datenformate & OpenUSD-Standards",
     "name": "JT ISO 14306 (Lightweight CAD Tessellation)",
     "subtitle": "Leichtgewichtiges 3D-CAD-Visualisierungsformat",
@@ -6516,7 +6516,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-LEICA-BLK2FLY": {
     "refCode": "IND-META-2026-LEICA-BLK2FLY",
-    "categoryCode": "6.3",
+    "categoryCode": "1.3",
     "categoryName": "Autonome Drohnen & AMR-Roboter",
     "name": "Leica BLK2FLY Autonomous Flying LiDAR",
     "subtitle": "Autonome Flugdrohne mit 3D-LiDAR-Scanner",
@@ -6586,7 +6586,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-LEICA-BLK2GO": {
     "refCode": "IND-META-2026-LEICA-BLK2GO",
-    "categoryCode": "6.1",
+    "categoryCode": "1.1",
     "categoryName": "Mobile & Wearable SLAM-Scanner",
     "name": "Leica BLK2GO Handheld SLAM Scanner",
     "subtitle": "Kompakter Handheld SLAM-Laserscanner",
@@ -6655,7 +6655,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-LEICA-RTC360": {
     "refCode": "IND-META-2026-LEICA-RTC360",
-    "categoryCode": "6.2",
+    "categoryCode": "1.2",
     "categoryName": "Terrestrisches Laserscanning (TLS)",
     "name": "Leica RTC360 / BLK360 / Cyclone",
     "subtitle": "High-Speed TLS mit VIS-Echtzeitregistrierung",
@@ -6727,7 +6727,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-MAGIC-LEAP-2": {
     "refCode": "IND-META-2026-MAGIC-LEAP-2",
-    "categoryCode": "11.0",
+    "categoryCode": "5.2",
     "categoryName": "Spatial XR & VR/AR Headsets",
     "name": "Magic Leap 2 Enterprise AR Glasses",
     "subtitle": "Ergonomische See-Through AR-Brille für Werksmonteure",
@@ -6871,7 +6871,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-MATTERPORT-PRO3": {
     "refCode": "IND-META-2026-MATTERPORT-PRO3",
-    "categoryCode": "6.5",
+    "categoryCode": "1.5",
     "categoryName": "360°-Erfassung & GIS-Kartierung",
     "name": "Matterport Pro3 & 360 Spatial Platform",
     "subtitle": "360° LiDAR-Kamera & Virtuelle Rundgänge",
@@ -6941,7 +6941,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-META-QUEST3": {
     "refCode": "IND-META-2026-META-QUEST3",
-    "categoryCode": "11.0",
+    "categoryCode": "5.2",
     "categoryName": "Spatial XR & VR/AR Headsets",
     "name": "Meta Quest 3 / Quest Pro (SME Spatial Review)",
     "subtitle": "Kabelloses Mixed-Reality Headset für den Mittelstand",
@@ -7011,7 +7011,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-META-SAM3D": {
     "refCode": "IND-META-2026-META-SAM3D",
-    "categoryCode": "6.1-AI",
+    "categoryCode": "1.6",
     "categoryName": "Spatial Perzeption & KI-Erkennung",
     "name": "Meta Segment Anything 3D (SAM 3D)",
     "subtitle": "Zero-Shot KI-Segmentierung für 3D-Punktwolken",
@@ -7080,7 +7080,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-MICROSOFT-DTDL": {
     "refCode": "IND-META-2026-MICROSOFT-DTDL",
-    "categoryCode": "8.2",
+    "categoryCode": "3.1",
     "categoryName": "Verwaltungsschale & Zwillings-Standards",
     "name": "Digital Twins Definition Language (DTDL)",
     "subtitle": "JSON-LD basiertes Modellierungsformat für IIoT",
@@ -7148,7 +7148,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-MODBUS-TCP": {
     "refCode": "IND-META-2026-MODBUS-TCP",
-    "categoryCode": "7.0",
+    "categoryCode": "1.7",
     "categoryName": "OT & Sensorik-Feldbusse",
     "name": "Modbus TCP/RTU Protocol",
     "subtitle": "Legacy-Sensor- & Energiezähler-Protokoll",
@@ -7215,7 +7215,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-MOTIONA": {
     "refCode": "IND-META-2026-MOTIONA",
-    "categoryCode": "5.0",
+    "categoryCode": "4.4",
     "categoryName": "Robotik & Fabriksimulation",
     "name": "MotionA Kinematic Optimization",
     "subtitle": "Roboter-Geschwindigkeits- & Energieoptimierung",
@@ -7285,7 +7285,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-MQTT-SPARKPLUG": {
     "refCode": "IND-META-2026-MQTT-SPARKPLUG",
-    "categoryCode": "8.1",
+    "categoryCode": "1.8",
     "categoryName": "Industrial IoT-Protokolle",
     "name": "MQTT / Sparkplug B",
     "subtitle": "Leichtgewichtige IIoT Pub/Sub Serialisierung",
@@ -7355,7 +7355,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-MTCONNECT": {
     "refCode": "IND-META-2026-MTCONNECT",
-    "categoryCode": "7.0",
+    "categoryCode": "1.7",
     "categoryName": "OT & Sensorik-Feldbusse",
     "name": "MTConnect Machine Standard",
     "subtitle": "Offener Standard für CNC-Werkzeugmaschinen",
@@ -7423,7 +7423,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-NAVVIS-VLX3": {
     "refCode": "IND-META-2026-NAVVIS-VLX3",
-    "categoryCode": "6.1",
+    "categoryCode": "1.1",
     "categoryName": "Mobile & Wearable SLAM-Scanner",
     "name": "NavVis VLX 3 / NavVis IVION",
     "subtitle": "Wearable Mobile Mapping System mit Echtzeit-SLAM",
@@ -7493,7 +7493,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-NEMETSCHEK-ALLPLAN": {
     "refCode": "IND-META-2026-NEMETSCHEK-ALLPLAN",
-    "categoryCode": "1.2",
+    "categoryCode": "2.2",
     "categoryName": "BIM, Bauwesen & Infrastruktur (AEC)",
     "name": "Nemetschek Allplan / Vectorworks",
     "subtitle": "Europäisches OpenBIM-System für Fertigteilbau",
@@ -7633,7 +7633,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-NIANTIC-SCANIVERSE": {
     "refCode": "IND-META-2026-NIANTIC-SCANIVERSE",
-    "categoryCode": "6.4",
+    "categoryCode": "1.4",
     "categoryName": "Handheld 3DGS & Photogrammetrie",
     "name": "Scaniverse (Niantic Spatial 3DGS)",
     "subtitle": "Mobile 3D Gaussian Splatting App",
@@ -7703,7 +7703,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-NVIDIA-ISAAC": {
     "refCode": "IND-META-2026-NVIDIA-ISAAC",
-    "categoryCode": "5.0",
+    "categoryCode": "4.4",
     "categoryName": "Robotik & Fabriksimulation",
     "name": "NVIDIA Isaac Sim / Isaac Lab (Physical AI)",
     "subtitle": "Physikbasierte Roboter-Simulation & KI-Training",
@@ -7774,7 +7774,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-NVIDIA-OMNIVERSE": {
     "refCode": "IND-META-2026-NVIDIA-OMNIVERSE",
-    "categoryCode": "3.0",
+    "categoryCode": "5.1",
     "categoryName": "Echtzeit-3D & Spatial Engines",
     "name": "NVIDIA Omniverse Enterprise",
     "subtitle": "Zentrales Betriebssystem für Digital Twins",
@@ -7845,7 +7845,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-OPC-UA": {
     "refCode": "IND-META-2026-OPC-UA",
-    "categoryCode": "7.0",
+    "categoryCode": "1.7",
     "categoryName": "OT & Sensorik-Feldbusse",
     "name": "OPC UA (IEC 62541 - Client/Server & PubSub)",
     "subtitle": "Herstellerunabhängiger OT-Kommunikationsstandard",
@@ -7987,7 +7987,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-OPENUSD": {
     "refCode": "IND-META-2026-OPENUSD",
-    "categoryCode": "10.0",
+    "categoryCode": "2.4",
     "categoryName": "Datenformate & OpenUSD-Standards",
     "name": "OpenUSD (Universal Scene Description - ISO)",
     "subtitle": "Der universelle 3D-Szenenbeschreibungs-Standard",
@@ -8062,7 +8062,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-ORB360": {
     "refCode": "IND-META-2026-ORB360",
-    "categoryCode": "6.5",
+    "categoryCode": "1.5",
     "categoryName": "360°-Erfassung & GIS-Kartierung",
     "name": "Orb360 Turntable System",
     "subtitle": "Automatisierte 360° Bauteil-Fotografie",
@@ -8130,7 +8130,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-PLY-3DGS": {
     "refCode": "IND-META-2026-PLY-3DGS",
-    "categoryCode": "10.0",
+    "categoryCode": "2.4",
     "categoryName": "Datenformate & OpenUSD-Standards",
     "name": "PLY / Splat Files (3D Gaussian Splatting)",
     "subtitle": "Fotorealistisches 3D-Gaussian-Splatting Format",
@@ -8199,7 +8199,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-PROFINET-TSN": {
     "refCode": "IND-META-2026-PROFINET-TSN",
-    "categoryCode": "7.0",
+    "categoryCode": "1.7",
     "categoryName": "OT & Sensorik-Feldbusse",
     "name": "PROFINET / TSN (Time-Sensitive Networking)",
     "subtitle": "Industrieller Echtzeit-Ethernet-Standard",
@@ -8267,7 +8267,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-PTC-CREO": {
     "refCode": "IND-META-2026-PTC-CREO",
-    "categoryCode": "1.1",
+    "categoryCode": "2.1",
     "categoryName": "Mechanisches CAD (MCAD)",
     "name": "PTC Creo Parametric",
     "subtitle": "High-Precision MCAD & Generative AI",
@@ -8340,7 +8340,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-PTC-ONSHAPE": {
     "refCode": "IND-META-2026-PTC-ONSHAPE",
-    "categoryCode": "1.1",
+    "categoryCode": "2.1",
     "categoryName": "Mechanisches CAD (MCAD)",
     "name": "PTC Onshape",
     "subtitle": "Pure Cloud-Native Multi-User CAD",
@@ -8413,7 +8413,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-PTC-THINGWORX": {
     "refCode": "IND-META-2026-PTC-THINGWORX",
-    "categoryCode": "9.0",
+    "categoryCode": "3.3",
     "categoryName": "Enterprise Cloud-Zwillinge",
     "name": "PTC ThingWorx IIoT Platform",
     "subtitle": "Smart Factory Application Engine & AR Service",
@@ -8554,7 +8554,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-REALWEAR-NAV520": {
     "refCode": "IND-META-2026-REALWEAR-NAV520",
-    "categoryCode": "11.0",
+    "categoryCode": "5.2",
     "categoryName": "Spatial XR & VR/AR Headsets",
     "name": "RealWear Navigator 520 (Assisted Reality Wearable)",
     "subtitle": "Freihand-Mikrodisplay für Instandhaltung & Service",
@@ -8625,7 +8625,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-RHINO-GRASSHOPPER": {
     "refCode": "IND-META-2026-RHINO-GRASSHOPPER",
-    "categoryCode": "1.2",
+    "categoryCode": "2.2",
     "categoryName": "BIM, Bauwesen & Infrastruktur (AEC)",
     "name": "Rhino 3D + Grasshopper (Parametric AEC)",
     "subtitle": "Algorithmatisches 3D-Design & Prozedurale Geometrie",
@@ -8700,7 +8700,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-RIIICO-AI": {
     "refCode": "IND-META-2026-RIIICO-AI",
-    "categoryCode": "6.1-AI",
+    "categoryCode": "1.6",
     "categoryName": "Spatial Perzeption & KI-Erkennung",
     "name": "RIIICO (Factory AI Automated Layout)",
     "subtitle": "KI-Punktwolken-Segmentierung in 3D-CAD",
@@ -8771,7 +8771,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-ROS2-DDS": {
     "refCode": "IND-META-2026-ROS2-DDS",
-    "categoryCode": "7.0",
+    "categoryCode": "1.7",
     "categoryName": "OT & Sensorik-Feldbusse",
     "name": "ROS / ROS 2 (DDS Inter-Robot Middleware)",
     "subtitle": "Open-Source Roboter-Betriebssystem & Middleware",
@@ -8841,7 +8841,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-SIDEFX-HOUDINI": {
     "refCode": "IND-META-2026-SIDEFX-HOUDINI",
-    "categoryCode": "2.0",
+    "categoryCode": "2.3",
     "categoryName": "DCC & Generatives 3D-Design",
     "name": "SideFX Houdini (Procedural Pipelines)",
     "subtitle": "Prozeduraler USD-Pipeline-Generator & VFX",
@@ -8915,7 +8915,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-SIEMENS-NX": {
     "refCode": "IND-META-2026-SIEMENS-NX",
-    "categoryCode": "1.1",
+    "categoryCode": "2.1",
     "categoryName": "Mechanisches CAD (MCAD)",
     "name": "Siemens NX CAD",
     "subtitle": "High-End OEM MCAD & OpenUSD Live-Kopplung",
@@ -8986,7 +8986,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-SIEMENS-OPERATIONS-X": {
     "refCode": "IND-META-2026-SIEMENS-OPERATIONS-X",
-    "categoryCode": "9.0",
+    "categoryCode": "3.3",
     "categoryName": "Enterprise Cloud-Zwillinge",
     "name": "Siemens Industrial Operations X",
     "subtitle": "Industrial IoT Edge-to-Cloud Plattform",
@@ -9057,7 +9057,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-SIEMENS-TECNOMATIX": {
     "refCode": "IND-META-2026-SIEMENS-TECNOMATIX",
-    "categoryCode": "5.0",
+    "categoryCode": "4.4",
     "categoryName": "Robotik & Fabriksimulation",
     "name": "Siemens Tecnomatix (Process Simulate / Plant Sim)",
     "subtitle": "Virtuelle Inbetriebnahme & Kinematik-Validierung",
@@ -9202,7 +9202,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-SOLIDWORKS": {
     "refCode": "IND-META-2026-SOLIDWORKS",
-    "categoryCode": "1.1",
+    "categoryCode": "2.1",
     "categoryName": "Mechanisches CAD (MCAD)",
     "name": "Dassault SolidWorks",
     "subtitle": "Parametrisches 3D-CAD für den Mittelstand",
@@ -9275,7 +9275,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-STEP-AP242": {
     "refCode": "IND-META-2026-STEP-AP242",
-    "categoryCode": "10.0",
+    "categoryCode": "2.4",
     "categoryName": "Datenformate & OpenUSD-Standards",
     "name": "STEP AP242 (ISO 10303 - Parametrisches CAD)",
     "subtitle": "ISO-Standard für CAD-Geometrie & PMI",
@@ -9343,7 +9343,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-TRIMBLE-SKETCHUP": {
     "refCode": "IND-META-2026-TRIMBLE-SKETCHUP",
-    "categoryCode": "1.2",
+    "categoryCode": "2.2",
     "categoryName": "BIM, Bauwesen & Infrastruktur (AEC)",
     "name": "Trimble SketchUp",
     "subtitle": "Schnelle 3D-Konzeptplanung & Fabrik-Layouting",
@@ -9416,7 +9416,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-TWINMOTION": {
     "refCode": "IND-META-2026-TWINMOTION",
-    "categoryCode": "3.0",
+    "categoryCode": "5.1",
     "categoryName": "Echtzeit-3D & Spatial Engines",
     "name": "Twinmotion (Real-Time Architecture)",
     "subtitle": "Schnelle 3D-Visualisierung für AEC & Fabriken",
@@ -9490,7 +9490,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-UNITY-INDUSTRY": {
     "refCode": "IND-META-2026-UNITY-INDUSTRY",
-    "categoryCode": "3.0",
+    "categoryCode": "5.1",
     "categoryName": "Echtzeit-3D & Spatial Engines",
     "name": "Unity Industry Suite",
     "subtitle": "Cross-Platform 3D-Laufzeitumgebung & AR/VR HMI",
@@ -9562,7 +9562,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-UNREAL-ENGINE-5": {
     "refCode": "IND-META-2026-UNREAL-ENGINE-5",
-    "categoryCode": "3.0",
+    "categoryCode": "5.1",
     "categoryName": "Echtzeit-3D & Spatial Engines",
     "name": "Unreal Engine 5 Enterprise",
     "subtitle": "Fotorealistisches Rendering & High-End Visualisierung",
@@ -9634,7 +9634,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-VARJO-XR4": {
     "refCode": "IND-META-2026-VARJO-XR4",
-    "categoryCode": "11.0",
+    "categoryCode": "5.2",
     "categoryName": "Spatial XR & VR/AR Headsets",
     "name": "Varjo XR-4 Series (Human-Eye Resolution MR)",
     "subtitle": "Industrielles Mixed-Reality Headset mit 51 PPD",
@@ -9703,7 +9703,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-VISUAL-COMPONENTS": {
     "refCode": "IND-META-2026-VISUAL-COMPONENTS",
-    "categoryCode": "5.0",
+    "categoryCode": "4.4",
     "categoryName": "Robotik & Fabriksimulation",
     "name": "Visual Components 4.9",
     "subtitle": "3D-Fabriksimulation & Materialfluss-Planung",
@@ -9776,7 +9776,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-VISUPAL": {
     "refCode": "IND-META-2026-VISUPAL",
-    "categoryCode": "5.0",
+    "categoryCode": "4.4",
     "categoryName": "Robotik & Fabriksimulation",
     "name": "VisuPal Palletizing Simulation",
     "subtitle": "Automatisierte 3D-Palettier-Simulation",
@@ -9846,7 +9846,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-WAVEYE-RADAR": {
     "refCode": "IND-META-2026-WAVEYE-RADAR",
-    "categoryCode": "6.1-AI",
+    "categoryCode": "1.6",
     "categoryName": "Spatial Perzeption & KI-Erkennung",
     "name": "Waveye 4D Imaging Radar (Argus mmWave)",
     "subtitle": "Hochauflösende 4D-Radar Perzeption für AMRs",
@@ -9914,7 +9914,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-XGRIDS-PORTALCAM": {
     "refCode": "IND-META-2026-XGRIDS-PORTALCAM",
-    "categoryCode": "6.4",
+    "categoryCode": "1.4",
     "categoryName": "Handheld 3DGS & Photogrammetrie",
     "name": "XGRIDS Portalcam & Studio (LiDAR + 3DGS)",
     "subtitle": "Handgeführter LiDAR + 3D Gaussian Splatting Scanner",
@@ -9985,7 +9985,7 @@ window.PROFILES_DATA = {
   },
   "IND-META-2026-YOLO26-EDGE": {
     "refCode": "IND-META-2026-YOLO26-EDGE",
-    "categoryCode": "6.1-AI",
+    "categoryCode": "1.6",
     "categoryName": "Spatial Perzeption & KI-Erkennung",
     "name": "YOLO26 Edge Vision & Object Tracking",
     "subtitle": "Echtzeit-KI-Objekterkennung für Shopfloor-Kameras",

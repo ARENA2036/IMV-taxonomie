@@ -1,6 +1,6 @@
 {
   "refCode": "IND-META-2026-E57-POINTCLOUD",
-  "categoryCode": "10.0",
+  "categoryCode": "2.4",
   "categoryName": "Datenformate & OpenUSD-Standards",
   "name": "E57 (ASTM E2807 - Punktwolken-Standard)",
   "subtitle": "Herstellerneutraler Punktwolken-Standard",

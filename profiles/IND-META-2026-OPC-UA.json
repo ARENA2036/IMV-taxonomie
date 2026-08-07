@@ -1,6 +1,6 @@
 {
   "refCode": "IND-META-2026-OPC-UA",
-  "categoryCode": "7.0",
+  "categoryCode": "1.7",
   "categoryName": "OT & Sensorik-Feldbusse",
   "name": "OPC UA (IEC 62541 - Client/Server & PubSub)",
   "subtitle": "Herstellerunabhängiger OT-Kommunikationsstandard",

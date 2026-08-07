@@ -1,6 +1,6 @@
 {
   "refCode": "IND-META-2026-JT-ISO14306",
-  "categoryCode": "10.0",
+  "categoryCode": "2.4",
   "categoryName": "Datenformate & OpenUSD-Standards",
   "name": "JT ISO 14306 (Lightweight CAD Tessellation)",
   "subtitle": "Leichtgewichtiges 3D-CAD-Visualisierungsformat",

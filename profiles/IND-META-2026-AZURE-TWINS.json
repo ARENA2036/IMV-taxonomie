@@ -1,6 +1,6 @@
 {
   "refCode": "IND-META-2026-AZURE-TWINS",
-  "categoryCode": "9.0",
+  "categoryCode": "3.3",
   "categoryName": "Enterprise Cloud-Zwillinge",
   "name": "Microsoft Azure Digital Twins",
   "subtitle": "Cloud-Graphendienst für Fabriken",

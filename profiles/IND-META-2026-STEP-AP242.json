@@ -1,6 +1,6 @@
 {
   "refCode": "IND-META-2026-STEP-AP242",
-  "categoryCode": "10.0",
+  "categoryCode": "2.4",
   "categoryName": "Datenformate & OpenUSD-Standards",
   "name": "STEP AP242 (ISO 10303 - Parametrisches CAD)",
   "subtitle": "ISO-Standard für CAD-Geometrie & PMI",

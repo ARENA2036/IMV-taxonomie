@@ -1,6 +1,6 @@
 {
   "refCode": "IND-META-2026-ISG-VIRTUOS",
-  "categoryCode": "5.0",
+  "categoryCode": "4.4",
   "categoryName": "Robotik & Fabriksimulation",
   "name": "ISG-Virtuos (Hard Real-Time VIBn / HiL)",
   "subtitle": "Echtzeit-Hardware-in-the-Loop Simulationsengine",

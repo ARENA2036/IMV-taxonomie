@@ -1,6 +1,6 @@
 {
   "refCode": "IND-META-2026-MODBUS-TCP",
-  "categoryCode": "7.0",
+  "categoryCode": "1.7",
   "categoryName": "OT & Sensorik-Feldbusse",
   "name": "Modbus TCP/RTU Protocol",
   "subtitle": "Legacy-Sensor- & Energiezähler-Protokoll",

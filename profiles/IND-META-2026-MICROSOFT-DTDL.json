@@ -1,6 +1,6 @@
 {
   "refCode": "IND-META-2026-MICROSOFT-DTDL",
-  "categoryCode": "8.2",
+  "categoryCode": "3.1",
   "categoryName": "Verwaltungsschale & Zwillings-Standards",
   "name": "Digital Twins Definition Language (DTDL)",
   "subtitle": "JSON-LD basiertes Modellierungsformat für IIoT",

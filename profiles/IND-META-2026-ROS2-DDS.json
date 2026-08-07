@@ -1,6 +1,6 @@
 {
   "refCode": "IND-META-2026-ROS2-DDS",
-  "categoryCode": "7.0",
+  "categoryCode": "1.7",
   "categoryName": "OT & Sensorik-Feldbusse",
   "name": "ROS / ROS 2 (DDS Inter-Robot Middleware)",
   "subtitle": "Open-Source Roboter-Betriebssystem & Middleware",

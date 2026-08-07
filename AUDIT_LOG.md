@@ -7,54 +7,48 @@
 
 ---
 
-## 📑 1. Deleted / Pruned Legacy Scripts & Assets
-- 🗑️ **Deleted Obsolete Markdown Parser**: Removed `scripts/parse_markdown_profiles.js` (174 KB legacy dev conversion script), eliminating dead tech debt.
-- 🗑️ **Pruned Redundant Matrix Modal**: Removed legacy `#matrixModal` markup and unneeded DOM listeners, reducing codebase footprint.
+## 📑 1. Deleted / Pruned Legacy Scripts & Duplicated Docs
+- 🗑️ **Deleted Duplicate `ARCHITECTURE.md` at Root**: Removed root copy of `ARCHITECTURE.md`, centralizing architecture specs inside [`docs/ARCHITECTURE.md`](file:///Users/michael/dev/IMV_Taxo/docs/ARCHITECTURE.md).
+- 🗑️ **Centralized `PRD.md`**: Moved root `PRD.md` to [`docs/PRD.md`](file:///Users/michael/dev/IMV_Taxo/docs/PRD.md), unifying all technical and product documentation inside `docs/`.
+- 🗑️ **Deleted Obsolete Markdown Parser**: Removed `scripts/parse_markdown_profiles.js` (174 KB legacy dev conversion script).
+- 🗑️ **Pruned Redundant Matrix Modal**: Removed legacy `#matrixModal` markup and unneeded DOM listeners.
 - 🗑️ **Removed Sticker Tags**: Removed badge stickers `"Forschungscampus ARENA2036 • Reallabor 2.0"` from `index.html`, `"Reallabor 2.0 Praxis-Leitfaden — ARENA2036"` from `examples.html`, and `"Rechtlicher Hinweis & Transparenz"` from `impressum.html`.
 
 ---
 
-## ⚙️ 2. Modified Components & Structural Layout Fixes
+## ⚙️ 2. 1:1 Layer-to-Category Decimal System (Categories 1.1 to 5.2)
 
-### Greeter Landing Page ([`index.html`](file:///Users/michael/dev/IMV_Taxo/index.html))
-- Removed orange accent border and shield icon from the bottom legal notice block, switching to a clean standard card border (`class="card border shadow-sm p-3 bg-white"`).
-- Restored ARENA2036 logo alongside Industrial Metaverse and BW Ministry logos in hero canvas header.
-- Removed obsolete Card 4 and balanced the remaining 3 navigation cards into a clean 3-column row (`col-md-4`).
+Restructured all 21 categories into a **1:1 Layer-to-Category Decimal System** where every category code `X.Y` directly matches its Layer `X`:
 
-### Taxonomy Browser ([`browser.html`](file:///Users/michael/dev/IMV_Taxo/browser.html))
-- Set fixed 270px card height (`height: 270px; min-height: 270px; max-height: 270px`) with `align-content: start` and `align-items: start` to eliminate vertical row spreading.
-- Refactored List View into a Bootstrap 5 `.table-bordered .table-striped .table-hover` grid.
-- Expanded profile inspector modal to **94% viewport width** (`max-width: 94vw`) with intense glassmorphism backdrop blur (`backdrop-filter: blur(16px)`).
-- Centered header title text along the horizontal X-axis and aligned hamburger dropdown inwards (`right: 0 !important; left: auto !important`).
-
-### Baukasten Use Cases ([`examples.html`](file:///Users/michael/dev/IMV_Taxo/examples.html) & [`app.js`](file:///Users/michael/dev/IMV_Taxo/app.js))
-- Re-aligned `"Use Case via PR beitragen"` button to be **vertically centered on the right side of the container block**.
-- Replaced heavy green frame and text in Use Case goal boxes with a **thin orange accent border and dark primary text**:
-  `border: 1px solid rgba(255, 80, 0, 0.3); border-left: 3px solid #FF5000 !important; background-color: #FFFDFB;`
-
-### System Architecture ([`architecture.html`](file:///Users/michael/dev/IMV_Taxo/architecture.html))
-- Refactored copywriting to eliminate repetitive definitions and redundant messaging.
-- Redesigned Mermaid architecture visualization to flow **strictly from left to right** (`graph LR`), placing **Layer 1 on the far left through to Layer 5 on the far right**:
-  `Schicht 1 (Erfassung) ➔ Schicht 2 (Geometrie) ➔ Schicht 3 (Middleware) ➔ Schicht 4 (Simulation) ➔ Schicht 5 (Spatial Immersion)`.
-- Reorganized structural layer cards into a **horizontal 5-column sequence** (`col-lg-2-4` in [`index.css`](file:///Users/michael/dev/IMV_Taxo/index.css)), following the linear left-to-right progression logically.
-
-### Impressum & Legal ([`impressum.html`](file:///Users/michael/dev/IMV_Taxo/impressum.html))
-- Removed yellow background styling (`bg-warning-subtle`) from disclaimer box.
-- Replaced with a **clean white background and thin orange border** (`background-color: #FFFFFF; border: 1px solid rgba(255, 80, 0, 0.4) !important;`).
+- **Schicht 1 (Erfassung & OT)**: Categories `1.1` to `1.8`
+- **Schicht 2 (Geometrie & CAD)**: Categories `2.1` to `2.4`
+- **Schicht 3 (Middleware & AAS)**: Categories `3.1` to `3.3`
+- **Schicht 4 (Simulation & VIBn)**: Categories `4.1` to `4.4`
+- **Schicht 5 (Spatial Immersion)**: Categories `5.1` to `5.2`
 
 ---
 
-## 📄 3. Updated Documentation & Repository Setup
+## 🎨 3. Asset & Branding Audit
 
-- ✅ **Created Production `.gitignore`**: Enterprise ignore rules for OS artifacts (`.DS_Store`), build outputs (`dist/`, `build/`), dependencies (`node_modules/`), logs (`*.log`), and local env configs (`.env`).
-- ✅ **Updated AI Agent Guidelines ([`.agents/AGENTS.md`](file:///Users/michael/dev/IMV_Taxo/.agents/AGENTS.md))**: Enterprise LLM instructions, 19 canonical JSON schema fields, design system rules (`Arial Black` + `Montserrat`), and data pipeline synchronization directives.
-- ✅ **Updated Root Doku ([`README.md`](file:///Users/michael/dev/IMV_Taxo/README.md))**: Enterprise landing page with architecture overview, tech stack, local setup, build commands, and directory mapping.
-- ✅ **Updated Technical Doku ([`docs/ARCHITECTURE.md`](file:///Users/michael/dev/IMV_Taxo/docs/ARCHITECTURE.md))**: Left-to-right 5-layer linear data progression flow and zero-CORS architecture specs.
-- ✅ **Updated Use Case Doku ([`docs/USECASES.md`](file:///Users/michael/dev/IMV_Taxo/docs/USECASES.md))**: Composite Use Case model, cost tiers, and PR contribution guide.
+Verified all static assets in `assets/` and ensured correct relative referencing across all 5 HTML views:
+1. `assets/ARENA2036_combinationmark_orange_black.png` — Hero canvas header logo & PNG favicon fallback.
+2. `assets/Metaverse Logo bunt.svg` — Hero header logo & primary SVG vector favicon across all 5 HTML pages.
+3. `assets/BaWue_WM_Absenderlogo_rgb_pos_Gefoerdert.svg` — BW Ministry funding attribution logo in hero header.
 
 ---
 
-## 🏁 4. Summary of Verified Deliverable Files
+## 📄 4. Unified Documentation Index
+
+- ✅ **[`README.md`](file:///Users/michael/dev/IMV_Taxo/README.md)**: Enterprise root entry point & documentation index.
+- ✅ **[`docs/ARCHITECTURE.md`](file:///Users/michael/dev/IMV_Taxo/docs/ARCHITECTURE.md)**: Authoritative 5-layer system architecture spec with left-to-right flow and 1:1 decimal category codes.
+- ✅ **[`docs/USECASES.md`](file:///Users/michael/dev/IMV_Taxo/docs/USECASES.md)**: Authoritative Baukasten Use Case specification & PR contribution guide.
+- ✅ **[`docs/PRD.md`](file:///Users/michael/dev/IMV_Taxo/docs/PRD.md)**: Authoritative Product Requirements Document & target personas.
+- ✅ **[`.agents/AGENTS.md`](file:///Users/michael/dev/IMV_Taxo/.agents/AGENTS.md)**: Authoritative AI Agent & LLM developer guidelines.
+- ✅ **[`.gitignore`](file:///Users/michael/dev/IMV_Taxo/.gitignore)**: Enterprise ignore rules for build outputs, system files, and local logs.
+
+---
+
+## 🏁 5. Verified Deliverables Summary
 
 | File | Type / Role | Audit Status |
 | :--- | :--- | :--- |
@@ -67,8 +61,9 @@
 | [`app.js`](file:///Users/michael/dev/IMV_Taxo/app.js) | Pure JSON client engine, JSDoc annotated, zero JS errors | ✅ Verified |
 | [`scripts/generate_profiles.js`](file:///Users/michael/dev/IMV_Taxo/scripts/generate_profiles.js) | Node data pipeline indexer, JSDoc annotated | ✅ Verified |
 | [`.gitignore`](file:///Users/michael/dev/IMV_Taxo/.gitignore) | Production-grade git ignore configuration | ✅ Created |
-| [`README.md`](file:///Users/michael/dev/IMV_Taxo/README.md) | Enterprise repository overview & developer documentation | ✅ Verified |
+| [`README.md`](file:///Users/michael/dev/IMV_Taxo/README.md) | Enterprise repository overview & developer documentation index | ✅ Verified |
 | [`.agents/AGENTS.md`](file:///Users/michael/dev/IMV_Taxo/.agents/AGENTS.md) | AI Agent & LLM developer guidelines | ✅ Verified |
 | [`docs/ARCHITECTURE.md`](file:///Users/michael/dev/IMV_Taxo/docs/ARCHITECTURE.md) | Left-to-right 5-layer stack technical specs | ✅ Verified |
 | [`docs/USECASES.md`](file:///Users/michael/dev/IMV_Taxo/docs/USECASES.md) | Composite Use Case model & PR contribution guide | ✅ Verified |
+| [`docs/PRD.md`](file:///Users/michael/dev/IMV_Taxo/docs/PRD.md) | Product Requirements Document & Target Personas | ✅ Centralized |
 | [`AUDIT_LOG.md`](file:///Users/michael/dev/IMV_Taxo/AUDIT_LOG.md) | Itemized end-to-end audit report & deliverables changelog | ✅ Verified |

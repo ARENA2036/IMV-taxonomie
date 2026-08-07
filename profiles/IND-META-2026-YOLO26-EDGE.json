@@ -1,6 +1,6 @@
 {
   "refCode": "IND-META-2026-YOLO26-EDGE",
-  "categoryCode": "6.1-AI",
+  "categoryCode": "1.6",
   "categoryName": "Spatial Perzeption & KI-Erkennung",
   "name": "YOLO26 Edge Vision & Object Tracking",
   "subtitle": "Echtzeit-KI-Objekterkennung für Shopfloor-Kameras",

@@ -1,6 +1,6 @@
 {
   "refCode": "IND-META-2026-WAVEYE-RADAR",
-  "categoryCode": "6.1-AI",
+  "categoryCode": "1.6",
   "categoryName": "Spatial Perzeption & KI-Erkennung",
   "name": "Waveye 4D Imaging Radar (Argus mmWave)",
   "subtitle": "Hochauflösende 4D-Radar Perzeption für AMRs",

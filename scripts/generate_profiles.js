@@ -26,28 +26,39 @@ const dataDir = path.join(rootDir, 'data');
  * @type {Array<{code: string, name: string, desc: string, layer: string}>}
  */
 const CATEGORIES = [
-  { code: '1.1', name: 'Mechanisches CAD (MCAD)', desc: 'Parametrische 3D-CAD-Systeme für den Maschinen- und Fahrzeugbau.', layer: '2' },
-  { code: '1.2', name: 'BIM, Bauwesen & Infrastruktur (AEC)', desc: 'Bauwerksdatenmodellierung für Fabrik- und Gebäudestrukturen.', layer: '2' },
-  { code: '2.0', name: 'DCC & Generatives 3D-Design', desc: 'Digital Content Creation und prozedurale 3D-Modellierung.', layer: '2' },
-  { code: '3.0', name: 'Echtzeit-3D & Spatial Engines', desc: 'Echtzeit-Rendering und 3D-Visualisierungs-Engines.', layer: '5' },
+  // Layer 1: Erfassung & OT-Datenerfassung
+  { code: '1.1', name: 'Mobile & Wearable SLAM-Scanner', desc: 'Tragbare Mobile-Mapping-Systeme mit Echtzeit-SLAM.', layer: '1' },
+  { code: '1.2', name: 'Terrestrisches Laserscanning (TLS)', desc: 'Hochpräzise stationäre 3D-Laserscanner.', layer: '1' },
+  { code: '1.3', name: 'Autonome Drohnen & AMR-Roboter', desc: 'Autonome Erfassung per Drohnen und Roboterplattformen.', layer: '1' },
+  { code: '1.4', name: 'Handheld 3DGS & Photogrammetrie', desc: 'Handgeführte 3D-Gaussian-Splatting Scanner.', layer: '1' },
+  { code: '1.5', name: '360°-Erfassung & GIS-Kartierung', desc: 'Panorama-Bilddokumentation und Geoinformationssysteme.', layer: '1' },
+  { code: '1.6', name: 'Spatial Perzeption & KI-Erkennung', desc: 'KI-gestützte Objekt- und Raumsegmentierung.', layer: '1' },
+  { code: '1.7', name: 'OT & Sensorik-Feldbusse', desc: 'Operative Feldbus-Systeme und SPS-Kommunikation.', layer: '1' },
+  { code: '1.8', name: 'Industrial IoT-Protokolle', desc: 'Nachrichtenprotokolle für industrielle IoT-Netzwerke.', layer: '1' },
+
+  // Layer 2: Geometrie & CAD-Pre-Processing
+  { code: '2.1', name: 'Mechanisches CAD (MCAD)', desc: 'Parametrische 3D-CAD-Systeme für den Maschinen- und Fahrzeugbau.', layer: '2' },
+  { code: '2.2', name: 'BIM, Bauwesen & Infrastruktur (AEC)', desc: 'Bauwerksdatenmodellierung für Fabrik- und Gebäudestrukturen.', layer: '2' },
+  { code: '2.3', name: 'DCC & Generatives 3D-Design', desc: 'Digital Content Creation und prozedurale 3D-Modellierung.', layer: '2' },
+  { code: '2.4', name: 'Datenformate & OpenUSD-Standards', desc: 'Offene Datenformate und Szenen-Spezifikationen.', layer: '2' },
+
+  // Layer 3: Semantische Middleware & Datenräume
+  { code: '3.1', name: 'Verwaltungsschale & Zwillings-Standards', desc: 'Asset Administration Shell (AAS) und Interoperabilitäts-Standards.', layer: '3' },
+  { code: '3.2', name: 'KI-Datenmotoren & Pipeline-Bridges', desc: 'KI-Trainings-Pipelines und Datenbrücken.', layer: '3' },
+  { code: '3.3', name: 'Enterprise Cloud-Zwillinge', desc: 'Skalierbare Cloud-Plattformen für digitale Zwillinge.', layer: '3' },
+
+  // Layer 4: Simulation & Virtuelle Inbetriebnahme
   { code: '4.1', name: 'CAE & Multiphysik-Simulation', desc: 'Numerische Berechnungen, FEM und Strömungsmechanik.', layer: '4' },
   { code: '4.2', name: 'Echtzeit Physik-Engines', desc: 'Physikalische Echtzeitsimulation für Kollision und Dynamik.', layer: '4' },
   { code: '4.3', name: 'Umwelt- & Strömungssimulation', desc: 'Klima-, Lüftungs- und Umweltbedingungssimulation.', layer: '4' },
-  { code: '5.0', name: 'Robotik & Fabriksimulation', desc: 'Kinematik-, Roboter- und Materialfluss-Simulation.', layer: '4' },
-  { code: '6.1', name: 'Mobile & Wearable SLAM-Scanner', desc: 'Tragbare Mobile-Mapping-Systeme mit Echtzeit-SLAM.', layer: '1' },
-  { code: '6.2', name: 'Terrestrisches Laserscanning (TLS)', desc: 'Hochpräzise stationäre 3D-Laserscanner.', layer: '1' },
-  { code: '6.3', name: 'Autonome Drohnen & AMR-Roboter', desc: 'Autonome Erfassung per Drohnen und Roboterplattformen.', layer: '1' },
-  { code: '6.4', name: 'Handheld 3DGS & Photogrammetrie', desc: 'Handgeführte 3D-Gaussian-Splatting Scanner.', layer: '1' },
-  { code: '6.5', name: '360°-Erfassung & GIS-Kartierung', desc: 'Panorama-Bilddokumentation und Geoinformationssysteme.', layer: '1' },
-  { code: '6.1-AI', name: 'Spatial Perzeption & KI-Erkennung', desc: 'KI-gestützte Objekt- und Raumsegmentierung.', layer: '1' },
-  { code: '7.0', name: 'OT & Sensorik-Feldbusse', desc: 'Operative Feldbus-Systeme und SPS-Kommunikation.', layer: '1' },
-  { code: '8.1', name: 'Industrial IoT-Protokolle', desc: 'Nachrichtenprotokolle für industrielle IoT-Netzwerke.', layer: '1' },
-  { code: '8.2', name: 'Verwaltungsschale & Zwillings-Standards', desc: 'Asset Administration Shell (AAS) und Interoperabilitäts-Standards.', layer: '3' },
-  { code: '8.3', name: 'KI-Datenmotoren & Pipeline-Bridges', desc: 'KI-Trainings-Pipelines und Datenbrücken.', layer: '3' },
-  { code: '9.0', name: 'Enterprise Cloud-Zwillinge', desc: 'Skalierbare Cloud-Plattformen für digitale Zwillinge.', layer: '3' },
-  { code: '10.0', name: 'Datenformate & OpenUSD-Standards', desc: 'Offene Datenformate und Szenen-Spezifikationen.', layer: '2' },
-  { code: '11.0', name: 'Spatial XR & VR/AR Headsets', desc: 'Immersive Headsets und Spatial-Computing-Hardware.', layer: '5' }
+  { code: '4.4', name: 'Robotik & Fabriksimulation', desc: 'Kinematik-, Roboter- und Materialfluss-Simulation.', layer: '4' },
+
+  // Layer 5: Räumliche Immersion & Rendering
+  { code: '5.1', name: 'Echtzeit-3D & Spatial Engines', desc: 'Echtzeit-Rendering und 3D-Visualisierungs-Engines.', layer: '5' },
+  { code: '5.2', name: 'Spatial XR & VR/AR Headsets', desc: 'Immersive Headsets und Spatial-Computing-Hardware.', layer: '5' }
 ];
+
+CATEGORIES.sort((a, b) => a.code.localeCompare(b.code, undefined, { numeric: true }));
 
 if (!fs.existsSync(profilesDir)) fs.mkdirSync(profilesDir, { recursive: true });
 if (!fs.existsSync(usecasesDir)) fs.mkdirSync(usecasesDir, { recursive: true });
@@ -91,7 +102,7 @@ files.forEach(file => {
   }
 });
 
-items.sort((a, b) => a.categoryCode.localeCompare(b.categoryCode) || a.name.localeCompare(b.name));
+items.sort((a, b) => a.categoryCode.localeCompare(b.categoryCode, undefined, { numeric: true }) || a.name.localeCompare(b.name));
 
 const usecases = [];
 const ucFiles = fs.readdirSync(usecasesDir).filter(f => f.endsWith('.json'));
