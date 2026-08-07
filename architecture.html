@@ -76,32 +76,20 @@
       
       <!-- Title Block -->
       <div class="mb-4">
-        <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill px-3 py-2 font-monospace mb-2">
-          <i class="fa-solid fa-flask me-1"></i> Reallabor 2.0 Spezifikation — ARENA2036
-        </span>
-        <h1 class="h3 fw-black text-dark mt-2 mb-3">Modulare Industrial Metaverse Ziel-Architektur</h1>
+        <h1 class="h3 fw-black text-dark m-0 mb-3">Modulare Industrial Metaverse Ziel-Architektur</h1>
         <p class="text-secondary lead fs-6 mb-0">
-          Dieses Framework ist eine <strong>Technologie-, Produkt- und Protokoll-Taxonomie</strong>, konzipiert für den modularen Aufbau einer <strong>Industrial Metaverse Architektur</strong> nach dem <strong>Baukastenprinzip (Composite Principle)</strong>. Es zeigt Unternehmen, wie bestehende Altanlagen (Brownfield) risikofrei in moderne digitale Zwillinge integriert werden.
+          Eine offene Referenz-Spezifikation für den herstellerunabhängigen Aufbau modularer Digital-Twin-Architekturen nach dem <strong>Baukastenprinzip (Composite Principle)</strong>.
         </p>
       </div>
 
-      <!-- Conceptual Information Flow Explanation -->
+      <!-- Linear Progression Explanation -->
       <div class="card p-4 mb-4 bg-white" style="border: 1px solid rgba(255, 80, 0, 0.3) !important;">
         <h2 class="h6 fw-bold text-dark mb-2">
-          <i class="fa-solid fa-arrows-split-up-and-left text-primary me-2"></i>Konzeptioneller Informationsfluss: Von der physischen Realität zur räumlichen Interaktion
+          <i class="fa-solid fa-arrow-right-long text-primary me-2"></i>Lineare Progression: Von der Erfassung zur kollaborativen Immersion
         </h2>
-        <p class="small text-secondary mb-2">
-          Die 5 Schichten des ARENA2036 Industrial Metaverse Tech-Stacks repräsentieren den <strong>progressiven, sequenziellen Informationsfluss von der physischen Realität bis zur räumlichen 3D-Visualisierung und kollaborativen Interaktion</strong>.
+        <p class="small text-secondary m-0">
+          Der Datenaustausch folgt einer klaren horizontalen Kette: Reale Sensordaten und 3D-Scans (<strong>Schicht 1</strong>) werden in standardisierte Geometrien überführt (<strong>Schicht 2</strong>), in semantische Verwaltungsschalen eingebettet (<strong>Schicht 3</strong>), physikalisch simuliert (<strong>Schicht 4</strong>) und schlussendlich in räumliche XR-Umgebungen übertragen (<strong>Schicht 5</strong>).
         </p>
-        <div class="small text-secondary">
-          <ul class="ps-3 mb-0">
-            <li class="mb-1"><strong>1. Erfassung (Physische Realität):</strong> Realdaten aus der Fabrik (Sensorik, SLAM-Scans, OPC UA Feldbusse) werden kontinuierlich erfasst.</li>
-            <li class="mb-1"><strong>2. Geometrie (Modellierung):</strong> Physische Assets werden als 3D-CAD-, BIM- und Szenengeometrien in universellen Standards (OpenUSD, STEP) vorverarbeitet.</li>
-            <li class="mb-1"><strong>3. Middleware (Semantik):</strong> Geometrie und Live-OT-Daten werden in der Verwaltungsschale (AAS) und in souveränen Datenräumen (Eclipse EDC) zum digitalen Zwilling verknüpft.</li>
-            <li class="mb-1"><strong>4. Simulation (Verhalten):</strong> Physik-Engines und Kinematik-Simulatoren (VIBn) berechnen das dynamische Verhalten der Anlagen im Voraus.</li>
-            <li><strong>5. Immersion (Interaktion):</strong> Der angereicherte digitale Zwilling wird in kollaborativen XR-, WebXR- und Spatial Computing-Umgebungen hochperformant gerendert.</li>
-          </ul>
-        </div>
       </div>
 
       <!-- Heterogenität Box -->
@@ -110,81 +98,90 @@
           <i class="fa-solid fa-cubes text-primary me-2"></i>Heterogenität, Skalierbarkeit & Investitionsschutz
         </h3>
         <p class="small text-secondary m-0">
-          Aufgrund der stark unterschiedlichen Anwendungsanforderungen, bestehenden IT/OT-Altsysteme und Budgetgrenzen in Industrieunternehmen existiert keine „One-Size-Fits-All“-Monolith-Lösung. Spezifische Ziel-Architekturen werden <strong>komponiert</strong> — von den konkreten Anwendungsanforderungen im Shopfloor bis hin zur modular zusammensetzbaren digitalen Infrastruktur. Dies ermöglicht den schrittweisen Einstieg mit <strong>garantiertem Investitionsschutz</strong> und schützt vor teurem Vendor Lock-in.
+          Da Fertigungsbetriebe individuelle IT/OT-Bestände aufweisen, verhindert das Baukastenprinzip teuren Vendor Lock-in. Bestehende Altanlagen (Brownfield) werden Schritt für Schritt über offene Schnittstellen und Datenräume in die digitale Infrastruktur integriert.
         </p>
       </div>
 
-      <!-- Diagram Block: 5 Schichten Datenfluss -->
+      <!-- Diagram Block: 5 Schichten Datenfluss Left-to-Right -->
       <div class="mb-4">
         <h2 class="h5 fw-bold text-dark mb-3">
-          <i class="fa-solid fa-network-wired text-primary me-2"></i>5-Schichten Daten- & Prozessfluss
+          <i class="fa-solid fa-network-wired text-primary me-2"></i>5-Schichten Datenfluss (Links nach Rechts)
         </h2>
-        <div class="mermaid bg-light p-3 rounded border text-center">
-graph BT
+        <div class="mermaid bg-light p-3 rounded border text-center overflow-auto">
+graph LR
     classDef s1 fill:#EFF6FF,stroke:#BFDBFE,color:#1E3A8A;
     classDef s2 fill:#F0FDF4,stroke:#BBF7D0,color:#14532D;
     classDef s3 fill:#FFF7ED,stroke:#FFD8A8,color:#7C2D12;
     classDef s4 fill:#F5F3FF,stroke:#DDD6FE,color:#4C1D95;
     classDef s5 fill:#FEF2F2,stroke:#FECACA,color:#7F1D1D;
 
-    S1["<b>SCHICHT 1: Erfassung & OT-Datenerfassung</b><br/><i>Sensoren, Scans, Feldbusse, OPC UA, MQTT, SLAM</i>"]:::s1
-    S2["<b>SCHICHT 2: Geometrie & CAD-Pre-Processing</b><br/><i>MCAD, BIM, DCC, OpenUSD, STEP, JT, glTF 2.0</i>"]:::s2
-    S3["<b>SCHICHT 3: Semantische Middleware & Datenräume</b><br/><i>Asset Administration Shell AAS, EDC Dataspace, Cloud Twins</i>"]:::s3
-    S4["<b>SCHICHT 4: Simulation & Virtuelle Inbetriebnahme</b><br/><i>Virtuelle Inbetriebnahme VIBn, CAE Multiphysik, Isaac Sim</i>"]:::s4
-    S5["<b>SCHICHT 5: Räumliche Immersion & Rendering</b><br/><i>WebXR, Unreal Engine 5, Omniverse RTX, Vision Pro</i>"]:::s5
+    S1["<b>SCHICHT 1</b><br/>Erfassung & OT-Daten<br/><i>Sensoren, SLAM, OPC UA</i>"]:::s1
+    S2["<b>SCHICHT 2</b><br/>Geometrie & CAD<br/><i>OpenUSD, STEP, BIM</i>"]:::s2
+    S3["<b>SCHICHT 3</b><br/>Middleware & AAS<br/><i>Verwaltungsschale, EDC</i>"]:::s3
+    S4["<b>SCHICHT 4</b><br/>Simulation & VIBn<br/><i>Kinematik, Physik, SPS</i>"]:::s4
+    S5["<b>SCHICHT 5</b><br/>Spatial Immersion<br/><i>WebXR, RTX, Vision Pro</i>"]:::s5
 
-    S1 -->|Reale Telemetrie & Punktwolken| S2
-    S2 -->|3D Master-Geometrien| S3
-    S1 -->|OT Live-Zustände| S3
-    S3 -->|Semantisch Angereicherter Zwilling| S4
-    S4 -->|Kinematik & Echtzeit-Physik| S5
+    S1 -->|Realdaten| S2
+    S2 -->|3D-Formate| S3
+    S3 -->|Zwilling| S4
+    S4 -->|Physik| S5
         </div>
       </div>
 
-      <!-- Detaillierte Schichten-Beschreibung -->
+      <!-- Linear Horizontal Progression Sequence Cards -->
       <div>
-        <h2 class="h5 fw-bold text-dark mb-3">Detaillierte Aufschlüsselung der 5 Empfehlungsschichten</h2>
+        <h2 class="h5 fw-bold text-dark mb-3">Horizontale Sequenz der 5 Architektur-Schichten</h2>
 
-        <div class="d-flex flex-column gap-3">
+        <div class="row g-3">
           
-          <div class="card border p-3">
-            <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace align-self-start mb-2">Schicht 1</span>
-            <h3 class="h6 fw-bold text-dark m-0">Erfassung & OT-Datenerfassung</h3>
-            <p class="small text-secondary mt-2 mb-0">
-              Erfassung der physischen Realität im Shopfloor mittels LiDAR-, Terrestrik- und SLAM-Scannern sowie direkter Abgriff von Sensor- und Steuerungssignalen über OT-Protokolle (OPC UA, MQTT Sparkplug B, IO-Link, Modbus).
-            </p>
+          <div class="col-md-4 col-lg-2-4">
+            <div class="card border h-100 p-3">
+              <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace align-self-start mb-2">Schicht 1</span>
+              <h3 class="h6 fw-bold text-dark m-0">Erfassung & OT</h3>
+              <p class="small text-secondary mt-2 mb-0" style="font-size: 11.5px;">
+                Sensorik, SLAM-Scanner & OT-Protokolle (OPC UA, MQTT Sparkplug B) zur kontinuierlichen Erfassung der Fabrikrealität.
+              </p>
+            </div>
           </div>
 
-          <div class="card border p-3">
-            <span class="badge bg-success-subtle text-success border border-success-subtle font-monospace align-self-start mb-2">Schicht 2</span>
-            <h3 class="h6 fw-bold text-dark m-0">Geometrie & CAD-Pre-Processing</h3>
-            <p class="small text-secondary mt-2 mb-0">
-              Aufbereitung, Tessellierung und Konvertierung von MCAD/BIM-Konstruktionsdaten und Punktwolken in universelle 3D-Austauschformate (OpenUSD, STEP AP242, JT ISO 14306, glTF 2.0, E57).
-            </p>
+          <div class="col-md-4 col-lg-2-4">
+            <div class="card border h-100 p-3">
+              <span class="badge bg-success-subtle text-success border border-success-subtle font-monospace align-self-start mb-2">Schicht 2</span>
+              <h3 class="h6 fw-bold text-dark m-0">Geometrie & CAD</h3>
+              <p class="small text-secondary mt-2 mb-0" style="font-size: 11.5px;">
+                Vorverarbeitung von MCAD/BIM-Daten in offene 3D-Formate (OpenUSD, STEP AP242, JT ISO 14306, glTF 2.0).
+              </p>
+            </div>
           </div>
 
-          <div class="card border p-3">
-            <span class="badge bg-warning-subtle text-warning border border-warning-subtle font-monospace align-self-start mb-2">Schicht 3</span>
-            <h3 class="h6 fw-bold text-dark m-0">Semantische Middleware & Datenräume</h3>
-            <p class="small text-secondary mt-2 mb-0">
-              Verknüpfung von Geometrie und Live-OT-Daten zu einem herstellerunabhängigen digitalen Zwilling. Nutzung der Asset Administration Shell (AAS / Verwaltungsschale) und souveräner Datenräume (Eclipse Dataspace Components EDC) für unternehmensübergreifenden Datenaustausch.
-            </p>
+          <div class="col-md-4 col-lg-2-4">
+            <div class="card border h-100 p-3">
+              <span class="badge bg-warning-subtle text-warning border border-warning-subtle font-monospace align-self-start mb-2">Schicht 3</span>
+              <h3 class="h6 fw-bold text-dark m-0">Middleware & AAS</h3>
+              <p class="small text-secondary mt-2 mb-0" style="font-size: 11.5px;">
+                Semantische Einbettung in die Asset Administration Shell (AAS) & souveräne Datenräume (Eclipse EDC).
+              </p>
+            </div>
           </div>
 
-          <div class="card border p-3">
-            <span class="badge bg-purple-subtle text-purple border font-monospace align-self-start mb-2" style="background: #F5F3FF; color: #4C1D95; border-color: #DDD6FE;">Schicht 4</span>
-            <h3 class="h6 fw-bold text-dark m-0">Simulation & Virtuelle Inbetriebnahme (VIBn)</h3>
-            <p class="small text-secondary mt-2 mb-0">
-              Physikalische, thermodynamische und kinematische Simulation (Hardware-in-the-Loop VIBn, Ansys, ISG-virtuos, NVIDIA Isaac Sim) zur Absicherung von SPS-Steuerungscodes und Anlernen KI-basierter Roboterfähigkeiten vor dem physischen Aufbau.
-            </p>
+          <div class="col-md-6 col-lg-2-4">
+            <div class="card border h-100 p-3">
+              <span class="badge font-monospace align-self-start mb-2" style="background: #F5F3FF; color: #4C1D95; border: 1px solid #DDD6FE;">Schicht 4</span>
+              <h3 class="h6 fw-bold text-dark m-0">Simulation & VIBn</h3>
+              <p class="small text-secondary mt-2 mb-0" style="font-size: 11.5px;">
+                Echtzeitsimulation, Kinematik & Virtuelle Inbetriebnahme (VIBn) zur Vorab-Absicherung von SPS-Codes.
+              </p>
+            </div>
           </div>
 
-          <div class="card border p-3">
-            <span class="badge bg-danger-subtle text-danger border border-danger-subtle font-monospace align-self-start mb-2">Schicht 5</span>
-            <h3 class="h6 fw-bold text-dark m-0">Räumliche Immersion & Rendering</h3>
-            <p class="small text-secondary mt-2 mb-0">
-              Echtzeit-Visualisierung und kollaborative Interaktion via WebXR, Unreal Engine 5, NVIDIA Omniverse RTX sowie AR/VR-Headsets (Apple Vision Pro, Meta Quest 3, Varjo XR-4) für Werkerführung, Design Reviews und Teleoperation.
-            </p>
+          <div class="col-md-6 col-lg-2-4">
+            <div class="card border h-100 p-3">
+              <span class="badge bg-danger-subtle text-danger border border-danger-subtle font-monospace align-self-start mb-2">Schicht 5</span>
+              <h3 class="h6 fw-bold text-dark m-0">Spatial Immersion</h3>
+              <p class="small text-secondary mt-2 mb-0" style="font-size: 11.5px;">
+                Räumliche Visualisierung & kollaborative Interaktion via WebXR, Echtzeit-Engines (Unreal 5, Omniverse) & Spatial Hardware.
+              </p>
+            </div>
           </div>
 
         </div>

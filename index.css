@@ -405,3 +405,11 @@ h1, h2, h3, h4, h5, h6,
   padding: 2rem !important;
   background-color: #FAFAFA;
 }
+
+/* 5-Column Grid Layout Utility */
+@media (min-width: 992px) {
+  .col-lg-2-4 {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+}
