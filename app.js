@@ -493,98 +493,117 @@ document.addEventListener('DOMContentLoaded', () => {
     const compliance = item.compliance || {};
     const deployment = item.deployment || {};
 
-    const inputTagsHtml = inputs.map(t => `<span class="tag">${t}</span>`).join('');
-    const outputTagsHtml = outputs.map(t => `<span class="tag">${t}</span>`).join('');
-    const bridgeTagsHtml = bridges.map(t => `<span class="tag tag-bridge">${t}</span>`).join('');
+    const inputTagsHtml = inputs.map(t => `<span class="badge bg-light text-dark border me-1 mb-1 font-monospace">${t}</span>`).join('');
+    const outputTagsHtml = outputs.map(t => `<span class="badge bg-light text-dark border me-1 mb-1 font-monospace">${t}</span>`).join('');
+    const bridgeTagsHtml = bridges.map(t => `<span class="badge bg-primary-subtle text-primary border border-primary-subtle me-1 mb-1 font-monospace">${t}</span>`).join('');
 
     const featuresHtml = features.map(f => `
-      <div class="feature-box">
-        <h4>${f.title}</h4>
-        <p>${f.desc}</p>
+      <div class="col-md-6 mb-2">
+        <div class="p-2 border rounded bg-light h-100">
+          <div class="fw-bold small text-dark">${f.title}</div>
+          <div class="text-muted" style="font-size: 11px; line-height: 1.3;">${f.desc}</div>
+        </div>
       </div>
     `).join('');
 
     const evalHtml = evaluations.map(e => `
-      <li><strong>${e.title}:</strong> ${e.text}</li>
+      <li class="mb-2"><strong>${e.title}:</strong> ${e.text}</li>
     `).join('');
 
     return `
-      <div class="slide-container" id="slide-${item.refCode}">
-        <div class="header-bar">
-          <div class="header-title-group">
-            <span class="header-category">KAT. ${item.categoryCode} — ${item.categoryName}</span>
-            <h1 class="slide-title">${item.name} — ${item.subtitle}</h1>
+      <div class="container-fluid p-0">
+        
+        <!-- Header Banner -->
+        <div class="d-flex justify-content-between align-items-start border-bottom pb-3 mb-3 flex-wrap gap-2">
+          <div>
+            <span class="badge bg-secondary font-monospace mb-1">KAT. ${item.categoryCode} — ${item.categoryName}</span>
+            <h3 class="h4 fw-black text-dark m-0">${item.name} <span class="text-muted fs-6 fw-normal">(${item.subtitle})</span></h3>
           </div>
-          <div class="tier-badge ${tierClass}">${item.tier} (${item.costLabel || ''})</div>
+          <div>
+            <span class="tier-badge ${tierClass} fs-6">${item.tier}</span>
+            <div class="small text-muted text-end font-monospace">${item.costLabel || ''}</div>
+          </div>
         </div>
-        
-        <div class="metadata-strip">
-          <div class="meta-card"><div class="meta-label">Entwickler / Vendor</div><div class="meta-value">${item.vendor}</div></div>
-          <div class="meta-card"><div class="meta-label">Hauptsitz / Land</div><div class="meta-value">${item.hq}</div></div>
-          <div class="meta-card"><div class="meta-label">Geschäftsmodell</div><div class="meta-value">${item.businessModel}</div></div>
-          <div class="meta-card"><div class="meta-label">Plattform-URL</div><div class="meta-value"><a href="${item.url}" target="_blank">${(item.url || '').replace('https://', '')}</a></div></div>
+
+        <!-- Metadata Strip -->
+        <div class="row g-2 mb-3 small">
+          <div class="col-md-3 col-6"><div class="p-2 bg-light rounded border"><strong>Vendor:</strong> ${item.vendor}</div></div>
+          <div class="col-md-3 col-6"><div class="p-2 bg-light rounded border"><strong>HQ:</strong> ${item.hq || 'Global'}</div></div>
+          <div class="col-md-3 col-6"><div class="p-2 bg-light rounded border"><strong>Lizenz:</strong> ${item.businessModel}</div></div>
+          <div class="col-md-3 col-6"><div class="p-2 bg-light rounded border text-truncate"><strong>Web:</strong> <a href="${item.url}" target="_blank" class="text-primary">${(item.url || '').replace('https://', '')}</a></div></div>
         </div>
-        
-        <div class="content-grid">
-          <div class="left-column">
-            <div class="panel">
-              <div class="panel-header"><i class="fa-solid fa-cube"></i><h2 class="panel-title">Systemübersicht & Architektur</h2></div>
-              <p class="body-text">${item.overview || ''}</p>
+
+        <!-- Main Body Grid -->
+        <div class="row g-3">
+          <!-- Left Column -->
+          <div class="col-lg-7">
+            <!-- Overview -->
+            <div class="card border mb-3">
+              <div class="card-header bg-light fw-bold small"><i class="fa-solid fa-cube text-primary me-2"></i>Systemübersicht</div>
+              <div class="card-body small text-secondary">${item.overview || ''}</div>
             </div>
-            
-            <div class="panel">
-              <div class="panel-header"><i class="fa-solid fa-gears"></i><h2 class="panel-title">Technische Kernfunktionen</h2></div>
-              <div class="feature-tiles">
-                ${featuresHtml}
+
+            <!-- Features -->
+            <div class="card border mb-3">
+              <div class="card-header bg-light fw-bold small"><i class="fa-solid fa-gears text-primary me-2"></i>Kernfunktionen</div>
+              <div class="card-body p-2">
+                <div class="row g-2">${featuresHtml}</div>
               </div>
             </div>
-            
-            <div class="panel">
-              <div class="panel-header"><i class="fa-solid fa-diagram-project"></i><h2 class="panel-title">Datenformate & Schnittstellen</h2></div>
-              <div class="pipeline-grid">
-                <div class="pipeline-box"><div class="pipeline-title">Eingabeformate</div><div class="tag-list">${inputTagsHtml}</div></div>
-                <div class="pipeline-box"><div class="pipeline-title">Ausgabeformate</div><div class="tag-list">${outputTagsHtml}</div></div>
+
+            <!-- Formats & Interfaces -->
+            <div class="card border">
+              <div class="card-header bg-light fw-bold small"><i class="fa-solid fa-diagram-project text-primary me-2"></i>Datenformate & Schnittstellen</div>
+              <div class="card-body small">
+                <div class="mb-2"><strong>Eingabeformate:</strong><div class="mt-1">${inputTagsHtml}</div></div>
+                <div class="mb-2"><strong>Ausgabeformate:</strong><div class="mt-1">${outputTagsHtml}</div></div>
+                <div><strong>Ökosystem-Bridges:</strong><div class="mt-1">${bridgeTagsHtml}</div></div>
               </div>
-              <div style="margin-top: 4px;"><span class="pipeline-title">Ökosystem-Bridges</span><div class="tag-list">${bridgeTagsHtml}</div></div>
             </div>
           </div>
-          
-          <div class="right-column">
-            <div class="panel eval-panel" style="flex-grow: 1;">
-              <div class="panel-header"><i class="fa-solid fa-vial-circle-check"></i><h2 class="panel-title">In-House Feld-Bewertung</h2></div>
-              <ul class="bullet-list">
-                ${evalHtml}
-              </ul>
-              <div style="border-top: 1px dashed var(--border-subtle); padding-top: 6px; margin-top: auto;">
-                <span class="panel-title" style="font-size: 9px;">Compliance & Standards</span>
-                <div class="compliance-grid">
-                  <div class="compliance-card"><div class="comp-val">${compliance.omniverse || 'Supported'}</div><div class="comp-lbl">Omniverse</div></div>
-                  <div class="compliance-card"><div class="comp-val">${compliance.sovereignty || 'EU Compliant'}</div><div class="comp-lbl">DSGVO / EU</div></div>
-                  <div class="compliance-card"><div class="comp-val">${compliance.openStandard || 'Open Standard'}</div><div class="comp-lbl">Offener Std.</div></div>
+
+          <!-- Right Column -->
+          <div class="col-lg-5">
+            <!-- Evaluations -->
+            <div class="card border mb-3">
+              <div class="card-header bg-light fw-bold small"><i class="fa-solid fa-vial-circle-check text-primary me-2"></i>Praxis-Bewertung</div>
+              <div class="card-body small">
+                <ul class="ps-3 mb-3 text-secondary">${evalHtml}</ul>
+                <div class="border-top pt-2 mt-2">
+                  <div class="fw-bold text-muted mb-1" style="font-size: 10px;">COMPLIANCE & STANDARDS</div>
+                  <div class="d-flex justify-content-between text-center gap-1 small">
+                    <div class="p-1 bg-light rounded border flex-grow-1"><div class="fw-bold">${compliance.omniverse || 'Supported'}</div><div class="text-muted" style="font-size: 10px;">Omniverse</div></div>
+                    <div class="p-1 bg-light rounded border flex-grow-1"><div class="fw-bold">${compliance.sovereignty || 'DSGVO'}</div><div class="text-muted" style="font-size: 10px;">Souveränität</div></div>
+                    <div class="p-1 bg-light rounded border flex-grow-1"><div class="fw-bold">${compliance.openStandard || 'Open'}</div><div class="text-muted" style="font-size: 10px;">Standard</div></div>
+                  </div>
                 </div>
               </div>
             </div>
-            
-            <div class="panel">
-              <div class="panel-header"><i class="fa-solid fa-sliders"></i><h2 class="panel-title">Bereitstellungsparameter</h2></div>
-              <div class="deployment-grid">
-                <div><strong>Einarbeitung:</strong> <span>${deployment.effort || 'Mittel'}</span></div>
-                <div><strong>Bereitstellung:</strong> ${deployment.mode || 'Cloud / On-Premise'}</div>
-                <div><strong>Reifegrad:</strong> ${deployment.maturity || 'Produktiv'}</div>
-                <div><strong>Einsatz:</strong> ${deployment.area || 'Industrieller Werksbetrieb'}</div>
-                <div class="personnel-box">
-                  <div class="personnel-title">Personalbedarf & Zeitintensität:</div>
-                  <strong>${item.staffing || '1x Spezialist'}</strong>
+
+            <!-- Deployment -->
+            <div class="card border">
+              <div class="card-header bg-light fw-bold small"><i class="fa-solid fa-sliders text-primary me-2"></i>Bereitstellungsparameter</div>
+              <div class="card-body small text-secondary">
+                <div class="mb-1"><strong>Einarbeitungsaufwand:</strong> ${deployment.effort || 'Mittel'}</div>
+                <div class="mb-1"><strong>Bereitstellung:</strong> ${deployment.mode || 'Cloud / Hybrid'}</div>
+                <div class="mb-1"><strong>Reifegrad:</strong> ${deployment.maturity || 'Produktiv'}</div>
+                <div class="mb-2"><strong>Einsatzbereich:</strong> ${deployment.area || 'Werksbetrieb'}</div>
+                <div class="p-2 bg-light rounded border">
+                  <strong>Personalbedarf:</strong> ${item.staffing || '1x Spezialist'}
                 </div>
               </div>
             </div>
           </div>
         </div>
-        
-        <div class="footer-bar">
+
+        <!-- Footer Strip -->
+        <div class="d-flex justify-content-between align-items-center border-top mt-3 pt-2 small text-muted font-monospace">
           <div>Ref: <strong>${item.refCode}</strong></div>
-          <div>Omniverse: <strong>${compliance.omniverse || 'Ready'}</strong></div>
-          <div>Status: <span class="status-pill">${item.status}</span></div>
+          <div>Status: <span class="badge bg-light text-dark border">${item.status}</span></div>
+        </div>
+
+      </div>
+    `;
      `;
   }
 
