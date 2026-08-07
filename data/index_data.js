@@ -137,14 +137,14 @@ window.INDEX_DATA = {
       "categoryCode": "1.1",
       "categoryName": "Mechanisches CAD (MCAD)",
       "name": "Autodesk Fusion 360",
-      "subtitle": "Cloud-CAD/CAM & Prototyping für KMU",
+      "subtitle": "Cloud-CAD/CAM & Prototyping für Entwicklungsteams",
       "vendor": "Autodesk Inc.",
       "hq": "San Francisco, CA, USA",
       "tier": "Tier 1",
       "costLabel": "≤ €30k",
       "status": "EVALUIERT",
       "url": "https://autodesk.com/fusion-360",
-      "overview": "Integrierte Cloud-Plattform für 3D-CAD, CAM, CAE und Leiterplatten-Design. Beliebt bei KMU, Hardware-Startups und Maker-Labs für schnelles Prototyping.",
+      "overview": "Integrierte Cloud-Plattform für 3D-CAD, CAM, CAE und Leiterplatten-Design. Beliebt bei Fertigungsbetrieben, Hardware-Startups und Entwicklungsteams für schnelles Prototyping.",
       "inputs": [
         "F3D",
         "STEP",
@@ -3324,7 +3324,7 @@ window.INDEX_DATA = {
       "id": "UC-01-SHOPFLOOR-INCIDENT-MANAGEMENT",
       "title": "Digitales Shopfloor-Incident-Management",
       "tier": "Tier 1",
-      "tierLabel": "Tier 1 (≤ €30k / KMU Starter)",
+      "tierLabel": "Tier 1 (≤ €30k / Starter & Open Source)",
       "shortDesc": "Wie umsetzen? Schnelle optische 360°-Bestandserfassung im Shopfloor ohne Maschinenstillstand. Die Aufnahmen werden in FARO Sphere XG verortet und lösen automatisiert Instandhaltungstickets im Enterprise-System (Jira / SAP) aus.",
       "goal": "ROI & Amortisation: Reduzierung der Störungsbehebungszeit um bis zu 60% durch exakte 3D-Fehlerortung ohne manuelle Wegezeiten. Investition amortisiert sich typischerweise nach 3 bis 6 Monaten.",
       "flow": [
@@ -3369,7 +3369,7 @@ window.INDEX_DATA = {
       "id": "UC-02-VIRTUAL-FACTORY-WALKTHROUGH",
       "title": "Virtuelle Fabrikbegehung & Asset-Tagging via WebXR",
       "tier": "Tier 1",
-      "tierLabel": "Tier 1 (≤ €30k / KMU Starter)",
+      "tierLabel": "Tier 1 (≤ €30k / Starter & Open Source)",
       "shortDesc": "Wie umsetzen? Mobiles SLAM-Scanning bestehender Werksbereiche im Gehen. Überführung der Geometrie in OpenUSD/glTF und Verknüpfung mit Maschinendaten in einer Eclipse BaSyx Verwaltungsschale (AAS).",
       "goal": "ROI & Amortisation: Einsparung von bis zu 80% der Reisekosten und Reisezeiten bei Standort-Audits und Zulieferer-Reviews. Nutzung auf vorhandenen PCs/Tablets ohne Neuanschaffung teurer Spezialhardware.",
       "flow": [
@@ -4239,7 +4239,7 @@ window.PROFILES_DATA = {
     "categoryCode": "1.1",
     "categoryName": "Mechanisches CAD (MCAD)",
     "name": "Autodesk Fusion 360",
-    "subtitle": "Cloud-CAD/CAM & Prototyping für KMU",
+    "subtitle": "Cloud-CAD/CAM & Prototyping für Entwicklungsteams",
     "vendor": "Autodesk Inc.",
     "hq": "San Francisco, CA, USA",
     "businessModel": "Low-Cost SaaS Cloud Subscription",
@@ -4247,7 +4247,7 @@ window.PROFILES_DATA = {
     "tier": "Tier 1",
     "costLabel": "≤ €30k",
     "status": "EVALUIERT",
-    "overview": "Integrierte Cloud-Plattform für 3D-CAD, CAM, CAE und Leiterplatten-Design. Beliebt bei KMU, Hardware-Startups und Maker-Labs für schnelles Prototyping.",
+    "overview": "Integrierte Cloud-Plattform für 3D-CAD, CAM, CAE und Leiterplatten-Design. Beliebt bei Fertigungsbetrieben, Hardware-Startups und Entwicklungsteams für schnelles Prototyping.",
     "features": [
       {
         "title": "Integrierte 5-Achs-CAM",
@@ -4303,7 +4303,7 @@ window.PROFILES_DATA = {
       "effort": "Gering (1-2 Tage)",
       "mode": "Cloud Desktop App",
       "maturity": "Produktiv",
-      "area": "KMU Werkzeugbau & Rapid Prototyping"
+      "area": "Werkzeugbau & Rapid Prototyping"
     },
     "staffing": "1x CAD/CAM Techniker (25% FTE)"
   },
@@ -7008,7 +7008,7 @@ window.PROFILES_DATA = {
       "effort": "Sehr Gering (< 1 Tag)",
       "mode": "Standalone Wireless Headset",
       "maturity": "Produktiv",
-      "area": "KMU 3D-Begehung & VR-Training"
+      "area": "3D-Werkbegehung & VR-Training"
     },
     "staffing": "1x IT / XR Support Specialist (15% FTE)"
   },
@@ -9179,7 +9179,7 @@ window.PROFILES_DATA = {
     "evaluations": [
       {
         "title": "Skalierbarkeit",
-        "text": "Eliminiert teure lokale HPC-Hardware-Investitionen für KMU."
+        "text": "Eliminiert teure lokale HPC-Hardware-Investitionen für Ingenieurteams."
       },
       {
         "title": "Vorteile",

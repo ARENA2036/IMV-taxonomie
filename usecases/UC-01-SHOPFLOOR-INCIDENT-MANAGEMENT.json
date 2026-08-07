@@ -2,7 +2,7 @@
   "id": "UC-01-SHOPFLOOR-INCIDENT-MANAGEMENT",
   "title": "Digitales Shopfloor-Incident-Management",
   "tier": "Tier 1",
-  "tierLabel": "Tier 1 (≤ €30k / KMU Starter)",
+  "tierLabel": "Tier 1 (≤ €30k / Starter & Open Source)",
   "shortDesc": "Wie umsetzen? Schnelle optische 360°-Bestandserfassung im Shopfloor ohne Maschinenstillstand. Die Aufnahmen werden in FARO Sphere XG verortet und lösen automatisiert Instandhaltungstickets im Enterprise-System (Jira / SAP) aus.",
   "goal": "ROI & Amortisation: Reduzierung der Störungsbehebungszeit um bis zu 60% durch exakte 3D-Fehlerortung ohne manuelle Wegezeiten. Investition amortisiert sich typischerweise nach 3 bis 6 Monaten.",
   "flow": [

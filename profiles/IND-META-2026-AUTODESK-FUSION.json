@@ -3,7 +3,7 @@
   "categoryCode": "1.1",
   "categoryName": "Mechanisches CAD (MCAD)",
   "name": "Autodesk Fusion 360",
-  "subtitle": "Cloud-CAD/CAM & Prototyping für KMU",
+  "subtitle": "Cloud-CAD/CAM & Prototyping für Entwicklungsteams",
   "vendor": "Autodesk Inc.",
   "hq": "San Francisco, CA, USA",
   "businessModel": "Low-Cost SaaS Cloud Subscription",
@@ -11,7 +11,7 @@
   "tier": "Tier 1",
   "costLabel": "≤ €30k",
   "status": "EVALUIERT",
-  "overview": "Integrierte Cloud-Plattform für 3D-CAD, CAM, CAE und Leiterplatten-Design. Beliebt bei KMU, Hardware-Startups und Maker-Labs für schnelles Prototyping.",
+  "overview": "Integrierte Cloud-Plattform für 3D-CAD, CAM, CAE und Leiterplatten-Design. Beliebt bei Fertigungsbetrieben, Hardware-Startups und Entwicklungsteams für schnelles Prototyping.",
   "features": [
     {
       "title": "Integrierte 5-Achs-CAM",
@@ -67,7 +67,7 @@
     "effort": "Gering (1-2 Tage)",
     "mode": "Cloud Desktop App",
     "maturity": "Produktiv",
-    "area": "KMU Werkzeugbau & Rapid Prototyping"
+    "area": "Werkzeugbau & Rapid Prototyping"
   },
   "staffing": "1x CAD/CAM Techniker (25% FTE)"
 }
