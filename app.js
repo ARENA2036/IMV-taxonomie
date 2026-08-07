@@ -7,6 +7,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   let categories = [];
   let dbItems = [];
+  let usecases = [];
+  let filteredUseCases = [];
   let profilesCache = {};
 
   let filteredItems = [];
@@ -604,7 +606,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       </div>
     `;
-     `;
   }
 
   function showBsModal(el) {
@@ -713,7 +714,7 @@ document.addEventListener('DOMContentLoaded', () => {
     compareModalBody.innerHTML = html;
   }
 
-  function renderMatrixView() {
+  function renderMatrixTable() {
     if (!matrixTableBody) return;
 
     let html = '';
