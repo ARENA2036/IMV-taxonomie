@@ -71,7 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
     handleInitialHash();
     renderSidebarCategories();
     filterAndRender();
-    renderMatrixTable();
     setupEventListeners();
     window.appOpenProfileModal = openProfileModal;
   }
@@ -714,41 +713,6 @@ document.addEventListener('DOMContentLoaded', () => {
     compareModalBody.innerHTML = html;
   }
 
-  function renderMatrixTable() {
-    if (!matrixTableBody) return;
-
-    let html = '';
-    dbItems.forEach(item => {
-      const tierClass = item.tier === 'Tier 1' ? 'tier-1' : item.tier === 'Tier 2' ? 'tier-2' : 'tier-3';
-      html += `
-        <tr>
-          <td><code class="text-muted">${item.refCode}</code></td>
-          <td><strong>${item.categoryCode}</strong></td>
-          <td>${item.categoryName}</td>
-          <td><strong>${item.name}</strong></td>
-          <td>${item.vendor}</td>
-          <td><span class="tier-badge ${tierClass}">${item.tier}</span></td>
-          <td><span class="badge bg-light text-dark border">${item.status}</span></td>
-          <td>
-            <button class="btn btn-outline-primary btn-sm btn-matrix-inspect" data-ref="${item.refCode}" style="padding: 2px 8px; font-size: 11px;">
-              Details →
-            </button>
-          </td>
-        </tr>
-      `;
-    });
-
-    matrixTableBody.innerHTML = html;
-
-    matrixTableBody.querySelectorAll('.btn-matrix-inspect').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const ref = btn.getAttribute('data-ref');
-        if (matrixModal) hideBsModal(matrixModal);
-        openProfileModal(ref);
-      });
-    });
-  }
-
   function setupEventListeners() {
     if (searchInputEl) {
       searchInputEl.addEventListener('input', filterAndRender);
@@ -798,54 +762,10 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    if (btnOverview && matrixModal) {
-      btnOverview.addEventListener('click', () => {
-        showBsModal(matrixModal);
-      });
-    }
-
-    if (btnOverviewHero && matrixModal) {
-      btnOverviewHero.addEventListener('click', () => {
-        showBsModal(matrixModal);
-      });
-    }
-
-    if (btnCloseMatrixModal && matrixModal) {
-      btnCloseMatrixModal.addEventListener('click', () => {
-        hideBsModal(matrixModal);
-      });
-    }
-
     if (btnCloseProfileModal && profileModal) {
       btnCloseProfileModal.addEventListener('click', () => {
         hideBsModal(profileModal);
         window.location.hash = '';
-      });
-    }
-
-    // Hamburger Menu Toggle Handler
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const hamburgerDropdown = document.getElementById('hamburgerDropdown');
-    
-    if (hamburgerBtn && hamburgerDropdown) {
-      hamburgerBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        hamburgerDropdown.classList.toggle('active');
-      });
-
-      document.addEventListener('click', (e) => {
-        if (!hamburgerDropdown.contains(e.target) && e.target !== hamburgerBtn) {
-          hamburgerDropdown.classList.remove('active');
-        }
-      });
-    }
-
-    // Matrix Menu Link in Hamburger
-    const btnMatrixMenu = document.getElementById('btnMatrixMenu');
-    if (btnMatrixMenu && matrixModal) {
-      btnMatrixMenu.addEventListener('click', (e) => {
-        e.preventDefault();
-        showBsModal(matrixModal);
       });
     }
   }

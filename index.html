@@ -179,22 +179,22 @@
         </a>
       </div>
 
-      <!-- Card 4: Matrix Index Modal Trigger -->
+      <!-- Card 4: Direct Listenansicht Link -->
       <div class="col-md-6">
-        <div class="card border-0 shadow-sm h-100 p-4 hover-shadow transition cursor-pointer" id="btnOverviewHero">
+        <a href="./browser.html" class="card border-0 shadow-sm h-100 text-decoration-none p-4 hover-shadow transition">
           <div class="d-flex align-items-center gap-3 mb-3">
             <div class="bg-primary-subtle text-primary p-3 rounded-3 fs-4">
-              <i class="fa-solid fa-table-cells"></i>
+              <i class="fa-solid fa-list-check"></i>
             </div>
-            <h3 class="h5 fw-bold text-dark m-0">Vollständige Evaluierungs-Matrix öffnen</h3>
+            <h3 class="h5 fw-bold text-dark m-0">Tabellarische Listenansicht & Filter</h3>
           </div>
           <p class="text-secondary small mb-4">
-            Erhalten Sie eine tabellarische Gesamtübersicht aller Technologien mit direkter Einsicht in RefCodes, Kategorien, Kostengruppen und Schnellzugriff auf Detaildatenblätter.
+            Nutzen Sie die übersichtliche Tabellen- und Listenansicht im Taxonomie-Browser zur schnellen Durchsuchung aller Technologien nach RefCodes, Anbietern und Kategorien.
           </p>
           <div class="mt-auto fw-bold text-primary small">
-            Matrix Übersicht öffnen <i class="fa-solid fa-arrow-right ms-1"></i>
+            Listenansicht öffnen <i class="fa-solid fa-arrow-right ms-1"></i>
           </div>
-        </div>
+        </a>
       </div>
 
     </div>
@@ -223,39 +223,6 @@
     <a href="./architecture.html" class="text-muted text-decoration-none font-weight-bold">Architektur</a> | 
     <a href="./impressum.html" class="text-muted text-decoration-none font-weight-bold">Impressum</a>
   </footer>
-
-  <!-- Matrix Modal (Bootstrap Modal) -->
-  <div class="modal fade" id="matrixModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title fw-bold"><i class="fa-solid fa-table-cells text-primary me-2"></i>Vollständige Taxonomie Evaluierungs-Matrix</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button>
-        </div>
-        <div class="modal-body">
-          <div class="table-responsive">
-            <table class="table table-hover align-middle small">
-              <thead class="table-light">
-                <tr>
-                  <th>Ref Code</th>
-                  <th>Kategorie</th>
-                  <th>Technologie Name</th>
-                  <th>Vendor</th>
-                  <th>Tier</th>
-                  <th>Kostengruppe</th>
-                  <th>Status</th>
-                  <th>Aktion</th>
-                </tr>
-              </thead>
-              <tbody id="matrixTableBody">
-                <!-- Dynamisch gerendert via app.js -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Profil Detail Modal -->
   <div class="modal fade" id="profileModal" tabindex="-1" aria-hidden="true">
