@@ -10,7 +10,7 @@
   "url": "https://amqp.org",
   "tier": "Tier 1",
   "costLabel": "Open Standard / €0",
-  "status": "EVALUIERT",
+  "status": "INDEXIERT",
   "overview": "Unternehmensgerechtes Messaging-Protokoll für transaktionssicheres Queuing, Routing und Punkt-zu-Punkt-Zustellung von Nachrichten.",
   "features": [
     {

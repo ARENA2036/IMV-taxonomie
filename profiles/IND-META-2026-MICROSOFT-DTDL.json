@@ -10,7 +10,7 @@
   "url": "https://github.com/Azure/opendigitaltwins-dtdl",
   "tier": "Tier 1",
   "costLabel": "Open Standard / €0",
-  "status": "EVALUIERT",
+  "status": "INDEXIERT",
   "overview": "JSON-LD-basierte Modellierungssprache zur Definition digitaler Zwillingseinheiten, Raumgraphen und Telemetriesignale in Azure Digital Twins.",
   "features": [
     {

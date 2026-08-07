@@ -10,7 +10,7 @@
   "url": "https://azure.microsoft.com/services/digital-twins",
   "tier": "Tier 2",
   "costLabel": "≤ €100k",
-  "status": "EVALUIERT",
+  "status": "INDEXIERT",
   "overview": "PaaS-Plattform zum Erstellen graphbasierter digitaler Modelle kompletter Fertigungsnetzwerke und Lieferketten.",
   "features": [
     {

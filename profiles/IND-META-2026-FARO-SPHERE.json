@@ -10,7 +10,7 @@
   "url": "https://faro.com/sphere",
   "tier": "Tier 2",
   "costLabel": "≤ €100k",
-  "status": "EVALUIERT",
+  "status": "INDEXIERT",
   "overview": "Zentrale Cloud-Plattform, die statische Laserscans, Mobile-SLAM-Daten und 360°-Fotos in einer gemeinsamen Umgebung zusammenführt.",
   "features": [
     {

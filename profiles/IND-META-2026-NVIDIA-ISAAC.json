@@ -10,7 +10,7 @@
   "url": "https://developer.nvidia.com/isaac-sim",
   "tier": "Tier 2",
   "costLabel": "≤ €100k",
-  "status": "CORE SIM STANDARD",
+  "status": "INDEXIERT",
   "overview": "Roboter-Simulationsanwendung und Physical-AI-Framework auf Omniverse-Basis. Ermöglicht synthetische Datengenerierung (SDG) und Reinforcement Learning für AMRs und Roboterarme.",
   "features": [
     {

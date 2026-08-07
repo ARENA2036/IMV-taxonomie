@@ -10,7 +10,7 @@
   "url": "https://scaniverse.com",
   "tier": "Tier 1",
   "costLabel": "Kostenfrei / €0",
-  "status": "EMPFOHLEN",
+  "status": "INDEXIERT",
   "overview": "Kostenlose mobile 3D-Erfassungs-App auf Basis von 3D Gaussian Splatting. Nutzt Smartphones mit LiDAR für schnelles Requisiten-Scannen.",
   "features": [
     {

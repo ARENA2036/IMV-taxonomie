@@ -10,7 +10,7 @@
   "url": "https://ansys.com",
   "tier": "Tier 3",
   "costLabel": "> €100k",
-  "status": "STANDARDIZIERT",
+  "status": "INDEXIERT",
   "overview": "Umfassende Simulationssuite für Strömungsmechanik (CFD), FEM-Strukturanalyse und Elektromagnetik. Überträgt Berechnungsfelder direkt in den 3D-Zwilling.",
   "features": [
     {

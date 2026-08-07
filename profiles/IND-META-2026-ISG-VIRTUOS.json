@@ -10,7 +10,7 @@
   "url": "https://isg-stuttgart.de",
   "tier": "Tier 2",
   "costLabel": "≤ €100k",
-  "status": "STANDARDIZIERT",
+  "status": "INDEXIERT",
   "overview": "Deterministische Harte-Echtzeit-Simulationsengine für Taktraten unter 1 Millisekunde zur Hardware-in-the-Loop-Inbetriebnahme von Werkzeugmaschinen.",
   "features": [
     {

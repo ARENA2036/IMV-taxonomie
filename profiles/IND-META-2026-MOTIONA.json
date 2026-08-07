@@ -10,7 +10,7 @@
   "url": "https://motiona.io",
   "tier": "Tier 1",
   "costLabel": "≤ €30k",
-  "status": "TESTBED",
+  "status": "INDEXIERT",
   "overview": "Software zur Analyse von Roboter-Bewegungskurven. Berechnet energieoptimierte Bahnkurven für mehrachsige Industrieroboter.",
   "features": [
     {

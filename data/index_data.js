@@ -139,7 +139,7 @@ window.INDEX_DATA = {
       "hq": "Lake Mary, FL, USA / Stuttgart, DE (EU)",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://faro.com/orbis",
       "overview": "Hybrider mobiler SLAM- und statischer Laserscanner. Wechselt fliegend zwischen Gehen und hochdichtem Stativscannen.",
       "inputs": [
@@ -174,7 +174,7 @@ window.INDEX_DATA = {
       "hq": "Heerbrugg, Schweiz (EU/EFTA)",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://leica-geosystems.com/blk2go",
       "overview": "Kompakter handgeführter Mobile-SLAM-Scanner mit 2-Achs-LiDAR und Mehrkamera-System zur schnellen Raumdokumentation.",
       "inputs": [
@@ -207,7 +207,7 @@ window.INDEX_DATA = {
       "hq": "München, Deutschland (EU)",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "EMPFOHLENES MAPPING HARDWARE",
+      "status": "INDEXIERT",
       "url": "https://navvis.com/vlx-3",
       "overview": "Wearables Mobile-SLAM-System mit zwei Multi-Layer-LiDAR-Sensoren und 4 HD-Kameras. Erfasst Bestandskonstruktionen (Brownfield) in Schrittgeschwindigkeit mit hoher Genauigkeit.",
       "inputs": [
@@ -241,7 +241,7 @@ window.INDEX_DATA = {
       "hq": "Lake Mary, FL, USA / Stuttgart, DE (EU)",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "STANDARDIZIERT",
+      "status": "INDEXIERT",
       "url": "https://faro.com/focus",
       "overview": "Branchenstandard unter den terrestrischen Stativ-Laserscannern. Liefert millimetergenaue 3D-Punktwolken für präzise Umbaumaßnahmen.",
       "inputs": [
@@ -275,7 +275,7 @@ window.INDEX_DATA = {
       "hq": "Heerbrugg, Schweiz (EU/EFTA)",
       "tier": "Tier 3",
       "costLabel": "> €100k",
-      "status": "STANDARDIZIERT",
+      "status": "INDEXIERT",
       "url": "https://leica-geosystems.com/rtc360",
       "overview": "Hochpräziser terrestrischer 3D-Laserscanner (RTC360). Erfasst 3D-Punktwolken und HDR-Panoramen in unter 45 Sekunden mit automatischer VIS-Echtzeitregistrierung.",
       "inputs": [
@@ -311,7 +311,7 @@ window.INDEX_DATA = {
       "hq": "Hangzhou, China",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "TESTBED",
+      "status": "INDEXIERT",
       "url": "https://deeprobotics.cn",
       "overview": "Industrieller Laufroboter (IP66) für autonome Inspektionsläufe über Treppen, Gitterroste und unwegsames Werksgelände.",
       "inputs": [
@@ -344,7 +344,7 @@ window.INDEX_DATA = {
       "hq": "Lausanne, Schweiz (EU/EFTA)",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "EMPFOHLEN",
+      "status": "INDEXIERT",
       "url": "https://flyability.com/elios-3",
       "overview": "Kollisionstolerante Hallendrohne im Käfig für Inspektionen in engen Behältern, Kaminen und unter Hallendächern ohne GPS.",
       "inputs": [
@@ -377,7 +377,7 @@ window.INDEX_DATA = {
       "hq": "Heerbrugg, Schweiz (EU/EFTA)",
       "tier": "Tier 3",
       "costLabel": "> €100k",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://leica-geosystems.com/blk2fly",
       "overview": "Autonome Flugdrohne mit LiDAR-Scanner. Erfasst Dächer, Fassaden und hochgelegene Rohrbrücken vollautomatisch ohne Gerüstbau.",
       "inputs": [
@@ -411,7 +411,7 @@ window.INDEX_DATA = {
       "hq": "Luxemburg (EU)",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "STANDARDIZIERT",
+      "status": "INDEXIERT",
       "url": "https://artec3d.com",
       "overview": "Hochpräzise Handscanner (Artec Leo/Eva) für Reverse Engineering und Qualitätskontrolle mit Sub-Millimeter-Genauigkeit.",
       "inputs": [
@@ -446,7 +446,7 @@ window.INDEX_DATA = {
       "hq": "San Francisco, CA, USA",
       "tier": "Tier 1",
       "costLabel": "Kostenfrei / €0",
-      "status": "EMPFOHLEN",
+      "status": "INDEXIERT",
       "url": "https://scaniverse.com",
       "overview": "Kostenlose mobile 3D-Erfassungs-App auf Basis von 3D Gaussian Splatting. Nutzt Smartphones mit LiDAR für schnelles Requisiten-Scannen.",
       "inputs": [
@@ -480,7 +480,7 @@ window.INDEX_DATA = {
       "hq": "Shenzhen, China",
       "tier": "Tier 1",
       "costLabel": "≤ €30k",
-      "status": "TOP FOTOREALISMUS",
+      "status": "INDEXIERT",
       "url": "https://xgrids.com",
       "overview": "Handgeführter 3D-Scanner, der LiDAR, Kameras und 3D Gaussian Splatting (3DGS) verbindet, um fotorealistische 3D-Abbilder spiegelnder Objekte zu erstellen.",
       "inputs": [
@@ -515,7 +515,7 @@ window.INDEX_DATA = {
       "hq": "San Francisco, CA, USA",
       "tier": "Tier 1",
       "costLabel": "≤ €30k",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://autodesk.com/recap",
       "overview": "Punktwolken-Software zum Bereinigen, Beschneiden und Umwandeln roher Scans in das Autodesk RCS/RCP-Format.",
       "inputs": [
@@ -552,7 +552,7 @@ window.INDEX_DATA = {
       "hq": "Philadelphia, PA, USA",
       "tier": "Tier 1",
       "costLabel": "≤ €30k",
-      "status": "STANDARDIZIERT",
+      "status": "INDEXIERT",
       "url": "https://cesium.com",
       "overview": "Offene Plattform zum Streaming riesiger 3D-Geodaten und 3D-Tiles-Datensätze in Webbrowser und Echtzeit-Engines.",
       "inputs": [
@@ -589,7 +589,7 @@ window.INDEX_DATA = {
       "hq": "Redlands, CA, USA / EU Support",
       "tier": "Tier 3",
       "costLabel": "> €100k",
-      "status": "STANDARDIZIERT",
+      "status": "INDEXIERT",
       "url": "https://esri.com/arcgis",
       "overview": "Marktführendes Geoinformationssystem (GIS) zur Verwaltung von Standortdaten, Werksnetzen und regionaler Infrastruktur.",
       "inputs": [
@@ -625,7 +625,7 @@ window.INDEX_DATA = {
       "hq": "Lake Mary, FL, USA / Stuttgart, DE (EU)",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://faro.com/sphere",
       "overview": "Zentrale Cloud-Plattform, die statische Laserscans, Mobile-SLAM-Daten und 360°-Fotos in einer gemeinsamen Umgebung zusammenführt.",
       "inputs": [
@@ -660,7 +660,7 @@ window.INDEX_DATA = {
       "hq": "Sunnyvale, CA, USA",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "STANDARD WALKTHROUGH",
+      "status": "INDEXIERT",
       "url": "https://matterport.com",
       "overview": "Führende Plattform für virtuelle 360°-Begehungen. Nutzt die Pro3 LiDAR-Kamera für schnelle Rundgänge in Innen- und Außenbereichen.",
       "inputs": [
@@ -694,7 +694,7 @@ window.INDEX_DATA = {
       "hq": "Deutschland (EU)",
       "tier": "Tier 1",
       "costLabel": "≤ €30k",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://orb360.tech",
       "overview": "Automatisierter Drehteller zur Erfassung kleiner Industrieteile für Ersatzteilkataloge und 3D-Web-Viewer.",
       "inputs": [
@@ -726,7 +726,7 @@ window.INDEX_DATA = {
       "hq": "Bratislava, Slowakei (EU)",
       "tier": "Tier 1",
       "costLabel": "Kostenfrei / €0",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://capturingreality.com/realityscan",
       "overview": "Mobile Photogrammetrie-App, die Fotoserie auf dem Smartphone in 3D-Modelle umwandelt.",
       "inputs": [
@@ -759,7 +759,7 @@ window.INDEX_DATA = {
       "hq": "Menlo Park, CA, USA",
       "tier": "Tier 1",
       "costLabel": "Open Source / €0",
-      "status": "EMPFOHLEN",
+      "status": "INDEXIERT",
       "url": "https://github.com/facebookresearch/segment-anything-3d",
       "overview": "KI-Modell zur automatischen Segmentierung roher Punktwolken und Meshes in einzelne Objekte (Rohre, Wände, Roboter).",
       "inputs": [
@@ -792,7 +792,7 @@ window.INDEX_DATA = {
       "hq": "Düsseldorf, Deutschland (EU)",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "EMPFOHLEN",
+      "status": "INDEXIERT",
       "url": "https://riiico.com",
       "overview": "KI-Software, die rohe 3D-Punktwolken von Bestandsfabriken automatisch in parametrische CAD/BIM-Layouts und einzelne 3D-Objekte umwandelt.",
       "inputs": [
@@ -827,7 +827,7 @@ window.INDEX_DATA = {
       "hq": "Palo Alto, USA / Stuttgart, Deutschland (EU)",
       "tier": "Tier 1",
       "costLabel": "≤ €30k",
-      "status": "EMPFOHLENER 4D SENSOR",
+      "status": "INDEXIERT",
       "url": "https://waveye.com",
       "overview": "Ultra-hochauflösender 4D-Imaging-Radarsensor (Argus) für die Roboterwahrnehmung. Generiert dichte 4D-Punktwolken inklusive Doppler-Geschwindigkeitsvektoren für autonome Systeme.",
       "inputs": [
@@ -859,7 +859,7 @@ window.INDEX_DATA = {
       "hq": "Global Community",
       "tier": "Tier 1",
       "costLabel": "≤ €30k",
-      "status": "STANDARDIZIERT",
+      "status": "INDEXIERT",
       "url": "https://ultralytics.com",
       "overview": "Echtzeit-Computer-Vision-Modell optimiert für 3D-Bounding-Boxen, Personen-Tracking und Sicherheitszonenüberwachung auf Edge-Geräten.",
       "inputs": [
@@ -892,7 +892,7 @@ window.INDEX_DATA = {
       "hq": "Hopkinton, MA, USA / Global",
       "tier": "Tier 1",
       "costLabel": "Open Standard / €0",
-      "status": "LEGACY SUPPORT",
+      "status": "INDEXIERT",
       "url": "https://modbus.org",
       "overview": "Industrie-Kommunikationsprotokoll aus dem Jahr 1979 zum Auslesen von Energiezählern, Temperaturmessern und Alt-SPSen.",
       "inputs": [
@@ -923,7 +923,7 @@ window.INDEX_DATA = {
       "hq": "McLean, VA, USA",
       "tier": "Tier 1",
       "costLabel": "Open Standard / €0",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://mtconnect.org",
       "overview": "Offenes Protokoll zum Extrahieren struktureller Daten aus CNC-Werkzeugmaschinen und Fräszentren in XML/REST-Formate.",
       "inputs": [
@@ -955,7 +955,7 @@ window.INDEX_DATA = {
       "hq": "Scottsdale, AZ, USA / EU Office",
       "tier": "Tier 1",
       "costLabel": "Open Standard / €0",
-      "status": "CORE OT BACKBONE",
+      "status": "INDEXIERT",
       "url": "https://opcfoundation.org",
       "overview": "Herstellerunabhängiges Protokoll für Industrie 4.0. Verbindet SPSen, CNCs und Roboter direkt mit dem 3D-Zwilling im Industrial Metaverse über semantische Companion Specifications.",
       "inputs": [
@@ -990,7 +990,7 @@ window.INDEX_DATA = {
       "hq": "Karlsruhe, Deutschland (EU)",
       "tier": "Tier 1",
       "costLabel": "Open Standard / €0",
-      "status": "STANDARDIZIERT",
+      "status": "INDEXIERT",
       "url": "https://profibus.com",
       "overview": "Führender europäischer Echtzeit-Industrial-Ethernet-Standard. Garantiert in Kombination mit TSN deterministische Taktraten im Mikrosekundenbereich für die Fabrikautomatisierung.",
       "inputs": [
@@ -1022,7 +1022,7 @@ window.INDEX_DATA = {
       "hq": "Mountain View, CA, USA / Global Community",
       "tier": "Tier 1",
       "costLabel": "Open Source / €0",
-      "status": "CORE ROBOTICS BACKBONE",
+      "status": "INDEXIERT",
       "url": "https://ros.org",
       "overview": "Open-Source Roboter-Middleware auf Basis von Data Distribution Service (DDS) für die Zero-Copy-Kommunikation in autonomen Robotern und AMRs.",
       "inputs": [
@@ -1056,7 +1056,7 @@ window.INDEX_DATA = {
       "hq": "Boston, MA, USA / Global",
       "tier": "Tier 1",
       "costLabel": "Open Standard / €0",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://amqp.org",
       "overview": "Unternehmensgerechtes Messaging-Protokoll für transaktionssicheres Queuing, Routing und Punkt-zu-Punkt-Zustellung von Nachrichten.",
       "inputs": [
@@ -1089,7 +1089,7 @@ window.INDEX_DATA = {
       "hq": "Brüssel, Belgien (EU)",
       "tier": "Tier 1",
       "costLabel": "Open Standard / €0",
-      "status": "STANDARDIZIERT",
+      "status": "INDEXIERT",
       "url": "https://sparkplug.eclipse.org",
       "overview": "Leichtgewichtiges Publish/Subscribe-Protokoll. Sparkplug B bietet Zustandskontrolle, Auto-Discovery von Datentags und strukturierte Protobuf-Payloads für IIoT-Netzwerke.",
       "inputs": [
@@ -1123,7 +1123,7 @@ window.INDEX_DATA = {
       "hq": "San Francisco, CA, USA",
       "tier": "Tier 1",
       "costLabel": "≤ €30k",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://autodesk.com/fusion-360",
       "overview": "Integrierte Cloud-Plattform für 3D-CAD, CAM, CAE und Leiterplatten-Design. Beliebt bei Fertigungsbetrieben, Hardware-Startups und Entwicklungsteams für schnelles Prototyping.",
       "inputs": [
@@ -1160,7 +1160,7 @@ window.INDEX_DATA = {
       "hq": "Vélizy-Villacoublay, Frankreich (EU)",
       "tier": "Tier 3",
       "costLabel": "> €100k",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://3ds.com/catia",
       "overview": "Der weltweite De-facto-Branchenstandard der Luft-, Raumfahrt- und Automobilindustrie für hochkomplexe Class-A-Flächenmodellierung und Gesamtfahrzeugarchitektur.",
       "inputs": [
@@ -1195,7 +1195,7 @@ window.INDEX_DATA = {
       "hq": "Vélizy-Villacoublay, Frankreich (EU)",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://solidworks.com",
       "overview": "Globale 3D-CAD-Standardsoftware für die parametrische Konstruktion im Maschinen- und Werkzeugbau. Weit verbreitet in der Zulieferindustrie und auf Shopfloors zur Anbindung an digitale Zwillinge.",
       "inputs": [
@@ -1232,7 +1232,7 @@ window.INDEX_DATA = {
       "hq": "Boston, MA, USA",
       "tier": "Tier 3",
       "costLabel": "> €100k",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://ptc.com/creo",
       "overview": "Hochpräzise parametrische MCAD-Suite für Schwermaschinenbau, Verteidigung und Fahrzeugtechnik mit tiefen KI-Generativfunktionen und Model-Based Definition (MBD).",
       "inputs": [
@@ -1269,7 +1269,7 @@ window.INDEX_DATA = {
       "hq": "Boston, MA, USA",
       "tier": "Tier 1",
       "costLabel": "≤ €30k",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://onshape.com",
       "overview": "Rein browserbasierte Cloud-CAD- und PDM-Plattform für die synchrone Multi-User-Bearbeitung von 3D-Modellen in Echtzeit.",
       "inputs": [
@@ -1306,7 +1306,7 @@ window.INDEX_DATA = {
       "hq": "Plano, USA / Deutschland (EU)",
       "tier": "Tier 3",
       "costLabel": "> €100k",
-      "status": "STANDARDIZIERT",
+      "status": "INDEXIERT",
       "url": "https://plm.automation.siemens.com",
       "overview": "High-End MCAD-Plattform für hochkomplexe Baugruppen im Maschinen- und Fahrzeugbau. Dient als primärer Geometrie-Kernel für Automotive-, Luft- und Raumfahrt-OEMs mit nativer Live-Streaming-Anbindung an NVIDIA Omniverse.",
       "inputs": [
@@ -1341,7 +1341,7 @@ window.INDEX_DATA = {
       "hq": "San Francisco, CA, USA",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://autodesk.com/civil-3d",
       "overview": "Infrastruktur- und Tiefbau-Software für die Erschließungsplanung, digitale Geländemodellierung und Trassierung von Fabrikarealen.",
       "inputs": [
@@ -1377,7 +1377,7 @@ window.INDEX_DATA = {
       "hq": "San Francisco, CA, USA",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "STANDARDIZIERT",
+      "status": "INDEXIERT",
       "url": "https://autodesk.com/revit",
       "overview": "Der globale Standard für Building Information Modeling (BIM). Generiert intelligente 3D-Gebäudemodelle mit architektonischen, strukturellen und TGA-Informationen.",
       "inputs": [
@@ -1413,7 +1413,7 @@ window.INDEX_DATA = {
       "hq": "München, Deutschland (EU)",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://allplan.com",
       "overview": "Europäische BIM-Plattform spezialisiert auf konstruktiven Ingenieurbau, Betonfertigteilplanung und hochpräzise Industriegebäude.",
       "inputs": [
@@ -1448,7 +1448,7 @@ window.INDEX_DATA = {
       "hq": "Seattle, WA, USA",
       "tier": "Tier 1",
       "costLabel": "≤ €30k",
-      "status": "EMPFOHLEN",
+      "status": "INDEXIERT",
       "url": "https://rhino3d.com",
       "overview": "Fortgeschrittenes NURBS-Flächenmodellierungssystem gekoppelt mit Grasshopper für die visuelle Programmierung komplexer parametrischer Fabrikarchitekturen.",
       "inputs": [
@@ -1487,7 +1487,7 @@ window.INDEX_DATA = {
       "hq": "Westminster, CO, USA",
       "tier": "Tier 1",
       "costLabel": "≤ €30k",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://sketchup.com",
       "overview": "Intuitives 3D-Modellierungswerkzeug für die schnelle konzeptionelle Fabrikplanung, Raumvolumen-Studien und frühe Entwurfsphasen.",
       "inputs": [
@@ -1524,7 +1524,7 @@ window.INDEX_DATA = {
       "hq": "San Francisco, CA, USA",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://autodesk.com/3ds-max",
       "overview": "Industrielle DCC-Software für Architektur-Visualisierung, CAD-Geometriebereinigung und Echtzeit-Asset-Vorbereitung für Spatial Engines.",
       "inputs": [
@@ -1562,7 +1562,7 @@ window.INDEX_DATA = {
       "hq": "San Francisco, CA, USA",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://autodesk.com/maya",
       "overview": "Animations- und Rigging-Software für Ergonomie- und Arbeiter-Animationen sowie komplexe Roboterkinematik im digitalen Zwilling.",
       "inputs": [
@@ -1600,7 +1600,7 @@ window.INDEX_DATA = {
       "hq": "Amsterdam, Niederlande (EU)",
       "tier": "Tier 1",
       "costLabel": "Open Source / €0",
-      "status": "ESSENTIAL DCC",
+      "status": "INDEXIERT",
       "url": "https://blender.org",
       "overview": "Open-Source 3D-Creation Suite für Modellierung, UV-Unwrapping, Texture-Baking und prozedurale Asset-Aufbereitung. Dient als primäres Bereinigungswerkzeug für digitale Zwillinge.",
       "inputs": [
@@ -1638,7 +1638,7 @@ window.INDEX_DATA = {
       "hq": "European Tech Hub (EU)",
       "tier": "Tier 1",
       "costLabel": "≤ €30k",
-      "status": "TESTBED",
+      "status": "INDEXIERT",
       "url": "https://hi3d.ai",
       "overview": "Generative KI-Engine, die aus Text-Prompts oder 2D-Fotos strukturierte 3D-Meshes erzeugt und wasserdichte Geometrien für den 3D-Druck und das Scene Staging ausgibt.",
       "inputs": [
@@ -1674,7 +1674,7 @@ window.INDEX_DATA = {
       "hq": "Toronto, Kanada",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "STANDARDIZIERT",
+      "status": "INDEXIERT",
       "url": "https://sidefx.com",
       "overview": "Knotenbasierte prozedurale Generierungs- und VFX-Suite. Fungiert als prozedurale Pipeline-Engine für die automatisierte Aufbereitung gewaltiger OpenUSD-Fabrikszenen.",
       "inputs": [
@@ -1712,7 +1712,7 @@ window.INDEX_DATA = {
       "hq": "Frankfurt, Deutschland (EU)",
       "tier": "Tier 1",
       "costLabel": "Open Standard / €0",
-      "status": "PFLICHTSTANDARD CONTAINER",
+      "status": "INDEXIERT",
       "url": "https://industrialdigitaltwin.org",
       "overview": "Zip-Containerformat zur Verpackung vollständiger Verwaltungsschalen-Metadaten, XML/JSON-Teilmodelle, PDF-Handbücher und 3D-CAD-Modelle.",
       "inputs": [
@@ -1746,7 +1746,7 @@ window.INDEX_DATA = {
       "hq": "West Conshohocken, PA, USA / Global",
       "tier": "Tier 1",
       "costLabel": "Open Standard / €0",
-      "status": "PFLICHTSTANDARD SCAN",
+      "status": "INDEXIERT",
       "url": "https://astm.org/e2807-11.html",
       "overview": "Herstellerneutrales Binärdateiformat zur Speicherung dichter 3D-Punktwolkendaten, 2D-Panoramabilder und Sensormetadaten von Laserscannern.",
       "inputs": [
@@ -1779,7 +1779,7 @@ window.INDEX_DATA = {
       "hq": "Beaverton, OR, USA / Global Consortium",
       "tier": "Tier 1",
       "costLabel": "Open Standard / €0",
-      "status": "STANDARDIZIERT WEB3D",
+      "status": "INDEXIERT",
       "url": "https://khronos.org/gltf",
       "overview": "Lizenzfreie Spezifikation für die effiziente Übertragung und das schnelle Laden von 3D-Szenen und PBR-Modellen im Webbrowser und auf Mobilgeräten.",
       "inputs": [
@@ -1816,7 +1816,7 @@ window.INDEX_DATA = {
       "hq": "Genf, Schweiz (EU/EFTA)",
       "tier": "Tier 1",
       "costLabel": "Open Standard / €0",
-      "status": "STANDARDIZIERT",
+      "status": "INDEXIERT",
       "url": "https://iso.org/standard/62271.html",
       "overview": "Leichtgewichtiges 3D-Format für visuelle Produktprüfung, Digital Mockup (DMU) und schnelle Ladezeiten riesiger Maschinenbaugruppen.",
       "inputs": [
@@ -1849,7 +1849,7 @@ window.INDEX_DATA = {
       "hq": "San Francisco, CA, USA / Global Consortium",
       "tier": "Tier 1",
       "costLabel": "Open Standard / €0",
-      "status": "PFLICHTSTANDARD 3D VISUAL",
+      "status": "INDEXIERT",
       "url": "https://aousd.org",
       "overview": "Der universelle offene Standard für 3D-Szenengraphen im Industrial Metaverse. Ermöglicht die Darstellung riesiger Fabrikszenen mit zerstörungsfreier Schichtenbearbeitung (Layering).",
       "inputs": [
@@ -1888,7 +1888,7 @@ window.INDEX_DATA = {
       "hq": "Global Open Community",
       "tier": "Tier 1",
       "costLabel": "Open Standard / €0",
-      "status": "EMPFOHLEN",
+      "status": "INDEXIERT",
       "url": "https://github.com/graphdeco-inria/gaussian-splatting",
       "overview": "Spezifikation zur Speicherung von 3D Gaussian Splatting Parametern (3D-Position, Transparenz, Skalierung, Rotation und Farbdarstellung).",
       "inputs": [
@@ -1921,7 +1921,7 @@ window.INDEX_DATA = {
       "hq": "Genf, Schweiz (EU/EFTA)",
       "tier": "Tier 1",
       "costLabel": "Open Standard / €0",
-      "status": "PFLICHTSTANDARD CAD",
+      "status": "INDEXIERT",
       "url": "https://step-smsc.org",
       "overview": "Der offizielle ISO-Standard für den parametrischen CAD-Geometrieaustausch und die Einbettung von Product Manufacturing Information (PMI) sowie Fertigungstoleranzen.",
       "inputs": [
@@ -1953,7 +1953,7 @@ window.INDEX_DATA = {
       "hq": "Frankfurt, Deutschland (EU)",
       "tier": "Tier 1",
       "costLabel": "Open Standard / €0",
-      "status": "PFLICHTSTANDARD INTEROP",
+      "status": "INDEXIERT",
       "url": "https://industrialdigitaltwin.org",
       "overview": "Der offizielle RAMI 4.0 Standard für digitale Zwillings-Metadaten. Kapselt technische Dokumentationen, Zertifikate, CAD-Modelle, CO2-Fußabdrücke und Sensorpunkte eines Industrie-Assets.",
       "inputs": [
@@ -1989,7 +1989,7 @@ window.INDEX_DATA = {
       "hq": "Redmond, WA, USA",
       "tier": "Tier 1",
       "costLabel": "Open Standard / €0",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://github.com/Azure/opendigitaltwins-dtdl",
       "overview": "JSON-LD-basierte Modellierungssprache zur Definition digitaler Zwillingseinheiten, Raumgraphen und Telemetriesignale in Azure Digital Twins.",
       "inputs": [
@@ -2021,7 +2021,7 @@ window.INDEX_DATA = {
       "hq": "Baden-Württemberg, Deutschland (EU)",
       "tier": "Tier 1",
       "costLabel": "≤ €30k",
-      "status": "EMPFOHLENE DATA ENGINE",
+      "status": "INDEXIERT",
       "url": "https://futuromundo.com/cyberlaend",
       "overview": "KI-gestützte No-Code-Datenengine zur nahtlosen Bindung von Maschinen, Sensoren und SPSen an 3D OpenUSD digitale Zwillinge für geschlossene Regelkreise.",
       "inputs": [
@@ -2058,7 +2058,7 @@ window.INDEX_DATA = {
       "hq": "Seattle, WA, USA",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://aws.amazon.com/iot-twinmaker",
       "overview": "Cloud-Plattform, die Entwicklern das Erstellen digitaler Zwillinge ermöglicht durch Aggregation bestehender AWS-Datenspeicher.",
       "inputs": [
@@ -2092,7 +2092,7 @@ window.INDEX_DATA = {
       "hq": "Exton, PA, USA",
       "tier": "Tier 3",
       "costLabel": "> €100k",
-      "status": "STANDARDIZIERT",
+      "status": "INDEXIERT",
       "url": "https://bentley.com/itwin",
       "overview": "Offene digital Zwillingsplattform für Großinfrastruktur, Prozessanlagen, Versorgungsnetze und Fabrikareale.",
       "inputs": [
@@ -2129,7 +2129,7 @@ window.INDEX_DATA = {
       "hq": "Redmond, WA, USA",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://azure.microsoft.com/services/digital-twins",
       "overview": "PaaS-Plattform zum Erstellen graphbasierter digitaler Modelle kompletter Fertigungsnetzwerke und Lieferketten.",
       "inputs": [
@@ -2164,7 +2164,7 @@ window.INDEX_DATA = {
       "hq": "Boston, MA, USA",
       "tier": "Tier 3",
       "costLabel": "> €100k",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://ptc.com/thingworx",
       "overview": "Etablierte Enterprise-IIoT-Plattform für schnelle Industrieanwendungen, Maschinenüberwachung und AR-Außendienst-Bereitstellung.",
       "inputs": [
@@ -2198,7 +2198,7 @@ window.INDEX_DATA = {
       "hq": "München / Nürnberg, Deutschland (EU)",
       "tier": "Tier 3",
       "costLabel": "> €100k",
-      "status": "STANDARDIZIERT",
+      "status": "INDEXIERT",
       "url": "https://siemens.com/operations-x",
       "overview": "Offenes, interoperables Industrial-IoT-Portfolio zur Automatisierung, Analyse und Optimierung des Shopfloor-Betriebs von der Edge bis zur Cloud.",
       "inputs": [
@@ -2233,7 +2233,7 @@ window.INDEX_DATA = {
       "hq": "Troy, MI, USA / EU Support",
       "tier": "Tier 3",
       "costLabel": "> €100k",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://altair.com",
       "overview": "Enterprise-Simulationssuite bekannt für HyperMesh-Pre-Processing und EDEM (Discrete Element Method) zur Schüttgut- und Partikelsimulation.",
       "inputs": [
@@ -2269,7 +2269,7 @@ window.INDEX_DATA = {
       "hq": "Canonsburg, PA, USA / EU Support",
       "tier": "Tier 3",
       "costLabel": "> €100k",
-      "status": "STANDARDIZIERT",
+      "status": "INDEXIERT",
       "url": "https://ansys.com",
       "overview": "Umfassende Simulationssuite für Strömungsmechanik (CFD), FEM-Strukturanalyse und Elektromagnetik. Überträgt Berechnungsfelder direkt in den 3D-Zwilling.",
       "inputs": [
@@ -2305,7 +2305,7 @@ window.INDEX_DATA = {
       "hq": "Stockholm, Schweden (EU)",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://comsol.com",
       "overview": "Multiphysik-Simulationssoftware zur Modellierung gekoppelter physikalischer Phänomene (elektrisch, mechanisch, fluidisch, akustisch).",
       "inputs": [
@@ -2342,7 +2342,7 @@ window.INDEX_DATA = {
       "hq": "Natick, MA, USA / EU Support",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "STANDARDIZIERT",
+      "status": "INDEXIERT",
       "url": "https://mathworks.com",
       "overview": "Weltweiter Standard für Blockdiagramm-Simulation, Regelungstechnik und modellbasierte Entwicklung mechatronischer Systeme.",
       "inputs": [
@@ -2379,7 +2379,7 @@ window.INDEX_DATA = {
       "hq": "UK / Global Open Source",
       "tier": "Tier 1",
       "costLabel": "Open Source / €0",
-      "status": "STANDARDIZIERT",
+      "status": "INDEXIERT",
       "url": "https://openfoam.org",
       "overview": "Leistungsstarkes Open-Source-CFD-Solver-Framework für numerische Strömungsmechanik in Aerodynamik und Thermodynamik.",
       "inputs": [
@@ -2414,7 +2414,7 @@ window.INDEX_DATA = {
       "hq": "München, Deutschland (EU)",
       "tier": "Tier 1",
       "costLabel": "≤ €30k",
-      "status": "EMPFOHLEN",
+      "status": "INDEXIERT",
       "url": "https://simscale.com",
       "overview": "100% cloudnative FEA-, CFD- und Thermalsimulationsplattform, die parallelisierte Solver direkt im Webbrowser ausführt.",
       "inputs": [
@@ -2450,7 +2450,7 @@ window.INDEX_DATA = {
       "hq": "Global / USA",
       "tier": "Tier 1",
       "costLabel": "Open Source / €0",
-      "status": "EMPFOHLEN",
+      "status": "INDEXIERT",
       "url": "https://github.com/nvidia/warp",
       "overview": "Differenzierbares GPU-beschleunigtes Physik-Simulationsframework auf NVIDIA Warp-Basis. Speziell entwickelt für Starrkörperdynamik und Roboter-KI-Training in OpenUSD.",
       "inputs": [
@@ -2483,7 +2483,7 @@ window.INDEX_DATA = {
       "hq": "Washington D.C., USA",
       "tier": "Tier 1",
       "costLabel": "Open Source / €0",
-      "status": "EMPFOHLEN",
+      "status": "INDEXIERT",
       "url": "https://energyplus.net",
       "overview": "Gebäudeenergiesimulations-Engine zur Berechnung von Heiz- und Kühllasten, Lüftungsströmen, HVAC-Dimensionierung und CO2-Emissionen von Fabrikhallen.",
       "inputs": [
@@ -2519,7 +2519,7 @@ window.INDEX_DATA = {
       "hq": "Berkeley, CA, USA",
       "tier": "Tier 1",
       "costLabel": "Open Source / €0",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://ladybug.tools",
       "overview": "Präzise Raytracing-Engine zur Berechnung von Tageslichtquotienten, solaren Wärmeeintrags- und Blendungsvorhersagen in Fertigungshallen.",
       "inputs": [
@@ -2554,7 +2554,7 @@ window.INDEX_DATA = {
       "hq": "Vélizy-Villacoublay, Frankreich (EU)",
       "tier": "Tier 3",
       "costLabel": "> €100k",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://3ds.com/delmia",
       "overview": "Fertigungs- und Robotiksimulationssoftware eingebettet in die 3DEXPERIENCE-Plattform für Montageabläufe und Fertigungssteuerung.",
       "inputs": [
@@ -2589,7 +2589,7 @@ window.INDEX_DATA = {
       "hq": "Orem, UT, USA",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://flexsim.com",
       "overview": "3D-Ablaufsimulationssoftware zur Modellierung, Vorhersage und Visualisierung von Logistik-, Materialfluss- und Fertigungssystemen.",
       "inputs": [
@@ -2625,7 +2625,7 @@ window.INDEX_DATA = {
       "hq": "Magdeburg, Deutschland (EU)",
       "tier": "Tier 1",
       "costLabel": "≤ €30k",
-      "status": "EMPFOHLEN",
+      "status": "INDEXIERT",
       "url": "https://halocline.io",
       "overview": "Virtual-Reality-Software zur interaktiven Montageplanung in 1:1 Maßstab. Ersetzt Physisches Cardboard Engineering durch VR-Erlebnisse.",
       "inputs": [
@@ -2660,7 +2660,7 @@ window.INDEX_DATA = {
       "hq": "New York, USA / Paris, Frankreich (EU)",
       "tier": "Tier 1",
       "costLabel": "Open Source / €0",
-      "status": "EMPFOHLEN",
+      "status": "INDEXIERT",
       "url": "https://github.com/huggingface/lerobot",
       "overview": "Open-Source KI-Robotik-Framework für KI-Policy-Training, Imitationslernen und Teleoperation für kostengünstige Industrie-Greifarme.",
       "inputs": [
@@ -2694,7 +2694,7 @@ window.INDEX_DATA = {
       "hq": "Stuttgart, Deutschland (EU)",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://ipolog.ai",
       "overview": "Spezialsoftware für die Ergonomieplanung an Montagelinien, Logistikrouten und Materialregaloptimierung in Fertigungszellen.",
       "inputs": [
@@ -2730,7 +2730,7 @@ window.INDEX_DATA = {
       "hq": "Stuttgart, Deutschland (EU)",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "STANDARDIZIERT",
+      "status": "INDEXIERT",
       "url": "https://isg-stuttgart.de",
       "overview": "Deterministische Harte-Echtzeit-Simulationsengine für Taktraten unter 1 Millisekunde zur Hardware-in-the-Loop-Inbetriebnahme von Werkzeugmaschinen.",
       "inputs": [
@@ -2765,7 +2765,7 @@ window.INDEX_DATA = {
       "hq": "DACH Region (EU)",
       "tier": "Tier 1",
       "costLabel": "≤ €30k",
-      "status": "TESTBED",
+      "status": "INDEXIERT",
       "url": "https://motiona.io",
       "overview": "Software zur Analyse von Roboter-Bewegungskurven. Berechnet energieoptimierte Bahnkurven für mehrachsige Industrieroboter.",
       "inputs": [
@@ -2799,7 +2799,7 @@ window.INDEX_DATA = {
       "hq": "Santa Clara, CA, USA / EU Support",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "CORE SIM STANDARD",
+      "status": "INDEXIERT",
       "url": "https://developer.nvidia.com/isaac-sim",
       "overview": "Roboter-Simulationsanwendung und Physical-AI-Framework auf Omniverse-Basis. Ermöglicht synthetische Datengenerierung (SDG) und Reinforcement Learning für AMRs und Roboterarme.",
       "inputs": [
@@ -2834,7 +2834,7 @@ window.INDEX_DATA = {
       "hq": "Plano, USA / Nürnberg, Deutschland (EU)",
       "tier": "Tier 3",
       "costLabel": "> €100k",
-      "status": "STANDARDIZIERT",
+      "status": "INDEXIERT",
       "url": "https://plm.automation.siemens.com/tecnomatix",
       "overview": "Branchenführende Plattform für Roboter-Kinematik, virtuelle Inbetriebnahme (VRC) und Materialfluss-Simulation in der Automobil- und Fertigungsindustrie.",
       "inputs": [
@@ -2871,7 +2871,7 @@ window.INDEX_DATA = {
       "hq": "Espoo, Finnland (EU)",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "EMPFOHLEN",
+      "status": "INDEXIERT",
       "url": "https://visualcomponents.com",
       "overview": "3D-Fabriksimulationssoftware für Maschinenbauer und Systemintegratoren zur schnellen Layouterstellung, Robotersimulation und Durchsatzüberprüfung.",
       "inputs": [
@@ -2908,7 +2908,7 @@ window.INDEX_DATA = {
       "hq": "Deutschland (EU)",
       "tier": "Tier 1",
       "costLabel": "≤ €30k",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://visupal.de",
       "overview": "Automatisierte 3D-Palettiersimulations-Software für Verpackungszellen und End-of-Line-Roboter.",
       "inputs": [
@@ -2942,7 +2942,7 @@ window.INDEX_DATA = {
       "hq": "EU / Global Community",
       "tier": "Tier 1",
       "costLabel": "Open Source / €0",
-      "status": "EMPFOHLEN",
+      "status": "INDEXIERT",
       "url": "https://godotengine.org",
       "overview": "Schlanke, lizenzfreie Open-Source 3D-Engine. Ideal für Web-eingebettete 3D-Dashboards, WebXR-Brillen und leichte Shopfloor-Displays.",
       "inputs": [
@@ -2976,7 +2976,7 @@ window.INDEX_DATA = {
       "hq": "Santa Clara, CA, USA / EU Office",
       "tier": "Tier 3",
       "costLabel": "> €100k",
-      "status": "TARGET CORE ARCHITECTURE",
+      "status": "INDEXIERT",
       "url": "https://developer.nvidia.com/omniverse",
       "overview": "Zentrale Simulations- und Aggregationsplattform, die nativ auf OpenUSD und RTX-Raytracing basiert. Dient als primäres Herzstück der Zielarchitektur für den industriellen digitalen Zwilling.",
       "inputs": [
@@ -3011,7 +3011,7 @@ window.INDEX_DATA = {
       "hq": "Cary, NC, USA",
       "tier": "Tier 1",
       "costLabel": "≤ €30k",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://twinmotion.com",
       "overview": "Schnelles 3D-Echtzeit-Visualisierungswerkzeug powered by Unreal Engine. Speziell für AEC-Planer entwickelt, um Fabrikgebäude in Minuten zu begehen.",
       "inputs": [
@@ -3049,7 +3049,7 @@ window.INDEX_DATA = {
       "hq": "San Francisco, CA, USA / EU Support",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://unity.com/industry",
       "overview": "Multi-Plattform Echtzeit-3D-Plattform für plattformübergreifende Industrie-Apps, AR/VR-Headsets, Mobilgeräte und WebGL.",
       "inputs": [
@@ -3085,7 +3085,7 @@ window.INDEX_DATA = {
       "hq": "Cary, NC, USA / EU Support",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "EMPFOHLEN",
+      "status": "INDEXIERT",
       "url": "https://unrealengine.com/enterprise",
       "overview": "High-End 3D-Echtzeit-Engine für fotorealistische Visualisierungen, virtuelle Begehungen und immersives VR-Training von Werksanlagen.",
       "inputs": [
@@ -3121,7 +3121,7 @@ window.INDEX_DATA = {
       "hq": "Cupertino, CA, USA",
       "tier": "Tier 1",
       "costLabel": "≤ €30k",
-      "status": "PREMIUM SPATIAL DEVICE",
+      "status": "INDEXIERT",
       "url": "https://apple.com/apple-vision-pro",
       "overview": "Spatial Computer mit extrem hochauflösenden Micro-OLED-Displays (23 Millionen Pixel) für gestochen scharfe CAD-Prüfungen und Cloud-Streaming.",
       "inputs": [
@@ -3154,7 +3154,7 @@ window.INDEX_DATA = {
       "hq": "Taoyuan, Taiwan / EU Support",
       "tier": "Tier 1",
       "costLabel": "≤ €30k",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://business.vive.com/focus3",
       "overview": "Robustes Standalone-Enterprise-VR-Headset für industrielles Sicherheitstraining, ergonomische VR-Montagesimulation und Trainingszentren.",
       "inputs": [
@@ -3188,7 +3188,7 @@ window.INDEX_DATA = {
       "hq": "Plantation, FL, USA / EU Support",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "EVALUIERT",
+      "status": "INDEXIERT",
       "url": "https://magicleap.com",
       "overview": "Leichtgewichtige optische See-Through AR-Brille für Werksmonteure mit dynamischer Abdunkelung für helle Fabrikhallen.",
       "inputs": [
@@ -3223,7 +3223,7 @@ window.INDEX_DATA = {
       "hq": "Menlo Park, CA, USA",
       "tier": "Tier 1",
       "costLabel": "≤ €30k",
-      "status": "EMPFOHLEN SME",
+      "status": "INDEXIERT",
       "url": "https://meta.com/quest",
       "overview": "Vielseitiges kabelloses Standalone MR/VR-Headset. Weit verbreitet im Mittelstand für kostengünstige Werksbegehungen, VR-Training und Remote-Kollaboration.",
       "inputs": [
@@ -3257,7 +3257,7 @@ window.INDEX_DATA = {
       "hq": "Vancouver, WA, USA",
       "tier": "Tier 1",
       "costLabel": "≤ €30k",
-      "status": "STANDARDIZIERT FIELD WORKER",
+      "status": "INDEXIERT",
       "url": "https://realwear.com/navigator-520",
       "overview": "Robustes Freihand-Mikrodisplay-Headset zur Montage an Schutzhelmen. Entwickelt für Service-Techniker bei der Fernwartung und Inspektion in rauen Industrieumgebungen.",
       "inputs": [
@@ -3292,7 +3292,7 @@ window.INDEX_DATA = {
       "hq": "Helsinki, Finnland (EU)",
       "tier": "Tier 2",
       "costLabel": "≤ €100k",
-      "status": "STANDARDIZIERT HIGH-END",
+      "status": "INDEXIERT",
       "url": "https://varjo.com/products/xr-4",
       "overview": "Kabelgebundenes Mixed-Reality-Headset für Industrieanwendungen mit Auflösung auf menschlichem Augenniveau (51 PPD) und fotorealistischem Video-Pass-Through.",
       "inputs": [
@@ -3602,7 +3602,7 @@ window.PROFILES_DATA = {
     "url": "https://industrialdigitaltwin.org",
     "tier": "Tier 1",
     "costLabel": "Open Standard / €0",
-    "status": "PFLICHTSTANDARD INTEROP",
+    "status": "INDEXIERT",
     "overview": "Der offizielle RAMI 4.0 Standard für digitale Zwillings-Metadaten. Kapselt technische Dokumentationen, Zertifikate, CAD-Modelle, CO2-Fußabdrücke und Sensorpunkte eines Industrie-Assets.",
     "features": [
       {
@@ -3674,7 +3674,7 @@ window.PROFILES_DATA = {
     "url": "https://industrialdigitaltwin.org",
     "tier": "Tier 1",
     "costLabel": "Open Standard / €0",
-    "status": "PFLICHTSTANDARD CONTAINER",
+    "status": "INDEXIERT",
     "overview": "Zip-Containerformat zur Verpackung vollständiger Verwaltungsschalen-Metadaten, XML/JSON-Teilmodelle, PDF-Handbücher und 3D-CAD-Modelle.",
     "features": [
       {
@@ -3744,7 +3744,7 @@ window.PROFILES_DATA = {
     "url": "https://altair.com",
     "tier": "Tier 3",
     "costLabel": "> €100k",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Enterprise-Simulationssuite bekannt für HyperMesh-Pre-Processing und EDEM (Discrete Element Method) zur Schüttgut- und Partikelsimulation.",
     "features": [
       {
@@ -3816,7 +3816,7 @@ window.PROFILES_DATA = {
     "url": "https://amqp.org",
     "tier": "Tier 1",
     "costLabel": "Open Standard / €0",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Unternehmensgerechtes Messaging-Protokoll für transaktionssicheres Queuing, Routing und Punkt-zu-Punkt-Zustellung von Nachrichten.",
     "features": [
       {
@@ -3885,7 +3885,7 @@ window.PROFILES_DATA = {
     "url": "https://ansys.com",
     "tier": "Tier 3",
     "costLabel": "> €100k",
-    "status": "STANDARDIZIERT",
+    "status": "INDEXIERT",
     "overview": "Umfassende Simulationssuite für Strömungsmechanik (CFD), FEM-Strukturanalyse und Elektromagnetik. Überträgt Berechnungsfelder direkt in den 3D-Zwilling.",
     "features": [
       {
@@ -3957,7 +3957,7 @@ window.PROFILES_DATA = {
     "url": "https://apple.com/apple-vision-pro",
     "tier": "Tier 1",
     "costLabel": "≤ €30k",
-    "status": "PREMIUM SPATIAL DEVICE",
+    "status": "INDEXIERT",
     "overview": "Spatial Computer mit extrem hochauflösenden Micro-OLED-Displays (23 Millionen Pixel) für gestochen scharfe CAD-Prüfungen und Cloud-Streaming.",
     "features": [
       {
@@ -4026,7 +4026,7 @@ window.PROFILES_DATA = {
     "url": "https://artec3d.com",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "STANDARDIZIERT",
+    "status": "INDEXIERT",
     "overview": "Hochpräzise Handscanner (Artec Leo/Eva) für Reverse Engineering und Qualitätskontrolle mit Sub-Millimeter-Genauigkeit.",
     "features": [
       {
@@ -4097,7 +4097,7 @@ window.PROFILES_DATA = {
     "url": "https://autodesk.com/3ds-max",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Industrielle DCC-Software für Architektur-Visualisierung, CAD-Geometriebereinigung und Echtzeit-Asset-Vorbereitung für Spatial Engines.",
     "features": [
       {
@@ -4171,7 +4171,7 @@ window.PROFILES_DATA = {
     "url": "https://autodesk.com/civil-3d",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Infrastruktur- und Tiefbau-Software für die Erschließungsplanung, digitale Geländemodellierung und Trassierung von Fabrikarealen.",
     "features": [
       {
@@ -4243,7 +4243,7 @@ window.PROFILES_DATA = {
     "url": "https://autodesk.com/fusion-360",
     "tier": "Tier 1",
     "costLabel": "≤ €30k",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Integrierte Cloud-Plattform für 3D-CAD, CAM, CAE und Leiterplatten-Design. Beliebt bei Fertigungsbetrieben, Hardware-Startups und Entwicklungsteams für schnelles Prototyping.",
     "features": [
       {
@@ -4316,7 +4316,7 @@ window.PROFILES_DATA = {
     "url": "https://autodesk.com/maya",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Animations- und Rigging-Software für Ergonomie- und Arbeiter-Animationen sowie komplexe Roboterkinematik im digitalen Zwilling.",
     "features": [
       {
@@ -4390,7 +4390,7 @@ window.PROFILES_DATA = {
     "url": "https://autodesk.com/recap",
     "tier": "Tier 1",
     "costLabel": "≤ €30k",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Punktwolken-Software zum Bereinigen, Beschneiden und Umwandeln roher Scans in das Autodesk RCS/RCP-Format.",
     "features": [
       {
@@ -4463,7 +4463,7 @@ window.PROFILES_DATA = {
     "url": "https://autodesk.com/revit",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "STANDARDIZIERT",
+    "status": "INDEXIERT",
     "overview": "Der globale Standard für Building Information Modeling (BIM). Generiert intelligente 3D-Gebäudemodelle mit architektonischen, strukturellen und TGA-Informationen.",
     "features": [
       {
@@ -4535,7 +4535,7 @@ window.PROFILES_DATA = {
     "url": "https://aws.amazon.com/iot-twinmaker",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Cloud-Plattform, die Entwicklern das Erstellen digitaler Zwillinge ermöglicht durch Aggregation bestehender AWS-Datenspeicher.",
     "features": [
       {
@@ -4605,7 +4605,7 @@ window.PROFILES_DATA = {
     "url": "https://azure.microsoft.com/services/digital-twins",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "PaaS-Plattform zum Erstellen graphbasierter digitaler Modelle kompletter Fertigungsnetzwerke und Lieferketten.",
     "features": [
       {
@@ -4676,7 +4676,7 @@ window.PROFILES_DATA = {
     "url": "https://bentley.com/itwin",
     "tier": "Tier 3",
     "costLabel": "> €100k",
-    "status": "STANDARDIZIERT",
+    "status": "INDEXIERT",
     "overview": "Offene digital Zwillingsplattform für Großinfrastruktur, Prozessanlagen, Versorgungsnetze und Fabrikareale.",
     "features": [
       {
@@ -4749,7 +4749,7 @@ window.PROFILES_DATA = {
     "url": "https://blender.org",
     "tier": "Tier 1",
     "costLabel": "Open Source / €0",
-    "status": "ESSENTIAL DCC",
+    "status": "INDEXIERT",
     "overview": "Open-Source 3D-Creation Suite für Modellierung, UV-Unwrapping, Texture-Baking und prozedurale Asset-Aufbereitung. Dient als primäres Bereinigungswerkzeug für digitale Zwillinge.",
     "features": [
       {
@@ -4823,7 +4823,7 @@ window.PROFILES_DATA = {
     "url": "https://3ds.com/catia",
     "tier": "Tier 3",
     "costLabel": "> €100k",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Der weltweite De-facto-Branchenstandard der Luft-, Raumfahrt- und Automobilindustrie für hochkomplexe Class-A-Flächenmodellierung und Gesamtfahrzeugarchitektur.",
     "features": [
       {
@@ -4894,7 +4894,7 @@ window.PROFILES_DATA = {
     "url": "https://cesium.com",
     "tier": "Tier 1",
     "costLabel": "≤ €30k",
-    "status": "STANDARDIZIERT",
+    "status": "INDEXIERT",
     "overview": "Offene Plattform zum Streaming riesiger 3D-Geodaten und 3D-Tiles-Datensätze in Webbrowser und Echtzeit-Engines.",
     "features": [
       {
@@ -4967,7 +4967,7 @@ window.PROFILES_DATA = {
     "url": "https://futuromundo.com/cyberlaend",
     "tier": "Tier 1",
     "costLabel": "≤ €30k",
-    "status": "EMPFOHLENE DATA ENGINE",
+    "status": "INDEXIERT",
     "overview": "KI-gestützte No-Code-Datenengine zur nahtlosen Bindung von Maschinen, Sensoren und SPSen an 3D OpenUSD digitale Zwillinge für geschlossene Regelkreise.",
     "features": [
       {
@@ -5040,7 +5040,7 @@ window.PROFILES_DATA = {
     "url": "https://comsol.com",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Multiphysik-Simulationssoftware zur Modellierung gekoppelter physikalischer Phänomene (elektrisch, mechanisch, fluidisch, akustisch).",
     "features": [
       {
@@ -5113,7 +5113,7 @@ window.PROFILES_DATA = {
     "url": "https://3ds.com/delmia",
     "tier": "Tier 3",
     "costLabel": "> €100k",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Fertigungs- und Robotiksimulationssoftware eingebettet in die 3DEXPERIENCE-Plattform für Montageabläufe und Fertigungssteuerung.",
     "features": [
       {
@@ -5184,7 +5184,7 @@ window.PROFILES_DATA = {
     "url": "https://deeprobotics.cn",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "TESTBED",
+    "status": "INDEXIERT",
     "overview": "Industrieller Laufroboter (IP66) für autonome Inspektionsläufe über Treppen, Gitterroste und unwegsames Werksgelände.",
     "features": [
       {
@@ -5253,7 +5253,7 @@ window.PROFILES_DATA = {
     "url": "https://astm.org/e2807-11.html",
     "tier": "Tier 1",
     "costLabel": "Open Standard / €0",
-    "status": "PFLICHTSTANDARD SCAN",
+    "status": "INDEXIERT",
     "overview": "Herstellerneutrales Binärdateiformat zur Speicherung dichter 3D-Punktwolkendaten, 2D-Panoramabilder und Sensormetadaten von Laserscannern.",
     "features": [
       {
@@ -5322,7 +5322,7 @@ window.PROFILES_DATA = {
     "url": "https://energyplus.net",
     "tier": "Tier 1",
     "costLabel": "Open Source / €0",
-    "status": "EMPFOHLEN",
+    "status": "INDEXIERT",
     "overview": "Gebäudeenergiesimulations-Engine zur Berechnung von Heiz- und Kühllasten, Lüftungsströmen, HVAC-Dimensionierung und CO2-Emissionen von Fabrikhallen.",
     "features": [
       {
@@ -5394,7 +5394,7 @@ window.PROFILES_DATA = {
     "url": "https://capturingreality.com/realityscan",
     "tier": "Tier 1",
     "costLabel": "Kostenfrei / €0",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Mobile Photogrammetrie-App, die Fotoserie auf dem Smartphone in 3D-Modelle umwandelt.",
     "features": [
       {
@@ -5463,7 +5463,7 @@ window.PROFILES_DATA = {
     "url": "https://esri.com/arcgis",
     "tier": "Tier 3",
     "costLabel": "> €100k",
-    "status": "STANDARDIZIERT",
+    "status": "INDEXIERT",
     "overview": "Marktführendes Geoinformationssystem (GIS) zur Verwaltung von Standortdaten, Werksnetzen und regionaler Infrastruktur.",
     "features": [
       {
@@ -5535,7 +5535,7 @@ window.PROFILES_DATA = {
     "url": "https://faro.com/focus",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "STANDARDIZIERT",
+    "status": "INDEXIERT",
     "overview": "Branchenstandard unter den terrestrischen Stativ-Laserscannern. Liefert millimetergenaue 3D-Punktwolken für präzise Umbaumaßnahmen.",
     "features": [
       {
@@ -5605,7 +5605,7 @@ window.PROFILES_DATA = {
     "url": "https://faro.com/orbis",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Hybrider mobiler SLAM- und statischer Laserscanner. Wechselt fliegend zwischen Gehen und hochdichtem Stativscannen.",
     "features": [
       {
@@ -5676,7 +5676,7 @@ window.PROFILES_DATA = {
     "url": "https://faro.com/sphere",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Zentrale Cloud-Plattform, die statische Laserscans, Mobile-SLAM-Daten und 360°-Fotos in einer gemeinsamen Umgebung zusammenführt.",
     "features": [
       {
@@ -5747,7 +5747,7 @@ window.PROFILES_DATA = {
     "url": "https://flexsim.com",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "3D-Ablaufsimulationssoftware zur Modellierung, Vorhersage und Visualisierung von Logistik-, Materialfluss- und Fertigungssystemen.",
     "features": [
       {
@@ -5819,7 +5819,7 @@ window.PROFILES_DATA = {
     "url": "https://flyability.com/elios-3",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "EMPFOHLEN",
+    "status": "INDEXIERT",
     "overview": "Kollisionstolerante Hallendrohne im Käfig für Inspektionen in engen Behältern, Kaminen und unter Hallendächern ohne GPS.",
     "features": [
       {
@@ -5888,7 +5888,7 @@ window.PROFILES_DATA = {
     "url": "https://khronos.org/gltf",
     "tier": "Tier 1",
     "costLabel": "Open Standard / €0",
-    "status": "STANDARDIZIERT WEB3D",
+    "status": "INDEXIERT",
     "overview": "Lizenzfreie Spezifikation für die effiziente Übertragung und das schnelle Laden von 3D-Szenen und PBR-Modellen im Webbrowser und auf Mobilgeräten.",
     "features": [
       {
@@ -5961,7 +5961,7 @@ window.PROFILES_DATA = {
     "url": "https://godotengine.org",
     "tier": "Tier 1",
     "costLabel": "Open Source / €0",
-    "status": "EMPFOHLEN",
+    "status": "INDEXIERT",
     "overview": "Schlanke, lizenzfreie Open-Source 3D-Engine. Ideal für Web-eingebettete 3D-Dashboards, WebXR-Brillen und leichte Shopfloor-Displays.",
     "features": [
       {
@@ -6031,7 +6031,7 @@ window.PROFILES_DATA = {
     "url": "https://halocline.io",
     "tier": "Tier 1",
     "costLabel": "≤ €30k",
-    "status": "EMPFOHLEN",
+    "status": "INDEXIERT",
     "overview": "Virtual-Reality-Software zur interaktiven Montageplanung in 1:1 Maßstab. Ersetzt Physisches Cardboard Engineering durch VR-Erlebnisse.",
     "features": [
       {
@@ -6102,7 +6102,7 @@ window.PROFILES_DATA = {
     "url": "https://hi3d.ai",
     "tier": "Tier 1",
     "costLabel": "≤ €30k",
-    "status": "TESTBED",
+    "status": "INDEXIERT",
     "overview": "Generative KI-Engine, die aus Text-Prompts oder 2D-Fotos strukturierte 3D-Meshes erzeugt und wasserdichte Geometrien für den 3D-Druck und das Scene Staging ausgibt.",
     "features": [
       {
@@ -6174,7 +6174,7 @@ window.PROFILES_DATA = {
     "url": "https://business.vive.com/focus3",
     "tier": "Tier 1",
     "costLabel": "≤ €30k",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Robustes Standalone-Enterprise-VR-Headset für industrielles Sicherheitstraining, ergonomische VR-Montagesimulation und Trainingszentren.",
     "features": [
       {
@@ -6244,7 +6244,7 @@ window.PROFILES_DATA = {
     "url": "https://github.com/huggingface/lerobot",
     "tier": "Tier 1",
     "costLabel": "Open Source / €0",
-    "status": "EMPFOHLEN",
+    "status": "INDEXIERT",
     "overview": "Open-Source KI-Robotik-Framework für KI-Policy-Training, Imitationslernen und Teleoperation für kostengünstige Industrie-Greifarme.",
     "features": [
       {
@@ -6314,7 +6314,7 @@ window.PROFILES_DATA = {
     "url": "https://ipolog.ai",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Spezialsoftware für die Ergonomieplanung an Montagelinien, Logistikrouten und Materialregaloptimierung in Fertigungszellen.",
     "features": [
       {
@@ -6386,7 +6386,7 @@ window.PROFILES_DATA = {
     "url": "https://isg-stuttgart.de",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "STANDARDIZIERT",
+    "status": "INDEXIERT",
     "overview": "Deterministische Harte-Echtzeit-Simulationsengine für Taktraten unter 1 Millisekunde zur Hardware-in-the-Loop-Inbetriebnahme von Werkzeugmaschinen.",
     "features": [
       {
@@ -6457,7 +6457,7 @@ window.PROFILES_DATA = {
     "url": "https://iso.org/standard/62271.html",
     "tier": "Tier 1",
     "costLabel": "Open Standard / €0",
-    "status": "STANDARDIZIERT",
+    "status": "INDEXIERT",
     "overview": "Leichtgewichtiges 3D-Format für visuelle Produktprüfung, Digital Mockup (DMU) und schnelle Ladezeiten riesiger Maschinenbaugruppen.",
     "features": [
       {
@@ -6526,7 +6526,7 @@ window.PROFILES_DATA = {
     "url": "https://leica-geosystems.com/blk2fly",
     "tier": "Tier 3",
     "costLabel": "> €100k",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Autonome Flugdrohne mit LiDAR-Scanner. Erfasst Dächer, Fassaden und hochgelegene Rohrbrücken vollautomatisch ohne Gerüstbau.",
     "features": [
       {
@@ -6596,7 +6596,7 @@ window.PROFILES_DATA = {
     "url": "https://leica-geosystems.com/blk2go",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Kompakter handgeführter Mobile-SLAM-Scanner mit 2-Achs-LiDAR und Mehrkamera-System zur schnellen Raumdokumentation.",
     "features": [
       {
@@ -6665,7 +6665,7 @@ window.PROFILES_DATA = {
     "url": "https://leica-geosystems.com/rtc360",
     "tier": "Tier 3",
     "costLabel": "> €100k",
-    "status": "STANDARDIZIERT",
+    "status": "INDEXIERT",
     "overview": "Hochpräziser terrestrischer 3D-Laserscanner (RTC360). Erfasst 3D-Punktwolken und HDR-Panoramen in unter 45 Sekunden mit automatischer VIS-Echtzeitregistrierung.",
     "features": [
       {
@@ -6737,7 +6737,7 @@ window.PROFILES_DATA = {
     "url": "https://magicleap.com",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Leichtgewichtige optische See-Through AR-Brille für Werksmonteure mit dynamischer Abdunkelung für helle Fabrikhallen.",
     "features": [
       {
@@ -6808,7 +6808,7 @@ window.PROFILES_DATA = {
     "url": "https://mathworks.com",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "STANDARDIZIERT",
+    "status": "INDEXIERT",
     "overview": "Weltweiter Standard für Blockdiagramm-Simulation, Regelungstechnik und modellbasierte Entwicklung mechatronischer Systeme.",
     "features": [
       {
@@ -6881,7 +6881,7 @@ window.PROFILES_DATA = {
     "url": "https://matterport.com",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "STANDARD WALKTHROUGH",
+    "status": "INDEXIERT",
     "overview": "Führende Plattform für virtuelle 360°-Begehungen. Nutzt die Pro3 LiDAR-Kamera für schnelle Rundgänge in Innen- und Außenbereichen.",
     "features": [
       {
@@ -6951,7 +6951,7 @@ window.PROFILES_DATA = {
     "url": "https://meta.com/quest",
     "tier": "Tier 1",
     "costLabel": "≤ €30k",
-    "status": "EMPFOHLEN SME",
+    "status": "INDEXIERT",
     "overview": "Vielseitiges kabelloses Standalone MR/VR-Headset. Weit verbreitet im Mittelstand für kostengünstige Werksbegehungen, VR-Training und Remote-Kollaboration.",
     "features": [
       {
@@ -7021,7 +7021,7 @@ window.PROFILES_DATA = {
     "url": "https://github.com/facebookresearch/segment-anything-3d",
     "tier": "Tier 1",
     "costLabel": "Open Source / €0",
-    "status": "EMPFOHLEN",
+    "status": "INDEXIERT",
     "overview": "KI-Modell zur automatischen Segmentierung roher Punktwolken und Meshes in einzelne Objekte (Rohre, Wände, Roboter).",
     "features": [
       {
@@ -7090,7 +7090,7 @@ window.PROFILES_DATA = {
     "url": "https://github.com/Azure/opendigitaltwins-dtdl",
     "tier": "Tier 1",
     "costLabel": "Open Standard / €0",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "JSON-LD-basierte Modellierungssprache zur Definition digitaler Zwillingseinheiten, Raumgraphen und Telemetriesignale in Azure Digital Twins.",
     "features": [
       {
@@ -7158,7 +7158,7 @@ window.PROFILES_DATA = {
     "url": "https://modbus.org",
     "tier": "Tier 1",
     "costLabel": "Open Standard / €0",
-    "status": "LEGACY SUPPORT",
+    "status": "INDEXIERT",
     "overview": "Industrie-Kommunikationsprotokoll aus dem Jahr 1979 zum Auslesen von Energiezählern, Temperaturmessern und Alt-SPSen.",
     "features": [
       {
@@ -7225,7 +7225,7 @@ window.PROFILES_DATA = {
     "url": "https://motiona.io",
     "tier": "Tier 1",
     "costLabel": "≤ €30k",
-    "status": "TESTBED",
+    "status": "INDEXIERT",
     "overview": "Software zur Analyse von Roboter-Bewegungskurven. Berechnet energieoptimierte Bahnkurven für mehrachsige Industrieroboter.",
     "features": [
       {
@@ -7295,7 +7295,7 @@ window.PROFILES_DATA = {
     "url": "https://sparkplug.eclipse.org",
     "tier": "Tier 1",
     "costLabel": "Open Standard / €0",
-    "status": "STANDARDIZIERT",
+    "status": "INDEXIERT",
     "overview": "Leichtgewichtiges Publish/Subscribe-Protokoll. Sparkplug B bietet Zustandskontrolle, Auto-Discovery von Datentags und strukturierte Protobuf-Payloads für IIoT-Netzwerke.",
     "features": [
       {
@@ -7365,7 +7365,7 @@ window.PROFILES_DATA = {
     "url": "https://mtconnect.org",
     "tier": "Tier 1",
     "costLabel": "Open Standard / €0",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Offenes Protokoll zum Extrahieren struktureller Daten aus CNC-Werkzeugmaschinen und Fräszentren in XML/REST-Formate.",
     "features": [
       {
@@ -7433,7 +7433,7 @@ window.PROFILES_DATA = {
     "url": "https://navvis.com/vlx-3",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "EMPFOHLENES MAPPING HARDWARE",
+    "status": "INDEXIERT",
     "overview": "Wearables Mobile-SLAM-System mit zwei Multi-Layer-LiDAR-Sensoren und 4 HD-Kameras. Erfasst Bestandskonstruktionen (Brownfield) in Schrittgeschwindigkeit mit hoher Genauigkeit.",
     "features": [
       {
@@ -7503,7 +7503,7 @@ window.PROFILES_DATA = {
     "url": "https://allplan.com",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Europäische BIM-Plattform spezialisiert auf konstruktiven Ingenieurbau, Betonfertigteilplanung und hochpräzise Industriegebäude.",
     "features": [
       {
@@ -7574,7 +7574,7 @@ window.PROFILES_DATA = {
     "url": "https://github.com/nvidia/warp",
     "tier": "Tier 1",
     "costLabel": "Open Source / €0",
-    "status": "EMPFOHLEN",
+    "status": "INDEXIERT",
     "overview": "Differenzierbares GPU-beschleunigtes Physik-Simulationsframework auf NVIDIA Warp-Basis. Speziell entwickelt für Starrkörperdynamik und Roboter-KI-Training in OpenUSD.",
     "features": [
       {
@@ -7643,7 +7643,7 @@ window.PROFILES_DATA = {
     "url": "https://scaniverse.com",
     "tier": "Tier 1",
     "costLabel": "Kostenfrei / €0",
-    "status": "EMPFOHLEN",
+    "status": "INDEXIERT",
     "overview": "Kostenlose mobile 3D-Erfassungs-App auf Basis von 3D Gaussian Splatting. Nutzt Smartphones mit LiDAR für schnelles Requisiten-Scannen.",
     "features": [
       {
@@ -7713,7 +7713,7 @@ window.PROFILES_DATA = {
     "url": "https://developer.nvidia.com/isaac-sim",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "CORE SIM STANDARD",
+    "status": "INDEXIERT",
     "overview": "Roboter-Simulationsanwendung und Physical-AI-Framework auf Omniverse-Basis. Ermöglicht synthetische Datengenerierung (SDG) und Reinforcement Learning für AMRs und Roboterarme.",
     "features": [
       {
@@ -7784,7 +7784,7 @@ window.PROFILES_DATA = {
     "url": "https://developer.nvidia.com/omniverse",
     "tier": "Tier 3",
     "costLabel": "> €100k",
-    "status": "TARGET CORE ARCHITECTURE",
+    "status": "INDEXIERT",
     "overview": "Zentrale Simulations- und Aggregationsplattform, die nativ auf OpenUSD und RTX-Raytracing basiert. Dient als primäres Herzstück der Zielarchitektur für den industriellen digitalen Zwilling.",
     "features": [
       {
@@ -7855,7 +7855,7 @@ window.PROFILES_DATA = {
     "url": "https://opcfoundation.org",
     "tier": "Tier 1",
     "costLabel": "Open Standard / €0",
-    "status": "CORE OT BACKBONE",
+    "status": "INDEXIERT",
     "overview": "Herstellerunabhängiges Protokoll für Industrie 4.0. Verbindet SPSen, CNCs und Roboter direkt mit dem 3D-Zwilling im Industrial Metaverse über semantische Companion Specifications.",
     "features": [
       {
@@ -7926,7 +7926,7 @@ window.PROFILES_DATA = {
     "url": "https://openfoam.org",
     "tier": "Tier 1",
     "costLabel": "Open Source / €0",
-    "status": "STANDARDIZIERT",
+    "status": "INDEXIERT",
     "overview": "Leistungsstarkes Open-Source-CFD-Solver-Framework für numerische Strömungsmechanik in Aerodynamik und Thermodynamik.",
     "features": [
       {
@@ -7997,7 +7997,7 @@ window.PROFILES_DATA = {
     "url": "https://aousd.org",
     "tier": "Tier 1",
     "costLabel": "Open Standard / €0",
-    "status": "PFLICHTSTANDARD 3D VISUAL",
+    "status": "INDEXIERT",
     "overview": "Der universelle offene Standard für 3D-Szenengraphen im Industrial Metaverse. Ermöglicht die Darstellung riesiger Fabrikszenen mit zerstörungsfreier Schichtenbearbeitung (Layering).",
     "features": [
       {
@@ -8072,7 +8072,7 @@ window.PROFILES_DATA = {
     "url": "https://orb360.tech",
     "tier": "Tier 1",
     "costLabel": "≤ €30k",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Automatisierter Drehteller zur Erfassung kleiner Industrieteile für Ersatzteilkataloge und 3D-Web-Viewer.",
     "features": [
       {
@@ -8140,7 +8140,7 @@ window.PROFILES_DATA = {
     "url": "https://github.com/graphdeco-inria/gaussian-splatting",
     "tier": "Tier 1",
     "costLabel": "Open Standard / €0",
-    "status": "EMPFOHLEN",
+    "status": "INDEXIERT",
     "overview": "Spezifikation zur Speicherung von 3D Gaussian Splatting Parametern (3D-Position, Transparenz, Skalierung, Rotation und Farbdarstellung).",
     "features": [
       {
@@ -8209,7 +8209,7 @@ window.PROFILES_DATA = {
     "url": "https://profibus.com",
     "tier": "Tier 1",
     "costLabel": "Open Standard / €0",
-    "status": "STANDARDIZIERT",
+    "status": "INDEXIERT",
     "overview": "Führender europäischer Echtzeit-Industrial-Ethernet-Standard. Garantiert in Kombination mit TSN deterministische Taktraten im Mikrosekundenbereich für die Fabrikautomatisierung.",
     "features": [
       {
@@ -8277,7 +8277,7 @@ window.PROFILES_DATA = {
     "url": "https://ptc.com/creo",
     "tier": "Tier 3",
     "costLabel": "> €100k",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Hochpräzise parametrische MCAD-Suite für Schwermaschinenbau, Verteidigung und Fahrzeugtechnik mit tiefen KI-Generativfunktionen und Model-Based Definition (MBD).",
     "features": [
       {
@@ -8350,7 +8350,7 @@ window.PROFILES_DATA = {
     "url": "https://onshape.com",
     "tier": "Tier 1",
     "costLabel": "≤ €30k",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Rein browserbasierte Cloud-CAD- und PDM-Plattform für die synchrone Multi-User-Bearbeitung von 3D-Modellen in Echtzeit.",
     "features": [
       {
@@ -8423,7 +8423,7 @@ window.PROFILES_DATA = {
     "url": "https://ptc.com/thingworx",
     "tier": "Tier 3",
     "costLabel": "> €100k",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Etablierte Enterprise-IIoT-Plattform für schnelle Industrieanwendungen, Maschinenüberwachung und AR-Außendienst-Bereitstellung.",
     "features": [
       {
@@ -8493,7 +8493,7 @@ window.PROFILES_DATA = {
     "url": "https://ladybug.tools",
     "tier": "Tier 1",
     "costLabel": "Open Source / €0",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Präzise Raytracing-Engine zur Berechnung von Tageslichtquotienten, solaren Wärmeeintrags- und Blendungsvorhersagen in Fertigungshallen.",
     "features": [
       {
@@ -8564,7 +8564,7 @@ window.PROFILES_DATA = {
     "url": "https://realwear.com/navigator-520",
     "tier": "Tier 1",
     "costLabel": "≤ €30k",
-    "status": "STANDARDIZIERT FIELD WORKER",
+    "status": "INDEXIERT",
     "overview": "Robustes Freihand-Mikrodisplay-Headset zur Montage an Schutzhelmen. Entwickelt für Service-Techniker bei der Fernwartung und Inspektion in rauen Industrieumgebungen.",
     "features": [
       {
@@ -8635,7 +8635,7 @@ window.PROFILES_DATA = {
     "url": "https://rhino3d.com",
     "tier": "Tier 1",
     "costLabel": "≤ €30k",
-    "status": "EMPFOHLEN",
+    "status": "INDEXIERT",
     "overview": "Fortgeschrittenes NURBS-Flächenmodellierungssystem gekoppelt mit Grasshopper für die visuelle Programmierung komplexer parametrischer Fabrikarchitekturen.",
     "features": [
       {
@@ -8710,7 +8710,7 @@ window.PROFILES_DATA = {
     "url": "https://riiico.com",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "EMPFOHLEN",
+    "status": "INDEXIERT",
     "overview": "KI-Software, die rohe 3D-Punktwolken von Bestandsfabriken automatisch in parametrische CAD/BIM-Layouts und einzelne 3D-Objekte umwandelt.",
     "features": [
       {
@@ -8781,7 +8781,7 @@ window.PROFILES_DATA = {
     "url": "https://ros.org",
     "tier": "Tier 1",
     "costLabel": "Open Source / €0",
-    "status": "CORE ROBOTICS BACKBONE",
+    "status": "INDEXIERT",
     "overview": "Open-Source Roboter-Middleware auf Basis von Data Distribution Service (DDS) für die Zero-Copy-Kommunikation in autonomen Robotern und AMRs.",
     "features": [
       {
@@ -8851,7 +8851,7 @@ window.PROFILES_DATA = {
     "url": "https://sidefx.com",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "STANDARDIZIERT",
+    "status": "INDEXIERT",
     "overview": "Knotenbasierte prozedurale Generierungs- und VFX-Suite. Fungiert als prozedurale Pipeline-Engine für die automatisierte Aufbereitung gewaltiger OpenUSD-Fabrikszenen.",
     "features": [
       {
@@ -8925,7 +8925,7 @@ window.PROFILES_DATA = {
     "url": "https://plm.automation.siemens.com",
     "tier": "Tier 3",
     "costLabel": "> €100k",
-    "status": "STANDARDIZIERT",
+    "status": "INDEXIERT",
     "overview": "High-End MCAD-Plattform für hochkomplexe Baugruppen im Maschinen- und Fahrzeugbau. Dient als primärer Geometrie-Kernel für Automotive-, Luft- und Raumfahrt-OEMs mit nativer Live-Streaming-Anbindung an NVIDIA Omniverse.",
     "features": [
       {
@@ -8996,7 +8996,7 @@ window.PROFILES_DATA = {
     "url": "https://siemens.com/operations-x",
     "tier": "Tier 3",
     "costLabel": "> €100k",
-    "status": "STANDARDIZIERT",
+    "status": "INDEXIERT",
     "overview": "Offenes, interoperables Industrial-IoT-Portfolio zur Automatisierung, Analyse und Optimierung des Shopfloor-Betriebs von der Edge bis zur Cloud.",
     "features": [
       {
@@ -9067,7 +9067,7 @@ window.PROFILES_DATA = {
     "url": "https://plm.automation.siemens.com/tecnomatix",
     "tier": "Tier 3",
     "costLabel": "> €100k",
-    "status": "STANDARDIZIERT",
+    "status": "INDEXIERT",
     "overview": "Branchenführende Plattform für Roboter-Kinematik, virtuelle Inbetriebnahme (VRC) und Materialfluss-Simulation in der Automobil- und Fertigungsindustrie.",
     "features": [
       {
@@ -9140,7 +9140,7 @@ window.PROFILES_DATA = {
     "url": "https://simscale.com",
     "tier": "Tier 1",
     "costLabel": "≤ €30k",
-    "status": "EMPFOHLEN",
+    "status": "INDEXIERT",
     "overview": "100% cloudnative FEA-, CFD- und Thermalsimulationsplattform, die parallelisierte Solver direkt im Webbrowser ausführt.",
     "features": [
       {
@@ -9212,7 +9212,7 @@ window.PROFILES_DATA = {
     "url": "https://solidworks.com",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Globale 3D-CAD-Standardsoftware für die parametrische Konstruktion im Maschinen- und Werkzeugbau. Weit verbreitet in der Zulieferindustrie und auf Shopfloors zur Anbindung an digitale Zwillinge.",
     "features": [
       {
@@ -9285,7 +9285,7 @@ window.PROFILES_DATA = {
     "url": "https://step-smsc.org",
     "tier": "Tier 1",
     "costLabel": "Open Standard / €0",
-    "status": "PFLICHTSTANDARD CAD",
+    "status": "INDEXIERT",
     "overview": "Der offizielle ISO-Standard für den parametrischen CAD-Geometrieaustausch und die Einbettung von Product Manufacturing Information (PMI) sowie Fertigungstoleranzen.",
     "features": [
       {
@@ -9353,7 +9353,7 @@ window.PROFILES_DATA = {
     "url": "https://sketchup.com",
     "tier": "Tier 1",
     "costLabel": "≤ €30k",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Intuitives 3D-Modellierungswerkzeug für die schnelle konzeptionelle Fabrikplanung, Raumvolumen-Studien und frühe Entwurfsphasen.",
     "features": [
       {
@@ -9426,7 +9426,7 @@ window.PROFILES_DATA = {
     "url": "https://twinmotion.com",
     "tier": "Tier 1",
     "costLabel": "≤ €30k",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Schnelles 3D-Echtzeit-Visualisierungswerkzeug powered by Unreal Engine. Speziell für AEC-Planer entwickelt, um Fabrikgebäude in Minuten zu begehen.",
     "features": [
       {
@@ -9500,7 +9500,7 @@ window.PROFILES_DATA = {
     "url": "https://unity.com/industry",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Multi-Plattform Echtzeit-3D-Plattform für plattformübergreifende Industrie-Apps, AR/VR-Headsets, Mobilgeräte und WebGL.",
     "features": [
       {
@@ -9572,7 +9572,7 @@ window.PROFILES_DATA = {
     "url": "https://unrealengine.com/enterprise",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "EMPFOHLEN",
+    "status": "INDEXIERT",
     "overview": "High-End 3D-Echtzeit-Engine für fotorealistische Visualisierungen, virtuelle Begehungen und immersives VR-Training von Werksanlagen.",
     "features": [
       {
@@ -9644,7 +9644,7 @@ window.PROFILES_DATA = {
     "url": "https://varjo.com/products/xr-4",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "STANDARDIZIERT HIGH-END",
+    "status": "INDEXIERT",
     "overview": "Kabelgebundenes Mixed-Reality-Headset für Industrieanwendungen mit Auflösung auf menschlichem Augenniveau (51 PPD) und fotorealistischem Video-Pass-Through.",
     "features": [
       {
@@ -9713,7 +9713,7 @@ window.PROFILES_DATA = {
     "url": "https://visualcomponents.com",
     "tier": "Tier 2",
     "costLabel": "≤ €100k",
-    "status": "EMPFOHLEN",
+    "status": "INDEXIERT",
     "overview": "3D-Fabriksimulationssoftware für Maschinenbauer und Systemintegratoren zur schnellen Layouterstellung, Robotersimulation und Durchsatzüberprüfung.",
     "features": [
       {
@@ -9786,7 +9786,7 @@ window.PROFILES_DATA = {
     "url": "https://visupal.de",
     "tier": "Tier 1",
     "costLabel": "≤ €30k",
-    "status": "EVALUIERT",
+    "status": "INDEXIERT",
     "overview": "Automatisierte 3D-Palettiersimulations-Software für Verpackungszellen und End-of-Line-Roboter.",
     "features": [
       {
@@ -9856,7 +9856,7 @@ window.PROFILES_DATA = {
     "url": "https://waveye.com",
     "tier": "Tier 1",
     "costLabel": "≤ €30k",
-    "status": "EMPFOHLENER 4D SENSOR",
+    "status": "INDEXIERT",
     "overview": "Ultra-hochauflösender 4D-Imaging-Radarsensor (Argus) für die Roboterwahrnehmung. Generiert dichte 4D-Punktwolken inklusive Doppler-Geschwindigkeitsvektoren für autonome Systeme.",
     "features": [
       {
@@ -9924,7 +9924,7 @@ window.PROFILES_DATA = {
     "url": "https://xgrids.com",
     "tier": "Tier 1",
     "costLabel": "≤ €30k",
-    "status": "TOP FOTOREALISMUS",
+    "status": "INDEXIERT",
     "overview": "Handgeführter 3D-Scanner, der LiDAR, Kameras und 3D Gaussian Splatting (3DGS) verbindet, um fotorealistische 3D-Abbilder spiegelnder Objekte zu erstellen.",
     "features": [
       {
@@ -9995,7 +9995,7 @@ window.PROFILES_DATA = {
     "url": "https://ultralytics.com",
     "tier": "Tier 1",
     "costLabel": "≤ €30k",
-    "status": "STANDARDIZIERT",
+    "status": "INDEXIERT",
     "overview": "Echtzeit-Computer-Vision-Modell optimiert für 3D-Bounding-Boxen, Personen-Tracking und Sicherheitszonenüberwachung auf Edge-Geräten.",
     "features": [
       {

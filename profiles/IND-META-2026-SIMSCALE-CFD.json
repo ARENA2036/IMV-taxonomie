@@ -10,7 +10,7 @@
   "url": "https://simscale.com",
   "tier": "Tier 1",
   "costLabel": "≤ €30k",
-  "status": "EMPFOHLEN",
+  "status": "INDEXIERT",
   "overview": "100% cloudnative FEA-, CFD- und Thermalsimulationsplattform, die parallelisierte Solver direkt im Webbrowser ausführt.",
   "features": [
     {

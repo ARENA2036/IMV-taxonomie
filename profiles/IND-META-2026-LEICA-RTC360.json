@@ -10,7 +10,7 @@
   "url": "https://leica-geosystems.com/rtc360",
   "tier": "Tier 3",
   "costLabel": "> €100k",
-  "status": "STANDARDIZIERT",
+  "status": "INDEXIERT",
   "overview": "Hochpräziser terrestrischer 3D-Laserscanner (RTC360). Erfasst 3D-Punktwolken und HDR-Panoramen in unter 45 Sekunden mit automatischer VIS-Echtzeitregistrierung.",
   "features": [
     {

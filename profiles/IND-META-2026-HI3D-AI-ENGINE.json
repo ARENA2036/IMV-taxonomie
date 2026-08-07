@@ -10,7 +10,7 @@
   "url": "https://hi3d.ai",
   "tier": "Tier 1",
   "costLabel": "≤ €30k",
-  "status": "TESTBED",
+  "status": "INDEXIERT",
   "overview": "Generative KI-Engine, die aus Text-Prompts oder 2D-Fotos strukturierte 3D-Meshes erzeugt und wasserdichte Geometrien für den 3D-Druck und das Scene Staging ausgibt.",
   "features": [
     {

@@ -10,7 +10,7 @@
   "url": "https://sidefx.com",
   "tier": "Tier 2",
   "costLabel": "≤ €100k",
-  "status": "STANDARDIZIERT",
+  "status": "INDEXIERT",
   "overview": "Knotenbasierte prozedurale Generierungs- und VFX-Suite. Fungiert als prozedurale Pipeline-Engine für die automatisierte Aufbereitung gewaltiger OpenUSD-Fabrikszenen.",
   "features": [
     {

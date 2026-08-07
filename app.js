@@ -477,26 +477,51 @@ document.addEventListener('DOMContentLoaded', () => {
           <tbody>
     `;
 
-    filteredItems.forEach(item => {
-      const tierClass = item.tier === 'Tier 1' ? 'tier-1' : item.tier === 'Tier 2' ? 'tier-2' : 'tier-3';
-      const isChecked = selectedCompareRefs.has(item.refCode);
+  /**
+   * Generates a styled HTML badge for the Community-Driven Verification Status.
+   * @param {string} status 
+   * @returns {string} HTML string
+   */
+  function getStatusBadgeHtml(status) {
+    const s = (status || 'INDEXIERT').toUpperCase();
+    if (s === 'INDEXIERT') {
+      return `<span class="badge bg-secondary text-white font-monospace"><i class="fa-solid fa-list-check me-1"></i>INDEXIERT</span>`;
+    }
+    if (s === 'GEPRÜFT') {
+      return `<span class="badge bg-info text-dark font-monospace"><i class="fa-solid fa-square-check me-1"></i>GEPRÜFT</span>`;
+    }
+    if (s === 'USE CASE IMPLEMENTIERT') {
+      return `<span class="badge bg-primary text-white font-monospace"><i class="fa-solid fa-diagram-project me-1"></i>USE CASE IMPLEMENTIERT</span>`;
+    }
+    if (s === 'EXTERN VALIDIERT') {
+      return `<span class="badge bg-success text-white font-monospace"><i class="fa-solid fa-circle-check me-1"></i>EXTERN VALIDIERT</span>`;
+    }
+    if (s === 'COMMUNITY BEITRAG') {
+      return `<span class="badge bg-warning text-dark font-monospace"><i class="fa-solid fa-users me-1"></i>COMMUNITY BEITRAG</span>`;
+    }
+    return `<span class="badge bg-secondary font-monospace">${s}</span>`;
+  }
 
-      html += `
-        <tr>
-          <td class="text-center"><input type="checkbox" class="chk-compare form-check-input" data-ref="${item.refCode}" ${isChecked ? 'checked' : ''}></td>
-          <td><code class="text-muted font-monospace fw-bold">${item.refCode}</code></td>
-          <td><span class="badge bg-secondary font-monospace">${item.categoryCode}</span></td>
-          <td><strong class="text-dark">${item.name}</strong> <small class="text-muted">(${item.subtitle})</small></td>
-          <td>${item.vendor}</td>
-          <td><span class="tier-badge ${tierClass}">${item.tier}</span></td>
-          <td><span class="badge bg-light text-dark border">${item.status}</span></td>
-          <td class="text-end">
-            <button class="btn btn-outline-primary btn-sm btn-inspect py-1 px-2" data-ref="${item.refCode}" style="font-size: 11px;">
-              Details →
-            </button>
-          </td>
-        </tr>
-      `;
+  filteredItems.forEach(item => {
+    const tierClass = item.tier === 'Tier 1' ? 'tier-1' : item.tier === 'Tier 2' ? 'tier-2' : 'tier-3';
+    const isChecked = selectedCompareRefs.has(item.refCode);
+
+    html += `
+      <tr>
+        <td class="text-center"><input type="checkbox" class="chk-compare form-check-input" data-ref="${item.refCode}" ${isChecked ? 'checked' : ''}></td>
+        <td><code class="text-muted font-monospace fw-bold">${item.refCode}</code></td>
+        <td><span class="badge bg-secondary font-monospace">${item.categoryCode}</span></td>
+        <td><strong class="text-dark">${item.name}</strong> <small class="text-muted">(${item.subtitle})</small></td>
+        <td>${item.vendor}</td>
+        <td><span class="tier-badge ${tierClass}">${item.tier}</span></td>
+        <td>${getStatusBadgeHtml(item.status)}</td>
+        <td class="text-end">
+          <button class="btn btn-outline-primary btn-sm btn-inspect py-1 px-2" data-ref="${item.refCode}" style="font-size: 11px;">
+            Details →
+          </button>
+        </td>
+      </tr>
+    `;
     });
 
     html += `</tbody></table></div>`;

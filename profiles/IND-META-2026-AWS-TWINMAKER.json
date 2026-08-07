@@ -10,7 +10,7 @@
   "url": "https://aws.amazon.com/iot-twinmaker",
   "tier": "Tier 2",
   "costLabel": "≤ €100k",
-  "status": "EVALUIERT",
+  "status": "INDEXIERT",
   "overview": "Cloud-Plattform, die Entwicklern das Erstellen digitaler Zwillinge ermöglicht durch Aggregation bestehender AWS-Datenspeicher.",
   "features": [
     {

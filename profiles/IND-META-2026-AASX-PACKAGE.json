@@ -10,7 +10,7 @@
   "url": "https://industrialdigitaltwin.org",
   "tier": "Tier 1",
   "costLabel": "Open Standard / €0",
-  "status": "PFLICHTSTANDARD CONTAINER",
+  "status": "INDEXIERT",
   "overview": "Zip-Containerformat zur Verpackung vollständiger Verwaltungsschalen-Metadaten, XML/JSON-Teilmodelle, PDF-Handbücher und 3D-CAD-Modelle.",
   "features": [
     {

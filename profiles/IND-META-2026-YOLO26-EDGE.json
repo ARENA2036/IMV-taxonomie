@@ -10,7 +10,7 @@
   "url": "https://ultralytics.com",
   "tier": "Tier 1",
   "costLabel": "≤ €30k",
-  "status": "STANDARDIZIERT",
+  "status": "INDEXIERT",
   "overview": "Echtzeit-Computer-Vision-Modell optimiert für 3D-Bounding-Boxen, Personen-Tracking und Sicherheitszonenüberwachung auf Edge-Geräten.",
   "features": [
     {

@@ -10,7 +10,7 @@
   "url": "https://mtconnect.org",
   "tier": "Tier 1",
   "costLabel": "Open Standard / €0",
-  "status": "EVALUIERT",
+  "status": "INDEXIERT",
   "overview": "Offenes Protokoll zum Extrahieren struktureller Daten aus CNC-Werkzeugmaschinen und Fräszentren in XML/REST-Formate.",
   "features": [
     {

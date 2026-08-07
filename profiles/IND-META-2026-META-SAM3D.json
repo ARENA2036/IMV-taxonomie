@@ -10,7 +10,7 @@
   "url": "https://github.com/facebookresearch/segment-anything-3d",
   "tier": "Tier 1",
   "costLabel": "Open Source / €0",
-  "status": "EMPFOHLEN",
+  "status": "INDEXIERT",
   "overview": "KI-Modell zur automatischen Segmentierung roher Punktwolken und Meshes in einzelne Objekte (Rohre, Wände, Roboter).",
   "features": [
     {

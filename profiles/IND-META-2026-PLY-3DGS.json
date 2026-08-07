@@ -10,7 +10,7 @@
   "url": "https://github.com/graphdeco-inria/gaussian-splatting",
   "tier": "Tier 1",
   "costLabel": "Open Standard / €0",
-  "status": "EMPFOHLEN",
+  "status": "INDEXIERT",
   "overview": "Spezifikation zur Speicherung von 3D Gaussian Splatting Parametern (3D-Position, Transparenz, Skalierung, Rotation und Farbdarstellung).",
   "features": [
     {

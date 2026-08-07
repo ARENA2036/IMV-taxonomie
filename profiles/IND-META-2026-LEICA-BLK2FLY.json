@@ -10,7 +10,7 @@
   "url": "https://leica-geosystems.com/blk2fly",
   "tier": "Tier 3",
   "costLabel": "> €100k",
-  "status": "EVALUIERT",
+  "status": "INDEXIERT",
   "overview": "Autonome Flugdrohne mit LiDAR-Scanner. Erfasst Dächer, Fassaden und hochgelegene Rohrbrücken vollautomatisch ohne Gerüstbau.",
   "features": [
     {

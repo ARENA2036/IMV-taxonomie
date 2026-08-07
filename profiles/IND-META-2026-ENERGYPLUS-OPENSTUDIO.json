@@ -10,7 +10,7 @@
   "url": "https://energyplus.net",
   "tier": "Tier 1",
   "costLabel": "Open Source / €0",
-  "status": "EMPFOHLEN",
+  "status": "INDEXIERT",
   "overview": "Gebäudeenergiesimulations-Engine zur Berechnung von Heiz- und Kühllasten, Lüftungsströmen, HVAC-Dimensionierung und CO2-Emissionen von Fabrikhallen.",
   "features": [
     {

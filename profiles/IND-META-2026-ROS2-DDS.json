@@ -10,7 +10,7 @@
   "url": "https://ros.org",
   "tier": "Tier 1",
   "costLabel": "Open Source / €0",
-  "status": "CORE ROBOTICS BACKBONE",
+  "status": "INDEXIERT",
   "overview": "Open-Source Roboter-Middleware auf Basis von Data Distribution Service (DDS) für die Zero-Copy-Kommunikation in autonomen Robotern und AMRs.",
   "features": [
     {

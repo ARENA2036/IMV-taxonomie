@@ -10,7 +10,7 @@
   "url": "https://faro.com/orbis",
   "tier": "Tier 2",
   "costLabel": "≤ €100k",
-  "status": "EVALUIERT",
+  "status": "INDEXIERT",
   "overview": "Hybrider mobiler SLAM- und statischer Laserscanner. Wechselt fliegend zwischen Gehen und hochdichtem Stativscannen.",
   "features": [
     {

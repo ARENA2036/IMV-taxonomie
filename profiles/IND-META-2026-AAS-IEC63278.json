@@ -10,7 +10,7 @@
   "url": "https://industrialdigitaltwin.org",
   "tier": "Tier 1",
   "costLabel": "Open Standard / €0",
-  "status": "PFLICHTSTANDARD INTEROP",
+  "status": "INDEXIERT",
   "overview": "Der offizielle RAMI 4.0 Standard für digitale Zwillings-Metadaten. Kapselt technische Dokumentationen, Zertifikate, CAD-Modelle, CO2-Fußabdrücke und Sensorpunkte eines Industrie-Assets.",
   "features": [
     {

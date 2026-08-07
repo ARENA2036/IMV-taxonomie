@@ -10,7 +10,7 @@
   "url": "https://astm.org/e2807-11.html",
   "tier": "Tier 1",
   "costLabel": "Open Standard / €0",
-  "status": "PFLICHTSTANDARD SCAN",
+  "status": "INDEXIERT",
   "overview": "Herstellerneutrales Binärdateiformat zur Speicherung dichter 3D-Punktwolkendaten, 2D-Panoramabilder und Sensormetadaten von Laserscannern.",
   "features": [
     {

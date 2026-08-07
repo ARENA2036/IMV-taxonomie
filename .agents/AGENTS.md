@@ -58,7 +58,7 @@ Every profile JSON in `profiles/` must strictly adhere to the 19 canonical schem
   "url": "https://example.com",
   "tier": "Tier 1 | Tier 2 | Tier 3",
   "costLabel": "≤ €30k | ≤ €100k | > €100k",
-  "status": "ETABLIERT | STANDARDIZIERT | OPEN SOURCE | EMERGING",
+  "status": "INDEXIERT | GEPRÜFT | USE CASE IMPLEMENTIERT | EXTERN VALIDIERT | COMMUNITY BEITRAG",
   "overview": "Detailed German overview text...",
   "features": [
     { "title": "Kernfunktion 1", "desc": "Funktionsbeschreibung..." }

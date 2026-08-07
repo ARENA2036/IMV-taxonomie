@@ -10,7 +10,7 @@
   "url": "https://openfoam.org",
   "tier": "Tier 1",
   "costLabel": "Open Source / €0",
-  "status": "STANDARDIZIERT",
+  "status": "INDEXIERT",
   "overview": "Leistungsstarkes Open-Source-CFD-Solver-Framework für numerische Strömungsmechanik in Aerodynamik und Thermodynamik.",
   "features": [
     {

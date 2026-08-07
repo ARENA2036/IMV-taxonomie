@@ -10,7 +10,7 @@
   "url": "https://cesium.com",
   "tier": "Tier 1",
   "costLabel": "≤ €30k",
-  "status": "STANDARDIZIERT",
+  "status": "INDEXIERT",
   "overview": "Offene Plattform zum Streaming riesiger 3D-Geodaten und 3D-Tiles-Datensätze in Webbrowser und Echtzeit-Engines.",
   "features": [
     {

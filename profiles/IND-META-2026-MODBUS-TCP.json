@@ -10,7 +10,7 @@
   "url": "https://modbus.org",
   "tier": "Tier 1",
   "costLabel": "Open Standard / €0",
-  "status": "LEGACY SUPPORT",
+  "status": "INDEXIERT",
   "overview": "Industrie-Kommunikationsprotokoll aus dem Jahr 1979 zum Auslesen von Energiezählern, Temperaturmessern und Alt-SPSen.",
   "features": [
     {

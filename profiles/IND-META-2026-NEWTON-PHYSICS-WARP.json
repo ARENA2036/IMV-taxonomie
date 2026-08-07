@@ -10,7 +10,7 @@
   "url": "https://github.com/nvidia/warp",
   "tier": "Tier 1",
   "costLabel": "Open Source / €0",
-  "status": "EMPFOHLEN",
+  "status": "INDEXIERT",
   "overview": "Differenzierbares GPU-beschleunigtes Physik-Simulationsframework auf NVIDIA Warp-Basis. Speziell entwickelt für Starrkörperdynamik und Roboter-KI-Training in OpenUSD.",
   "features": [
     {

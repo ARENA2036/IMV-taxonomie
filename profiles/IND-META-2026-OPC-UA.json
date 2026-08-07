@@ -10,7 +10,7 @@
   "url": "https://opcfoundation.org",
   "tier": "Tier 1",
   "costLabel": "Open Standard / €0",
-  "status": "CORE OT BACKBONE",
+  "status": "INDEXIERT",
   "overview": "Herstellerunabhängiges Protokoll für Industrie 4.0. Verbindet SPSen, CNCs und Roboter direkt mit dem 3D-Zwilling im Industrial Metaverse über semantische Companion Specifications.",
   "features": [
     {

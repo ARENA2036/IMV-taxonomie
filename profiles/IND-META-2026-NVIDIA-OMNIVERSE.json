@@ -10,7 +10,7 @@
   "url": "https://developer.nvidia.com/omniverse",
   "tier": "Tier 3",
   "costLabel": "> €100k",
-  "status": "TARGET CORE ARCHITECTURE",
+  "status": "INDEXIERT",
   "overview": "Zentrale Simulations- und Aggregationsplattform, die nativ auf OpenUSD und RTX-Raytracing basiert. Dient als primäres Herzstück der Zielarchitektur für den industriellen digitalen Zwilling.",
   "features": [
     {

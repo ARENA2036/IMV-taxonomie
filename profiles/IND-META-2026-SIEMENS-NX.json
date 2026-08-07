@@ -10,7 +10,7 @@
   "url": "https://plm.automation.siemens.com",
   "tier": "Tier 3",
   "costLabel": "> €100k",
-  "status": "STANDARDIZIERT",
+  "status": "INDEXIERT",
   "overview": "High-End MCAD-Plattform für hochkomplexe Baugruppen im Maschinen- und Fahrzeugbau. Dient als primärer Geometrie-Kernel für Automotive-, Luft- und Raumfahrt-OEMs mit nativer Live-Streaming-Anbindung an NVIDIA Omniverse.",
   "features": [
     {

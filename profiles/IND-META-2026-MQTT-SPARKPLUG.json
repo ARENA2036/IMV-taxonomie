@@ -10,7 +10,7 @@
   "url": "https://sparkplug.eclipse.org",
   "tier": "Tier 1",
   "costLabel": "Open Standard / €0",
-  "status": "STANDARDIZIERT",
+  "status": "INDEXIERT",
   "overview": "Leichtgewichtiges Publish/Subscribe-Protokoll. Sparkplug B bietet Zustandskontrolle, Auto-Discovery von Datentags und strukturierte Protobuf-Payloads für IIoT-Netzwerke.",
   "features": [
     {

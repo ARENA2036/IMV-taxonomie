@@ -10,7 +10,7 @@
   "url": "https://github.com/huggingface/lerobot",
   "tier": "Tier 1",
   "costLabel": "Open Source / €0",
-  "status": "EMPFOHLEN",
+  "status": "INDEXIERT",
   "overview": "Open-Source KI-Robotik-Framework für KI-Policy-Training, Imitationslernen und Teleoperation für kostengünstige Industrie-Greifarme.",
   "features": [
     {
