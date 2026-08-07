@@ -585,9 +585,29 @@ document.addEventListener('DOMContentLoaded', () => {
           <div>Ref: <strong>${item.refCode}</strong></div>
           <div>Omniverse: <strong>${compliance.omniverse || 'Ready'}</strong></div>
           <div>Status: <span class="status-pill">${item.status}</span></div>
-        </div>
-      </div>
-    `;
+     `;
+  }
+
+  function showBsModal(el) {
+    if (!el) return;
+    if (window.bootstrap && window.bootstrap.Modal) {
+      const bsModal = window.bootstrap.Modal.getOrCreateInstance(el);
+      bsModal.show();
+    } else {
+      el.classList.add('show');
+      el.style.display = 'block';
+    }
+  }
+
+  function hideBsModal(el) {
+    if (!el) return;
+    if (window.bootstrap && window.bootstrap.Modal) {
+      const bsModal = window.bootstrap.Modal.getOrCreateInstance(el);
+      bsModal.hide();
+    } else {
+      el.classList.remove('show');
+      el.style.display = 'none';
+    }
   }
 
   async function openProfileModal(refCode) {
@@ -600,7 +620,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (modalDirectJsonLink) modalDirectJsonLink.href = `profiles/${profile.refCode}.json`;
 
-    profileModal.classList.add('active');
+    showBsModal(profileModal);
     window.location.hash = `profile/${profile.refCode}`;
   }
 
@@ -622,53 +642,59 @@ document.addEventListener('DOMContentLoaded', () => {
     const selectedProfiles = await Promise.all(refs.map(r => getProfileData(r)));
 
     let html = `
-      <table class="table-view" style="font-size: 11.5px;">
+      <table class="table table-hover align-middle small" style="font-size: 11.5px;">
         <thead>
           <tr>
             <th style="width: 180px;">Parameter</th>
             ${selectedProfiles.map(item => `
               <th>
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                  <strong>${item.name}</strong>
-                  <button class="btn btn-remove-compare" data-ref="${item.refCode}" style="padding: 2px 6px; font-size: 10px;"><i class="fa-solid fa-xmark"></i></button>
-                </div>
-                <div style="font-size: 10px; color: var(--text-muted); font-weight: 500;">${item.vendor}</div>
+                <div class="fw-bold text-dark">${item.name}</div>
+                <div class="text-muted font-monospace small">${item.refCode}</div>
               </th>
             `).join('')}
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Ref Code</strong></td>${selectedProfiles.map(i => `<td><code>${i.refCode}</code></td>`).join('')}</tr>
-          <tr><td><strong>Kategorie</strong></td>${selectedProfiles.map(i => `<td>Kat. ${i.categoryCode} — ${i.categoryName}</td>`).join('')}</tr>
-          <tr><td><strong>Kostengruppe (Tier)</strong></td>${selectedProfiles.map(i => `<td><span class="tier-badge ${i.tier === 'Tier 1' ? 'tier-1' : i.tier === 'Tier 2' ? 'tier-2' : 'tier-3'}">${i.tier} (${i.costLabel || ''})</span></td>`).join('')}</tr>
-          <tr><td><strong>Geschäftsmodell</strong></td>${selectedProfiles.map(i => `<td>${i.businessModel}</td>`).join('')}</tr>
-          <tr><td><strong>Hauptsitz / Land</strong></td>${selectedProfiles.map(i => `<td>${i.hq}</td>`).join('')}</tr>
-          <tr><td><strong>Omniverse Status</strong></td>${selectedProfiles.map(i => `<td><strong>${(i.compliance || {}).omniverse || 'Ready'}</strong></td>`).join('')}</tr>
-          <tr><td><strong>EU Souveränität</strong></td>${selectedProfiles.map(i => `<td>${(i.compliance || {}).sovereignty || 'EU Safe'}</td>`).join('')}</tr>
-          <tr><td><strong>Eingabeformate</strong></td>${selectedProfiles.map(i => `<td>${(i.inputs || []).join(', ')}</td>`).join('')}</tr>
-          <tr><td><strong>Ausgabeformate</strong></td>${selectedProfiles.map(i => `<td>${(i.outputs || []).join(', ')}</td>`).join('')}</tr>
-          <tr><td><strong>Ökosystem-Bridges</strong></td>${selectedProfiles.map(i => `<td>${(i.bridges || []).join(', ')}</td>`).join('')}</tr>
-          <tr><td><strong>Bereitstellung</strong></td>${selectedProfiles.map(i => `<td>${(i.deployment || {}).mode || 'Cloud / On-Prem'}</td>`).join('')}</tr>
-          <tr><td><strong>Einarbeitungsaufwand</strong></td>${selectedProfiles.map(i => `<td>${(i.deployment || {}).effort || 'Mittel'}</td>`).join('')}</tr>
-          <tr><td><strong>Personalbedarf</strong></td>${selectedProfiles.map(i => `<td>${i.staffing || '1x Spezialist'}</td>`).join('')}</tr>
+          <tr>
+            <td><strong>Kategorie</strong></td>
+            ${selectedProfiles.map(item => `<td>${item.categoryCode} ${item.categoryName}</td>`).join('')}
+          </tr>
+          <tr>
+            <td><strong>Vendor / HQ</strong></td>
+            ${selectedProfiles.map(item => `<td>${item.vendor} (${item.hq || 'Global'})</td>`).join('')}
+          </tr>
+          <tr>
+            <td><strong>Investitionsklasse</strong></td>
+            ${selectedProfiles.map(item => `<td><span class="badge bg-secondary">${item.tier}</span></td>`).join('')}
+          </tr>
+          <tr>
+            <td><strong>Status</strong></td>
+            ${selectedProfiles.map(item => `<td><span class="badge bg-light text-dark border">${item.status}</span></td>`).join('')}
+          </tr>
+          <tr>
+            <td><strong>Eingabeformate</strong></td>
+            ${selectedProfiles.map(item => `<td>${(item.inputs || []).join(', ') || 'Standard'}</td>`).join('')}
+          </tr>
+          <tr>
+            <td><strong>Ausgabeformate</strong></td>
+            ${selectedProfiles.map(item => `<td>${(item.outputs || []).join(', ') || 'Standard'}</td>`).join('')}
+          </tr>
+          <tr>
+            <td><strong>Omniverse-Status</strong></td>
+            ${selectedProfiles.map(item => `<td>${(item.compliance && item.compliance.omniverse) || 'Supported'}</td>`).join('')}
+          </tr>
+          <tr>
+            <td><strong>Personalbedarf</strong></td>
+            ${selectedProfiles.map(item => `<td>${item.staffing || '1x Spezialist'}</td>`).join('')}
+          </tr>
         </tbody>
       </table>
     `;
 
     compareModalBody.innerHTML = html;
-
-    compareModalBody.querySelectorAll('.btn-remove-compare').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const ref = btn.getAttribute('data-ref');
-        selectedCompareRefs.delete(ref);
-        updateCompareCounter();
-        renderCompareModal();
-        renderMainView();
-      });
-    });
   }
 
-  function renderMatrixTable() {
+  function renderMatrixView() {
     if (!matrixTableBody) return;
 
     let html = '';
@@ -676,15 +702,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const tierClass = item.tier === 'Tier 1' ? 'tier-1' : item.tier === 'Tier 2' ? 'tier-2' : 'tier-3';
       html += `
         <tr>
-          <td><code style="font-family: var(--font-mono); font-size: 10px;">${item.refCode}</code></td>
+          <td><code class="text-muted">${item.refCode}</code></td>
           <td><strong>${item.categoryCode}</strong></td>
           <td>${item.categoryName}</td>
           <td><strong>${item.name}</strong></td>
           <td>${item.vendor}</td>
           <td><span class="tier-badge ${tierClass}">${item.tier}</span></td>
-          <td><span class="status-pill">${item.status}</span></td>
+          <td><span class="badge bg-light text-dark border">${item.status}</span></td>
           <td>
-            <button class="btn btn-matrix-inspect" data-ref="${item.refCode}" style="padding: 3px 8px; font-size: 10px;">
+            <button class="btn btn-outline-primary btn-sm btn-matrix-inspect" data-ref="${item.refCode}" style="padding: 2px 8px; font-size: 11px;">
               Details →
             </button>
           </td>
@@ -697,7 +723,7 @@ document.addEventListener('DOMContentLoaded', () => {
     matrixTableBody.querySelectorAll('.btn-matrix-inspect').forEach(btn => {
       btn.addEventListener('click', () => {
         const ref = btn.getAttribute('data-ref');
-        if (matrixModal) matrixModal.classList.remove('active');
+        if (matrixModal) hideBsModal(matrixModal);
         openProfileModal(ref);
       });
     });
@@ -742,37 +768,37 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btnCompare && compareModal) {
       btnCompare.addEventListener('click', () => {
         renderCompareModal();
-        compareModal.classList.add('active');
+        showBsModal(compareModal);
       });
     }
 
     if (btnCloseCompareModal && compareModal) {
       btnCloseCompareModal.addEventListener('click', () => {
-        compareModal.classList.remove('active');
+        hideBsModal(compareModal);
       });
     }
 
     if (btnOverview && matrixModal) {
       btnOverview.addEventListener('click', () => {
-        matrixModal.classList.add('active');
+        showBsModal(matrixModal);
       });
     }
 
     if (btnOverviewHero && matrixModal) {
       btnOverviewHero.addEventListener('click', () => {
-        matrixModal.classList.add('active');
+        showBsModal(matrixModal);
       });
     }
 
     if (btnCloseMatrixModal && matrixModal) {
       btnCloseMatrixModal.addEventListener('click', () => {
-        matrixModal.classList.remove('active');
+        hideBsModal(matrixModal);
       });
     }
 
     if (btnCloseProfileModal && profileModal) {
       btnCloseProfileModal.addEventListener('click', () => {
-        profileModal.classList.remove('active');
+        hideBsModal(profileModal);
         window.location.hash = '';
       });
     }
@@ -799,8 +825,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btnMatrixMenu && matrixModal) {
       btnMatrixMenu.addEventListener('click', (e) => {
         e.preventDefault();
-        if (hamburgerDropdown) hamburgerDropdown.classList.remove('active');
-        matrixModal.classList.add('active');
+        showBsModal(matrixModal);
       });
     }
   }

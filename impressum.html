@@ -6,119 +6,117 @@
   <title>Impressum & Rechtliche Hinweise — Industrial Metaverse Taxonomie</title>
   <meta name="description" content="Impressum, Anbieterkennzeichnung und rechtliche Hinweise zur Industrial Metaverse Technologie-Taxonomie des ARENA2036 Forschungscampus (Projekt Reallabor 2.0).">
   
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
   <!-- FontAwesome 6 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./index.css">
 </head>
-<body style="overflow-y: auto; background: var(--bg-subtle);">
+<body class="bg-light text-dark min-vh-100 d-flex flex-column">
 
-  <!-- Minimalist Clean Header Navbar with Hamburger Menu -->
-  <header class="app-navbar">
-    <div class="nav-brand-left">
-      <a href="./index.html" style="display: flex; align-items: center; text-decoration: none;">
-        <div class="brand-logos">
-          <img src="./assets/ARENA2036_combinationmark_orange_black.png" alt="ARENA2036 Logo" class="logo-img" title="ARENA2036 Forschungscampus">
-          <div class="logo-divider"></div>
-          <img src="./assets/Metaverse Logo bunt.svg" alt="Industrial Metaverse Logo" class="logo-img" title="Industrial Metaverse">
-          <div class="logo-divider"></div>
-          <img src="./assets/BaWue_WM_Absenderlogo_rgb_pos_Gefoerdert.svg" alt="Gefördert durch Baden-Württemberg" class="logo-img" title="Gefördert durch Ministerium für Wirtschaft, Arbeit und Tourismus Baden-Württemberg">
-        </div>
+  <!-- Header Navbar with Bootstrap Navbar & Dropdown -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm px-3 flex-shrink-0">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="./index.html">
+        <img src="./assets/ARENA2036_combinationmark_orange_black.png" alt="ARENA2036 Logo" class="logo-img" title="ARENA2036">
+        <div class="logo-divider"></div>
+        <img src="./assets/Metaverse Logo bunt.svg" alt="Industrial Metaverse Logo" class="logo-img" title="Industrial Metaverse">
+        <div class="logo-divider"></div>
+        <img src="./assets/BaWue_WM_Absenderlogo_rgb_pos_Gefoerdert.svg" alt="Gefördert durch Baden-Württemberg" class="logo-img" title="Ministerium BW">
       </a>
-    </div>
 
-    <!-- Centered Header Title -->
-    <div class="nav-title-centered">
-      <h1 class="centered-header-title">Industrial Metaverse Impressum & Rechtliches</h1>
-    </div>
+      <!-- Centered Header Title -->
+      <span class="navbar-text fw-black text-dark fs-6 d-none d-md-block mx-auto text-truncate" style="max-width: 45%;">
+        Industrial Metaverse Impressum & Rechtliches
+      </span>
 
-    <div class="nav-actions">
-      <!-- Startseite Button -->
-      <a href="./index.html" class="btn"><i class="fa-solid fa-house"></i> Startseite</a>
+      <div class="d-flex align-items-center gap-2">
+        <a href="./index.html" class="btn btn-outline-secondary btn-sm">
+          <i class="fa-solid fa-house me-1"></i> Startseite
+        </a>
 
-      <!-- Hamburger Menu Button & Dropdown Container -->
-      <div class="hamburger-menu-container">
-        <button class="btn btn-icon" id="hamburgerBtn" title="Menü öffnen"><i class="fa-solid fa-bars"></i></button>
-
-        <div class="hamburger-dropdown" id="hamburgerDropdown">
-          <a href="./index.html" class="hamburger-item"><i class="fa-solid fa-house"></i> Startseite</a>
-          <a href="./browser.html" class="hamburger-item"><i class="fa-solid fa-layer-group"></i> Taxonomie Browser</a>
-          <a href="./examples.html" class="hamburger-item"><i class="fa-solid fa-sitemap"></i> Beispiele & Use Cases</a>
-          <a href="./architecture.html" class="hamburger-item"><i class="fa-solid fa-diagram-project"></i> Architektur Spezifikation</a>
-          <div class="hamburger-divider"></div>
-          <a href="./impressum.html" class="hamburger-item"><i class="fa-solid fa-scale-balanced"></i> Impressum & Rechtliches</a>
+        <!-- Hamburger Dropdown Menu -->
+        <div class="dropdown">
+          <button class="btn btn-light btn-sm border" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Menü">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+            <li><a class="dropdown-item" href="./index.html"><i class="fa-solid fa-house text-muted me-2"></i>Startseite</a></li>
+            <li><a class="dropdown-item" href="./browser.html"><i class="fa-solid fa-layer-group text-muted me-2"></i>Taxonomie Browser</a></li>
+            <li><a class="dropdown-item" href="./examples.html"><i class="fa-solid fa-sitemap text-muted me-2"></i>Beispiele & Use Cases</a></li>
+            <li><a class="dropdown-item" href="./architecture.html"><i class="fa-solid fa-diagram-project text-muted me-2"></i>Architektur Spezifikation</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item active bg-primary" href="./impressum.html"><i class="fa-solid fa-scale-balanced me-2"></i>Impressum & Rechtliches</a></li>
+          </ul>
         </div>
       </div>
     </div>
-  </header>
+  </nav>
 
-  <main class="greeter-container" style="max-width: 950px; padding: 40px 20px; margin: 0 auto;">
+  <!-- Main Content Container -->
+  <main class="container py-4 flex-grow-1" style="max-width: 950px;">
     
-    <div style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 12px; padding: 40px; display: flex; flex-direction: column; gap: 28px;">
+    <div class="card border-0 shadow-sm p-4 p-md-5 mb-4">
       
-      <div>
-        <span class="greeter-tag"><i class="fa-solid fa-scale-balanced"></i> Rechtlicher Hinweis & Transparenz</span>
-        <h1 style="font-family: var(--font-heading); font-size: 26px; font-weight: 900; color: var(--text-heading); margin-top: 8px;">
-          Impressum & Zweck der Taxonomie
-        </h1>
+      <div class="mb-4">
+        <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill px-3 py-2 font-monospace mb-2">
+          <i class="fa-solid fa-scale-balanced me-1"></i> Rechtlicher Hinweis & Transparenz
+        </span>
+        <h1 class="h3 fw-black text-dark mt-2 mb-3">Impressum & Zweck der Taxonomie</h1>
       </div>
 
-      <!-- WICHTIGER HINWEIS UND DISCLAIMER BOX -->
-      <div style="background: #FFF7ED; border: 1px solid #FFD8A8; border-left: 4px solid var(--accent-orange); border-radius: 8px; padding: 20px; color: #C2410C;">
-        <h3 style="font-family: var(--font-heading); font-size: 15px; font-weight: 800; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
-          <i class="fa-solid fa-shield-halved"></i> Kein kommerzielles Angebot / Keine Hersteller-Empfehlung
+      <!-- Disclaimer Box -->
+      <div class="card bg-warning-subtle border-start border-4 border-warning p-4 mb-4">
+        <h3 class="h6 fw-bold text-dark mb-2">
+          <i class="fa-solid fa-shield-halved text-warning me-2"></i>Kein kommerzielles Angebot / Keine Hersteller-Empfehlung
         </h3>
-        <p style="font-size: 13px; line-height: 1.6; color: #9A3412;">
+        <p class="small text-secondary mb-2">
           Diese Taxonomie-Aktivität ist ein Arbeitsergebnis im Rahmen des übergeordneten Forschungsprojekts <strong>Reallabor 2.0</strong> am Forschungscampus ARENA2036. Ziel und Zweck ist es, <strong>Erfahrungen, Schnittstellen und Standards</strong> im Bereich des Industrial Metaverse systematisch zu erfassen und aufzubereiten. Es dient als <strong>wissensbasierte Orientierungshilfe für Industrieunternehmen und Anwender</strong>, um Barrieren beim Einstieg in digitale Zwillings-Infrastrukturen abzubauen.
         </p>
-        <p style="font-size: 13px; line-height: 1.6; color: #9A3412; margin-top: 10px; font-weight: 600;">
+        <p class="small fw-bold text-dark m-0">
           ⚠️ Diese Zusammenstellung stellt ausdrücklich KEINE kommerzielle Empfehlung, Bevorzugung, Qualitätsgarantie oder Werbung für die genannten Hersteller, Softwareprodukte oder Dienstleistungen dar. Allfällige Produktbezeichnungen dienen lediglich der objektiven Einordnung im Forschungs-Kontext.
         </p>
       </div>
 
-      <hr style="border: none; border-top: 1px solid var(--border-subtle);">
+      <hr class="my-4 text-muted">
 
-      <!-- Herausgeber & Anbieterkennzeichnung -->
-      <section style="display: flex; flex-direction: column; gap: 12px;">
-        <h2 style="font-family: var(--font-heading); font-size: 18px; font-weight: 800; color: var(--text-heading);">
-          Angaben gemäß § 5 TMG / Herausgeber
-        </h2>
-        <div style="font-size: 13.5px; line-height: 1.6; color: var(--text-body);">
+      <!-- Herausgeber -->
+      <section class="mb-4">
+        <h2 class="h5 fw-bold text-dark mb-3">Angaben gemäß § 5 TMG / Herausgeber</h2>
+        <div class="small text-secondary leading-relaxed">
           <strong>ARENA2036 e.V.</strong><br>
           Forschungscampus ARENA2036 — Projekt Reallabor 2.0<br>
           Pfaffenwaldring 19<br>
           D-70569 Stuttgart<br><br>
           <strong>Telefon:</strong> +49 (0) 711 685-60840<br>
           <strong>E-Mail:</strong> info@arena2036.de<br>
-          <strong>Internet:</strong> <a href="https://www.arena2036.de" target="_blank" style="color: var(--accent-orange); text-decoration: none;">www.arena2036.de</a><br><br>
+          <strong>Internet:</strong> <a href="https://www.arena2036.de" target="_blank" class="text-primary text-decoration-none fw-bold">www.arena2036.de</a><br><br>
           <strong>Vereinsregister:</strong> Amtsgericht Stuttgart, VR 720822<br>
           <strong>Vertreten durch den Vorstand:</strong> Prof. Dr.-Ing. Peter Post (Vorsitzender), Dr.-Ing. Thomas Kathöfer (Geschäftsleiter)
         </div>
       </section>
 
       <!-- Förderung -->
-      <section style="display: flex; flex-direction: column; gap: 12px;">
-        <h2 style="font-family: var(--font-heading); font-size: 18px; font-weight: 800; color: var(--text-heading);">
-          Projektförderung Reallabor 2.0 & Unterstützung
-        </h2>
-        <div style="font-size: 13.5px; line-height: 1.6; color: var(--text-body);">
+      <section class="mb-4">
+        <h2 class="h5 fw-bold text-dark mb-3">Projektförderung Reallabor 2.0 & Unterstützung</h2>
+        <div class="small text-secondary">
           Das übergeordnete Forschungsprojekt <strong>Reallabor 2.0</strong> wird gefördert durch das:<br>
           <strong>Ministerium für Wirtschaft, Arbeit und Tourismus Baden-Württemberg</strong><br>
           Schlossplatz 4 (Neues Schloss), 70173 Stuttgart
         </div>
       </section>
 
-      <!-- Urheberrecht & Haftung -->
-      <section style="display: flex; flex-direction: column; gap: 12px;">
-        <h2 style="font-family: var(--font-heading); font-size: 18px; font-weight: 800; color: var(--text-heading);">
-          Urheberrecht & Haftungsausschluss
-        </h2>
-        <div style="font-size: 13.5px; line-height: 1.6; color: var(--text-body);">
+      <!-- Urheberrecht -->
+      <section>
+        <h2 class="h5 fw-bold text-dark mb-3">Urheberrecht & Haftungsausschluss</h2>
+        <div class="small text-secondary">
           Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Inhalte sind unter der MIT-Lizenz zur freien Wiederverwendung freigegeben. Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
         </div>
       </section>
@@ -126,10 +124,16 @@
     </div>
   </main>
 
-  <footer style="margin: 40px 0 24px 0; font-size: 12px; color: var(--text-muted); text-align: center;">
-    ARENA2036 Industrial Metaverse Taxonomy — <a href="./examples.html" style="color: var(--text-body); font-weight: 600; text-decoration: none;">Use Cases</a> | <a href="./architecture.html" style="color: var(--text-body); font-weight: 600; text-decoration: none;">Architektur</a> | <a href="./browser.html" style="color: var(--text-body); font-weight: 600; text-decoration: none;">Browser</a>
+  <!-- Footer -->
+  <footer class="py-3 text-center small text-muted border-top bg-white">
+    ARENA2036 Industrial Metaverse Taxonomy — 
+    <a href="./examples.html" class="text-muted text-decoration-none font-weight-bold">Use Cases</a> | 
+    <a href="./architecture.html" class="text-muted text-decoration-none font-weight-bold">Architektur</a> | 
+    <a href="./browser.html" class="text-muted text-decoration-none font-weight-bold">Browser</a>
   </footer>
 
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
   <script src="./app.js"></script>
 </body>
 </html>

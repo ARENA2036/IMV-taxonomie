@@ -3,100 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Industrial Metaverse Technologie & Standard Taxonomie — Interaktiver Browser</title>
+  <title>Industrial Metaverse Taxonomie — Interaktiver Browser</title>
   <meta name="description" content="Interaktiver Browser für den Industrial Metaverse Tech Stack. ARENA2036 Forschungs-Taxonomie im Projekt Reallabor 2.0.">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   
   <!-- FontAwesome 6 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./index.css">
 </head>
-<body style="overflow: hidden;">
+<body class="bg-light text-dark d-flex flex-column vh-100 overflow-hidden">
 
-  <!-- Minimalist Clean Header Navbar with Hamburger Menu -->
-  <header class="app-navbar">
-    <div class="nav-brand-left">
-      <a href="./index.html" style="display: flex; align-items: center; text-decoration: none;">
-        <div class="brand-logos">
-          <img src="./assets/ARENA2036_combinationmark_orange_black.png" alt="ARENA2036 Logo" class="logo-img" title="ARENA2036 Forschungscampus">
-          <div class="logo-divider"></div>
-          <img src="./assets/Metaverse Logo bunt.svg" alt="Industrial Metaverse Logo" class="logo-img" title="Industrial Metaverse">
-          <div class="logo-divider"></div>
-          <img src="./assets/BaWue_WM_Absenderlogo_rgb_pos_Gefoerdert.svg" alt="Gefördert durch Baden-Württemberg" class="logo-img" title="Gefördert durch Ministerium für Wirtschaft, Arbeit und Tourismus Baden-Württemberg">
-        </div>
+  <!-- Header Navbar with Bootstrap Navbar & Dropdown -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm px-3 flex-shrink-0">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="./index.html">
+        <img src="./assets/ARENA2036_combinationmark_orange_black.png" alt="ARENA2036 Logo" class="logo-img" title="ARENA2036">
+        <div class="logo-divider"></div>
+        <img src="./assets/Metaverse Logo bunt.svg" alt="Industrial Metaverse Logo" class="logo-img" title="Industrial Metaverse">
+        <div class="logo-divider"></div>
+        <img src="./assets/BaWue_WM_Absenderlogo_rgb_pos_Gefoerdert.svg" alt="Gefördert durch Baden-Württemberg" class="logo-img" title="Ministerium BW">
       </a>
-    </div>
 
-    <!-- Centered Non-Overlapping Responsive Title -->
-    <div class="nav-title-centered">
-      <h1 class="centered-header-title">Industrial Metaverse Taxonomie</h1>
-    </div>
+      <!-- Centered Non-Overlapping Header Title -->
+      <span class="navbar-text fw-black text-dark fs-6 d-none d-md-block mx-auto text-truncate" style="max-width: 40%;">
+        Industrial Metaverse Taxonomie
+      </span>
 
-    <div class="nav-actions">
-      <!-- Compare Button (Visible when technologies are selected) -->
-      <button class="btn" id="btnCompare" style="display: none;"><i class="fa-solid fa-code-compare"></i> Vergleichen (<span id="compareCount">0</span>)</button>
+      <!-- Action Buttons & Hamburger Menu -->
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn btn-outline-primary btn-sm" id="btnCompare" style="display: none;">
+          <i class="fa-solid fa-code-compare me-1"></i> Vergleichen (<span id="compareCount">0</span>)
+        </button>
 
-      <!-- Startseite Button -->
-      <a href="./index.html" class="btn"><i class="fa-solid fa-house"></i> Startseite</a>
+        <a href="./index.html" class="btn btn-outline-secondary btn-sm">
+          <i class="fa-solid fa-house me-1"></i> Startseite
+        </a>
 
-      <!-- Hamburger Menu Button & Dropdown Container -->
-      <div class="hamburger-menu-container">
-        <button class="btn btn-icon" id="hamburgerBtn" title="Menü öffnen"><i class="fa-solid fa-bars"></i></button>
-
-        <div class="hamburger-dropdown" id="hamburgerDropdown">
-          <a href="./index.html" class="hamburger-item"><i class="fa-solid fa-house"></i> Startseite</a>
-          <a href="./browser.html" class="hamburger-item"><i class="fa-solid fa-layer-group"></i> Taxonomie Browser</a>
-          <a href="./examples.html" class="hamburger-item"><i class="fa-solid fa-sitemap"></i> Beispiele & Use Cases</a>
-          <a href="./architecture.html" class="hamburger-item"><i class="fa-solid fa-diagram-project"></i> Architektur Spezifikation</a>
-          <button class="hamburger-item" id="btnMatrixMenu"><i class="fa-solid fa-table-cells"></i> Vollständige Matrix Index</button>
-          <div class="hamburger-divider"></div>
-          <a href="./impressum.html" class="hamburger-item"><i class="fa-solid fa-scale-balanced"></i> Impressum & Rechtliches</a>
+        <!-- Hamburger Dropdown Menu -->
+        <div class="dropdown">
+          <button class="btn btn-light btn-sm border" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Menü">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+            <li><a class="dropdown-item" href="./index.html"><i class="fa-solid fa-house text-muted me-2"></i>Startseite</a></li>
+            <li><a class="dropdown-item active bg-primary" href="./browser.html"><i class="fa-solid fa-layer-group me-2"></i>Taxonomie Browser</a></li>
+            <li><a class="dropdown-item" href="./examples.html"><i class="fa-solid fa-sitemap text-muted me-2"></i>Beispiele & Use Cases</a></li>
+            <li><a class="dropdown-item" href="./architecture.html"><i class="fa-solid fa-diagram-project text-muted me-2"></i>Architektur Spezifikation</a></li>
+            <li><button class="dropdown-item" id="btnMatrixMenu"><i class="fa-solid fa-table-cells text-muted me-2"></i>Vollständige Matrix Index</button></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="./impressum.html"><i class="fa-solid fa-scale-balanced text-muted me-2"></i>Impressum & Rechtliches</a></li>
+          </ul>
         </div>
       </div>
     </div>
-  </header>
+  </nav>
 
-  <!-- Application Layout: Sidebar + Viewport -->
-  <div class="app-layout">
+  <!-- Application Layout: Sidebar + Main Content -->
+  <div class="d-flex flex-grow-1 overflow-hidden">
     
-    <!-- Sidebar: 11 Categories Index (5 Schichten) -->
-    <aside class="sidebar">
-      <div class="sidebar-header container-header-bar">
-        <div class="sidebar-title"><i class="fa-solid fa-list-ul" style="color: var(--accent-orange);"></i> Index (11 Kat.)</div>
-        <span class="badge" id="totalCountBadge">— Elemente</span>
+    <!-- Sidebar Index -->
+    <aside class="bg-white border-end d-flex flex-column" style="width: 280px; flex-shrink: 0;">
+      <div class="p-3 border-bottom d-flex justify-content-between align-items-center bg-light">
+        <span class="fw-bold small"><i class="fa-solid fa-list-ul text-primary me-1"></i> Index (11 Kat.)</span>
+        <span class="badge bg-secondary" id="totalCountBadge">— Elemente</span>
       </div>
-      <div class="category-tree" id="categoryTree">
+      <div class="p-2 overflow-auto flex-grow-1" id="categoryTree">
         <!-- Dynamisch gerendert per app.js -->
       </div>
     </aside>
 
     <!-- Main Viewport Area -->
-    <main class="viewport-area">
+    <main class="flex-grow-1 d-flex flex-column bg-light overflow-hidden">
       
-      <!-- Sticky Control Bar über der Elemente-Liste -->
-      <div class="items-control-bar container-header-bar">
-        <div class="filter-group">
-          <!-- Live Search Input mit perfekter X-Achsen-Ausrichtung -->
-          <div class="search-box">
-            <i class="fa-solid fa-magnifying-glass search-icon"></i>
-            <input type="text" id="searchInput" class="search-input" placeholder="Technologie, Standard, Lizenz oder Vendor suchen..." autocomplete="off">
-            <button class="search-clear-btn" id="searchClearBtn" title="Suche zurücksetzen"><i class="fa-solid fa-xmark"></i></button>
+      <!-- Control Filter Toolbar -->
+      <div class="p-3 bg-white border-bottom d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div class="d-flex align-items-center gap-2 flex-grow-1" style="max-width: 700px;">
+          
+          <!-- Live Search Input -->
+          <div class="input-group input-group-sm">
+            <span class="input-group-text bg-light border-end-0"><i class="fa-solid fa-magnifying-glass text-muted"></i></span>
+            <input type="text" id="searchInput" class="form-control border-start-0" placeholder="Technologie, Standard, Lizenz oder Vendor suchen..." autocomplete="off">
+            <button class="btn btn-outline-secondary" type="button" id="searchClearBtn" title="Zurücksetzen"><i class="fa-solid fa-xmark"></i></button>
           </div>
 
-          <!-- Filter Dropdowns -->
-          <select id="filterTier" class="select-filter" title="Filter nach Kostengruppe (Tier 1-3)">
+          <!-- Tier Filter Select -->
+          <select id="filterTier" class="form-select form-select-sm" style="max-width: 220px;">
             <option value="ALL">Alle Investitionsklassen (Tier 1-3)</option>
             <option value="Tier 1">Tier 1 (≤ €30k / Starter & Open Source)</option>
-            <option value="Tier 2">Tier 2 (≤ €100k / Industrieller Mittelstand)</option>
+            <option value="Tier 2">Tier 2 (≤ €100k / Mittelstand)</option>
             <option value="Tier 3">Tier 3 (> €100k / Enterprise OEM)</option>
           </select>
 
-          <select id="filterStatus" class="select-filter" title="Filter nach Status">
+          <!-- Status Filter Select -->
+          <select id="filterStatus" class="form-select form-select-sm" style="max-width: 160px;">
             <option value="ALL">Alle Status</option>
             <option value="ETABLIERT">ETABLIERT</option>
             <option value="STANDARDIZIERT">STANDARDIZIERT</option>
@@ -105,95 +112,97 @@
           </select>
         </div>
 
-        <div class="view-toggle-group">
-          <button class="view-btn active" id="btnGridMode" title="Rasteransicht"><i class="fa-solid fa-border-all"></i> Raster</button>
-          <button class="view-btn" id="btnListMode" title="Listenansicht"><i class="fa-solid fa-list"></i> Liste</button>
+        <!-- View Mode Toggle -->
+        <div class="btn-group btn-group-sm" role="group">
+          <button type="button" class="btn btn-outline-secondary active" id="btnGridMode" title="Rasteransicht"><i class="fa-solid fa-border-all"></i> Raster</button>
+          <button type="button" class="btn btn-outline-secondary" id="btnListMode" title="Listenansicht"><i class="fa-solid fa-list"></i> Liste</button>
         </div>
       </div>
 
-      <!-- Result Status Bar -->
-      <div class="status-bar" id="statusBar">
-        <span>Zeige alle <strong id="totalTechCount">—</strong> Technologien in <strong id="totalCatCount">—</strong> Kategorien</span>
+      <!-- Result Status Strip -->
+      <div class="px-3 py-2 bg-light border-bottom small text-muted" id="statusBar">
+        Zeige alle <strong id="totalTechCount">—</strong> Technologien in <strong id="totalCatCount">—</strong> Kategorien
       </div>
 
-      <!-- Grid/List Items Container -->
-      <div class="items-container grid-view-mode" id="itemsContainer">
+      <!-- Items Grid/List Container -->
+      <div class="p-3 overflow-auto flex-grow-1" id="itemsContainer">
         <!-- Dynamisch gerendert via app.js -->
       </div>
 
     </main>
   </div>
 
-  <!-- Profil Detail Modal -->
-  <div class="modal-overlay" id="profileModal">
-    <div class="modal-content" style="max-width: 1200px;">
-      <div class="modal-header">
-        <div class="app-brand">
-          <i class="fa-solid fa-cube" style="color: var(--accent-orange); font-size: 20px;"></i>
-          <h2 class="slide-title" id="modalProfileTitle" style="font-size: 16px;">Technologie-Profil Details</h2>
+  <!-- Profile Detail Modal -->
+  <div class="modal fade" id="profileModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" id="modalProfileTitle"><i class="fa-solid fa-cube text-primary me-2"></i>Technologie-Profil Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button>
         </div>
-        <button class="btn btn-icon" id="btnCloseProfileModal" title="Schließen"><i class="fa-solid fa-xmark"></i></button>
-      </div>
-      <div class="modal-body" id="modalProfileBody">
-        <!-- Dynamisch gerendert via app.js -->
-      </div>
-      <div class="modal-footer" style="display: flex; justify-content: space-between; align-items: center;">
-        <span class="text-muted" style="font-size: 12px;">ARENA2036 Industrial Metaverse Taxonomy</span>
-        <a id="modalDirectJsonLink" href="#" target="_blank" class="btn" style="font-size: 12px;">
-          <i class="fa-solid fa-code"></i> JSON Profil Quelltext
-        </a>
+        <div class="modal-body" id="modalProfileBody">
+          <!-- Dynamisch gerendert via app.js -->
+        </div>
+        <div class="modal-footer justify-content-between">
+          <span class="small text-muted">ARENA2036 Industrial Metaverse Taxonomy</span>
+          <a id="modalDirectJsonLink" href="#" target="_blank" class="btn btn-outline-secondary btn-sm">
+            <i class="fa-solid fa-code me-1"></i> JSON Quelltext
+          </a>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- Compare Modal -->
-  <div class="modal-overlay" id="compareModal">
-    <div class="modal-content" style="max-width: 1300px;">
-      <div class="modal-header">
-        <div class="app-brand">
-          <i class="fa-solid fa-code-compare" style="color: var(--accent-orange); font-size: 20px;"></i>
-          <h2 class="slide-title" style="font-size: 16px;">Technologie-Vergleich (Gegenüberstellung)</h2>
+  <div class="modal fade" id="compareModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold"><i class="fa-solid fa-code-compare text-primary me-2"></i>Technologie-Vergleich (Gegenüberstellung)</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button>
         </div>
-        <button class="btn btn-icon" id="btnCloseCompareModal" title="Schließen"><i class="fa-solid fa-xmark"></i></button>
-      </div>
-      <div class="modal-body" id="compareModalBody" style="overflow-x: auto;">
-        <!-- Dynamisch gerendert via app.js -->
+        <div class="modal-body" id="compareModalBody">
+          <!-- Dynamisch gerendert via app.js -->
+        </div>
       </div>
     </div>
   </div>
 
   <!-- Matrix Modal -->
-  <div class="modal-overlay" id="matrixModal">
-    <div class="modal-content" style="max-width: 1400px; max-height: 90vh;">
-      <div class="modal-header">
-        <div class="app-brand">
-          <i class="fa-solid fa-table-cells" style="color: var(--accent-orange); font-size: 20px;"></i>
-          <h2 class="slide-title" style="font-size: 16px;">Vollständige Taxonomie Evaluierungs-Matrix</h2>
+  <div class="modal fade" id="matrixModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold"><i class="fa-solid fa-table-cells text-primary me-2"></i>Vollständige Taxonomie Evaluierungs-Matrix</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button>
         </div>
-        <button class="btn btn-icon" id="btnCloseMatrixModal" title="Schließen"><i class="fa-solid fa-xmark"></i></button>
-      </div>
-      <div class="modal-body" style="overflow: auto; max-height: 75vh;">
-        <table class="matrix-table" style="width: 100%; border-collapse: collapse; font-size: 12px;">
-          <thead>
-            <tr style="background: var(--bg-subtle); border-bottom: 2px solid var(--border-subtle); text-align: left;">
-              <th style="padding: 10px;">Ref Code</th>
-              <th style="padding: 10px;">Kategorie</th>
-              <th style="padding: 10px;">Technologie Name</th>
-              <th style="padding: 10px;">Vendor</th>
-              <th style="padding: 10px;">Tier</th>
-              <th style="padding: 10px;">Kostengruppe</th>
-              <th style="padding: 10px;">Status</th>
-              <th style="padding: 10px;">Aktion</th>
-            </tr>
-          </thead>
-          <tbody id="matrixTableBody">
-            <!-- Dynamisch gerendert via app.js -->
-          </tbody>
-        </table>
+        <div class="modal-body">
+          <div class="table-responsive">
+            <table class="table table-hover align-middle small">
+              <thead class="table-light">
+                <tr>
+                  <th>Ref Code</th>
+                  <th>Kategorie</th>
+                  <th>Technologie Name</th>
+                  <th>Vendor</th>
+                  <th>Tier</th>
+                  <th>Kostengruppe</th>
+                  <th>Status</th>
+                  <th>Aktion</th>
+                </tr>
+              </thead>
+              <tbody id="matrixTableBody">
+                <!-- Dynamisch gerendert via app.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
   <script src="./data/index_data.js"></script>
   <script src="./app.js"></script>
 </body>

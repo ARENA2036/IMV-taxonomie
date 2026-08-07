@@ -6,13 +6,16 @@
   <title>Technische Architektur & System-Spezifikation — Industrial Metaverse Taxonomie</title>
   <meta name="description" content="Technische Architektur-Spezifikation für die Industrial Metaverse Technologie-Taxonomie. 5-Schichten Modell im Projekt Reallabor 2.0 am Forschungscampus ARENA2036.">
   
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
   <!-- FontAwesome 6 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./index.css">
 
@@ -20,77 +23,79 @@
   <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
   <script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
 </head>
-<body style="overflow-y: auto; background: var(--bg-subtle);">
+<body class="bg-light text-dark min-vh-100 d-flex flex-column">
 
-  <!-- Minimalist Clean Header Navbar with Hamburger Menu -->
-  <header class="app-navbar">
-    <div class="nav-brand-left">
-      <a href="./index.html" style="display: flex; align-items: center; text-decoration: none;">
-        <div class="brand-logos">
-          <img src="./assets/ARENA2036_combinationmark_orange_black.png" alt="ARENA2036 Logo" class="logo-img" title="ARENA2036 Forschungscampus">
-          <div class="logo-divider"></div>
-          <img src="./assets/Metaverse Logo bunt.svg" alt="Industrial Metaverse Logo" class="logo-img" title="Industrial Metaverse">
-          <div class="logo-divider"></div>
-          <img src="./assets/BaWue_WM_Absenderlogo_rgb_pos_Gefoerdert.svg" alt="Gefördert durch Baden-Württemberg" class="logo-img" title="Gefördert durch Ministerium für Wirtschaft, Arbeit und Tourismus Baden-Württemberg">
-        </div>
+  <!-- Header Navbar with Bootstrap Navbar & Dropdown -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm px-3 flex-shrink-0">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="./index.html">
+        <img src="./assets/ARENA2036_combinationmark_orange_black.png" alt="ARENA2036 Logo" class="logo-img" title="ARENA2036">
+        <div class="logo-divider"></div>
+        <img src="./assets/Metaverse Logo bunt.svg" alt="Industrial Metaverse Logo" class="logo-img" title="Industrial Metaverse">
+        <div class="logo-divider"></div>
+        <img src="./assets/BaWue_WM_Absenderlogo_rgb_pos_Gefoerdert.svg" alt="Gefördert durch Baden-Württemberg" class="logo-img" title="Ministerium BW">
       </a>
-    </div>
 
-    <!-- Centered Header Title -->
-    <div class="nav-title-centered">
-      <h1 class="centered-header-title">Industrial Metaverse System-Architektur</h1>
-    </div>
+      <!-- Centered Header Title -->
+      <span class="navbar-text fw-black text-dark fs-6 d-none d-md-block mx-auto text-truncate" style="max-width: 45%;">
+        Industrial Metaverse System-Architektur
+      </span>
 
-    <div class="nav-actions">
-      <!-- Startseite Button -->
-      <a href="./index.html" class="btn"><i class="fa-solid fa-house"></i> Startseite</a>
+      <div class="d-flex align-items-center gap-2">
+        <a href="./index.html" class="btn btn-outline-secondary btn-sm">
+          <i class="fa-solid fa-house me-1"></i> Startseite
+        </a>
 
-      <!-- Hamburger Menu Button & Dropdown Container -->
-      <div class="hamburger-menu-container">
-        <button class="btn btn-icon" id="hamburgerBtn" title="Menü öffnen"><i class="fa-solid fa-bars"></i></button>
-
-        <div class="hamburger-dropdown" id="hamburgerDropdown">
-          <a href="./index.html" class="hamburger-item"><i class="fa-solid fa-house"></i> Startseite</a>
-          <a href="./browser.html" class="hamburger-item"><i class="fa-solid fa-layer-group"></i> Taxonomie Browser</a>
-          <a href="./examples.html" class="hamburger-item"><i class="fa-solid fa-sitemap"></i> Beispiele & Use Cases</a>
-          <a href="./architecture.html" class="hamburger-item"><i class="fa-solid fa-diagram-project"></i> Architektur Spezifikation</a>
-          <div class="hamburger-divider"></div>
-          <a href="./impressum.html" class="hamburger-item"><i class="fa-solid fa-scale-balanced"></i> Impressum & Rechtliches</a>
+        <!-- Hamburger Dropdown Menu -->
+        <div class="dropdown">
+          <button class="btn btn-light btn-sm border" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Menü">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+            <li><a class="dropdown-item" href="./index.html"><i class="fa-solid fa-house text-muted me-2"></i>Startseite</a></li>
+            <li><a class="dropdown-item" href="./browser.html"><i class="fa-solid fa-layer-group text-muted me-2"></i>Taxonomie Browser</a></li>
+            <li><a class="dropdown-item" href="./examples.html"><i class="fa-solid fa-sitemap text-muted me-2"></i>Beispiele & Use Cases</a></li>
+            <li><a class="dropdown-item active bg-primary" href="./architecture.html"><i class="fa-solid fa-diagram-project me-2"></i>Architektur Spezifikation</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="./impressum.html"><i class="fa-solid fa-scale-balanced text-muted me-2"></i>Impressum & Rechtliches</a></li>
+          </ul>
         </div>
       </div>
     </div>
-  </header>
+  </nav>
 
-  <main class="greeter-container" style="max-width: 1050px; padding: 40px 20px; margin: 0 auto;">
+  <!-- Main Content Container -->
+  <main class="container py-4 flex-grow-1" style="max-width: 1050px;">
     
-    <div style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 12px; padding: 40px; display: flex; flex-direction: column; gap: 32px;">
+    <div class="card border-0 shadow-sm p-4 p-md-5 mb-4">
       
-      <div>
-        <span class="greeter-tag"><i class="fa-solid fa-flask"></i> Reallabor 2.0 Spezifikation — ARENA2036</span>
-        <h1 style="font-family: var(--font-heading); font-size: 28px; font-weight: 900; color: var(--text-heading); margin-top: 8px;">
-          Modulare Industrial Metaverse Ziel-Architektur
-        </h1>
-        <p style="font-size: 14.5px; line-height: 1.6; color: var(--text-body); margin-top: 12px;">
+      <!-- Title Block -->
+      <div class="mb-4">
+        <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill px-3 py-2 font-monospace mb-2">
+          <i class="fa-solid fa-flask me-1"></i> Reallabor 2.0 Spezifikation — ARENA2036
+        </span>
+        <h1 class="h3 fw-black text-dark mt-2 mb-3">Modulare Industrial Metaverse Ziel-Architektur</h1>
+        <p class="text-secondary lead fs-6 mb-0">
           Dieses Framework ist eine <strong>Technologie-, Produkt- und Protokoll-Taxonomie</strong>, konzipiert für den modularen Aufbau einer <strong>Industrial Metaverse Architektur</strong> nach dem <strong>Baukastenprinzip (Composite Principle)</strong>. Es zeigt Unternehmen, wie bestehende Altanlagen (Brownfield) risikofrei in moderne digitale Zwillinge integriert werden.
         </p>
       </div>
 
-      <!-- Heterogenität, Skalierbarkeit & Baukastenprinzip Box -->
-      <div style="background: #FAFAFA; border: 1px solid var(--border-subtle); border-left: 4px solid var(--accent-orange); border-radius: 8px; padding: 24px;">
-        <h3 style="font-family: var(--font-heading); font-size: 16px; font-weight: 800; color: var(--text-heading); margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
-          <i class="fa-solid fa-cubes" style="color: var(--accent-orange);"></i> Heterogenität, Skalierbarkeit & Investitionsschutz
+      <!-- Heterogenität Box -->
+      <div class="card bg-light border-start border-4 border-primary p-4 mb-4">
+        <h3 class="h6 fw-bold text-dark mb-2">
+          <i class="fa-solid fa-cubes text-primary me-2"></i>Heterogenität, Skalierbarkeit & Investitionsschutz
         </h3>
-        <p style="font-size: 13.5px; line-height: 1.6; color: var(--text-body);">
-          Aufgrund der stark unterschiedlichen Anwendungsanforderungen, bestehenden IT/OT-Altsysteme und Budgetgrenzen in Industrieunternehmen existiert keine „One-Size-Fits-All“-Monolith-Lösung. Spezifische Ziel-Architekturen werden <strong>komponiert</strong> — von den konkreten Anwendungsanforderungen im Shopfloor bis hin zur modular zusammensetzbaren digitalen Infrastruktur. Dies ermöglicht den schrittweisen Einstieg mit **garantiertem Investitionsschutz** und schützt vor teurem Vendor Lock-in.
+        <p class="small text-secondary m-0">
+          Aufgrund der stark unterschiedlichen Anwendungsanforderungen, bestehenden IT/OT-Altsysteme und Budgetgrenzen in Industrieunternehmen existiert keine „One-Size-Fits-All“-Monolith-Lösung. Spezifische Ziel-Architekturen werden <strong>komponiert</strong> — von den konkreten Anwendungsanforderungen im Shopfloor bis hin zur modular zusammensetzbaren digitalen Infrastruktur. Dies ermöglicht den schrittweisen Einstieg mit <strong>garantiertem Investitionsschutz</strong> und schützt vor teurem Vendor Lock-in.
         </p>
       </div>
 
       <!-- Diagram Block: 5 Schichten Datenfluss -->
-      <div>
-        <h2 style="font-family: var(--font-heading); font-size: 18px; font-weight: 800; color: var(--text-heading); margin-bottom: 16px;">
-          <i class="fa-solid fa-network-wired" style="color: var(--accent-orange);"></i> 5-Schichten Daten- & Prozessfluss
+      <div class="mb-4">
+        <h2 class="h5 fw-bold text-dark mb-3">
+          <i class="fa-solid fa-network-wired text-primary me-2"></i>5-Schichten Daten- & Prozessfluss
         </h2>
-        <div class="mermaid" style="background: #FAFAFA; padding: 20px; border-radius: 8px; border: 1px solid var(--border-subtle);">
+        <div class="mermaid bg-light p-3 rounded border text-center">
 graph BT
     classDef s1 fill:#EFF6FF,stroke:#BFDBFE,color:#1E3A8A;
     classDef s2 fill:#F0FDF4,stroke:#BBF7D0,color:#14532D;
@@ -114,48 +119,46 @@ graph BT
 
       <!-- Detaillierte Schichten-Beschreibung -->
       <div>
-        <h2 style="font-family: var(--font-heading); font-size: 18px; font-weight: 800; color: var(--text-heading); margin-bottom: 16px;">
-          Detaillierte Aufschlüsselung der 5 Empfehlungsschichten
-        </h2>
+        <h2 class="h5 fw-bold text-dark mb-3">Detaillierte Aufschlüsselung der 5 Empfehlungsschichten</h2>
 
-        <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div class="d-flex flex-column gap-3">
           
-          <div style="border: 1px solid var(--border-subtle); border-radius: 8px; padding: 20px; background: #FFFFFF;">
-            <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #1E3A8A; text-transform: uppercase;">Schicht 1</div>
-            <h3 style="font-family: var(--font-heading); font-size: 16px; font-weight: 800; color: var(--text-heading); margin-top: 4px;">Erfassung & OT-Datenerfassung</h3>
-            <p style="font-size: 13.5px; line-height: 1.5; color: var(--text-body); margin-top: 8px;">
+          <div class="card border p-3">
+            <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace align-self-start mb-2">Schicht 1</span>
+            <h3 class="h6 fw-bold text-dark m-0">Erfassung & OT-Datenerfassung</h3>
+            <p class="small text-secondary mt-2 mb-0">
               Erfassung der physischen Realität im Shopfloor mittels LiDAR-, Terrestrik- und SLAM-Scannern sowie direkter Abgriff von Sensor- und Steuerungssignalen über OT-Protokolle (OPC UA, MQTT Sparkplug B, IO-Link, Modbus).
             </p>
           </div>
 
-          <div style="border: 1px solid var(--border-subtle); border-radius: 8px; padding: 20px; background: #FFFFFF;">
-            <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #14532D; text-transform: uppercase;">Schicht 2</div>
-            <h3 style="font-family: var(--font-heading); font-size: 16px; font-weight: 800; color: var(--text-heading); margin-top: 4px;">Geometrie & CAD-Pre-Processing</h3>
-            <p style="font-size: 13.5px; line-height: 1.5; color: var(--text-body); margin-top: 8px;">
+          <div class="card border p-3">
+            <span class="badge bg-success-subtle text-success border border-success-subtle font-monospace align-self-start mb-2">Schicht 2</span>
+            <h3 class="h6 fw-bold text-dark m-0">Geometrie & CAD-Pre-Processing</h3>
+            <p class="small text-secondary mt-2 mb-0">
               Aufbereitung, Tessellierung und Konvertierung von MCAD/BIM-Konstruktionsdaten und Punktwolken in universelle 3D-Austauschformate (OpenUSD, STEP AP242, JT ISO 14306, glTF 2.0, E57).
             </p>
           </div>
 
-          <div style="border: 1px solid var(--border-subtle); border-radius: 8px; padding: 20px; background: #FFFFFF;">
-            <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #7C2D12; text-transform: uppercase;">Schicht 3</div>
-            <h3 style="font-family: var(--font-heading); font-size: 16px; font-weight: 800; color: var(--text-heading); margin-top: 4px;">Semantische Middleware & Datenräume</h3>
-            <p style="font-size: 13.5px; line-height: 1.5; color: var(--text-body); margin-top: 8px;">
+          <div class="card border p-3">
+            <span class="badge bg-warning-subtle text-warning border border-warning-subtle font-monospace align-self-start mb-2">Schicht 3</span>
+            <h3 class="h6 fw-bold text-dark m-0">Semantische Middleware & Datenräume</h3>
+            <p class="small text-secondary mt-2 mb-0">
               Verknüpfung von Geometrie und Live-OT-Daten zu einem herstellerunabhängigen digitalen Zwilling. Nutzung der Asset Administration Shell (AAS / Verwaltungsschale) und souveräner Datenräume (Eclipse Dataspace Components EDC) für unternehmensübergreifenden Datenaustausch.
             </p>
           </div>
 
-          <div style="border: 1px solid var(--border-subtle); border-radius: 8px; padding: 20px; background: #FFFFFF;">
-            <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #4C1D95; text-transform: uppercase;">Schicht 4</div>
-            <h3 style="font-family: var(--font-heading); font-size: 16px; font-weight: 800; color: var(--text-heading); margin-top: 4px;">Simulation & Virtuelle Inbetriebnahme (VIBn)</h3>
-            <p style="font-size: 13.5px; line-height: 1.5; color: var(--text-body); margin-top: 8px;">
+          <div class="card border p-3">
+            <span class="badge bg-purple-subtle text-purple border font-monospace align-self-start mb-2" style="background: #F5F3FF; color: #4C1D95; border-color: #DDD6FE;">Schicht 4</span>
+            <h3 class="h6 fw-bold text-dark m-0">Simulation & Virtuelle Inbetriebnahme (VIBn)</h3>
+            <p class="small text-secondary mt-2 mb-0">
               Physikalische, thermodynamische und kinematische Simulation (Hardware-in-the-Loop VIBn, Ansys, ISG-virtuos, NVIDIA Isaac Sim) zur Absicherung von SPS-Steuerungscodes und Anlernen KI-basierter Roboterfähigkeiten vor dem physischen Aufbau.
             </p>
           </div>
 
-          <div style="border: 1px solid var(--border-subtle); border-radius: 8px; padding: 20px; background: #FFFFFF;">
-            <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #7F1D1D; text-transform: uppercase;">Schicht 5</div>
-            <h3 style="font-family: var(--font-heading); font-size: 16px; font-weight: 800; color: var(--text-heading); margin-top: 4px;">Räumliche Immersion & Rendering</h3>
-            <p style="font-size: 13.5px; line-height: 1.5; color: var(--text-body); margin-top: 8px;">
+          <div class="card border p-3">
+            <span class="badge bg-danger-subtle text-danger border border-danger-subtle font-monospace align-self-start mb-2">Schicht 5</span>
+            <h3 class="h6 fw-bold text-dark m-0">Räumliche Immersion & Rendering</h3>
+            <p class="small text-secondary mt-2 mb-0">
               Echtzeit-Visualisierung und kollaborative Interaktion via WebXR, Unreal Engine 5, NVIDIA Omniverse RTX sowie AR/VR-Headsets (Apple Vision Pro, Meta Quest 3, Varjo XR-4) für Werkerführung, Design Reviews und Teleoperation.
             </p>
           </div>
@@ -166,10 +169,16 @@ graph BT
     </div>
   </main>
 
-  <footer style="margin: 40px 0 24px 0; font-size: 12px; color: var(--text-muted); text-align: center;">
-    ARENA2036 Industrial Metaverse Taxonomy — <a href="./examples.html" style="color: var(--text-body); font-weight: 600; text-decoration: none;">Use Cases</a> | <a href="./browser.html" style="color: var(--text-body); font-weight: 600; text-decoration: none;">Browser</a> | <a href="./impressum.html" style="color: var(--text-body); font-weight: 600; text-decoration: none;">Impressum</a>
+  <!-- Footer -->
+  <footer class="py-3 text-center small text-muted border-top bg-white">
+    ARENA2036 Industrial Metaverse Taxonomy — 
+    <a href="./examples.html" class="text-muted text-decoration-none font-weight-bold">Use Cases</a> | 
+    <a href="./browser.html" class="text-muted text-decoration-none font-weight-bold">Browser</a> | 
+    <a href="./impressum.html" class="text-muted text-decoration-none font-weight-bold">Impressum</a>
   </footer>
 
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
   <script src="./app.js"></script>
 </body>
 </html>

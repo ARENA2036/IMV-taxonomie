@@ -6,233 +6,280 @@
   <title>Industrial Metaverse Taxonomie — ARENA2036 Reallabor 2.0</title>
   <meta name="description" content="Offene Forschungs-Taxonomie und Baukasten-Architektur für Industrial Metaverse Technologien, Standards und Protokolle. Projekt Reallabor 2.0 am Forschungscampus ARENA2036.">
   
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
   <!-- FontAwesome 6 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./index.css">
 </head>
-<body style="overflow-y: auto; background: var(--bg-subtle);">
+<body class="bg-light text-dark min-vh-100 d-flex flex-column">
 
-  <!-- Full Canvas Greeter Wrapper -->
-  <div class="canvas-greeter-wrapper">
+  <!-- Main Container Canvas -->
+  <main class="container py-4 flex-grow-1">
     
     <!-- Hero Canvas Card -->
-    <section class="canvas-hero-card">
-      <div style="display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 24px; flex-wrap: wrap;">
-        <!-- Brand Logos -->
-        <div class="brand-logos">
-          <img src="./assets/ARENA2036_combinationmark_orange_black.png" alt="ARENA2036 Logo" class="logo-img" title="ARENA2036 Forschungscampus">
-          <div class="logo-divider"></div>
-          <img src="./assets/Metaverse Logo bunt.svg" alt="Industrial Metaverse Logo" class="logo-img" title="Industrial Metaverse">
-          <div class="logo-divider"></div>
-          <img src="./assets/BaWue_WM_Absenderlogo_rgb_pos_Gefoerdert.svg" alt="Gefördert durch Baden-Württemberg" class="logo-img" title="Gefördert durch Ministerium für Wirtschaft, Arbeit und Tourismus Baden-Württemberg">
-        </div>
-
-        <!-- Project Badge -->
-        <div class="hero-header-badge" style="margin-bottom: 0;">
-          <i class="fa-solid fa-flask"></i> Forschungscampus ARENA2036 • Reallabor 2.0
-        </div>
-      </div>
-
-      <h1 class="hero-canvas-main-title">Industrial Metaverse Taxonomie</h1>
-      
-      <p class="hero-canvas-lead">
-        Die offene Referenz-Taxonomie und Baukasten-Architektur für <strong>Industrie-4.0-Technologien, Standards und Protokolle</strong>. Strukturiert in das <strong>5-Schichten-Modell</strong> des ARENA2036 Forschungscampus liefert diese Plattform unabhängige Antworten für Industrieunternehmen, Fertigungsbetriebe und Systemintegratoren: <strong>Wie erfolgt die Umsetzung? Welche Investitionsrahmen (Tier 1–3) sind zu erwarten? Und welche betrieblichen Nutzenpotenziale entstehen im Werk?</strong>
-      </p>
-
-      <!-- 3 Strategic Value & Operational Benefit Pills -->
-      <div class="hero-roi-pills-row">
-        <div class="roi-pill-card">
-          <div class="roi-pill-title" style="color: #1E3A8A;">
-            <i class="fa-solid fa-cogs" style="color: #2563EB;"></i> 1. Wie umsetzen?
+    <div class="card shadow-sm border-0 mb-4 overflow-hidden">
+      <div class="card-body p-4 p-md-5">
+        
+        <!-- Header Logos & Badge Row -->
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+          <div class="d-flex align-items-center gap-2">
+            <img src="./assets/ARENA2036_combinationmark_orange_black.png" alt="ARENA2036 Logo" class="logo-img" title="ARENA2036 Forschungscampus">
+            <div class="logo-divider"></div>
+            <img src="./assets/Metaverse Logo bunt.svg" alt="Industrial Metaverse Logo" class="logo-img" title="Industrial Metaverse">
+            <div class="logo-divider"></div>
+            <img src="./assets/BaWue_WM_Absenderlogo_rgb_pos_Gefoerdert.svg" alt="Gefördert durch Baden-Württemberg" class="logo-img" title="Gefördert durch Ministerium für Wirtschaft, Arbeit und Tourismus Baden-Württemberg">
           </div>
-          <p class="roi-pill-desc">
-            Schrittweiser Aufbau nach dem <strong>Baukastenprinzip (Composite Principle)</strong>. Reibungslose Einbindung bestehender Altanlagen (Brownfield) & Feldbusse ohne Erneuerungszwang.
-          </p>
+
+          <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill px-3 py-2 font-monospace">
+            <i class="fa-solid fa-flask me-1"></i> Forschungscampus ARENA2036 • Reallabor 2.0
+          </span>
         </div>
 
-        <div class="roi-pill-card">
-          <div class="roi-pill-title" style="color: #C2410C;">
-            <i class="fa-solid fa-coins" style="color: var(--accent-orange);"></i> 2. Wie teuer?
+        <!-- Main Title & Lead Text -->
+        <h1 class="fw-black display-5 text-dark mb-3">Industrial Metaverse Taxonomie</h1>
+        <p class="lead text-secondary mb-4" style="max-width: 950px; font-size: 1.05rem;">
+          Die offene Referenz-Taxonomie und Baukasten-Architektur für <strong>Industrie-4.0-Technologien, Standards und Protokolle</strong>. Strukturiert in das <strong>5-Schichten-Modell</strong> des ARENA2036 Forschungscampus liefert diese Plattform unabhängige Antworten für Industrieunternehmen, Fertigungsbetriebe und Systemintegratoren: <strong>Wie erfolgt die Umsetzung? Welche Investitionsrahmen (Tier 1–3) sind zu erwarten? Und welche betrieblichen Nutzenpotenziale entstehen im Werk?</strong>
+        </p>
+
+        <!-- Strategic 3-ROI Cards -->
+        <div class="row g-3">
+          <div class="col-md-4">
+            <div class="card bg-light border-0 h-100 p-3">
+              <div class="fw-bold text-primary mb-1">
+                <i class="fa-solid fa-cogs me-2"></i>1. Wie umsetzen?
+              </div>
+              <small class="text-muted">
+                Schrittweiser Aufbau nach dem <strong>Baukastenprinzip (Composite Principle)</strong>. Reibungslose Einbindung bestehender Altanlagen (Brownfield) & Feldbusse ohne Erneuerungszwang.
+              </small>
+            </div>
           </div>
-          <p class="roi-pill-desc">
-            Transparente Einstiegshürden von <strong>Tier 1</strong> (≤ €30k / Starter & Open Source) über <strong>Tier 2</strong> (≤ €100k) bis zu OEM-Enterprise-Plattformen (> €100k).
-          </p>
-        </div>
 
-        <div class="roi-pill-card">
-          <div class="roi-pill-title" style="color: #065F46;">
-            <i class="fa-solid fa-chart-line" style="color: #059669;"></i> 3. Betrieblicher Nutzen
+          <div class="col-md-4">
+            <div class="card bg-light border-0 h-100 p-3">
+              <div class="fw-bold text-danger mb-1">
+                <i class="fa-solid fa-coins me-2"></i>2. Wie teuer?
+              </div>
+              <small class="text-muted">
+                Transparente Einstiegshürden von <strong>Tier 1</strong> (≤ €30k / Starter & Open Source) über <strong>Tier 2</strong> (≤ €100k) bis zu OEM-Enterprise-Plattformen (> €100k).
+              </small>
+            </div>
           </div>
-          <p class="roi-pill-desc">
-            Beispielhafte Nutzenpotenziale durch <strong>schnellere Entstörung</strong>, Einsparung bei Audit-Reisen & Vermeidung teurer Layout-Umbaufehler.
-          </p>
-        </div>
-      </div>
-    </section>
 
-    <!-- Full-Width Live Metric Strip -->
-    <section class="canvas-kpi-strip">
-      <div class="canvas-kpi-card">
-        <div class="canvas-kpi-val" id="kpiTotalTools">—</div>
-        <div class="canvas-kpi-lbl">Auditierte Tools</div>
-      </div>
-      <div class="canvas-kpi-card">
-        <div class="canvas-kpi-val" id="kpiTotalUseCases">—</div>
-        <div class="canvas-kpi-lbl">Baukasten Use Cases</div>
-      </div>
-      <div class="canvas-kpi-card">
-        <div class="canvas-kpi-val" id="kpiTotalCategories">—</div>
-        <div class="canvas-kpi-lbl">Technologie Kategorien</div>
-      </div>
-      <div class="canvas-kpi-card">
-        <div class="canvas-kpi-val" id="kpiTotalLayers">5</div>
-        <div class="canvas-kpi-lbl">Stack Schichten</div>
-      </div>
-      <div class="canvas-kpi-card">
-        <div class="canvas-kpi-val" id="kpiTotalTiers">3</div>
-        <div class="canvas-kpi-lbl">Investitionsklassen</div>
-      </div>
-    </section>
+          <div class="col-md-4">
+            <div class="card bg-light border-0 h-100 p-3">
+              <div class="fw-bold text-success mb-1">
+                <i class="fa-solid fa-chart-line me-2"></i>3. Betrieblicher Nutzen
+              </div>
+              <small class="text-muted">
+                Beispielhafte Nutzenpotenziale durch <strong>schnellere Entstörung</strong>, Einsparung bei Audit-Reisen & Vermeidung teurer Layout-Umbaufehler.
+              </small>
+            </div>
+          </div>
+        </div>
 
-    <!-- Expansive Portal Action Cards (2x2 Grid) -->
-    <section class="portal-cards-grid">
-      
-      <!-- Card 1: Browser -->
-      <a href="./browser.html" class="portal-action-card">
-        <div>
-          <div class="portal-card-icon"><i class="fa-solid fa-layer-group"></i></div>
-          <h2 class="portal-card-title" style="margin-top: 14px;">Interaktiven Taxonomie-Browser starten</h2>
-          <p class="portal-card-desc">
-            Erkunden Sie alle auditierten Technologien, Formate und Protokolle. Mit Live-Filter nach Kostengruppen (Tier 1–3), Status und Schichten sowie integriertem Vergleichs-Tool.
-          </p>
-        </div>
-        <div class="portal-card-footer">
-          <span>Browser Öffnen</span> <i class="fa-solid fa-arrow-right"></i>
-        </div>
-      </a>
-
-      <!-- Card 2: Use Cases -->
-      <a href="./examples.html" class="portal-action-card">
-        <div>
-          <div class="portal-card-icon"><i class="fa-solid fa-sitemap"></i></div>
-          <h2 class="portal-card-title" style="margin-top: 14px;">Baukasten-Use-Cases & Abläufe erkunden</h2>
-          <p class="portal-card-desc">
-            Erfahren Sie anhand von 6 praxisnahen Use Cases, wie modulare Digital-Twin-Architekturen Schritt für Schritt komponiert werden — inklusive indikativer betrieblicher Nutzenpotenziale.
-          </p>
-        </div>
-        <div class="portal-card-footer">
-          <span>Use Cases ansehen</span> <i class="fa-solid fa-arrow-right"></i>
-        </div>
-      </a>
-
-      <!-- Card 3: Architecture -->
-      <a href="./architecture.html" class="portal-action-card">
-        <div>
-          <div class="portal-card-icon"><i class="fa-solid fa-diagram-project"></i></div>
-          <h2 class="portal-card-title" style="margin-top: 14px;">5-Schichten Ziel-Architektur Spezifikation</h2>
-          <p class="portal-card-desc">
-            Detaildokumentation des ARENA2036 5-Schichten-Modells (Erfassung, Geometrie, Middleware, Simulation, Immersion) mit Hinweisen zur herstellerunabhängigen Brownfield-Integration.
-          </p>
-        </div>
-        <div class="portal-card-footer">
-          <span>Spezifikation lesen</span> <i class="fa-solid fa-arrow-right"></i>
-        </div>
-      </a>
-
-      <!-- Card 4: Matrix Index Modal Trigger -->
-      <div class="portal-action-card" id="btnOverviewHero">
-        <div>
-          <div class="portal-card-icon"><i class="fa-solid fa-table-cells"></i></div>
-          <h2 class="portal-card-title" style="margin-top: 14px;">Vollständige Evaluierungs-Matrix öffnen</h2>
-          <p class="portal-card-desc">
-            Erhalten Sie eine tabellarische Gesamtübersicht aller Technologien mit direkter Einsicht in RefCodes, Kategorien, Kostengruppen und Schnellzugriff auf Detaildatenblätter.
-          </p>
-        </div>
-        <div class="portal-card-footer">
-          <span>Matrix Übersicht öffnen</span> <i class="fa-solid fa-arrow-right"></i>
-        </div>
       </div>
-
-    </section>
-
-    <!-- Living Document & Legal Disclaimer Banner -->
-    <div style="width: 100%; max-width: 1280px; background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 12px; padding: 20px 24px; display: flex; align-items: center; gap: 16px; box-sizing: border-box;">
-      <i class="fa-solid fa-shield-halved" style="color: var(--accent-orange); font-size: 24px;"></i>
-      <div style="font-size: 12.5px; line-height: 1.55; color: var(--text-body);">
-        <strong>RECHTLICHER HINWEIS (LIVING DOCUMENT & KEINE FINANZBERATUNG):</strong>
-        Diese Taxonomie dient als unabhängige Forschungs-Orientierungshilfe (Research Benchmarks) und stellt ausdrücklich <strong>KEINE direkte Finanz-, Anlage- oder Rechtsberatung</strong> dar. Neue Technologien und Use Cases können direkt via Pull Request auf GitHub eingereicht werden.
-      </div>
-      <a href="https://github.com/ARENA2036/IMV-taxonomie" target="_blank" class="btn" style="white-space: nowrap; font-size: 12px;">
-        <i class="fa-brands fa-github"></i> GitHub Repository
-      </a>
     </div>
 
-  </div>
-
-  <!-- Matrix Modal -->
-  <div class="modal-overlay" id="matrixModal">
-    <div class="modal-content" style="max-width: 1400px; max-height: 90vh;">
-      <div class="modal-header">
-        <div class="app-brand">
-          <i class="fa-solid fa-table-cells" style="color: var(--accent-orange); font-size: 20px;"></i>
-          <h2 class="slide-title" style="font-size: 16px;">Vollständige Taxonomie Evaluierungs-Matrix</h2>
+    <!-- Metric KPI Row -->
+    <div class="row g-3 mb-4">
+      <div class="col">
+        <div class="card border-0 shadow-sm text-center p-3">
+          <div class="fs-2 fw-black text-dark font-monospace" id="kpiTotalTools">—</div>
+          <div class="small fw-bold text-muted text-uppercase">Auditierte Tools</div>
         </div>
-        <button class="btn btn-icon" id="btnCloseMatrixModal" title="Schließen"><i class="fa-solid fa-xmark"></i></button>
       </div>
-      <div class="modal-body" style="overflow: auto; max-height: 75vh;">
-        <table class="matrix-table" style="width: 100%; border-collapse: collapse; font-size: 12px;">
-          <thead>
-            <tr style="background: var(--bg-subtle); border-bottom: 2px solid var(--border-subtle); text-align: left;">
-              <th style="padding: 10px;">Ref Code</th>
-              <th style="padding: 10px;">Kategorie</th>
-              <th style="padding: 10px;">Technologie Name</th>
-              <th style="padding: 10px;">Vendor</th>
-              <th style="padding: 10px;">Tier</th>
-              <th style="padding: 10px;">Kostengruppe</th>
-              <th style="padding: 10px;">Status</th>
-              <th style="padding: 10px;">Aktion</th>
-            </tr>
-          </thead>
-          <tbody id="matrixTableBody">
-            <!-- Dynamisch gerendert via app.js -->
-          </tbody>
-        </table>
+      <div class="col">
+        <div class="card border-0 shadow-sm text-center p-3">
+          <div class="fs-2 fw-black text-dark font-monospace" id="kpiTotalUseCases">—</div>
+          <div class="small fw-bold text-muted text-uppercase">Use Cases</div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-0 shadow-sm text-center p-3">
+          <div class="fs-2 fw-black text-dark font-monospace" id="kpiTotalCategories">—</div>
+          <div class="small fw-bold text-muted text-uppercase">Kategorien</div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-0 shadow-sm text-center p-3">
+          <div class="fs-2 fw-black text-dark font-monospace" id="kpiTotalLayers">5</div>
+          <div class="small fw-bold text-muted text-uppercase">Stack Schichten</div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-0 shadow-sm text-center p-3">
+          <div class="fs-2 fw-black text-dark font-monospace" id="kpiTotalTiers">3</div>
+          <div class="small fw-bold text-muted text-uppercase">Investitionsklassen</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4-Grid Action Portal Cards -->
+    <div class="row g-4 mb-4">
+      
+      <!-- Card 1: Browser -->
+      <div class="col-md-6">
+        <a href="./browser.html" class="card border-0 shadow-sm h-100 text-decoration-none p-4 hover-shadow transition">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div class="bg-primary-subtle text-primary p-3 rounded-3 fs-4">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <h3 class="h5 fw-bold text-dark m-0">Interaktiven Taxonomie-Browser starten</h3>
+          </div>
+          <p class="text-secondary small mb-4">
+            Erkunden Sie alle auditierten Technologien, Formate und Protokolle. Mit Live-Filter nach Kostengruppen (Tier 1–3), Status und Schichten sowie integriertem Vergleichs-Tool.
+          </p>
+          <div class="mt-auto fw-bold text-primary small">
+            Browser Öffnen <i class="fa-solid fa-arrow-right ms-1"></i>
+          </div>
+        </a>
+      </div>
+
+      <!-- Card 2: Use Cases -->
+      <div class="col-md-6">
+        <a href="./examples.html" class="card border-0 shadow-sm h-100 text-decoration-none p-4 hover-shadow transition">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div class="bg-primary-subtle text-primary p-3 rounded-3 fs-4">
+              <i class="fa-solid fa-sitemap"></i>
+            </div>
+            <h3 class="h5 fw-bold text-dark m-0">Baukasten-Use-Cases & Abläufe erkunden</h3>
+          </div>
+          <p class="text-secondary small mb-4">
+            Erfahren Sie anhand von 6 praxisnahen Use Cases, wie modulare Digital-Twin-Architekturen Schritt für Schritt komponiert werden — inklusive indikativer betrieblicher Nutzenpotenziale.
+          </p>
+          <div class="mt-auto fw-bold text-primary small">
+            Use Cases ansehen <i class="fa-solid fa-arrow-right ms-1"></i>
+          </div>
+        </a>
+      </div>
+
+      <!-- Card 3: Architecture -->
+      <div class="col-md-6">
+        <a href="./architecture.html" class="card border-0 shadow-sm h-100 text-decoration-none p-4 hover-shadow transition">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div class="bg-primary-subtle text-primary p-3 rounded-3 fs-4">
+              <i class="fa-solid fa-diagram-project"></i>
+            </div>
+            <h3 class="h5 fw-bold text-dark m-0">5-Schichten Ziel-Architektur Spezifikation</h3>
+          </div>
+          <p class="text-secondary small mb-4">
+            Detaildokumentation des ARENA2036 5-Schichten-Modells (Erfassung, Geometrie, Middleware, Simulation, Immersion) mit Hinweisen zur herstellerunabhängigen Brownfield-Integration.
+          </p>
+          <div class="mt-auto fw-bold text-primary small">
+            Spezifikation lesen <i class="fa-solid fa-arrow-right ms-1"></i>
+          </div>
+        </a>
+      </div>
+
+      <!-- Card 4: Matrix Index Modal Trigger -->
+      <div class="col-md-6">
+        <div class="card border-0 shadow-sm h-100 p-4 hover-shadow transition cursor-pointer" id="btnOverviewHero">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div class="bg-primary-subtle text-primary p-3 rounded-3 fs-4">
+              <i class="fa-solid fa-table-cells"></i>
+            </div>
+            <h3 class="h5 fw-bold text-dark m-0">Vollständige Evaluierungs-Matrix öffnen</h3>
+          </div>
+          <p class="text-secondary small mb-4">
+            Erhalten Sie eine tabellarische Gesamtübersicht aller Technologien mit direkter Einsicht in RefCodes, Kategorien, Kostengruppen und Schnellzugriff auf Detaildatenblätter.
+          </p>
+          <div class="mt-auto fw-bold text-primary small">
+            Matrix Übersicht öffnen <i class="fa-solid fa-arrow-right ms-1"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Living Document Disclaimer Banner -->
+    <div class="card border-0 shadow-sm p-3">
+      <div class="d-flex align-items-center gap-3 flex-wrap">
+        <i class="fa-solid fa-shield-halved text-primary fs-3"></i>
+        <div class="small text-secondary flex-grow-1">
+          <strong>RECHTLICHER HINWEIS (LIVING DOCUMENT & KEINE FINANZBERATUNG):</strong>
+          Diese Taxonomie dient als unabhängige Forschungs-Orientierungshilfe (Research Benchmarks) und stellt ausdrücklich <strong>KEINE direkte Finanz-, Anlage- oder Rechtsberatung</strong> dar. Neue Technologien und Use Cases können direkt via Pull Request auf GitHub eingereicht werden.
+        </div>
+        <a href="https://github.com/ARENA2036/IMV-taxonomie" target="_blank" class="btn btn-outline-secondary btn-sm">
+          <i class="fa-brands fa-github me-1"></i> GitHub Repository
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-3 text-center small text-muted border-top bg-white">
+    ARENA2036 Industrial Metaverse Taxonomy — 
+    <a href="./browser.html" class="text-muted text-decoration-none font-weight-bold">Browser</a> | 
+    <a href="./examples.html" class="text-muted text-decoration-none font-weight-bold">Use Cases</a> | 
+    <a href="./architecture.html" class="text-muted text-decoration-none font-weight-bold">Architektur</a> | 
+    <a href="./impressum.html" class="text-muted text-decoration-none font-weight-bold">Impressum</a>
+  </footer>
+
+  <!-- Matrix Modal (Bootstrap Modal) -->
+  <div class="modal fade" id="matrixModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold"><i class="fa-solid fa-table-cells text-primary me-2"></i>Vollständige Taxonomie Evaluierungs-Matrix</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button>
+        </div>
+        <div class="modal-body">
+          <div class="table-responsive">
+            <table class="table table-hover align-middle small">
+              <thead class="table-light">
+                <tr>
+                  <th>Ref Code</th>
+                  <th>Kategorie</th>
+                  <th>Technologie Name</th>
+                  <th>Vendor</th>
+                  <th>Tier</th>
+                  <th>Kostengruppe</th>
+                  <th>Status</th>
+                  <th>Aktion</th>
+                </tr>
+              </thead>
+              <tbody id="matrixTableBody">
+                <!-- Dynamisch gerendert via app.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- Profil Detail Modal -->
-  <div class="modal-overlay" id="profileModal">
-    <div class="modal-content" style="max-width: 1200px;">
-      <div class="modal-header">
-        <div class="app-brand">
-          <i class="fa-solid fa-cube" style="color: var(--accent-orange); font-size: 20px;"></i>
-          <h2 class="slide-title" id="modalProfileTitle" style="font-size: 16px;">Technologie-Profil Details</h2>
+  <div class="modal fade" id="profileModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" id="modalProfileTitle"><i class="fa-solid fa-cube text-primary me-2"></i>Technologie-Profil Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button>
         </div>
-        <button class="btn btn-icon" id="btnCloseProfileModal" title="Schließen"><i class="fa-solid fa-xmark"></i></button>
-      </div>
-      <div class="modal-body" id="modalProfileBody">
-        <!-- Dynamisch gerendert via app.js -->
-      </div>
-      <div class="modal-footer" style="display: flex; justify-content: space-between; align-items: center;">
-        <span class="text-muted" style="font-size: 12px;">ARENA2036 Industrial Metaverse Taxonomy</span>
-        <a id="modalDirectJsonLink" href="#" target="_blank" class="btn" style="font-size: 12px;">
-          <i class="fa-solid fa-code"></i> JSON Profil Quelltext
-        </a>
+        <div class="modal-body" id="modalProfileBody">
+          <!-- Dynamisch gerendert via app.js -->
+        </div>
+        <div class="modal-footer justify-content-between">
+          <span class="small text-muted">ARENA2036 Industrial Metaverse Taxonomy</span>
+          <a id="modalDirectJsonLink" href="#" target="_blank" class="btn btn-outline-secondary btn-sm">
+            <i class="fa-solid fa-code me-1"></i> JSON Quelltext
+          </a>
+        </div>
       </div>
     </div>
   </div>
 
-  <footer style="margin: 30px 0 24px 0; font-size: 12px; color: var(--text-muted); text-align: center;">
-    ARENA2036 Industrial Metaverse Taxonomy — <a href="./browser.html" style="color: var(--text-body); font-weight: 600; text-decoration: none;">Browser</a> | <a href="./examples.html" style="color: var(--text-body); font-weight: 600; text-decoration: none;">Use Cases</a> | <a href="./architecture.html" style="color: var(--text-body); font-weight: 600; text-decoration: none;">Architektur</a> | <a href="./impressum.html" style="color: var(--text-body); font-weight: 600; text-decoration: none;">Impressum</a>
-  </footer>
-
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
   <script src="./data/index_data.js"></script>
   <script src="./app.js"></script>
 </body>
