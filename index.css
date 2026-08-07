@@ -117,9 +117,34 @@ body {
   padding: 0 28px;
   z-index: 1000;
   flex-shrink: 0;
-  position: sticky;
-  top: 0;
+  position: relative;
   gap: 16px;
+}
+
+.nav-brand-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  z-index: 2;
+}
+
+.nav-title-centered {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.centered-header-title {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--text-heading);
+  letter-spacing: -0.2px;
+  margin: 0;
+  white-space: nowrap;
 }
 
 .app-brand {
@@ -162,44 +187,34 @@ body {
   line-height: 1.2;
 }
 
-.app-subtitle {
-  font-size: 10px;
-  color: var(--accent-orange);
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.repo-branch-badge {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  background: #111827;
-  color: #FFFFFF;
-  padding: 1px 5px;
-  border-radius: 3px;
-}
-
 .nav-actions {
   display: flex;
   align-items: center;
   gap: 10px;
+  z-index: 2;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .search-box {
   position: relative;
-  width: 240px;
+  display: inline-flex;
+  align-items: center;
+  width: 260px;
 }
 
-.search-box i {
+.search-box i.search-icon {
   position: absolute;
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
   color: var(--text-muted);
   font-size: 13px;
+  pointer-events: none;
 }
 
 .search-input {
@@ -207,13 +222,15 @@ body {
   background: var(--bg-subtle);
   border: 1px solid var(--border-subtle);
   border-radius: 6px;
-  padding: 7px 12px 7px 34px;
+  padding: 7px 32px 7px 34px;
   color: var(--text-heading);
   font-size: 12.5px;
   font-weight: 500;
   font-family: var(--font-sans);
   outline: none;
   transition: all 0.15s ease;
+  height: 34px;
+  box-sizing: border-box;
 }
 
 .search-input:focus {

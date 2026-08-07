@@ -1,5 +1,5 @@
 /**
- * Industrial Metaverse Tech Stack Audit 2026 — Pure 100% JSON-Driven Engine
+ * Industrial Metaverse Tech Stack Audit — Pure 100% JSON-Driven Engine
  * GitHub Pages Compatible & Zero-CORS Fallback Protocol
  * 5-Schichten Industrial Metaverse Tech-Stack Architecture
  */
@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     filterAndRender();
     renderMatrixTable();
     setupEventListeners();
+    window.appOpenProfileModal = openProfileModal;
   }
 
   // Load index manifest dynamically via fetch or static fallback

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Industrial Metaverse Taxonomy 2026 — Interaktiver Browser</title>
-  <meta name="description" content="Interaktiver Browser für den Industrial Metaverse Tech Stack 2026. ARENA2036 Forschungs-Taxonomie.">
+  <title>Industrial Metaverse Technologie & Standard Taxonomie — Interaktiver Browser</title>
+  <meta name="description" content="Interaktiver Browser für den Industrial Metaverse Tech Stack. ARENA2036 Forschungs-Taxonomie im Projekt Reallabor 2.0.">
   
   <!-- FontAwesome 6 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -18,27 +18,28 @@
 </head>
 <body style="overflow: hidden;">
 
-  <!-- Minimalist Header Navbar -->
+  <!-- Minimalist Centered Header Navbar -->
   <header class="app-navbar">
-    <div class="app-brand">
+    <div class="nav-brand-left">
       <a href="./index.html" style="display: flex; align-items: center; text-decoration: none;">
         <div class="brand-logos">
           <img src="./assets/ARENA2036_combinationmark_orange_black.png" alt="ARENA2036 Logo" class="logo-img" title="ARENA2036 Forschungscampus">
           <div class="logo-divider"></div>
-          <img src="./assets/Metaverse Logo bunt.svg" alt="Industrial Metaverse Logo" class="logo-img" title="Industrial Metaverse 2026">
+          <img src="./assets/Metaverse Logo bunt.svg" alt="Industrial Metaverse Logo" class="logo-img" title="Industrial Metaverse">
           <div class="logo-divider"></div>
           <img src="./assets/BaWue_WM_Absenderlogo_rgb_pos_Gefoerdert.svg" alt="Gefördert durch Baden-Württemberg" class="logo-img" title="Gefördert durch Ministerium für Wirtschaft, Arbeit und Tourismus Baden-Württemberg">
         </div>
       </a>
-      
-      <div class="app-title-group">
-        <h1 class="app-title">IMV TAXONOMIE 2026</h1>
-        <p class="app-subtitle">ARENA2036 Reallabor 2.0 <span class="repo-branch-badge"><i class="fa-solid fa-code-branch"></i> main</span></p>
-      </div>
+    </div>
+
+    <!-- Centered Descriptive Title (No Subtitle, No Branch Icon) -->
+    <div class="nav-title-centered">
+      <h1 class="centered-header-title">Industrial Metaverse Technologie & Standard Taxonomie</h1>
     </div>
 
     <div class="nav-actions">
       <a href="./index.html" class="btn"><i class="fa-solid fa-house"></i> Startseite</a>
+      <a href="./examples.html" class="btn"><i class="fa-solid fa-sitemap"></i> Use Cases</a>
       <a href="./architecture.html" class="btn"><i class="fa-solid fa-diagram-project"></i> Architektur</a>
       <button class="btn" id="btnOverview"><i class="fa-solid fa-table-cells"></i> Matrix Index</button>
       <button class="btn" id="btnCompare" style="display: none;"><i class="fa-solid fa-code-compare"></i> Vergleichen (<span id="compareCount">0</span>)</button>
@@ -66,7 +67,7 @@
       <!-- Sticky Control Bar über der Elemente-Liste -->
       <div class="items-control-bar container-header-bar">
         <div class="filter-group">
-          <!-- Live Search Input -->
+          <!-- Live Search Input mit perfekter X-Achsen-Ausrichtung -->
           <div class="search-box">
             <i class="fa-solid fa-magnifying-glass search-icon"></i>
             <input type="text" id="searchInput" class="search-input" placeholder="Technologie, Standard, Lizenz oder Vendor suchen..." autocomplete="off">
@@ -98,15 +99,15 @@
 
       <!-- Result Status Bar -->
       <div class="status-bar" id="statusBar">
-        Zeige <strong>91</strong> von 91 auditierte Technologien im Index
+        <span>Zeige alle <strong id="totalTechCount">91</strong> Technologien in <strong id="totalCatCount">11</strong> Kategorien</span>
       </div>
 
-      <!-- Items Grid / List Container -->
-      <div class="items-container" id="itemsContainer">
-        <!-- Gerendert per app.js -->
+      <!-- Grid/List Items Container -->
+      <div class="items-container grid-view-mode" id="itemsContainer">
+        <!-- Dynamisch gerendert via app.js -->
       </div>
+
     </main>
-
   </div>
 
   <!-- Profil Detail Modal -->
@@ -117,79 +118,69 @@
           <i class="fa-solid fa-cube" style="color: var(--accent-orange); font-size: 20px;"></i>
           <h2 class="slide-title" id="modalProfileTitle" style="font-size: 16px;">Technologie-Profil Details</h2>
         </div>
-        <div style="display: flex; gap: 10px;">
-          <a id="modalDirectJsonLink" href="#" target="_blank" class="btn" style="font-size: 11px;"><i class="fa-solid fa-code"></i> JSON Spezifikation</a>
-          <button class="btn" id="btnCloseProfileModal"><i class="fa-solid fa-xmark"></i> Schließen</button>
-        </div>
+        <button class="btn btn-icon" id="btnCloseProfileModal" title="Schließen"><i class="fa-solid fa-xmark"></i></button>
       </div>
       <div class="modal-body" id="modalProfileBody">
-        <!-- Per JS gerendert -->
+        <!-- Dynamisch gerendert via app.js -->
+      </div>
+      <div class="modal-footer" style="display: flex; justify-content: space-between; align-items: center;">
+        <span class="text-muted" style="font-size: 12px;">ARENA2036 Industrial Metaverse Taxonomy</span>
+        <a id="modalDirectJsonLink" href="#" target="_blank" class="btn" style="font-size: 12px;">
+          <i class="fa-solid fa-code"></i> JSON Profil Quelltext
+        </a>
       </div>
     </div>
   </div>
 
-  <!-- Vergleichs Matrix Modal -->
+  <!-- Compare Modal -->
   <div class="modal-overlay" id="compareModal">
-    <div class="modal-content">
+    <div class="modal-content" style="max-width: 1300px;">
       <div class="modal-header">
         <div class="app-brand">
-          <i class="fa-solid fa-code-compare" style="color: var(--accent-orange); font-size: 18px;"></i>
-          <h2 class="slide-title" style="font-size: 16px;">Technologie-Vergleich (Vergleiche ausgewählte Items)</h2>
+          <i class="fa-solid fa-code-compare" style="color: var(--accent-orange); font-size: 20px;"></i>
+          <h2 class="slide-title" style="font-size: 16px;">Technologie-Vergleich (Gegenüberstellung)</h2>
         </div>
-        <button class="btn" id="btnCloseCompareModal"><i class="fa-solid fa-xmark"></i> Schließen</button>
+        <button class="btn btn-icon" id="btnCloseCompareModal" title="Schließen"><i class="fa-solid fa-xmark"></i></button>
       </div>
-      <div class="modal-body" id="compareModalBody">
-        <div style="overflow-x: auto;">
-          <table class="table-view" id="compareTable">
-            <thead id="compareTableHead">
-              <!-- Gerendert per JS -->
-            </thead>
-            <tbody id="compareTableBody">
-              <!-- Gerendert per JS -->
-            </tbody>
-          </table>
-        </div>
+      <div class="modal-body" id="compareModalBody" style="overflow-x: auto;">
+        <!-- Dynamisch gerendert via app.js -->
       </div>
     </div>
   </div>
 
-  <!-- Matrix Index Modal -->
+  <!-- Matrix Modal -->
   <div class="modal-overlay" id="matrixModal">
-    <div class="modal-content">
+    <div class="modal-content" style="max-width: 1400px; max-height: 90vh;">
       <div class="modal-header">
         <div class="app-brand">
-          <i class="fa-solid fa-table-cells" style="color: var(--accent-orange); font-size: 18px;"></i>
-          <h2 class="slide-title" style="font-size: 16px;">Vollständige Taxonomie-Matrix (11 Kategorien)</h2>
+          <i class="fa-solid fa-table-cells" style="color: var(--accent-orange); font-size: 20px;"></i>
+          <h2 class="slide-title" style="font-size: 16px;">Vollständige Taxonomie Evaluierungs-Matrix</h2>
         </div>
-        <button class="btn" id="btnCloseMatrixModal"><i class="fa-solid fa-xmark"></i> Schließen</button>
+        <button class="btn btn-icon" id="btnCloseMatrixModal" title="Schließen"><i class="fa-solid fa-xmark"></i></button>
       </div>
-      <div class="modal-body">
-        <table class="table-view" id="matrixTable">
+      <div class="modal-body" style="overflow: auto; max-height: 75vh;">
+        <table class="matrix-table" style="width: 100%; border-collapse: collapse; font-size: 12px;">
           <thead>
-            <tr>
-              <th>Ref Code</th>
-              <th>Kat. Code</th>
-              <th>Kategorie Name</th>
-              <th>Technologie Name</th>
-              <th>Entwickler / Vendor</th>
-              <th>Kostengruppe</th>
-              <th>Status</th>
-              <th>Aktion</th>
+            <tr style="background: var(--bg-subtle); border-bottom: 2px solid var(--border-subtle); text-align: left;">
+              <th style="padding: 10px;">Ref Code</th>
+              <th style="padding: 10px;">Kategorie</th>
+              <th style="padding: 10px;">Technologie Name</th>
+              <th style="padding: 10px;">Vendor</th>
+              <th style="padding: 10px;">Tier</th>
+              <th style="padding: 10px;">Kostengruppe</th>
+              <th style="padding: 10px;">Status</th>
+              <th style="padding: 10px;">Aktion</th>
             </tr>
           </thead>
           <tbody id="matrixTableBody">
-            <!-- Per JS gerendert -->
+            <!-- Dynamisch gerendert via app.js -->
           </tbody>
         </table>
       </div>
     </div>
   </div>
 
-  <!-- Static Fallback Daten-Skriptdatei -->
   <script src="./data/index_data.js"></script>
-
-  <!-- Anwendungslogik -->
   <script src="./app.js"></script>
-
 </body>
 </html>

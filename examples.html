@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Industrial Metaverse Use Cases & Baukasten-Architekturen — Beispiele</title>
+  <meta name="description" content="6 konkrete Use Cases und modulare Baukasten-Architekturen für das Industrial Metaverse über 5 Schichten und 3 Kostengruppen.">
+  
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./index.css">
+
+  <style>
+    /* Styles specifically tailored for Interactive Flow Diagram Layout */
+    .usecase-section {
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 32px;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    }
+
+    .usecase-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      gap: 16px;
+    }
+
+    .usecase-title-area {
+      flex: 1;
+    }
+
+    .usecase-number-badge {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 4px;
+      background: #111827;
+      color: #FFFFFF;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    .usecase-title {
+      font-family: var(--font-heading);
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--text-heading);
+      margin: 0 0 8px 0;
+    }
+
+    .usecase-desc {
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: var(--text-body);
+      margin: 0;
+    }
+
+    .usecase-goal-box {
+      background: #FAFAFA;
+      border: 1px solid var(--border-subtle);
+      border-left: 3px solid var(--accent-orange);
+      padding: 12px 16px;
+      border-radius: 6px;
+      font-size: 12.5px;
+      color: var(--text-heading);
+      margin-top: 12px;
+    }
+
+    /* Left to Right 5 Layer Flow Container */
+    .flow-diagram-container {
+      background: #FAFAFA;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 24px;
+      margin-top: 24px;
+      overflow-x: auto;
+    }
+
+    .flow-columns-wrapper {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(180px, 1fr));
+      gap: 16px;
+      position: relative;
+      min-width: 900px;
+    }
+
+    .flow-column {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .flow-column-header {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 6px 8px;
+      border-radius: 4px;
+      text-align: center;
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .col-s1 { color: #1E3A8A; border-color: #BFDBFE; background: #EFF6FF; }
+    .col-s2 { color: #14532D; border-color: #BBF7D0; background: #F0FDF4; }
+    .col-s3 { color: #7C2D12; border-color: #FFD8A8; background: #FFF7ED; }
+    .col-s4 { color: #4C1D95; border-color: #DDD6FE; background: #F5F3FF; }
+    .col-s5 { color: #7F1D1D; border-color: #FECACA; background: #FEF2F2; }
+
+    /* Interactive Node Card inside Flow Diagram */
+    .flow-node-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .flow-node-card:hover {
+      border-color: var(--accent-orange);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(255, 80, 0, 0.12);
+    }
+
+    .node-code {
+      font-family: var(--font-mono);
+      font-size: 9.5px;
+      color: var(--text-muted);
+    }
+
+    .node-name {
+      font-family: var(--font-heading);
+      font-size: 12.5px;
+      font-weight: 800;
+      color: var(--text-heading);
+    }
+
+    .node-role {
+      font-size: 11px;
+      color: var(--text-body);
+      line-height: 1.3;
+    }
+
+    .flow-arrow-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-orange);
+      font-size: 14px;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body style="overflow-y: auto; background: var(--bg-subtle);">
+
+  <!-- Minimalist Centered Header Navbar -->
+  <header class="app-navbar">
+    <div class="nav-brand-left">
+      <a href="./index.html" style="display: flex; align-items: center; text-decoration: none;">
+        <div class="brand-logos">
+          <img src="./assets/ARENA2036_combinationmark_orange_black.png" alt="ARENA2036 Logo" class="logo-img" title="ARENA2036 Forschungscampus">
+          <div class="logo-divider"></div>
+          <img src="./assets/Metaverse Logo bunt.svg" alt="Industrial Metaverse Logo" class="logo-img" title="Industrial Metaverse">
+          <div class="logo-divider"></div>
+          <img src="./assets/BaWue_WM_Absenderlogo_rgb_pos_Gefoerdert.svg" alt="Gefördert durch Baden-Württemberg" class="logo-img" title="Gefördert durch Ministerium für Wirtschaft, Arbeit und Tourismus Baden-Württemberg">
+        </div>
+      </a>
+    </div>
+
+    <!-- Centered Header Title -->
+    <div class="nav-title-centered">
+      <h1 class="centered-header-title">Industrial Metaverse Use Cases & Baukasten-Architekturen</h1>
+    </div>
+
+    <div class="nav-actions">
+      <a href="./index.html" class="btn"><i class="fa-solid fa-house"></i> Startseite</a>
+      <a href="./browser.html" class="btn"><i class="fa-solid fa-layer-group"></i> Taxonomie Browser</a>
+      <a href="./architecture.html" class="btn"><i class="fa-solid fa-diagram-project"></i> Architektur</a>
+      <a href="./impressum.html" class="btn"><i class="fa-solid fa-scale-balanced"></i> Impressum</a>
+    </div>
+  </header>
+
+  <main style="max-width: 1200px; padding: 40px 20px; margin: 0 auto;">
+    
+    <!-- Hero Header -->
+    <div style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 12px; padding: 36px; margin-bottom: 32px;">
+      <span class="greeter-tag"><i class="fa-solid fa-flask"></i> Reallabor 2.0 Praxis-Leitfaden — ARENA2036</span>
+      <h1 style="font-family: var(--font-heading); font-size: 26px; font-weight: 900; color: var(--text-heading); margin-top: 8px;">
+        Modulare Anwendungsbeispiele & Baukasten-Kompositionen
+      </h1>
+      <p style="font-size: 14px; line-height: 1.6; color: var(--text-body); margin-top: 12px;">
+        Aufgrund heterogener Anforderungen und Budgetgrenzen in Industrieunternehmen werden Industrial-Metaverse-Architekturen nach dem <strong>Baukastenprinzip (Composite Principle)</strong> zusammengestellt. Die folgenden 6 Use Cases demonstrieren den schrittweisen Daten- und Prozessfluss von Schicht 1 bis Schicht 5 für alle drei Kostengruppen (Tier 1 bis Tier 3).
+      </p>
+      <div style="margin-top: 12px; font-size: 12.5px; color: var(--text-muted); display: flex; align-items: center; gap: 6px;">
+        <i class="fa-solid fa-hand-pointer" style="color: var(--accent-orange);"></i>
+        <span><strong>Interaktiver Hinweis:</strong> Klicken Sie auf eine beliebige Technologie-Karte im Diagramm, um das zugehörige Datenblatt im Detail-Inspector zu öffnen.</span>
+      </div>
+    </div>
+
+    <!-- TIER 1 SECTION -->
+    <div style="margin-bottom: 24px; display: flex; align-items: center; gap: 12px;">
+      <span class="tier-badge tier-1" style="font-size: 12px; padding: 5px 12px;">TIER 1 (≤ €30k / KMU Starter & Quick Wins)</span>
+      <span style="font-size: 13px; color: var(--text-muted);">Niedrige Einstiegshürde, freie Standards & schnelle Wertschöpfung</span>
+    </div>
+
+    <!-- USE CASE 1 -->
+    <div class="usecase-section">
+      <div class="usecase-header">
+        <div class="usecase-title-area">
+          <span class="usecase-number-badge">USE CASE 1</span>
+          <h2 class="usecase-title">Digitales Shopfloor-Incident-Management</h2>
+          <p class="usecase-desc">
+            Schnelle optische Erfassung von Anomalien und Instandhaltungs-Befunden in der Fertigung mittels 360°-Kamera. Die Aufnahmen werden auf der Sphere XG Plattform lokalisiert und automatisiert als Instandhaltungsticket im Enterprise-System (Jira / SAP) angelegt.
+          </p>
+          <div class="usecase-goal-box">
+            🎯 <strong>Ziel & Nutzen:</strong> Reduzierung der Störungsbehebungszeit um bis zu 60% durch präzise 3D-Ortung des Fehlers ohne manuelle Befunddokumentation vor Ort.
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow Diagram Left-to-Right -->
+      <div class="flow-diagram-container">
+        <div class="flow-columns-wrapper">
+          
+          <div class="flow-column">
+            <div class="flow-column-header col-s1">Schicht 1: Erfassung</div>
+            <div class="flow-node-card" onclick="openProfileModal('IND-META-2026-FARO-ORBIS')">
+              <span class="node-code">IND-META-FARO-ORBIS</span>
+              <span class="node-name">FARO Orbis / Matterport</span>
+              <span class="node-role">Mobile 360° LiDAR-Erfassung vor Ort</span>
+            </div>
+          </div>
+
+          <div class="flow-column">
+            <div class="flow-column-header col-s2">Schicht 2: Geometrie</div>
+            <div class="flow-node-card" onclick="openProfileModal('IND-META-2026-E57-POINTCLOUD')">
+              <span class="node-code">IND-META-E57</span>
+              <span class="node-name">E57 / Panorama Scan</span>
+              <span class="node-role">Punktwolken & 360°-Bilddaten-Export</span>
+            </div>
+          </div>
+
+          <div class="flow-column">
+            <div class="flow-column-header col-s3">Schicht 3: Middleware</div>
+            <div class="flow-node-card" onclick="openProfileModal('IND-META-2026-FARO-SPHERE')">
+              <span class="node-code">IND-META-SPHERE-XG</span>
+              <span class="node-name">FARO Sphere XG</span>
+              <span class="node-role">Zentrale Cloud/On-Prem 3D-Plattform</span>
+            </div>
+          </div>
+
+          <div class="flow-column">
+            <div class="flow-column-header col-s4">Schicht 4: Integration</div>
+            <div class="flow-node-card" style="background: #FFFFFF; border: 1px dashed var(--border-subtle); border-radius: 8px; padding: 12px;">
+              <span class="node-code">ENTERPRISE IT</span>
+              <span class="node-name">Jira / SAP PM</span>
+              <span class="node-role">Automatische Ticket- & Auftragserstellung</span>
+            </div>
+          </div>
+
+          <div class="flow-column">
+            <div class="flow-column-header col-s5">Schicht 5: Immersion</div>
+            <div class="flow-node-card" onclick="openProfileModal('IND-META-2026-GLTF-20')">
+              <span class="node-code">IND-META-WEBXR</span>
+              <span class="node-name">Web Browser Inspection</span>
+              <span class="node-role">Interaktive 3D-Befundung am Tablet/PC</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- USE CASE 2 -->
+    <div class="usecase-section">
+      <div class="usecase-header">
+        <div class="usecase-title-area">
+          <span class="usecase-number-badge">USE CASE 2</span>
+          <h2 class="usecase-title">Virtuelle Fabrikbegehung & Asset-Tagging via WebXR</h2>
+          <p class="usecase-desc">
+            Regelmäßige digitale Begehung von Hallenbereichen ohne physisches Reisen. Mittels mobilem SLAM-Scanner erfasste Daten werden über OpenUSD/glTF in einer Eclipse BaSyx Verwaltungsschale (AAS) verankert und im WebXR Browser visualisiert.
+          </p>
+          <div class="usecase-goal-box">
+            🎯 <strong>Ziel & Nutzen:</strong> Ortsunabhängige Audits, Sicherheitsbegehungen und Layout-Reviews im Browser ohne teure XR-Hardware.
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-diagram-container">
+        <div class="flow-columns-wrapper">
+          <div class="flow-column">
+            <div class="flow-column-header col-s1">Schicht 1: Erfassung</div>
+            <div class="flow-node-card" onclick="openProfileModal('IND-META-2026-NAVVIS-VLX3')">
+              <span class="node-code">IND-META-NAVVIS-VLX3</span>
+              <span class="node-name">NavVis VLX 3</span>
+              <span class="node-role">Mobiles SLAM-Laserscanning im Gehen</span>
+            </div>
+          </div>
+
+          <div class="flow-column">
+            <div class="flow-column-header col-s2">Schicht 2: Geometrie</div>
+            <div class="flow-node-card" onclick="openProfileModal('IND-META-2026-OPENUSD')">
+              <span class="node-code">IND-META-OPENUSD</span>
+              <span class="node-name">OpenUSD & glTF 2.0</span>
+              <span class="node-role">Tessellierte 3D-Szenengraph-Struktur</span>
+            </div>
+          </div>
+
+          <div class="flow-column">
+            <div class="flow-column-header col-s3">Schicht 3: Middleware</div>
+            <div class="flow-node-card" onclick="openProfileModal('IND-META-2026-AAS-IEC63278')">
+              <span class="node-code">IND-META-BASYX-AAS</span>
+              <span class="node-name">Eclipse BaSyx AAS</span>
+              <span class="node-role">Verwaltungsschale für Asset-Metadaten</span>
+            </div>
+          </div>
+
+          <div class="flow-column">
+            <div class="flow-column-header col-s4">Schicht 4: Simulation</div>
+            <div class="flow-node-card" onclick="openProfileModal('IND-META-2026-GODOT-WEBXR')">
+              <span class="node-code">IND-META-GODOT</span>
+              <span class="node-name">Godot Engine / Web-Sim</span>
+              <span class="node-role">Leichtgewichtige Interaktionslogik</span>
+            </div>
+          </div>
+
+          <div class="flow-column">
+            <div class="flow-column-header col-s5">Schicht 5: Immersion</div>
+            <div class="flow-node-card" onclick="openProfileModal('IND-META-2026-META-QUEST3')">
+              <span class="node-code">IND-META-WEBXR</span>
+              <span class="node-name">WebXR / Tablet Viewing</span>
+              <span class="node-role">Browserbasierte 3D-Werkbegehung</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIER 2 SECTION -->
+    <div style="margin: 40px 0 24px 0; display: flex; align-items: center; gap: 12px;">
+      <span class="tier-badge tier-2" style="font-size: 12px; padding: 5px 12px;">TIER 2 (≤ €100k / Industrieller Mittelstand)</span>
+      <span style="font-size: 13px; color: var(--text-muted);">Fortgeschrittene Systemintegration, IoT-Echtzeitdaten & CAD-Abgleich</span>
+    </div>
+
+    <!-- USE CASE 3 -->
+    <div class="usecase-section">
+      <div class="usecase-header">
+        <div class="usecase-title-area">
+          <span class="usecase-number-badge" style="background: #1D4ED8;">USE CASE 3</span>
+          <h2 class="usecase-title">AR-gestützte Werkerassistenz mit IoT-Echtzeitdaten</h2>
+          <p class="usecase-desc">
+            Live-Kopplung von Maschinen-Telemetrie aus der SPS über OPC UA in eine Eclipse BaSyx Verwaltungsschale. Die Daten werden im räumlichen Kontext einer AR-Brille (RealWear / Meta Quest 3) direkt an der physischen Anlage eingeblendet.
+          </p>
+          <div class="usecase-goal-box">
+            🎯 <strong>Ziel & Nutzen:</strong> Fehlerminimierung bei der Wartung komplexer Werkzeugmaschinen durch freihändige Schritt-für-Schritt-Anleitung und Live-Sensorwerte.
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-diagram-container">
+        <div class="flow-columns-wrapper">
+          <div class="flow-column">
+            <div class="flow-column-header col-s1">Schicht 1: Erfassung</div>
+            <div class="flow-node-card" onclick="openProfileModal('IND-META-2026-OPC-UA')">
+              <span class="node-code">IND-META-OPC-UA</span>
+              <span class="node-name">OPC UA / MQTT</span>
+              <span class="node-role">SPS Telemetrie- & Zustandserfassung</span>
+            </div>
+          </div>
+
+          <div class="flow-column">
+            <div class="flow-column-header col-s2">Schicht 2: Geometrie</div>
+            <div class="flow-node-card" onclick="openProfileModal('IND-META-2026-PTC-CREO')">
+              <span class="node-code">IND-META-PTC-CREO</span>
+              <span class="node-name">PTC Creo CAD Data</span>
+              <span class="node-role">Leichtbau 3D-Baugruppenmodelle</span>
+            </div>
+          </div>
+
+          <div class="flow-column">
+            <div class="flow-column-header col-s3">Schicht 3: Middleware</div>
+            <div class="flow-node-card" onclick="openProfileModal('IND-META-2026-AAS-IEC63278')">
+              <span class="node-code">IND-META-AAS</span>
+              <span class="node-name">Eclipse BaSyx AAS</span>
+              <span class="node-role">Submodell Instandhaltung & Live-IoT</span>
+            </div>
+          </div>
+
+          <div class="flow-column">
+            <div class="flow-column-header col-s4">Schicht 4: Engine</div>
+            <div class="flow-node-card" onclick="openProfileModal('IND-META-2026-UNITY-INDUSTRY')">
+              <span class="node-code">IND-META-UNITY</span>
+              <span class="node-name">Unity Industry</span>
+              <span class="node-role">AR-Szenenkomposition & Tracking</span>
+            </div>
+          </div>
+
+          <div class="flow-column">
+            <div class="flow-column-header col-s5">Schicht 5: Immersion</div>
+            <div class="flow-node-card" onclick="openProfileModal('IND-META-2026-REALWEAR-NAV520')">
+              <span class="node-code">IND-META-REALWEAR</span>
+              <span class="node-name">RealWear NAV-520</span>
+              <span class="node-role">Freihändige AR-Werkerassistenz</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- USE CASE 4 -->
+    <div class="usecase-section">
+      <div class="usecase-header">
+        <div class="usecase-title-area">
+          <span class="usecase-number-badge" style="background: #1D4ED8;">USE CASE 4</span>
+          <h2 class="usecase-title">Punktwolken-Vergleich für die Fabrik-Layoutplanung</h2>
+          <p class="usecase-desc">
+            Präzises Überlagern von Ist-Punktwolken bestehender Werksbereiche mit neuen CAD-Planungsmodellen aus Revit/Creo zur Vorab-Kollisionsprüfung von Rohrleitungen und Fördertechnik.
+          </p>
+          <div class="usecase-goal-box">
+            🎯 <strong>Ziel & Nutzen:</strong> Vermeidung teurer Umbaufehler und Kollisionen beim Installieren neuer Produktionslinien vor Ort.
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-diagram-container">
+        <div class="flow-columns-wrapper">
+          <div class="flow-column">
+            <div class="flow-column-header col-s1">Schicht 1: Erfassung</div>
+            <div class="flow-node-card" onclick="openProfileModal('IND-META-2026-LEICA-RTC360')">
+              <span class="node-code">IND-META-LEICA-RTC360</span>
+              <span class="node-name">Leica RTC360</span>
+              <span class="node-role">High-End Terrestrik Laserscanning</span>
+            </div>
+          </div>
+
+          <div class="flow-column">
+            <div class="flow-column-header col-s2">Schicht 2: Geometrie</div>
+            <div class="flow-node-card" onclick="openProfileModal('IND-META-2026-AUTODESK-REVIT')">
+              <span class="node-code">IND-META-REVIT</span>
+              <span class="node-name">Autodesk Revit / STEP</span>
+              <span class="node-role">BIM-Gebäude- & Layoutmodellierung</span>
+            </div>
+          </div>
+
+          <div class="flow-column">
+            <div class="flow-column-header col-s3">Schicht 3: Middleware</div>
+            <div class="flow-node-card" onclick="openProfileModal('IND-META-2026-CESIUM-3DTILES')">
+              <span class="node-code">IND-META-CESIUM</span>
+              <span class="node-name">Cesium 3D Tiles</span>
+              <span class="node-role">Räumlicher Streaming-Server</span>
+            </div>
+          </div>
+
+          <div class="flow-column">
+            <div class="flow-column-header col-s4">Schicht 4: Simulation</div>
+            <div class="flow-node-card" onclick="openProfileModal('IND-META-2026-VISUAL-COMPONENTS')">
+              <span class="node-code">IND-META-VISUAL-COMP</span>
+              <span class="node-name">Visual Components</span>
+              <span class="node-role">Materialfluss- & Layoutsimulation</span>
+            </div>
+          </div>
+
+          <div class="flow-column">
+            <div class="flow-column-header col-s5">Schicht 5: Immersion</div>
+            <div class="flow-node-card" onclick="openProfileModal('IND-META-2026-TWINMOTION')">
+              <span class="node-code">IND-META-TWINMOTION</span>
+              <span class="node-name">Twinmotion / Unreal</span>
+              <span class="node-role">Fotorealistischer Soll-Ist-Abgleich</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIER 3 SECTION -->
+    <div style="margin: 40px 0 24px 0; display: flex; align-items: center; gap: 12px;">
+      <span class="tier-badge tier-3" style="font-size: 12px; padding: 5px 12px;">TIER 3 (> €100k / Enterprise OEM Plattformen)</span>
+      <span style="font-size: 13px; color: var(--text-muted);">High-End Omniverse & PhysX Simulation, KI-Robotik & Bi-direktionale Steuerung</span>
+    </div>
+
+    <!-- USE CASE 5 -->
+    <div class="usecase-section">
+      <div class="usecase-header">
+        <div class="usecase-title-area">
+          <span class="usecase-number-badge" style="background: #C2410C;">USE CASE 5</span>
+          <h2 class="usecase-title">Synthetische Datengenerierung & Roboter-KI-Training</h2>
+          <p class="usecase-desc">
+            Automatische Konvertierung komplexer OEM-MCAD Baugruppen (Siemens NX / CATIA) via OpenUSD in NVIDIA Omniverse. Durchführung physikalisch exakter Reinforcement-Learning-Simulationen in Isaac Sim / Isaac Lab zum autonomen Anlernen von Roboter-Greifskills.
+          </p>
+          <div class="usecase-goal-box">
+            🎯 <strong>Ziel & Nutzen:</strong> Verkürzung der Roboter-Inbetriebnahmezeit von Wochen auf Stunden; Zero-Risk KI-Training vor Auslieferung der physischen Zelle.
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-diagram-container">
+        <div class="flow-columns-wrapper">
+          <div class="flow-column">
+            <div class="flow-column-header col-s1">Schicht 1: Erfassung</div>
+            <div class="flow-node-card" onclick="openProfileModal('IND-META-2026-SIEMENS-NX')">
+              <span class="node-code">IND-META-SIEMENS-NX</span>
+              <span class="node-name">Siemens NX MCAD</span>
+              <span class="node-role">OEM CAD Kinematik & Masterdaten</span>
+            </div>
+          </div>
+
+          <div class="flow-column">
+            <div class="flow-column-header col-s2">Schicht 2: Geometrie</div>
+            <div class="flow-node-card" onclick="openProfileModal('IND-META-2026-OPENUSD')">
+              <span class="node-code">IND-META-OPENUSD</span>
+              <span class="node-name">OpenUSD Pipeline</span>
+              <span class="node-role">Physik- & Material-Zuordnung</span>
+            </div>
+          </div>
+
+          <div class="flow-column">
+            <div class="flow-column-header col-s3">Schicht 3: Middleware</div>
+            <div class="flow-node-card" onclick="openProfileModal('IND-META-2026-NVIDIA-OMNIVERSE')">
+              <span class="node-code">IND-META-OMNIVERSE</span>
+              <span class="node-name">NVIDIA Omniverse Nucleus</span>
+              <span class="node-role">Zentraler USD Szenengraph-Server</span>
+            </div>
+          </div>
+
+          <div class="flow-column">
+            <div class="flow-column-header col-s4">Schicht 4: Simulation</div>
+            <div class="flow-node-card" onclick="openProfileModal('IND-META-2026-NVIDIA-ISAAC')">
+              <span class="node-code">IND-META-ISAAC-SIM</span>
+              <span class="node-name">Isaac Sim & Isaac Lab</span>
+              <span class="node-role">PhysX 5 & RL KI-Robotik-Training</span>
+            </div>
+          </div>
+
+          <div class="flow-column">
+            <div class="flow-column-header col-s5">Schicht 5: Immersion</div>
+            <div class="flow-node-card" onclick="openProfileModal('IND-META-2026-VARJO-XR4')">
+              <span class="node-code">IND-META-VARJO-XR4</span>
+              <span class="node-name">Varjo XR-4 / RTX Stream</span>
+              <span class="node-role">Photorealistischer Digital Twin Review</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- USE CASE 6 -->
+    <div class="usecase-section">
+      <div class="usecase-header">
+        <div class="usecase-title-area">
+          <span class="usecase-number-badge" style="background: #C2410C;">USE CASE 6</span>
+          <h2 class="usecase-title">Bi-direktionaler Echtzeit-Digitaler-Zwilling einer Produktionslinie</h2>
+          <p class="usecase-desc">
+            Hartherzige Kopplung von Feldbussignalen (PROFINET TSN / OPC UA) über MQTT Sparkplug B und Eclipse Dataspace Components (EDC) in eine ISG-virtuos HiL-Simulation. Die Steuersignale werden bi-direktional in Unreal Engine 5 visualisiert und zurück an die SPS übermittelt.
+          </p>
+          <div class="usecase-goal-box">
+            🎯 <strong>Ziel & Nutzen:</strong> Vollständige Fernsteuerung und virtuelle Schatten-Inbetriebnahme kompletter Fertigungsstraßen in harter Echtzeit mit 100% EU-Datensouveränität.
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-diagram-container">
+        <div class="flow-columns-wrapper">
+          <div class="flow-column">
+            <div class="flow-column-header col-s1">Schicht 1: Erfassung</div>
+            <div class="flow-node-card" onclick="openProfileModal('IND-META-2026-PROFINET-TSN')">
+              <span class="node-code">IND-META-PROFINET</span>
+              <span class="node-name">PROFINET TSN & OPC UA</span>
+              <span class="node-role">Harte Echtzeit-Feldbus-Kopplung</span>
+            </div>
+          </div>
+
+          <div class="flow-column">
+            <div class="flow-column-header col-s2">Schicht 2: Geometrie</div>
+            <div class="flow-node-card" onclick="openProfileModal('IND-META-2026-JT-ISO14306')">
+              <span class="node-code">IND-META-JT</span>
+              <span class="node-name">JT ISO 14306 & STEP</span>
+              <span class="node-role">Industrieller Kinematik-Master</span>
+            </div>
+          </div>
+
+          <div class="flow-column">
+            <div class="flow-column-header col-s3">Schicht 3: Middleware</div>
+            <div class="flow-node-card" onclick="openProfileModal('IND-META-2026-MQTT-SPARKPLUG')">
+              <span class="node-code">IND-META-EDC-EDC</span>
+              <span class="node-name">MQTT Sparkplug & EDC</span>
+              <span class="node-role">Souveräner Datenraum-Austausch</span>
+            </div>
+          </div>
+
+          <div class="flow-column">
+            <div class="flow-column-header col-s4">Schicht 4: Simulation</div>
+            <div class="flow-node-card" onclick="openProfileModal('IND-META-2026-ISG-VIRTUOS')">
+              <span class="node-code">IND-META-VIRTUOS</span>
+              <span class="node-name">ISG-virtuos</span>
+              <span class="node-role">Hardware-in-the-Loop VIBn Server</span>
+            </div>
+          </div>
+
+          <div class="flow-column">
+            <div class="flow-column-header col-s5">Schicht 5: Immersion</div>
+            <div class="flow-node-card" onclick="openProfileModal('IND-META-2026-UNREAL-ENGINE-5')">
+              <span class="node-code">IND-META-UNREAL-5</span>
+              <span class="node-name">Unreal Engine 5</span>
+              <span class="node-role">RTX Dashboard & Teleoperation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Profile Detail Modal -->
+  <div class="modal-overlay" id="profileModal">
+    <div class="modal-content" style="max-width: 1200px;">
+      <div class="modal-header">
+        <div class="app-brand">
+          <i class="fa-solid fa-cube" style="color: var(--accent-orange); font-size: 20px;"></i>
+          <h2 class="slide-title" id="modalProfileTitle" style="font-size: 16px;">Technologie-Profil Details</h2>
+        </div>
+        <button class="btn btn-icon" id="btnCloseProfileModal" title="Schließen"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body" id="modalProfileBody">
+        <!-- Dynamisch gerendert via app.js -->
+      </div>
+      <div class="modal-footer" style="display: flex; justify-content: space-between; align-items: center;">
+        <span class="text-muted" style="font-size: 12px;">ARENA2036 Industrial Metaverse Taxonomy</span>
+        <a id="modalDirectJsonLink" href="#" target="_blank" class="btn" style="font-size: 12px;">
+          <i class="fa-solid fa-code"></i> JSON Profil Quelltext
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer style="margin: 40px 0 24px 0; font-size: 12px; color: var(--text-muted); text-align: center;">
+    ARENA2036 Industrial Metaverse Taxonomy — <a href="./browser.html" style="color: var(--text-body); font-weight: 600; text-decoration: none;">Browser</a> | <a href="./architecture.html" style="color: var(--text-body); font-weight: 600; text-decoration: none;">Architektur</a> | <a href="./impressum.html" style="color: var(--text-body); font-weight: 600; text-decoration: none;">Impressum</a>
+  </footer>
+
+  <script src="./data/index_data.js"></script>
+  <script src="./app.js"></script>
+  <script>
+    // Global helper so clicking cards on examples.html directly opens the profile inspector modal
+    window.openProfileModal = function(refCode) {
+      if (window.appOpenProfileModal) {
+        window.appOpenProfileModal(refCode);
+      }
+    };
+  </script>
+</body>
+</html>

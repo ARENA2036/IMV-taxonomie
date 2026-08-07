@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Industrial Metaverse Technology Taxonomy 2026</title>
-  <meta name="description" content="Master Spezifikation & Profil-Datenbank für den Industrial Metaverse Tech Stack 2026. Offene ARENA2036 Taxonomie.">
+  <title>Industrial Metaverse Technologie & Standard Taxonomie</title>
+  <meta name="description" content="Master Spezifikation & Profil-Datenbank für den Industrial Metaverse Tech Stack. Offene ARENA2036 Taxonomie im Projekt Reallabor 2.0.">
   
   <!-- FontAwesome 6 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -26,11 +26,11 @@
       <div class="brand-logos">
         <img src="./assets/ARENA2036_combinationmark_orange_black.png" alt="ARENA2036 Logo" class="logo-img" title="ARENA2036 Forschungscampus">
         <div class="logo-divider"></div>
-        <img src="./assets/Metaverse Logo bunt.svg" alt="Industrial Metaverse Logo" class="logo-img" title="Industrial Metaverse 2026">
+        <img src="./assets/Metaverse Logo bunt.svg" alt="Industrial Metaverse Logo" class="logo-img" title="Industrial Metaverse">
         <div class="logo-divider"></div>
         <img src="./assets/BaWue_WM_Absenderlogo_rgb_pos_Gefoerdert.svg" alt="Gefördert durch Baden-Württemberg" class="logo-img" title="Gefördert durch Ministerium für Wirtschaft, Arbeit und Tourismus Baden-Württemberg">
       </div>
-      <span class="repo-branch-badge"><i class="fa-solid fa-flask"></i> Reallabor 2.0 Aktivität</span>
+      <span class="repo-branch-badge"><i class="fa-solid fa-flask"></i> Reallabor 2.0</span>
     </div>
 
     <!-- Sleek 2-Panel Content Split -->
@@ -39,7 +39,7 @@
       <!-- Left Panel: Title, Description & Dynamic KPIs -->
       <div class="greeter-left-panel">
         <div>
-          <h1 class="greeter-title" style="font-size: 28px; line-height: 1.2;">Industrial Metaverse Technology Taxonomy 2026</h1>
+          <h1 class="greeter-title" style="font-size: 28px; line-height: 1.2;">Industrial Metaverse Technologie & Standard Taxonomie</h1>
           <p class="greeter-lead" style="font-size: 14px; margin-top: 12px; line-height: 1.6; color: var(--text-body);">
             Im Rahmen des Forschungsprojekts <strong>Reallabor 2.0</strong> auditiert diese Spezifikation und Evaluierungs-Matrix Industrie-4.0-Technologien, Werkzeuge und Standards. Das System strukturiert <strong>Erfahrungen und Schnittstellen</strong> zur unabhängigen Orientierung für kleine und mittlere Unternehmen (KMU).
           </p>
@@ -76,6 +76,12 @@
         <a href="./browser.html" class="action-card-btn primary-cta">
           <span><i class="fa-solid fa-magnifying-glass-chart" style="margin-right: 8px;"></i> Taxonomie Browser Öffnen</span>
           <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+        <!-- Use Cases & Examples Link -->
+        <a href="./examples.html" class="action-card-btn">
+          <span><i class="fa-solid fa-sitemap" style="margin-right: 8px; color: #7C3AED;"></i> Beispiele & Use Cases</span>
+          <i class="fa-solid fa-chevron-right" style="color: var(--text-muted);"></i>
         </a>
 
         <!-- Technical Architecture Link -->
@@ -118,59 +124,25 @@
           <i class="fa-solid fa-cube" style="color: var(--accent-orange); font-size: 20px;"></i>
           <h2 class="slide-title" id="modalProfileTitle" style="font-size: 16px;">Technologie-Profil Details</h2>
         </div>
-        <div style="display: flex; gap: 10px;">
-          <a id="modalDirectJsonLink" href="#" target="_blank" class="btn" style="font-size: 11px;"><i class="fa-solid fa-code"></i> JSON Spezifikation</a>
-          <button class="btn" id="btnCloseProfileModal"><i class="fa-solid fa-xmark"></i> Schließen</button>
-        </div>
+        <button class="btn btn-icon" id="btnCloseProfileModal" title="Schließen"><i class="fa-solid fa-xmark"></i></button>
       </div>
       <div class="modal-body" id="modalProfileBody">
-        <!-- Per JS gerendert -->
+        <!-- Dynamisch gerendert via app.js -->
+      </div>
+      <div class="modal-footer" style="display: flex; justify-content: space-between; align-items: center;">
+        <span class="text-muted" style="font-size: 12px;">ARENA2036 Industrial Metaverse Taxonomy</span>
+        <a id="modalDirectJsonLink" href="#" target="_blank" class="btn" style="font-size: 12px;">
+          <i class="fa-solid fa-code"></i> JSON Profil Quelltext
+        </a>
       </div>
     </div>
   </div>
 
-  <!-- Matrix Index Modal -->
-  <div class="modal-overlay" id="matrixModal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <div class="app-brand">
-          <i class="fa-solid fa-table-cells" style="color: var(--accent-orange); font-size: 18px;"></i>
-          <h2 class="slide-title" style="font-size: 16px;">Vollständige Taxonomie-Matrix (11 Kategorien)</h2>
-        </div>
-        <button class="btn" id="btnCloseMatrixModal"><i class="fa-solid fa-xmark"></i> Schließen</button>
-      </div>
-      <div class="modal-body">
-        <table class="table-view" id="matrixTable">
-          <thead>
-            <tr>
-              <th>Ref Code</th>
-              <th>Kat. Code</th>
-              <th>Kategorie Name</th>
-              <th>Technologie Name</th>
-              <th>Entwickler / Vendor</th>
-              <th>Kostengruppe</th>
-              <th>Status</th>
-              <th>Aktion</th>
-            </tr>
-          </thead>
-          <tbody id="matrixTableBody">
-            <!-- Per JS gerendert -->
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer Link -->
-  <footer style="text-align: center; padding: 16px; font-size: 12px; color: var(--text-muted);">
-    ARENA2036 Industrial Metaverse Taxonomy 2026 — <a href="./architecture.html" style="color: var(--text-body); font-weight: 600; text-decoration: none;">Architektur</a> | <a href="./impressum.html" style="color: var(--text-body); font-weight: 600; text-decoration: none;">Impressum</a>
+  <footer style="margin-top: 24px; font-size: 12px; color: var(--text-muted); text-align: center;">
+    ARENA2036 Industrial Metaverse Taxonomy — <a href="./examples.html" style="color: var(--text-body); font-weight: 600; text-decoration: none;">Use Cases</a> | <a href="./architecture.html" style="color: var(--text-body); font-weight: 600; text-decoration: none;">Architektur</a> | <a href="./impressum.html" style="color: var(--text-body); font-weight: 600; text-decoration: none;">Impressum</a>
   </footer>
 
-  <!-- Static Fallback Daten-Skriptdatei -->
   <script src="./data/index_data.js"></script>
-
-  <!-- Anwendungslogik -->
   <script src="./app.js"></script>
-
 </body>
 </html>

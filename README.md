@@ -1,4 +1,4 @@
-# Industrial Metaverse Technology Taxonomy 2026 (`IMV-taxonomie`)
+# Industrial Metaverse Technology Taxonomy (`IMV-taxonomie`)
 
 > **Offenes Forschungs-Audit & Interaktiver Taxonomie-Browser für den Industrial Metaverse Tech Stack**
 > Ein Arbeitsergebnis im Rahmen des übergeordneten Forschungsprojekts **Reallabor 2.0** des **ARENA2036 Forschungscampus**, gefördert durch das **Ministerium für Wirtschaft, Arbeit und Tourismus Baden-Württemberg**.
@@ -15,7 +15,7 @@
 
 Das Projekt **IMV-taxonomie** auditiert und strukturiert **91 Technologien, Protokolle und Standards** für den Aufbau digitaler Zwillinge und vernetzter Industrie-4.0-Fabriken im **Industrial Metaverse**.
 
-Das System basiert auf dem **5-Schichten-Architekturmodell der ARENA2036**:
+Das System basiert auf einer Baukasten-Empfehlung über **5 Schichten**:
 * **Schicht 1: Erfassung & OT-Datenerfassung** (LiDAR/SLAM, 360°, OPC UA, MQTT, IO-Link)
 * **Schicht 2: Geometrie & CAD-Pre-Processing** (MCAD, BIM, DCC, OpenUSD, STEP, JT, glTF)
 * **Schicht 3: Semantische Middleware & Datenräume** (Asset Administration Shell AAS, EDC, Cloud Twins)
@@ -24,7 +24,7 @@ Das System basiert auf dem **5-Schichten-Architekturmodell der ARENA2036**:
 
 ---
 
-## 🏗️ 5-Schichten Architektur-Modell (ARENA2036 Standard)
+## 🏗️ 5-Schichten Architektur-Modell & Baukastenprinzip
 
 ```mermaid
 graph BT
@@ -58,11 +58,13 @@ graph BT
 ```
 IMV-taxonomie/
 ├── index.html                  # Minimalist Greeter Landing Page (2-Panel Split Layout)
-├── browser.html                # Interaktiver Taxonomie-Browser (Fixed Navbar & Dual Scroll Containers)
-├── architecture.html           # Technische Architektur & 5-Schichten Spezifikation
+├── browser.html                # Interaktiver Taxonomie-Browser (Centered Title & Dual Scroll)
+├── examples.html               # 6 Interaktive Baukasten Use Cases (Tier 1 bis Tier 3)
+├── architecture.html           # Technische Baukasten-Architektur & 5-Schichten Spezifikation
 ├── impressum.html              # Impressum & Non-Commercial KMU Disclaimer
 ├── index.css                   # Minimalistisches Industrie-Designsystem (Vercel/Linear Aesthetic)
-├── app.js                      # Dynamische Async JSON Engine & 5-Schichten Navigation
+├── app.js                      # Dynamische Async JSON Engine & Modal Inspector Handler
+├── package.json                # Node Build Manifest & Scripts
 ├── data/
 │   ├── index.json              # Kanonischer Manifest-Index aller 91 Technologien (5 Schichten)
 │   └── index_data.js           # Static Fallback Wrapper für file:// Ausführung
