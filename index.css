@@ -155,6 +155,7 @@ h1, h2, h3, h4, h5, h6,
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 16px;
+  align-items: start;
 }
 
 .card-item {
@@ -166,6 +167,7 @@ h1, h2, h3, h4, h5, h6,
   flex-direction: column;
   justify-content: space-between;
   transition: all 0.2s ease;
+  align-self: start;
 }
 
 .card-item:hover {
