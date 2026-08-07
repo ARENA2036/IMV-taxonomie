@@ -1,0 +1,45 @@
+{
+  "id": "UC-01-SHOPFLOOR-INCIDENT-MANAGEMENT",
+  "title": "Digitales Shopfloor-Incident-Management",
+  "tier": "Tier 1",
+  "tierLabel": "≤ €30k / KMU Starter",
+  "shortDesc": "Schnelle optische Erfassung von Anomalien und Instandhaltungs-Befunden in der Fertigung mittels 360°-Kamera / Terrestrik-Scan. Die Aufnahmen werden auf einer zentralen Web-Plattform lokalisiert und automatisiert als Instandhaltungsticket im Enterprise-System angelegt.",
+  "goal": "Reduzierung der Störungsbehebungszeit um bis zu 60% durch präzise 3D-Ortung des Fehlers ohne manuelle Befunddokumentation vor Ort.",
+  "flow": [
+    {
+      "layer": "1",
+      "layerTitle": "Schicht 1: Erfassung",
+      "refCode": "IND-META-2026-FARO-ORBIS",
+      "nodeName": "FARO Orbis / Matterport",
+      "role": "Mobile 360° LiDAR-Erfassung vor Ort"
+    },
+    {
+      "layer": "2",
+      "layerTitle": "Schicht 2: Geometrie",
+      "refCode": "IND-META-2026-E57-POINTCLOUD",
+      "nodeName": "E57 / Panorama Scan",
+      "role": "Punktwolken & 360°-Bilddaten-Export"
+    },
+    {
+      "layer": "3",
+      "layerTitle": "Schicht 3: Middleware",
+      "refCode": "IND-META-2026-FARO-SPHERE",
+      "nodeName": "FARO Sphere XG",
+      "role": "Zentrale Cloud/On-Prem 3D-Plattform"
+    },
+    {
+      "layer": "4",
+      "layerTitle": "Schicht 4: Integration",
+      "refCode": null,
+      "nodeName": "Jira / SAP PM",
+      "role": "Automatische Ticket- & Auftragserstellung"
+    },
+    {
+      "layer": "5",
+      "layerTitle": "Schicht 5: Immersion",
+      "refCode": "IND-META-2026-GLTF-20",
+      "nodeName": "WebXR / Web Inspection",
+      "role": "Interaktive 3D-Befundung am Tablet/PC"
+    }
+  ]
+}

@@ -59,21 +59,24 @@ graph BT
 IMV-taxonomie/
 ├── index.html                  # Minimalist Greeter Landing Page (2-Panel Split Layout)
 ├── browser.html                # Interaktiver Taxonomie-Browser (Centered Title & Dual Scroll)
-├── examples.html               # 6 Interaktive Baukasten Use Cases (Tier 1 bis Tier 3)
+├── examples.html               # JSON-Driven Use Cases Browser (Interactive Baukasten-Flows)
 ├── architecture.html           # Technische Baukasten-Architektur & 5-Schichten Spezifikation
 ├── impressum.html              # Impressum & Non-Commercial KMU Disclaimer
 ├── index.css                   # Minimalistisches Industrie-Designsystem (Vercel/Linear Aesthetic)
-├── app.js                      # Dynamische Async JSON Engine & Modal Inspector Handler
+├── app.js                      # Dynamische Async JSON Engine & Inspector Handler
 ├── package.json                # Node Build Manifest & Scripts
 ├── data/
-│   ├── index.json              # Kanonischer Manifest-Index aller 91 Technologien (5 Schichten)
+│   ├── index.json              # Kanonischer Manifest-Index (91 Technologien + 6 Use Cases)
 │   └── index_data.js           # Static Fallback Wrapper für file:// Ausführung
 ├── profiles/                   # Kanonische JSON Profil-Spezifikationen (Single Source of Truth)
 │   ├── IND-META-2026-SIEMENS-NX.json
 │   ├── IND-META-2026-NVIDIA-OMNIVERSE.json
 │   └── ... (91 JSON-Dateien)
+├── usecases/                   # Kanonische JSON Use Case Spezifikationen (6 Baukasten-Flows)
+│   ├── UC-01-SHOPFLOOR-INCIDENT-MANAGEMENT.json
+│   └── ... (6 JSON-Dateien)
 ├── scripts/
-│   └── generate_profiles.js    # Kanonischer JSON Indexer & Manifest Generator (5 Schichten)
+│   └── generate_profiles.js    # Kanonischer JSON Indexer für Profile & Use Cases
 ├── assets/                     # 3 Aktive Marken-Logos (ARENA2036, Industrial Metaverse, Wirtschaftsministerium BW)
 │   ├── ARENA2036_combinationmark_orange_black.png
 │   ├── BaWue_WM_Absenderlogo_rgb_pos_Gefoerdert.svg

@@ -1,0 +1,45 @@
+{
+  "id": "UC-05-SYNTHETIC-DATA-ROBOTIC-TRAINING",
+  "title": "Synthetische Datengenerierung & Roboter-KI-Training",
+  "tier": "Tier 3",
+  "tierLabel": "> €100k / Enterprise OEM",
+  "shortDesc": "Automatische Konvertierung komplexer OEM-MCAD Baugruppen (Siemens NX / CATIA) via OpenUSD in NVIDIA Omniverse. Durchführung physikalisch exakter Reinforcement-Learning-Simulationen in Isaac Sim / Isaac Lab zum autonomen Anlernen von Roboter-Greifskills.",
+  "goal": "Verkürzung der Roboter-Inbetriebnahmezeit von Wochen auf Stunden; Zero-Risk KI-Training vor Auslieferung der physischen Zelle.",
+  "flow": [
+    {
+      "layer": "1",
+      "layerTitle": "Schicht 1: Erfassung",
+      "refCode": "IND-META-2026-SIEMENS-NX",
+      "nodeName": "Siemens NX MCAD",
+      "role": "OEM CAD Kinematik & Masterdaten"
+    },
+    {
+      "layer": "2",
+      "layerTitle": "Schicht 2: Geometrie",
+      "refCode": "IND-META-2026-OPENUSD",
+      "nodeName": "OpenUSD Pipeline",
+      "role": "Physik- & Material-Zuordnung"
+    },
+    {
+      "layer": "3",
+      "layerTitle": "Schicht 3: Middleware",
+      "refCode": "IND-META-2026-NVIDIA-OMNIVERSE",
+      "nodeName": "NVIDIA Omniverse Nucleus",
+      "role": "Zentraler USD Szenengraph-Server"
+    },
+    {
+      "layer": "4",
+      "layerTitle": "Schicht 4: Simulation",
+      "refCode": "IND-META-2026-NVIDIA-ISAAC",
+      "nodeName": "Isaac Sim & Isaac Lab",
+      "role": "PhysX 5 & RL KI-Robotik-Training"
+    },
+    {
+      "layer": "5",
+      "layerTitle": "Schicht 5: Immersion",
+      "refCode": "IND-META-2026-VARJO-XR4",
+      "nodeName": "Varjo XR-4 / RTX Stream",
+      "role": "Photorealistischer Digital Twin Review"
+    }
+  ]
+}

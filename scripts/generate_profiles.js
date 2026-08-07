@@ -6,6 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 const profilesDir = path.join(rootDir, 'profiles');
+const usecasesDir = path.join(rootDir, 'usecases');
 const dataDir = path.join(rootDir, 'data');
 
 const CATEGORIES = [
@@ -32,11 +33,10 @@ const CATEGORIES = [
   { code: '11.0', name: 'Spatial XR & VR/AR Headsets', desc: 'Immersive Headsets und Spatial-Computing-Hardware.', layer: '5' }
 ];
 
-if (!fs.existsSync(profilesDir)) {
-  fs.mkdirSync(profilesDir, { recursive: true });
-}
+if (!fs.existsSync(profilesDir)) fs.mkdirSync(profilesDir, { recursive: true });
+if (!fs.existsSync(usecasesDir)) fs.mkdirSync(usecasesDir, { recursive: true });
 
-console.log('Scanne und indiziere kanonische JSON-Profil-Dateien im Ordner profiles/...');
+console.log('Scanne und indiziere kanonische JSON-Profil-Dateien im Ordner profiles/ und usecases/...');
 
 const files = fs.readdirSync(profilesDir).filter(f => f.endsWith('.json'));
 
@@ -71,15 +71,33 @@ files.forEach(file => {
       profilesMap[profile.refCode] = profile;
     }
   } catch (err) {
-    console.error(`Fehler beim Lesen von ${file}:`, err.message);
+    console.error(`Fehler beim Lesen von Profile ${file}:`, err.message);
   }
 });
 
 items.sort((a, b) => a.categoryCode.localeCompare(b.categoryCode) || a.name.localeCompare(b.name));
 
+const usecases = [];
+const ucFiles = fs.readdirSync(usecasesDir).filter(f => f.endsWith('.json'));
+
+ucFiles.forEach(file => {
+  try {
+    const raw = fs.readFileSync(path.join(usecasesDir, file), 'utf-8');
+    const uc = JSON.parse(raw);
+    if (uc.id) {
+      usecases.push(uc);
+    }
+  } catch (err) {
+    console.error(`Fehler beim Lesen von UseCase ${file}:`, err.message);
+  }
+});
+
+usecases.sort((a, b) => a.id.localeCompare(b.id));
+
 const indexData = {
   categories: CATEGORIES,
-  items: items
+  items: items,
+  usecases: usecases
 };
 
 // 1. Write canonical data/index.json
@@ -104,4 +122,4 @@ fs.writeFileSync(
   'utf-8'
 );
 
-console.log(`Erfolgreich ${items.length} JSON-Profile indiziert und 5-Schichten 'data/index.json' sowie 'data/index_data.js' generiert.`);
+console.log(`Erfolgreich ${items.length} JSON-Profile und ${usecases.length} Use Cases indiziert und 'data/index.json' sowie 'data/index_data.js' generiert.`);

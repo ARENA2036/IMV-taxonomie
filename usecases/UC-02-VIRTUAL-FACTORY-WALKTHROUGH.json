@@ -1,0 +1,45 @@
+{
+  "id": "UC-02-VIRTUAL-FACTORY-WALKTHROUGH",
+  "title": "Virtuelle Fabrikbegehung & Asset-Tagging via WebXR",
+  "tier": "Tier 1",
+  "tierLabel": "≤ €30k / KMU Starter",
+  "shortDesc": "Regelmäßige digitale Begehung von Hallenbereichen ohne physisches Reisen. Mittels mobilem SLAM-Scanner erfasste Daten werden über OpenUSD/glTF in einer Eclipse BaSyx Verwaltungsschale (AAS) verankert und im WebXR Browser visualisiert.",
+  "goal": "Ortsunabhängige Audits, Sicherheitsbegehungen und Layout-Reviews im Browser ohne teure XR-Hardware.",
+  "flow": [
+    {
+      "layer": "1",
+      "layerTitle": "Schicht 1: Erfassung",
+      "refCode": "IND-META-2026-NAVVIS-VLX3",
+      "nodeName": "NavVis VLX 3",
+      "role": "Mobiles SLAM-Laserscanning im Gehen"
+    },
+    {
+      "layer": "2",
+      "layerTitle": "Schicht 2: Geometrie",
+      "refCode": "IND-META-2026-OPENUSD",
+      "nodeName": "OpenUSD & glTF 2.0",
+      "role": "Tessellierte 3D-Szenengraph-Struktur"
+    },
+    {
+      "layer": "3",
+      "layerTitle": "Schicht 3: Middleware",
+      "refCode": "IND-META-2026-AAS-IEC63278",
+      "nodeName": "Eclipse BaSyx AAS",
+      "role": "Verwaltungsschale für Asset-Metadaten"
+    },
+    {
+      "layer": "4",
+      "layerTitle": "Schicht 4: Simulation",
+      "refCode": "IND-META-2026-GODOT-WEBXR",
+      "nodeName": "Godot Engine / Web-Sim",
+      "role": "Leichtgewichtige Interaktionslogik"
+    },
+    {
+      "layer": "5",
+      "layerTitle": "Schicht 5: Immersion",
+      "refCode": "IND-META-2026-META-QUEST3",
+      "nodeName": "WebXR / Tablet Viewing",
+      "role": "Browserbasierte 3D-Werkbegehung"
+    }
+  ]
+}

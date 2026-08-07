@@ -3318,6 +3318,278 @@ window.INDEX_DATA = {
         "openStandard": "OPC UA / AAS"
       }
     }
+  ],
+  "usecases": [
+    {
+      "id": "UC-01-SHOPFLOOR-INCIDENT-MANAGEMENT",
+      "title": "Digitales Shopfloor-Incident-Management",
+      "tier": "Tier 1",
+      "tierLabel": "≤ €30k / KMU Starter",
+      "shortDesc": "Schnelle optische Erfassung von Anomalien und Instandhaltungs-Befunden in der Fertigung mittels 360°-Kamera / Terrestrik-Scan. Die Aufnahmen werden auf einer zentralen Web-Plattform lokalisiert und automatisiert als Instandhaltungsticket im Enterprise-System angelegt.",
+      "goal": "Reduzierung der Störungsbehebungszeit um bis zu 60% durch präzise 3D-Ortung des Fehlers ohne manuelle Befunddokumentation vor Ort.",
+      "flow": [
+        {
+          "layer": "1",
+          "layerTitle": "Schicht 1: Erfassung",
+          "refCode": "IND-META-2026-FARO-ORBIS",
+          "nodeName": "FARO Orbis / Matterport",
+          "role": "Mobile 360° LiDAR-Erfassung vor Ort"
+        },
+        {
+          "layer": "2",
+          "layerTitle": "Schicht 2: Geometrie",
+          "refCode": "IND-META-2026-E57-POINTCLOUD",
+          "nodeName": "E57 / Panorama Scan",
+          "role": "Punktwolken & 360°-Bilddaten-Export"
+        },
+        {
+          "layer": "3",
+          "layerTitle": "Schicht 3: Middleware",
+          "refCode": "IND-META-2026-FARO-SPHERE",
+          "nodeName": "FARO Sphere XG",
+          "role": "Zentrale Cloud/On-Prem 3D-Plattform"
+        },
+        {
+          "layer": "4",
+          "layerTitle": "Schicht 4: Integration",
+          "refCode": null,
+          "nodeName": "Jira / SAP PM",
+          "role": "Automatische Ticket- & Auftragserstellung"
+        },
+        {
+          "layer": "5",
+          "layerTitle": "Schicht 5: Immersion",
+          "refCode": "IND-META-2026-GLTF-20",
+          "nodeName": "WebXR / Web Inspection",
+          "role": "Interaktive 3D-Befundung am Tablet/PC"
+        }
+      ]
+    },
+    {
+      "id": "UC-02-VIRTUAL-FACTORY-WALKTHROUGH",
+      "title": "Virtuelle Fabrikbegehung & Asset-Tagging via WebXR",
+      "tier": "Tier 1",
+      "tierLabel": "≤ €30k / KMU Starter",
+      "shortDesc": "Regelmäßige digitale Begehung von Hallenbereichen ohne physisches Reisen. Mittels mobilem SLAM-Scanner erfasste Daten werden über OpenUSD/glTF in einer Eclipse BaSyx Verwaltungsschale (AAS) verankert und im WebXR Browser visualisiert.",
+      "goal": "Ortsunabhängige Audits, Sicherheitsbegehungen und Layout-Reviews im Browser ohne teure XR-Hardware.",
+      "flow": [
+        {
+          "layer": "1",
+          "layerTitle": "Schicht 1: Erfassung",
+          "refCode": "IND-META-2026-NAVVIS-VLX3",
+          "nodeName": "NavVis VLX 3",
+          "role": "Mobiles SLAM-Laserscanning im Gehen"
+        },
+        {
+          "layer": "2",
+          "layerTitle": "Schicht 2: Geometrie",
+          "refCode": "IND-META-2026-OPENUSD",
+          "nodeName": "OpenUSD & glTF 2.0",
+          "role": "Tessellierte 3D-Szenengraph-Struktur"
+        },
+        {
+          "layer": "3",
+          "layerTitle": "Schicht 3: Middleware",
+          "refCode": "IND-META-2026-AAS-IEC63278",
+          "nodeName": "Eclipse BaSyx AAS",
+          "role": "Verwaltungsschale für Asset-Metadaten"
+        },
+        {
+          "layer": "4",
+          "layerTitle": "Schicht 4: Simulation",
+          "refCode": "IND-META-2026-GODOT-WEBXR",
+          "nodeName": "Godot Engine / Web-Sim",
+          "role": "Leichtgewichtige Interaktionslogik"
+        },
+        {
+          "layer": "5",
+          "layerTitle": "Schicht 5: Immersion",
+          "refCode": "IND-META-2026-META-QUEST3",
+          "nodeName": "WebXR / Tablet Viewing",
+          "role": "Browserbasierte 3D-Werkbegehung"
+        }
+      ]
+    },
+    {
+      "id": "UC-03-AR-WORKER-ASSISTANCE",
+      "title": "AR-gestützte Werkerassistenz mit IoT-Echtzeitdaten",
+      "tier": "Tier 2",
+      "tierLabel": "≤ €100k / Industrieller Mittelstand",
+      "shortDesc": "Live-Kopplung von Maschinen-Telemetrie aus der SPS über OPC UA in eine Eclipse BaSyx Verwaltungsschale. Die Daten werden im räumlichen Kontext einer AR-Brille (RealWear / Meta Quest 3) direkt an der physischen Anlage eingeblendet.",
+      "goal": "Fehlerminimierung bei der Wartung komplexer Werkzeugmaschinen durch freihändige Schritt-für-Schritt-Anleitung und Live-Sensorwerte.",
+      "flow": [
+        {
+          "layer": "1",
+          "layerTitle": "Schicht 1: Erfassung",
+          "refCode": "IND-META-2026-OPC-UA",
+          "nodeName": "OPC UA / MQTT",
+          "role": "SPS Telemetrie- & Zustandserfassung"
+        },
+        {
+          "layer": "2",
+          "layerTitle": "Schicht 2: Geometrie",
+          "refCode": "IND-META-2026-PTC-CREO",
+          "nodeName": "PTC Creo CAD Data",
+          "role": "Leichtbau 3D-Baugruppenmodelle"
+        },
+        {
+          "layer": "3",
+          "layerTitle": "Schicht 3: Middleware",
+          "refCode": "IND-META-2026-AAS-IEC63278",
+          "nodeName": "Eclipse BaSyx AAS",
+          "role": "Submodell Instandhaltung & Live-IoT"
+        },
+        {
+          "layer": "4",
+          "layerTitle": "Schicht 4: Engine",
+          "refCode": "IND-META-2026-UNITY-INDUSTRY",
+          "nodeName": "Unity Industry",
+          "role": "AR-Szenenkomposition & Tracking"
+        },
+        {
+          "layer": "5",
+          "layerTitle": "Schicht 5: Immersion",
+          "refCode": "IND-META-2026-REALWEAR-NAV520",
+          "nodeName": "RealWear NAV-520 / Quest 3",
+          "role": "Freihändige AR-Werkerassistenz"
+        }
+      ]
+    },
+    {
+      "id": "UC-04-POINTCLOUD-LAYOUT-PLANNING",
+      "title": "Punktwolken-Vergleich für die Fabrik-Layoutplanung",
+      "tier": "Tier 2",
+      "tierLabel": "≤ €100k / Industrieller Mittelstand",
+      "shortDesc": "Präzises Überlagern von Ist-Punktwolken bestehender Werksbereiche mit neuen CAD-Planungsmodellen aus Revit/Creo zur Vorab-Kollisionsprüfung von Rohrleitungen und Fördertechnik.",
+      "goal": "Vermeidung teurer Umbaufehler und Kollisionen beim Installieren neuer Produktionslinien vor Ort.",
+      "flow": [
+        {
+          "layer": "1",
+          "layerTitle": "Schicht 1: Erfassung",
+          "refCode": "IND-META-2026-LEICA-RTC360",
+          "nodeName": "Leica RTC360",
+          "role": "High-End Terrestrik Laserscanning"
+        },
+        {
+          "layer": "2",
+          "layerTitle": "Schicht 2: Geometrie",
+          "refCode": "IND-META-2026-AUTODESK-REVIT",
+          "nodeName": "Autodesk Revit / STEP",
+          "role": "BIM-Gebäude- & Layoutmodellierung"
+        },
+        {
+          "layer": "3",
+          "layerTitle": "Schicht 3: Middleware",
+          "refCode": "IND-META-2026-CESIUM-3DTILES",
+          "nodeName": "Cesium 3D Tiles",
+          "role": "Räumlicher Streaming-Server"
+        },
+        {
+          "layer": "4",
+          "layerTitle": "Schicht 4: Simulation",
+          "refCode": "IND-META-2026-VISUAL-COMPONENTS",
+          "nodeName": "Visual Components",
+          "role": "Materialfluss- & Layoutsimulation"
+        },
+        {
+          "layer": "5",
+          "layerTitle": "Schicht 5: Immersion",
+          "refCode": "IND-META-2026-TWINMOTION",
+          "nodeName": "Twinmotion / Unreal",
+          "role": "Fotorealistischer Soll-Ist-Abgleich"
+        }
+      ]
+    },
+    {
+      "id": "UC-05-SYNTHETIC-DATA-ROBOTIC-TRAINING",
+      "title": "Synthetische Datengenerierung & Roboter-KI-Training",
+      "tier": "Tier 3",
+      "tierLabel": "> €100k / Enterprise OEM",
+      "shortDesc": "Automatische Konvertierung komplexer OEM-MCAD Baugruppen (Siemens NX / CATIA) via OpenUSD in NVIDIA Omniverse. Durchführung physikalisch exakter Reinforcement-Learning-Simulationen in Isaac Sim / Isaac Lab zum autonomen Anlernen von Roboter-Greifskills.",
+      "goal": "Verkürzung der Roboter-Inbetriebnahmezeit von Wochen auf Stunden; Zero-Risk KI-Training vor Auslieferung der physischen Zelle.",
+      "flow": [
+        {
+          "layer": "1",
+          "layerTitle": "Schicht 1: Erfassung",
+          "refCode": "IND-META-2026-SIEMENS-NX",
+          "nodeName": "Siemens NX MCAD",
+          "role": "OEM CAD Kinematik & Masterdaten"
+        },
+        {
+          "layer": "2",
+          "layerTitle": "Schicht 2: Geometrie",
+          "refCode": "IND-META-2026-OPENUSD",
+          "nodeName": "OpenUSD Pipeline",
+          "role": "Physik- & Material-Zuordnung"
+        },
+        {
+          "layer": "3",
+          "layerTitle": "Schicht 3: Middleware",
+          "refCode": "IND-META-2026-NVIDIA-OMNIVERSE",
+          "nodeName": "NVIDIA Omniverse Nucleus",
+          "role": "Zentraler USD Szenengraph-Server"
+        },
+        {
+          "layer": "4",
+          "layerTitle": "Schicht 4: Simulation",
+          "refCode": "IND-META-2026-NVIDIA-ISAAC",
+          "nodeName": "Isaac Sim & Isaac Lab",
+          "role": "PhysX 5 & RL KI-Robotik-Training"
+        },
+        {
+          "layer": "5",
+          "layerTitle": "Schicht 5: Immersion",
+          "refCode": "IND-META-2026-VARJO-XR4",
+          "nodeName": "Varjo XR-4 / RTX Stream",
+          "role": "Photorealistischer Digital Twin Review"
+        }
+      ]
+    },
+    {
+      "id": "UC-06-BIDIRECTIONAL-REALTIME-TWIN",
+      "title": "Bi-direktionaler Echtzeit-Digitaler-Zwilling einer Produktionslinie",
+      "tier": "Tier 3",
+      "tierLabel": "> €100k / Enterprise OEM",
+      "shortDesc": "Hartherzige Kopplung von Feldbussignalen (PROFINET TSN / OPC UA) über MQTT Sparkplug B und Eclipse Dataspace Components (EDC) in eine ISG-virtuos HiL-Simulation. Die Steuersignale werden bi-direktional in Unreal Engine 5 visualisiert und zurück an die SPS übermittelt.",
+      "goal": "Vollständige Fernsteuerung und virtuelle Schatten-Inbetriebnahme kompletter Fertigungsstraßen in harter Echtzeit mit 100% EU-Datensouveränität.",
+      "flow": [
+        {
+          "layer": "1",
+          "layerTitle": "Schicht 1: Erfassung",
+          "refCode": "IND-META-2026-PROFINET-TSN",
+          "nodeName": "PROFINET TSN & OPC UA",
+          "role": "Harte Echtzeit-Feldbus-Kopplung"
+        },
+        {
+          "layer": "2",
+          "layerTitle": "Schicht 2: Geometrie",
+          "refCode": "IND-META-2026-JT-ISO14306",
+          "nodeName": "JT ISO 14306 & STEP",
+          "role": "Industrieller Kinematik-Master"
+        },
+        {
+          "layer": "3",
+          "layerTitle": "Schicht 3: Middleware",
+          "refCode": "IND-META-2026-MQTT-SPARKPLUG",
+          "nodeName": "MQTT Sparkplug & EDC",
+          "role": "Souveräner Datenraum-Austausch"
+        },
+        {
+          "layer": "4",
+          "layerTitle": "Schicht 4: Simulation",
+          "refCode": "IND-META-2026-ISG-VIRTUOS",
+          "nodeName": "ISG-virtuos",
+          "role": "Hardware-in-the-Loop VIBn Server"
+        },
+        {
+          "layer": "5",
+          "layerTitle": "Schicht 5: Immersion",
+          "refCode": "IND-META-2026-UNREAL-ENGINE-5",
+          "nodeName": "Unreal Engine 5",
+          "role": "RTX Dashboard & Teleoperation"
+        }
+      ]
+    }
   ]
 };
 window.PROFILES_DATA = {

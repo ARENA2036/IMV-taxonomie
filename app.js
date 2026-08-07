@@ -82,14 +82,17 @@ document.addEventListener('DOMContentLoaded', () => {
       const data = await response.json();
       categories = data.categories || [];
       dbItems = data.items || [];
+      usecases = data.usecases || [];
     } catch (err) {
       console.warn('Fallback auf window.INDEX_DATA (file:// Protokoll):', err.message);
       if (window.INDEX_DATA) {
         categories = window.INDEX_DATA.categories || [];
         dbItems = window.INDEX_DATA.items || [];
+        usecases = window.INDEX_DATA.usecases || [];
       }
     }
     filteredItems = [...dbItems];
+    filteredUseCases = [...usecases];
   }
 
   // Fetch individual JSON profile on demand
@@ -216,12 +219,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function renderMainView() {
     const kpiTotalToolsEl = document.getElementById('kpiTotalTools');
+    const kpiTotalUseCasesEl = document.getElementById('kpiTotalUseCases');
     const kpiTotalCategoriesEl = document.getElementById('kpiTotalCategories');
     if (kpiTotalToolsEl) kpiTotalToolsEl.textContent = dbItems.length;
+    if (kpiTotalUseCasesEl) kpiTotalUseCasesEl.textContent = usecases.length;
     if (kpiTotalCategoriesEl) kpiTotalCategoriesEl.textContent = categories.length;
 
     if (totalCountBadgeEl) totalCountBadgeEl.textContent = `${dbItems.length} Elemente`;
     if (statusBarEl) statusBarEl.innerHTML = `Zeige <strong>${filteredItems.length}</strong> von ${dbItems.length} auditierte Technologien im Index`;
+
+    renderUseCasesView();
 
     if (!itemsContainerEl) return;
 
@@ -241,6 +248,88 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       renderListView();
     }
+  }
+
+  function renderUseCasesView() {
+    const useCasesContainer = document.getElementById('useCasesContainer');
+    if (!useCasesContainer) return;
+
+    const searchTerm = searchInputEl ? searchInputEl.value.trim().toLowerCase() : '';
+    const selectedTier = filterTierEl ? filterTierEl.value : 'ALL';
+
+    filteredUseCases = usecases.filter(uc => {
+      const matchesTier = selectedTier === 'ALL' || uc.tier === selectedTier;
+      const matchesSearch = searchTerm === '' ||
+        uc.title.toLowerCase().includes(searchTerm) ||
+        uc.shortDesc.toLowerCase().includes(searchTerm) ||
+        uc.goal.toLowerCase().includes(searchTerm) ||
+        (uc.flow && uc.flow.some(f => f.nodeName.toLowerCase().includes(searchTerm) || (f.refCode && f.refCode.toLowerCase().includes(searchTerm))));
+
+      return matchesTier && matchesSearch;
+    });
+
+    const ucCountEl = document.getElementById('totalUseCaseCount');
+    if (ucCountEl) ucCountEl.textContent = filteredUseCases.length;
+
+    if (filteredUseCases.length === 0) {
+      useCasesContainer.innerHTML = `
+        <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: #FFF; border: 1px solid var(--border-subtle); border-radius: 8px;">
+          <i class="fa-solid fa-triangle-exclamation" style="font-size: 44px; color: var(--accent-orange); margin-bottom: 16px;"></i>
+          <h2 style="font-family: var(--font-heading); font-size: 20px; font-weight: 900;">Keine Use Cases gefunden</h2>
+          <p style="color: var(--text-muted); margin-top: 8px;">Bitte Suchbegriff anpassen oder Kostengruppen-Filter zurücksetzen.</p>
+        </div>
+      `;
+      return;
+    }
+
+    let html = '';
+    filteredUseCases.forEach(uc => {
+      const tierBadgeClass = uc.tier === 'Tier 1' ? 'tier-1' : uc.tier === 'Tier 2' ? 'tier-2' : 'tier-3';
+      
+      let flowColumnsHtml = '';
+      (uc.flow || []).forEach(step => {
+        const colClass = `col-s${step.layer}`;
+        const hasProfile = step.refCode ? `onclick="window.appOpenProfileModal('${step.refCode}')"` : '';
+        const cursorStyle = step.refCode ? 'cursor: pointer;' : 'cursor: default; background: #FFF; border: 1px dashed var(--border-subtle);';
+        
+        flowColumnsHtml += `
+          <div class="flow-column">
+            <div class="flow-column-header ${colClass}">${step.layerTitle || `Schicht ${step.layer}`}</div>
+            <div class="flow-node-card" style="${cursorStyle}" ${hasProfile}>
+              <span class="node-code">${step.refCode ? step.refCode : 'EXTERN / IT'}</span>
+              <span class="node-name">${step.nodeName}</span>
+              <span class="node-role">${step.role}</span>
+            </div>
+          </div>
+        `;
+      });
+
+      html += `
+        <div class="usecase-section">
+          <div class="usecase-header">
+            <div class="usecase-title-area">
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                <span class="usecase-number-badge">${uc.id}</span>
+                <span class="tier-badge ${tierBadgeClass}">${uc.tierLabel || uc.tier}</span>
+              </div>
+              <h2 class="usecase-title">${uc.title}</h2>
+              <p class="usecase-desc">${uc.shortDesc}</p>
+              <div class="usecase-goal-box">
+                🎯 <strong>Ziel & Nutzen:</strong> ${uc.goal}
+              </div>
+            </div>
+          </div>
+
+          <div class="flow-diagram-container">
+            <div class="flow-columns-wrapper">
+              ${flowColumnsHtml}
+            </div>
+          </div>
+        </div>
+      `;
+    });
+
+    useCasesContainer.innerHTML = html;
   }
 
   function renderGridView() {

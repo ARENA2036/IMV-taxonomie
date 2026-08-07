@@ -23,10 +23,8 @@ The project strictly follows the **ARENA2036 5-Schichten Industrial Metaverse Te
 The data architecture is **100% JSON-driven** without external databases:
 
 ```
-profiles/                     <- Canonical JSON profile specifications (Single Source of Truth)
-   ├── IND-META-2026-SIEMENS-NX.json
-   ├── IND-META-2026-NVIDIA-OMNIVERSE.json
-   └── ... (91 JSON files)
+profiles/                     <- Canonical JSON profile specifications (91 JSON files)
+usecases/                     <- Canonical JSON Use Case specifications (6 JSON files)
        │
        ▼ [Run node scripts/generate_profiles.js]
 data/
@@ -37,6 +35,7 @@ data/
 
 ### Accessing & Modifying Data:
 - **To add or update a technology profile**: Modify or create the corresponding `.json` file inside `profiles/`.
+- **To add or update a Use Case**: Modify or create a `.json` file inside `usecases/`.
 - **To rebuild the index manifest**: Run `node scripts/generate_profiles.js`.
 - Do **NOT** manually edit `data/index.json` or `data/index_data.js` — they are auto-generated.
 

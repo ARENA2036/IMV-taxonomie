@@ -1,0 +1,45 @@
+{
+  "id": "UC-03-AR-WORKER-ASSISTANCE",
+  "title": "AR-gestützte Werkerassistenz mit IoT-Echtzeitdaten",
+  "tier": "Tier 2",
+  "tierLabel": "≤ €100k / Industrieller Mittelstand",
+  "shortDesc": "Live-Kopplung von Maschinen-Telemetrie aus der SPS über OPC UA in eine Eclipse BaSyx Verwaltungsschale. Die Daten werden im räumlichen Kontext einer AR-Brille (RealWear / Meta Quest 3) direkt an der physischen Anlage eingeblendet.",
+  "goal": "Fehlerminimierung bei der Wartung komplexer Werkzeugmaschinen durch freihändige Schritt-für-Schritt-Anleitung und Live-Sensorwerte.",
+  "flow": [
+    {
+      "layer": "1",
+      "layerTitle": "Schicht 1: Erfassung",
+      "refCode": "IND-META-2026-OPC-UA",
+      "nodeName": "OPC UA / MQTT",
+      "role": "SPS Telemetrie- & Zustandserfassung"
+    },
+    {
+      "layer": "2",
+      "layerTitle": "Schicht 2: Geometrie",
+      "refCode": "IND-META-2026-PTC-CREO",
+      "nodeName": "PTC Creo CAD Data",
+      "role": "Leichtbau 3D-Baugruppenmodelle"
+    },
+    {
+      "layer": "3",
+      "layerTitle": "Schicht 3: Middleware",
+      "refCode": "IND-META-2026-AAS-IEC63278",
+      "nodeName": "Eclipse BaSyx AAS",
+      "role": "Submodell Instandhaltung & Live-IoT"
+    },
+    {
+      "layer": "4",
+      "layerTitle": "Schicht 4: Engine",
+      "refCode": "IND-META-2026-UNITY-INDUSTRY",
+      "nodeName": "Unity Industry",
+      "role": "AR-Szenenkomposition & Tracking"
+    },
+    {
+      "layer": "5",
+      "layerTitle": "Schicht 5: Immersion",
+      "refCode": "IND-META-2026-REALWEAR-NAV520",
+      "nodeName": "RealWear NAV-520 / Quest 3",
+      "role": "Freihändige AR-Werkerassistenz"
+    }
+  ]
+}
