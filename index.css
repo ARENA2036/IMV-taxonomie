@@ -155,7 +155,8 @@ h1, h2, h3, h4, h5, h6,
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 16px;
-  align-items: stretch;
+  align-content: start;
+  align-items: start;
 }
 
 .card-item {
@@ -166,8 +167,11 @@ h1, h2, h3, h4, h5, h6,
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 280px !important;
+  height: 270px;
+  min-height: 270px;
+  max-height: 270px;
   box-sizing: border-box;
+  align-self: start;
   transition: all 0.2s ease;
 }
 
