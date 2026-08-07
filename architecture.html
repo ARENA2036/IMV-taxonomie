@@ -27,21 +27,26 @@
 
   <!-- Header Navbar with Bootstrap Navbar & Dropdown -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm px-3 flex-shrink-0">
-    <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="./index.html">
-        <img src="./assets/ARENA2036_combinationmark_orange_black.png" alt="ARENA2036 Logo" class="logo-img" title="ARENA2036">
-        <div class="logo-divider"></div>
-        <img src="./assets/Metaverse Logo bunt.svg" alt="Industrial Metaverse Logo" class="logo-img" title="Industrial Metaverse">
-        <div class="logo-divider"></div>
-        <img src="./assets/BaWue_WM_Absenderlogo_rgb_pos_Gefoerdert.svg" alt="Gefördert durch Baden-Württemberg" class="logo-img" title="Ministerium BW">
-      </a>
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+      
+      <!-- Left: Logos (without ARENA logo) -->
+      <div class="d-flex align-items-center" style="min-width: 180px;">
+        <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="./index.html">
+          <img src="./assets/Metaverse Logo bunt.svg" alt="Industrial Metaverse Logo" class="logo-img" title="Industrial Metaverse">
+          <div class="logo-divider"></div>
+          <img src="./assets/BaWue_WM_Absenderlogo_rgb_pos_Gefoerdert.svg" alt="Gefördert durch Baden-Württemberg" class="logo-img" title="Ministerium BW">
+        </a>
+      </div>
 
-      <!-- Centered Header Title -->
-      <span class="navbar-text fw-black text-dark fs-6 d-none d-md-block mx-auto text-truncate" style="max-width: 45%;">
-        Industrial Metaverse System-Architektur
-      </span>
+      <!-- Center: Title Text Centered -->
+      <div class="text-center flex-grow-1 px-2">
+        <span class="fw-black text-dark fs-6 d-none d-md-inline-block text-truncate" style="max-width: 90%;">
+          Industrial Metaverse System-Architektur
+        </span>
+      </div>
 
-      <div class="d-flex align-items-center gap-2">
+      <!-- Right: Action Buttons & Hamburger Menu -->
+      <div class="d-flex align-items-center justify-content-end gap-2" style="min-width: 180px;">
         <a href="./index.html" class="btn btn-outline-secondary btn-sm">
           <i class="fa-solid fa-house me-1"></i> Startseite
         </a>
