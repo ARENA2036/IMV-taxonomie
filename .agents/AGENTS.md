@@ -8,7 +8,7 @@
 
 ## 📌 1. Project Purpose & Architecture
 
-This repository contains the open research taxonomy and interactive web browser for **91 Industrial Metaverse technologies, standards, and protocols** across the **ARENA2036 5-Schichten Industrial Metaverse Tech-Stack**:
+This repository contains the open research taxonomy and interactive web browser for **numerous Industrial Metaverse technologies, standards, and protocols** across the **ARENA2036 5-Schichten Industrial Metaverse Tech-Stack**:
 
 1. **Schicht 1: Erfassung & OT-Datenerfassung** *(Categories 1.1–1.8)*
 2. **Schicht 2: Geometrie & CAD-Pre-Processing** *(Categories 2.1–2.4)*
@@ -23,7 +23,7 @@ This repository contains the open research taxonomy and interactive web browser 
 The data architecture is **100% JSON-driven** without external database requirements:
 
 ```
-profiles/*.json               <- Canonical JSON profile specifications (91 JSON files)
+profiles/*.json               <- Canonical JSON profile specifications
 usecases/*.json               <- Canonical Baukasten Use Case specifications (6 JSON files)
        │
        ▼ [Run node scripts/generate_profiles.js]

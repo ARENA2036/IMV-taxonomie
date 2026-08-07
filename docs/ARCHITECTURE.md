@@ -6,7 +6,7 @@
 
 ## 🏛️ 1. The ARENA2036 5-Layer Industrial Metaverse Stack
 
-The architecture categorizes 91 audited technologies, standards, and protocols into 5 distinct layers structured in a **1:1 decimal category system (Categories 1.1 to 5.2)** and a **linear horizontal left-to-right data progression flow**:
+The architecture categorizes numerous audited technologies, standards, and protocols into 5 distinct layers structured in a **1:1 decimal category system (Categories 1.1 to 5.2)** and a **linear horizontal left-to-right data progression flow**:
 
 ```
 [ SCHICHT 1: Erfassung & OT (1.1–1.8) ] ──► [ SCHICHT 2: Geometrie & CAD (2.1–2.4) ] ──► [ SCHICHT 3: Middleware & AAS (3.1–3.3) ] ──► [ SCHICHT 4: Simulation & VIBn (4.1–4.4) ] ──► [ SCHICHT 5: Spatial Immersion (5.1–5.2) ]
@@ -31,7 +31,7 @@ The architecture categorizes 91 audited technologies, standards, and protocols i
 The application is 100% JSON-driven without external database dependencies:
 
 ```
-profiles/*.json   (91 canonical technology profile JSON specifications)
+profiles/*.json   (canonical technology profile JSON specifications)
 usecases/*.json   (6 canonical Baukasten Use Case specifications)
        │
        ▼ [node scripts/generate_profiles.js]

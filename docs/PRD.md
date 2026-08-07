@@ -7,7 +7,7 @@
 
 ## 1. Executive Vision & Objectives
 
-The **Industrial Metaverse Technology Taxonomy** provides an open, vendor-neutral research taxonomy and interactive browser platform for 91 audited industrial metaverse technologies, standards, and protocols.
+The **Industrial Metaverse Technology Taxonomy** provides an open, vendor-neutral research taxonomy and interactive browser platform for numerous audited industrial metaverse technologies, standards, and protocols.
 
 ### Key Product Goals:
 1. **Single Source of Truth in Pure JSON**: Maintain a growing collection of technology profiles stored strictly as JSON files (`profiles/*.json`), compiled dynamically via `node scripts/generate_profiles.js`.
@@ -70,6 +70,6 @@ The **Industrial Metaverse Technology Taxonomy** provides an open, vendor-neutra
 ## 4. AI & Agentic Workflows Specification
 
 This project leverages **Agentic AI Workflows** for agile development, automated quality assurance, and taxonomy maintenance:
-- **Agentic Code & Schema Auditing**: Autonomous verification of 91 JSON profile specifications against canonical 19-field schemas.
+- **Agentic Code & Schema Auditing**: Autonomous verification of canonical JSON profile specifications against 19-field schemas.
 - **Continuous Documentation Sync**: Automated alignment of user-facing HTML views, technical architecture docs (`docs/ARCHITECTURE.md`), and AI agent guidelines (`.agents/AGENTS.md`).
 - **Refactoring & Optimization**: Automated refactoring of data structures, CSS design system tokens, and responsive UI layouts.

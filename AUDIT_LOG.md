@@ -53,17 +53,18 @@ Verified all static assets in `assets/` and ensured correct relative referencing
 | File | Type / Role | Audit Status |
 | :--- | :--- | :--- |
 | [`index.html`](file:///Users/michael/dev/IMV_Taxo/index.html) | Full-canvas Greeter, hero header with logos, 3-card grid | ✅ Verified |
+| [`guide.html`](file:///Users/michael/dev/IMV_Taxo/guide.html) | Orientierung & Praxis Leitfaden, 3 Schritte Schnelleinstieg | ✅ Verified |
 | [`browser.html`](file:///Users/michael/dev/IMV_Taxo/browser.html) | 5-layer taxonomy browser, uniform grid cards, table-bordered list view | ✅ Verified |
 | [`examples.html`](file:///Users/michael/dev/IMV_Taxo/examples.html) | Use Cases flow columns, tier filters, centered PR button | ✅ Verified |
 | [`architecture.html`](file:///Users/michael/dev/IMV_Taxo/architecture.html) | 5-layer architecture spec, LR Mermaid flow, 5-column sequence | ✅ Verified |
 | [`impressum.html`](file:///Users/michael/dev/IMV_Taxo/impressum.html) | ARENA2036 e.V. legal details, clean white disclaimer box | ✅ Verified |
-| [`index.css`](file:///Users/michael/dev/IMV_Taxo/index.css) | Minimal design system tokens, `Arial Black` & `Montserrat` typography | ✅ Verified |
+| [`index.css`](file:///Users/michael/dev/IMV_Taxo/index.css) | Minimal design system tokens, `.app-page-container` 1080px frame, global `hyphens: none` | ✅ Verified |
 | [`app.js`](file:///Users/michael/dev/IMV_Taxo/app.js) | Pure JSON client engine, JSDoc annotated, zero JS errors | ✅ Verified |
 | [`scripts/generate_profiles.js`](file:///Users/michael/dev/IMV_Taxo/scripts/generate_profiles.js) | Node data pipeline indexer, JSDoc annotated | ✅ Verified |
-| [`.gitignore`](file:///Users/michael/dev/IMV_Taxo/.gitignore) | Production-grade git ignore configuration | ✅ Created |
+| [`.gitignore`](file:///Users/michael/dev/IMV_Taxo/.gitignore) | Production-grade git ignore configuration | ✅ Verified |
 | [`README.md`](file:///Users/michael/dev/IMV_Taxo/README.md) | Enterprise repository overview & developer documentation index | ✅ Verified |
 | [`.agents/AGENTS.md`](file:///Users/michael/dev/IMV_Taxo/.agents/AGENTS.md) | AI Agent & LLM developer guidelines | ✅ Verified |
 | [`docs/ARCHITECTURE.md`](file:///Users/michael/dev/IMV_Taxo/docs/ARCHITECTURE.md) | Left-to-right 5-layer stack technical specs | ✅ Verified |
 | [`docs/USECASES.md`](file:///Users/michael/dev/IMV_Taxo/docs/USECASES.md) | Composite Use Case model & PR contribution guide | ✅ Verified |
-| [`docs/PRD.md`](file:///Users/michael/dev/IMV_Taxo/docs/PRD.md) | Product Requirements Document & Target Personas | ✅ Centralized |
+| [`docs/PRD.md`](file:///Users/michael/dev/IMV_Taxo/docs/PRD.md) | Product Requirements Document & Target Personas | ✅ Verified |
 | [`AUDIT_LOG.md`](file:///Users/michael/dev/IMV_Taxo/AUDIT_LOG.md) | Itemized end-to-end audit report & deliverables changelog | ✅ Verified |

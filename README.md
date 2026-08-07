@@ -7,7 +7,7 @@
 
 ## 📌 1. Executive Summary
 
-This repository contains the open research taxonomy, interactive web browser, and Baukasten Use Case specifications for **91 audited Industrial Metaverse technologies, standards, and protocols** structured strictly into the **ARENA2036 5-Schichten Industrial Metaverse Tech-Stack** and **1:1 Layer-to-Category Decimal System (Categories 1.1–5.2)**:
+This repository contains the open research taxonomy, interactive web browser, and Baukasten Use Case specifications for **numerous audited Industrial Metaverse technologies, standards, and protocols** structured strictly into the **ARENA2036 5-Schichten Industrial Metaverse Tech-Stack** and **1:1 Layer-to-Category Decimal System (Categories 1.1–5.2)**:
 
 ```
 [ SCHICHT 1: Erfassung (1.1–1.8) ] ──► [ SCHICHT 2: Geometrie (2.1–2.4) ] ──► [ SCHICHT 3: Middleware (3.1–3.3) ] ──► [ SCHICHT 4: Simulation (4.1–4.4) ] ──► [ SCHICHT 5: Immersion (5.1–5.2) ]
@@ -46,7 +46,7 @@ All technical, product, and agent documentation files are standardized and centr
 The application is **100% JSON-driven** without external database overhead:
 
 ```
-profiles/*.json     <- Canonical JSON profile specifications (91 JSON files)
+profiles/*.json     <- Canonical JSON profile specifications
 usecases/*.json     <- Canonical Baukasten Use Case specifications (6 JSON files)
        │
        ▼ [Run node scripts/generate_profiles.js]
@@ -109,7 +109,7 @@ Then open `http://localhost:8080` in your web browser.
 ## 🤖 7. AI & Agentic Workflows
 
 This project is co-developed and maintained partially using **Agentic AI Workflows**. Autonomous agentic workflows assist with:
-- **Canonical Data Pipeline & Profile Indexing**: Automated compilation and schema validation across 91 JSON technology profiles and 6 Baukasten Use Cases.
+- **Canonical Data Pipeline & Profile Indexing**: Automated compilation and schema validation across canonical JSON technology profiles and 6 Baukasten Use Cases.
 - **Architectural & Design Consistency**: Automated visual auditing, responsive UI alignment, and 1:1 Layer-to-Category decimal system restructuring.
 - **Documentation & Repository Hygiene**: Automated synchronization of technical documentation (`docs/`), agent guidelines (`.agents/AGENTS.md`), and production git rules (`.gitignore`).
 

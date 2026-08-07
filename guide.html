@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orientierung & Praxis Leitfaden • Industrial Metaverse Taxonomie</title>
+  <meta name="description" content="Schritt für Schritt Anleitung und Orientierungshilfe zur Nutzung der Industrial Metaverse Technologie Taxonomie für Fabrikplaner, Ingenieure und IT Entscheider. Projekt Reallabor 2.0 am Forschungscampus ARENA2036.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon-icon.svg">
+  <link rel="alternate icon" type="image/png" href="./assets/ARENA2036_combinationmark_orange_black.png">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Google Fonts: Montserrat & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom Design Tokens & UI Styles -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body class="bg-light text-dark min-vh-100 d-flex flex-column">
+
+  <!-- Light Header Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm px-3 flex-shrink-0">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+      
+      <!-- Left: Logos -->
+      <div class="d-flex align-items-center" style="min-width: 180px;">
+        <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="./index.html">
+          <img src="./assets/Metaverse Logo bunt.svg" alt="Industrial Metaverse Logo" class="logo-img" title="Industrial Metaverse">
+          <div class="logo-divider"></div>
+          <img src="./assets/BaWue_WM_Absenderlogo_rgb_pos_Gefoerdert.svg" alt="Gefördert durch Baden-Württemberg" class="logo-img" title="Ministerium BW">
+        </a>
+      </div>
+
+      <!-- Center: Title Text Centered -->
+      <div class="text-center flex-grow-1 px-2">
+        <span class="fw-black text-dark fs-6 d-none d-md-inline-block text-truncate" style="max-width: 90%;">
+          Orientierung & Praxis Leitfaden
+        </span>
+      </div>
+
+      <!-- Right: Action Buttons & Hamburger Menu -->
+      <div class="d-flex align-items-center justify-content-end gap-2" style="min-width: 180px;">
+        <a href="./index.html" class="btn btn-outline-secondary btn-sm">
+          <i class="fa-solid fa-house me-1"></i> Startseite
+        </a>
+
+        <!-- Hamburger Dropdown Menu -->
+        <div class="dropdown">
+          <button class="btn btn-light btn-sm border dropdown-toggle" id="hamburgerBtn" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Menü">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+            <li><a class="dropdown-item" href="./index.html"><i class="fa-solid fa-house text-muted me-2"></i>Startseite</a></li>
+            <li><a class="dropdown-item active bg-primary" href="./guide.html"><i class="fa-solid fa-compass me-2"></i>Einstiegsleitfaden</a></li>
+            <li><a class="dropdown-item" href="./browser.html"><i class="fa-solid fa-layer-group text-muted me-2"></i>Taxonomie Browser</a></li>
+            <li><a class="dropdown-item" href="./examples.html"><i class="fa-solid fa-sitemap text-muted me-2"></i>Beispiele & Use Cases</a></li>
+            <li><a class="dropdown-item" href="./architecture.html"><i class="fa-solid fa-diagram-project text-muted me-2"></i>Architektur Spezifikation</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="./impressum.html"><i class="fa-solid fa-scale-balanced text-muted me-2"></i>Impressum & Rechtliches</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Container -->
+  <main class="container app-page-container py-4 flex-grow-1">
+    
+    <div class="card border-0 shadow-sm p-4 p-md-5 mb-4">
+      
+      <!-- Title Block -->
+      <div class="mb-4 pb-3 border-bottom">
+        <h1 class="h3 fw-black text-dark m-0 mb-3">Wie nutze ich diese Forschungs-Taxonomie?</h1>
+        <p class="text-secondary lead fs-6 mb-0">
+          Dieser Leitfaden dient als Schritt für Schritt Orientierungshilfe für Anwender, Fabrikplaner und IT Entscheider zur gezielten Nutzung und Bewertung der zahlreichen Industrial Metaverse Technologien.
+        </p>
+      </div>
+
+      <!-- Core Purpose Section -->
+      <div class="mb-5">
+        <h2 class="h5 fw-bold text-dark mb-3">
+          <i class="fa-solid fa-bullseye text-primary me-2"></i>1. Wozu dient die Taxonomie in der Praxis?
+        </h2>
+        <p class="text-secondary mb-4">
+          Das Thema <strong>Industrial Metaverse</strong> erzeugt in vielen Unternehmen Skepsis: Ist das nur ein Hype rund um teure VR Brillen, oder bringt das echten Nutzen in der Fertigung? Diese Forschungs-Plattform schafft Transparenz durch drei Säulen:
+        </p>
+        
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="d-flex align-items-start gap-3">
+              <div class="bg-primary-subtle text-primary p-3 rounded-3 fs-5 flex-shrink-0">
+                <i class="fa-solid fa-scale-unbalanced"></i>
+              </div>
+              <div>
+                <h3 class="h6 fw-bold text-dark mb-1">Neutral & Offen</h3>
+                <p class="small text-muted mb-0">
+                  100% wissenschaftlich auditierte Orientierung ohne herstellerseitige Verkaufsinteressen oder Werbe-Bias.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="d-flex align-items-start gap-3">
+              <div class="bg-primary-subtle text-primary p-3 rounded-3 fs-5 flex-shrink-0">
+                <i class="fa-solid fa-coins"></i>
+              </div>
+              <div>
+                <h3 class="h6 fw-bold text-dark mb-1">Transparente Tiers</h3>
+                <p class="small text-muted mb-0">
+                  Klare Klassifizierung von Tier 1 (≤ €30k / Open Source) über Tier 2 (≤ €100k) bis zu OEM Enterprise (> €100k).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="d-flex align-items-start gap-3">
+              <div class="bg-primary-subtle text-primary p-3 rounded-3 fs-5 flex-shrink-0">
+                <i class="fa-solid fa-cubes"></i>
+              </div>
+              <div>
+                <h3 class="h6 fw-bold text-dark mb-1">Baukastenprinzip</h3>
+                <p class="small text-muted mb-0">
+                  Kein unbezahlbarer Monolith, sondern frei kombinierbare Software & Hardware Bausteine für Ihren Shopfloor.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Single Highlight Callout Box -->
+      <div class="app-highlight-box mb-5">
+        <h3 class="h6 fw-bold text-dark mb-2">
+          <i class="fa-solid fa-lightbulb text-primary me-2"></i>Klartext zum Einstieg
+        </h3>
+        <p class="small text-secondary m-0">
+          Industrial Metaverse im Reallabor 2.0 bedeutet die <strong>schrittweise, modulare Digitalisierung Ihrer Produktion</strong>: von der einfachen 3D-Bestandserfassung über die Vernetzung von Maschinen per OPC UA bis hin zu interaktiven Web-Visualisierungen und virtueller Inbetriebnahme.
+        </p>
+      </div>
+
+      <!-- 3-Schritte-Schnelleinstieg -->
+      <div class="mb-5">
+        <h2 class="h5 fw-bold text-dark mb-3">
+          <i class="fa-solid fa-route text-primary me-2"></i>2. 3 Schritte Schnelleinstieg für Ihr Digitalisierungsvorhaben
+        </h2>
+        <div class="row g-4">
+          
+          <!-- Step 1 -->
+          <div class="col-md-4">
+            <div class="p-3 bg-white border-top border-3 border-primary rounded-bottom shadow-sm h-100">
+              <span class="badge bg-primary text-white font-monospace mb-2">SCHRITT 1</span>
+              <h3 class="h6 fw-bold text-dark mb-2">Betriebliches Ziel definieren</h3>
+              <p class="small text-secondary mb-2" style="font-size: 12.5px;">
+                Orten Sie Ihr Vorhaben in der <a href="./architecture.html" class="fw-bold text-primary">Architektur Spezifikation</a>:
+              </p>
+              <ul class="small text-secondary ps-3 mb-0" style="font-size: 12.5px;">
+                <li class="mb-1"><em>"Werkshallen 3D erfassen"</em> ➔ <strong>Schicht 1</strong></li>
+                <li class="mb-1"><em>"CAD-Daten im Web zeigen"</em> ➔ <strong>Schicht 2</strong></li>
+                <li class="mb-1"><em>"Livedaten spiegeln"</em> ➔ <strong>Schicht 3</strong></li>
+                <li class="mb-1"><em>"SPS-Code simulieren"</em> ➔ <strong>Schicht 4</strong></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="col-md-4">
+            <div class="p-3 bg-white border-top border-3 border-primary rounded-bottom shadow-sm h-100">
+              <span class="badge bg-primary text-white font-monospace mb-2">SCHRITT 2</span>
+              <h3 class="h6 fw-bold text-dark mb-2">Im Taxonomie Browser filtern</h3>
+              <p class="small text-secondary mb-0" style="font-size: 12.5px;">
+                Wechseln Sie zum <a href="./browser.html" class="fw-bold text-primary">Taxonomie Browser</a>. Nutzen Sie die Sidebar, um in den 21 Unterkategorien (z.B. <em>1.1 Mobile SLAM Scanner</em> oder <em>3.1 Verwaltungsschale AAS</em>) zu filtern.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="col-md-4">
+            <div class="p-3 bg-white border-top border-3 border-primary rounded-bottom shadow-sm h-100">
+              <span class="badge bg-primary text-white font-monospace mb-2">SCHRITT 3</span>
+              <h3 class="h6 fw-bold text-dark mb-2">Budgetklasse & Reifegrad prüfen</h3>
+              <p class="small text-secondary mb-2" style="font-size: 12.5px;">
+                Filtern Sie nach Ihrer Investitionsklasse:
+              </p>
+              <div class="d-flex flex-column gap-1 small">
+                <span class="tier-badge tier-1">Tier 1: ≤ €30k (Starter & Open Source)</span>
+                <span class="tier-badge tier-2">Tier 2: ≤ €100k (Mittelstand)</span>
+                <span class="tier-badge tier-3">Tier 3: > €100k (Enterprise OEM)</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Das Community-Validierungsmodell -->
+      <div class="mb-5">
+        <h2 class="h5 fw-bold text-dark mb-3">
+          <i class="fa-solid fa-list-check text-primary me-2"></i>3. Das Community Validierungsmodell
+        </h2>
+        <p class="small text-secondary mb-3">
+          Jedes Technologie-Profil ist mit einem transparenten Validierungs-Status versehen. So erkennen Anwender sofort, ob eine Technologie bisher lediglich indiziert oder bereits im realen Industrieeinsatz erprobt wurde:
+        </p>
+        <div class="table-responsive">
+          <table class="table table-hover align-middle small mb-0 border">
+            <thead class="table-light font-monospace">
+              <tr>
+                <th style="width: 210px;">Status Badge</th>
+                <th>Bedeutung für die Praxisprüfung</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="badge bg-secondary text-white font-monospace"><i class="fa-solid fa-list-check me-1"></i>INDEXIERT</span></td>
+                <td>In der Forschungs-Datenbank erfasst und mit strukturierten Stammdaten indiziert.</td>
+              </tr>
+              <tr>
+                <td><span class="badge bg-info text-dark font-monospace"><i class="fa-solid fa-square-check me-1"></i>GEPRÜFT</span></td>
+                <td>Vom ARENA2036 Reallabor-Team oder Fachberatern technisch auditiert und verifiziert.</td>
+              </tr>
+              <tr>
+                <td><span class="badge bg-primary text-white font-monospace"><i class="fa-solid fa-diagram-project me-1"></i>USE CASE IMPLEMENTIERT</span></td>
+                <td>Konkret in mindestens einem ausprobierbaren Baukasten Use Case (UC-01 bis UC-06) integriert.</td>
+              </tr>
+              <tr>
+                <td><span class="badge bg-success text-white font-monospace"><i class="fa-solid fa-circle-check me-1"></i>EXTERN VALIDIERT</span></td>
+                <td>Im realen Fabrikbetrieb bei Industriepartnern (OEM & Shopfloor) erfolgreich erprobt.</td>
+              </tr>
+              <tr>
+                <td><span class="badge bg-warning text-dark font-monospace"><i class="fa-solid fa-users me-1"></i>COMMUNITY BEITRAG</span></td>
+                <td>Durch externe Entwickler oder Industriepartner per GitHub Pull Request eingereicht.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Aufbau eines Profils -->
+      <div class="mb-5">
+        <h2 class="h5 fw-bold text-dark mb-3">
+          <i class="fa-solid fa-id-card text-primary me-2"></i>4. Aufbau eines Technologieprofils
+        </h2>
+        <div class="row g-4 small">
+          <div class="col-md-6">
+            <div class="border-start border-3 border-primary ps-3">
+              <strong class="text-dark d-block mb-1"><i class="fa-solid fa-sliders text-primary me-1"></i> Bereitstellung & Effort (`deployment` & `staffing`)</strong>
+              <p class="text-muted mb-0">Zeigt den Einarbeitungsaufwand (Gering / Mittel / Hoch) sowie das erforderliche Spezialisten Know-how im Team.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="border-start border-3 border-primary ps-3">
+              <strong class="text-dark d-block mb-1"><i class="fa-solid fa-shield-halved text-primary me-1"></i> Souveränität & Compliance (`compliance`)</strong>
+              <p class="text-muted mb-0">Gibt Auskunft über DSGVO Konformität, EU Datensouveränität und Kompatibilität mit NVIDIA Omniverse & OpenUSD.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="border-start border-3 border-primary ps-3">
+              <strong class="text-dark d-block mb-1"><i class="fa-solid fa-diagram-next text-primary me-1"></i> Schnittstellen & Bridges (`inputs`, `outputs`, `bridges`)</strong>
+              <p class="text-muted mb-0">Erklärt, welche 3D Formate (STEP, JT, OpenUSD) importiert/exportiert werden und zu welchen Systemen Brücken existieren.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="border-start border-3 border-primary ps-3">
+              <strong class="text-dark d-block mb-1"><i class="fa-solid fa-vial-circle-check text-primary me-1"></i> Feld-Evaluierung (`evaluations`)</strong>
+              <p class="text-muted mb-0">Praxisnahe Zusammenfassung von Nutzen, Limitationen und Einsatz-Empfehlungen aus realen Feldtests.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Button Row -->
+      <div class="pt-3 border-top d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <a href="./index.html" class="btn btn-outline-secondary btn-sm">
+          <i class="fa-solid fa-arrow-left me-1"></i> Zurück zur Startseite
+        </a>
+        <div class="d-flex gap-2">
+          <a href="./browser.html" class="btn btn-primary btn-sm fw-bold">
+            <i class="fa-solid fa-layer-group me-1"></i> Taxonomie Browser öffnen
+          </a>
+          <a href="./examples.html" class="btn btn-outline-primary btn-sm">
+            <i class="fa-solid fa-sitemap me-1"></i> Baukasten Use Cases
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer class="py-3 text-center small text-muted border-top bg-white">
+    ARENA2036 Industrial Metaverse Taxonomy | 
+    <a href="./guide.html" class="text-muted text-decoration-none font-weight-bold">Leitfaden</a> | 
+    <a href="./examples.html" class="text-muted text-decoration-none font-weight-bold">Use Cases</a> | 
+    <a href="./browser.html" class="text-muted text-decoration-none font-weight-bold">Browser</a> | 
+    <a href="./impressum.html" class="text-muted text-decoration-none font-weight-bold">Impressum</a>
+  </footer>
+
+  <!-- Bootstrap 5 JavaScript Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
