@@ -1,7 +1,4 @@
-/**
- * Auto-generierter Static-Fallback Wrapper für das file:// Protokoll
- * 5-Schichten Industrial Metaverse Tech-Stack Architecture
- */
+/** Auto-generated static dataset for zero-CORS local execution */
 window.INDEX_DATA = {
   "categories": [
     {

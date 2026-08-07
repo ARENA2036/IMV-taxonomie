@@ -1,3 +1,15 @@
+/**
+ * Industrial Metaverse Taxonomy Indexer & Data Pipeline Builder
+ * ARENA2036 Reallabor 2.0 Project
+ * 
+ * Scans canonical profile JSON files from profiles/ and usecase JSON files from usecases/.
+ * Compiles and outputs:
+ * 1. data/index.json  (JSON manifest for HTTP fetch requests)
+ * 2. data/index_data.js (Window wrapper for zero-CORS file:// protocol execution)
+ * 
+ * @module generate_profiles
+ */
+
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -9,6 +21,10 @@ const profilesDir = path.join(rootDir, 'profiles');
 const usecasesDir = path.join(rootDir, 'usecases');
 const dataDir = path.join(rootDir, 'data');
 
+/**
+ * Canonical 21 technology category taxonomy across the 5 ARENA2036 layers.
+ * @type {Array<{code: string, name: string, desc: string, layer: string}>}
+ */
 const CATEGORIES = [
   { code: '1.1', name: 'Mechanisches CAD (MCAD)', desc: 'Parametrische 3D-CAD-Systeme für den Maschinen- und Fahrzeugbau.', layer: '2' },
   { code: '1.2', name: 'BIM, Bauwesen & Infrastruktur (AEC)', desc: 'Bauwerksdatenmodellierung für Fabrik- und Gebäudestrukturen.', layer: '2' },
@@ -100,26 +116,15 @@ const indexData = {
   usecases: usecases
 };
 
-// 1. Write canonical data/index.json
-fs.writeFileSync(
-  path.join(dataDir, 'index.json'),
-  JSON.stringify(indexData, null, 2),
-  'utf-8'
-);
+if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
 
-// 2. Write static fallback data/index_data.js for zero-CORS file:// protocol
-const staticFallbackJs = `/**
- * Auto-generierter Static-Fallback Wrapper für das file:// Protokoll
- * 5-Schichten Industrial Metaverse Tech-Stack Architecture
- */
-window.INDEX_DATA = ${JSON.stringify(indexData, null, 2)};
-window.PROFILES_DATA = ${JSON.stringify(profilesMap, null, 2)};
-`;
+// Write HTTP fetch JSON manifest
+const jsonPath = path.join(dataDir, 'index.json');
+fs.writeFileSync(jsonPath, JSON.stringify(indexData, null, 2), 'utf-8');
 
-fs.writeFileSync(
-  path.join(dataDir, 'index_data.js'),
-  staticFallbackJs,
-  'utf-8'
-);
+// Write zero-CORS window wrapper for file:// execution protocol
+const jsPath = path.join(dataDir, 'index_data.js');
+const jsContent = `/** Auto-generated static dataset for zero-CORS local execution */\nwindow.INDEX_DATA = ${JSON.stringify(indexData, null, 2)};\nwindow.PROFILES_DATA = ${JSON.stringify(profilesMap, null, 2)};\n`;
+fs.writeFileSync(jsPath, jsContent, 'utf-8');
 
 console.log(`Erfolgreich ${items.length} JSON-Profile und ${usecases.length} Use Cases indiziert und 'data/index.json' sowie 'data/index_data.js' generiert.`);

@@ -1,161 +1,77 @@
 # Industrial Metaverse Technology Taxonomy (`IMV-taxonomie`)
 
-> **Offenes Forschungs-Audit & Interaktiver Taxonomie-Browser für den Industrial Metaverse Tech Stack**
-> Ein Arbeitsergebnis im Rahmen des übergeordneten Forschungsprojekts **Reallabor 2.0** des **ARENA2036 Forschungscampus**, gefördert durch das **Ministerium für Wirtschaft, Arbeit und Tourismus Baden-Württemberg**.
-
-[![GitHub Pages Deployment](https://github.com/ARENA2036/IMV-taxonomie/actions/workflows/deploy.yml/badge.svg)](https://github.com/ARENA2036/IMV-taxonomie/actions/workflows/deploy.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-orange.svg)](LICENSE)
-[![OpenUSD Ready](https://img.shields.io/badge/OpenUSD-Native-blue.svg)](https://aousd.org/)
-[![Architecture: 5 Layers](https://img.shields.io/badge/Architecture-5%20Layers-orange.svg)](#)
-[![Agent Readable](https://img.shields.io/badge/Agent--Readable-100%25-brightgreen.svg)](#-ai-agent-assisted-development--agent-readability)
+> **Activity of the Reallabor 2.0 Project** at the **ARENA2036 Research Campus**, funded by the **Ministry of Economic Affairs, Labour and Tourism Baden-Württemberg**.
 
 ---
 
-## 📌 Projekt-Übersicht & Philosophie
+## 📌 Overview
 
-Das Projekt **IMV-taxonomie** auditiert und strukturiert **91 Technologien, Protokolle und Standards** für den Aufbau digitaler Zwillinge und vernetzter Industrie-4.0-Fabriken im **Industrial Metaverse**.
+This repository contains the open research taxonomy and interactive web browser for **91 Industrial Metaverse technologies, standards, and protocols** across the **ARENA2036 5-Schichten Industrial Metaverse Tech-Stack**:
 
-Das System basiert auf einer Baukasten-Empfehlung über **5 Schichten**:
-* **Schicht 1: Erfassung & OT-Datenerfassung** (LiDAR/SLAM, 360°, OPC UA, MQTT, IO-Link)
-* **Schicht 2: Geometrie & CAD-Pre-Processing** (MCAD, BIM, DCC, OpenUSD, STEP, JT, glTF)
-* **Schicht 3: Semantische Middleware & Datenräume** (Asset Administration Shell AAS, EDC, Cloud Twins)
-* **Schicht 4: Simulation & Virtuelle Inbetriebnahme** (Ansys, COMSOL, ISG-virtuos, Isaac Sim)
-* **Schicht 5: Räumliche Immersion & Rendering** (WebXR, Unreal Engine 5, Omniverse RTX, Vision Pro)
-
----
-
-## 🏗️ 5-Schichten Architektur-Modell & Baukastenprinzip
-
-```mermaid
-graph BT
-    S1["SCHICHT 1: Erfassung & OT-Datenerfassung<br/><i>(Matterport, FARO, NavVis, OPC UA, MQTT, IO-Link)</i>"]
-    S2["SCHICHT 2: Geometrie & CAD-Pre-Processing<br/><i>(PTC Creo, Revit, Rhino+Grasshopper, Blender, OpenUSD, glTF)</i>"]
-    S3["SCHICHT 3: Semantische Middleware & Datenräume<br/><i>(Eclipse BaSyx AAS, Eclipse Dataspace Components EDC)</i>"]
-    S4["SCHICHT 4: Simulation & Virtuelle Inbetriebnahme<br/><i>(ISG-Virtuos, Visual Components, Ansys, COMSOL, Isaac Sim)</i>"]
-    S5["SCHICHT 5: Räumliche Immersion & Rendering<br/><i>(WebXR, Unity Industry, Unreal Engine 5, NVIDIA Omniverse)</i>"]
-
-    S1 -->|Reale Sensoren & Scans| S2
-    S2 -->|3D Geometrie & CAD Master| S3
-    S1 -->|OT Live-Telemetrie| S3
-    S3 -->|Semantisch Angereicherter Zwilling| S4
-    S4 -->|Echtzeit-Physik & Kinematik| S5
-```
+1. **Schicht 1: Erfassung & OT-Datenerfassung** *(Categories 6.1–6.5, 6.1-AI, 7.0, 8.1)*
+2. **Schicht 2: Geometrie & CAD-Pre-Processing** *(Categories 1.1, 1.2, 2.0, 10.0)*
+3. **Schicht 3: Semantische Middleware & Datenräume** *(Categories 8.2, 8.3, 9.0)*
+4. **Schicht 4: Simulation & Virtuelle Inbetriebnahme** *(Categories 4.1, 4.2, 4.3, 5.0)*
+5. **Schicht 5: Räumliche Immersion & Rendering** *(Categories 3.0, 11.0)*
 
 ---
 
-## 💰 Kostengruppen-Klassifizierung (Cost Tiers)
+## 💾 Data Architecture & Pipeline
 
-| Kostengruppe | Bezeichnung | Investition | Zielgruppe & Fokus |
-| :--- | :--- | :--- | :--- |
-| <span class="tier-badge tier-1">Tier 1</span> | **KMU Starter & Open Source** | **≤ €30k / Kostenfrei** | Open-Source-Software, freie Standards & kostengünstige Module für schnelles Prototyping (z.B. Blender, OpenUSD, ROS 2, Eclipse BaSyx). |
-| <span class="tier-badge tier-2">Tier 2</span> | **Industrieller Mittelstand** | **≤ €100k / Standort** | Kommerzielle Industrie-Software, spezialisierte CAD/CAE-Simulationsmodule & Hardware-Scanner (z.B. Unreal Engine Enterprise, Creo, Leica Scanners). |
-| <span class="tier-badge tier-3">Tier 3</span> | **Enterprise OEM Plattformen** | **> €100k / OEM** | High-End OEM-Master-Systeme, PLM-Suites & werkweite Digital-Twin-Infrastrukturen (z.B. Siemens NX, NVIDIA Omniverse Enterprise, CATIA V6). |
-
----
-
-## 📁 Bereinigte Repository-Struktur
+The data architecture is **100% JSON-driven** without external databases:
 
 ```
-IMV-taxonomie/
-├── index.html                  # Minimalist Greeter Landing Page (2-Panel Split Layout)
-├── browser.html                # Interaktiver Taxonomie-Browser (Centered Title & Dual Scroll)
-├── examples.html               # JSON-Driven Use Cases Browser (Interactive Baukasten-Flows)
-├── architecture.html           # Technische Baukasten-Architektur & 5-Schichten Spezifikation
-├── impressum.html              # Impressum & Non-Commercial KMU Disclaimer
-├── index.css                   # Minimalistisches Industrie-Designsystem (Vercel/Linear Aesthetic)
-├── app.js                      # Dynamische Async JSON Engine & Inspector Handler
-├── package.json                # Node Build Manifest & Scripts
-├── data/
-│   ├── index.json              # Kanonischer Manifest-Index (91 Technologien + 6 Use Cases)
-│   └── index_data.js           # Static Fallback Wrapper für file:// Ausführung
-├── profiles/                   # Kanonische JSON Profil-Spezifikationen (Single Source of Truth)
-│   ├── IND-META-2026-SIEMENS-NX.json
-│   ├── IND-META-2026-NVIDIA-OMNIVERSE.json
-│   └── ... (91 JSON-Dateien)
-├── usecases/                   # Kanonische JSON Use Case Spezifikationen (6 Baukasten-Flows)
-│   ├── UC-01-SHOPFLOOR-INCIDENT-MANAGEMENT.json
-│   └── ... (6 JSON-Dateien)
-├── scripts/
-│   └── generate_profiles.js    # Kanonischer JSON Indexer für Profile & Use Cases
-├── assets/                     # 3 Aktive Marken-Logos (ARENA2036, Industrial Metaverse, Wirtschaftsministerium BW)
-│   ├── ARENA2036_combinationmark_orange_black.png
-│   ├── BaWue_WM_Absenderlogo_rgb_pos_Gefoerdert.svg
-│   └── Metaverse Logo bunt.svg
-├── .agents/
-│   └── AGENTS.md               # AI Agent Guidelines & Repository Architecture Specifications
-├── .gitignore                  # Git Ignore Konfiguration
-├── .github/
-│   └── workflows/
-│       └── deploy.yml          # Automated GitHub Actions Pages Deployment
-├── ARCHITECTURE.md             # Technische Architektur-Spezifikation (5 Schichten)
-├── PRD.md                      # Product Requirements Document
-└── _config.yml                 # Jekyll Konfiguration für GitHub Pages
+profiles/*.json     <- Canonical JSON profile specifications (91 JSON files)
+usecases/*.json     <- Canonical Baukasten Use Case specifications (6 JSON files)
+       │
+       ▼ [Run node scripts/generate_profiles.js]
+data/
+   ├── index.json   <- Compiled JSON index manifest for GitHub Pages fetch()
+   └── index_data.js <- Static window wrapper (window.INDEX_DATA & window.PROFILES_DATA)
+                        for zero-CORS local file:// execution protocol
 ```
 
----
-
-## 🚀 Entwickler-Guide: Neue Technologien Hinzufügen
-
-Dank der reinen JSON-Architektur ist das Erweitern der Taxonomie in 2 Schritten erledigt:
-
-### 1. Neue JSON-Datei im Ordner `profiles/` anlegen
-Erstellen Sie eine Datei `profiles/IND-META-2026-MEIN-TOOL.json`:
-```json
-{
-  "refCode": "IND-META-2026-MEIN-TOOL",
-  "categoryCode": "1.1",
-  "categoryName": "Mechanisches CAD (MCAD)",
-  "name": "Mein Industrie Tool",
-  "subtitle": "Kurze Funktionsbeschreibung",
-  "vendor": "Mein Unternehmen",
-  "hq": "Deutschland (EU)",
-  "businessModel": "Subscription",
-  "url": "https://beispiel.de",
-  "tier": "Tier 1",
-  "costLabel": "≤ €30k",
-  "status": "STANDARDIZIERT",
-  "overview": "Ausführliche Beschreibung...",
-  "features": [{ "title": "Kernfunktion", "desc": "Details..." }],
-  "inputs": ["STEP", "OpenUSD"],
-  "outputs": ["OpenUSD"],
-  "bridges": ["NVIDIA Omniverse"],
-  "evaluations": [{ "title": "Bewertung", "text": "Details..." }],
-  "compliance": { "omniverse": "Native Extension", "sovereignty": "100% EU Souverän", "openStandard": "OpenUSD" },
-  "deployment": { "effort": "Gering", "mode": "Cloud", "maturity": "Produktiv", "area": "Maschinenbau" },
-  "staffing": "1x Spezialist"
-}
-```
-
-### 2. Indexer-Skript ausführen
+### Build Indexer:
 ```bash
+# Rebuild index manifest and static data fallback
 node scripts/generate_profiles.js
 ```
-Das Skript validiert die JSON-Datei, aktualisiert `data/index.json` sowie den statischen Fallback `data/index_data.js`. Der Browser erkennt die neue Technologie automatisch!
 
 ---
 
-## 🤖 AI Agent-Assisted Development & Agent-Readability
+## 🛠️ Technology Stack & Component Library
 
-> [!NOTE]
-> **Hinweis zur KI-gestützten Entwicklung:**  
-> Teile der Software-Architektur, der Schema-Strukturierung, der Datenverarbeitungs-Skripte sowie der Dokumentation dieses Repositories wurden unter Zuhilfenahme autonomer KI-Entwicklungs-Agenten (Google DeepMind Antigravity / Gemini Agentic Workflow) umgesetzt.
-
-### 🤖 100% Agent-Readable Repository Spezifikation
-Dieses Repository ist explizit als **100% AI Agent-Readable** strukturiert:
-* **Reine JSON-Daten-Pipeline**: Keine Datenbank-Abhängigkeiten; 100% kanonische JSON-Profil-Spezifikationen im Ordner `profiles/`.
-* **Explizite Agenten-Richtlinien**: Vollständige Anweisungen, Schema-Standards und Build-Checklisten sind in [`.agents/AGENTS.md`](.agents/AGENTS.md) hinterlegt.
-* **Deterministische Build-Skripte**: Automatisierte Index-Kompilierung (`node scripts/generate_profiles.js`), sodass KI-Agenten Technologien nahtlos hinzufügen, indizieren und validieren können.
+- **UI Framework**: HTML5, Vanilla JavaScript (ES6+), **Bootstrap 5.3 (via CDN)**.
+- **Typography**: `Arial Black` (Headings & Titles), `Montserrat` (Body & Lead Copy), `JetBrains Mono` (RefCodes & Badges).
+- **Icons**: FontAwesome 6.
+- **Diagrams**: Mermaid.js.
+- **Zero CORS**: All views (`index.html`, `browser.html`, `examples.html`, `architecture.html`, `impressum.html`) work seamlessly on HTTP web servers and directly via local `file://` execution.
 
 ---
 
-## 🌐 Deploying to GitHub Pages
+## 📂 Project Structure
 
-Jeder Commit auf den `main`-Branch löst den GitHub-Actions-Workflow `.github/workflows/deploy.yml` aus und schaltet die statische Seite live unter:
-`https://ARENA2036.github.io/IMV-taxonomie/`
+```
+├── index.html               # Full-Canvas Greeter Landing Page
+├── browser.html             # Interactive Taxonomy Browser (Grid & List View)
+├── examples.html            # Baukasten Use Cases Browser & Flow Diagrams
+├── architecture.html        # 5-Layer System Architecture Specification
+├── impressum.html           # ARENA2036 Legal Impressum & Disclaimers
+├── index.css                # Minimal Bootstrap 5 Design System & Accent Overrides
+├── app.js                   # Pure JSON Client Engine & Modal Inspector
+├── profiles/*.json          # 91 Canonical Technology JSON Specifications
+├── usecases/*.json          # 6 Canonical Baukasten Use Case JSON Specifications
+├── scripts/
+│   └── generate_profiles.js # Node Data Pipeline Indexer
+├── docs/
+│   ├── ARCHITECTURE.md      # 5-Layer Stack Technical Specs
+│   └── USECASES.md          # Use Case Model & PR Contribution Guide
+├── AUDIT_LOG.md             # End-to-End Audit & Bug Fix Report
+└── README.md                # Main Repository Documentation
+```
 
 ---
 
-## 📄 Lizenz & Förderung
+## ⚖️ Legal & Non-Financial Advice Disclaimer
 
-Dieses Projekt steht unter der **MIT-Lizenz**.  
-Gefördert durch das **Ministerium für Wirtschaft, Arbeit und Tourismus Baden-Württemberg** im Rahmen des **ARENA2036 Forschungscampus Stuttgart**.
+> **📌 RECHTLICHER HINWEIS:** Alle Angaben zu Kostengruppen (Tier 1–3), Nutzenpotenzialen und Technologie-Evaluierungen dienen der akademischen und strategischen Orientierung (Research Benchmarks) und stellen **KEINE direkte Finanz-, Anlage- oder Rechtsberatung** dar. Diese Zusammenstellung stellt ausdrücklich KEINE kommerzielle Produktwerbung oder herstellerseitige Vorzugsempfehlung dar.

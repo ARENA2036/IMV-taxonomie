@@ -1,22 +1,45 @@
 /**
- * Industrial Metaverse Tech Stack Audit — Pure 100% JSON-Driven Engine
- * GitHub Pages Compatible & Zero-CORS Fallback Protocol
- * 5-Schichten Industrial Metaverse Tech-Stack Architecture
+ * Industrial Metaverse Tech Stack Engine — Pure JSON-Driven Client Engine
+ * ARENA2036 Reallabor 2.0 Project
+ * 
+ * GitHub Pages Compatible & Zero-CORS Fallback Protocol for file:// execution.
+ * Manages rendering for Technology Profiles, Use Cases, Filters, and Modals.
+ * 
+ * @module app
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  /** @type {Array<{code: string, name: string}>} */
   let categories = [];
+  
+  /** @type {Array<Object>} */
   let dbItems = [];
+  
+  /** @type {Array<Object>} */
   let usecases = [];
+  
+  /** @type {Array<Object>} */
   let filteredUseCases = [];
+  
+  /** @type {Object<string, Object>} */
   let profilesCache = {};
 
+  /** @type {Array<Object>} */
   let filteredItems = [];
+  
+  /** @type {string|null} */
   let selectedCategoryCode = null;
+  
+  /** @type {string} */
   let selectedLayer = 'ALL';
+  
+  /** @type {Set<string>} */
   let selectedCompareRefs = new Set();
-  let currentViewMode = 'grid'; // 'grid' | 'list'
+  
+  /** @type {'grid'|'list'} */
+  let currentViewMode = 'grid';
 
+  /** @type {Object<string, Array<string>>} */
   const layerCategoryMap = {
     '1': ['6.1', '6.2', '6.3', '6.4', '6.5', '6.1-AI', '7.0', '8.1'],
     '2': ['1.1', '1.2', '2.0', '10.0'],
@@ -25,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '5': ['3.0', '11.0']
   };
 
+  /** @type {Object<string, string>} */
   const layerNames = {
     '1': 'SCHICHT 1: Erfassung & OT-Datenerfassung',
     '2': 'SCHICHT 2: Geometrie & CAD-Pre-Processing',
@@ -60,12 +84,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const compareModalBody = document.getElementById('compareModalBody');
   const btnCloseCompareModal = document.getElementById('btnCloseCompareModal');
 
-  const matrixModal = document.getElementById('matrixModal');
-  const btnOverview = document.getElementById('btnOverview');
-  const btnOverviewHero = document.getElementById('btnOverviewHero');
-  const btnCloseMatrixModal = document.getElementById('btnCloseMatrixModal');
-  const matrixTableBody = document.getElementById('matrixTableBody');
-
+  /**
+   * Initializes application state, loads manifest data, renders initial UI, and sets event listeners.
+   * @async
+   * @returns {Promise<void>}
+   */
   async function init() {
     await loadIndexData();
     handleInitialHash();
@@ -75,7 +98,11 @@ document.addEventListener('DOMContentLoaded', () => {
     window.appOpenProfileModal = openProfileModal;
   }
 
-  // Load index manifest dynamically via fetch or static fallback
+  /**
+   * Loads index manifest dynamically via fetch() or falls back to static window.INDEX_DATA for file:// protocol.
+   * @async
+   * @returns {Promise<void>}
+   */
   async function loadIndexData() {
     try {
       const response = await fetch('./data/index.json');
@@ -96,7 +123,12 @@ document.addEventListener('DOMContentLoaded', () => {
     filteredUseCases = [...usecases];
   }
 
-  // Fetch individual JSON profile on demand
+  /**
+   * Fetches an individual technology profile JSON on demand with fallback caching.
+   * @async
+   * @param {string} refCode - The canonical technology reference code (e.g. IND-META-2026-NVIDIA-OMNIVERSE).
+   * @returns {Promise<Object|null>} The canonical profile object or null.
+   */
   async function getProfileData(refCode) {
     if (profilesCache[refCode]) return profilesCache[refCode];
 
@@ -111,12 +143,14 @@ document.addEventListener('DOMContentLoaded', () => {
         profilesCache[refCode] = window.PROFILES_DATA[refCode];
         return window.PROFILES_DATA[refCode];
       }
-      // Fallback object from index manifest item
       const item = dbItems.find(i => i.refCode === refCode);
       return item || null;
     }
   }
 
+  /**
+   * Parses URL hash parameters for deep links to layers, categories, or specific technology profiles.
+   */
   function handleInitialHash() {
     const hash = window.location.hash;
     if (hash.startsWith('#layer-')) {
@@ -131,6 +165,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  /**
+   * Renders sidebar categories grouped by the 5 ARENA2036 Industrial Metaverse layers.
+   */
   function renderSidebarCategories() {
     if (!categoryTreeEl) return;
 
@@ -188,6 +225,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /**
+   * Filters index items based on active search string, selected Tier, Status, and Category/Layer.
+   */
   function filterAndRender() {
     const searchTerm = searchInputEl ? searchInputEl.value.trim().toLowerCase() : '';
     const selectedTier = filterTierEl ? filterTierEl.value : 'ALL';
@@ -218,6 +258,9 @@ document.addEventListener('DOMContentLoaded', () => {
     renderMainView();
   }
 
+  /**
+   * Triggers rendering of main view components, KPI counters, Use Case flow views, and card/list views.
+   */
   function renderMainView() {
     const kpiTotalToolsEl = document.getElementById('kpiTotalTools');
     const kpiTotalUseCasesEl = document.getElementById('kpiTotalUseCases');
@@ -235,10 +278,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (filteredItems.length === 0) {
       itemsContainerEl.innerHTML = `
-        <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: #FFF; border: 1px solid var(--border-subtle); border-radius: 8px;">
-          <i class="fa-solid fa-triangle-exclamation" style="font-size: 44px; color: var(--accent-orange); margin-bottom: 16px;"></i>
-          <h2 style="font-family: var(--font-heading); font-size: 20px; font-weight: 900;">Keine Technologie-Profile gefunden</h2>
-          <p style="color: var(--text-muted); margin-top: 8px;">Bitte Suchbegriff anpassen oder Filter zurücksetzen.</p>
+        <div class="text-center p-5 bg-white border rounded shadow-sm">
+          <i class="fa-solid fa-triangle-exclamation text-primary display-4 mb-3"></i>
+          <h2 class="h5 fw-bold text-dark">Keine Technologie-Profile gefunden</h2>
+          <p class="text-muted small m-0">Bitte Suchbegriff anpassen oder Filter zurücksetzen.</p>
         </div>
       `;
       return;
@@ -251,6 +294,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  /**
+   * Renders the Use Cases flow browser on examples.html.
+   */
   function renderUseCasesView() {
     const useCasesContainer = document.getElementById('useCasesContainer');
     if (!useCasesContainer) return;
@@ -274,10 +320,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (filteredUseCases.length === 0) {
       useCasesContainer.innerHTML = `
-        <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: #FFF; border: 1px solid var(--border-subtle); border-radius: 8px;">
-          <i class="fa-solid fa-triangle-exclamation" style="font-size: 44px; color: var(--accent-orange); margin-bottom: 16px;"></i>
-          <h2 style="font-family: var(--font-heading); font-size: 20px; font-weight: 900;">Keine Use Cases gefunden</h2>
-          <p style="color: var(--text-muted); margin-top: 8px;">Bitte Suchbegriff anpassen oder Kostengruppen-Filter zurücksetzen.</p>
+        <div class="text-center p-5 bg-white border rounded shadow-sm">
+          <i class="fa-solid fa-triangle-exclamation text-primary display-4 mb-3"></i>
+          <h2 class="h5 fw-bold text-dark">Keine Use Cases gefunden</h2>
+          <p class="text-muted small m-0">Bitte Suchbegriff anpassen oder Kostengruppen-Filter zurücksetzen.</p>
         </div>
       `;
       return;
@@ -306,24 +352,20 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       html += `
-        <div class="usecase-section">
-          <div class="usecase-header">
-            <div class="usecase-title-area">
-              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-                <span class="usecase-number-badge">${uc.id}</span>
-                <span class="tier-badge ${tierBadgeClass}">${uc.tierLabel || uc.tier}</span>
-              </div>
-              <h2 class="usecase-title">${uc.title}</h2>
-              <p class="usecase-desc">${uc.shortDesc}</p>
-              <div class="usecase-goal-box">
-                🎯 <strong>Ziel & Nutzen:</strong> ${uc.goal}
-              </div>
+        <div class="card border shadow-sm mb-4">
+          <div class="card-header bg-white border-bottom p-3">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+              <h2 class="h5 fw-bold text-dark m-0">${uc.title}</h2>
+              <span class="tier-badge ${tierBadgeClass}">${uc.tierLabel || uc.tier}</span>
             </div>
+            <p class="text-secondary small mt-2 mb-0">${uc.shortDesc}</p>
           </div>
-
-          <div class="flow-diagram-container">
+          <div class="card-body p-3">
             <div class="flow-columns-wrapper">
               ${flowColumnsHtml}
+            </div>
+            <div class="mt-3 p-3 bg-light rounded border border-start border-3 border-success small">
+              <strong class="text-success me-1"><i class="fa-solid fa-bullseye"></i> ${uc.goal}</strong>
             </div>
           </div>
         </div>
@@ -333,6 +375,9 @@ document.addEventListener('DOMContentLoaded', () => {
     useCasesContainer.innerHTML = html;
   }
 
+  /**
+   * Renders the Grid view mode of technologies in browser.html.
+   */
   function renderGridView() {
     itemsContainerEl.classList.remove('list-view-mode');
     itemsContainerEl.classList.add('grid-view-mode');
@@ -340,14 +385,18 @@ document.addEventListener('DOMContentLoaded', () => {
     let html = '';
     filteredItems.forEach(item => {
       const tierClass = item.tier === 'Tier 1' ? 'tier-1' : item.tier === 'Tier 2' ? 'tier-2' : 'tier-3';
-      const bridgeTags = (item.bridges || []).slice(0, 2).map(b => `<span class="tag tag-bridge">${b}</span>`).join('');
-      const inputTags = (item.inputs || []).slice(0, 2).map(i => `<span class="tag">${i}</span>`).join('');
       const isChecked = selectedCompareRefs.has(item.refCode);
 
+      const inputs = (item.inputs || []).slice(0, 2);
+      const bridges = (item.bridges || []).slice(0, 2);
+
+      const inputTags = inputs.map(t => `<span class="tag">${t}</span>`).join('');
+      const bridgeTags = bridges.map(t => `<span class="tag tag-bridge">${t}</span>`).join('');
+
       html += `
-        <div class="tech-card ${isChecked ? 'selected-compare' : ''}">
+        <div class="card-item" onclick="window.appOpenProfileModal('${item.refCode}')">
           <div>
-            <div class="card-top-row">
+            <div class="card-header-bar">
               <span class="card-category">KAT ${item.categoryCode} — ${item.categoryName}</span>
               <span class="tier-badge ${tierClass}">${item.tier}</span>
             </div>
@@ -361,11 +410,11 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
 
           <div class="card-footer">
-            <div style="display: flex; align-items: center; gap: 8px;">
-              <input type="checkbox" class="chk-compare" data-ref="${item.refCode}" ${isChecked ? 'checked' : ''} style="cursor: pointer;" title="Für Vergleich auswählen">
-              <span class="card-vendor"><i class="fa-solid fa-building" style="margin-right: 4px; color: var(--text-muted);"></i> ${item.vendor}</span>
+            <div class="d-flex align-items-center gap-2">
+              <input type="checkbox" class="chk-compare form-check-input" data-ref="${item.refCode}" ${isChecked ? 'checked' : ''} style="cursor: pointer;" title="Für Vergleich auswählen">
+              <span class="card-vendor"><i class="fa-solid fa-building me-1 text-muted"></i> ${item.vendor}</span>
             </div>
-            <button class="btn btn-primary btn-inspect" data-ref="${item.refCode}" style="font-size: 11px; padding: 4px 10px;">
+            <button class="btn btn-outline-primary btn-sm btn-inspect py-1 px-2" data-ref="${item.refCode}" style="font-size: 11px;">
               Details →
             </button>
           </div>
@@ -375,7 +424,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     itemsContainerEl.innerHTML = html;
 
-    // Attach inspect click handlers
     itemsContainerEl.querySelectorAll('.btn-inspect').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -384,7 +432,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Attach compare checkbox handlers
     itemsContainerEl.querySelectorAll('.chk-compare').forEach(chk => {
       chk.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -404,6 +451,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /**
+   * Renders the List view mode of technologies in browser.html using a Bootstrap 5 table grid.
+   */
   function renderListView() {
     itemsContainerEl.classList.remove('grid-view-mode');
     itemsContainerEl.classList.add('list-view-mode');
@@ -478,6 +528,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /**
+   * Updates compare count badge and toggle button visibility.
+   */
   function updateCompareCounter() {
     if (compareCountEl) compareCountEl.textContent = selectedCompareRefs.size;
     if (btnCompare) {
@@ -485,6 +538,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  /**
+   * Generates Bootstrap 5 card and grid markup for the Profile Inspector Modal.
+   * @param {Object} item - Canonical profile object.
+   * @returns {string} Clean HTML markup for modal body.
+   */
   function generateSlideHtml(item) {
     const tierClass = item.tier === 'Tier 1' ? 'tier-1' : item.tier === 'Tier 2' ? 'tier-2' : 'tier-3';
     const inputs = item.inputs || [];
@@ -608,6 +666,10 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   }
 
+  /**
+   * Helper function to show a Bootstrap 5 modal with fallback for vanilla DOM execution.
+   * @param {HTMLElement} el - Modal element.
+   */
   function showBsModal(el) {
     if (!el) return;
     if (window.bootstrap && window.bootstrap.Modal) {
@@ -619,6 +681,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  /**
+   * Helper function to hide a Bootstrap 5 modal with fallback for vanilla DOM execution.
+   * @param {HTMLElement} el - Modal element.
+   */
   function hideBsModal(el) {
     if (!el) return;
     if (window.bootstrap && window.bootstrap.Modal) {
@@ -630,6 +696,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  /**
+   * Opens the profile detail modal inspector for a given reference code.
+   * @async
+   * @param {string} refCode - Technology reference code.
+   * @returns {Promise<void>}
+   */
   async function openProfileModal(refCode) {
     if (!profileModal) return;
     const profile = await getProfileData(refCode);
@@ -644,16 +716,21 @@ document.addEventListener('DOMContentLoaded', () => {
     window.location.hash = `profile/${profile.refCode}`;
   }
 
+  /**
+   * Renders the comparison modal side-by-side comparison table for up to 4 selected technologies.
+   * @async
+   * @returns {Promise<void>}
+   */
   async function renderCompareModal() {
     if (!compareModalBody) return;
 
     const refs = Array.from(selectedCompareRefs);
     if (refs.length === 0) {
       compareModalBody.innerHTML = `
-        <div style="text-align: center; padding: 50px 20px;">
-          <i class="fa-solid fa-code-compare" style="font-size: 36px; color: var(--text-muted); margin-bottom: 12px;"></i>
-          <h3>Keine Technologien für den Vergleich ausgewählt</h3>
-          <p style="color: var(--text-muted); margin-top: 6px;">Wählen Sie bis zu 4 Technologien im Karten-Browser aus.</p>
+        <div class="text-center p-5">
+          <i class="fa-solid fa-code-compare display-4 text-muted mb-3"></i>
+          <h3 class="h5 fw-bold">Keine Technologien für den Vergleich ausgewählt</h3>
+          <p class="text-muted small m-0">Wählen Sie bis zu 4 Technologien im Karten-Browser aus.</p>
         </div>
       `;
       return;
@@ -662,14 +739,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const selectedProfiles = await Promise.all(refs.map(r => getProfileData(r)));
 
     let html = `
-      <table class="table table-hover align-middle small" style="font-size: 11.5px;">
-        <thead>
+      <table class="table table-bordered table-striped align-middle small mb-0" style="font-size: 12.5px;">
+        <thead class="table-dark">
           <tr>
             <th style="width: 180px;">Parameter</th>
             ${selectedProfiles.map(item => `
               <th>
-                <div class="fw-bold text-dark">${item.name}</div>
-                <div class="text-muted font-monospace small">${item.refCode}</div>
+                <div class="fw-bold text-white">${item.name}</div>
+                <div class="text-muted font-monospace small" style="font-size: 11px;">${item.refCode}</div>
               </th>
             `).join('')}
           </tr>
@@ -714,6 +791,9 @@ document.addEventListener('DOMContentLoaded', () => {
     compareModalBody.innerHTML = html;
   }
 
+  /**
+   * Binds user event listeners for inputs, filters, view switches, and modal controls.
+   */
   function setupEventListeners() {
     if (searchInputEl) {
       searchInputEl.addEventListener('input', filterAndRender);
@@ -769,6 +849,28 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.hash = '';
       });
     }
+
+    // Robust Hamburger Menu Toggle Handler (Works with Bootstrap 5 and direct click)
+    const hamburgerBtns = document.querySelectorAll('#hamburgerBtn, .dropdown-toggle');
+    hamburgerBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const dropdownMenu = btn.nextElementSibling;
+        if (dropdownMenu && dropdownMenu.classList.contains('dropdown-menu')) {
+          if (window.bootstrap && window.bootstrap.Dropdown) {
+            const bsDropdown = window.bootstrap.Dropdown.getOrCreateInstance(btn);
+            bsDropdown.toggle();
+          } else {
+            dropdownMenu.classList.toggle('show');
+          }
+        }
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.dropdown')) {
+        document.querySelectorAll('.dropdown-menu.show').forEach(menu => menu.classList.remove('show'));
+      }
+    });
   }
 
   // Run Initialization
