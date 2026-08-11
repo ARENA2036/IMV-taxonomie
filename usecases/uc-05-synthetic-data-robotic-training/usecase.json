@@ -23,9 +23,18 @@
     "timeframe": "2–6 Wochen KI-Trainingszyklus"
   },
   "kpis": [
-    { "label": "Trainingsdaten-Speedup", "value": "100x" },
-    { "label": "Beschriftungs-Kosten", "value": "-95%" },
-    { "label": "Greif-Erfolgsquote", "value": "> 99%" }
+    {
+      "label": "Trainingsdaten-Speedup",
+      "value": "100x"
+    },
+    {
+      "label": "Beschriftungs-Kosten",
+      "value": "-95%"
+    },
+    {
+      "label": "Greif-Erfolgsquote",
+      "value": "> 99%"
+    }
   ],
   "media": {
     "youtube": {
@@ -44,35 +53,35 @@
   "flow": [
     {
       "layer": "1",
-      "layerTitle": "Schicht 1: Erfassung",
+      "layerTitle": "Schicht 1: Erfassung & Sensorik",
       "refCode": "IND-META-2026-YOLO26-EDGE",
       "nodeName": "Depth Camera / Edge Vision",
       "role": "Sensordatenerfassung am Roboterarm"
     },
     {
       "layer": "2",
-      "layerTitle": "Schicht 2: Geometrie",
+      "layerTitle": "Schicht 2: Geometrie & CAD/BIM",
       "refCode": "IND-META-2026-OPENUSD",
       "nodeName": "OpenUSD / SimReady Assets",
       "role": "Physikalisch annotierte 3D-Geometrien"
     },
     {
       "layer": "3",
-      "layerTitle": "Schicht 3: Middleware",
+      "layerTitle": "Schicht 3: Middleware & Integration",
       "refCode": "IND-META-2026-HUGGINGFACE-LEROBOT",
       "nodeName": "HuggingFace LeRobot / ROS2",
       "role": "KI-Pipeline & Telemetrie-Brücke"
     },
     {
       "layer": "4",
-      "layerTitle": "Schicht 4: Simulation",
+      "layerTitle": "Schicht 4: Simulation & Verhalten",
       "refCode": "IND-META-2026-NVIDIA-ISAAC",
       "nodeName": "NVIDIA Isaac Sim / PhysX",
       "role": "Synthetische Data Generation (SDG)"
     },
     {
       "layer": "5",
-      "layerTitle": "Schicht 5: Immersion",
+      "layerTitle": "Schicht 5: Immersion & Interaktion",
       "refCode": "IND-META-2026-NVIDIA-OMNIVERSE",
       "nodeName": "Omniverse RTX Renderer",
       "role": "Fotorealistisches Raytracing für Sensor-KI"

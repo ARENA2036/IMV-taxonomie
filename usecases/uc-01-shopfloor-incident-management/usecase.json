@@ -23,9 +23,18 @@
     "timeframe": "1–2 Wochen Initial-Einrichtung"
   },
   "kpis": [
-    { "label": "Einsparung Wegezeiten", "value": "bis zu 65%" },
-    { "label": "Beschleunigung Entstörung", "value": "< 45 Min" },
-    { "label": "Reduzierung Fehldiagnosen", "value": "-80%" }
+    {
+      "label": "Einsparung Wegezeiten",
+      "value": "bis zu 65%"
+    },
+    {
+      "label": "Beschleunigung Entstörung",
+      "value": "< 45 Min"
+    },
+    {
+      "label": "Reduzierung Fehldiagnosen",
+      "value": "-80%"
+    }
   ],
   "media": {
     "youtube": {
@@ -49,35 +58,35 @@
   "flow": [
     {
       "layer": "1",
-      "layerTitle": "Schicht 1: Erfassung",
+      "layerTitle": "Schicht 1: Erfassung & Sensorik",
       "refCode": "IND-META-2026-FARO-ORBIS",
       "nodeName": "FARO Orbis / Matterport",
       "role": "Mobile 360° LiDAR-Erfassung im Werk"
     },
     {
       "layer": "2",
-      "layerTitle": "Schicht 2: Geometrie",
+      "layerTitle": "Schicht 2: Geometrie & CAD/BIM",
       "refCode": "IND-META-2026-E57-POINTCLOUD",
       "nodeName": "E57 / Panorama Scan",
       "role": "Punktwolken & 360°-Bilddaten-Export"
     },
     {
       "layer": "3",
-      "layerTitle": "Schicht 3: Middleware",
+      "layerTitle": "Schicht 3: Middleware & Integration",
       "refCode": "IND-META-2026-FARO-SPHERE",
       "nodeName": "FARO Sphere XG",
       "role": "Zentrale Cloud/On-Prem 3D-Plattform"
     },
     {
       "layer": "4",
-      "layerTitle": "Schicht 4: Integration",
+      "layerTitle": "Schicht 4: Simulation & Verhalten",
       "refCode": null,
       "nodeName": "Jira / SAP PM",
       "role": "Automatische Ticket- & Auftragserstellung"
     },
     {
       "layer": "5",
-      "layerTitle": "Schicht 5: Immersion",
+      "layerTitle": "Schicht 5: Immersion & Interaktion",
       "refCode": "IND-META-2026-GLTF-20",
       "nodeName": "WebXR / Web Inspection",
       "role": "Interaktive 3D-Befundung am Tablet/PC"

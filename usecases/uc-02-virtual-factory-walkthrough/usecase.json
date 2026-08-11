@@ -23,9 +23,18 @@
     "timeframe": "3–5 Tage Einrichtungszeit"
   },
   "kpis": [
-    { "label": "Einsparung Reisekosten", "value": "75%" },
-    { "label": "Besprechungs-Effizienz", "value": "+50%" },
-    { "label": "Auditzugang", "value": "24/7 Weltweit" }
+    {
+      "label": "Einsparung Reisekosten",
+      "value": "75%"
+    },
+    {
+      "label": "Besprechungs-Effizienz",
+      "value": "+50%"
+    },
+    {
+      "label": "Auditzugang",
+      "value": "24/7 Weltweit"
+    }
   ],
   "media": {
     "youtube": {
@@ -44,35 +53,35 @@
   "flow": [
     {
       "layer": "1",
-      "layerTitle": "Schicht 1: Erfassung",
+      "layerTitle": "Schicht 1: Erfassung & Sensorik",
       "refCode": "IND-META-2026-MATTERPORT-PRO3",
       "nodeName": "Matterport Pro3 / Scaniverse",
       "role": "Fotogrammetrie & Panoramabilder"
     },
     {
       "layer": "2",
-      "layerTitle": "Schicht 2: Geometrie",
+      "layerTitle": "Schicht 2: Geometrie & CAD/BIM",
       "refCode": "IND-META-2026-GLTF-20",
       "nodeName": "glTF 2.0 / USDZ",
       "role": "Leichtgewichtige Web-3D-Formate"
     },
     {
       "layer": "3",
-      "layerTitle": "Schicht 3: Middleware",
+      "layerTitle": "Schicht 3: Middleware & Integration",
       "refCode": "IND-META-2026-AAS-IEC63278",
       "nodeName": "AAS Asset Tagging Engine",
       "role": "Verknüpfung von 3D-Objekten mit Stammdaten"
     },
     {
       "layer": "4",
-      "layerTitle": "Schicht 4: Simulation",
+      "layerTitle": "Schicht 4: Simulation & Verhalten",
       "refCode": null,
       "nodeName": "Spatial Point Annotator",
       "role": "Räumliche Notizen & Messwerkzeuge"
     },
     {
       "layer": "5",
-      "layerTitle": "Schicht 5: Immersion",
+      "layerTitle": "Schicht 5: Immersion & Interaktion",
       "refCode": "IND-META-2026-GODOT-WEBXR",
       "nodeName": "WebXR / Three.js Viewer",
       "role": "Immersive Browser-Begehung (PC/VR)"

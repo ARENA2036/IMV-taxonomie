@@ -3376,35 +3376,35 @@
       "flow": [
         {
           "layer": "1",
-          "layerTitle": "Schicht 1: Erfassung",
+          "layerTitle": "Schicht 1: Erfassung & Sensorik",
           "refCode": "IND-META-2026-FARO-ORBIS",
           "nodeName": "FARO Orbis / Matterport",
           "role": "Mobile 360° LiDAR-Erfassung im Werk"
         },
         {
           "layer": "2",
-          "layerTitle": "Schicht 2: Geometrie",
+          "layerTitle": "Schicht 2: Geometrie & CAD/BIM",
           "refCode": "IND-META-2026-E57-POINTCLOUD",
           "nodeName": "E57 / Panorama Scan",
           "role": "Punktwolken & 360°-Bilddaten-Export"
         },
         {
           "layer": "3",
-          "layerTitle": "Schicht 3: Middleware",
+          "layerTitle": "Schicht 3: Middleware & Integration",
           "refCode": "IND-META-2026-FARO-SPHERE",
           "nodeName": "FARO Sphere XG",
           "role": "Zentrale Cloud/On-Prem 3D-Plattform"
         },
         {
           "layer": "4",
-          "layerTitle": "Schicht 4: Integration",
+          "layerTitle": "Schicht 4: Simulation & Verhalten",
           "refCode": null,
           "nodeName": "Jira / SAP PM",
           "role": "Automatische Ticket- & Auftragserstellung"
         },
         {
           "layer": "5",
-          "layerTitle": "Schicht 5: Immersion",
+          "layerTitle": "Schicht 5: Immersion & Interaktion",
           "refCode": "IND-META-2026-GLTF-20",
           "nodeName": "WebXR / Web Inspection",
           "role": "Interaktive 3D-Befundung am Tablet/PC"
@@ -3466,35 +3466,35 @@
       "flow": [
         {
           "layer": "1",
-          "layerTitle": "Schicht 1: Erfassung",
+          "layerTitle": "Schicht 1: Erfassung & Sensorik",
           "refCode": "IND-META-2026-MATTERPORT-PRO3",
           "nodeName": "Matterport Pro3 / Scaniverse",
           "role": "Fotogrammetrie & Panoramabilder"
         },
         {
           "layer": "2",
-          "layerTitle": "Schicht 2: Geometrie",
+          "layerTitle": "Schicht 2: Geometrie & CAD/BIM",
           "refCode": "IND-META-2026-GLTF-20",
           "nodeName": "glTF 2.0 / USDZ",
           "role": "Leichtgewichtige Web-3D-Formate"
         },
         {
           "layer": "3",
-          "layerTitle": "Schicht 3: Middleware",
+          "layerTitle": "Schicht 3: Middleware & Integration",
           "refCode": "IND-META-2026-AAS-IEC63278",
           "nodeName": "AAS Asset Tagging Engine",
           "role": "Verknüpfung von 3D-Objekten mit Stammdaten"
         },
         {
           "layer": "4",
-          "layerTitle": "Schicht 4: Simulation",
+          "layerTitle": "Schicht 4: Simulation & Verhalten",
           "refCode": null,
           "nodeName": "Spatial Point Annotator",
           "role": "Räumliche Notizen & Messwerkzeuge"
         },
         {
           "layer": "5",
-          "layerTitle": "Schicht 5: Immersion",
+          "layerTitle": "Schicht 5: Immersion & Interaktion",
           "refCode": "IND-META-2026-GODOT-WEBXR",
           "nodeName": "WebXR / Three.js Viewer",
           "role": "Immersive Browser-Begehung (PC/VR)"
@@ -3556,35 +3556,35 @@
       "flow": [
         {
           "layer": "1",
-          "layerTitle": "Schicht 1: Erfassung",
+          "layerTitle": "Schicht 1: Erfassung & Sensorik",
           "refCode": "IND-META-2026-OPC-UA",
           "nodeName": "OPC UA / Modbus TCP",
           "role": "OT-Sensor-Datenerfassung von der SPS"
         },
         {
           "layer": "2",
-          "layerTitle": "Schicht 2: Geometrie",
+          "layerTitle": "Schicht 2: Geometrie & CAD/BIM",
           "refCode": "IND-META-2026-AUTODESK-FUSION",
           "nodeName": "CAD Asset Mesh",
           "role": "Aufbereitete 3D-Baugruppen-Geometrie"
         },
         {
           "layer": "3",
-          "layerTitle": "Schicht 3: Middleware",
+          "layerTitle": "Schicht 3: Middleware & Integration",
           "refCode": "IND-META-2026-PTC-THINGWORX",
           "nodeName": "PTC ThingWorx / Vuforia",
           "role": "AR-Autorensystem & IoT-Verknüpfung"
         },
         {
           "layer": "4",
-          "layerTitle": "Schicht 4: Simulation",
+          "layerTitle": "Schicht 4: Simulation & Verhalten",
           "refCode": null,
           "nodeName": "Work Instruction Engine",
           "role": "Prozessablauf- & Logiksteuerung"
         },
         {
           "layer": "5",
-          "layerTitle": "Schicht 5: Immersion",
+          "layerTitle": "Schicht 5: Immersion & Interaktion",
           "refCode": "IND-META-2026-REALWEAR-NAV520",
           "nodeName": "RealWear Nav-520 / Quest 3",
           "role": "Freihändige AR-Visialisierung vor Ort"
@@ -3646,35 +3646,35 @@
       "flow": [
         {
           "layer": "1",
-          "layerTitle": "Schicht 1: Erfassung",
+          "layerTitle": "Schicht 1: Erfassung & Sensorik",
           "refCode": "IND-META-2026-LEICA-RTC360",
           "nodeName": "Leica RTC360 / NavVis VLX",
           "role": "Hochpräzise 3D-Punktwolken-Erfassung"
         },
         {
           "layer": "2",
-          "layerTitle": "Schicht 2: Geometrie",
+          "layerTitle": "Schicht 2: Geometrie & CAD/BIM",
           "refCode": "IND-META-2026-AUTODESK-REVIT",
           "nodeName": "Autodesk Revit / ReCap",
           "role": "Point Cloud Processing & BIM-Modellierung"
         },
         {
           "layer": "3",
-          "layerTitle": "Schicht 3: Middleware",
+          "layerTitle": "Schicht 3: Middleware & Integration",
           "refCode": "IND-META-2026-NEMETSCHEK-ALLPLAN",
           "nodeName": "IFC / OpenUSD Pipeline",
           "role": "Offener Geometriedaten-Austausch"
         },
         {
           "layer": "4",
-          "layerTitle": "Schicht 4: Simulation",
+          "layerTitle": "Schicht 4: Simulation & Verhalten",
           "refCode": "IND-META-2026-IPOLOG",
           "nodeName": "ipolog / Navisworks",
           "role": "Automatisierte Clash-Detection & Layout"
         },
         {
           "layer": "5",
-          "layerTitle": "Schicht 5: Immersion",
+          "layerTitle": "Schicht 5: Immersion & Interaktion",
           "refCode": "IND-META-2026-TWINMOTION",
           "nodeName": "Twinmotion / Unreal Engine",
           "role": "Interaktive Freigabe-Visualisierung"
@@ -3736,35 +3736,35 @@
       "flow": [
         {
           "layer": "1",
-          "layerTitle": "Schicht 1: Erfassung",
+          "layerTitle": "Schicht 1: Erfassung & Sensorik",
           "refCode": "IND-META-2026-YOLO26-EDGE",
           "nodeName": "Depth Camera / Edge Vision",
           "role": "Sensordatenerfassung am Roboterarm"
         },
         {
           "layer": "2",
-          "layerTitle": "Schicht 2: Geometrie",
+          "layerTitle": "Schicht 2: Geometrie & CAD/BIM",
           "refCode": "IND-META-2026-OPENUSD",
           "nodeName": "OpenUSD / SimReady Assets",
           "role": "Physikalisch annotierte 3D-Geometrien"
         },
         {
           "layer": "3",
-          "layerTitle": "Schicht 3: Middleware",
+          "layerTitle": "Schicht 3: Middleware & Integration",
           "refCode": "IND-META-2026-HUGGINGFACE-LEROBOT",
           "nodeName": "HuggingFace LeRobot / ROS2",
           "role": "KI-Pipeline & Telemetrie-Brücke"
         },
         {
           "layer": "4",
-          "layerTitle": "Schicht 4: Simulation",
+          "layerTitle": "Schicht 4: Simulation & Verhalten",
           "refCode": "IND-META-2026-NVIDIA-ISAAC",
           "nodeName": "NVIDIA Isaac Sim / PhysX",
           "role": "Synthetische Data Generation (SDG)"
         },
         {
           "layer": "5",
-          "layerTitle": "Schicht 5: Immersion",
+          "layerTitle": "Schicht 5: Immersion & Interaktion",
           "refCode": "IND-META-2026-NVIDIA-OMNIVERSE",
           "nodeName": "Omniverse RTX Renderer",
           "role": "Fotorealistisches Raytracing für Sensor-KI"
@@ -3826,35 +3826,35 @@
       "flow": [
         {
           "layer": "1",
-          "layerTitle": "Schicht 1: Erfassung",
+          "layerTitle": "Schicht 1: Erfassung & Sensorik",
           "refCode": "IND-META-2026-PROFINET-TSN",
           "nodeName": "PROFINET TSN / Siemens PLC",
           "role": "Operative SPS-Echtzeit-Steuerung"
         },
         {
           "layer": "2",
-          "layerTitle": "Schicht 2: Geometrie",
+          "layerTitle": "Schicht 2: Geometrie & CAD/BIM",
           "refCode": "IND-META-2026-SIEMENS-NX",
           "nodeName": "Siemens NX / JT ISO14306",
           "role": "Präzise Kinematik-Geometriedaten"
         },
         {
           "layer": "3",
-          "layerTitle": "Schicht 3: Middleware",
+          "layerTitle": "Schicht 3: Middleware & Integration",
           "refCode": "IND-META-2026-AAS-IEC63278",
           "nodeName": "Eclipse BaSyx AAS / EDC",
           "role": "Bi-direktionaler Semantik- & Datenraum"
         },
         {
           "layer": "4",
-          "layerTitle": "Schicht 4: Simulation",
+          "layerTitle": "Schicht 4: Simulation & Verhalten",
           "refCode": "IND-META-2026-ISG-VIRTUOS",
           "nodeName": "ISG-virtuos / Tecnomatix",
           "role": "Hardware-in-the-Loop VIBn Simulation"
         },
         {
           "layer": "5",
-          "layerTitle": "Schicht 5: Immersion",
+          "layerTitle": "Schicht 5: Immersion & Interaktion",
           "refCode": "IND-META-2026-UNREAL-ENGINE-5",
           "nodeName": "Unreal Engine 5 / Omniverse",
           "role": "Echtzeit 3D-Visualisierung & Monitoring"

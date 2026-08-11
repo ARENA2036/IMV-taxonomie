@@ -23,9 +23,18 @@
     "timeframe": "1–3 Wochen je Hallenabschnitt"
   },
   "kpis": [
-    { "label": "Vermeidung Umbaufehler", "value": "100%" },
-    { "label": "Kollisions-Erkennung", "value": "Vor Montage" },
-    { "label": "Planungsbeschleunigung", "value": "+40%" }
+    {
+      "label": "Vermeidung Umbaufehler",
+      "value": "100%"
+    },
+    {
+      "label": "Kollisions-Erkennung",
+      "value": "Vor Montage"
+    },
+    {
+      "label": "Planungsbeschleunigung",
+      "value": "+40%"
+    }
   ],
   "media": {
     "youtube": {
@@ -44,35 +53,35 @@
   "flow": [
     {
       "layer": "1",
-      "layerTitle": "Schicht 1: Erfassung",
+      "layerTitle": "Schicht 1: Erfassung & Sensorik",
       "refCode": "IND-META-2026-LEICA-RTC360",
       "nodeName": "Leica RTC360 / NavVis VLX",
       "role": "Hochpräzise 3D-Punktwolken-Erfassung"
     },
     {
       "layer": "2",
-      "layerTitle": "Schicht 2: Geometrie",
+      "layerTitle": "Schicht 2: Geometrie & CAD/BIM",
       "refCode": "IND-META-2026-AUTODESK-REVIT",
       "nodeName": "Autodesk Revit / ReCap",
       "role": "Point Cloud Processing & BIM-Modellierung"
     },
     {
       "layer": "3",
-      "layerTitle": "Schicht 3: Middleware",
+      "layerTitle": "Schicht 3: Middleware & Integration",
       "refCode": "IND-META-2026-NEMETSCHEK-ALLPLAN",
       "nodeName": "IFC / OpenUSD Pipeline",
       "role": "Offener Geometriedaten-Austausch"
     },
     {
       "layer": "4",
-      "layerTitle": "Schicht 4: Simulation",
+      "layerTitle": "Schicht 4: Simulation & Verhalten",
       "refCode": "IND-META-2026-IPOLOG",
       "nodeName": "ipolog / Navisworks",
       "role": "Automatisierte Clash-Detection & Layout"
     },
     {
       "layer": "5",
-      "layerTitle": "Schicht 5: Immersion",
+      "layerTitle": "Schicht 5: Immersion & Interaktion",
       "refCode": "IND-META-2026-TWINMOTION",
       "nodeName": "Twinmotion / Unreal Engine",
       "role": "Interaktive Freigabe-Visualisierung"

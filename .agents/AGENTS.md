@@ -10,11 +10,11 @@
 
 This repository contains the open research taxonomy and interactive web browser for **numerous Industrial Metaverse technologies, standards, and protocols** across the **ARENA2036 5-Schichten Industrial Metaverse Tech-Stack**:
 
-1. **Schicht 1: Erfassung & OT-Datenerfassung** *(Categories 1.1–1.8)*
-2. **Schicht 2: Geometrie & CAD-Pre-Processing** *(Categories 2.1–2.4)*
-3. **Schicht 3: Semantische Middleware & Datenräume** *(Categories 3.1–3.3)*
-4. **Schicht 4: Simulation & Virtuelle Inbetriebnahme** *(Categories 4.1–4.4)*
-5. **Schicht 5: Räumliche Immersion & Rendering** *(Categories 5.1–5.2)*
+1. **Schicht 1: Erfassung & Sensorik** *(Categories 1.1–1.8)*
+2. **Schicht 2: Geometrie & CAD/BIM** *(Categories 2.1–2.4)*
+3. **Schicht 3: Middleware & Integration** *(Categories 3.1–3.3)*
+4. **Schicht 4: Simulation & Verhalten** *(Categories 4.1–4.4)*
+5. **Schicht 5: Immersion & Interaktion** *(Categories 5.1–5.2)*
 
 ---
 
