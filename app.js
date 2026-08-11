@@ -931,6 +931,19 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.dropdown-menu.show').forEach(menu => menu.classList.remove('show'));
       }
     });
+
+    // Global Escape Key Listener for Modals
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (profileModal && profileModal.classList.contains('show')) {
+          hideBsModal(profileModal);
+          window.location.hash = '';
+        }
+        if (compareModal && compareModal.classList.contains('show')) {
+          hideBsModal(compareModal);
+        }
+      }
+    });
   }
 
   // Run Initialization
