@@ -18,11 +18,11 @@ The architecture categorizes numerous audited technologies, standards, and proto
 
 ## 🔄 2. Sequential Left-to-Right Data Progression Logic
 
-1. **Schicht 1: Erfassung & OT-Datenerfassung** *(Categories 1.1–1.8)*: Erfassung der physischen Fabrikrealität via Sensorik, Terrestrik-, SLAM-Scans und direkte OT-Signalabgriffe (OPC UA, MQTT Sparkplug B).
-2. **Schicht 2: Geometrie & CAD-Pre-Processing** *(Categories 2.1–2.4)*: Aufbereitung und Konvertierung von CAD/BIM-Konstruktionsdaten und Punktwolken in universelle 3D-Formate (OpenUSD, STEP AP242, glTF 2.0).
-3. **Schicht 3: Semantische Middleware & Datenräume** *(Categories 3.1–3.3)*: Verknüpfung von 3D-Geometrie und Live-OT-Signalen in der Verwaltungsschale (Asset Administration Shell AAS) und souveränen Datenräumen (Eclipse EDC).
-4. **Schicht 4: Simulation & Virtuelle Inbetriebnahme** *(Categories 4.1–4.4)*: Physikalische, kinematische Echtzeitsimulation (VIBn) zur Vorab-Absicherung von SPS-Steuerungscodes und KI-Roboterfähigkeiten.
-5. **Schicht 5: Räumliche Immersion & Rendering** *(Categories 5.1–5.2)*: High-End-Rendering und kollaborative Interaktion in WebXR- und XR/Spatial Computing-Umgebungen.
+1. **Schicht 1: Erfassung & Sensorik** *(Categories 1.1–1.8)*: Erfassung der physischen Fabrikrealität via Sensorik, Terrestrik-, SLAM-Scans und direkte OT-Signalabgriffe (OPC UA, MQTT Sparkplug B).
+2. **Schicht 2: Geometrie & CAD/BIM** *(Categories 2.1–2.4)*: Aufbereitung und Konvertierung von CAD/BIM-Konstruktionsdaten und Punktwolken in universelle 3D-Formate (OpenUSD, STEP AP242, glTF 2.0).
+3. **Schicht 3: Middleware & Integration** *(Categories 3.1–3.3)*: Verknüpfung von 3D-Geometrie und Live-OT-Signalen in der Verwaltungsschale (Asset Administration Shell AAS) und souveränen Datenräumen (Eclipse EDC).
+4. **Schicht 4: Simulation & Verhalten** *(Categories 4.1–4.4)*: Physikalische, kinematische Echtzeitsimulation (VIBn) zur Vorab-Absicherung von SPS-Steuerungscodes und KI-Roboterfähigkeiten.
+5. **Schicht 5: Immersion & Interaktion** *(Categories 5.1–5.2)*: High-End-Rendering und kollaborative Interaktion in WebXR- und XR/Spatial Computing-Umgebungen.
 
 ---
 

@@ -4,8 +4,38 @@
   --bs-primary-rgb: 255, 80, 0;
   --accent-orange: #FF5000;
   --accent-orange-hover: #E04600;
+
+  /* Specification Design Tokens */
+  --color-primary: #FF5000;
+  --color-secondary: #1E293B;
+  --color-bg-main: #F8FAFC;
+  --color-bg-card: #FFFFFF;
+  --color-text-primary: #0F172A;
+  --color-text-muted: #64748B;
   --bg-subtle: #FAFAFA;
   --border-subtle: #E5E7EB;
+
+  /* 5-Layer Architecture Stack Tokens */
+  --color-layer-1: #3B82F6;
+  --color-layer-2: #10B981;
+  --color-layer-3: #F59E0B;
+  --color-layer-4: #8B5CF6;
+  --color-layer-5: #EF4444;
+
+  /* Investment Tier Badges */
+  --badge-tier-1-bg: #ECFDF5;
+  --badge-tier-1-color: #047857;
+  --badge-tier-1-border: #A7F3D0;
+
+  --badge-tier-2-bg: #EFF6FF;
+  --badge-tier-2-color: #1D4ED8;
+  --badge-tier-2-border: #BFDBFE;
+
+  --badge-tier-3-bg: #FFF7ED;
+  --badge-tier-3-color: #C2410C;
+  --badge-tier-3-border: #FFD8A8;
+
+  /* Typography */
   --font-heading: 'Arial Black', 'Arial Bold', sans-serif;
   --font-body: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
@@ -416,8 +446,8 @@ h1, h2, h3, h4, h5, h6,
   letter-spacing: 0.02em;
 }
 
-/* Tier Badges */
-.tier-badge {
+/* Tier & Layer Badges - Consuming CSS Variables */
+.tier-badge, .badge-tier {
   font-family: var(--font-mono);
   font-size: 11px;
   font-weight: 600;
@@ -425,9 +455,31 @@ h1, h2, h3, h4, h5, h6,
   border-radius: 4px;
   display: inline-block;
 }
-.tier-1 { background-color: #ECFDF5; color: #047857; border: 1px solid #A7F3D0; }
-.tier-2 { background-color: #EFF6FF; color: #1D4ED8; border: 1px solid #BFDBFE; }
-.tier-3 { background-color: #FFF7ED; color: #C2410C; border: 1px solid #FFD8A8; }
+
+.tier-1, .badge-tier-1 {
+  background-color: var(--badge-tier-1-bg);
+  color: var(--badge-tier-1-color);
+  border: 1px solid var(--badge-tier-1-border);
+}
+
+.tier-2, .badge-tier-2 {
+  background-color: var(--badge-tier-2-bg);
+  color: var(--badge-tier-2-color);
+  border: 1px solid var(--badge-tier-2-border);
+}
+
+.tier-3, .badge-tier-3 {
+  background-color: var(--badge-tier-3-bg);
+  color: var(--badge-tier-3-color);
+  border: 1px solid var(--badge-tier-3-border);
+}
+
+/* 5-Layer Badge Classes */
+.badge-layer-1 { background-color: rgba(59, 130, 246, 0.1); color: var(--color-layer-1); border: 1px solid var(--color-layer-1); }
+.badge-layer-2 { background-color: rgba(16, 185, 129, 0.1); color: var(--color-layer-2); border: 1px solid var(--color-layer-2); }
+.badge-layer-3 { background-color: rgba(245, 158, 11, 0.1); color: var(--color-layer-3); border: 1px solid var(--color-layer-3); }
+.badge-layer-4 { background-color: rgba(139, 92, 246, 0.1); color: var(--color-layer-4); border: 1px solid var(--color-layer-4); }
+.badge-layer-5 { background-color: rgba(239, 68, 68, 0.1); color: var(--color-layer-5); border: 1px solid var(--color-layer-5); }
 
 /* Fix Hamburger Dropdown Alignment: Open inside the viewport canvas */
 .dropdown {
