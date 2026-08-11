@@ -13,6 +13,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { buildUseCasePages } from './generate_usecase_pages.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -105,19 +106,39 @@ files.forEach(file => {
 items.sort((a, b) => a.categoryCode.localeCompare(b.categoryCode, undefined, { numeric: true }) || a.name.localeCompare(b.name));
 
 const usecases = [];
-const ucFiles = fs.readdirSync(usecasesDir).filter(f => f.endsWith('.json'));
 
-ucFiles.forEach(file => {
-  try {
-    const raw = fs.readFileSync(path.join(usecasesDir, file), 'utf-8');
-    const uc = JSON.parse(raw);
-    if (uc.id) {
-      usecases.push(uc);
+if (fs.existsSync(usecasesDir)) {
+  const ucEntries = fs.readdirSync(usecasesDir, { withFileTypes: true });
+
+  ucEntries.forEach(entry => {
+    let jsonPath = null;
+
+    if (entry.isDirectory()) {
+      // Look for usecase.json or any *.json inside the directory
+      const dirPath = path.join(usecasesDir, entry.name);
+      const subFiles = fs.readdirSync(dirPath).filter(f => f.endsWith('.json'));
+      if (subFiles.includes('usecase.json')) {
+        jsonPath = path.join(dirPath, 'usecase.json');
+      } else if (subFiles.length > 0) {
+        jsonPath = path.join(dirPath, subFiles[0]);
+      }
+    } else if (entry.isFile() && entry.name.endsWith('.json')) {
+      jsonPath = path.join(usecasesDir, entry.name);
     }
-  } catch (err) {
-    console.error(`Fehler beim Lesen von UseCase ${file}:`, err.message);
-  }
-});
+
+    if (jsonPath) {
+      try {
+        const raw = fs.readFileSync(jsonPath, 'utf-8');
+        const uc = JSON.parse(raw);
+        if (uc.id) {
+          usecases.push(uc);
+        }
+      } catch (err) {
+        console.error(`Fehler beim Lesen von UseCase ${jsonPath}:`, err.message);
+      }
+    }
+  });
+}
 
 usecases.sort((a, b) => a.id.localeCompare(b.id));
 
@@ -139,3 +160,6 @@ const jsContent = `/** Auto-generated static dataset for zero-CORS local executi
 fs.writeFileSync(jsPath, jsContent, 'utf-8');
 
 console.log(`Erfolgreich ${items.length} JSON-Profile und ${usecases.length} Use Cases indiziert und 'data/index.json' sowie 'data/index_data.js' generiert.`);
+
+// Build individual static HTML pages for each Use Case and the hub index page
+buildUseCasePages(usecases);

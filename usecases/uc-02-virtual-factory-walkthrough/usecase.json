@@ -1,0 +1,81 @@
+{
+  "id": "UC-02-VIRTUAL-FACTORY-WALKTHROUGH",
+  "slug": "uc-02-virtual-factory-walkthrough",
+  "title": "Virtuelle Fabrikbegehung & Asset-Tagging via WebXR",
+  "subtitle": "Immersive Navigation im Werk per Browser & VR",
+  "tier": "Tier 1",
+  "tierLabel": "Tier 1 (≤ €30k / Starter & Open Source)",
+  "shortDesc": "Wie umsetzen? Zusammenführung von 360°-Fotogrammetrie (Matterport / Scaniverse) und OpenUSD/glTF-Modellen in einer browserbasierten WebXR-Umgebung. Externe Partner befahren die Fabrik ohne physische Anreise.",
+  "goal": "Betrieblicher Nutzen: Erheblich reduzierte Reisekosten für Audits und Vorort-Planungstermine. Demokratisierter 3D-Zugriff ohne High-End CAD-Workstations. (Indikativer Forschungs-Benchmark).",
+  "extendedDoc": {
+    "overview": "Dieser Use Case ermöglicht weltweit verteilten Planungsteams, Zulieferern und Dienstleistern virtuelle Rundgänge durch reale Werksstrukturen. Anstelle zeitintensiver und kostenintensiver Anreisen können Werksbereiche in Fotorealismus (3D-Gaussian Splatting / Photogrammetrie) begutachtet werden. Interaktive Hotspots und Asset-Tags verknüpfen 3D-Objekte direkt mit technischen Datenblättern, Betriebsleistungen oder Wartungshistorien.",
+    "keyHighlights": [
+      "Plattformunabhängiger Zugriff via Webbrowser (WebXR) am PC, Tablet oder VR-Headset",
+      "Kombination von hochauflösenden 360°-Panoramaaufnahmen und 3D-Geometrie",
+      "Räumliches Tagging von Maschinen und Anlagen mit direkten Verlinkungen zu Betriebsanleitungen",
+      "Keine Installation von Spezial-Software erforderlich (Zero-Client-Footprint)"
+    ],
+    "prerequisites": [
+      "Fotogrammetrie-Scanner, 360°-Kamera oder Smartphone mit Scaniverse / Epic RealityScan",
+      "WebXR-fähiger Browser (Edge, Chrome, Safari)",
+      "Standard glTF 2.0 / OpenUSD Konverter"
+    ],
+    "timeframe": "3–5 Tage Einrichtungszeit"
+  },
+  "kpis": [
+    { "label": "Einsparung Reisekosten", "value": "75%" },
+    { "label": "Besprechungs-Effizienz", "value": "+50%" },
+    { "label": "Auditzugang", "value": "24/7 Weltweit" }
+  ],
+  "media": {
+    "youtube": {
+      "id": "dQw4w9WgXcQ",
+      "title": "Virtual Factory Walkthrough Showcase",
+      "caption": "Virtueller Fabrikrundgang und interaktives Asset-Tagging im Webbrowser."
+    },
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1581092335397-9583fe92d232?w=1200&auto=format&fit=crop&q=80",
+        "caption": "Fotorealistisches 3D-Modell einer Fertigungshalle im WebXR Browser",
+        "alt": "Virtuelle Fabrikbegehung am Tablet"
+      }
+    ]
+  },
+  "flow": [
+    {
+      "layer": "1",
+      "layerTitle": "Schicht 1: Erfassung",
+      "refCode": "IND-META-2026-MATTERPORT-PRO3",
+      "nodeName": "Matterport Pro3 / Scaniverse",
+      "role": "Fotogrammetrie & Panoramabilder"
+    },
+    {
+      "layer": "2",
+      "layerTitle": "Schicht 2: Geometrie",
+      "refCode": "IND-META-2026-GLTF-20",
+      "nodeName": "glTF 2.0 / USDZ",
+      "role": "Leichtgewichtige Web-3D-Formate"
+    },
+    {
+      "layer": "3",
+      "layerTitle": "Schicht 3: Middleware",
+      "refCode": "IND-META-2026-AAS-IEC63278",
+      "nodeName": "AAS Asset Tagging Engine",
+      "role": "Verknüpfung von 3D-Objekten mit Stammdaten"
+    },
+    {
+      "layer": "4",
+      "layerTitle": "Schicht 4: Simulation",
+      "refCode": null,
+      "nodeName": "Spatial Point Annotator",
+      "role": "Räumliche Notizen & Messwerkzeuge"
+    },
+    {
+      "layer": "5",
+      "layerTitle": "Schicht 5: Immersion",
+      "refCode": "IND-META-2026-GODOT-WEBXR",
+      "nodeName": "WebXR / Three.js Viewer",
+      "role": "Immersive Browser-Begehung (PC/VR)"
+    }
+  ]
+}

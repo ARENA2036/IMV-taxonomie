@@ -1,0 +1,86 @@
+{
+  "id": "UC-01-SHOPFLOOR-INCIDENT-MANAGEMENT",
+  "slug": "uc-01-shopfloor-incident-management",
+  "title": "Digitales Shopfloor-Incident-Management",
+  "subtitle": "360°-Bestandserfassung & automatisierte Ticket-Erstellung",
+  "tier": "Tier 1",
+  "tierLabel": "Tier 1 (≤ €30k / Starter & Open Source)",
+  "shortDesc": "Wie umsetzen? Schnelle optische 360°-Bestandserfassung im Shopfloor ohne Maschinenstillstand. Die Aufnahmen werden in FARO Sphere XG verortet und lösen automatisiert Instandhaltungstickets im Enterprise-System (Jira / SAP PM) aus.",
+  "goal": "Betrieblicher Nutzen: Schnelle 3D-Fehlerortung im Werk ohne manuelle Wegezeiten zur Beschleunigung des Instandhaltungsprozesses. (Indikativer Forschungs-Benchmark, keine Finanzberatung).",
+  "extendedDoc": {
+    "overview": "Im Falle einer unerwarteten Störung an einer Fertigungszelle ermöglicht dieser Use Case dem Instandhaltungs-Team die umgehende 360°-Panoramaerfassung der betroffenen Anlage per mobilem Scanner. Die Bild- und Punktwolkendaten werden direkt in FARO Sphere XG hochgeladen, wo Anmerkungen und Messungen im räumlichen Kontext vorgenommen werden. Über automatische Webhook-Brücken erzeugt das System sofort ein Ticket in Jira oder SAP PM inklusive exakter 3D-Koordinaten und Panoramalink.",
+    "keyHighlights": [
+      "Kontaktlose 360°-Bestandserfassung im laufenden Fabrikbetrieb ohne Stillstand",
+      "Automatisierte Erstellung struktureller Instandhaltungs-Tickets in Jira & SAP PM",
+      "Geringer Schulungsaufwand für Werkstattpersonal durch einfache Tablet-Bedienung",
+      "Vermeidung von Fehlbestellungen von Ersatzteilen durch exakte räumliche 3D-Befundung"
+    ],
+    "prerequisites": [
+      "Mobile 360°-Kamera oder handgeführter SLAM-Scanner (z.B. FARO Orbis oder Matterport Pro3)",
+      "Zugang zu FARO Sphere XG Plattform oder einem Open-Source AAS Portal",
+      "Enterprise Service Desk / Instandhaltungs-Software (Jira Service Management / SAP PM)"
+    ],
+    "timeframe": "1–2 Wochen Initial-Einrichtung"
+  },
+  "kpis": [
+    { "label": "Einsparung Wegezeiten", "value": "bis zu 65%" },
+    { "label": "Beschleunigung Entstörung", "value": "< 45 Min" },
+    { "label": "Reduzierung Fehldiagnosen", "value": "-80%" }
+  ],
+  "media": {
+    "youtube": {
+      "id": "dQw4w9WgXcQ",
+      "title": "Workflow Demonstration: 360° Incident Management",
+      "caption": "Video-Demonstration der mobilen 360°-Erfassung und automatischen Ticket-Auslösung im ARENA2036 Reallabor 2.0."
+    },
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&auto=format&fit=crop&q=80",
+        "caption": "Mobile 360°-Laserscanning-Befundung direkt an der Produktionslinie",
+        "alt": "Techniker bei der 360°-Erfassung einer Fertigungszelle"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1200&auto=format&fit=crop&q=80",
+        "caption": "Interaktive WebXR-3D-Befundung und Annotation in FARO Sphere XG",
+        "alt": "3D Punktwolke und Panoramabild im Browser-Inspector"
+      }
+    ]
+  },
+  "flow": [
+    {
+      "layer": "1",
+      "layerTitle": "Schicht 1: Erfassung",
+      "refCode": "IND-META-2026-FARO-ORBIS",
+      "nodeName": "FARO Orbis / Matterport",
+      "role": "Mobile 360° LiDAR-Erfassung im Werk"
+    },
+    {
+      "layer": "2",
+      "layerTitle": "Schicht 2: Geometrie",
+      "refCode": "IND-META-2026-E57-POINTCLOUD",
+      "nodeName": "E57 / Panorama Scan",
+      "role": "Punktwolken & 360°-Bilddaten-Export"
+    },
+    {
+      "layer": "3",
+      "layerTitle": "Schicht 3: Middleware",
+      "refCode": "IND-META-2026-FARO-SPHERE",
+      "nodeName": "FARO Sphere XG",
+      "role": "Zentrale Cloud/On-Prem 3D-Plattform"
+    },
+    {
+      "layer": "4",
+      "layerTitle": "Schicht 4: Integration",
+      "refCode": null,
+      "nodeName": "Jira / SAP PM",
+      "role": "Automatische Ticket- & Auftragserstellung"
+    },
+    {
+      "layer": "5",
+      "layerTitle": "Schicht 5: Immersion",
+      "refCode": "IND-META-2026-GLTF-20",
+      "nodeName": "WebXR / Web Inspection",
+      "role": "Interaktive 3D-Befundung am Tablet/PC"
+    }
+  ]
+}

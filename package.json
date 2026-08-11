@@ -1,7 +1,7 @@
 {
   "name": "imv-taxonomie",
   "version": "1.0.0",
-  "description": "Industrial Metaverse Technology Taxonomy 2026 — ARENA2036 Reallabor 2.0",
+  "description": "Industrial Metaverse Technology Taxonomy 2026: ARENA2036 Reallabor 2.0",
   "main": "app.js",
   "type": "module",
   "scripts": {

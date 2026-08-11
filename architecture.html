@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Technische Architektur & System-Spezifikation | Industrial Metaverse Taxonomie</title>
-  <meta name="description" content="Technische Architektur-Spezifikation für die Industrial Metaverse Technologie-Taxonomie. 5-Schichten Modell im Projekt Reallabor 2.0 am Forschungscampus ARENA2036.">
+  <title>5-Schichten Architektur Storyline | Industrial Metaverse Taxonomie</title>
+  <meta name="description" content="Die 5-Schichten-Architektur des Industrial Metaverse als verständliche Storyline: Vom physischen Sensor-Impuls auf dem Shopfloor bis zur räumlichen 3D-Immersion.">
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="./assets/favicon-icon.svg">
@@ -12,28 +12,32 @@
   
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  
-  <!-- FontAwesome 6 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <!-- Google Fonts: Montserrat & JetBrains Mono -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="./index.css">
-
   <!-- Mermaid.js for Diagrams -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-  <script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      if (typeof mermaid !== 'undefined') {
+        mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
+      }
+    });
+  </script>
+
+  <link rel="stylesheet" href="./index.css">
 </head>
 <body class="bg-light text-dark min-vh-100 d-flex flex-column">
 
-  <!-- Header Navbar with Bootstrap Navbar & Dropdown -->
+  <!-- Header Navigation Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm px-3 flex-shrink-0">
     <div class="container-fluid d-flex align-items-center justify-content-between">
       
-      <!-- Left: Logos (without ARENA logo) -->
+      <!-- Brand & Logos -->
       <div class="d-flex align-items-center" style="min-width: 180px;">
         <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="./index.html">
           <img src="./assets/Metaverse Logo bunt.svg" alt="Industrial Metaverse Logo" class="logo-img" title="Industrial Metaverse">
@@ -42,20 +46,19 @@
         </a>
       </div>
 
-      <!-- Center: Title Text Centered -->
+      <!-- Centered Header Title -->
       <div class="text-center flex-grow-1 px-2">
-        <span class="fw-black text-dark fs-6 d-none d-md-inline-block text-truncate" style="max-width: 90%;">
-          Industrial Metaverse System-Architektur
+        <span class="fw-black text-dark fs-6 d-none d-md-inline-block">
+          5-Schichten Ziel-Architektur Spezifikation
         </span>
       </div>
 
-      <!-- Right: Action Buttons & Hamburger Menu -->
+      <!-- Right Action & Hamburger Menu -->
       <div class="d-flex align-items-center justify-content-end gap-2" style="min-width: 180px;">
         <a href="./index.html" class="btn btn-outline-secondary btn-sm">
           <i class="fa-solid fa-house me-1"></i> Startseite
         </a>
 
-        <!-- Hamburger Dropdown Menu -->
         <div class="dropdown">
           <button class="btn btn-light btn-sm border dropdown-toggle" id="hamburgerBtn" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Menü">
             <i class="fa-solid fa-bars"></i>
@@ -64,10 +67,10 @@
             <li><a class="dropdown-item" href="./index.html"><i class="fa-solid fa-house text-muted me-2"></i>Startseite</a></li>
             <li><a class="dropdown-item" href="./guide.html"><i class="fa-solid fa-compass text-muted me-2"></i>Einstiegsleitfaden</a></li>
             <li><a class="dropdown-item" href="./browser.html"><i class="fa-solid fa-layer-group text-muted me-2"></i>Taxonomie Browser</a></li>
-            <li><a class="dropdown-item" href="./examples.html"><i class="fa-solid fa-sitemap text-muted me-2"></i>Beispiele & Use Cases</a></li>
+            <li><a class="dropdown-item" href="./usecases/index.html"><i class="fa-solid fa-sitemap text-muted me-2"></i>Use Cases Hub</a></li>
             <li><a class="dropdown-item active bg-primary" href="./architecture.html"><i class="fa-solid fa-diagram-project me-2"></i>Architektur Spezifikation</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="./impressum.html"><i class="fa-solid fa-scale-balanced text-muted me-2"></i>Impressum & Rechtliches</a></li>
+            <li><a class="dropdown-item" href="./impressum.html"><i class="fa-solid fa-scale-balanced text-muted me-2"></i>Impressum &amp; Rechtliches</a></li>
           </ul>
         </div>
       </div>
@@ -77,65 +80,33 @@
   <!-- Main Content Container -->
   <main class="container app-page-container py-4 flex-grow-1">
     
-    <div class="card border-0 shadow-sm p-4 p-md-5 mb-4">
-      
-      <!-- Title Block -->
-      <div class="mb-4">
-        <h1 class="h3 fw-black text-dark m-0 mb-3">Architektur-Framework für das Industrial Metaverse</h1>
-        <p class="text-secondary lead fs-6 mb-0">
-          Dieses Architektur-Framework dient als strategische und praktische Orientierungshilfe für Industrieunternehmen und Anwender, um geeignete Technologien für das Industrial Metaverse zu identifizieren, einzuordnen und modular miteinander zu kombinieren.
-        </p>
+    <!-- Hero Header -->
+    <div class="card border-0 shadow-sm p-4 p-md-5 mb-4 bg-white">
+      <div class="d-flex align-items-center gap-2 mb-3">
+        <span class="badge bg-primary text-white font-monospace">ARENA2036 FRAMEWORK</span>
+        <span class="badge bg-light text-dark border font-monospace">5-SCHICHTEN-MODELL</span>
       </div>
+      <h1 class="h3 fw-black text-dark mb-3">Vom Sensor-Impuls zur räumlichen Immersion</h1>
+      <p class="text-secondary lead fs-6 m-0">
+        Wie entsteht aus einer physischen Fabrik ein intelligenter, interaktiver Digitaler Zwilling? Diese Architektur-Story erklärt Schritt für Schritt, wie Daten von den Maschinen im Shopfloor bis in die 3D-Brille fließen: herstellerunabhängig, modular und praxiserprobt für Industrieunternehmen.
+      </p>
+    </div>
 
-      <!-- Core Purpose & Support Section -->
-      <div class="card p-4 mb-4 bg-white" style="border: 1px solid rgba(255, 80, 0, 0.3) !important;">
-        <h2 class="h6 fw-bold text-dark mb-3">
-          <i class="fa-solid fa-bullseye text-primary me-2"></i>Unterstützung für Entscheider und Entwicklungsteams
-        </h2>
-        <div class="row g-3">
-          <div class="col-md-4">
-            <div class="p-3 bg-light rounded border h-100">
-              <h3 class="h6 fw-bold text-dark mb-2"><i class="fa-solid fa-map-location-dot text-primary me-2"></i>Technologien verorten</h3>
-              <p class="small text-secondary mb-0">
-                Ein klares Verständnis dafür entwickeln, welche Produkte, Softwarelösungen und Protokolle auf welcher Ebene benötigt werden.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="p-3 bg-light rounded border h-100">
-              <h3 class="h6 fw-bold text-dark mb-2"><i class="fa-solid fa-calculator text-primary me-2"></i>Aufwand & Kosten bewerten</h3>
-              <p class="small text-secondary mb-0">
-                Integrationsaufwand und Kosten transparent bewerten: Zu erkennen, wie einzelne Bausteine zusammengreifen und welche Komplexität mit der schrittweisen Umsetzung verbunden ist.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="p-3 bg-light rounded border h-100">
-              <h3 class="h6 fw-bold text-dark mb-2"><i class="fa-solid fa-chart-line text-primary me-2"></i>Skalierbare Lösungen aufbauen</h3>
-              <p class="small text-secondary mb-0">
-                Einen modularen Pfad definieren, der von bestehenden Anforderungen im Shopfloor ausgeht und gezielt die Produktivität sowie Kollaboration steigert.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <!-- Prologue Section -->
+    <div class="card border-0 shadow-sm p-4 mb-4 bg-white border-start border-4 border-primary">
+      <h2 class="h5 fw-bold text-dark mb-3"><i class="fa-solid fa-book-open text-primary me-2"></i>Prolog: Die Realität in den Fabrikhallen</h2>
+      <p class="text-secondary small leading-relaxed mb-3">
+        Fabriken entstehen nicht auf der grünen Wiese. In einer typischen Fertigungshalle arbeiten 20 Jahre alte Fräsmaschinen neben modernen Roboterzellen. Konstruktionsdaten liegen in gigantischen CAD-Dateien, Sensorwerte in isolierten Datenspeichern, und Instandhalter suchen Fehler noch immer mit Papierprotokollen.
+      </p>
+      <p class="text-secondary small leading-relaxed m-0">
+        Das ARENA2036 5-Schichten-Modell ist kein monolithisches Softwareprodukt, das Sie auf einmal kaufen müssen. Es ist eine <strong>universelle Übersetzungspipeline</strong>. Jede Schicht hat eine klare Aufgabe: Sie nimmt Rohdaten auf, veredelt sie und übergibt sie an die nächste Ebene: ganz ohne Vendor Lock-in.
+      </p>
+    </div>
 
-      <!-- Flexible Composite Principle Box -->
-      <div class="card p-4 mb-4" style="border: 1px solid rgba(255, 80, 0, 0.3) !important; border-left: 3px solid #FF5000 !important; background-color: #FFFDFB;">
-        <h3 class="h6 fw-bold text-dark mb-2">
-          <i class="fa-solid fa-cubes text-primary me-2"></i>Flexibles Composite-Prinzip der 5-Layer-Struktur
-        </h3>
-        <p class="small text-secondary m-0">
-          Die 5-Layer-Struktur bietet dafür ein flexibles Composite-Prinzip, mit dem sich bedarfsgerechte Architekturen individuell und kosteneffizient zusammenstellen lassen.
-        </p>
-      </div>
-
-      <!-- Diagram Block: 5 Schichten Datenfluss Left-to-Right -->
-      <div class="mb-4">
-        <h2 class="h5 fw-bold text-dark mb-3">
-          <i class="fa-solid fa-network-wired text-primary me-2"></i>5-Schichten Datenfluss (Links nach Rechts)
-        </h2>
-        <div class="mermaid bg-light p-3 rounded border text-center overflow-auto">
+    <!-- Visual Sequence Overview Diagram -->
+    <div class="card border-0 shadow-sm p-4 mb-4 bg-white">
+      <h2 class="h5 fw-bold text-dark mb-3"><i class="fa-solid fa-network-wired text-primary me-2"></i>Der kontinuierliche Datenfluss im 5-Schichten-Modell</h2>
+      <div class="mermaid bg-light p-3 rounded border text-center overflow-auto mb-3">
 graph LR
     classDef s1 fill:#EFF6FF,stroke:#BFDBFE,color:#1E3A8A;
     classDef s2 fill:#F0FDF4,stroke:#BBF7D0,color:#14532D;
@@ -143,90 +114,232 @@ graph LR
     classDef s4 fill:#F5F3FF,stroke:#DDD6FE,color:#4C1D95;
     classDef s5 fill:#FEF2F2,stroke:#FECACA,color:#7F1D1D;
 
-    S1["<b>SCHICHT 1</b><br/>Erfassung & OT-Daten<br/><i>Sensoren, SLAM, OPC UA</i>"]:::s1
-    S2["<b>SCHICHT 2</b><br/>Geometrie & CAD<br/><i>OpenUSD, STEP, BIM</i>"]:::s2
-    S3["<b>SCHICHT 3</b><br/>Middleware & AAS<br/><i>Verwaltungsschale, EDC</i>"]:::s3
-    S4["<b>SCHICHT 4</b><br/>Simulation & VIBn<br/><i>Kinematik, Physik, SPS</i>"]:::s4
-    S5["<b>SCHICHT 5</b><br/>Spatial Immersion<br/><i>WebXR, RTX, Vision Pro</i>"]:::s5
+    S1["<b>AKT I: SCHICHT 1</b><br/>Sensor-Impuls & OT<br/><i>Sensoren, SLAM, OPC UA</i>"]:::s1
+    S2["<b>AKT II: SCHICHT 2</b><br/>Digitales Skelett<br/><i>OpenUSD, STEP, glTF</i>"]:::s2
+    S3["<b>SCHICHT 3</b><br/>Gedächtnis & Semantik<br/><i>Verwaltungsschale, AAS</i>"]:::s3
+    S4["<b>SCHICHT 4</b><br/>Gehirn & Vorausschau<br/><i>VIBn, Physik, Kinematik</i>"]:::s4
+    S5["<b>AKT V: SCHICHT 5</b><br/>Menschliche Schnittstelle<br/><i>WebXR, Spatial AR/VR</i>"]:::s5
 
-    S1 -->|Realdaten| S2
-    S2 -->|3D-Formate| S3
-    S3 -->|Zwilling| S4
-    S4 -->|Physik| S5
-        </div>
+    S1 -->|1. Livedaten & Scans| S2
+    S2 -->|2. Schlanke 3D-Formate| S3
+    S3 -->|3. Kontextualisierter Zwilling| S4
+    S4 -->|4. Geprüfte Steuerung| S5
       </div>
-
-      <!-- Linear Horizontal Progression Sequence Cards -->
-      <div>
-        <h2 class="h5 fw-bold text-dark mb-3">Horizontale Sequenz der 5 Architektur-Schichten</h2>
-
-        <div class="row g-3">
-          
-          <div class="col-md-4 col-lg-2-4">
-            <div class="card border h-100 p-3">
-              <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace align-self-start mb-2">Schicht 1</span>
-              <h3 class="h6 fw-bold text-dark m-0">Erfassung & OT</h3>
-              <p class="small text-secondary mt-2 mb-0" style="font-size: 11.5px;">
-                Sensorik, SLAM-Scanner & OT-Protokolle (OPC UA, MQTT Sparkplug B) zur kontinuierlichen Erfassung der Fabrikrealität.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-4 col-lg-2-4">
-            <div class="card border h-100 p-3">
-              <span class="badge bg-success-subtle text-success border border-success-subtle font-monospace align-self-start mb-2">Schicht 2</span>
-              <h3 class="h6 fw-bold text-dark m-0">Geometrie & CAD</h3>
-              <p class="small text-secondary mt-2 mb-0" style="font-size: 11.5px;">
-                Vorverarbeitung von MCAD/BIM-Daten in offene 3D-Formate (OpenUSD, STEP AP242, JT ISO 14306, glTF 2.0).
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-4 col-lg-2-4">
-            <div class="card border h-100 p-3">
-              <span class="badge bg-warning-subtle text-warning border border-warning-subtle font-monospace align-self-start mb-2">Schicht 3</span>
-              <h3 class="h6 fw-bold text-dark m-0">Middleware & AAS</h3>
-              <p class="small text-secondary mt-2 mb-0" style="font-size: 11.5px;">
-                Semantische Einbettung in die Asset Administration Shell (AAS) & souveräne Datenräume (Eclipse EDC).
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-2-4">
-            <div class="card border h-100 p-3">
-              <span class="badge font-monospace align-self-start mb-2" style="background: #F5F3FF; color: #4C1D95; border: 1px solid #DDD6FE;">Schicht 4</span>
-              <h3 class="h6 fw-bold text-dark m-0">Simulation & VIBn</h3>
-              <p class="small text-secondary mt-2 mb-0" style="font-size: 11.5px;">
-                Echtzeitsimulation, Kinematik & Virtuelle Inbetriebnahme (VIBn) zur Vorab-Absicherung von SPS-Codes.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-2-4">
-            <div class="card border h-100 p-3">
-              <span class="badge bg-danger-subtle text-danger border border-danger-subtle font-monospace align-self-start mb-2">Schicht 5</span>
-              <h3 class="h6 fw-bold text-dark m-0">Spatial Immersion</h3>
-              <p class="small text-secondary mt-2 mb-0" style="font-size: 11.5px;">
-                Räumliche Visualisierung & kollaborative Interaktion via WebXR, Echtzeit-Engines (Unreal 5, Omniverse) & Spatial Hardware.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
+      <p class="text-muted small text-center m-0" style="font-size: 12px;">
+        <i class="fa-solid fa-circle-info me-1"></i>Vom physischen Signal (Schicht 1) bis zur räumlichen Interaktion (Schicht 5) und zurück in das ERP-System.
+      </p>
     </div>
+
+    <!-- 5-ACT STORYLINE DEEP DIVE -->
+
+    <!-- AKT I -->
+    <div class="card border-0 shadow-sm p-4 mb-4 bg-white border-start border-4 border-primary">
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <span class="badge bg-primary text-white font-monospace px-2 py-1">AKT I</span>
+        <span class="fw-bold text-muted uppercase font-monospace small">SCHICHT 1: ERFASSUNG &amp; OT-DATEN</span>
+      </div>
+      <h2 class="h5 fw-bold text-dark mb-3">Das Nervensystem der Fabrik: Wie Maschinen sprechen lernen</h2>
+      
+      <p class="text-secondary small leading-relaxed mb-3">
+        Jeder Digitale Zwilling beginnt in der Realität. Stellen Sie sich eine Fertigungszelle vor: Um diese virtuell darzustellen, müssen wir zwei Dinge verstehen: die physikalische Form und ihren Zustand.
+      </p>
+      
+      <div class="row g-3 mb-3">
+        <div class="col-md-6">
+          <div class="p-3 bg-light rounded border h-100">
+            <h3 class="h6 fw-bold text-dark mb-2"><i class="fa-solid fa-camera text-primary me-2"></i>Form &amp; Raum erfassen</h3>
+            <p class="small text-secondary m-0">
+              Handgeführte SLAM-Laserscanner (z.B. FARO Orbis, Leica BLK2GO) erfassen Hallen und Maschinen in Minuten als 3D-Punktwolke, ohne den laufenden Betrieb zu unterbrechen.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="p-3 bg-light rounded border h-100">
+            <h3 class="h6 fw-bold text-dark mb-2"><i class="fa-solid fa-microchip text-primary me-2"></i>Maschinensignale abgreifen</h3>
+            <p class="small text-secondary m-0">
+              Über offene OT-Standards wie OPC UA (IEC 62541) oder MQTT Sparkplug B werden Temperatur-, Druck- und Zykluswerte direkt aus den SPS-Steuerungen ausgelesen.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-3 bg-primary-subtle text-primary rounded border border-primary-subtle small">
+        <strong>Praxisnutzen:</strong> Sie müssen keine funktionierenden Maschinen austauschen (Brownfield). Externe IoT-Sensoren und OPC-UA-Leseadapter docken an bestehende Steuerungen an, ohne Garantieversiegelungen zu verletzen.
+      </div>
+    </div>
+
+    <!-- AKT II -->
+    <div class="card border-0 shadow-sm p-4 mb-4 bg-white border-start border-4 border-success">
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <span class="badge bg-success text-white font-monospace px-2 py-1">AKT II</span>
+        <span class="fw-bold text-muted uppercase font-monospace small">SCHICHT 2: GEOMETRIE &amp; CAD-PRE-PROCESSING</span>
+      </div>
+      <h2 class="h5 fw-bold text-dark mb-3">Das digitale Skelett: Vom CAD-Schwergewicht zum Web-Standard</h2>
+      
+      <p class="text-secondary small leading-relaxed mb-3">
+        Rohdaten aus Schicht 1 haben noch keine Struktur, und hochkomplexe 10-GB-Konstruktionsdateien aus CAD-Systemen (CATIA, Siemens NX) bringen jeden Standard-Laptop zum Absturz. Schicht 2 bereitet die Geometrie für das Web auf.
+      </p>
+
+      <div class="row g-3 mb-3">
+        <div class="col-md-6">
+          <div class="p-3 bg-light rounded border h-100">
+            <h3 class="h6 fw-bold text-dark mb-2"><i class="fa-solid fa-[#FF5000] fa-cubes text-success me-2"></i>Tessellierung &amp; Schlankheitskur</h3>
+            <p class="small text-secondary m-0">
+              Unnötige Innen-Details (wie Gewinde im Schraubeninneren) werden automatisch entfernt. Die Geometrie wird um bis zu 90% komprimiert, ohne dass die optische Treue leidet.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="p-3 bg-light rounded border h-100">
+            <h3 class="h6 fw-bold text-dark mb-2"><i class="fa-solid fa-file-code text-success me-2"></i>Offene 3D-Formate statt Silos</h3>
+            <p class="small text-secondary m-0">
+              Die Konvertierung erfolgt in offene Standards: <strong>OpenUSD</strong> für komplexe Zusammenbauten und <strong>glTF 2.0</strong> als extrem schnelles 3D-Format für den Webbrowser.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-3 bg-success-subtle text-success rounded border border-success-subtle small">
+        <strong>Praxisnutzen:</strong> Ihre Zulieferer und Techniker benötigen keine teuren CAD-Lizenzen auf der Baustelle. 3D-Modelle lassen sich flüssig auf jedem Web-Tablet betrachten.
+      </div>
+    </div>
+
+    <!-- AKT III -->
+    <div class="card border-0 shadow-sm p-4 mb-4 bg-white border-start border-4 border-warning">
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <span class="badge bg-warning text-dark font-monospace px-2 py-1">AKT III</span>
+        <span class="fw-bold text-muted uppercase font-monospace small">SCHICHT 3: MIDDLEWARE &amp; DATENRÄUME</span>
+      </div>
+      <h2 class="h5 fw-bold text-dark mb-3">Gedächtnis &amp; Semantik: Wenn das 3D-Modell seine Bedeutung versteht</h2>
+      
+      <p class="text-secondary small leading-relaxed mb-3">
+        Ein 3D-Modell ohne Daten ist nur eine Requisite in einem Videospiel. Erst wenn der Roboterarm im 3D-Modell weiß, wie seine Seriennummer lautet, wann die letzte Wartung war und welcher OPC-UA-Datenpunkt seine aktuelle Achsposition liefert, entsteht ein echter <strong>Digitaler Zwilling</strong>.
+      </p>
+
+      <div class="row g-3 mb-3">
+        <div class="col-md-6">
+          <div class="p-3 bg-light rounded border h-100">
+            <h3 class="h6 fw-bold text-dark mb-2"><i class="fa-solid fa-passport text-warning me-2"></i>Die Asset Administration Shell (AAS)</h3>
+            <p class="small text-secondary m-0">
+              Die digitale Verwaltungsschale (IEC 63278) dient als standardisierter digitaler Reisetepass für jede Komponente. Sie verbindet Geometrie, Datenblätter und Live-Werte herstellerübergreifend.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="p-3 bg-light rounded border h-100">
+            <h3 class="h6 fw-bold text-dark mb-2"><i class="fa-solid fa-shield-halved text-warning me-2"></i>Souveräne Datenräume (Catena-X)</h3>
+            <p class="small text-secondary m-0">
+              Über Eclipse Dataspace Connectoren (EDC) teilen Unternehmen Zwillingsdaten sicher mit Kunden und Partnern: bei voller Kontrolle über die eigenen Betriebsgeheimnisse.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-3 bg-warning-subtle text-warning rounded border border-warning-subtle small">
+        <strong>Praxisnutzen:</strong> Zukunftssicherheit für digitale Lieferketten und den EU-Produktpass (ESPR). Sie erfüllen OEM-Vorgaben ohne Abhängigkeit von proprietären Cloud-Plattformen.
+      </div>
+    </div>
+
+    <!-- AKT IV -->
+    <div class="card border-0 shadow-sm p-4 mb-4 bg-white border-start border-4" style="border-left-color: #4C1D95 !important;">
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <span class="badge text-white font-monospace px-2 py-1" style="background: #4C1D95;">AKT IV</span>
+        <span class="fw-bold text-muted uppercase font-monospace small">SCHICHT 4: SIMULATION &amp; VIRTUELLE INBETRIEBNAHME</span>
+      </div>
+      <h2 class="h5 fw-bold text-dark mb-3">Das Gehirn &amp; die Vorausschau: Fehler korrigieren, bevor sie passieren</h2>
+      
+      <p class="text-secondary small leading-relaxed mb-3">
+        Jetzt haben wir ein intelligentes 3D-Modell mit Livedaten. Aber wie nutzen wir es, um teure Ausfälle in der Zukufnt zu verhindern? Schicht 4 bringt Physik, Kinematik und Steuerungslogik ins Spiel.
+      </p>
+
+      <div class="row g-3 mb-3">
+        <div class="col-md-6">
+          <div class="p-3 bg-light rounded border h-100">
+            <h3 class="h6 fw-bold text-dark mb-2"><i class="fa-solid fa-vial-circle-check me-2" style="color: #4C1D95;"></i>Virtuelle Inbetriebnahme (VIBn)</h3>
+            <p class="small text-secondary m-0">
+              Der echte SPS-Steuerungscode wird am virtuellen 3D-Modell getestet (z.B. mit ISG-VIRTUOS oder Siemens Tecnomatix). Kollisionen von Roboterarmen werden im Modell erkannt und behoben.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="p-3 bg-light rounded border h-100">
+            <h3 class="h6 fw-bold text-dark mb-2"><i class="fa-solid fa-wind me-2" style="color: #4C1D95;"></i>Echtzeitsimulation &amp; Physik</h3>
+            <p class="small text-secondary m-0">
+              Physik-Engines (NVIDIA Isaac Sim, OpenFOAM) berechnen Strömungen, Thermik und Roboterpfade in Echtzeit für hochpräzises synthetisches Training.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-3 rounded border small" style="background: #F5F3FF; color: #4C1D95; border-color: #DDD6FE !important;">
+        <strong>Praxisnutzen:</strong> Verkürzung der Inbetriebnahmezeiten vor Ort beim Kunden von Wochen auf Tage. Keine teuren Bauteilbeschädigungen durch fehlerhafte SPS-Skripte.
+      </div>
+    </div>
+
+    <!-- AKT V -->
+    <div class="card border-0 shadow-sm p-4 mb-4 bg-white border-start border-4 border-danger">
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <span class="badge bg-danger text-white font-monospace px-2 py-1">AKT V</span>
+        <span class="fw-bold text-muted uppercase font-monospace small">SCHICHT 5: SPATIAL IMMERSION &amp; RENDERING</span>
+      </div>
+      <h2 class="h5 fw-bold text-dark mb-3">Die menschliche Schnittstelle: Eintauchen in den digitalen Zwilling</h2>
+      
+      <p class="text-secondary small leading-relaxed mb-3">
+        In der letzten Stufe erreicht die Information den Menschen. Wie interagieren Techniker, Planer und Entscheider intuitiv mit den komplexen Datenströmen?
+      </p>
+
+      <div class="row g-3 mb-3">
+        <div class="col-md-6">
+          <div class="p-3 bg-light rounded border h-100">
+            <h3 class="h6 fw-bold text-dark mb-2"><i class="fa-solid fa-vr-cardboard text-danger me-2"></i>WebXR &amp; Mobile AR</h3>
+            <p class="small text-secondary m-0">
+              Ohne Software-Installation öffnen Werker das 3D-Modell im Tablet-Browser. Live-Störungsmeldungen werden als räumliche Overlays direkt über die echte Maschine gelegt.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="p-3 bg-light rounded border h-100">
+            <h3 class="h6 fw-bold text-dark mb-2"><i class="fa-solid fa-headset text-danger me-2"></i>Spatial Hardware &amp; Remote Assistance</h3>
+            <p class="small text-secondary m-0">
+              Mit Datenbrillen (Apple Vision Pro, RealWear, Varjo XR-4) schalten sich entfernte Experten live zu und führen lokale Mitarbeiter Schritt für Schritt durch Wartungen.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-3 bg-danger-subtle text-danger rounded border border-danger-subtle small">
+        <strong>Der geschlossene Regelkreis (Closed Loop):</strong> Wenn der Techniker in AR eine fehlerhafte Komponente markiert, löst das System automatisch ein Reparatur-Ticket in SAP PM / Jira aus. Der Kreis schließt sich zu Schicht 1!
+      </div>
+    </div>
+
+    <!-- Epilogue & Action Box -->
+    <div class="card border-0 shadow-sm p-4 p-md-5 mb-4 bg-white text-center">
+      <h2 class="h4 fw-black text-dark mb-2">Ihr nächster Schritt: Einstieg nach Maß</h2>
+      <p class="text-secondary small mb-4 ms-auto me-auto" style="max-width: 750px;">
+        Sie müssen nicht alle 5 Schichten gleichzeitig aufbauen. Beginnen Sie mit einem konkreten Baukasten-Use-Case (z.B. 360° Incident Management im Rahmen von Tier 1 ≤ €30k) und erweitern Sie Ihre Systemarchitektur modular Schritt für Schritt.
+      </p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="./usecases/index.html" class="btn btn-primary btn-sm px-4 py-2 fw-bold">
+          <i class="fa-solid fa-sitemap me-1"></i> Baukasten Use Cases erkunden
+        </a>
+        <a href="./browser.html" class="btn btn-outline-primary btn-sm px-4 py-2">
+          <i class="fa-solid fa-layer-group me-1"></i> Taxonomie Browser öffnen
+        </a>
+      </div>
+    </div>
+
   </main>
 
+  <!-- Site Footer -->
   <footer class="py-3 text-center small text-muted border-top bg-white">
     ARENA2036 Industrial Metaverse Taxonomy | 
-    <a href="./examples.html" class="text-muted text-decoration-none font-weight-bold">Use Cases</a> | 
+    <a href="./guide.html" class="text-muted text-decoration-none font-weight-bold">Leitfaden</a> | 
+    <a href="./usecases/index.html" class="text-muted text-decoration-none font-weight-bold">Use Cases Hub</a> | 
     <a href="./browser.html" class="text-muted text-decoration-none font-weight-bold">Browser</a> | 
     <a href="./impressum.html" class="text-muted text-decoration-none font-weight-bold">Impressum</a>
   </footer>
 
-  <!-- Bootstrap 5 JS Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
-  <script src="./app.js"></script>
+  <!-- Bootstrap 5 JavaScript Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

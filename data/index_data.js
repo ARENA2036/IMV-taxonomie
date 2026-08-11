@@ -1190,7 +1190,7 @@ window.INDEX_DATA = {
       "categoryCode": "2.1",
       "categoryName": "Mechanisches CAD (MCAD)",
       "name": "Dassault SolidWorks",
-      "subtitle": "Parametrisches 3D-CAD für den Mittelstand",
+      "subtitle": "Parametrisches 3D-CAD für Fertigungsunternehmen",
       "vendor": "Dassault Systèmes",
       "hq": "Vélizy-Villacoublay, Frankreich (EU)",
       "tier": "Tier 2",
@@ -3218,14 +3218,14 @@ window.INDEX_DATA = {
       "categoryCode": "5.2",
       "categoryName": "Spatial XR & VR/AR Headsets",
       "name": "Meta Quest 3 / Quest Pro (SME Spatial Review)",
-      "subtitle": "Kabelloses Mixed-Reality Headset für den Mittelstand",
-      "vendor": "Meta Platforms Inc.",
-      "hq": "Menlo Park, CA, USA",
+      "subtitle": "Kabelloses Mixed-Reality Headset für Industrieunternehmen",
+      "vendor": "Meta Platforms",
+      "hq": "USA",
       "tier": "Tier 1",
       "costLabel": "≤ €30k",
-      "status": "INDEXIERT",
-      "url": "https://meta.com/quest",
-      "overview": "Vielseitiges kabelloses Standalone MR/VR-Headset. Weit verbreitet im Mittelstand für kostengünstige Werksbegehungen, VR-Training und Remote-Kollaboration.",
+      "status": "GEPRÜFT",
+      "url": "https://www.meta.com/quest/quest-3/",
+      "overview": "Vielseitiges kabelloses Standalone MR/VR-Headset. Weit verbreitet in Industrieunternehmen für kostengünstige Werksbegehungen, VR-Training und Remote-Kollaboration.",
       "inputs": [
         "OpenXR Executables",
         "WebXR Browser",
@@ -3319,11 +3319,61 @@ window.INDEX_DATA = {
   "usecases": [
     {
       "id": "UC-01-SHOPFLOOR-INCIDENT-MANAGEMENT",
+      "slug": "uc-01-shopfloor-incident-management",
       "title": "Digitales Shopfloor-Incident-Management",
+      "subtitle": "360°-Bestandserfassung & automatisierte Ticket-Erstellung",
       "tier": "Tier 1",
       "tierLabel": "Tier 1 (≤ €30k / Starter & Open Source)",
-      "shortDesc": "Wie umsetzen? Schnelle optische 360°-Bestandserfassung im Shopfloor ohne Maschinenstillstand. Die Aufnahmen werden in FARO Sphere XG verortet und lösen automatisiert Instandhaltungstickets im Enterprise-System (Jira / SAP) aus.",
+      "shortDesc": "Wie umsetzen? Schnelle optische 360°-Bestandserfassung im Shopfloor ohne Maschinenstillstand. Die Aufnahmen werden in FARO Sphere XG verortet und lösen automatisiert Instandhaltungstickets im Enterprise-System (Jira / SAP PM) aus.",
       "goal": "Betrieblicher Nutzen: Schnelle 3D-Fehlerortung im Werk ohne manuelle Wegezeiten zur Beschleunigung des Instandhaltungsprozesses. (Indikativer Forschungs-Benchmark, keine Finanzberatung).",
+      "extendedDoc": {
+        "overview": "Im Falle einer unerwarteten Störung an einer Fertigungszelle ermöglicht dieser Use Case dem Instandhaltungs-Team die umgehende 360°-Panoramaerfassung der betroffenen Anlage per mobilem Scanner. Die Bild- und Punktwolkendaten werden direkt in FARO Sphere XG hochgeladen, wo Anmerkungen und Messungen im räumlichen Kontext vorgenommen werden. Über automatische Webhook-Brücken erzeugt das System sofort ein Ticket in Jira oder SAP PM inklusive exakter 3D-Koordinaten und Panoramalink.",
+        "keyHighlights": [
+          "Kontaktlose 360°-Bestandserfassung im laufenden Fabrikbetrieb ohne Stillstand",
+          "Automatisierte Erstellung struktureller Instandhaltungs-Tickets in Jira & SAP PM",
+          "Geringer Schulungsaufwand für Werkstattpersonal durch einfache Tablet-Bedienung",
+          "Vermeidung von Fehlbestellungen von Ersatzteilen durch exakte räumliche 3D-Befundung"
+        ],
+        "prerequisites": [
+          "Mobile 360°-Kamera oder handgeführter SLAM-Scanner (z.B. FARO Orbis oder Matterport Pro3)",
+          "Zugang zu FARO Sphere XG Plattform oder einem Open-Source AAS Portal",
+          "Enterprise Service Desk / Instandhaltungs-Software (Jira Service Management / SAP PM)"
+        ],
+        "timeframe": "1–2 Wochen Initial-Einrichtung"
+      },
+      "kpis": [
+        {
+          "label": "Einsparung Wegezeiten",
+          "value": "bis zu 65%"
+        },
+        {
+          "label": "Beschleunigung Entstörung",
+          "value": "< 45 Min"
+        },
+        {
+          "label": "Reduzierung Fehldiagnosen",
+          "value": "-80%"
+        }
+      ],
+      "media": {
+        "youtube": {
+          "id": "dQw4w9WgXcQ",
+          "title": "Workflow Demonstration: 360° Incident Management",
+          "caption": "Video-Demonstration der mobilen 360°-Erfassung und automatischen Ticket-Auslösung im ARENA2036 Reallabor 2.0."
+        },
+        "gallery": [
+          {
+            "url": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&auto=format&fit=crop&q=80",
+            "caption": "Mobile 360°-Laserscanning-Befundung direkt an der Produktionslinie",
+            "alt": "Techniker bei der 360°-Erfassung einer Fertigungszelle"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1200&auto=format&fit=crop&q=80",
+            "caption": "Interaktive WebXR-3D-Befundung und Annotation in FARO Sphere XG",
+            "alt": "3D Punktwolke und Panoramabild im Browser-Inspector"
+          }
+        ]
+      },
       "flow": [
         {
           "layer": "1",
@@ -3364,226 +3414,451 @@ window.INDEX_DATA = {
     },
     {
       "id": "UC-02-VIRTUAL-FACTORY-WALKTHROUGH",
+      "slug": "uc-02-virtual-factory-walkthrough",
       "title": "Virtuelle Fabrikbegehung & Asset-Tagging via WebXR",
+      "subtitle": "Immersive Navigation im Werk per Browser & VR",
       "tier": "Tier 1",
       "tierLabel": "Tier 1 (≤ €30k / Starter & Open Source)",
-      "shortDesc": "Wie umsetzen? Mobiles SLAM-Scanning bestehender Werksbereiche im Gehen. Überführung der Geometrie in OpenUSD/glTF und Verknüpfung mit Maschinendaten in einer Eclipse BaSyx Verwaltungsschale (AAS).",
-      "goal": "Betrieblicher Nutzen: Deutliche Reduzierung von Reisekosten und Reisezeiten bei Standort-Audits und Zulieferer-Reviews. Nutzung auf vorhandenen PCs/Tablets ohne teure Spezialhardware.",
+      "shortDesc": "Wie umsetzen? Zusammenführung von 360°-Fotogrammetrie (Matterport / Scaniverse) und OpenUSD/glTF-Modellen in einer browserbasierten WebXR-Umgebung. Externe Partner befahren die Fabrik ohne physische Anreise.",
+      "goal": "Betrieblicher Nutzen: Erheblich reduzierte Reisekosten für Audits und Vorort-Planungstermine. Demokratisierter 3D-Zugriff ohne High-End CAD-Workstations. (Indikativer Forschungs-Benchmark).",
+      "extendedDoc": {
+        "overview": "Dieser Use Case ermöglicht weltweit verteilten Planungsteams, Zulieferern und Dienstleistern virtuelle Rundgänge durch reale Werksstrukturen. Anstelle zeitintensiver und kostenintensiver Anreisen können Werksbereiche in Fotorealismus (3D-Gaussian Splatting / Photogrammetrie) begutachtet werden. Interaktive Hotspots und Asset-Tags verknüpfen 3D-Objekte direkt mit technischen Datenblättern, Betriebsleistungen oder Wartungshistorien.",
+        "keyHighlights": [
+          "Plattformunabhängiger Zugriff via Webbrowser (WebXR) am PC, Tablet oder VR-Headset",
+          "Kombination von hochauflösenden 360°-Panoramaaufnahmen und 3D-Geometrie",
+          "Räumliches Tagging von Maschinen und Anlagen mit direkten Verlinkungen zu Betriebsanleitungen",
+          "Keine Installation von Spezial-Software erforderlich (Zero-Client-Footprint)"
+        ],
+        "prerequisites": [
+          "Fotogrammetrie-Scanner, 360°-Kamera oder Smartphone mit Scaniverse / Epic RealityScan",
+          "WebXR-fähiger Browser (Edge, Chrome, Safari)",
+          "Standard glTF 2.0 / OpenUSD Konverter"
+        ],
+        "timeframe": "3–5 Tage Einrichtungszeit"
+      },
+      "kpis": [
+        {
+          "label": "Einsparung Reisekosten",
+          "value": "75%"
+        },
+        {
+          "label": "Besprechungs-Effizienz",
+          "value": "+50%"
+        },
+        {
+          "label": "Auditzugang",
+          "value": "24/7 Weltweit"
+        }
+      ],
+      "media": {
+        "youtube": {
+          "id": "dQw4w9WgXcQ",
+          "title": "Virtual Factory Walkthrough Showcase",
+          "caption": "Virtueller Fabrikrundgang und interaktives Asset-Tagging im Webbrowser."
+        },
+        "gallery": [
+          {
+            "url": "https://images.unsplash.com/photo-1581092335397-9583fe92d232?w=1200&auto=format&fit=crop&q=80",
+            "caption": "Fotorealistisches 3D-Modell einer Fertigungshalle im WebXR Browser",
+            "alt": "Virtuelle Fabrikbegehung am Tablet"
+          }
+        ]
+      },
       "flow": [
         {
           "layer": "1",
           "layerTitle": "Schicht 1: Erfassung",
-          "refCode": "IND-META-2026-NAVVIS-VLX3",
-          "nodeName": "NavVis VLX 3",
-          "role": "Mobiles SLAM-Laserscanning im Gehen"
+          "refCode": "IND-META-2026-MATTERPORT-PRO3",
+          "nodeName": "Matterport Pro3 / Scaniverse",
+          "role": "Fotogrammetrie & Panoramabilder"
         },
         {
           "layer": "2",
           "layerTitle": "Schicht 2: Geometrie",
-          "refCode": "IND-META-2026-OPENUSD",
-          "nodeName": "OpenUSD & glTF 2.0",
-          "role": "Tessellierte 3D-Szenengraph-Struktur"
+          "refCode": "IND-META-2026-GLTF-20",
+          "nodeName": "glTF 2.0 / USDZ",
+          "role": "Leichtgewichtige Web-3D-Formate"
         },
         {
           "layer": "3",
           "layerTitle": "Schicht 3: Middleware",
           "refCode": "IND-META-2026-AAS-IEC63278",
-          "nodeName": "Eclipse BaSyx AAS",
-          "role": "Verwaltungsschale für Asset-Metadaten"
+          "nodeName": "AAS Asset Tagging Engine",
+          "role": "Verknüpfung von 3D-Objekten mit Stammdaten"
         },
         {
           "layer": "4",
           "layerTitle": "Schicht 4: Simulation",
-          "refCode": "IND-META-2026-GODOT-WEBXR",
-          "nodeName": "Godot Engine / Web-Sim",
-          "role": "Leichtgewichtige Interaktionslogik"
+          "refCode": null,
+          "nodeName": "Spatial Point Annotator",
+          "role": "Räumliche Notizen & Messwerkzeuge"
         },
         {
           "layer": "5",
           "layerTitle": "Schicht 5: Immersion",
-          "refCode": "IND-META-2026-META-QUEST3",
-          "nodeName": "WebXR / Tablet Viewing",
-          "role": "Browserbasierte 3D-Werkbegehung"
+          "refCode": "IND-META-2026-GODOT-WEBXR",
+          "nodeName": "WebXR / Three.js Viewer",
+          "role": "Immersive Browser-Begehung (PC/VR)"
         }
       ]
     },
     {
       "id": "UC-03-AR-WORKER-ASSISTANCE",
+      "slug": "uc-03-ar-worker-assistance",
       "title": "AR-gestützte Werkerassistenz mit IoT-Echtzeitdaten",
+      "subtitle": "Augmented Reality Schritt-für-Schritt Anleitung & Livedaten",
       "tier": "Tier 2",
-      "tierLabel": "Tier 2 (≤ €100k / Mittelstand)",
-      "shortDesc": "Wie umsetzen? Anbindung bestehender SPS-Steuerungen über OPC UA an eine Eclipse BaSyx Verwaltungsschale. Visualisierung von Live-Sensorwerten und Reparaturanweisungen in Unity Industry für AR-Brillen.",
-      "goal": "Betrieblicher Nutzen: Effizientere Einarbeitung von Fachkräften und Vermeidung von Bedienerfehlern im Wartungsprozess durch freihändige AR-Werkerführung im räumlichen Kontext.",
+      "tierLabel": "Tier 2 (≤ €100k / Skalierbar & Modular)",
+      "shortDesc": "Wie umsetzen? Anbindung von OPC UA / MQTT Telemetriefeldbussen an AR-Brillen (RealWear / Meta Quest 3). Instandhalter sehen Schritt-für-Schritt-Anleitungen und Live-Temperatur/Vibrationswerte direkt im Sichtfeld.",
+      "goal": "Betrieblicher Nutzen: Drastische Reduzierung der Einarbeitungszeit neuer Mitarbeiter und Einhaltung von Qualitäts-Checklisten. Minimierte Fehlerquote bei komplexen Reparaturen. (Indikativer Forschungs-Benchmark).",
+      "extendedDoc": {
+        "overview": "Augmented Reality (AR) revolutioniert die Werkerführung bei komplexen Wartungs- und Montageaufgaben. Über freihändig bedienbare Datenbrillen oder Industrie-Tablets blendet dieser Use Case dreidimensionale Montageanleitungen und sensorische Livedaten (z.B. Druck, Temperatur, Schwingungen) in das Sichtfeld des Werker ein. Das System erfasst automatisch abgearbeitete Prüfschritte und protokolliert sie DSGVO-konform für Qualitätsaudits.",
+        "keyHighlights": [
+          "Freihändige Bedienung per Sprachsteuerung oder Hand-Tracking an AR-Headsets",
+          "Echtzeit-Anzeige kritischer Sensor-Betriebswerte per OPC UA / MQTT Kopplung",
+          "Geführte Schritt-für-Schritt Reparaturanweisungen mit visueller 3D-Überlagerung",
+          "Lückenlose digitale Dokumentation für Qualitätsprüfungen und Compliance"
+        ],
+        "prerequisites": [
+          "AR-Hardware (RealWear Nav-520, HTC Vive Focus 3 oder Meta Quest 3)",
+          "OPC UA / MQTT Telemetrie-Broker an den Produktionsmaschinen",
+          "PTC ThingWorx / Vuforia Studio oder Eclipse BaSyx Middleware"
+        ],
+        "timeframe": "2–4 Wochen Einrichtung & Training"
+      },
+      "kpis": [
+        {
+          "label": "Montagefehler-Reduzierung",
+          "value": "-85%"
+        },
+        {
+          "label": "Einarbeitungszeit",
+          "value": "-50%"
+        },
+        {
+          "label": "Erstlösungs-Quote",
+          "value": "+40%"
+        }
+      ],
+      "media": {
+        "youtube": {
+          "id": "dQw4w9WgXcQ",
+          "title": "AR Worker Assistance Demonstration",
+          "caption": "Echtzeit-Werkerassistenz mit IoT-Telemetrie auf Datenbrille im Einsatz."
+        },
+        "gallery": [
+          {
+            "url": "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=1200&auto=format&fit=crop&q=80",
+            "caption": "AR-Datenbrille blendet 3D-Montageanleitung und Live-Messwerte ein",
+            "alt": "Werker mit AR-Headset in der Fabrik"
+          }
+        ]
+      },
       "flow": [
         {
           "layer": "1",
           "layerTitle": "Schicht 1: Erfassung",
           "refCode": "IND-META-2026-OPC-UA",
-          "nodeName": "OPC UA / MQTT",
-          "role": "SPS Telemetrie- & Zustandserfassung"
+          "nodeName": "OPC UA / Modbus TCP",
+          "role": "OT-Sensor-Datenerfassung von der SPS"
         },
         {
           "layer": "2",
           "layerTitle": "Schicht 2: Geometrie",
-          "refCode": "IND-META-2026-PTC-CREO",
-          "nodeName": "PTC Creo CAD Data",
-          "role": "Leichtbau 3D-Baugruppenmodelle"
+          "refCode": "IND-META-2026-AUTODESK-FUSION",
+          "nodeName": "CAD Asset Mesh",
+          "role": "Aufbereitete 3D-Baugruppen-Geometrie"
         },
         {
           "layer": "3",
           "layerTitle": "Schicht 3: Middleware",
-          "refCode": "IND-META-2026-AAS-IEC63278",
-          "nodeName": "Eclipse BaSyx AAS",
-          "role": "Submodell Instandhaltung & Live-IoT"
+          "refCode": "IND-META-2026-PTC-THINGWORX",
+          "nodeName": "PTC ThingWorx / Vuforia",
+          "role": "AR-Autorensystem & IoT-Verknüpfung"
         },
         {
           "layer": "4",
-          "layerTitle": "Schicht 4: Engine",
-          "refCode": "IND-META-2026-UNITY-INDUSTRY",
-          "nodeName": "Unity Industry",
-          "role": "AR-Szenenkomposition & Tracking"
+          "layerTitle": "Schicht 4: Simulation",
+          "refCode": null,
+          "nodeName": "Work Instruction Engine",
+          "role": "Prozessablauf- & Logiksteuerung"
         },
         {
           "layer": "5",
           "layerTitle": "Schicht 5: Immersion",
           "refCode": "IND-META-2026-REALWEAR-NAV520",
-          "nodeName": "RealWear NAV-520 / Quest 3",
-          "role": "Freihändige AR-Werkerassistenz"
+          "nodeName": "RealWear Nav-520 / Quest 3",
+          "role": "Freihändige AR-Visialisierung vor Ort"
         }
       ]
     },
     {
       "id": "UC-04-POINTCLOUD-LAYOUT-PLANNING",
+      "slug": "uc-04-pointcloud-layout-planning",
       "title": "Punktwolken-Vergleich für die Fabrik-Layoutplanung",
+      "subtitle": "Kollisionsprüfung zwischen Ist-Scans & Soll-CAD",
       "tier": "Tier 2",
-      "tierLabel": "Tier 2 (≤ €100k / Mittelstand)",
-      "shortDesc": "Wie umsetzen? Hochpräziser 3D-Laserscan der Hallenstruktur (Leica RTC360). Überlagerung der Ist-Punktwolke mit neuen CAD-BIM-Planungsdaten (Revit/Creo) in Visual Components zur Kollisionsprüfung.",
-      "goal": "Betrieblicher Nutzen: Vorab-Kollisionsprüfung bei der Neumontage von Fördertechnik zur Vermeidung ungeplanter Produktionsunterbrechungen und Nachbearbeitungen vor Ort.",
+      "tierLabel": "Tier 2 (≤ €100k / Skalierbar & Modular)",
+      "shortDesc": "Wie umsetzen? Hochpräzises Terrestrik-Scanning (Leica RTC360 / Faro Focus) der bestehenden Hallenstruktur. Überlagerung mit neuen CAD-Planungsmodellen in Autodesk Revit / Navisworks zur Vermeidung teurer Umbaufehler.",
+      "goal": "Betrieblicher Nutzen: 100%ige Vermeidung von Kollisionen neuer Fördertechnik mit bestehenden Rohren und Trägern im Brownfield vor der Montage. (Indikativer Forschungs-Benchmark).",
+      "extendedDoc": {
+        "overview": "Bei der Umplanung bestehender Fabrikhallen (Brownfield) führen Abweichungen zwischen veralteten 2D-Zeichnungen und dem tatsächlichen Hallenbestand regelmäßig zu teuren Verzögerungen bei der Montage neuer Produktionslinien. Dieser Use Case nutzt Millimeter-genaue 3D-Punktwolken des Ist-Zustands und überlagert sie automatisiert mit den CAD-Soll-Daten der neuen Anlagen. Integrierte Clas-Detection Algorithmen erkennen Kollisionen mit Stützen, Rohrleitungen oder Kabeltrassen im virtuellen Modell.",
+        "keyHighlights": [
+          "Millimetergenaue 3D-Kollisionsprüfung von Neuplanungen im realen Ist-Bestand",
+          "Vermeidung teurer Not-Anpassungen während der physischen Maschinenmontage",
+          "Kombination großer E57-Punktwolken mit BIM/AEC-Formaten (Autodesk Revit, IFC)",
+          "Beschleunigung der Layout-Freigaben durch verständliche 3D-Visualisierung"
+        ],
+        "prerequisites": [
+          "Terrestrischer 3D-Laserscanner (Leica RTC360 oder FARO Focus Premium)",
+          "Autodesk Revit / Civil 3D oder Navisworks für BIM-Kollisionsprüfungen",
+          "Punktwolken-Verarbeitungssoftware (Autodesk ReCap / NavVis IVION)"
+        ],
+        "timeframe": "1–3 Wochen je Hallenabschnitt"
+      },
+      "kpis": [
+        {
+          "label": "Vermeidung Umbaufehler",
+          "value": "100%"
+        },
+        {
+          "label": "Kollisions-Erkennung",
+          "value": "Vor Montage"
+        },
+        {
+          "label": "Planungsbeschleunigung",
+          "value": "+40%"
+        }
+      ],
+      "media": {
+        "youtube": {
+          "id": "dQw4w9WgXcQ",
+          "title": "PointCloud Layout Planning Demonstration",
+          "caption": "Demonstration der 3D-Punktwolken-Überlagerung und Kollisionsprüfung im Hallen-Bestand."
+        },
+        "gallery": [
+          {
+            "url": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&auto=format&fit=crop&q=80",
+            "caption": "Überlagerung von 3D-Punktwolken (Ist) mit neuem CAD-Maschinenlayout (Soll)",
+            "alt": "Punktwolke und CAD-Modell in Kollisionsprüfungs-Software"
+          }
+        ]
+      },
       "flow": [
         {
           "layer": "1",
           "layerTitle": "Schicht 1: Erfassung",
           "refCode": "IND-META-2026-LEICA-RTC360",
-          "nodeName": "Leica RTC360",
-          "role": "High-End Terrestrik Laserscanning"
+          "nodeName": "Leica RTC360 / NavVis VLX",
+          "role": "Hochpräzise 3D-Punktwolken-Erfassung"
         },
         {
           "layer": "2",
           "layerTitle": "Schicht 2: Geometrie",
           "refCode": "IND-META-2026-AUTODESK-REVIT",
-          "nodeName": "Autodesk Revit / STEP",
-          "role": "BIM-Gebäude- & Layoutmodellierung"
+          "nodeName": "Autodesk Revit / ReCap",
+          "role": "Point Cloud Processing & BIM-Modellierung"
         },
         {
           "layer": "3",
           "layerTitle": "Schicht 3: Middleware",
-          "refCode": "IND-META-2026-CESIUM-3DTILES",
-          "nodeName": "Cesium 3D Tiles",
-          "role": "Räumlicher Streaming-Server"
+          "refCode": "IND-META-2026-NEMETSCHEK-ALLPLAN",
+          "nodeName": "IFC / OpenUSD Pipeline",
+          "role": "Offener Geometriedaten-Austausch"
         },
         {
           "layer": "4",
           "layerTitle": "Schicht 4: Simulation",
-          "refCode": "IND-META-2026-VISUAL-COMPONENTS",
-          "nodeName": "Visual Components",
-          "role": "Materialfluss- & Layoutsimulation"
+          "refCode": "IND-META-2026-IPOLOG",
+          "nodeName": "ipolog / Navisworks",
+          "role": "Automatisierte Clash-Detection & Layout"
         },
         {
           "layer": "5",
           "layerTitle": "Schicht 5: Immersion",
           "refCode": "IND-META-2026-TWINMOTION",
-          "nodeName": "Twinmotion / Unreal",
-          "role": "Fotorealistischer Soll-Ist-Abgleich"
+          "nodeName": "Twinmotion / Unreal Engine",
+          "role": "Interaktive Freigabe-Visualisierung"
         }
       ]
     },
     {
       "id": "UC-05-SYNTHETIC-DATA-ROBOTIC-TRAINING",
+      "slug": "uc-05-synthetic-data-robotic-training",
       "title": "Synthetische Datengenerierung & Roboter-KI-Training",
+      "subtitle": "Generierung von Trainingsdaten in NVIDIA Isaac Sim",
       "tier": "Tier 3",
       "tierLabel": "Tier 3 (> €100k / Enterprise OEM)",
-      "shortDesc": "Wie umsetzen? Automatisierte Überführung von OEM-CAD-Baugruppen (Siemens NX / CATIA) via OpenUSD in NVIDIA Omniverse. Simulation physikalisch exakter Greifprozesse in Isaac Sim zum KI-Training vor dem physischen Aufbau.",
-      "goal": "Betrieblicher Nutzen: Signifikante Verkürzung der Roboter-Inbetriebnahmezeit durch virtuelles KI-Training ohne Belegungszeiten der physischen Zelle.",
+      "shortDesc": "Wie umsetzen? Simulation physikalisch korrekter Sensordaten (Kameras, LiDAR, Depth) in NVIDIA Isaac Sim / Omniverse. Roboter-KI-Modelle lernen Objekterkennung und Greifpunkte komplett virtuell vor der Inbetriebnahme.",
+      "goal": "Betrieblicher Nutzen: 100x schnellere Generierung perfekt annotierter KI-Trainingsdaten im Vergleich zu manueller Kennzeichnung in der Realität. (Indikativer Forschungs-Benchmark).",
+      "extendedDoc": {
+        "overview": "Das Training KI-gestützter Roboter für Greif- und Sortieraufgaben scheitert in der Praxis oft an der zeitintensiven manuellen Beschriftung von Hunderttausenden von Trainingsbildern. Dieser Use Case nutzt fotorealistische und physikalisch genaue Simulationsumgebungen in NVIDIA Isaac Sim auf Basis von OpenUSD. Das System generiert automatisch Millionen synthetischer Bilder mit perfekten Bounding Boxes, Depth-Maps und Objektschlüsselpunkten für das Training von KI-Modellen (z.B. YOLO oder HuggingFace LeRobot).",
+        "keyHighlights": [
+          "Generierung von Millionen automatisch annotierter Bilder in Minuten",
+          "Training von Roboter-Greifalgorithmen ohne Risiko physischer Kollisionen",
+          "Domain Randomization für robuste Erkennung bei wechselnden Lichtverhältnissen",
+          "Nahtloser Transfer vortrainierter KI-Modelle auf reale Industrie-Roboter"
+        ],
+        "prerequisites": [
+          "NVIDIA RTX / Omniverse GPU-Server-Cluster",
+          "NVIDIA Isaac Sim & OpenUSD CAD-Pipeline",
+          "Machine Learning Framework (PyTorch, YOLOv8, HuggingFace LeRobot)"
+        ],
+        "timeframe": "2–6 Wochen KI-Trainingszyklus"
+      },
+      "kpis": [
+        {
+          "label": "Trainingsdaten-Speedup",
+          "value": "100x"
+        },
+        {
+          "label": "Beschriftungs-Kosten",
+          "value": "-95%"
+        },
+        {
+          "label": "Greif-Erfolgsquote",
+          "value": "> 99%"
+        }
+      ],
+      "media": {
+        "youtube": {
+          "id": "dQw4w9WgXcQ",
+          "title": "Synthetic Data & Robotic AI Training Showcase",
+          "caption": "Generierung synthetischer Trainingsdaten in NVIDIA Isaac Sim für Roboter-Autonomie."
+        },
+        "gallery": [
+          {
+            "url": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&auto=format&fit=crop&q=80",
+            "caption": "Physikalisch genaue Simulationsumgebung für Roboter-Greifaufgaben",
+            "alt": "Industrieroboter in Simulationsumgebung"
+          }
+        ]
+      },
       "flow": [
         {
           "layer": "1",
           "layerTitle": "Schicht 1: Erfassung",
-          "refCode": "IND-META-2026-SIEMENS-NX",
-          "nodeName": "Siemens NX MCAD",
-          "role": "OEM CAD Kinematik & Masterdaten"
+          "refCode": "IND-META-2026-YOLO26-EDGE",
+          "nodeName": "Depth Camera / Edge Vision",
+          "role": "Sensordatenerfassung am Roboterarm"
         },
         {
           "layer": "2",
           "layerTitle": "Schicht 2: Geometrie",
           "refCode": "IND-META-2026-OPENUSD",
-          "nodeName": "OpenUSD Pipeline",
-          "role": "Physik- & Material-Zuordnung"
+          "nodeName": "OpenUSD / SimReady Assets",
+          "role": "Physikalisch annotierte 3D-Geometrien"
         },
         {
           "layer": "3",
           "layerTitle": "Schicht 3: Middleware",
-          "refCode": "IND-META-2026-NVIDIA-OMNIVERSE",
-          "nodeName": "NVIDIA Omniverse Nucleus",
-          "role": "Zentraler USD Szenengraph-Server"
+          "refCode": "IND-META-2026-HUGGINGFACE-LEROBOT",
+          "nodeName": "HuggingFace LeRobot / ROS2",
+          "role": "KI-Pipeline & Telemetrie-Brücke"
         },
         {
           "layer": "4",
           "layerTitle": "Schicht 4: Simulation",
           "refCode": "IND-META-2026-NVIDIA-ISAAC",
-          "nodeName": "Isaac Sim & Isaac Lab",
-          "role": "PhysX 5 & RL KI-Robotik-Training"
+          "nodeName": "NVIDIA Isaac Sim / PhysX",
+          "role": "Synthetische Data Generation (SDG)"
         },
         {
           "layer": "5",
           "layerTitle": "Schicht 5: Immersion",
-          "refCode": "IND-META-2026-VARJO-XR4",
-          "nodeName": "Varjo XR-4 / RTX Stream",
-          "role": "Photorealistischer Digital Twin Review"
+          "refCode": "IND-META-2026-NVIDIA-OMNIVERSE",
+          "nodeName": "Omniverse RTX Renderer",
+          "role": "Fotorealistisches Raytracing für Sensor-KI"
         }
       ]
     },
     {
       "id": "UC-06-BIDIRECTIONAL-REALTIME-TWIN",
+      "slug": "uc-06-bidirectional-realtime-twin",
       "title": "Bi-direktionaler Echtzeit-Digitaler-Zwilling einer Produktionslinie",
+      "subtitle": "Kopplung von SPS-Steuerung, AAS & 3D-Virtualisierung",
       "tier": "Tier 3",
       "tierLabel": "Tier 3 (> €100k / Enterprise OEM)",
-      "shortDesc": "Wie umsetzen? Harte Feldbus-Kopplung (PROFINET TSN / OPC UA) über MQTT Sparkplug B und Eclipse Dataspace Components (EDC) in ISG-virtuos HiL. Echtzeit-Rendering in Unreal Engine 5 zur bi-direktionalen Steuerung.",
-      "goal": "Betrieblicher Nutzen: Virtuelle Schatten-Inbetriebnahme kompletter Fertigungsstraßen und Fernsteuerung in Echtzeit zur Risikominimierung bei Serienanläufen.",
+      "shortDesc": "Wie umsetzen? Vollständige Kopplung realer Produktionsstraßen mit digitalen 3D-Zwillingsmodellen in ISG-virtuos oder Siemens Tecnomatix via PROFINET / OPC UA. Steuerungsbefehle wirken bi-direktional in Beide Richtungen.",
+      "goal": "Betrieblicher Nutzen: Hardware-in-the-Loop VIBn vor Auslieferung. Drastisch reduzierte Ausfallzeiten durch prädiktive Fehlersimulation am digitalen Schatten. (Indikativer Forschungs-Benchmark).",
+      "extendedDoc": {
+        "overview": "Der höchste Reifegrad des Industrial Metaverse besteht in der bi-direktionalen Kopplung realer Maschinensteuerungen mit dreidimensionalen Simulationsmodellen. Steuerungsbefehle (SPS-Prozesswerte) spiegeln die Bewegungen der Fabrik in Echtzeit im digitalen 3D-Zwilling wider, während umgekehrt Anpassungen in der virtuellen Umgebung zurück an die physischen Aktuatoren übertragen werden können. Dieser Use Case ermöglicht lückenlose virtuelle Inbetriebnahmen (VIBn) und Hardware-in-the-Loop (HiL) Tests.",
+        "keyHighlights": [
+          "Echtzeit-Spiegelung von Produktionslinien mit Mikroskunden-Latenz via PROFINET TSN",
+          "Virtuelle Inbetriebnahme (VIBn) von SPS-Code ohne Risiko physischer Maschinenschäden",
+          "Bi-direktionale Datenkopplung über die Asset Administration Shell (AAS / IEC 63278)",
+          "Prädiktive Fehlersimulation und Engpassanalyse am virtuellen Zwilling im Werk"
+        ],
+        "prerequisites": [
+          "Hardware-in-the-Loop Simulationssoftware (ISG-virtuos oder Siemens Tecnomatix)",
+          "PROFINET TSN / OPC UA PubSub Netzwerk-Infrastruktur",
+          "Spezialisierter SPS-Steuerungs-Techniker & Digital-Twin-Architect"
+        ],
+        "timeframe": "1–3 Monate Enterprise-Implementierung"
+      },
+      "kpis": [
+        {
+          "label": "VIBn-Zeiteinsparung",
+          "value": "70%"
+        },
+        {
+          "label": "Latenz Spiegelung",
+          "value": "< 10 ms"
+        },
+        {
+          "label": "Stillstands-Risiko",
+          "value": "Nahe 0%"
+        }
+      ],
+      "media": {
+        "youtube": {
+          "id": "dQw4w9WgXcQ",
+          "title": "Bidirectional Realtime Twin Showcase",
+          "caption": "Bi-direktionale Echtzeit-Kopplung von SPS-Steuerungen mit ISG-virtuos und 3D-Rendering."
+        },
+        "gallery": [
+          {
+            "url": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&auto=format&fit=crop&q=80",
+            "caption": "Echtzeit-Spiegelung einer automatisierten Fertigungslinie im Digital Twin",
+            "alt": "Steuerungsmonitor mit 3D-Fabriksimulation"
+          }
+        ]
+      },
       "flow": [
         {
           "layer": "1",
           "layerTitle": "Schicht 1: Erfassung",
           "refCode": "IND-META-2026-PROFINET-TSN",
-          "nodeName": "PROFINET TSN & OPC UA",
-          "role": "Harte Echtzeit-Feldbus-Kopplung"
+          "nodeName": "PROFINET TSN / Siemens PLC",
+          "role": "Operative SPS-Echtzeit-Steuerung"
         },
         {
           "layer": "2",
           "layerTitle": "Schicht 2: Geometrie",
-          "refCode": "IND-META-2026-JT-ISO14306",
-          "nodeName": "JT ISO 14306 & STEP",
-          "role": "Industrieller Kinematik-Master"
+          "refCode": "IND-META-2026-SIEMENS-NX",
+          "nodeName": "Siemens NX / JT ISO14306",
+          "role": "Präzise Kinematik-Geometriedaten"
         },
         {
           "layer": "3",
           "layerTitle": "Schicht 3: Middleware",
-          "refCode": "IND-META-2026-MQTT-SPARKPLUG",
-          "nodeName": "MQTT Sparkplug & EDC",
-          "role": "Souveräner Datenraum-Austausch"
+          "refCode": "IND-META-2026-AAS-IEC63278",
+          "nodeName": "Eclipse BaSyx AAS / EDC",
+          "role": "Bi-direktionaler Semantik- & Datenraum"
         },
         {
           "layer": "4",
           "layerTitle": "Schicht 4: Simulation",
           "refCode": "IND-META-2026-ISG-VIRTUOS",
-          "nodeName": "ISG-virtuos",
-          "role": "Hardware-in-the-Loop VIBn Server"
+          "nodeName": "ISG-virtuos / Tecnomatix",
+          "role": "Hardware-in-the-Loop VIBn Simulation"
         },
         {
           "layer": "5",
           "layerTitle": "Schicht 5: Immersion",
           "refCode": "IND-META-2026-UNREAL-ENGINE-5",
-          "nodeName": "Unreal Engine 5",
-          "role": "RTX Dashboard & Teleoperation"
+          "nodeName": "Unreal Engine 5 / Omniverse",
+          "role": "Echtzeit 3D-Visualisierung & Monitoring"
         }
       ]
     }
@@ -6944,15 +7219,15 @@ window.PROFILES_DATA = {
     "categoryCode": "5.2",
     "categoryName": "Spatial XR & VR/AR Headsets",
     "name": "Meta Quest 3 / Quest Pro (SME Spatial Review)",
-    "subtitle": "Kabelloses Mixed-Reality Headset für den Mittelstand",
-    "vendor": "Meta Platforms Inc.",
-    "hq": "Menlo Park, CA, USA",
-    "businessModel": "Low-Cost Hardware Purchase (~€549/unit)",
-    "url": "https://meta.com/quest",
+    "subtitle": "Kabelloses Mixed-Reality Headset für Industrieunternehmen",
+    "vendor": "Meta Platforms",
+    "hq": "USA",
+    "businessModel": "Hardware Purchase (€550/unit)",
+    "url": "https://www.meta.com/quest/quest-3/",
     "tier": "Tier 1",
     "costLabel": "≤ €30k",
-    "status": "INDEXIERT",
-    "overview": "Vielseitiges kabelloses Standalone MR/VR-Headset. Weit verbreitet im Mittelstand für kostengünstige Werksbegehungen, VR-Training und Remote-Kollaboration.",
+    "status": "GEPRÜFT",
+    "overview": "Vielseitiges kabelloses Standalone MR/VR-Headset. Weit verbreitet in Industrieunternehmen für kostengünstige Werksbegehungen, VR-Training und Remote-Kollaboration.",
     "features": [
       {
         "title": "Pancake-Optik & Color Pass-Through",
@@ -9205,7 +9480,7 @@ window.PROFILES_DATA = {
     "categoryCode": "2.1",
     "categoryName": "Mechanisches CAD (MCAD)",
     "name": "Dassault SolidWorks",
-    "subtitle": "Parametrisches 3D-CAD für den Mittelstand",
+    "subtitle": "Parametrisches 3D-CAD für Fertigungsunternehmen",
     "vendor": "Dassault Systèmes",
     "hq": "Vélizy-Villacoublay, Frankreich (EU)",
     "businessModel": "Perpetual + Maintenance / 3DEXPERIENCE Cloud Subscription",
@@ -9750,7 +10025,7 @@ window.PROFILES_DATA = {
     "evaluations": [
       {
         "title": "Skalierbarkeit",
-        "text": "Beliebte Wahl im Mittelstand wegen extrem schneller Layouterstellung."
+        "text": "Beliebte Wahl in der Fabrikplanung wegen extrem schneller Layouterstellung."
       },
       {
         "title": "Vorteile",

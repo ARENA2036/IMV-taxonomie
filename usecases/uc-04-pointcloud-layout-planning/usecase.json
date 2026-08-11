@@ -1,0 +1,81 @@
+{
+  "id": "UC-04-POINTCLOUD-LAYOUT-PLANNING",
+  "slug": "uc-04-pointcloud-layout-planning",
+  "title": "Punktwolken-Vergleich für die Fabrik-Layoutplanung",
+  "subtitle": "Kollisionsprüfung zwischen Ist-Scans & Soll-CAD",
+  "tier": "Tier 2",
+  "tierLabel": "Tier 2 (≤ €100k / Skalierbar & Modular)",
+  "shortDesc": "Wie umsetzen? Hochpräzises Terrestrik-Scanning (Leica RTC360 / Faro Focus) der bestehenden Hallenstruktur. Überlagerung mit neuen CAD-Planungsmodellen in Autodesk Revit / Navisworks zur Vermeidung teurer Umbaufehler.",
+  "goal": "Betrieblicher Nutzen: 100%ige Vermeidung von Kollisionen neuer Fördertechnik mit bestehenden Rohren und Trägern im Brownfield vor der Montage. (Indikativer Forschungs-Benchmark).",
+  "extendedDoc": {
+    "overview": "Bei der Umplanung bestehender Fabrikhallen (Brownfield) führen Abweichungen zwischen veralteten 2D-Zeichnungen und dem tatsächlichen Hallenbestand regelmäßig zu teuren Verzögerungen bei der Montage neuer Produktionslinien. Dieser Use Case nutzt Millimeter-genaue 3D-Punktwolken des Ist-Zustands und überlagert sie automatisiert mit den CAD-Soll-Daten der neuen Anlagen. Integrierte Clas-Detection Algorithmen erkennen Kollisionen mit Stützen, Rohrleitungen oder Kabeltrassen im virtuellen Modell.",
+    "keyHighlights": [
+      "Millimetergenaue 3D-Kollisionsprüfung von Neuplanungen im realen Ist-Bestand",
+      "Vermeidung teurer Not-Anpassungen während der physischen Maschinenmontage",
+      "Kombination großer E57-Punktwolken mit BIM/AEC-Formaten (Autodesk Revit, IFC)",
+      "Beschleunigung der Layout-Freigaben durch verständliche 3D-Visualisierung"
+    ],
+    "prerequisites": [
+      "Terrestrischer 3D-Laserscanner (Leica RTC360 oder FARO Focus Premium)",
+      "Autodesk Revit / Civil 3D oder Navisworks für BIM-Kollisionsprüfungen",
+      "Punktwolken-Verarbeitungssoftware (Autodesk ReCap / NavVis IVION)"
+    ],
+    "timeframe": "1–3 Wochen je Hallenabschnitt"
+  },
+  "kpis": [
+    { "label": "Vermeidung Umbaufehler", "value": "100%" },
+    { "label": "Kollisions-Erkennung", "value": "Vor Montage" },
+    { "label": "Planungsbeschleunigung", "value": "+40%" }
+  ],
+  "media": {
+    "youtube": {
+      "id": "dQw4w9WgXcQ",
+      "title": "PointCloud Layout Planning Demonstration",
+      "caption": "Demonstration der 3D-Punktwolken-Überlagerung und Kollisionsprüfung im Hallen-Bestand."
+    },
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&auto=format&fit=crop&q=80",
+        "caption": "Überlagerung von 3D-Punktwolken (Ist) mit neuem CAD-Maschinenlayout (Soll)",
+        "alt": "Punktwolke und CAD-Modell in Kollisionsprüfungs-Software"
+      }
+    ]
+  },
+  "flow": [
+    {
+      "layer": "1",
+      "layerTitle": "Schicht 1: Erfassung",
+      "refCode": "IND-META-2026-LEICA-RTC360",
+      "nodeName": "Leica RTC360 / NavVis VLX",
+      "role": "Hochpräzise 3D-Punktwolken-Erfassung"
+    },
+    {
+      "layer": "2",
+      "layerTitle": "Schicht 2: Geometrie",
+      "refCode": "IND-META-2026-AUTODESK-REVIT",
+      "nodeName": "Autodesk Revit / ReCap",
+      "role": "Point Cloud Processing & BIM-Modellierung"
+    },
+    {
+      "layer": "3",
+      "layerTitle": "Schicht 3: Middleware",
+      "refCode": "IND-META-2026-NEMETSCHEK-ALLPLAN",
+      "nodeName": "IFC / OpenUSD Pipeline",
+      "role": "Offener Geometriedaten-Austausch"
+    },
+    {
+      "layer": "4",
+      "layerTitle": "Schicht 4: Simulation",
+      "refCode": "IND-META-2026-IPOLOG",
+      "nodeName": "ipolog / Navisworks",
+      "role": "Automatisierte Clash-Detection & Layout"
+    },
+    {
+      "layer": "5",
+      "layerTitle": "Schicht 5: Immersion",
+      "refCode": "IND-META-2026-TWINMOTION",
+      "nodeName": "Twinmotion / Unreal Engine",
+      "role": "Interaktive Freigabe-Visualisierung"
+    }
+  ]
+}

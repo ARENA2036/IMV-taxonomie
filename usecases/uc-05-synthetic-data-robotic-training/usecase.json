@@ -1,0 +1,81 @@
+{
+  "id": "UC-05-SYNTHETIC-DATA-ROBOTIC-TRAINING",
+  "slug": "uc-05-synthetic-data-robotic-training",
+  "title": "Synthetische Datengenerierung & Roboter-KI-Training",
+  "subtitle": "Generierung von Trainingsdaten in NVIDIA Isaac Sim",
+  "tier": "Tier 3",
+  "tierLabel": "Tier 3 (> €100k / Enterprise OEM)",
+  "shortDesc": "Wie umsetzen? Simulation physikalisch korrekter Sensordaten (Kameras, LiDAR, Depth) in NVIDIA Isaac Sim / Omniverse. Roboter-KI-Modelle lernen Objekterkennung und Greifpunkte komplett virtuell vor der Inbetriebnahme.",
+  "goal": "Betrieblicher Nutzen: 100x schnellere Generierung perfekt annotierter KI-Trainingsdaten im Vergleich zu manueller Kennzeichnung in der Realität. (Indikativer Forschungs-Benchmark).",
+  "extendedDoc": {
+    "overview": "Das Training KI-gestützter Roboter für Greif- und Sortieraufgaben scheitert in der Praxis oft an der zeitintensiven manuellen Beschriftung von Hunderttausenden von Trainingsbildern. Dieser Use Case nutzt fotorealistische und physikalisch genaue Simulationsumgebungen in NVIDIA Isaac Sim auf Basis von OpenUSD. Das System generiert automatisch Millionen synthetischer Bilder mit perfekten Bounding Boxes, Depth-Maps und Objektschlüsselpunkten für das Training von KI-Modellen (z.B. YOLO oder HuggingFace LeRobot).",
+    "keyHighlights": [
+      "Generierung von Millionen automatisch annotierter Bilder in Minuten",
+      "Training von Roboter-Greifalgorithmen ohne Risiko physischer Kollisionen",
+      "Domain Randomization für robuste Erkennung bei wechselnden Lichtverhältnissen",
+      "Nahtloser Transfer vortrainierter KI-Modelle auf reale Industrie-Roboter"
+    ],
+    "prerequisites": [
+      "NVIDIA RTX / Omniverse GPU-Server-Cluster",
+      "NVIDIA Isaac Sim & OpenUSD CAD-Pipeline",
+      "Machine Learning Framework (PyTorch, YOLOv8, HuggingFace LeRobot)"
+    ],
+    "timeframe": "2–6 Wochen KI-Trainingszyklus"
+  },
+  "kpis": [
+    { "label": "Trainingsdaten-Speedup", "value": "100x" },
+    { "label": "Beschriftungs-Kosten", "value": "-95%" },
+    { "label": "Greif-Erfolgsquote", "value": "> 99%" }
+  ],
+  "media": {
+    "youtube": {
+      "id": "dQw4w9WgXcQ",
+      "title": "Synthetic Data & Robotic AI Training Showcase",
+      "caption": "Generierung synthetischer Trainingsdaten in NVIDIA Isaac Sim für Roboter-Autonomie."
+    },
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&auto=format&fit=crop&q=80",
+        "caption": "Physikalisch genaue Simulationsumgebung für Roboter-Greifaufgaben",
+        "alt": "Industrieroboter in Simulationsumgebung"
+      }
+    ]
+  },
+  "flow": [
+    {
+      "layer": "1",
+      "layerTitle": "Schicht 1: Erfassung",
+      "refCode": "IND-META-2026-YOLO26-EDGE",
+      "nodeName": "Depth Camera / Edge Vision",
+      "role": "Sensordatenerfassung am Roboterarm"
+    },
+    {
+      "layer": "2",
+      "layerTitle": "Schicht 2: Geometrie",
+      "refCode": "IND-META-2026-OPENUSD",
+      "nodeName": "OpenUSD / SimReady Assets",
+      "role": "Physikalisch annotierte 3D-Geometrien"
+    },
+    {
+      "layer": "3",
+      "layerTitle": "Schicht 3: Middleware",
+      "refCode": "IND-META-2026-HUGGINGFACE-LEROBOT",
+      "nodeName": "HuggingFace LeRobot / ROS2",
+      "role": "KI-Pipeline & Telemetrie-Brücke"
+    },
+    {
+      "layer": "4",
+      "layerTitle": "Schicht 4: Simulation",
+      "refCode": "IND-META-2026-NVIDIA-ISAAC",
+      "nodeName": "NVIDIA Isaac Sim / PhysX",
+      "role": "Synthetische Data Generation (SDG)"
+    },
+    {
+      "layer": "5",
+      "layerTitle": "Schicht 5: Immersion",
+      "refCode": "IND-META-2026-NVIDIA-OMNIVERSE",
+      "nodeName": "Omniverse RTX Renderer",
+      "role": "Fotorealistisches Raytracing für Sensor-KI"
+    }
+  ]
+}

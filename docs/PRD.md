@@ -15,6 +15,7 @@ The **Industrial Metaverse Technology Taxonomy** provides an open, vendor-neutra
 3. **5-Schichten Architecture (1:1 Decimal Standard)**: Structure technologies from Shopfloor Sensing (Schicht 1, 1.1–1.8) to Spatial XR Immersion (Schicht 5, 5.1–5.2).
 4. **100% German Language Localization**: Deliver professional, accurate German documentation across all categories, overviews, features, evaluations, and staffing guidelines.
 5. **Static GitHub Pages & Zero-CORS Local Execution**: Support instant static deployment to GitHub Pages (`github.io`) and zero-CORS local `file://` protocol execution via `data/index_data.js`.
+6. **Open Standards Foundation**: Build 100% on international open standards (AAS IEC 63278, OpenUSD, glTF 2.0, OPC UA, STEP AP242, EDC) and browser-native W3C primitives (Bootstrap 5.3, WebXR) without proprietary lock-in.
 
 ---
 
@@ -41,9 +42,9 @@ The **Industrial Metaverse Technology Taxonomy** provides an open, vendor-neutra
 * **Description**: Standalone specification page (`architecture.html`) detailing the 5-layer architecture.
 * **Acceptance Criteria**: Embedded interactive Mermaid.js diagram (`graph LR`) illustrating the linear left-to-right data flow from Schicht 1 to Schicht 5, accompanied by a 5-column horizontal sequence grid (`col-lg-2-4`).
 
-### F-03: Impressum & Non-Commercial KMU Disclaimer Page
+### F-03: Impressum & Non-Commercial Disclaimer Page
 * **Description**: German legal notice page (`impressum.html`) providing ARENA2036 e.V. contact info and funding attribution.
-* **Acceptance Criteria**: Features a clean white background with a thin orange border, explicitly clarifying that the taxonomy is an academic research audit for KMU guidance and **NOT** a commercial vendor recommendation.
+* **Acceptance Criteria**: Features a clean white background with a thin orange border, explicitly clarifying that the taxonomy is an academic research audit for industrial guidance and **NOT** a commercial vendor recommendation.
 
 ### F-04: Interactive Category Browser (Grid & Table List View)
 * **Description**: Main browser interface (`browser.html`) with left sidebar navigation displaying all 21 categories grouped into the 5 architecture layers.
@@ -58,7 +59,7 @@ The **Industrial Metaverse Technology Taxonomy** provides an open, vendor-neutra
 * **Acceptance Criteria**: 94% viewport width (`max-width: 94vw`) with `backdrop-filter: blur(16px)` overlay and `opacity: 1` background blending.
 
 ### F-07: Baukasten Use Case Flow Browser
-* **Description**: Dedicated Use Case browser page (`examples.html`) displaying multi-stage industrial workflow flows across the 5 layers.
+* **Description**: Consolidated Use Cases Hub (`usecases/index.html`) displaying Baukasten Use Cases, 5-layer workflow sequences, and dedicated individual pages (`usecases/[slug]/index.html`).
 * **Acceptance Criteria**: Interactive nodes linked directly to technology profile specs; vertically centered GitHub PR button.
 
 ### F-08: Dual-Mode Data Hydration (Zero CORS)

@@ -31,19 +31,35 @@ The architecture categorizes numerous audited technologies, standards, and proto
 The application is 100% JSON-driven without external database dependencies:
 
 ```
-profiles/*.json   (canonical technology profile JSON specifications)
-usecases/*.json   (6 canonical Baukasten Use Case specifications)
+profiles/*.json                 (91 canonical technology profile JSON specifications)
+usecases/[slug]/usecase.json    (6 canonical Baukasten Use Case specifications & media assets)
        │
-       ▼ [node scripts/generate_profiles.js]
+       ▼ [node scripts/generate_profiles.js & scripts/generate_usecase_pages.js]
 data/
-   ├── index.json       (JSON manifest for HTTP fetch execution on web servers)
-   └── index_data.js    (Window wrapper fallback for zero-CORS local file:// protocol)
+   ├── index.json             (JSON manifest for HTTP fetch execution on web servers)
+   └── index_data.js          (Window wrapper fallback for zero-CORS local file:// protocol)
+usecases/
+   ├── index.html             (Auto-generated Use Cases hub page)
+   └── [slug]/index.html      (Auto-generated standalone HTML page per Use Case)
 ```
 
 ---
 
 ## ⚙️ 4. Deployment & Zero-CORS Compatibility
 
-All web views (`index.html`, `browser.html`, `examples.html`, `architecture.html`, `impressum.html`) feature dual-mode data loading:
+All web views (`index.html`, `guide.html`, `browser.html`, `usecases/index.html`, `architecture.html`, `impressum.html`) feature dual-mode data loading:
 1. **HTTP/HTTPS Mode**: Dynamically fetches `data/index.json` and individual `profiles/*.json`.
 2. **Local `file://` Mode**: Automatically falls back to `window.INDEX_DATA` and `window.PROFILES_DATA` serialized in `data/index_data.js`, ensuring zero CORS errors when opened directly from disk.
+
+---
+
+## 🏛️ 5. Open Standards Foundation
+
+The architecture deliberately avoids custom proprietary protocols or lock-in frameworks, relying 100% on established international industrial open standards:
+
+- **AAS (IEC 63278 / Verwaltungsschale)**: Digital Twin & Digital Product Passport standard.
+- **OPC UA (IEC 62541) & MQTT Sparkplug B**: Universal OT data communication.
+- **OpenUSD (Pixar/NVIDIA AOUSD) & glTF 2.0 (Khronos Group)**: Universal 3D scene description.
+- **STEP AP242 (ISO 10303) & JT (ISO 14306)**: Mechanical CAD exchange standards.
+- **Eclipse Dataspace Connector (EDC)**: Sovereign data space interoperability (Catena-X / Manufacturing-X).
+- **WebXR Device API**: W3C browser-native spatial computing standard.

@@ -1,0 +1,81 @@
+{
+  "id": "UC-06-BIDIRECTIONAL-REALTIME-TWIN",
+  "slug": "uc-06-bidirectional-realtime-twin",
+  "title": "Bi-direktionaler Echtzeit-Digitaler-Zwilling einer Produktionslinie",
+  "subtitle": "Kopplung von SPS-Steuerung, AAS & 3D-Virtualisierung",
+  "tier": "Tier 3",
+  "tierLabel": "Tier 3 (> €100k / Enterprise OEM)",
+  "shortDesc": "Wie umsetzen? Vollständige Kopplung realer Produktionsstraßen mit digitalen 3D-Zwillingsmodellen in ISG-virtuos oder Siemens Tecnomatix via PROFINET / OPC UA. Steuerungsbefehle wirken bi-direktional in Beide Richtungen.",
+  "goal": "Betrieblicher Nutzen: Hardware-in-the-Loop VIBn vor Auslieferung. Drastisch reduzierte Ausfallzeiten durch prädiktive Fehlersimulation am digitalen Schatten. (Indikativer Forschungs-Benchmark).",
+  "extendedDoc": {
+    "overview": "Der höchste Reifegrad des Industrial Metaverse besteht in der bi-direktionalen Kopplung realer Maschinensteuerungen mit dreidimensionalen Simulationsmodellen. Steuerungsbefehle (SPS-Prozesswerte) spiegeln die Bewegungen der Fabrik in Echtzeit im digitalen 3D-Zwilling wider, während umgekehrt Anpassungen in der virtuellen Umgebung zurück an die physischen Aktuatoren übertragen werden können. Dieser Use Case ermöglicht lückenlose virtuelle Inbetriebnahmen (VIBn) und Hardware-in-the-Loop (HiL) Tests.",
+    "keyHighlights": [
+      "Echtzeit-Spiegelung von Produktionslinien mit Mikroskunden-Latenz via PROFINET TSN",
+      "Virtuelle Inbetriebnahme (VIBn) von SPS-Code ohne Risiko physischer Maschinenschäden",
+      "Bi-direktionale Datenkopplung über die Asset Administration Shell (AAS / IEC 63278)",
+      "Prädiktive Fehlersimulation und Engpassanalyse am virtuellen Zwilling im Werk"
+    ],
+    "prerequisites": [
+      "Hardware-in-the-Loop Simulationssoftware (ISG-virtuos oder Siemens Tecnomatix)",
+      "PROFINET TSN / OPC UA PubSub Netzwerk-Infrastruktur",
+      "Spezialisierter SPS-Steuerungs-Techniker & Digital-Twin-Architect"
+    ],
+    "timeframe": "1–3 Monate Enterprise-Implementierung"
+  },
+  "kpis": [
+    { "label": "VIBn-Zeiteinsparung", "value": "70%" },
+    { "label": "Latenz Spiegelung", "value": "< 10 ms" },
+    { "label": "Stillstands-Risiko", "value": "Nahe 0%" }
+  ],
+  "media": {
+    "youtube": {
+      "id": "dQw4w9WgXcQ",
+      "title": "Bidirectional Realtime Twin Showcase",
+      "caption": "Bi-direktionale Echtzeit-Kopplung von SPS-Steuerungen mit ISG-virtuos und 3D-Rendering."
+    },
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&auto=format&fit=crop&q=80",
+        "caption": "Echtzeit-Spiegelung einer automatisierten Fertigungslinie im Digital Twin",
+        "alt": "Steuerungsmonitor mit 3D-Fabriksimulation"
+      }
+    ]
+  },
+  "flow": [
+    {
+      "layer": "1",
+      "layerTitle": "Schicht 1: Erfassung",
+      "refCode": "IND-META-2026-PROFINET-TSN",
+      "nodeName": "PROFINET TSN / Siemens PLC",
+      "role": "Operative SPS-Echtzeit-Steuerung"
+    },
+    {
+      "layer": "2",
+      "layerTitle": "Schicht 2: Geometrie",
+      "refCode": "IND-META-2026-SIEMENS-NX",
+      "nodeName": "Siemens NX / JT ISO14306",
+      "role": "Präzise Kinematik-Geometriedaten"
+    },
+    {
+      "layer": "3",
+      "layerTitle": "Schicht 3: Middleware",
+      "refCode": "IND-META-2026-AAS-IEC63278",
+      "nodeName": "Eclipse BaSyx AAS / EDC",
+      "role": "Bi-direktionaler Semantik- & Datenraum"
+    },
+    {
+      "layer": "4",
+      "layerTitle": "Schicht 4: Simulation",
+      "refCode": "IND-META-2026-ISG-VIRTUOS",
+      "nodeName": "ISG-virtuos / Tecnomatix",
+      "role": "Hardware-in-the-Loop VIBn Simulation"
+    },
+    {
+      "layer": "5",
+      "layerTitle": "Schicht 5: Immersion",
+      "refCode": "IND-META-2026-UNREAL-ENGINE-5",
+      "nodeName": "Unreal Engine 5 / Omniverse",
+      "role": "Echtzeit 3D-Visualisierung & Monitoring"
+    }
+  ]
+}

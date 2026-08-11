@@ -1,5 +1,5 @@
 /**
- * Industrial Metaverse Tech Stack Engine — Pure JSON-Driven Client Engine
+ * Industrial Metaverse Tech Stack Engine: Pure JSON-Driven Client Engine
  * ARENA2036 Reallabor 2.0 Project
  * 
  * GitHub Pages Compatible & Zero-CORS Fallback Protocol for file:// execution.
@@ -296,7 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /**
-   * Renders the Use Cases flow browser on examples.html.
+   * Renders the Use Cases flow browser on usecases/index.html.
    */
   function renderUseCasesView() {
     const useCasesContainer = document.getElementById('useCasesContainer');
@@ -365,8 +365,13 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="flow-columns-wrapper">
               ${flowColumnsHtml}
             </div>
-            <div class="mt-3 p-3 rounded small text-dark" style="border: 1px solid rgba(255, 80, 0, 0.3); border-left: 3px solid #FF5000 !important; background-color: #FFFDFB;">
-              <strong style="color: #FF5000;" class="me-1"><i class="fa-solid fa-bullseye"></i> Betrieblicher Nutzen:</strong> <span class="text-dark">${uc.goal}</span>
+            <div class="mt-3 p-3 rounded small text-dark d-flex align-items-center justify-content-between flex-wrap gap-2" style="border: 1px solid rgba(255, 80, 0, 0.3); border-left: 3px solid #FF5000 !important; background-color: #FFFDFB;">
+              <div>
+                <strong style="color: #FF5000;" class="me-1"><i class="fa-solid fa-bullseye"></i> Betrieblicher Nutzen:</strong> <span class="text-dark">${uc.goal}</span>
+              </div>
+              <a href="./usecases/${uc.slug || uc.id.toLowerCase()}/index.html" class="btn btn-primary btn-sm px-3 fw-bold text-nowrap">
+                Einzelseite öffnen <i class="fa-solid fa-arrow-right ms-1"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -398,7 +403,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="card-item" onclick="window.appOpenProfileModal('${item.refCode}')">
           <div>
             <div class="card-header-bar">
-              <span class="card-category">KAT ${item.categoryCode} — ${item.categoryName}</span>
+              <span class="card-category">KAT ${item.categoryCode}: ${item.categoryName}</span>
               <span class="tier-badge ${tierClass}">${item.tier}</span>
             </div>
             <h3 class="card-title">${item.name}</h3>
@@ -602,7 +607,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <!-- Header Banner -->
         <div class="d-flex justify-content-between align-items-start border-bottom pb-3 mb-3 flex-wrap gap-2">
           <div>
-            <span class="badge bg-secondary font-monospace mb-1">KAT. ${item.categoryCode} — ${item.categoryName}</span>
+            <span class="badge bg-secondary font-monospace mb-1">KAT. ${item.categoryCode}: ${item.categoryName}</span>
             <h3 class="h4 fw-black text-dark m-0">${item.name} <span class="text-muted fs-6 fw-normal">(${item.subtitle})</span></h3>
           </div>
           <div>

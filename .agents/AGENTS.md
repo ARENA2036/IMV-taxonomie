@@ -23,21 +23,24 @@ This repository contains the open research taxonomy and interactive web browser 
 The data architecture is **100% JSON-driven** without external database requirements:
 
 ```
-profiles/*.json               <- Canonical JSON profile specifications
-usecases/*.json               <- Canonical Baukasten Use Case specifications (6 JSON files)
+profiles/*.json               <- Canonical JSON profile specifications (91 profiles)
+usecases/[slug]/usecase.json  <- Canonical Baukasten Use Case specifications & media assets
        │
        ▼ [Run node scripts/generate_profiles.js]
 data/
    ├── index.json             <- Compiled JSON index manifest for GitHub Pages fetch()
    └── index_data.js          <- Static window wrapper (window.INDEX_DATA & window.PROFILES_DATA)
                                  for zero-CORS local file:// protocol execution
+usecases/
+   ├── index.html             <- Auto-generated Use Cases hub page
+   └── [slug]/index.html      <- Auto-generated standalone HTML page per Use Case
 ```
 
 ### Accessing & Modifying Data:
 - **To add or update a technology profile**: Modify or create the corresponding `.json` file inside `profiles/`.
-- **To add or update a Use Case**: Modify or create a `.json` file inside `usecases/`.
-- **To rebuild the index manifest**: Run `node scripts/generate_profiles.js`.
-- Do **NOT** manually edit `data/index.json` or `data/index_data.js` — they are auto-generated build deliverables.
+- **To add or update a Use Case**: Modify or create a `usecase.json` inside a dedicated subfolder `usecases/[slug]/`.
+- **To rebuild the index manifest & static pages**: Run `node scripts/generate_profiles.js` or `npm run build`.
+- Do **NOT** manually edit `data/index.json`, `data/index_data.js`, `usecases/index.html`, or `usecases/*/index.html`: they are auto-generated build deliverables.
 
 ---
 
@@ -96,7 +99,8 @@ Every profile JSON in `profiles/` must strictly adhere to the 19 canonical schem
   - Primary Accent: `#FF5000` (ARENA2036 Orange)
   - Borders: `#E5E7EB` (Subtle) & `rgba(255, 80, 0, 0.3)` (Accent thin frames)
   - Canvas Fill: `#FFFFFF` & `#FAFAFA`
-- **Zero CORS Policy**: All pages (`index.html`, `browser.html`, `examples.html`, `architecture.html`, `impressum.html`) must work both on HTTP web servers and directly via local `file://` execution using `data/index_data.js`.
+- **Zero CORS Policy**: All pages (`index.html`, `guide.html`, `browser.html`, `usecases/index.html`, `architecture.html`, `impressum.html`) must work both on HTTP web servers and directly via local `file://` execution using `data/index_data.js`.
+- **Open Standards Principle**: AI Agents MUST always prioritize open standards (AAS IEC 63278, OpenUSD, glTF 2.0, OPC UA, STEP AP242, EDC) and browser-native primitives (Bootstrap 5.3, WebXR) over proprietary frameworks.
 
 ---
 
@@ -105,4 +109,4 @@ Every profile JSON in `profiles/` must strictly adhere to the 19 canonical schem
 Before pushing any changes:
 1. Run `node scripts/generate_profiles.js` to ensure the manifest is synced.
 2. Run `node -c app.js` to verify zero JavaScript syntax errors.
-3. Confirm zero console errors across all 5 HTML pages.
+3. Confirm zero console errors across all 6 HTML pages.

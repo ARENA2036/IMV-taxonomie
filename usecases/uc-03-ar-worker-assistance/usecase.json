@@ -1,0 +1,81 @@
+{
+  "id": "UC-03-AR-WORKER-ASSISTANCE",
+  "slug": "uc-03-ar-worker-assistance",
+  "title": "AR-gestützte Werkerassistenz mit IoT-Echtzeitdaten",
+  "subtitle": "Augmented Reality Schritt-für-Schritt Anleitung & Livedaten",
+  "tier": "Tier 2",
+  "tierLabel": "Tier 2 (≤ €100k / Skalierbar & Modular)",
+  "shortDesc": "Wie umsetzen? Anbindung von OPC UA / MQTT Telemetriefeldbussen an AR-Brillen (RealWear / Meta Quest 3). Instandhalter sehen Schritt-für-Schritt-Anleitungen und Live-Temperatur/Vibrationswerte direkt im Sichtfeld.",
+  "goal": "Betrieblicher Nutzen: Drastische Reduzierung der Einarbeitungszeit neuer Mitarbeiter und Einhaltung von Qualitäts-Checklisten. Minimierte Fehlerquote bei komplexen Reparaturen. (Indikativer Forschungs-Benchmark).",
+  "extendedDoc": {
+    "overview": "Augmented Reality (AR) revolutioniert die Werkerführung bei komplexen Wartungs- und Montageaufgaben. Über freihändig bedienbare Datenbrillen oder Industrie-Tablets blendet dieser Use Case dreidimensionale Montageanleitungen und sensorische Livedaten (z.B. Druck, Temperatur, Schwingungen) in das Sichtfeld des Werker ein. Das System erfasst automatisch abgearbeitete Prüfschritte und protokolliert sie DSGVO-konform für Qualitätsaudits.",
+    "keyHighlights": [
+      "Freihändige Bedienung per Sprachsteuerung oder Hand-Tracking an AR-Headsets",
+      "Echtzeit-Anzeige kritischer Sensor-Betriebswerte per OPC UA / MQTT Kopplung",
+      "Geführte Schritt-für-Schritt Reparaturanweisungen mit visueller 3D-Überlagerung",
+      "Lückenlose digitale Dokumentation für Qualitätsprüfungen und Compliance"
+    ],
+    "prerequisites": [
+      "AR-Hardware (RealWear Nav-520, HTC Vive Focus 3 oder Meta Quest 3)",
+      "OPC UA / MQTT Telemetrie-Broker an den Produktionsmaschinen",
+      "PTC ThingWorx / Vuforia Studio oder Eclipse BaSyx Middleware"
+    ],
+    "timeframe": "2–4 Wochen Einrichtung & Training"
+  },
+  "kpis": [
+    { "label": "Montagefehler-Reduzierung", "value": "-85%" },
+    { "label": "Einarbeitungszeit", "value": "-50%" },
+    { "label": "Erstlösungs-Quote", "value": "+40%" }
+  ],
+  "media": {
+    "youtube": {
+      "id": "dQw4w9WgXcQ",
+      "title": "AR Worker Assistance Demonstration",
+      "caption": "Echtzeit-Werkerassistenz mit IoT-Telemetrie auf Datenbrille im Einsatz."
+    },
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=1200&auto=format&fit=crop&q=80",
+        "caption": "AR-Datenbrille blendet 3D-Montageanleitung und Live-Messwerte ein",
+        "alt": "Werker mit AR-Headset in der Fabrik"
+      }
+    ]
+  },
+  "flow": [
+    {
+      "layer": "1",
+      "layerTitle": "Schicht 1: Erfassung",
+      "refCode": "IND-META-2026-OPC-UA",
+      "nodeName": "OPC UA / Modbus TCP",
+      "role": "OT-Sensor-Datenerfassung von der SPS"
+    },
+    {
+      "layer": "2",
+      "layerTitle": "Schicht 2: Geometrie",
+      "refCode": "IND-META-2026-AUTODESK-FUSION",
+      "nodeName": "CAD Asset Mesh",
+      "role": "Aufbereitete 3D-Baugruppen-Geometrie"
+    },
+    {
+      "layer": "3",
+      "layerTitle": "Schicht 3: Middleware",
+      "refCode": "IND-META-2026-PTC-THINGWORX",
+      "nodeName": "PTC ThingWorx / Vuforia",
+      "role": "AR-Autorensystem & IoT-Verknüpfung"
+    },
+    {
+      "layer": "4",
+      "layerTitle": "Schicht 4: Simulation",
+      "refCode": null,
+      "nodeName": "Work Instruction Engine",
+      "role": "Prozessablauf- & Logiksteuerung"
+    },
+    {
+      "layer": "5",
+      "layerTitle": "Schicht 5: Immersion",
+      "refCode": "IND-META-2026-REALWEAR-NAV520",
+      "nodeName": "RealWear Nav-520 / Quest 3",
+      "role": "Freihändige AR-Visialisierung vor Ort"
+    }
+  ]
+}

@@ -29,15 +29,22 @@ All technical, product, and agent documentation files are standardized and centr
 
 ---
 
-## 🛠️ 3. Technology Stack & Design System
+## 🛠️ 3. Technology Stack & Open Standards
 
-- **UI Framework**: HTML5, Vanilla JavaScript (ES6+), **Bootstrap 5.3**.
-- **Typography Standard**:
-  - Headings & Brand Titles: **`Arial Black`** (`'Arial Black'`, sans-serif).
-  - Body Copy & Lead Text: **`Montserrat`** (Google Font `Montserrat:wght@300..900`).
-  - Technical Badges & RefCodes: **`JetBrains Mono`** (`'JetBrains Mono'`, monospace).
-- **Icons & Diagrams**: FontAwesome 6, Mermaid.js.
-- **Zero CORS Policy**: All 5 pages (`index.html`, `browser.html`, `examples.html`, `architecture.html`, `impressum.html`) run without CORS issues on HTTP servers and directly via local `file://` protocol execution.
+Rather than reinventing proprietary wheels, this project is built 100% on established international industrial open standards and browser-native web primitives:
+
+- **Industrial & 3D Open Standards**:
+  - **Asset Administration Shell (AAS / IEC 63278)**: International standard for industrial Digital Twins & Digital Product Passports.
+  - **OPC UA (IEC 62541)** & **MQTT Sparkplug B**: Universal open OT communication standards.
+  - **OpenUSD (Pixar/NVIDIA AOUSD)** & **glTF 2.0 (Khronos Group)**: Open 3D geometry exchange standards.
+  - **STEP AP242 (ISO 10303)** & **JT (ISO 14306)**: Mechanical CAD exchange standards.
+  - **Eclipse Dataspace Connector (EDC)**: Sovereign data space connector standard (Catena-X / Manufacturing-X).
+- **Browser-Native Web Primitives**:
+  - **UI & Grid**: HTML5, Vanilla JavaScript (ES6+), **Bootstrap 5.3**.
+  - **Immersive Spatial Web**: **WebXR Device API** (W3C standard for browser-native 3D/AR/VR without plugins).
+  - **Diagramming & Icons**: Mermaid.js, FontAwesome 6.
+  - **Typography Standard**: `Arial Black` (Headings), `Montserrat` (Body), `JetBrains Mono` (RefCodes).
+- **Zero-CORS Data Pipeline**: 100% JSON-driven single source of truth (`profiles/*.json` & `usecases/*/usecase.json`) with zero external database dependencies and instant `file://` local execution.
 
 ---
 
@@ -46,14 +53,16 @@ All technical, product, and agent documentation files are standardized and centr
 The application is **100% JSON-driven** without external database overhead:
 
 ```
-profiles/*.json     <- Canonical JSON profile specifications
-usecases/*.json     <- Canonical Baukasten Use Case specifications (6 JSON files)
+profiles/*.json               <- Canonical JSON profile specifications (91 profiles)
+usecases/[slug]/usecase.json  <- Canonical Baukasten Use Case specifications & media assets
        │
-       ▼ [Run node scripts/generate_profiles.js]
+       ▼ [Run node scripts/generate_profiles.js or npm run build]
 data/
-   ├── index.json   <- Compiled JSON index manifest for GitHub Pages fetch()
-   └── index_data.js <- Static window wrapper (window.INDEX_DATA & window.PROFILES_DATA)
-                        for zero-CORS local file:// protocol execution
+   ├── index.json             <- Compiled JSON index manifest for HTTP fetch()
+   └── index_data.js          <- Static window wrapper (window.INDEX_DATA & window.PROFILES_DATA)
+usecases/
+   ├── index.html             <- Auto-generated Use Cases hub page
+   └── [slug]/index.html      <- Auto-generated standalone HTML page per Use Case
 ```
 
 ---
@@ -83,16 +92,19 @@ Then open `http://localhost:8080` in your web browser.
 
 ```
 ├── index.html               # Full-Canvas Greeter Landing Page
+├── guide.html               # Orientierung & Praxis Leitfaden
 ├── browser.html             # Interactive Taxonomy Browser (Grid & List View)
-├── examples.html            # Baukasten Use Cases Browser & Flow Diagrams
 ├── architecture.html        # 5-Layer Left-to-Right System Architecture Specification
 ├── impressum.html           # ARENA2036 Legal Impressum & Disclaimers
 ├── index.css                # Minimal Design System & ARENA2036 Orange Accents
 ├── app.js                   # Pure JSON Client Engine & Full-Canvas Modal Inspector
 ├── profiles/*.json          # 91 Canonical Technology JSON Specifications
-├── usecases/*.json          # 6 Canonical Baukasten Use Case JSON Specifications
+├── usecases/                # Self-Contained Use Case Directories & Generated Pages
+│   ├── index.html           # Auto-generated Use Cases Hub Page
+│   └── [slug]/              # Per-Use-Case Folder (usecase.json, index.html, assets/)
 ├── scripts/
-│   └── generate_profiles.js # Node Data Pipeline Indexer
+│   ├── generate_profiles.js     # Node Data Pipeline Indexer & SSG Trigger
+│   └── generate_usecase_pages.js # Static HTML SSG Generator for Use Case Pages
 ├── docs/
 │   ├── ARCHITECTURE.md      # 5-Layer Stack Technical Specs (Left-to-Right Flow)
 │   ├── USECASES.md          # Use Case Model & PR Contribution Guide
