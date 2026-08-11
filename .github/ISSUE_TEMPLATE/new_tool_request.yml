@@ -1,0 +1,70 @@
+name: "New Technology / Tool Addition Request"
+description: "Submit a new Industrial Metaverse technology, standard, or tool profile for inclusion in the taxonomy."
+title: "[Tool Request]: "
+labels: ["tool-request", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for submitting a new technology entry to the **Industrial Metaverse Technology Taxonomy** (`IMV-taxonomie`)!
+        Please fill out the form below. Once reviewed, a profile JSON will be generated in `profiles/`.
+
+  - type: input
+    id: name
+    attributes:
+      label: "Tool / Technology Name"
+      placeholder: "e.g., Siemens Industrial Operations X"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: "Tech-Stack Layer & Category Code"
+      options:
+        - "1.1 Mechanisches CAD (MCAD)"
+        - "1.7 OT Telemetry & Sensors"
+        - "2.4 OpenUSD & 3D Geometry Processing"
+        - "3.1 Verwaltungsschale (Asset Administration Shell AAS)"
+        - "3.2 Sovereign Dataspaces (EDC)"
+        - "4.1 Multiphysik & CAE Simulation"
+        - "4.2 Virtuelle Inbetriebnahme (VIBn)"
+        - "5.1 Realtime Rendering Engines"
+        - "5.2 Spatial XR & VR/AR Headsets"
+    validations:
+      required: true
+
+  - type: input
+    id: vendor
+    attributes:
+      label: "Vendor / Company / Open Source Project"
+      placeholder: "e.g., NVIDIA Corporation"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tier
+    attributes:
+      label: "Investment Tier"
+      options:
+        - "Tier 1 (≤ €30k / Open Source & Starter)"
+        - "Tier 2 (≤ €100k / Skalierbar & Modular)"
+        - "Tier 3 (> €100k / Enterprise OEM)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: overview
+    attributes:
+      label: "Overview & Industrial Purpose (German)"
+      placeholder: "Brief German summary of the technology and its role in the Industrial Metaverse..."
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: "Official Documentation / Product URL"
+      placeholder: "https://example.com"
+    validations:
+      required: true

@@ -1,7 +1,8 @@
 # Industrial Metaverse Technology Taxonomy (`IMV-taxonomie`)
 
 > **Enterprise Research Taxonomy & Interactive Web Engine**  
-> Activity of the **Reallabor 2.0** project at the **ARENA2036 Research Campus**, funded by the **Ministry of Economic Affairs, Labour and Tourism Baden-Württemberg**.
+> Activity of the **Reallabor 2.0** project at the **ARENA2036 Research Campus**, funded by the **Ministry of Economic Affairs, Labour and Tourism Baden-Württemberg**.  
+> **🌐 Live Interactive Browser**: [https://arena2036.github.io/IMV-taxonomie/](https://arena2036.github.io/IMV-taxonomie/)
 
 ---
 
@@ -15,15 +16,18 @@ This repository contains the open research taxonomy, interactive web browser, an
 
 ---
 
-## 📚 2. Centralized Documentation Index
+## 📚 2. Centralized Documentation & Governance Index
 
-All technical, product, and agent documentation files are standardized and centralized:
+All technical, product, governance, and agent documentation files are standardized and centralized:
 
 | Document | Description / Purpose | Location |
 | :--- | :--- | :--- |
 | **System Architecture** | 5-Layer Stack Technical Specs (Left-to-Right Flow & 1:1 Decimal Codes) | [`docs/ARCHITECTURE.md`](file:///Users/michael/dev/IMV_Taxo/docs/ARCHITECTURE.md) |
 | **Baukasten Use Cases** | Multi-Stage Workflow Model & PR Contribution Guide | [`docs/USECASES.md`](file:///Users/michael/dev/IMV_Taxo/docs/USECASES.md) |
 | **Product Requirements** | PRD Specifications, Target Personas & Cost Tier Models | [`docs/PRD.md`](file:///Users/michael/dev/IMV_Taxo/docs/PRD.md) |
+| **Contribution Guide** | Guidelines for adding new tools, PR workflow & Tier justification | [`CONTRIBUTING.md`](file:///Users/michael/dev/IMV_Taxo/CONTRIBUTING.md) |
+| **Open Source License** | Dual MIT (Code) & CC-BY-4.0 (Taxonomy Data) | [`LICENSE`](file:///Users/michael/dev/IMV_Taxo/LICENSE) |
+| **JSON Schema Standard** | Canonical 19-field validation schema for profile JSONs | [`.github/schema/tool-taxonomy.schema.json`](file:///Users/michael/dev/IMV_Taxo/.github/schema/tool-taxonomy.schema.json) |
 | **AI Agent Guidelines** | LLM Developer Instructions, Prompt Rules & Schema Specifications | [`.agents/AGENTS.md`](file:///Users/michael/dev/IMV_Taxo/.agents/AGENTS.md) |
 | **Audit & Changelog** | Itemized Quality Audit Report & Deliverables Log | [`AUDIT_LOG.md`](file:///Users/michael/dev/IMV_Taxo/AUDIT_LOG.md) |
 

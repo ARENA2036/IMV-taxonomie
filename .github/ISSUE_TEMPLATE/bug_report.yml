@@ -1,0 +1,33 @@
+name: "Bug / Data Defect Report"
+description: "Report a bug, inaccurate technology specification, or broken link in the browser."
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve the **Industrial Metaverse Technology Taxonomy**!
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Bug Description"
+      placeholder: "Describe the bug, broken layout, or inaccurate profile specification..."
+    validations:
+      required: true
+
+  - type: input
+    id: page
+    attributes:
+      label: "Affected Page or Profile RefCode"
+      placeholder: "e.g., usecases/uc-01-shopfloor-incident-management/ or IND-META-2026-NVIDIA-OMNIVERSE"
+    validations:
+      required: false
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps to Reproduce"
+      placeholder: "1. Go to browser.html\n2. Click on...\n3. See error..."
+    validations:
+      required: false

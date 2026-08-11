@@ -1,0 +1,152 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Industrial Metaverse Technology Profile Schema",
+  "description": "Canonical 19-field schema standard for Industrial Metaverse technology profiles in profiles/*.json",
+  "type": "object",
+  "required": [
+    "refCode",
+    "categoryCode",
+    "categoryName",
+    "name",
+    "subtitle",
+    "vendor",
+    "hq",
+    "businessModel",
+    "url",
+    "tier",
+    "costLabel",
+    "status",
+    "overview",
+    "features",
+    "inputs",
+    "outputs",
+    "bridges",
+    "evaluations",
+    "compliance",
+    "deployment",
+    "staffing"
+  ],
+  "properties": {
+    "refCode": {
+      "type": "string",
+      "pattern": "^IND-META-2026-[A-Z0-9-]+$",
+      "description": "Unique reference code identifier"
+    },
+    "categoryCode": {
+      "type": "string",
+      "pattern": "^[1-5]\\.[1-8]$",
+      "description": "Decimal category code (1.1 to 5.2)"
+    },
+    "categoryName": {
+      "type": "string",
+      "description": "German category title"
+    },
+    "name": {
+      "type": "string",
+      "description": "Product / technology name"
+    },
+    "subtitle": {
+      "type": "string",
+      "description": "Short German descriptive subtitle"
+    },
+    "vendor": {
+      "type": "string",
+      "description": "Vendor / company / organization name"
+    },
+    "hq": {
+      "type": "string",
+      "description": "Country or location of headquarters"
+    },
+    "businessModel": {
+      "type": "string",
+      "description": "Commercial, subscription, or open source model"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Official product web URL"
+    },
+    "tier": {
+      "type": "string",
+      "enum": ["Tier 1", "Tier 2", "Tier 3"],
+      "description": "Investment tier (Tier 1: <= €30k, Tier 2: <= €100k, Tier 3: > €100k)"
+    },
+    "costLabel": {
+      "type": "string",
+      "description": "Financial cost label indicator"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "INDEXIERT",
+        "GEPRÜFT",
+        "USE CASE IMPLEMENTIERT",
+        "EXTERN VALIDIERT",
+        "COMMUNITY BEITRAG"
+      ],
+      "description": "Community verification lifecycle status"
+    },
+    "overview": {
+      "type": "string",
+      "description": "Detailed German overview text"
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["title", "desc"],
+        "properties": {
+          "title": { "type": "string" },
+          "desc": { "type": "string" }
+        }
+      }
+    },
+    "inputs": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "outputs": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "bridges": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "evaluations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["title", "text"],
+        "properties": {
+          "title": { "type": "string" },
+          "text": { "type": "string" }
+        }
+      }
+    },
+    "compliance": {
+      "type": "object",
+      "required": ["omniverse", "sovereignty", "openStandard"],
+      "properties": {
+        "omniverse": { "type": "string" },
+        "sovereignty": { "type": "string" },
+        "openStandard": { "type": "string" }
+      }
+    },
+    "deployment": {
+      "type": "object",
+      "required": ["effort", "mode", "maturity", "area"],
+      "properties": {
+        "effort": { "type": "string" },
+        "mode": { "type": "string" },
+        "maturity": { "type": "string" },
+        "area": { "type": "string" }
+      }
+    },
+    "staffing": {
+      "type": "string",
+      "description": "Required engineering FTE staffing"
+    }
+  },
+  "additionalProperties": false
+}

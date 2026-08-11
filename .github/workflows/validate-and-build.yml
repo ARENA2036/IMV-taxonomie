@@ -1,0 +1,40 @@
+name: Validate JSON Schemas & Build Static Deliverables
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+jobs:
+  validate-and-build:
+    name: Lint Schemas, Test & Build Static Site
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Validate Syntax of All JS Files
+        run: |
+          node -c app.js
+          node -c scripts/generate_profiles.js
+          node -c scripts/generate_usecase_pages.js
+
+      - name: Compile & Validate 91 JSON Profiles and 6 Use Cases
+        run: |
+          node scripts/generate_profiles.js
+
+      - name: Check Git Working Directory Cleanliness
+        run: |
+          git diff --exit-code || (echo "Error: Uncompiled deliverables found. Please run 'npm test' locally before committing." && exit 1)
