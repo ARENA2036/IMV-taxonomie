@@ -3,9 +3,10 @@
  * ARENA2036 Reallabor 2.0 Project
  * 
  * Scans canonical profile JSON files from profiles/ and usecase JSON files from usecases/.
- * Compiles and outputs:
+ * Validates schemas against the canonical 19-field specification standard and compiles:
  * 1. data/index.json  (JSON manifest for HTTP fetch requests)
  * 2. data/index_data.js (Window wrapper for zero-CORS file:// protocol execution)
+ * 3. usecases/index.html & usecases/[slug]/index.html (Static Use Case pages)
  * 
  * @module generate_profiles
  */
@@ -24,10 +25,11 @@ const dataDir = path.join(rootDir, 'data');
 
 /**
  * Canonical 21 technology category taxonomy across the 5 ARENA2036 layers.
+ * Strictly aligned with the standardized 5-Layer Stack Titles.
  * @type {Array<{code: string, name: string, desc: string, layer: string}>}
  */
 const CATEGORIES = [
-  // Layer 1: Erfassung & OT-Datenerfassung
+  // Layer 1: Erfassung & Sensorik
   { code: '1.1', name: 'Mobile & Wearable SLAM-Scanner', desc: 'Tragbare Mobile-Mapping-Systeme mit Echtzeit-SLAM.', layer: '1' },
   { code: '1.2', name: 'Terrestrisches Laserscanning (TLS)', desc: 'Hochpräzise stationäre 3D-Laserscanner.', layer: '1' },
   { code: '1.3', name: 'Autonome Drohnen & AMR-Roboter', desc: 'Autonome Erfassung per Drohnen und Roboterplattformen.', layer: '1' },
@@ -37,24 +39,24 @@ const CATEGORIES = [
   { code: '1.7', name: 'OT & Sensorik-Feldbusse', desc: 'Operative Feldbus-Systeme und SPS-Kommunikation.', layer: '1' },
   { code: '1.8', name: 'Industrial IoT-Protokolle', desc: 'Nachrichtenprotokolle für industrielle IoT-Netzwerke.', layer: '1' },
 
-  // Layer 2: Geometrie & CAD-Pre-Processing
+  // Layer 2: Geometrie & CAD/BIM
   { code: '2.1', name: 'Mechanisches CAD (MCAD)', desc: 'Parametrische 3D-CAD-Systeme für den Maschinen- und Fahrzeugbau.', layer: '2' },
   { code: '2.2', name: 'BIM, Bauwesen & Infrastruktur (AEC)', desc: 'Bauwerksdatenmodellierung für Fabrik- und Gebäudestrukturen.', layer: '2' },
   { code: '2.3', name: 'DCC & Generatives 3D-Design', desc: 'Digital Content Creation und prozedurale 3D-Modellierung.', layer: '2' },
   { code: '2.4', name: 'Datenformate & OpenUSD-Standards', desc: 'Offene Datenformate und Szenen-Spezifikationen.', layer: '2' },
 
-  // Layer 3: Semantische Middleware & Datenräume
+  // Layer 3: Middleware & Integration
   { code: '3.1', name: 'Verwaltungsschale & Zwillings-Standards', desc: 'Asset Administration Shell (AAS) und Interoperabilitäts-Standards.', layer: '3' },
   { code: '3.2', name: 'KI-Datenmotoren & Pipeline-Bridges', desc: 'KI-Trainings-Pipelines und Datenbrücken.', layer: '3' },
   { code: '3.3', name: 'Enterprise Cloud-Zwillinge', desc: 'Skalierbare Cloud-Plattformen für digitale Zwillinge.', layer: '3' },
 
-  // Layer 4: Simulation & Virtuelle Inbetriebnahme
+  // Layer 4: Simulation & Verhalten
   { code: '4.1', name: 'CAE & Multiphysik-Simulation', desc: 'Numerische Berechnungen, FEM und Strömungsmechanik.', layer: '4' },
   { code: '4.2', name: 'Echtzeit Physik-Engines', desc: 'Physikalische Echtzeitsimulation für Kollision und Dynamik.', layer: '4' },
   { code: '4.3', name: 'Umwelt- & Strömungssimulation', desc: 'Klima-, Lüftungs- und Umweltbedingungssimulation.', layer: '4' },
   { code: '4.4', name: 'Robotik & Fabriksimulation', desc: 'Kinematik-, Roboter- und Materialfluss-Simulation.', layer: '4' },
 
-  // Layer 5: Räumliche Immersion & Rendering
+  // Layer 5: Immersion & Interaktion
   { code: '5.1', name: 'Echtzeit-3D & Spatial Engines', desc: 'Echtzeit-Rendering und 3D-Visualisierungs-Engines.', layer: '5' },
   { code: '5.2', name: 'Spatial XR & VR/AR Headsets', desc: 'Immersive Headsets und Spatial-Computing-Hardware.', layer: '5' }
 ];
@@ -64,18 +66,53 @@ CATEGORIES.sort((a, b) => a.code.localeCompare(b.code, undefined, { numeric: tru
 if (!fs.existsSync(profilesDir)) fs.mkdirSync(profilesDir, { recursive: true });
 if (!fs.existsSync(usecasesDir)) fs.mkdirSync(usecasesDir, { recursive: true });
 
-console.log('Scanne und indiziere kanonische JSON-Profil-Dateien im Ordner profiles/ und usecases/...');
+console.log('Scanne und validiere kanonische JSON-Profil-Dateien in profiles/ und usecases/...');
+
+const REQUIRED_PROFILE_FIELDS = [
+  'refCode', 'categoryCode', 'categoryName', 'name', 'subtitle',
+  'vendor', 'hq', 'businessModel', 'url', 'tier', 'costLabel',
+  'status', 'overview', 'features', 'inputs', 'outputs', 'bridges',
+  'evaluations', 'compliance', 'deployment', 'staffing'
+];
+
+const VALID_TIERS = new Set(['Tier 1', 'Tier 2', 'Tier 3']);
+const VALID_STATUSES = new Set([
+  'INDEXIERT',
+  'GEPRÜFT',
+  'USE CASE IMPLEMENTIERT',
+  'EXTERN VALIDIERT',
+  'COMMUNITY BEITRAG'
+]);
 
 const files = fs.readdirSync(profilesDir).filter(f => f.endsWith('.json'));
 
 const items = [];
 const profilesMap = {};
+let validationErrors = 0;
 
 files.forEach(file => {
   const filePath = path.join(profilesDir, file);
   try {
     const raw = fs.readFileSync(filePath, 'utf-8');
     const profile = JSON.parse(raw);
+
+    // Schema Validation Check
+    REQUIRED_PROFILE_FIELDS.forEach(field => {
+      if (profile[field] === undefined) {
+        console.error(`[SCHEMA ERROR] ${file}: Fehlendes Pflichtfeld '${field}'`);
+        validationErrors++;
+      }
+    });
+
+    if (profile.tier && !VALID_TIERS.has(profile.tier)) {
+      console.error(`[SCHEMA ERROR] ${file}: Ungültiger Tier-Wert '${profile.tier}'`);
+      validationErrors++;
+    }
+
+    if (profile.status && !VALID_STATUSES.has(profile.status)) {
+      console.error(`[SCHEMA ERROR] ${file}: Ungültiger Status-Wert '${profile.status}'`);
+      validationErrors++;
+    }
 
     if (profile.refCode) {
       items.push({
@@ -99,9 +136,15 @@ files.forEach(file => {
       profilesMap[profile.refCode] = profile;
     }
   } catch (err) {
-    console.error(`Fehler beim Lesen von Profile ${file}:`, err.message);
+    console.error(`[PARSE ERROR] Fehler beim Lesen von Profile ${file}:`, err.message);
+    validationErrors++;
   }
 });
+
+if (validationErrors > 0) {
+  console.error(`❌ Build abgebrochen: ${validationErrors} Schema-Fehler in profiles/ gefunden.`);
+  process.exit(1);
+}
 
 items.sort((a, b) => a.categoryCode.localeCompare(b.categoryCode, undefined, { numeric: true }) || a.name.localeCompare(b.name));
 
@@ -114,7 +157,6 @@ if (fs.existsSync(usecasesDir)) {
     let jsonPath = null;
 
     if (entry.isDirectory()) {
-      // Look for usecase.json or any *.json inside the directory
       const dirPath = path.join(usecasesDir, entry.name);
       const subFiles = fs.readdirSync(dirPath).filter(f => f.endsWith('.json'));
       if (subFiles.includes('usecase.json')) {
@@ -159,7 +201,7 @@ const jsPath = path.join(dataDir, 'index_data.js');
 const jsContent = `/** Auto-generated static dataset for zero-CORS local execution */\nwindow.INDEX_DATA = ${JSON.stringify(indexData, null, 2)};\nwindow.PROFILES_DATA = ${JSON.stringify(profilesMap, null, 2)};\n`;
 fs.writeFileSync(jsPath, jsContent, 'utf-8');
 
-console.log(`Erfolgreich ${items.length} JSON-Profile und ${usecases.length} Use Cases indiziert und 'data/index.json' sowie 'data/index_data.js' generiert.`);
+console.log(`Erfolgreich ${items.length} JSON-Profile (100% schema-validiert) und ${usecases.length} Use Cases indiziert.`);
 
 // Build individual static HTML pages for each Use Case and the hub index page
-buildUseCasePages(usecases);
+buildUseCasePages(usecases, profilesMap);

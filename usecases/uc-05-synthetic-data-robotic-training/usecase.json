@@ -56,35 +56,51 @@
       "layerTitle": "Schicht 1: Erfassung & Sensorik",
       "refCode": "IND-META-2026-YOLO26-EDGE",
       "nodeName": "Depth Camera / Edge Vision",
-      "role": "Sensordatenerfassung am Roboterarm"
+      "role": "Optische 3D-Sensorik & KI-Greifraum-Erfassung am Roboterarm",
+      "linkAnnotation": {
+        "protocol": "CAD-zu-SimReady OpenUSD Konvertierung",
+        "description": "Überführung der Werkstück-CAD-Modelle in physikfähige OpenUSD-Dateien mit Reibungs-, Schwerpunkt- und Materialparametern."
+      }
     },
     {
       "layer": "2",
       "layerTitle": "Schicht 2: Geometrie & CAD/BIM",
       "refCode": "IND-META-2026-OPENUSD",
       "nodeName": "OpenUSD / SimReady Assets",
-      "role": "Physikalisch annotierte 3D-Geometrien"
+      "role": "Physikalisch basierte 3D-Geometrien & Kinematik-Modelle",
+      "linkAnnotation": {
+        "protocol": "USD Stage Composition & LeRobot Pipeline",
+        "description": "Zusammenführung von Roboter, Greifer und Werkstücken in eine koordinierte NVIDIA Omniverse Simulations-Bühne."
+      }
     },
     {
       "layer": "3",
       "layerTitle": "Schicht 3: Middleware & Integration",
       "refCode": "IND-META-2026-HUGGINGFACE-LEROBOT",
       "nodeName": "HuggingFace LeRobot / ROS2",
-      "role": "KI-Pipeline & Telemetrie-Brücke"
+      "role": "KI-Trainings-Pipeline, Datensatz-Kuratierung & Telemetrie-Brücke",
+      "linkAnnotation": {
+        "protocol": "Domain Randomization & PhysX-Simulation",
+        "description": "Automatische Generierung von zehntausenden synthetischen Sensorbildern mit variierender Beleuchtung, Posen und Hintergründen."
+      }
     },
     {
       "layer": "4",
       "layerTitle": "Schicht 4: Simulation & Verhalten",
       "refCode": "IND-META-2026-NVIDIA-ISAAC",
       "nodeName": "NVIDIA Isaac Sim / PhysX",
-      "role": "Synthetische Data Generation (SDG)"
+      "role": "Synthetische Datengenerierung (SDG) & Physik-Validierung",
+      "linkAnnotation": {
+        "protocol": "RTX Sensor-Simulation & Ground-Truth Export",
+        "description": "Fotorealistisches Raytracing zur Erzeugung pixelgenauer Bounding-Boxes, Segmentierungsmasken und Tiefenkarten."
+      }
     },
     {
       "layer": "5",
       "layerTitle": "Schicht 5: Immersion & Interaktion",
       "refCode": "IND-META-2026-NVIDIA-OMNIVERSE",
       "nodeName": "Omniverse RTX Renderer",
-      "role": "Fotorealistisches Raytracing für Sensor-KI"
+      "role": "Fotorealistische Raytracing-Visualisierung & KI-Trainings-Monitoring"
     }
   ]
 }

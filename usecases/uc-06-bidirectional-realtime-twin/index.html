@@ -48,27 +48,24 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm px-3 flex-shrink-0">
     <div class="container-fluid d-flex align-items-center justify-content-between">
       
-      <div class="d-flex align-items-center" style="min-width: 180px;">
+      <!-- Brand Logo -->
+      <div class="d-flex align-items-center">
         <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="../../index.html">
           <img src="../../assets/Metaverse Logo bunt.svg" alt="Industrial Metaverse Logo" class="logo-img" title="Industrial Metaverse">
-          <div class="logo-divider"></div>
-          <img src="../../assets/BaWue_WM_Absenderlogo_rgb_pos_Gefoerdert.svg" alt="Gefördert durch Baden-Württemberg" class="logo-img" title="Ministerium BW">
         </a>
       </div>
 
+      <!-- Center Title -->
       <div class="text-center flex-grow-1 px-2">
         <span class="fw-black text-dark fs-6 d-none d-md-inline-block text-truncate" style="max-width: 90%;">
           Use Case: Bi-direktionaler Echtzeit-Digitaler-Zwilling einer Produktionslinie
         </span>
       </div>
 
-      <div class="d-flex align-items-center justify-content-end gap-2" style="min-width: 180px;">
-        <a href="../index.html" class="btn btn-outline-secondary btn-sm">
-          <i class="fa-solid fa-arrow-left me-1"></i> Use Cases Hub
-        </a>
-
+      <!-- Hamburger Menu -->
+      <div class="d-flex align-items-center justify-content-end">
         <div class="dropdown">
-          <button class="btn btn-light btn-sm border dropdown-toggle" id="hamburgerBtn" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Menü">
+          <button class="btn btn-light btn-sm border" id="hamburgerBtn" type="button" aria-expanded="false" title="Menü">
             <i class="fa-solid fa-bars"></i>
           </button>
           <ul class="dropdown-menu dropdown-menu-end shadow-sm">
@@ -82,26 +79,28 @@
           </ul>
         </div>
       </div>
+
     </div>
   </nav>
 
-  <!-- Main Block-Based Container -->
-  <main class="container app-page-container py-4 flex-grow-1">
+  <!-- Main Content Container -->
+  <main class="container py-4 flex-grow-1" style="max-width: 1300px;">
     
-    <!-- BLOCK 1: Hero Header Block -->
-    <header class="card border-0 shadow-sm p-4 p-md-5 mb-4 bg-white">
+    <!-- BLOCK 1: Hero & Strategic Header Block -->
+    <header class="app-hero-card mb-4">
       <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
         <div class="d-flex align-items-center gap-2">
-          <span class="badge bg-primary text-white font-monospace px-2 py-1">UC-06-BIDIRECTIONAL-REALTIME-TWIN</span>
-          <span class="badge bg-light text-dark border font-monospace px-2 py-1">Tier 3 (&gt; €100k / Enterprise OEM)</span>
+          <span class="badge bg-primary text-white font-monospace fs-6 px-3 py-1">UC-06-BIDIRECTIONAL-REALTIME-TWIN</span>
+          <span class="badge bg-light text-dark border font-monospace fs-6 px-3 py-1">Tier 3 (&gt; €100k / Enterprise OEM)</span>
         </div>
-        <span class="small text-muted font-monospace"><i class="fa-solid fa-clock me-1"></i>1–3 Monate Enterprise-Implementierung</span>
+        <a href="../index.html" class="btn btn-outline-secondary btn-sm">
+          <i class="fa-solid fa-arrow-left me-1"></i> Zurück zum Use Cases Hub
+        </a>
       </div>
 
       <h1 class="h3 fw-black text-dark mb-2">Bi-direktionaler Echtzeit-Digitaler-Zwilling einer Produktionslinie</h1>
-      <h2 class="h6 fw-bold text-primary mb-3">Kopplung von SPS-Steuerung, AAS &amp; 3D-Virtualisierung</h2>
-      
-      <p class="text-secondary lead fs-6 m-0">Wie umsetzen? Vollständige Kopplung realer Produktionsstraßen mit digitalen 3D-Zwillingsmodellen in ISG-virtuos oder Siemens Tecnomatix via PROFINET / OPC UA. Steuerungsbefehle wirken bi-direktional in Beide Richtungen.</p>
+      <p class="lead text-primary fw-bold fs-6 mb-3">Kopplung von SPS-Steuerung, AAS &amp; 3D-Virtualisierung</p>
+      <p class="text-secondary m-0">Wie umsetzen? Vollständige Kopplung realer Produktionsstraßen mit digitalen 3D-Zwillingsmodellen in ISG-virtuos oder Siemens Tecnomatix via PROFINET / OPC UA. Steuerungsbefehle wirken bi-direktional in Beide Richtungen.</p>
     </header>
 
     
@@ -137,200 +136,346 @@
     </section>
   
     
-    <!-- BLOCK 5: Technical Specifications & 5-Layer Vertical Dual-Column Stack Block -->
-    <section class="card border-0 shadow-sm p-4 mb-4 bg-white">
-      <h2 class="h6 fw-bold text-dark mb-2">
-        <i class="fa-solid fa-layer-group text-primary me-2"></i>4. Vertikaler 5-Schichten Architekturbauplan
-      </h2>
-      <p class="text-muted small mb-4">
-        Parallele Übersicht der eingesetzten Werkzeuge (links) und ihrer konkreten Funktion auf der jeweiligen Ebene (rechts). Klicken Sie auf <strong>"Details anzeigen →"</strong>, um den vollständigen Technologie-Inspector im Browser zu öffnen:
-      </p>
+    <!-- BLOCK 3: Horizontal 5-Layer Architecture Flow Carousel -->
+    <section class="card border-0 shadow-sm p-4 mb-4 bg-white" id="useCaseArchitectureSection">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+        <div>
+          <h2 class="h6 fw-bold text-dark m-0">
+            <i class="fa-solid fa-diagram-project text-primary me-2"></i>2. 5-Schichten Architektur-Ablauf &amp; Integration
+          </h2>
+          <p class="text-muted small m-0 mt-1">
+            Strukturierter Daten- und Komponentenfluss von der Erfassung &amp; Sensorik (links) bis zur Immersion (rechts). In jeder Schicht sind die konkrete Rolle (oben) und die eingesetzte Technologie-Komponente (unten) zugeordnet.
+          </p>
+        </div>
+        
+        <div class="usecase-carousel-toolbar">
+          <div class="usecase-carousel-nav" id="usecaseCarouselNav">
+            <button type="button" class="btn btn-outline-secondary btn-sm" id="btnCarouselPrev" title="Vorherige Schicht">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="d-flex align-items-center gap-1" id="carouselLayerPills">
+              
+                <button type="button" class="usecase-layer-pill active" data-layer="1" data-index="0" title="Schicht 1: Erfassung &amp; Sensorik">
+                  S1
+                </button>
+              
+                <button type="button" class="usecase-layer-pill " data-layer="2" data-index="1" title="Schicht 2: Geometrie &amp; CAD/BIM">
+                  S2
+                </button>
+              
+                <button type="button" class="usecase-layer-pill " data-layer="3" data-index="2" title="Schicht 3: Middleware &amp; Integration">
+                  S3
+                </button>
+              
+                <button type="button" class="usecase-layer-pill " data-layer="4" data-index="3" title="Schicht 4: Simulation &amp; Verhalten">
+                  S4
+                </button>
+              
+                <button type="button" class="usecase-layer-pill " data-layer="5" data-index="4" title="Schicht 5: Immersion &amp; Interaktion">
+                  S5
+                </button>
+              
+            </div>
+            <button type="button" class="btn btn-outline-secondary btn-sm" id="btnCarouselNext" title="Nächste Schicht">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+
+          <button type="button" class="btn btn-outline-secondary btn-sm btn-carousel-control is-playing" id="btnCarouselPlayPause" title="Auto-Play pausieren / starten">
+            <i class="fa-solid fa-pause"></i> Auto-Play
+          </button>
+
+          <button type="button" class="btn btn-outline-secondary btn-sm btn-export-stack" data-uc-slug="uc-06-bidirectional-realtime-twin">
+            <i class="fa-solid fa-file-lines me-1"></i> Stack als Markdown kopieren
+          </button>
+        </div>
+      </div>
       
-      <div class="vertical-architecture-stack">
+      <div class="usecase-horizontal-flow has-active-focus" id="usecaseFlowContainer">
         
-    <div class="usecase-stack-row">
-      <div class="row g-3 align-items-center">
-        
-        <!-- Left Column: Tool/Product Name, RefCode & Detail Inspector Trigger -->
-        <div class="col-md-5">
-          <div class="d-flex align-items-center gap-2 mb-2">
-            <span class="badge bg-primary text-white font-monospace px-2 py-1">SCHICHT 1</span>
-            <span class="fw-bold text-muted uppercase font-monospace small">Schicht 1: Erfassung &amp; Sensorik</span>
-          </div>
+      <div class="graph-col-stage is-active-layer" data-layer="1" data-index="0" style="border-top: 3px solid var(--color-layer-1);">
+        <div class="graph-col-header">
+          <span class="graph-col-badge" style="background-color: var(--color-layer-1);">
+            SCHICHT 1
+          </span>
+          <span class="graph-col-title" title="Schicht 1: Erfassung &amp; Sensorik">
+            Erfassung &amp; Sensorik
+          </span>
+        </div>
 
-          <h3 class="h6 fw-black text-dark mb-2">PROFINET TSN / Siemens PLC</h3>
-
-          <div class="d-flex align-items-center gap-2 flex-wrap">
-            
-              <span class="badge bg-light text-dark border font-monospace">IND-META-2026-PROFINET-TSN</span>
-              <button type="button" class="btn btn-outline-primary btn-sm py-1 px-2 btn-inspect" data-ref="IND-META-2026-PROFINET-TSN" onclick="if(window.appOpenProfileModal){window.appOpenProfileModal('IND-META-2026-PROFINET-TSN');}">
-                <i class="fa-solid fa-eye me-1"></i> Details anzeigen →
-              </button>
-            
+        <div class="graph-col-role">
+          <div>
+            <div class="graph-col-role-label">
+              <i class="fa-solid fa-crosshairs me-1"></i> Rolle &amp; Systemaufgabe:
+            </div>
+            <div>Operative SPS-Echtzeit-Steuerung &amp; deterministische Sensor-Aktor-Signale</div>
           </div>
         </div>
 
-        <!-- Right Column: Parallel Layer Function & Task Description -->
-        <div class="col-md-7">
-          <div class="usecase-stack-right">
-            <div class="usecase-stack-label"><i class="fa-solid fa-gear text-primary me-1"></i> Aufgabe &amp; Funktion auf Schicht 1:</div>
-            <p class="text-secondary small m-0 leading-relaxed">Operative SPS-Echtzeit-Steuerung</p>
+        <div class="graph-col-component">
+          
+      <div class="card-item" onclick="if(window.appOpenProfileModal){window.appOpenProfileModal('IND-META-2026-PROFINET-TSN');}" style="cursor: pointer;">
+        <div>
+          <div class="card-header-bar">
+            <span class="card-category">KAT 1.7: OT &amp; Sensorik-Feldbusse</span>
+            <span class="tier-badge tier-1">Tier 1</span>
+          </div>
+          <h3 class="card-title">PROFINET / TSN (Time-Sensitive Networking)</h3>
+          <div class="card-subtitle">Industrieller Echtzeit-Ethernet-Standard</div>
+          <p class="card-overview">Führender europäischer Echtzeit-Industrial-Ethernet-Standard. Garantiert in Kombination mit TSN deterministische Taktraten im Mikrosekundenbereich für die Fabrikautomatisierung.</p>
+          <div class="card-tags">
+            <span class="tag ">Ethernet Frames</span><span class="tag ">Sensorsignale</span>
+            <span class="tag tag-bridge ">Siemens S7 SPS</span><span class="tag tag-bridge ">ISG-Virtuos</span>
           </div>
         </div>
 
+        <div class="card-footer">
+          <div class="d-flex align-items-center gap-2">
+            <span class="card-vendor"><i class="fa-solid fa-building me-1 text-muted"></i> PI (PROFIBUS &amp; PROFINET International)</span>
+          </div>
+          <button type="button" class="btn btn-outline-primary btn-sm btn-inspect py-1 px-2" data-ref="IND-META-2026-PROFINET-TSN" style="font-size: 11px;">
+            Details →
+          </button>
+        </div>
       </div>
-    </div>
-  
-    <div class="usecase-stack-row">
-      <div class="row g-3 align-items-center">
-        
-        <!-- Left Column: Tool/Product Name, RefCode & Detail Inspector Trigger -->
-        <div class="col-md-5">
-          <div class="d-flex align-items-center gap-2 mb-2">
-            <span class="badge bg-primary text-white font-monospace px-2 py-1">SCHICHT 2</span>
-            <span class="fw-bold text-muted uppercase font-monospace small">Schicht 2: Geometrie &amp; CAD/BIM</span>
-          </div>
-
-          <h3 class="h6 fw-black text-dark mb-2">Siemens NX / JT ISO14306</h3>
-
-          <div class="d-flex align-items-center gap-2 flex-wrap">
-            
-              <span class="badge bg-light text-dark border font-monospace">IND-META-2026-SIEMENS-NX</span>
-              <button type="button" class="btn btn-outline-primary btn-sm py-1 px-2 btn-inspect" data-ref="IND-META-2026-SIEMENS-NX" onclick="if(window.appOpenProfileModal){window.appOpenProfileModal('IND-META-2026-SIEMENS-NX');}">
-                <i class="fa-solid fa-eye me-1"></i> Details anzeigen →
-              </button>
-            
-          </div>
+    
         </div>
-
-        <!-- Right Column: Parallel Layer Function & Task Description -->
-        <div class="col-md-7">
-          <div class="usecase-stack-right">
-            <div class="usecase-stack-label"><i class="fa-solid fa-gear text-primary me-1"></i> Aufgabe &amp; Funktion auf Schicht 2:</div>
-            <p class="text-secondary small m-0 leading-relaxed">Präzise Kinematik-Geometriedaten</p>
-          </div>
-        </div>
-
       </div>
-    </div>
-  
-    <div class="usecase-stack-row">
-      <div class="row g-3 align-items-center">
-        
-        <!-- Left Column: Tool/Product Name, RefCode & Detail Inspector Trigger -->
-        <div class="col-md-5">
-          <div class="d-flex align-items-center gap-2 mb-2">
-            <span class="badge bg-primary text-white font-monospace px-2 py-1">SCHICHT 3</span>
-            <span class="fw-bold text-muted uppercase font-monospace small">Schicht 3: Middleware &amp; Integration</span>
-          </div>
-
-          <h3 class="h6 fw-black text-dark mb-2">Eclipse BaSyx AAS / EDC</h3>
-
-          <div class="d-flex align-items-center gap-2 flex-wrap">
-            
-              <span class="badge bg-light text-dark border font-monospace">IND-META-2026-AAS-IEC63278</span>
-              <button type="button" class="btn btn-outline-primary btn-sm py-1 px-2 btn-inspect" data-ref="IND-META-2026-AAS-IEC63278" onclick="if(window.appOpenProfileModal){window.appOpenProfileModal('IND-META-2026-AAS-IEC63278');}">
-                <i class="fa-solid fa-eye me-1"></i> Details anzeigen →
-              </button>
-            
-          </div>
-        </div>
-
-        <!-- Right Column: Parallel Layer Function & Task Description -->
-        <div class="col-md-7">
-          <div class="usecase-stack-right">
-            <div class="usecase-stack-label"><i class="fa-solid fa-gear text-primary me-1"></i> Aufgabe &amp; Funktion auf Schicht 3:</div>
-            <p class="text-secondary small m-0 leading-relaxed">Bi-direktionaler Semantik- &amp; Datenraum</p>
-          </div>
-        </div>
-
+      
+      <div class="graph-flow-arrow" title="Datenfluss zu Schicht 2">
+        <i class="fa-solid fa-arrow-right"></i>
       </div>
-    </div>
-  
-    <div class="usecase-stack-row">
-      <div class="row g-3 align-items-center">
-        
-        <!-- Left Column: Tool/Product Name, RefCode & Detail Inspector Trigger -->
-        <div class="col-md-5">
-          <div class="d-flex align-items-center gap-2 mb-2">
-            <span class="badge bg-primary text-white font-monospace px-2 py-1">SCHICHT 4</span>
-            <span class="fw-bold text-muted uppercase font-monospace small">Schicht 4: Simulation &amp; Verhalten</span>
-          </div>
+    
+    
+      <div class="graph-col-stage " data-layer="2" data-index="1" style="border-top: 3px solid var(--color-layer-2);">
+        <div class="graph-col-header">
+          <span class="graph-col-badge" style="background-color: var(--color-layer-2);">
+            SCHICHT 2
+          </span>
+          <span class="graph-col-title" title="Schicht 2: Geometrie &amp; CAD/BIM">
+            Geometrie &amp; CAD/BIM
+          </span>
+        </div>
 
-          <h3 class="h6 fw-black text-dark mb-2">ISG-virtuos / Tecnomatix</h3>
-
-          <div class="d-flex align-items-center gap-2 flex-wrap">
-            
-              <span class="badge bg-light text-dark border font-monospace">IND-META-2026-ISG-VIRTUOS</span>
-              <button type="button" class="btn btn-outline-primary btn-sm py-1 px-2 btn-inspect" data-ref="IND-META-2026-ISG-VIRTUOS" onclick="if(window.appOpenProfileModal){window.appOpenProfileModal('IND-META-2026-ISG-VIRTUOS');}">
-                <i class="fa-solid fa-eye me-1"></i> Details anzeigen →
-              </button>
-            
+        <div class="graph-col-role">
+          <div>
+            <div class="graph-col-role-label">
+              <i class="fa-solid fa-crosshairs me-1"></i> Rolle &amp; Systemaufgabe:
+            </div>
+            <div>Präzise 3D-Baugruppengeometrie mit Gelenk- &amp; Kinematik-Definitionen</div>
           </div>
         </div>
 
-        <!-- Right Column: Parallel Layer Function & Task Description -->
-        <div class="col-md-7">
-          <div class="usecase-stack-right">
-            <div class="usecase-stack-label"><i class="fa-solid fa-gear text-primary me-1"></i> Aufgabe &amp; Funktion auf Schicht 4:</div>
-            <p class="text-secondary small m-0 leading-relaxed">Hardware-in-the-Loop VIBn Simulation</p>
+        <div class="graph-col-component">
+          
+      <div class="card-item" onclick="if(window.appOpenProfileModal){window.appOpenProfileModal('IND-META-2026-SIEMENS-NX');}" style="cursor: pointer;">
+        <div>
+          <div class="card-header-bar">
+            <span class="card-category">KAT 2.1: Mechanisches CAD (MCAD)</span>
+            <span class="tier-badge tier-3">Tier 3</span>
+          </div>
+          <h3 class="card-title">Siemens NX CAD</h3>
+          <div class="card-subtitle">High-End OEM MCAD &amp; OpenUSD Live-Kopplung</div>
+          <p class="card-overview">High-End MCAD-Plattform für hochkomplexe Baugruppen im Maschinen- und Fahrzeugbau. Dient als primärer Geometrie-Kernel für Automotive-, Luft- und Raumfahrt-OEMs mit nativer Live-Streaming-Anbindung an NVIDIA Omniverse.</p>
+          <div class="card-tags">
+            <span class="tag ">Parasolid (.x_t)</span><span class="tag tag-step">JT ISO 14306</span>
+            <span class="tag tag-bridge ">Siemens Teamcenter PLM</span><span class="tag tag-bridge ">NVIDIA Omniverse</span>
           </div>
         </div>
 
+        <div class="card-footer">
+          <div class="d-flex align-items-center gap-2">
+            <span class="card-vendor"><i class="fa-solid fa-building me-1 text-muted"></i> Siemens DISW</span>
+          </div>
+          <button type="button" class="btn btn-outline-primary btn-sm btn-inspect py-1 px-2" data-ref="IND-META-2026-SIEMENS-NX" style="font-size: 11px;">
+            Details →
+          </button>
+        </div>
       </div>
-    </div>
-  
-    <div class="usecase-stack-row">
-      <div class="row g-3 align-items-center">
-        
-        <!-- Left Column: Tool/Product Name, RefCode & Detail Inspector Trigger -->
-        <div class="col-md-5">
-          <div class="d-flex align-items-center gap-2 mb-2">
-            <span class="badge bg-primary text-white font-monospace px-2 py-1">SCHICHT 5</span>
-            <span class="fw-bold text-muted uppercase font-monospace small">Schicht 5: Immersion &amp; Interaktion</span>
-          </div>
-
-          <h3 class="h6 fw-black text-dark mb-2">Unreal Engine 5 / Omniverse</h3>
-
-          <div class="d-flex align-items-center gap-2 flex-wrap">
-            
-              <span class="badge bg-light text-dark border font-monospace">IND-META-2026-UNREAL-ENGINE-5</span>
-              <button type="button" class="btn btn-outline-primary btn-sm py-1 px-2 btn-inspect" data-ref="IND-META-2026-UNREAL-ENGINE-5" onclick="if(window.appOpenProfileModal){window.appOpenProfileModal('IND-META-2026-UNREAL-ENGINE-5');}">
-                <i class="fa-solid fa-eye me-1"></i> Details anzeigen →
-              </button>
-            
-          </div>
+    
         </div>
-
-        <!-- Right Column: Parallel Layer Function & Task Description -->
-        <div class="col-md-7">
-          <div class="usecase-stack-right">
-            <div class="usecase-stack-label"><i class="fa-solid fa-gear text-primary me-1"></i> Aufgabe &amp; Funktion auf Schicht 5:</div>
-            <p class="text-secondary small m-0 leading-relaxed">Echtzeit 3D-Visualisierung &amp; Monitoring</p>
-          </div>
-        </div>
-
       </div>
-    </div>
-  
+      
+      <div class="graph-flow-arrow" title="Datenfluss zu Schicht 3">
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+    
+    
+      <div class="graph-col-stage " data-layer="3" data-index="2" style="border-top: 3px solid var(--color-layer-3);">
+        <div class="graph-col-header">
+          <span class="graph-col-badge" style="background-color: var(--color-layer-3);">
+            SCHICHT 3
+          </span>
+          <span class="graph-col-title" title="Schicht 3: Middleware &amp; Integration">
+            Middleware &amp; Integration
+          </span>
+        </div>
+
+        <div class="graph-col-role">
+          <div>
+            <div class="graph-col-role-label">
+              <i class="fa-solid fa-crosshairs me-1"></i> Rolle &amp; Systemaufgabe:
+            </div>
+            <div>Bidirektionaler Semantik-Datenraum &amp; sichere EDC-Kopplung</div>
+          </div>
+        </div>
+
+        <div class="graph-col-component">
+          
+      <div class="card-item" onclick="if(window.appOpenProfileModal){window.appOpenProfileModal('IND-META-2026-AAS-IEC63278');}" style="cursor: pointer;">
+        <div>
+          <div class="card-header-bar">
+            <span class="card-category">KAT 3.1: Verwaltungsschale &amp; Zwillings-Standards</span>
+            <span class="tier-badge tier-1">Tier 1</span>
+          </div>
+          <h3 class="card-title">Asset Administration Shell / AAS (IEC 63278)</h3>
+          <div class="card-subtitle">RAMI 4.0 Standard für digitale Verwaltungsschalen</div>
+          <p class="card-overview">Der offizielle RAMI 4.0 Standard für digitale Zwillings-Metadaten. Kapselt technische Dokumentationen, Zertifikate, CAD-Modelle, CO2-Fußabdrücke und Sensorpunkte eines Industrie-Assets.</p>
+          <div class="card-tags">
+            <span class="tag ">XML</span><span class="tag ">JSON</span>
+            <span class="tag tag-bridge ">Siemens Operations X</span><span class="tag tag-bridge ">Collectu Engine</span>
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <div class="d-flex align-items-center gap-2">
+            <span class="card-vendor"><i class="fa-solid fa-building me-1 text-muted"></i> IDTA / Plattform Industrie 4.0</span>
+          </div>
+          <button type="button" class="btn btn-outline-primary btn-sm btn-inspect py-1 px-2" data-ref="IND-META-2026-AAS-IEC63278" style="font-size: 11px;">
+            Details →
+          </button>
+        </div>
+      </div>
+    
+        </div>
+      </div>
+      
+      <div class="graph-flow-arrow" title="Datenfluss zu Schicht 4">
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+    
+    
+      <div class="graph-col-stage " data-layer="4" data-index="3" style="border-top: 3px solid var(--color-layer-4);">
+        <div class="graph-col-header">
+          <span class="graph-col-badge" style="background-color: var(--color-layer-4);">
+            SCHICHT 4
+          </span>
+          <span class="graph-col-title" title="Schicht 4: Simulation &amp; Verhalten">
+            Simulation &amp; Verhalten
+          </span>
+        </div>
+
+        <div class="graph-col-role">
+          <div>
+            <div class="graph-col-role-label">
+              <i class="fa-solid fa-crosshairs me-1"></i> Rolle &amp; Systemaufgabe:
+            </div>
+            <div>Deterministische Echtzeit-Verhaltenssimulation &amp; SPS-Code-Validierung</div>
+          </div>
+        </div>
+
+        <div class="graph-col-component">
+          
+      <div class="card-item" onclick="if(window.appOpenProfileModal){window.appOpenProfileModal('IND-META-2026-ISG-VIRTUOS');}" style="cursor: pointer;">
+        <div>
+          <div class="card-header-bar">
+            <span class="card-category">KAT 4.4: Robotik &amp; Fabriksimulation</span>
+            <span class="tier-badge tier-2">Tier 2</span>
+          </div>
+          <h3 class="card-title">ISG-Virtuos (Hard Real-Time VIBn / HiL)</h3>
+          <div class="card-subtitle">Echtzeit-Hardware-in-the-Loop Simulationsengine</div>
+          <p class="card-overview">Deterministische Harte-Echtzeit-Simulationsengine für Taktraten unter 1 Millisekunde zur Hardware-in-the-Loop-Inbetriebnahme von Werkzeugmaschinen.</p>
+          <div class="card-tags">
+            <span class="tag tag-step">STEP</span><span class="tag ">CAD</span>
+            <span class="tag tag-bridge ">Siemens Sinumerik</span><span class="tag tag-bridge ">Beckhoff TwinCAT</span>
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <div class="d-flex align-items-center gap-2">
+            <span class="card-vendor"><i class="fa-solid fa-building me-1 text-muted"></i> ISG Industrielle Steuerungstechnik GmbH</span>
+          </div>
+          <button type="button" class="btn btn-outline-primary btn-sm btn-inspect py-1 px-2" data-ref="IND-META-2026-ISG-VIRTUOS" style="font-size: 11px;">
+            Details →
+          </button>
+        </div>
+      </div>
+    
+        </div>
+      </div>
+      
+      <div class="graph-flow-arrow" title="Datenfluss zu Schicht 5">
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+    
+    
+      <div class="graph-col-stage " data-layer="5" data-index="4" style="border-top: 3px solid var(--color-layer-5);">
+        <div class="graph-col-header">
+          <span class="graph-col-badge" style="background-color: var(--color-layer-5);">
+            SCHICHT 5
+          </span>
+          <span class="graph-col-title" title="Schicht 5: Immersion &amp; Interaktion">
+            Immersion &amp; Interaktion
+          </span>
+        </div>
+
+        <div class="graph-col-role">
+          <div>
+            <div class="graph-col-role-label">
+              <i class="fa-solid fa-crosshairs me-1"></i> Rolle &amp; Systemaufgabe:
+            </div>
+            <div>Immersive Echtzeit-Visualisierung &amp; Leitstand-Monitoring mit Override-Option</div>
+          </div>
+        </div>
+
+        <div class="graph-col-component">
+          
+      <div class="card-item" onclick="if(window.appOpenProfileModal){window.appOpenProfileModal('IND-META-2026-UNREAL-ENGINE-5');}" style="cursor: pointer;">
+        <div>
+          <div class="card-header-bar">
+            <span class="card-category">KAT 5.1: Echtzeit-3D &amp; Spatial Engines</span>
+            <span class="tier-badge tier-2">Tier 2</span>
+          </div>
+          <h3 class="card-title">Unreal Engine 5 Enterprise</h3>
+          <div class="card-subtitle">Fotorealistisches Rendering &amp; High-End Visualisierung</div>
+          <p class="card-overview">High-End 3D-Echtzeit-Engine für fotorealistische Visualisierungen, virtuelle Begehungen und immersives VR-Training von Werksanlagen.</p>
+          <div class="card-tags">
+            <span class="tag tag-usd">OpenUSD</span><span class="tag ">Datasmith (Revit/SolidWorks/Rhino)</span>
+            <span class="tag tag-bridge ">NVIDIA Omniverse Connector</span><span class="tag tag-bridge ">AWS TwinMaker</span>
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <div class="d-flex align-items-center gap-2">
+            <span class="card-vendor"><i class="fa-solid fa-building me-1 text-muted"></i> Epic Games Inc.</span>
+          </div>
+          <button type="button" class="btn btn-outline-primary btn-sm btn-inspect py-1 px-2" data-ref="IND-META-2026-UNREAL-ENGINE-5" style="font-size: 11px;">
+            Details →
+          </button>
+        </div>
+      </div>
+    
+        </div>
+      </div>
+      
+    
       </div>
     </section>
   
     
-    <!-- BLOCK 3: Overview & Extended Description Block -->
+    <!-- BLOCK 4: Overview & Extended Description Block -->
     <section class="card border-0 shadow-sm p-4 mb-4 bg-white">
       <h2 class="h6 fw-bold text-dark mb-3">
-        <i class="fa-solid fa-align-left text-primary me-2"></i>2. Szenario-Beschreibung &amp; Systemkontext
+        <i class="fa-solid fa-align-left text-primary me-2"></i>3. Szenario-Beschreibung &amp; Systemkontext
       </h2>
-      <p class="text-secondary small leading-relaxed mb-4">Der höchste Reifegrad des Industrial Metaverse besteht in der bi-direktionalen Kopplung realer Maschinensteuerungen mit dreidimensionalen Simulationsmodellen. Steuerungsbefehle (SPS-Prozesswerte) spiegeln die Bewegungen der Fabrik in Echtzeit im digitalen 3D-Zwilling wider, während umgekehrt Anpassungen in der virtuellen Umgebung zurück an die physischen Aktuatoren übertragen werden können. Dieser Use Case ermöglicht lückenlose virtuelle Inbetriebnahmen (VIBn) und Hardware-in-the-Loop (HiL) Tests.</p>
+      <p class="text-secondary leading-relaxed mb-4">Der höchste Reifegrad des Industrial Metaverse besteht in der bi-direktionalen Kopplung realer Maschinensteuerungen mit dreidimensionalen Simulationsmodellen. Steuerungsbefehle (SPS-Prozesswerte) spiegeln die Bewegungen der Fabrik in Echtzeit im digitalen 3D-Zwilling wider, während umgekehrt Anpassungen in der virtuellen Umgebung zurück an die physischen Aktuatoren übertragen werden können. Dieser Use Case ermöglicht lückenlose virtuelle Inbetriebnahmen (VIBn) und Hardware-in-the-Loop (HiL) Tests.</p>
       
-      <div class="row g-4">
+      <div class="row g-3">
         
           <div class="col-md-6">
-            <div class="p-3 bg-light rounded border h-100">
-              <h3 class="h6 fw-bold text-dark mb-3"><i class="fa-solid fa-star text-primary me-2"></i>Kern-Vorteile &amp; Nutzen</h3>
-              <ul class="list-unstyled small text-secondary m-0 ps-0">
-                
+            <div class="p-3 rounded bg-light border h-100">
+              <div class="fw-bold small text-dark mb-2 uppercase font-monospace">Kernvorteile im Betrieb:</div>
+              <ul class="list-unstyled mb-0 small text-secondary">
     <li class="mb-2">
       <i class="fa-solid fa-circle-check text-primary me-2"></i>Echtzeit-Spiegelung von Produktionslinien mit Mikroskunden-Latenz via PROFINET TSN
     </li>
@@ -346,18 +491,16 @@
     <li class="mb-2">
       <i class="fa-solid fa-circle-check text-primary me-2"></i>Prädiktive Fehlersimulation und Engpassanalyse am virtuellen Zwilling im Werk
     </li>
-  
-              </ul>
+  </ul>
             </div>
           </div>
         
-        
+
         
           <div class="col-md-6">
-            <div class="p-3 bg-light rounded border h-100">
-              <h3 class="h6 fw-bold text-dark mb-3"><i class="fa-solid fa-list-check text-primary me-2"></i>Voraussetzungen &amp; Tools</h3>
-              <ul class="list-unstyled small text-secondary m-0 ps-0">
-                
+            <div class="p-3 rounded bg-light border h-100">
+              <div class="fw-bold small text-dark mb-2 uppercase font-monospace">Erforderliche Infrastruktur:</div>
+              <ul class="list-unstyled mb-0 small text-secondary">
     <li class="mb-2">
       <i class="fa-solid fa-screwdriver-wrench text-secondary me-2"></i>Hardware-in-the-Loop Simulationssoftware (ISG-virtuos oder Siemens Tecnomatix)
     </li>
@@ -369,8 +512,7 @@
     <li class="mb-2">
       <i class="fa-solid fa-screwdriver-wrench text-secondary me-2"></i>Spezialisierter SPS-Steuerungs-Techniker &amp; Digital-Twin-Architect
     </li>
-  
-              </ul>
+  </ul>
             </div>
           </div>
         
@@ -378,10 +520,10 @@
     </section>
   
     
-    <!-- BLOCK 4: Media & Rich Content Block -->
+    <!-- BLOCK 5: Media & Rich Content Block -->
     <section class="card border-0 shadow-sm p-4 mb-4 bg-white">
       <h2 class="h6 fw-bold text-dark mb-3">
-        <i class="fa-solid fa-photo-film text-primary me-2"></i>3. Demonstration &amp; Medien-Dokumentation
+        <i class="fa-solid fa-photo-film text-primary me-2"></i>4. Demonstration &amp; Medien-Dokumentation
       </h2>
       
     <div class="mb-4">
@@ -419,15 +561,20 @@
     </section>
   
 
-    <!-- BLOCK 7: Action Footer Navigation Block -->
-    <footer class="card border-0 shadow-sm p-3 bg-white mb-4">
+    <!-- BLOCK 7: Action & Navigation Footer Block -->
+    <footer class="card border-0 shadow-sm p-4 bg-white">
       <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
         <a href="../index.html" class="btn btn-outline-secondary btn-sm">
-          <i class="fa-solid fa-arrow-left me-1"></i> Zurück zum Use Cases Hub
+          <i class="fa-solid fa-arrow-left me-1"></i> Zurück zur Übersicht aller Use Cases
         </a>
-        <a href="./usecase.json" target="_blank" class="btn btn-outline-primary btn-sm">
-          <i class="fa-solid fa-code me-1"></i> JSON Quelltext
-        </a>
+        <div class="d-flex gap-2">
+          <button type="button" class="btn btn-outline-secondary btn-sm btn-export-stack" data-uc-slug="uc-06-bidirectional-realtime-twin">
+            <i class="fa-solid fa-file-lines me-1"></i> Stack als Markdown kopieren
+          </button>
+          <a href="./usecase.json" target="_blank" class="btn btn-outline-primary btn-sm">
+            <i class="fa-solid fa-code me-1"></i> JSON Quelltext
+          </a>
+        </div>
       </div>
     </footer>
 

@@ -56,35 +56,51 @@
       "layerTitle": "Schicht 1: Erfassung & Sensorik",
       "refCode": "IND-META-2026-LEICA-RTC360",
       "nodeName": "Leica RTC360 / NavVis VLX",
-      "role": "Hochpräzise 3D-Punktwolken-Erfassung"
+      "role": "Hochpräzise terrestrische LiDAR- & SLAM-Punktwolkenerfassung",
+      "linkAnnotation": {
+        "protocol": "E57 / RCP Registrierung & Filterung",
+        "description": "Millimetergenaue Punktwolkensynchronisation und Rauschfilterung zur Vorbereitung des digitalen Bestandsaufmaßes."
+      }
     },
     {
       "layer": "2",
       "layerTitle": "Schicht 2: Geometrie & CAD/BIM",
       "refCode": "IND-META-2026-AUTODESK-REVIT",
       "nodeName": "Autodesk Revit / ReCap",
-      "role": "Point Cloud Processing & BIM-Modellierung"
+      "role": "Parametrische Scan-to-BIM Gebäudemodellierung & CAD-Bereinigung",
+      "linkAnnotation": {
+        "protocol": "IFC 4.3 & OpenUSD Export",
+        "description": "Konvertierung der BIM-Architektur (Wände, Stützen, Kabeltrassen) in neutrale offene Standardformate für den Gewerkeabgleich."
+      }
     },
     {
       "layer": "3",
       "layerTitle": "Schicht 3: Middleware & Integration",
       "refCode": "IND-META-2026-NEMETSCHEK-ALLPLAN",
       "nodeName": "IFC / OpenUSD Pipeline",
-      "role": "Offener Geometriedaten-Austausch"
+      "role": "Herstellerunabhängiger Multi-CAD- & BIM-Datenaustausch",
+      "linkAnnotation": {
+        "protocol": "Automatische Clash-Detection Pipeline",
+        "description": "Zusammenführung von Gebäude-BIM und neuen Fertigungszellen-CAD-Daten zur rechnerischen Kollisionsprüfung."
+      }
     },
     {
       "layer": "4",
       "layerTitle": "Schicht 4: Simulation & Verhalten",
       "refCode": "IND-META-2026-IPOLOG",
       "nodeName": "ipolog / Navisworks",
-      "role": "Automatisierte Clash-Detection & Layout"
+      "role": "Automatisierte Kollisionsprüfung, Materialfluss- & Layoutoptimierung",
+      "linkAnnotation": {
+        "protocol": "Echtzeit-Raytracing & Datasmith",
+        "description": "Überführung des freigegebenen Fabriklayouts in die fotorealistische Visualisierungs-Engine für Begehungen."
+      }
     },
     {
       "layer": "5",
       "layerTitle": "Schicht 5: Immersion & Interaktion",
       "refCode": "IND-META-2026-TWINMOTION",
       "nodeName": "Twinmotion / Unreal Engine",
-      "role": "Interaktive Freigabe-Visualisierung"
+      "role": "Interaktive fotorealistische Layout-Begehung & Management-Freigabe"
     }
   ]
 }

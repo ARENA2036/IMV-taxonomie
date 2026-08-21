@@ -48,27 +48,24 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm px-3 flex-shrink-0">
     <div class="container-fluid d-flex align-items-center justify-content-between">
       
-      <div class="d-flex align-items-center" style="min-width: 180px;">
+      <!-- Brand Logo -->
+      <div class="d-flex align-items-center">
         <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="../../index.html">
           <img src="../../assets/Metaverse Logo bunt.svg" alt="Industrial Metaverse Logo" class="logo-img" title="Industrial Metaverse">
-          <div class="logo-divider"></div>
-          <img src="../../assets/BaWue_WM_Absenderlogo_rgb_pos_Gefoerdert.svg" alt="Gefördert durch Baden-Württemberg" class="logo-img" title="Ministerium BW">
         </a>
       </div>
 
+      <!-- Center Title -->
       <div class="text-center flex-grow-1 px-2">
         <span class="fw-black text-dark fs-6 d-none d-md-inline-block text-truncate" style="max-width: 90%;">
           Use Case: Digitales Shopfloor-Incident-Management
         </span>
       </div>
 
-      <div class="d-flex align-items-center justify-content-end gap-2" style="min-width: 180px;">
-        <a href="../index.html" class="btn btn-outline-secondary btn-sm">
-          <i class="fa-solid fa-arrow-left me-1"></i> Use Cases Hub
-        </a>
-
+      <!-- Hamburger Menu -->
+      <div class="d-flex align-items-center justify-content-end">
         <div class="dropdown">
-          <button class="btn btn-light btn-sm border dropdown-toggle" id="hamburgerBtn" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Menü">
+          <button class="btn btn-light btn-sm border" id="hamburgerBtn" type="button" aria-expanded="false" title="Menü">
             <i class="fa-solid fa-bars"></i>
           </button>
           <ul class="dropdown-menu dropdown-menu-end shadow-sm">
@@ -82,26 +79,28 @@
           </ul>
         </div>
       </div>
+
     </div>
   </nav>
 
-  <!-- Main Block-Based Container -->
-  <main class="container app-page-container py-4 flex-grow-1">
+  <!-- Main Content Container -->
+  <main class="container py-4 flex-grow-1" style="max-width: 1300px;">
     
-    <!-- BLOCK 1: Hero Header Block -->
-    <header class="card border-0 shadow-sm p-4 p-md-5 mb-4 bg-white">
+    <!-- BLOCK 1: Hero & Strategic Header Block -->
+    <header class="app-hero-card mb-4">
       <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
         <div class="d-flex align-items-center gap-2">
-          <span class="badge bg-primary text-white font-monospace px-2 py-1">UC-01-SHOPFLOOR-INCIDENT-MANAGEMENT</span>
-          <span class="badge bg-light text-dark border font-monospace px-2 py-1">Tier 1 (≤ €30k / Starter &amp; Open Source)</span>
+          <span class="badge bg-primary text-white font-monospace fs-6 px-3 py-1">UC-01-SHOPFLOOR-INCIDENT-MANAGEMENT</span>
+          <span class="badge bg-light text-dark border font-monospace fs-6 px-3 py-1">Tier 1 (≤ €30k / Starter &amp; Open Source)</span>
         </div>
-        <span class="small text-muted font-monospace"><i class="fa-solid fa-clock me-1"></i>1–2 Wochen Initial-Einrichtung</span>
+        <a href="../index.html" class="btn btn-outline-secondary btn-sm">
+          <i class="fa-solid fa-arrow-left me-1"></i> Zurück zum Use Cases Hub
+        </a>
       </div>
 
       <h1 class="h3 fw-black text-dark mb-2">Digitales Shopfloor-Incident-Management</h1>
-      <h2 class="h6 fw-bold text-primary mb-3">360°-Bestandserfassung &amp; automatisierte Ticket-Erstellung</h2>
-      
-      <p class="text-secondary lead fs-6 m-0">Wie umsetzen? Schnelle optische 360°-Bestandserfassung im Shopfloor ohne Maschinenstillstand. Die Aufnahmen werden in FARO Sphere XG verortet und lösen automatisiert Instandhaltungstickets im Enterprise-System (Jira / SAP PM) aus.</p>
+      <p class="lead text-primary fw-bold fs-6 mb-3">360°-Bestandserfassung &amp; automatisierte Ticket-Erstellung</p>
+      <p class="text-secondary m-0">Wie umsetzen? Schnelle optische 360°-Bestandserfassung im Shopfloor ohne Maschinenstillstand. Die Aufnahmen werden in FARO Sphere XG verortet und lösen automatisiert Instandhaltungstickets im Enterprise-System (Jira / SAP PM) aus.</p>
     </header>
 
     
@@ -137,197 +136,346 @@
     </section>
   
     
-    <!-- BLOCK 5: Technical Specifications & 5-Layer Vertical Dual-Column Stack Block -->
-    <section class="card border-0 shadow-sm p-4 mb-4 bg-white">
-      <h2 class="h6 fw-bold text-dark mb-2">
-        <i class="fa-solid fa-layer-group text-primary me-2"></i>4. Vertikaler 5-Schichten Architekturbauplan
-      </h2>
-      <p class="text-muted small mb-4">
-        Parallele Übersicht der eingesetzten Werkzeuge (links) und ihrer konkreten Funktion auf der jeweiligen Ebene (rechts). Klicken Sie auf <strong>"Details anzeigen →"</strong>, um den vollständigen Technologie-Inspector im Browser zu öffnen:
-      </p>
+    <!-- BLOCK 3: Horizontal 5-Layer Architecture Flow Carousel -->
+    <section class="card border-0 shadow-sm p-4 mb-4 bg-white" id="useCaseArchitectureSection">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+        <div>
+          <h2 class="h6 fw-bold text-dark m-0">
+            <i class="fa-solid fa-diagram-project text-primary me-2"></i>2. 5-Schichten Architektur-Ablauf &amp; Integration
+          </h2>
+          <p class="text-muted small m-0 mt-1">
+            Strukturierter Daten- und Komponentenfluss von der Erfassung &amp; Sensorik (links) bis zur Immersion (rechts). In jeder Schicht sind die konkrete Rolle (oben) und die eingesetzte Technologie-Komponente (unten) zugeordnet.
+          </p>
+        </div>
+        
+        <div class="usecase-carousel-toolbar">
+          <div class="usecase-carousel-nav" id="usecaseCarouselNav">
+            <button type="button" class="btn btn-outline-secondary btn-sm" id="btnCarouselPrev" title="Vorherige Schicht">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="d-flex align-items-center gap-1" id="carouselLayerPills">
+              
+                <button type="button" class="usecase-layer-pill active" data-layer="1" data-index="0" title="Schicht 1: Erfassung &amp; Sensorik">
+                  S1
+                </button>
+              
+                <button type="button" class="usecase-layer-pill " data-layer="2" data-index="1" title="Schicht 2: Geometrie &amp; CAD/BIM">
+                  S2
+                </button>
+              
+                <button type="button" class="usecase-layer-pill " data-layer="3" data-index="2" title="Schicht 3: Middleware &amp; Integration">
+                  S3
+                </button>
+              
+                <button type="button" class="usecase-layer-pill " data-layer="4" data-index="3" title="Schicht 4: Simulation &amp; Verhalten">
+                  S4
+                </button>
+              
+                <button type="button" class="usecase-layer-pill " data-layer="5" data-index="4" title="Schicht 5: Immersion &amp; Interaktion">
+                  S5
+                </button>
+              
+            </div>
+            <button type="button" class="btn btn-outline-secondary btn-sm" id="btnCarouselNext" title="Nächste Schicht">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+
+          <button type="button" class="btn btn-outline-secondary btn-sm btn-carousel-control is-playing" id="btnCarouselPlayPause" title="Auto-Play pausieren / starten">
+            <i class="fa-solid fa-pause"></i> Auto-Play
+          </button>
+
+          <button type="button" class="btn btn-outline-secondary btn-sm btn-export-stack" data-uc-slug="uc-01-shopfloor-incident-management">
+            <i class="fa-solid fa-file-lines me-1"></i> Stack als Markdown kopieren
+          </button>
+        </div>
+      </div>
       
-      <div class="vertical-architecture-stack">
+      <div class="usecase-horizontal-flow has-active-focus" id="usecaseFlowContainer">
         
-    <div class="usecase-stack-row">
-      <div class="row g-3 align-items-center">
-        
-        <!-- Left Column: Tool/Product Name, RefCode & Detail Inspector Trigger -->
-        <div class="col-md-5">
-          <div class="d-flex align-items-center gap-2 mb-2">
-            <span class="badge bg-primary text-white font-monospace px-2 py-1">SCHICHT 1</span>
-            <span class="fw-bold text-muted uppercase font-monospace small">Schicht 1: Erfassung &amp; Sensorik</span>
-          </div>
+      <div class="graph-col-stage is-active-layer" data-layer="1" data-index="0" style="border-top: 3px solid var(--color-layer-1);">
+        <div class="graph-col-header">
+          <span class="graph-col-badge" style="background-color: var(--color-layer-1);">
+            SCHICHT 1
+          </span>
+          <span class="graph-col-title" title="Schicht 1: Erfassung &amp; Sensorik">
+            Erfassung &amp; Sensorik
+          </span>
+        </div>
 
-          <h3 class="h6 fw-black text-dark mb-2">FARO Orbis / Matterport</h3>
-
-          <div class="d-flex align-items-center gap-2 flex-wrap">
-            
-              <span class="badge bg-light text-dark border font-monospace">IND-META-2026-FARO-ORBIS</span>
-              <button type="button" class="btn btn-outline-primary btn-sm py-1 px-2 btn-inspect" data-ref="IND-META-2026-FARO-ORBIS" onclick="if(window.appOpenProfileModal){window.appOpenProfileModal('IND-META-2026-FARO-ORBIS');}">
-                <i class="fa-solid fa-eye me-1"></i> Details anzeigen →
-              </button>
-            
+        <div class="graph-col-role">
+          <div>
+            <div class="graph-col-role-label">
+              <i class="fa-solid fa-crosshairs me-1"></i> Rolle &amp; Systemaufgabe:
+            </div>
+            <div>Mobile 360° LiDAR-Erfassung im laufenden Fabrikbetrieb</div>
           </div>
         </div>
 
-        <!-- Right Column: Parallel Layer Function & Task Description -->
-        <div class="col-md-7">
-          <div class="usecase-stack-right">
-            <div class="usecase-stack-label"><i class="fa-solid fa-gear text-primary me-1"></i> Aufgabe &amp; Funktion auf Schicht 1:</div>
-            <p class="text-secondary small m-0 leading-relaxed">Mobile 360° LiDAR-Erfassung im Werk</p>
+        <div class="graph-col-component">
+          
+      <div class="card-item" onclick="if(window.appOpenProfileModal){window.appOpenProfileModal('IND-META-2026-FARO-ORBIS');}" style="cursor: pointer;">
+        <div>
+          <div class="card-header-bar">
+            <span class="card-category">KAT 1.1: Mobile &amp; Wearable SLAM-Scanner</span>
+            <span class="tier-badge tier-2">Tier 2</span>
+          </div>
+          <h3 class="card-title">FARO Orbis Hybrid Mobile Scanner</h3>
+          <div class="card-subtitle">Hybrid-Mobile SLAM &amp; Flash TLS Scanner</div>
+          <p class="card-overview">Hybrider mobiler SLAM- und statischer Laserscanner. Wechselt fliegend zwischen Gehen und hochdichtem Stativscannen.</p>
+          <div class="card-tags">
+            <span class="tag ">SLAM Telemetrie</span><span class="tag ">Static LiDAR Rays</span>
+            <span class="tag tag-bridge ">FARO Sphere XG</span><span class="tag tag-bridge ">Autodesk ReCap</span>
           </div>
         </div>
 
+        <div class="card-footer">
+          <div class="d-flex align-items-center gap-2">
+            <span class="card-vendor"><i class="fa-solid fa-building me-1 text-muted"></i> FARO Technologies Inc.</span>
+          </div>
+          <button type="button" class="btn btn-outline-primary btn-sm btn-inspect py-1 px-2" data-ref="IND-META-2026-FARO-ORBIS" style="font-size: 11px;">
+            Details →
+          </button>
+        </div>
+      </div>
+    
+        </div>
+      </div>
+      
+      <div class="graph-flow-arrow" title="Datenfluss zu Schicht 2">
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+    
+    
+      <div class="graph-col-stage " data-layer="2" data-index="1" style="border-top: 3px solid var(--color-layer-2);">
+        <div class="graph-col-header">
+          <span class="graph-col-badge" style="background-color: var(--color-layer-2);">
+            SCHICHT 2
+          </span>
+          <span class="graph-col-title" title="Schicht 2: Geometrie &amp; CAD/BIM">
+            Geometrie &amp; CAD/BIM
+          </span>
+        </div>
+
+        <div class="graph-col-role">
+          <div>
+            <div class="graph-col-role-label">
+              <i class="fa-solid fa-crosshairs me-1"></i> Rolle &amp; Systemaufgabe:
+            </div>
+            <div>Punktwolken- &amp; 360°-Panoramadaten-Aufbereitung</div>
+          </div>
+        </div>
+
+        <div class="graph-col-component">
+          
+      <div class="card-item" onclick="if(window.appOpenProfileModal){window.appOpenProfileModal('IND-META-2026-E57-POINTCLOUD');}" style="cursor: pointer;">
+        <div>
+          <div class="card-header-bar">
+            <span class="card-category">KAT 2.4: Datenformate &amp; OpenUSD-Standards</span>
+            <span class="tier-badge tier-1">Tier 1</span>
+          </div>
+          <h3 class="card-title">E57 (ASTM E2807 - Punktwolken-Standard)</h3>
+          <div class="card-subtitle">Herstellerneutraler Punktwolken-Standard</div>
+          <p class="card-overview">Herstellerneutrales Binärdateiformat zur Speicherung dichter 3D-Punktwolkendaten, 2D-Panoramabilder und Sensormetadaten von Laserscannern.</p>
+          <div class="card-tags">
+            <span class="tag ">Raw Laserscanner Telemetrie</span><span class="tag ">SLAM-Systeme</span>
+            <span class="tag tag-bridge ">NavVis IVION</span><span class="tag tag-bridge ">Leica Cyclone</span>
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <div class="d-flex align-items-center gap-2">
+            <span class="card-vendor"><i class="fa-solid fa-building me-1 text-muted"></i> ASTM International</span>
+          </div>
+          <button type="button" class="btn btn-outline-primary btn-sm btn-inspect py-1 px-2" data-ref="IND-META-2026-E57-POINTCLOUD" style="font-size: 11px;">
+            Details →
+          </button>
+        </div>
+      </div>
+    
+        </div>
+      </div>
+      
+      <div class="graph-flow-arrow" title="Datenfluss zu Schicht 3">
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+    
+    
+      <div class="graph-col-stage " data-layer="3" data-index="2" style="border-top: 3px solid var(--color-layer-3);">
+        <div class="graph-col-header">
+          <span class="graph-col-badge" style="background-color: var(--color-layer-3);">
+            SCHICHT 3
+          </span>
+          <span class="graph-col-title" title="Schicht 3: Middleware &amp; Integration">
+            Middleware &amp; Integration
+          </span>
+        </div>
+
+        <div class="graph-col-role">
+          <div>
+            <div class="graph-col-role-label">
+              <i class="fa-solid fa-crosshairs me-1"></i> Rolle &amp; Systemaufgabe:
+            </div>
+            <div>Zentrale räumliche Kollaborations- &amp; Datenplattform</div>
+          </div>
+        </div>
+
+        <div class="graph-col-component">
+          
+      <div class="card-item" onclick="if(window.appOpenProfileModal){window.appOpenProfileModal('IND-META-2026-FARO-SPHERE');}" style="cursor: pointer;">
+        <div>
+          <div class="card-header-bar">
+            <span class="card-category">KAT 1.5: 360°-Erfassung &amp; GIS-Kartierung</span>
+            <span class="tier-badge tier-2">Tier 2</span>
+          </div>
+          <h3 class="card-title">FARO Sphere XG (Cloud Spatial Ecosystem)</h3>
+          <div class="card-subtitle">Zentrale Reality-Capture Cloud-Plattform</div>
+          <p class="card-overview">Zentrale Cloud-Plattform, die statische Laserscans, Mobile-SLAM-Daten und 360°-Fotos in einer gemeinsamen Umgebung zusammenführt.</p>
+          <div class="card-tags">
+            <span class="tag ">FLS</span><span class="tag ">E57</span>
+            <span class="tag tag-bridge ">Autodesk Revit</span><span class="tag tag-bridge ">Navisworks</span>
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <div class="d-flex align-items-center gap-2">
+            <span class="card-vendor"><i class="fa-solid fa-building me-1 text-muted"></i> FARO Technologies Inc.</span>
+          </div>
+          <button type="button" class="btn btn-outline-primary btn-sm btn-inspect py-1 px-2" data-ref="IND-META-2026-FARO-SPHERE" style="font-size: 11px;">
+            Details →
+          </button>
+        </div>
+      </div>
+    
+        </div>
+      </div>
+      
+      <div class="graph-flow-arrow" title="Datenfluss zu Schicht 4">
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+    
+    
+      <div class="graph-col-stage " data-layer="4" data-index="3" style="border-top: 3px solid var(--color-layer-4);">
+        <div class="graph-col-header">
+          <span class="graph-col-badge" style="background-color: var(--color-layer-4);">
+            SCHICHT 4
+          </span>
+          <span class="graph-col-title" title="Schicht 4: Simulation &amp; Verhalten">
+            Simulation &amp; Verhalten
+          </span>
+        </div>
+
+        <div class="graph-col-role">
+          <div>
+            <div class="graph-col-role-label">
+              <i class="fa-solid fa-crosshairs me-1"></i> Rolle &amp; Systemaufgabe:
+            </div>
+            <div>Automatische Ticket-, Auftrags- &amp; Eskalationssteuerung</div>
+          </div>
+        </div>
+
+        <div class="graph-col-component">
+          
+    <div class="card-item" style="cursor: default;">
+      <div>
+        <div class="card-header-bar">
+          <span class="card-category">SCHICHT 4: IT &amp; ENTERPRISE</span>
+          <span class="badge bg-secondary font-monospace" style="font-size: 10px;">EXTERN</span>
+        </div>
+        <h3 class="card-title">Jira Service Management / SAP PM</h3>
+        <div class="card-subtitle">Enterprise IT / Bestandsinfrastruktur</div>
+        <p class="card-overview">Nahtlos über Standard-Schnittstellen (REST API, Webhook, OPC UA) angebundenes Subsystem zur Abbildung operativer Geschäftsprozesse.</p>
+        <div class="card-tags">
+          <span class="tag tag-opcua">REST API</span>
+          <span class="tag tag-bridge">Webhook</span>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <div class="d-flex align-items-center gap-2">
+          <span class="card-vendor"><i class="fa-solid fa-server me-1 text-muted"></i> Enterprise IT</span>
+        </div>
+        <span class="badge bg-light text-muted border font-monospace" style="font-size: 10px;">
+          Bestandssystem
+        </span>
       </div>
     </div>
   
-    <div class="usecase-stack-row">
-      <div class="row g-3 align-items-center">
-        
-        <!-- Left Column: Tool/Product Name, RefCode & Detail Inspector Trigger -->
-        <div class="col-md-5">
-          <div class="d-flex align-items-center gap-2 mb-2">
-            <span class="badge bg-primary text-white font-monospace px-2 py-1">SCHICHT 2</span>
-            <span class="fw-bold text-muted uppercase font-monospace small">Schicht 2: Geometrie &amp; CAD/BIM</span>
-          </div>
-
-          <h3 class="h6 fw-black text-dark mb-2">E57 / Panorama Scan</h3>
-
-          <div class="d-flex align-items-center gap-2 flex-wrap">
-            
-              <span class="badge bg-light text-dark border font-monospace">IND-META-2026-E57-POINTCLOUD</span>
-              <button type="button" class="btn btn-outline-primary btn-sm py-1 px-2 btn-inspect" data-ref="IND-META-2026-E57-POINTCLOUD" onclick="if(window.appOpenProfileModal){window.appOpenProfileModal('IND-META-2026-E57-POINTCLOUD');}">
-                <i class="fa-solid fa-eye me-1"></i> Details anzeigen →
-              </button>
-            
-          </div>
         </div>
-
-        <!-- Right Column: Parallel Layer Function & Task Description -->
-        <div class="col-md-7">
-          <div class="usecase-stack-right">
-            <div class="usecase-stack-label"><i class="fa-solid fa-gear text-primary me-1"></i> Aufgabe &amp; Funktion auf Schicht 2:</div>
-            <p class="text-secondary small m-0 leading-relaxed">Punktwolken &amp; 360°-Bilddaten-Export</p>
-          </div>
-        </div>
-
       </div>
-    </div>
-  
-    <div class="usecase-stack-row">
-      <div class="row g-3 align-items-center">
-        
-        <!-- Left Column: Tool/Product Name, RefCode & Detail Inspector Trigger -->
-        <div class="col-md-5">
-          <div class="d-flex align-items-center gap-2 mb-2">
-            <span class="badge bg-primary text-white font-monospace px-2 py-1">SCHICHT 3</span>
-            <span class="fw-bold text-muted uppercase font-monospace small">Schicht 3: Middleware &amp; Integration</span>
-          </div>
-
-          <h3 class="h6 fw-black text-dark mb-2">FARO Sphere XG</h3>
-
-          <div class="d-flex align-items-center gap-2 flex-wrap">
-            
-              <span class="badge bg-light text-dark border font-monospace">IND-META-2026-FARO-SPHERE</span>
-              <button type="button" class="btn btn-outline-primary btn-sm py-1 px-2 btn-inspect" data-ref="IND-META-2026-FARO-SPHERE" onclick="if(window.appOpenProfileModal){window.appOpenProfileModal('IND-META-2026-FARO-SPHERE');}">
-                <i class="fa-solid fa-eye me-1"></i> Details anzeigen →
-              </button>
-            
-          </div>
-        </div>
-
-        <!-- Right Column: Parallel Layer Function & Task Description -->
-        <div class="col-md-7">
-          <div class="usecase-stack-right">
-            <div class="usecase-stack-label"><i class="fa-solid fa-gear text-primary me-1"></i> Aufgabe &amp; Funktion auf Schicht 3:</div>
-            <p class="text-secondary small m-0 leading-relaxed">Zentrale Cloud/On-Prem 3D-Plattform</p>
-          </div>
-        </div>
-
+      
+      <div class="graph-flow-arrow" title="Datenfluss zu Schicht 5">
+        <i class="fa-solid fa-arrow-right"></i>
       </div>
-    </div>
-  
-    <div class="usecase-stack-row">
-      <div class="row g-3 align-items-center">
-        
-        <!-- Left Column: Tool/Product Name, RefCode & Detail Inspector Trigger -->
-        <div class="col-md-5">
-          <div class="d-flex align-items-center gap-2 mb-2">
-            <span class="badge bg-primary text-white font-monospace px-2 py-1">SCHICHT 4</span>
-            <span class="fw-bold text-muted uppercase font-monospace small">Schicht 4: Simulation &amp; Verhalten</span>
-          </div>
+    
+    
+      <div class="graph-col-stage " data-layer="5" data-index="4" style="border-top: 3px solid var(--color-layer-5);">
+        <div class="graph-col-header">
+          <span class="graph-col-badge" style="background-color: var(--color-layer-5);">
+            SCHICHT 5
+          </span>
+          <span class="graph-col-title" title="Schicht 5: Immersion &amp; Interaktion">
+            Immersion &amp; Interaktion
+          </span>
+        </div>
 
-          <h3 class="h6 fw-black text-dark mb-2">Jira / SAP PM</h3>
-
-          <div class="d-flex align-items-center gap-2 flex-wrap">
-            
-              <span class="badge bg-light text-muted border font-monospace">EXTERN / IT SYSTEM</span>
-            
+        <div class="graph-col-role">
+          <div>
+            <div class="graph-col-role-label">
+              <i class="fa-solid fa-crosshairs me-1"></i> Rolle &amp; Systemaufgabe:
+            </div>
+            <div>Interaktive räumliche 3D-Befundung am Tablet und PC</div>
           </div>
         </div>
 
-        <!-- Right Column: Parallel Layer Function & Task Description -->
-        <div class="col-md-7">
-          <div class="usecase-stack-right">
-            <div class="usecase-stack-label"><i class="fa-solid fa-gear text-primary me-1"></i> Aufgabe &amp; Funktion auf Schicht 4:</div>
-            <p class="text-secondary small m-0 leading-relaxed">Automatische Ticket- &amp; Auftragserstellung</p>
+        <div class="graph-col-component">
+          
+      <div class="card-item" onclick="if(window.appOpenProfileModal){window.appOpenProfileModal('IND-META-2026-GLTF-20');}" style="cursor: pointer;">
+        <div>
+          <div class="card-header-bar">
+            <span class="card-category">KAT 2.4: Datenformate &amp; OpenUSD-Standards</span>
+            <span class="tier-badge tier-1">Tier 1</span>
+          </div>
+          <h3 class="card-title">glTF 2.0 (Khronos Group - Runtime 3D Asset)</h3>
+          <div class="card-subtitle">Das &quot;JPEG für 3D&quot; im Web &amp; Mobile</div>
+          <p class="card-overview">Lizenzfreie Spezifikation für die effiziente Übertragung und das schnelle Laden von 3D-Szenen und PBR-Modellen im Webbrowser und auf Mobilgeräten.</p>
+          <div class="card-tags">
+            <span class="tag ">Blender</span><span class="tag ">3ds Max</span>
+            <span class="tag tag-bridge ">WebXR</span><span class="tag tag-bridge ">Godot Engine</span>
           </div>
         </div>
 
+        <div class="card-footer">
+          <div class="d-flex align-items-center gap-2">
+            <span class="card-vendor"><i class="fa-solid fa-building me-1 text-muted"></i> Khronos Group</span>
+          </div>
+          <button type="button" class="btn btn-outline-primary btn-sm btn-inspect py-1 px-2" data-ref="IND-META-2026-GLTF-20" style="font-size: 11px;">
+            Details →
+          </button>
+        </div>
       </div>
-    </div>
-  
-    <div class="usecase-stack-row">
-      <div class="row g-3 align-items-center">
-        
-        <!-- Left Column: Tool/Product Name, RefCode & Detail Inspector Trigger -->
-        <div class="col-md-5">
-          <div class="d-flex align-items-center gap-2 mb-2">
-            <span class="badge bg-primary text-white font-monospace px-2 py-1">SCHICHT 5</span>
-            <span class="fw-bold text-muted uppercase font-monospace small">Schicht 5: Immersion &amp; Interaktion</span>
-          </div>
-
-          <h3 class="h6 fw-black text-dark mb-2">WebXR / Web Inspection</h3>
-
-          <div class="d-flex align-items-center gap-2 flex-wrap">
-            
-              <span class="badge bg-light text-dark border font-monospace">IND-META-2026-GLTF-20</span>
-              <button type="button" class="btn btn-outline-primary btn-sm py-1 px-2 btn-inspect" data-ref="IND-META-2026-GLTF-20" onclick="if(window.appOpenProfileModal){window.appOpenProfileModal('IND-META-2026-GLTF-20');}">
-                <i class="fa-solid fa-eye me-1"></i> Details anzeigen →
-              </button>
-            
-          </div>
+    
         </div>
-
-        <!-- Right Column: Parallel Layer Function & Task Description -->
-        <div class="col-md-7">
-          <div class="usecase-stack-right">
-            <div class="usecase-stack-label"><i class="fa-solid fa-gear text-primary me-1"></i> Aufgabe &amp; Funktion auf Schicht 5:</div>
-            <p class="text-secondary small m-0 leading-relaxed">Interaktive 3D-Befundung am Tablet/PC</p>
-          </div>
-        </div>
-
       </div>
-    </div>
-  
+      
+    
       </div>
     </section>
   
     
-    <!-- BLOCK 3: Overview & Extended Description Block -->
+    <!-- BLOCK 4: Overview & Extended Description Block -->
     <section class="card border-0 shadow-sm p-4 mb-4 bg-white">
       <h2 class="h6 fw-bold text-dark mb-3">
-        <i class="fa-solid fa-align-left text-primary me-2"></i>2. Szenario-Beschreibung &amp; Systemkontext
+        <i class="fa-solid fa-align-left text-primary me-2"></i>3. Szenario-Beschreibung &amp; Systemkontext
       </h2>
-      <p class="text-secondary small leading-relaxed mb-4">Im Falle einer unerwarteten Störung an einer Fertigungszelle ermöglicht dieser Use Case dem Instandhaltungs-Team die umgehende 360°-Panoramaerfassung der betroffenen Anlage per mobilem Scanner. Die Bild- und Punktwolkendaten werden direkt in FARO Sphere XG hochgeladen, wo Anmerkungen und Messungen im räumlichen Kontext vorgenommen werden. Über automatische Webhook-Brücken erzeugt das System sofort ein Ticket in Jira oder SAP PM inklusive exakter 3D-Koordinaten und Panoramalink.</p>
+      <p class="text-secondary leading-relaxed mb-4">Im Falle einer unerwarteten Störung an einer Fertigungszelle ermöglicht dieser Use Case dem Instandhaltungs-Team die umgehende 360°-Panoramaerfassung der betroffenen Anlage per mobilem Scanner. Die Bild- und Punktwolkendaten werden direkt in FARO Sphere XG hochgeladen, wo Anmerkungen und Messungen im räumlichen Kontext vorgenommen werden. Über automatische Webhook-Brücken erzeugt das System sofort ein Ticket in Jira oder SAP PM inklusive exakter 3D-Koordinaten und Panoramalink.</p>
       
-      <div class="row g-4">
+      <div class="row g-3">
         
           <div class="col-md-6">
-            <div class="p-3 bg-light rounded border h-100">
-              <h3 class="h6 fw-bold text-dark mb-3"><i class="fa-solid fa-star text-primary me-2"></i>Kern-Vorteile &amp; Nutzen</h3>
-              <ul class="list-unstyled small text-secondary m-0 ps-0">
-                
+            <div class="p-3 rounded bg-light border h-100">
+              <div class="fw-bold small text-dark mb-2 uppercase font-monospace">Kernvorteile im Betrieb:</div>
+              <ul class="list-unstyled mb-0 small text-secondary">
     <li class="mb-2">
       <i class="fa-solid fa-circle-check text-primary me-2"></i>Kontaktlose 360°-Bestandserfassung im laufenden Fabrikbetrieb ohne Stillstand
     </li>
@@ -343,18 +491,16 @@
     <li class="mb-2">
       <i class="fa-solid fa-circle-check text-primary me-2"></i>Vermeidung von Fehlbestellungen von Ersatzteilen durch exakte räumliche 3D-Befundung
     </li>
-  
-              </ul>
+  </ul>
             </div>
           </div>
         
-        
+
         
           <div class="col-md-6">
-            <div class="p-3 bg-light rounded border h-100">
-              <h3 class="h6 fw-bold text-dark mb-3"><i class="fa-solid fa-list-check text-primary me-2"></i>Voraussetzungen &amp; Tools</h3>
-              <ul class="list-unstyled small text-secondary m-0 ps-0">
-                
+            <div class="p-3 rounded bg-light border h-100">
+              <div class="fw-bold small text-dark mb-2 uppercase font-monospace">Erforderliche Infrastruktur:</div>
+              <ul class="list-unstyled mb-0 small text-secondary">
     <li class="mb-2">
       <i class="fa-solid fa-screwdriver-wrench text-secondary me-2"></i>Mobile 360°-Kamera oder handgeführter SLAM-Scanner (z.B. FARO Orbis oder Matterport Pro3)
     </li>
@@ -366,8 +512,7 @@
     <li class="mb-2">
       <i class="fa-solid fa-screwdriver-wrench text-secondary me-2"></i>Enterprise Service Desk / Instandhaltungs-Software (Jira Service Management / SAP PM)
     </li>
-  
-              </ul>
+  </ul>
             </div>
           </div>
         
@@ -375,10 +520,10 @@
     </section>
   
     
-    <!-- BLOCK 4: Media & Rich Content Block -->
+    <!-- BLOCK 5: Media & Rich Content Block -->
     <section class="card border-0 shadow-sm p-4 mb-4 bg-white">
       <h2 class="h6 fw-bold text-dark mb-3">
-        <i class="fa-solid fa-photo-film text-primary me-2"></i>3. Demonstration &amp; Medien-Dokumentation
+        <i class="fa-solid fa-photo-film text-primary me-2"></i>4. Demonstration &amp; Medien-Dokumentation
       </h2>
       
     <div class="mb-4">
@@ -423,15 +568,20 @@
     </section>
   
 
-    <!-- BLOCK 7: Action Footer Navigation Block -->
-    <footer class="card border-0 shadow-sm p-3 bg-white mb-4">
+    <!-- BLOCK 7: Action & Navigation Footer Block -->
+    <footer class="card border-0 shadow-sm p-4 bg-white">
       <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
         <a href="../index.html" class="btn btn-outline-secondary btn-sm">
-          <i class="fa-solid fa-arrow-left me-1"></i> Zurück zum Use Cases Hub
+          <i class="fa-solid fa-arrow-left me-1"></i> Zurück zur Übersicht aller Use Cases
         </a>
-        <a href="./usecase.json" target="_blank" class="btn btn-outline-primary btn-sm">
-          <i class="fa-solid fa-code me-1"></i> JSON Quelltext
-        </a>
+        <div class="d-flex gap-2">
+          <button type="button" class="btn btn-outline-secondary btn-sm btn-export-stack" data-uc-slug="uc-01-shopfloor-incident-management">
+            <i class="fa-solid fa-file-lines me-1"></i> Stack als Markdown kopieren
+          </button>
+          <a href="./usecase.json" target="_blank" class="btn btn-outline-primary btn-sm">
+            <i class="fa-solid fa-code me-1"></i> JSON Quelltext
+          </a>
+        </div>
       </div>
     </footer>
 

@@ -42,11 +42,50 @@
 </head>
 <body class="bg-light text-dark min-vh-100 d-flex flex-column">
 
+  <!-- Top Navigation Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm px-3 flex-shrink-0">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+      
+      <!-- Brand Logo -->
+      <div class="d-flex align-items-center">
+        <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="./index.html">
+          <img src="./assets/Metaverse Logo bunt.svg" alt="Industrial Metaverse Logo" class="logo-img" title="Industrial Metaverse">
+        </a>
+      </div>
+
+      <!-- Center Title -->
+      <div class="text-center flex-grow-1 px-2">
+        <span class="fw-black text-dark fs-6 d-none d-md-inline-block">
+          Industrial Metaverse Taxonomie
+        </span>
+      </div>
+
+      <!-- Hamburger Dropdown Menu -->
+      <div class="d-flex align-items-center justify-content-end">
+        <div class="dropdown">
+          <button class="btn btn-light btn-sm border" id="hamburgerBtn" type="button" aria-expanded="false" title="Menü">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+            <li><a class="dropdown-item active bg-primary" href="./index.html"><i class="fa-solid fa-house me-2"></i>Startseite</a></li>
+            <li><a class="dropdown-item" href="./guide.html"><i class="fa-solid fa-compass text-muted me-2"></i>Einstiegsleitfaden</a></li>
+            <li><a class="dropdown-item" href="./browser.html"><i class="fa-solid fa-layer-group text-muted me-2"></i>Taxonomie Browser</a></li>
+            <li><a class="dropdown-item" href="./usecases/index.html"><i class="fa-solid fa-sitemap text-muted me-2"></i>Use Cases Hub</a></li>
+            <li><a class="dropdown-item" href="./architecture.html"><i class="fa-solid fa-diagram-project text-muted me-2"></i>Architektur Spezifikation</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="./impressum.html"><i class="fa-solid fa-scale-balanced text-muted me-2"></i>Impressum &amp; Rechtliches</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
   <!-- Main Container Canvas -->
   <main class="container app-page-container py-4 flex-grow-1">
     
     <!-- Hero Canvas Card -->
-    <div class="card shadow-sm border-0 mb-4 overflow-hidden">
+    <div class="card shadow-sm border-0 mb-4 overflow-hidden bg-white">
       <div class="card-body p-4 p-md-5">
         
         <!-- Header Logos Row -->
@@ -63,7 +102,7 @@
         <!-- Main Title & Lead Text -->
         <h1 class="fw-black display-5 text-dark mb-3">Industrial Metaverse Taxonomie</h1>
         <p class="lead text-secondary mb-4" style="max-width: 950px; font-size: 1.05rem;">
-          Die offene Referenz-Taxonomie und Baukasten-Architektur für <strong>Industrie-4.0-Technologien, Standards und Protokolle</strong>. Strukturiert in das <strong>5-Schichten-Modell</strong> des ARENA2036 Forschungscampus liefert diese Plattform unabhängige Antworten für Industrieunternehmen, Fertigungsbetriebe und Systemintegratoren: <strong>Wie erfolgt die Umsetzung? Welche Investitionsrahmen (Tier 1–3) sind zu erwarten? Und welche betrieblichen Nutzenpotenziale entstehen im Werk?</strong>
+          Die offene Referenz-Taxonomie und Baukasten-Architektur für <strong>Industrie-4.0-Technologien, interoperable Standards und Protokolle</strong>. Strukturiert entlang des <strong>5-Schichten-Modells</strong> des ARENA2036 Forschungscampus liefert diese Plattform neutrale, faktenbasierte Orientierung für Industrieunternehmen, Mittelstand und Systemintegratoren: <strong>Von der technischen Machbarkeit über modulare Investitionsklassen (Tier 1–3) bis hin zu quantifizierbaren betrieblichen Nutzenpotenzialen im Werk.</strong>
         </p>
 
         <!-- Strategic 3-ROI Cards -->
@@ -74,7 +113,7 @@
                 <i class="fa-solid fa-cogs me-2"></i>1. Wie umsetzen?
               </div>
               <small class="text-muted">
-                Schrittweiser Aufbau nach dem <strong>Baukastenprinzip (Composite Principle)</strong>. Reibungslose Einbindung bestehender Altanlagen (Brownfield) & Feldbusse ohne Erneuerungszwang.
+                Kompositionsprinzip statt monolithischer Lock-ins: Schrittweise Integration von der Sensorik über Middleware bis zur Simulation &amp; Immersion unter nahtloser Einbindung bestehender Brownfield-Anlagen.
               </small>
             </div>
           </div>
@@ -82,10 +121,10 @@
           <div class="col-md-4">
             <div class="card bg-light border-0 h-100 p-3">
               <div class="fw-bold text-danger mb-1">
-                <i class="fa-solid fa-coins me-2"></i>2. Wie teuer?
+                <i class="fa-solid fa-coins me-2"></i>2. Wie budgetieren?
               </div>
               <small class="text-muted">
-                Transparente Einstiegshürden von <strong>Tier 1</strong> (≤ €30k / Starter & Open Source) über <strong>Tier 2</strong> (≤ €100k) bis zu OEM-Enterprise-Plattformen (> €100k).
+                Transparente Investitionsklassen für jede Projektgröße: Von <strong>Tier 1</strong> (≤ €30k / Starter &amp; Open Source) über <strong>Tier 2</strong> (≤ €100k / Modularer Mittelstand) bis hin zu <strong>Tier 3</strong> (> €100k / OEM Enterprise).
               </small>
             </div>
           </div>
@@ -93,10 +132,10 @@
           <div class="col-md-4">
             <div class="card bg-light border-0 h-100 p-3">
               <div class="fw-bold text-success mb-1">
-                <i class="fa-solid fa-chart-line me-2"></i>3. Betrieblicher Nutzen
+                <i class="fa-solid fa-chart-line me-2"></i>3. Welcher betriebliche Nutzen?
               </div>
               <small class="text-muted">
-                Beispielhafte Nutzenpotenziale durch <strong>schnellere Entstörung</strong>, Einsparung bei Audit-Reisen & Vermeidung teurer Layout-Umbaufehler.
+                Konkrete ROI-Hebel im Fabrikalltag: Signifikante Verkürzung von Entstörungszeiten, Einsparung von Reisetätigkeiten bei Audits und Vermeidung teurer Umbaufehler im Fabriklayout.
               </small>
             </div>
           </div>
@@ -110,15 +149,15 @@
       <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
         <div>
           <div class="d-flex align-items-center gap-2 mb-1">
-            <span class="badge bg-primary text-white font-monospace">NEU: PRAXIS-GUIDE</span>
-            <h2 class="h5 fw-bold text-dark m-0"><i class="fa-solid fa-compass text-primary me-2"></i>Orientierung & Praxis Leitfaden</h2>
+            <span class="badge bg-primary text-white font-monospace">EINSTIEGSLEITFADEN</span>
+            <h2 class="h5 fw-bold text-dark m-0"><i class="fa-solid fa-compass text-primary me-2"></i>Orientierung &amp; Praxis-Leitfaden für Fertigungsbetriebe</h2>
           </div>
           <p class="text-secondary small m-0" style="max-width: 750px;">
-            Sie wollen Ihr Werk digitalisieren, wissen aber nicht, wie Sie aus den zahlreichen Technologien wählen sollen? Der Einstiegsleitfaden bietet einen 3 Schritte Entscheidungsbaum und verständlichen Praxisklartext.
+            Sie möchten digitale Zwillinge und Metaverse-Werkzeuge einführen, stehen aber vor einer unübersichtlichen Technologielandschaft? Unser 3-Schritte-Entscheidungsbaum führt Sie zielgerichtet zur passenden Lösung für Ihren Betrieb.
           </p>
         </div>
         <a href="./guide.html" class="btn btn-primary btn-sm fw-bold px-3 py-2 text-nowrap">
-          Orientierungsguide lesen <i class="fa-solid fa-arrow-right ms-1"></i>
+          Leitfaden öffnen <i class="fa-solid fa-arrow-right ms-1"></i>
         </a>
       </div>
     </div>
@@ -126,31 +165,31 @@
     <!-- Metric KPI Row -->
     <div class="row g-3 mb-4">
       <div class="col">
-        <div class="card border-0 shadow-sm text-center p-3">
-          <div class="fs-2 fw-black text-dark font-monospace" id="kpiTotalTools">...</div>
+        <div class="card border-0 shadow-sm text-center p-3 bg-white">
+          <div class="fs-2 fw-black text-dark font-monospace" id="kpiTotalTools">91</div>
           <div class="small fw-bold text-muted text-uppercase">Auditierte Tools</div>
         </div>
       </div>
       <div class="col">
-        <div class="card border-0 shadow-sm text-center p-3">
-          <div class="fs-2 fw-black text-dark font-monospace" id="kpiTotalUseCases">...</div>
+        <div class="card border-0 shadow-sm text-center p-3 bg-white">
+          <div class="fs-2 fw-black text-dark font-monospace" id="kpiTotalUseCases">6</div>
           <div class="small fw-bold text-muted text-uppercase">Use Cases</div>
         </div>
       </div>
       <div class="col">
-        <div class="card border-0 shadow-sm text-center p-3">
-          <div class="fs-2 fw-black text-dark font-monospace" id="kpiTotalCategories">...</div>
+        <div class="card border-0 shadow-sm text-center p-3 bg-white">
+          <div class="fs-2 fw-black text-dark font-monospace" id="kpiTotalCategories">21</div>
           <div class="small fw-bold text-muted text-uppercase">Kategorien</div>
         </div>
       </div>
       <div class="col">
-        <div class="card border-0 shadow-sm text-center p-3">
+        <div class="card border-0 shadow-sm text-center p-3 bg-white">
           <div class="fs-2 fw-black text-dark font-monospace" id="kpiTotalLayers">5</div>
-          <div class="small fw-bold text-muted text-uppercase">Stack Schichten</div>
+          <div class="small fw-bold text-muted text-uppercase">Stack-Schichten</div>
         </div>
       </div>
       <div class="col">
-        <div class="card border-0 shadow-sm text-center p-3">
+        <div class="card border-0 shadow-sm text-center p-3 bg-white">
           <div class="fs-2 fw-black text-dark font-monospace" id="kpiTotalTiers">3</div>
           <div class="small fw-bold text-muted text-uppercase">Investitionsklassen</div>
         </div>
@@ -162,54 +201,54 @@
       
       <!-- Card 1: Interactive Browser -->
       <div class="col-md-4">
-        <a href="./browser.html" class="card border-0 shadow-sm h-100 text-decoration-none p-4 hover-shadow transition">
+        <a href="./browser.html" class="card border-0 shadow-sm h-100 text-decoration-none p-4 hover-shadow transition bg-white">
           <div class="d-flex align-items-center gap-3 mb-3">
             <div class="bg-primary-subtle text-primary p-3 rounded-3 fs-4">
               <i class="fa-solid fa-layer-group"></i>
             </div>
-            <h3 class="h5 fw-bold text-dark m-0">Interaktiven Taxonomie-Browser öffnen</h3>
+            <h3 class="h5 fw-bold text-dark m-0">Interaktiver Taxonomie-Browser</h3>
           </div>
           <p class="text-secondary small mb-4">
-            Durchsuchen Sie auditierte Technologien, Filter nach 5 Schichten, Kostengruppen und Status oder vergleichen Sie Systeme direkt gegeneinander.
+            Filtern Sie 91 auditierte Technologien über 21 Fachkategorien nach Kostenrahmen, Schnittstellen (OpenUSD, OPC UA, STEP) und Validierungsstatus. Nutzen Sie den Side-by-Side-Vergleich für Ihr Systemdesign.
           </p>
           <div class="mt-auto fw-bold text-primary small">
-            Browser öffnen <i class="fa-solid fa-arrow-right ms-1"></i>
+            Browser starten <i class="fa-solid fa-arrow-right ms-1"></i>
           </div>
         </a>
       </div>
 
-      <!-- Card 2: Use Cases -->
+      <!-- Card 2: Use Cases Hub -->
       <div class="col-md-4">
-        <a href="./usecases/index.html" class="card border-0 shadow-sm h-100 text-decoration-none p-4 hover-shadow transition">
+        <a href="./usecases/index.html" class="card border-0 shadow-sm h-100 text-decoration-none p-4 hover-shadow transition bg-white">
           <div class="d-flex align-items-center gap-3 mb-3">
             <div class="bg-primary-subtle text-primary p-3 rounded-3 fs-4">
               <i class="fa-solid fa-sitemap"></i>
             </div>
-            <h3 class="h5 fw-bold text-dark m-0">Baukasten-Use-Cases & Abläufe erkunden</h3>
+            <h3 class="h5 fw-bold text-dark m-0">Use Cases Hub &amp; Referenz-Architekturen</h3>
           </div>
           <p class="text-secondary small mb-4">
-            Erfahren Sie anhand von 6 praxisnahen Use Cases, wie modulare Digital-Twin-Architekturen Schritt für Schritt komponiert werden: inklusive betrieblicher Nutzenpotenziale.
+            Entdecken Sie 6 vollständige End-to-End-Szenarien mit horizontalem 5-Schichten-Ablauf, definierten Systemrollen, KPI-Benchmarks und praxiserprobten Werkzeugketten für jede Budgetklasse.
           </p>
           <div class="mt-auto fw-bold text-primary small">
-            Use Cases ansehen <i class="fa-solid fa-arrow-right ms-1"></i>
+            Use Cases erkunden <i class="fa-solid fa-arrow-right ms-1"></i>
           </div>
         </a>
       </div>
 
       <!-- Card 3: Architecture -->
       <div class="col-md-4">
-        <a href="./architecture.html" class="card border-0 shadow-sm h-100 text-decoration-none p-4 hover-shadow transition">
+        <a href="./architecture.html" class="card border-0 shadow-sm h-100 text-decoration-none p-4 hover-shadow transition bg-white">
           <div class="d-flex align-items-center gap-3 mb-3">
             <div class="bg-primary-subtle text-primary p-3 rounded-3 fs-4">
               <i class="fa-solid fa-diagram-project"></i>
             </div>
-            <h3 class="h5 fw-bold text-dark m-0">5-Schichten Ziel-Architektur Spezifikation</h3>
+            <h3 class="h5 fw-bold text-dark m-0">5-Schichten Ziel-Architektur</h3>
           </div>
           <p class="text-secondary small mb-4">
-            Detaildokumentation des ARENA2036 5-Schichten-Modells (Erfassung, Geometrie, Middleware, Simulation, Immersion) mit Hinweisen zur herstellerunabhängigen Brownfield-Integration.
+            Fundierte technische Dokumentation der ARENA2036 Schichtenarchitektur von der 3D-Sensorik über Geometrie, Datenräume und physikalische Simulation bis zur WebXR-Immersion.
           </p>
           <div class="mt-auto fw-bold text-primary small">
-            Spezifikation lesen <i class="fa-solid fa-arrow-right ms-1"></i>
+            Spezifikation ansehen <i class="fa-solid fa-arrow-right ms-1"></i>
           </div>
         </a>
       </div>
@@ -220,11 +259,11 @@
     <div class="card border shadow-sm p-3 bg-white">
       <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
         <div class="small text-secondary flex-grow-1">
-          <strong>RECHTLICHER HINWEIS (LIVING DOCUMENT & KEINE FINANZBERATUNG):</strong>
-          Diese Taxonomie dient als unabhängige Forschungs-Orientierungshilfe (Research Benchmarks) und stellt ausdrücklich <strong>KEINE direkte Finanz-, Anlage- oder Rechtsberatung</strong> dar. Neue Technologien und Use Cases können direkt via Pull Request auf GitHub eingereicht werden.
+          <strong>RECHTLICHER HINWEIS (LIVING RESEARCH DOCUMENT &amp; KEINE FINANZBERATUNG):</strong>
+          Diese Taxonomie dient als unabhängige Forschungs- und Orientierungshilfe (Research Benchmarks) und stellt ausdrücklich <strong>keine direkte Finanz-, Anlage- oder Rechtsberatung</strong> dar. Neue Technologien und Use Cases können jederzeit per Pull Request auf GitHub eingereicht werden.
         </div>
         <div class="d-flex gap-2">
-          <a href="./impressum.html" class="btn btn-outline-secondary btn-sm text-nowrap">Impressum & Rechtliches</a>
+          <a href="./impressum.html" class="btn btn-outline-secondary btn-sm text-nowrap">Impressum &amp; Rechtliches</a>
           <a href="https://github.com/ARENA2036/IMV-taxonomie" target="_blank" class="btn btn-outline-secondary btn-sm text-nowrap"><i class="fa-brands fa-github me-1"></i> GitHub Repo</a>
         </div>
       </div>
@@ -234,9 +273,9 @@
 
   <!-- Clean Light Footer -->
   <footer class="py-3 text-center small text-muted border-top bg-white mt-auto">
-    <span>Industrial Metaverse Taxonomie | Reallabor 2.0 • ARENA2036 Research Campus</span>
+    <span>Industrial Metaverse Taxonomie | ARENA2036 Research Campus</span>
     <span class="mx-2">•</span>
-    <a href="./impressum.html" class="text-muted text-decoration-none">Impressum & Rechtliches</a>
+    <a href="./impressum.html" class="text-muted text-decoration-none">Impressum &amp; Rechtliches</a>
   </footer>
 
   <!-- Bootstrap 5 JavaScript Bundle -->

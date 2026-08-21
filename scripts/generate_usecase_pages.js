@@ -22,8 +22,9 @@ const usecasesDir = path.join(rootDir, 'usecases');
 /**
  * Builds individual Use Case HTML pages and the consolidated central hub page.
  * @param {Array<Object>} usecases - Array of parsed Use Case objects.
+ * @param {Object} profilesMap - Map of canonical profile objects keyed by refCode.
  */
-export function buildUseCasePages(usecases) {
+export function buildUseCasePages(usecases, profilesMap = {}) {
   if (!usecases || usecases.length === 0) return;
 
   console.log('Generiere vertikale 5-Schichten-Stack HTML-Seiten für Use Cases in usecases/*/index.html...');
@@ -37,7 +38,7 @@ export function buildUseCasePages(usecases) {
       fs.mkdirSync(ucFolder, { recursive: true });
     }
 
-    const htmlContent = renderSingleUseCasePage(uc);
+    const htmlContent = renderSingleUseCasePage(uc, profilesMap);
     const htmlPath = path.join(ucFolder, 'index.html');
     fs.writeFileSync(htmlPath, htmlContent, 'utf-8');
   });
@@ -51,11 +52,114 @@ export function buildUseCasePages(usecases) {
 }
 
 /**
+ * Maps format/protocol string to semantic CSS class.
+ * @param {string} tag
+ * @returns {string}
+ */
+function getTagClass(tag) {
+  const t = (tag || '').toLowerCase();
+  if (t.includes('usd')) return 'tag-usd';
+  if (t.includes('gltf') || t.includes('glb')) return 'tag-gltf';
+  if (t.includes('step') || t.includes('iges') || t.includes('jt')) return 'tag-step';
+  if (t.includes('aas') || t.includes('aasx')) return 'tag-aas';
+  if (t.includes('opc') || t.includes('mqtt') || t.includes('profinet')) return 'tag-opcua';
+  if (t.includes('edc') || t.includes('dataspace')) return 'tag-edc';
+  if (t.includes('ros')) return 'tag-ros';
+  return '';
+}
+
+/**
+ * Returns tier CSS class for badges.
+ * @param {string} tier
+ * @returns {string}
+ */
+function getTierClass(tier) {
+  if (tier === 'Tier 1') return 'tier-1';
+  if (tier === 'Tier 2') return 'tier-2';
+  return 'tier-3';
+}
+
+/**
+ * Renders the exact Browser .card-item component for a flow node in the Use Case graph.
+ * @param {Object} step - Flow step object.
+ * @param {Object} profilesMap - Canonical profile lookup map.
+ * @returns {string} HTML for the technology card.
+ */
+function renderBrowserCardForNode(step, profilesMap = {}) {
+  const profile = step.refCode && profilesMap[step.refCode] ? profilesMap[step.refCode] : null;
+
+  if (profile) {
+    const tierClass = getTierClass(profile.tier);
+    const inputs = (profile.inputs || []).slice(0, 2);
+    const bridges = (profile.bridges || []).slice(0, 2);
+    const inputTags = inputs.map(t => `<span class="tag ${getTagClass(t)}">${escapeHtml(t)}</span>`).join('');
+    const bridgeTags = bridges.map(t => `<span class="tag tag-bridge ${getTagClass(t)}">${escapeHtml(t)}</span>`).join('');
+
+    return `
+      <div class="card-item" onclick="if(window.appOpenProfileModal){window.appOpenProfileModal('${escapeHtml(profile.refCode)}');}" style="cursor: pointer;">
+        <div>
+          <div class="card-header-bar">
+            <span class="card-category">KAT ${escapeHtml(profile.categoryCode)}: ${escapeHtml(profile.categoryName)}</span>
+            <span class="tier-badge ${tierClass}">${escapeHtml(profile.tier)}</span>
+          </div>
+          <h3 class="card-title">${escapeHtml(profile.name)}</h3>
+          <div class="card-subtitle">${escapeHtml(profile.subtitle || '')}</div>
+          <p class="card-overview">${escapeHtml(profile.overview || '')}</p>
+          <div class="card-tags">
+            ${inputTags}
+            ${bridgeTags}
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <div class="d-flex align-items-center gap-2">
+            <span class="card-vendor"><i class="fa-solid fa-building me-1 text-muted"></i> ${escapeHtml(profile.vendor || 'Industrie-Standard')}</span>
+          </div>
+          <button type="button" class="btn btn-outline-primary btn-sm btn-inspect py-1 px-2" data-ref="${escapeHtml(profile.refCode)}" style="font-size: 11px;">
+            Details →
+          </button>
+        </div>
+      </div>
+    `;
+  }
+
+  // Fallback for external systems (e.g. Jira, SAP PM) with identical Browser card component layout
+  return `
+    <div class="card-item" style="cursor: default;">
+      <div>
+        <div class="card-header-bar">
+          <span class="card-category">SCHICHT ${step.layer}: IT &amp; ENTERPRISE</span>
+          <span class="badge bg-secondary font-monospace" style="font-size: 10px;">EXTERN</span>
+        </div>
+        <h3 class="card-title">${escapeHtml(step.nodeName)}</h3>
+        <div class="card-subtitle">Enterprise IT / Bestandsinfrastruktur</div>
+        <p class="card-overview">Nahtlos über Standard-Schnittstellen (REST API, Webhook, OPC UA) angebundenes Subsystem zur Abbildung operativer Geschäftsprozesse.</p>
+        <div class="card-tags">
+          <span class="tag tag-opcua">REST API</span>
+          <span class="tag tag-bridge">Webhook</span>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <div class="d-flex align-items-center gap-2">
+          <span class="card-vendor"><i class="fa-solid fa-server me-1 text-muted"></i> Enterprise IT</span>
+        </div>
+        <span class="badge bg-light text-muted border font-monospace" style="font-size: 10px;">
+          Bestandssystem
+        </span>
+      </div>
+    </div>
+  `;
+}
+
+/**
  * Renders a single Use Case standalone HTML page using a 7-Block UI layout with modular CSS components.
  * @param {Object} uc - The Use Case object.
+ * @param {Object} profilesMap - Canonical profile lookup map.
  * @returns {string} The complete HTML document string.
  */
-function renderSingleUseCasePage(uc) {
+function renderSingleUseCasePage(uc, profilesMap = {}) {
+  const slug = uc.slug || uc.id.toLowerCase();
   const title = uc.title || uc.id;
   const subtitle = uc.subtitle || '';
   const tier = uc.tier || 'Tier 1';
@@ -90,7 +194,93 @@ function renderSingleUseCasePage(uc) {
     </section>
   ` : '';
 
-  // BLOCK 3: Extended Description, Highlights & Prerequisites HTML
+  // BLOCK 3: Horizontal 5-Layer Architecture Flow Carousel (Layer 1 left -> Layer 5 right)
+  const flowColumnsHtml = flow.map((step, idx) => {
+    const cardHtml = renderBrowserCardForNode(step, profilesMap);
+    const isLast = idx === flow.length - 1;
+    const isActive = idx === 0;
+
+    const arrowHtml = !isLast ? `
+      <div class="graph-flow-arrow" title="Datenfluss zu Schicht ${parseInt(step.layer, 10) + 1}">
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+    ` : '';
+
+    return `
+      <div class="graph-col-stage ${isActive ? 'is-active-layer' : ''}" data-layer="${step.layer}" data-index="${idx}" style="border-top: 3px solid var(--color-layer-${step.layer});">
+        <div class="graph-col-header">
+          <span class="graph-col-badge" style="background-color: var(--color-layer-${step.layer});">
+            SCHICHT ${step.layer}
+          </span>
+          <span class="graph-col-title" title="${escapeHtml(step.layerTitle)}">
+            ${escapeHtml(step.layerTitle.replace(/^Schicht\s*\d+\s*:\s*/i, ''))}
+          </span>
+        </div>
+
+        <div class="graph-col-role">
+          <div>
+            <div class="graph-col-role-label">
+              <i class="fa-solid fa-crosshairs me-1"></i> Rolle &amp; Systemaufgabe:
+            </div>
+            <div>${escapeHtml(step.role)}</div>
+          </div>
+        </div>
+
+        <div class="graph-col-component">
+          ${cardHtml}
+        </div>
+      </div>
+      ${arrowHtml}
+    `;
+  }).join('');
+
+  const techBlockHtml = `
+    <!-- BLOCK 3: Horizontal 5-Layer Architecture Flow Carousel -->
+    <section class="card border-0 shadow-sm p-4 mb-4 bg-white" id="useCaseArchitectureSection">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+        <div>
+          <h2 class="h6 fw-bold text-dark m-0">
+            <i class="fa-solid fa-diagram-project text-primary me-2"></i>2. 5-Schichten Architektur-Ablauf &amp; Integration
+          </h2>
+          <p class="text-muted small m-0 mt-1">
+            Strukturierter Daten- und Komponentenfluss von der Erfassung &amp; Sensorik (links) bis zur Immersion (rechts). In jeder Schicht sind die konkrete Rolle (oben) und die eingesetzte Technologie-Komponente (unten) zugeordnet.
+          </p>
+        </div>
+        
+        <div class="usecase-carousel-toolbar">
+          <div class="usecase-carousel-nav" id="usecaseCarouselNav">
+            <button type="button" class="btn btn-outline-secondary btn-sm" id="btnCarouselPrev" title="Vorherige Schicht">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="d-flex align-items-center gap-1" id="carouselLayerPills">
+              ${flow.map((step, idx) => `
+                <button type="button" class="usecase-layer-pill ${idx === 0 ? 'active' : ''}" data-layer="${step.layer}" data-index="${idx}" title="${escapeHtml(step.layerTitle)}">
+                  S${step.layer}
+                </button>
+              `).join('')}
+            </div>
+            <button type="button" class="btn btn-outline-secondary btn-sm" id="btnCarouselNext" title="Nächste Schicht">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+
+          <button type="button" class="btn btn-outline-secondary btn-sm btn-carousel-control is-playing" id="btnCarouselPlayPause" title="Auto-Play pausieren / starten">
+            <i class="fa-solid fa-pause"></i> Auto-Play
+          </button>
+
+          <button type="button" class="btn btn-outline-secondary btn-sm btn-export-stack" data-uc-slug="${escapeHtml(slug)}">
+            <i class="fa-solid fa-file-lines me-1"></i> Stack als Markdown kopieren
+          </button>
+        </div>
+      </div>
+      
+      <div class="usecase-horizontal-flow has-active-focus" id="usecaseFlowContainer">
+        ${flowColumnsHtml}
+      </div>
+    </section>
+  `;
+
+  // BLOCK 4: Extended Description, Highlights & Prerequisites HTML
   const highlightsListHtml = (ext.keyHighlights || []).map(item => `
     <li class="mb-2">
       <i class="fa-solid fa-circle-check text-primary me-2"></i>${escapeHtml(item)}
@@ -104,32 +294,28 @@ function renderSingleUseCasePage(uc) {
   `).join('');
 
   const overviewBlockHtml = `
-    <!-- BLOCK 3: Overview & Extended Description Block -->
+    <!-- BLOCK 4: Overview & Extended Description Block -->
     <section class="card border-0 shadow-sm p-4 mb-4 bg-white">
       <h2 class="h6 fw-bold text-dark mb-3">
-        <i class="fa-solid fa-align-left text-primary me-2"></i>2. Szenario-Beschreibung &amp; Systemkontext
+        <i class="fa-solid fa-align-left text-primary me-2"></i>3. Szenario-Beschreibung &amp; Systemkontext
       </h2>
-      ${ext.overview ? `<p class="text-secondary small leading-relaxed mb-4">${escapeHtml(ext.overview)}</p>` : ''}
+      <p class="text-secondary leading-relaxed mb-4">${escapeHtml(ext.overview || shortDesc)}</p>
       
-      <div class="row g-4">
+      <div class="row g-3">
         ${highlightsListHtml ? `
           <div class="col-md-6">
-            <div class="p-3 bg-light rounded border h-100">
-              <h3 class="h6 fw-bold text-dark mb-3"><i class="fa-solid fa-star text-primary me-2"></i>Kern-Vorteile &amp; Nutzen</h3>
-              <ul class="list-unstyled small text-secondary m-0 ps-0">
-                ${highlightsListHtml}
-              </ul>
+            <div class="p-3 rounded bg-light border h-100">
+              <div class="fw-bold small text-dark mb-2 uppercase font-monospace">Kernvorteile im Betrieb:</div>
+              <ul class="list-unstyled mb-0 small text-secondary">${highlightsListHtml}</ul>
             </div>
           </div>
         ` : ''}
-        
+
         ${prereqsListHtml ? `
           <div class="col-md-6">
-            <div class="p-3 bg-light rounded border h-100">
-              <h3 class="h6 fw-bold text-dark mb-3"><i class="fa-solid fa-list-check text-primary me-2"></i>Voraussetzungen &amp; Tools</h3>
-              <ul class="list-unstyled small text-secondary m-0 ps-0">
-                ${prereqsListHtml}
-              </ul>
+            <div class="p-3 rounded bg-light border h-100">
+              <div class="fw-bold small text-dark mb-2 uppercase font-monospace">Erforderliche Infrastruktur:</div>
+              <ul class="list-unstyled mb-0 small text-secondary">${prereqsListHtml}</ul>
             </div>
           </div>
         ` : ''}
@@ -137,7 +323,7 @@ function renderSingleUseCasePage(uc) {
     </section>
   `;
 
-  // BLOCK 4: Media & Rich Content Block (YouTube & Image Gallery)
+  // BLOCK 5: Media & Rich Content Block (YouTube & Image Gallery)
   const ytHtml = yt && yt.id ? `
     <div class="mb-4">
       <h3 class="h6 fw-bold text-dark mb-3"><i class="fa-brands fa-youtube text-danger me-2"></i>${escapeHtml(yt.title || 'Video-Demonstration')}</h3>
@@ -165,69 +351,15 @@ function renderSingleUseCasePage(uc) {
   ` : '';
 
   const mediaBlockHtml = (ytHtml || galleryHtml) ? `
-    <!-- BLOCK 4: Media & Rich Content Block -->
+    <!-- BLOCK 5: Media & Rich Content Block -->
     <section class="card border-0 shadow-sm p-4 mb-4 bg-white">
       <h2 class="h6 fw-bold text-dark mb-3">
-        <i class="fa-solid fa-photo-film text-primary me-2"></i>3. Demonstration &amp; Medien-Dokumentation
+        <i class="fa-solid fa-photo-film text-primary me-2"></i>4. Demonstration &amp; Medien-Dokumentation
       </h2>
       ${ytHtml}
       ${galleryHtml}
     </section>
   ` : '';
-
-  // BLOCK 5: Technical Specifications & 5-Layer Vertical Dual-Column Stack
-  const flowRowsHtml = flow.map(step => `
-    <div class="usecase-stack-row">
-      <div class="row g-3 align-items-center">
-        
-        <!-- Left Column: Tool/Product Name, RefCode & Detail Inspector Trigger -->
-        <div class="col-md-5">
-          <div class="d-flex align-items-center gap-2 mb-2">
-            <span class="badge bg-primary text-white font-monospace px-2 py-1">SCHICHT ${step.layer}</span>
-            <span class="fw-bold text-muted uppercase font-monospace small">${escapeHtml(step.layerTitle)}</span>
-          </div>
-
-          <h3 class="h6 fw-black text-dark mb-2">${escapeHtml(step.nodeName)}</h3>
-
-          <div class="d-flex align-items-center gap-2 flex-wrap">
-            ${step.refCode ? `
-              <span class="badge bg-light text-dark border font-monospace">${escapeHtml(step.refCode)}</span>
-              <button type="button" class="btn btn-outline-primary btn-sm py-1 px-2 btn-inspect" data-ref="${escapeHtml(step.refCode)}" onclick="if(window.appOpenProfileModal){window.appOpenProfileModal('${escapeHtml(step.refCode)}');}">
-                <i class="fa-solid fa-eye me-1"></i> Details anzeigen →
-              </button>
-            ` : `
-              <span class="badge bg-light text-muted border font-monospace">EXTERN / IT SYSTEM</span>
-            `}
-          </div>
-        </div>
-
-        <!-- Right Column: Parallel Layer Function & Task Description -->
-        <div class="col-md-7">
-          <div class="usecase-stack-right">
-            <div class="usecase-stack-label"><i class="fa-solid fa-gear text-primary me-1"></i> Aufgabe &amp; Funktion auf Schicht ${step.layer}:</div>
-            <p class="text-secondary small m-0 leading-relaxed">${escapeHtml(step.role)}</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  `).join('');
-
-  const techBlockHtml = `
-    <!-- BLOCK 5: Technical Specifications & 5-Layer Vertical Dual-Column Stack Block -->
-    <section class="card border-0 shadow-sm p-4 mb-4 bg-white">
-      <h2 class="h6 fw-bold text-dark mb-2">
-        <i class="fa-solid fa-layer-group text-primary me-2"></i>4. Vertikaler 5-Schichten Architekturbauplan
-      </h2>
-      <p class="text-muted small mb-4">
-        Parallele Übersicht der eingesetzten Werkzeuge (links) und ihrer konkreten Funktion auf der jeweiligen Ebene (rechts). Klicken Sie auf <strong>"Details anzeigen →"</strong>, um den vollständigen Technologie-Inspector im Browser zu öffnen:
-      </p>
-      
-      <div class="vertical-architecture-stack">
-        ${flowRowsHtml}
-      </div>
-    </section>
-  `;
 
   // BLOCK 6: Operational Benefit Callout Block
   const benefitBlockHtml = `
@@ -290,27 +422,24 @@ function renderSingleUseCasePage(uc) {
   <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm px-3 flex-shrink-0">
     <div class="container-fluid d-flex align-items-center justify-content-between">
       
-      <div class="d-flex align-items-center" style="min-width: 180px;">
+      <!-- Brand Logo -->
+      <div class="d-flex align-items-center">
         <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="../../index.html">
           <img src="../../assets/Metaverse Logo bunt.svg" alt="Industrial Metaverse Logo" class="logo-img" title="Industrial Metaverse">
-          <div class="logo-divider"></div>
-          <img src="../../assets/BaWue_WM_Absenderlogo_rgb_pos_Gefoerdert.svg" alt="Gefördert durch Baden-Württemberg" class="logo-img" title="Ministerium BW">
         </a>
       </div>
 
+      <!-- Center Title -->
       <div class="text-center flex-grow-1 px-2">
         <span class="fw-black text-dark fs-6 d-none d-md-inline-block text-truncate" style="max-width: 90%;">
           Use Case: ${escapeHtml(title)}
         </span>
       </div>
 
-      <div class="d-flex align-items-center justify-content-end gap-2" style="min-width: 180px;">
-        <a href="../index.html" class="btn btn-outline-secondary btn-sm">
-          <i class="fa-solid fa-arrow-left me-1"></i> Use Cases Hub
-        </a>
-
+      <!-- Hamburger Menu -->
+      <div class="d-flex align-items-center justify-content-end">
         <div class="dropdown">
-          <button class="btn btn-light btn-sm border dropdown-toggle" id="hamburgerBtn" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Menü">
+          <button class="btn btn-light btn-sm border" id="hamburgerBtn" type="button" aria-expanded="false" title="Menü">
             <i class="fa-solid fa-bars"></i>
           </button>
           <ul class="dropdown-menu dropdown-menu-end shadow-sm">
@@ -324,26 +453,28 @@ function renderSingleUseCasePage(uc) {
           </ul>
         </div>
       </div>
+
     </div>
   </nav>
 
-  <!-- Main Block-Based Container -->
-  <main class="container app-page-container py-4 flex-grow-1">
+  <!-- Main Content Container -->
+  <main class="container py-4 flex-grow-1" style="max-width: 1300px;">
     
-    <!-- BLOCK 1: Hero Header Block -->
-    <header class="card border-0 shadow-sm p-4 p-md-5 mb-4 bg-white">
+    <!-- BLOCK 1: Hero & Strategic Header Block -->
+    <header class="app-hero-card mb-4">
       <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
         <div class="d-flex align-items-center gap-2">
-          <span class="badge bg-primary text-white font-monospace px-2 py-1">${escapeHtml(uc.id)}</span>
-          <span class="badge bg-light text-dark border font-monospace px-2 py-1">${escapeHtml(tierLabel)}</span>
+          <span class="badge bg-primary text-white font-monospace fs-6 px-3 py-1">${escapeHtml(uc.id)}</span>
+          <span class="badge bg-light text-dark border font-monospace fs-6 px-3 py-1">${escapeHtml(tierLabel)}</span>
         </div>
-        ${ext.timeframe ? `<span class="small text-muted font-monospace"><i class="fa-solid fa-clock me-1"></i>${escapeHtml(ext.timeframe)}</span>` : ''}
+        <a href="../index.html" class="btn btn-outline-secondary btn-sm">
+          <i class="fa-solid fa-arrow-left me-1"></i> Zurück zum Use Cases Hub
+        </a>
       </div>
 
       <h1 class="h3 fw-black text-dark mb-2">${escapeHtml(title)}</h1>
-      ${subtitle ? `<h2 class="h6 fw-bold text-primary mb-3">${escapeHtml(subtitle)}</h2>` : ''}
-      
-      <p class="text-secondary lead fs-6 m-0">${escapeHtml(shortDesc)}</p>
+      ${subtitle ? `<p class="lead text-primary fw-bold fs-6 mb-3">${escapeHtml(subtitle)}</p>` : ''}
+      <p class="text-secondary m-0">${escapeHtml(shortDesc)}</p>
     </header>
 
     ${kpisBlockHtml}
@@ -352,15 +483,20 @@ function renderSingleUseCasePage(uc) {
     ${mediaBlockHtml}
     ${benefitBlockHtml}
 
-    <!-- BLOCK 7: Action Footer Navigation Block -->
-    <footer class="card border-0 shadow-sm p-3 bg-white mb-4">
+    <!-- BLOCK 7: Action & Navigation Footer Block -->
+    <footer class="card border-0 shadow-sm p-4 bg-white">
       <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
         <a href="../index.html" class="btn btn-outline-secondary btn-sm">
-          <i class="fa-solid fa-arrow-left me-1"></i> Zurück zum Use Cases Hub
+          <i class="fa-solid fa-arrow-left me-1"></i> Zurück zur Übersicht aller Use Cases
         </a>
-        <a href="./usecase.json" target="_blank" class="btn btn-outline-primary btn-sm">
-          <i class="fa-solid fa-code me-1"></i> JSON Quelltext
-        </a>
+        <div class="d-flex gap-2">
+          <button type="button" class="btn btn-outline-secondary btn-sm btn-export-stack" data-uc-slug="${escapeHtml(slug)}">
+            <i class="fa-solid fa-file-lines me-1"></i> Stack als Markdown kopieren
+          </button>
+          <a href="./usecase.json" target="_blank" class="btn btn-outline-primary btn-sm">
+            <i class="fa-solid fa-code me-1"></i> JSON Quelltext
+          </a>
+        </div>
       </div>
     </footer>
 
@@ -404,66 +540,93 @@ function renderSingleUseCasePage(uc) {
 }
 
 /**
- * Renders the single-page consolidated Use Cases hub page at usecases/index.html.
+ * Renders the dedicated Use Cases Hub page at usecases/index.html.
  * @param {Array<Object>} usecases - Array of all Use Case objects.
- * @returns {string} The HTML string for the central hub page.
+ * @returns {string} The complete HTML document string.
  */
 function renderUseCaseHubPage(usecases) {
   const cardsHtml = usecases.map(uc => {
     const slug = uc.slug || uc.id.toLowerCase();
     const title = uc.title || uc.id;
     const tier = uc.tier || 'Tier 1';
+    const tierLabel = uc.tierLabel || tier;
     const shortDesc = uc.shortDesc || '';
     const goal = uc.goal || '';
     const kpis = uc.kpis || [];
     const flow = uc.flow || [];
 
-    const flowSequenceHtml = flow.map(step => `
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S${step.layer}</div>
-          <div class="fw-bold text-dark text-truncate small" title="${escapeHtml(step.nodeName)}">${escapeHtml(step.nodeName)}</div>
-        </div>
-      </div>
+    const miniSequenceChips = flow.map(step => `
+      <span class="usecase-mini-chip" title="Schicht ${step.layer}: ${escapeHtml(step.nodeName)}">
+        <span class="badge" style="background-color: var(--color-layer-${step.layer}); color: white; font-size: 8px; padding: 2px 4px;">S${step.layer}</span>
+        ${escapeHtml(step.nodeName)}
+      </span>
+    `).join('');
+
+    const kpiChips = kpis.map(k => `
+      <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace" style="font-size: 10px;">
+        ${escapeHtml(k.label)}: ${escapeHtml(k.value)}
+      </span>
     `).join('');
 
     return `
-      <div class="col-12 mb-4 usecase-card-item" data-tier="${escapeHtml(tier)}" data-text="${escapeHtml((title + ' ' + shortDesc + ' ' + goal).toLowerCase())}">
-        <div class="card border-0 shadow-sm p-4 bg-white hover-shadow transition">
-          
-          <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
-            <div class="d-flex align-items-center gap-2">
-              <span class="badge bg-primary text-white font-monospace">${escapeHtml(uc.id)}</span>
-              <span class="badge bg-light text-dark border font-monospace">${escapeHtml(tier)}</span>
+      <div class="col-lg-6 col-12 mb-3 uc-card-item" data-tier="${escapeHtml(tier)}" data-text="${escapeHtml((title + ' ' + shortDesc + ' ' + goal + ' ' + (uc.flow || []).map(f => f.nodeName).join(' ')).toLowerCase())}">
+        <div class="usecase-card-item">
+          <div>
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
+              <div class="d-flex align-items-center gap-2">
+                <span class="badge bg-primary text-white font-monospace">${escapeHtml(uc.id)}</span>
+                <span class="badge bg-light text-dark border font-monospace">${escapeHtml(tierLabel)}</span>
+              </div>
+              <a href="./${escapeHtml(slug)}/index.html" class="btn btn-outline-primary btn-sm py-1 px-2 fw-bold" style="font-size: 11px;">
+                Architektur &amp; Ablauf →
+              </a>
             </div>
-            <a href="./${escapeHtml(slug)}/index.html" class="btn btn-primary btn-sm fw-bold">
-              Use Case öffnen <i class="fa-solid fa-arrow-right ms-1"></i>
-            </a>
+
+            <h3 class="h6 fw-bold text-dark mb-1">${escapeHtml(title)}</h3>
+            <p class="text-secondary small mb-2">${escapeHtml(shortDesc)}</p>
+
+            <div class="usecase-mini-sequence">
+              ${miniSequenceChips}
+            </div>
+
+            ${kpiChips ? `<div class="d-flex gap-1 flex-wrap mb-2">${kpiChips}</div>` : ''}
           </div>
 
-          <h2 class="h5 fw-bold text-dark mb-2">${escapeHtml(title)}</h2>
-          <p class="text-secondary small mb-3">${escapeHtml(shortDesc)}</p>
-
-          <!-- 5-Layer Sequence Preview -->
-          <div class="mb-3">
-            <div class="fw-bold text-muted uppercase mb-2 small"><i class="fa-solid fa-sitemap text-primary me-1"></i>5-Schichten Ablauf-Sequenz:</div>
-            <div class="row g-2">
-              ${flowSequenceHtml}
-            </div>
+          <div class="p-2 rounded bg-light border-start border-3 border-primary small text-secondary mt-2">
+            <strong class="text-primary me-1"><i class="fa-solid fa-bullseye"></i> Ziel:</strong> ${escapeHtml(goal)}
           </div>
-
-          ${kpis.length > 0 ? `
-            <div class="d-flex gap-2 mb-3 flex-wrap">
-              ${kpis.map(k => `<span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace">${escapeHtml(k.label)}: ${escapeHtml(k.value)}</span>`).join('')}
-            </div>
-          ` : ''}
-
-          <div class="p-2 rounded bg-light border-start border-3 border-primary small text-secondary">
-            <strong class="text-primary me-1"><i class="fa-solid fa-bullseye"></i> Betrieblicher Nutzen:</strong> ${escapeHtml(goal)}
-          </div>
-
         </div>
       </div>
+    `;
+  }).join('');
+
+  const listRowsHtml = usecases.map(uc => {
+    const slug = uc.slug || uc.id.toLowerCase();
+    const title = uc.title || uc.id;
+    const tier = uc.tier || 'Tier 1';
+    const flow = uc.flow || [];
+
+    const flowSummary = flow.map(f => `S${f.layer}: ${f.nodeName}`).join(' ➔ ');
+
+    return `
+      <tr class="uc-table-row" data-tier="${escapeHtml(tier)}" data-text="${escapeHtml((title + ' ' + uc.shortDesc + ' ' + uc.goal).toLowerCase())}">
+        <td class="font-monospace fw-bold text-primary">${escapeHtml(uc.id)}</td>
+        <td>
+          <a href="./${escapeHtml(slug)}/index.html" class="fw-bold text-dark text-decoration-none">
+            ${escapeHtml(title)}
+          </a>
+          <div class="text-muted small">${escapeHtml(uc.shortDesc)}</div>
+        </td>
+        <td><span class="badge bg-light text-dark border font-monospace">${escapeHtml(tier)}</span></td>
+        <td class="small text-secondary font-monospace" style="max-width: 320px; white-space: normal;">
+          ${escapeHtml(flowSummary)}
+        </td>
+        <td class="text-end">
+          <a href="./${escapeHtml(slug)}/index.html" class="btn btn-outline-primary btn-sm py-1 px-2" style="font-size: 11px;">
+            Öffnen →
+          </a>
+        </td>
+      </tr>
     `;
   }).join('');
 
@@ -473,12 +636,12 @@ function renderUseCaseHubPage(usecases) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Use Cases Hub | Industrial Metaverse Taxonomie</title>
-  <meta name="description" content="Konsolidierter Baukasten Use Cases Hub der Industrial Metaverse Technologie-Taxonomie im Projekt Reallabor 2.0 am Forschungscampus ARENA2036.">
+  <meta name="description" content="Konsolidierter Use Cases Hub der Industrial Metaverse Technologie-Taxonomie.">
   
   <!-- OpenGraph & Social Media -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Use Cases Hub | Industrial Metaverse Taxonomie">
-  <meta property="og:description" content="Konsolidierter Baukasten Use Cases Hub der Industrial Metaverse Technologie-Taxonomie im Projekt Reallabor 2.0 am Forschungscampus ARENA2036.">
+  <meta property="og:description" content="Konsolidierter Use Cases Hub der Industrial Metaverse Technologie-Taxonomie.">
   <meta property="og:image" content="https://arena2036.github.io/IMV-taxonomie/assets/ARENA2036_combinationmark_orange_black.png">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -509,28 +672,28 @@ function renderUseCaseHubPage(usecases) {
 </head>
 <body class="bg-light text-dark min-vh-100 d-flex flex-column">
 
+  <!-- Top Navigation Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm px-3 flex-shrink-0">
     <div class="container-fluid d-flex align-items-center justify-content-between">
-      <div class="d-flex align-items-center" style="min-width: 180px;">
+      
+      <!-- Brand Logo -->
+      <div class="d-flex align-items-center">
         <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="../index.html">
           <img src="../assets/Metaverse Logo bunt.svg" alt="Industrial Metaverse Logo" class="logo-img" title="Industrial Metaverse">
-          <div class="logo-divider"></div>
-          <img src="../assets/BaWue_WM_Absenderlogo_rgb_pos_Gefoerdert.svg" alt="Gefördert durch Baden-Württemberg" class="logo-img" title="Ministerium BW">
         </a>
       </div>
 
+      <!-- Center Title -->
       <div class="text-center flex-grow-1 px-2">
         <span class="fw-black text-dark fs-6 d-none d-md-inline-block">
-          Use Cases Hub: Baukasten Architekturen
+          Use Cases Hub
         </span>
       </div>
 
-      <div class="d-flex align-items-center justify-content-end gap-2" style="min-width: 180px;">
-        <a href="../index.html" class="btn btn-outline-secondary btn-sm">
-          <i class="fa-solid fa-house me-1"></i> Startseite
-        </a>
+      <!-- Hamburger Menu -->
+      <div class="d-flex align-items-center justify-content-end">
         <div class="dropdown">
-          <button class="btn btn-light btn-sm border dropdown-toggle" id="hamburgerBtn" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Menü">
+          <button class="btn btn-light btn-sm border" id="hamburgerBtn" type="button" aria-expanded="false" title="Menü">
             <i class="fa-solid fa-bars"></i>
           </button>
           <ul class="dropdown-menu dropdown-menu-end shadow-sm">
@@ -544,53 +707,84 @@ function renderUseCaseHubPage(usecases) {
           </ul>
         </div>
       </div>
+
     </div>
   </nav>
 
-  <main class="container app-page-container py-4 flex-grow-1">
+  <!-- Main Content Container -->
+  <main class="container py-4 flex-grow-1" style="max-width: 1200px;">
     
-    <div class="card border-0 shadow-sm p-4 p-md-5 mb-4 bg-white">
-      <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-3">
+    <!-- Hero Canvas Header -->
+    <div class="card shadow-sm border-0 mb-4 bg-white p-4 p-md-5">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
         <div>
-          <h1 class="h3 fw-black text-dark m-0 mb-2">Baukasten-Use-Cases: Umsetzung, Kosten &amp; Nutzen</h1>
+          <span class="badge bg-primary text-white font-monospace mb-2">USE CASES HUB</span>
+          <h1 class="h3 fw-black text-dark m-0 mb-2">Use Cases Hub</h1>
           <p class="text-secondary small m-0" style="max-width: 850px;">
-            Konsolidierter Hub für alle ${usecases.length} auditierte Baukasten-Use-Cases. Jeder Use Case beantwortet konkret: <strong>Wie erfolgt die Umsetzung über die 5 Schichten? Welcher Investitionsrahmen (Tier 1 bis 3) ist zu erwarten? Und welche betrieblichen Nutzenpotenziale entstehen?</strong>
+            Konsolidierter Hub für alle ${usecases.length} auditierte Industrial Metaverse Referenz-Architekturen. Erforschen Sie das Zusammenspiel aller 5 Schichten von der Erfassung bis zur Immersion, unterteilt in transparente Investitionsklassen.
           </p>
         </div>
-        <a href="https://github.com/ARENA2036/IMV-taxonomie/pulls" target="_blank" class="btn btn-primary btn-sm px-3">
-          <i class="fa-brands fa-github me-1"></i> Use Case via PR beitragen
+        <a href="https://github.com/ARENA2036/IMV-taxonomie/pulls" target="_blank" class="btn btn-outline-dark btn-sm px-3">
+          <i class="fa-brands fa-github me-1"></i> Use Case einreichen
         </a>
       </div>
     </div>
 
-    <!-- Search & Tier Filter Toolbar -->
-    <div class="card border-0 shadow-sm p-3 mb-4 bg-white">
-      <div class="row g-2 align-items-center">
-        <div class="col-md-7">
-          <div class="input-group input-group-sm">
-            <span class="input-group-text bg-light border-end-0"><i class="fa-solid fa-magnifying-glass text-muted"></i></span>
-            <input type="text" id="hubSearchInput" class="form-control border-start-0" placeholder="Use Case, Technologie oder Nutzen suchen..." autocomplete="off">
-            <button class="btn btn-outline-secondary" type="button" id="hubSearchClearBtn" title="Zurücksetzen"><i class="fa-solid fa-xmark"></i></button>
+    <!-- Filter & Toolbar Card -->
+    <div class="card shadow-sm border-0 mb-4 bg-white p-3">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+        <!-- Live Search Input -->
+        <div class="input-group input-group-sm flex-grow-1" style="max-width: 450px;">
+          <span class="input-group-text bg-light border-end-0"><i class="fa-solid fa-magnifying-glass text-muted"></i></span>
+          <input type="text" id="ucSearchInput" class="form-control border-start-0 border-end-0" placeholder="Use Case, Technologie oder Ziel suchen..." autocomplete="off">
+          <button class="btn btn-outline-secondary" type="button" id="ucSearchClearBtn" title="Zurücksetzen"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <!-- View Mode Toggle -->
+        <div class="d-flex align-items-center gap-2">
+          <div class="btn-group btn-group-sm" role="group">
+            <button type="button" class="btn btn-outline-secondary active" id="btnUcGridMode" title="Rasteransicht"><i class="fa-solid fa-border-all"></i> Raster</button>
+            <button type="button" class="btn btn-outline-secondary" id="btnUcListMode" title="Listenansicht"><i class="fa-solid fa-list"></i> Liste</button>
           </div>
         </div>
+      </div>
 
-        <div class="col-md-3">
-          <select id="hubFilterTier" class="form-select form-select-sm">
-            <option value="ALL">Alle Kostengruppen</option>
-            <option value="Tier 1">Tier 1 (≤ €30k / Starter &amp; Open Source)</option>
-            <option value="Tier 2">Tier 2 (≤ €100k / Skalierbar &amp; Modular)</option>
-            <option value="Tier 3">Tier 3 (> €100k / Enterprise OEM)</option>
-          </select>
+      <!-- Horizontal Tier Category Chips Bar -->
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 pt-2 border-top">
+        <div class="layer-chips-container" id="ucChipsBar">
+          <button class="layer-chip active" data-tier="ALL"><i class="fa-solid fa-layer-group me-1"></i> Alle Use Cases (${usecases.length})</button>
+          <button class="layer-chip" data-tier="Tier 1"><i class="fa-solid fa-seedling text-success me-1"></i> Tier 1: Starter (≤ €30k)</button>
+          <button class="layer-chip" data-tier="Tier 2"><i class="fa-solid fa-cubes text-primary me-1"></i> Tier 2: Modular (≤ €100k)</button>
+          <button class="layer-chip" data-tier="Tier 3"><i class="fa-solid fa-building text-warning me-1"></i> Tier 3: OEM (> €100k)</button>
         </div>
-
-        <div class="col-md-2 text-md-end small fw-bold text-secondary">
-          Zeige <span id="hubCountBadge" class="text-primary fw-black">${usecases.length}</span> Use Cases
+        <div class="small text-muted" id="ucStatusBar">
+          Zeige <strong>${usecases.length}</strong> Use Cases
         </div>
       </div>
     </div>
 
-    <div class="row" id="useCaseCardsContainer">
+    <!-- Main Content Container: Grid & List -->
+    <div id="ucGridView" class="row">
       ${cardsHtml}
+    </div>
+
+    <div id="ucListView" class="bg-white rounded border shadow-sm d-none mb-4">
+      <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+          <thead class="table-light small text-uppercase">
+            <tr>
+              <th style="width: 100px;">ID</th>
+              <th>Use Case Titel &amp; Kurzbeschreibung</th>
+              <th style="width: 120px;">Tier</th>
+              <th>5-Schichten Ablauf-Stack</th>
+              <th style="width: 110px;" class="text-end">Aktion</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${listRowsHtml}
+          </tbody>
+        </table>
+      </div>
     </div>
 
   </main>
@@ -598,6 +792,7 @@ function renderUseCaseHubPage(usecases) {
   <!-- Site Footer -->
   <footer class="py-3 text-center small text-muted border-top bg-white">
     ARENA2036 Industrial Metaverse Taxonomy | 
+    <a href="../index.html" class="text-muted text-decoration-none font-weight-bold">Startseite</a> | 
     <a href="./index.html" class="text-muted text-decoration-none font-weight-bold">Use Cases Hub</a> | 
     <a href="../browser.html" class="text-muted text-decoration-none font-weight-bold">Browser</a> | 
     <a href="../architecture.html" class="text-muted text-decoration-none font-weight-bold">Architektur</a> | 
@@ -605,49 +800,8 @@ function renderUseCaseHubPage(usecases) {
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Hub Live Search & Filter Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const searchInput = document.getElementById('hubSearchInput');
-      const searchClear = document.getElementById('hubSearchClearBtn');
-      const filterTier = document.getElementById('hubFilterTier');
-      const countBadge = document.getElementById('hubCountBadge');
-      const cards = document.querySelectorAll('.usecase-card-item');
-
-      function filterHubCards() {
-        const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
-        const tier = filterTier ? filterTier.value : 'ALL';
-        let visibleCount = 0;
-
-        cards.forEach(card => {
-          const cardTier = card.getAttribute('data-tier') || '';
-          const cardText = card.getAttribute('data-text') || '';
-
-          const matchesTier = (tier === 'ALL' || cardTier === tier);
-          const matchesQuery = (query === '' || cardText.includes(query));
-
-          if (matchesTier && matchesQuery) {
-            card.style.display = 'block';
-            visibleCount++;
-          } else {
-            card.style.display = 'none';
-          }
-        });
-
-        if (countBadge) countBadge.textContent = visibleCount;
-      }
-
-      if (searchInput) searchInput.addEventListener('input', filterHubCards);
-      if (filterTier) filterTier.addEventListener('change', filterHubCards);
-      if (searchClear && searchInput) {
-        searchClear.addEventListener('click', () => {
-          searchInput.value = '';
-          filterHubCards();
-        });
-      }
-    });
-  </script>
+  <script src="../data/index_data.js"></script>
+  <script src="../app.js"></script>
 </body>
 </html>`;
 }

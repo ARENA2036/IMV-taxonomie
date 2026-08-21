@@ -29,12 +29,10 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm px-3 flex-shrink-0">
     <div class="container-fluid d-flex align-items-center justify-content-between">
       
-      <!-- Left: Logos (without ARENA logo) -->
-      <div class="d-flex align-items-center" style="min-width: 180px;">
+      <!-- Brand Logo -->
+      <div class="d-flex align-items-center">
         <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="./index.html">
           <img src="./assets/Metaverse Logo bunt.svg" alt="Industrial Metaverse Logo" class="logo-img" title="Industrial Metaverse">
-          <div class="logo-divider"></div>
-          <img src="./assets/BaWue_WM_Absenderlogo_rgb_pos_Gefoerdert.svg" alt="Gefördert durch Baden-Württemberg" class="logo-img" title="Ministerium BW">
         </a>
       </div>
 
@@ -45,19 +43,10 @@
         </span>
       </div>
 
-      <!-- Right: Action Buttons & Hamburger Menu -->
-      <div class="d-flex align-items-center justify-content-end gap-2" style="min-width: 180px;">
-        <button class="btn btn-outline-primary btn-sm" id="btnCompare" style="display: none;">
-          <i class="fa-solid fa-code-compare me-1"></i> Vergleichen (<span id="compareCount">0</span>)
-        </button>
-
-        <a href="./index.html" class="btn btn-outline-secondary btn-sm">
-          <i class="fa-solid fa-house me-1"></i> Startseite
-        </a>
-
-        <!-- Hamburger Dropdown Menu -->
+      <!-- Right: Hamburger Menu -->
+      <div class="d-flex align-items-center justify-content-end">
         <div class="dropdown">
-          <button class="btn btn-light btn-sm border dropdown-toggle" id="hamburgerBtn" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Menü">
+          <button class="btn btn-light btn-sm border" id="hamburgerBtn" type="button" aria-expanded="false" title="Menü">
             <i class="fa-solid fa-bars"></i>
           </button>
           <ul class="dropdown-menu dropdown-menu-end shadow-sm">
@@ -67,7 +56,7 @@
             <li><a class="dropdown-item" href="./usecases/index.html"><i class="fa-solid fa-sitemap text-muted me-2"></i>Use Cases Hub</a></li>
             <li><a class="dropdown-item" href="./architecture.html"><i class="fa-solid fa-diagram-project text-muted me-2"></i>Architektur Spezifikation</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="./impressum.html"><i class="fa-solid fa-scale-balanced text-muted me-2"></i>Impressum & Rechtliches</a></li>
+            <li><a class="dropdown-item" href="./impressum.html"><i class="fa-solid fa-scale-balanced text-muted me-2"></i>Impressum &amp; Rechtliches</a></li>
           </ul>
         </div>
       </div>
@@ -92,20 +81,21 @@
     <main class="flex-grow-1 d-flex flex-column bg-light overflow-hidden">
       
       <!-- Control Filter Toolbar -->
+      <!-- Top Action Toolbar -->
       <div class="p-3 bg-white border-bottom d-flex justify-content-between align-items-center flex-wrap gap-2">
-        <div class="d-flex align-items-center gap-2 flex-grow-1" style="max-width: 700px;">
+        <div class="d-flex align-items-center gap-2 flex-grow-1" style="max-width: 750px;">
           
           <!-- Live Search Input -->
           <div class="input-group input-group-sm">
             <span class="input-group-text bg-light border-end-0"><i class="fa-solid fa-magnifying-glass text-muted"></i></span>
-            <input type="text" id="searchInput" class="form-control border-start-0" placeholder="Technologie, Standard, Lizenz oder Vendor suchen..." autocomplete="off">
+            <input type="text" id="searchInput" class="form-control border-start-0 border-end-0" placeholder="Technologie, Format (z. B. OpenUSD, STEP), Lizenz oder Vendor suchen..." autocomplete="off">
             <button class="btn btn-outline-secondary" type="button" id="searchClearBtn" title="Zurücksetzen"><i class="fa-solid fa-xmark"></i></button>
           </div>
 
           <!-- Tier Filter Select -->
           <select id="filterTier" class="form-select form-select-sm" style="max-width: 220px;">
             <option value="ALL">Alle Investitionsklassen (Tier 1-3)</option>
-            <option value="Tier 1">Tier 1 (≤ €30k / Starter & Open Source)</option>
+            <option value="Tier 1">Tier 1 (≤ €30k / Starter &amp; Open Source)</option>
             <option value="Tier 2">Tier 2 (≤ €100k / Skalierbar &amp; Modular)</option>
             <option value="Tier 3">Tier 3 (> €100k / Enterprise OEM)</option>
           </select>
@@ -122,9 +112,44 @@
         </div>
 
         <!-- View Mode Toggle -->
-        <div class="btn-group btn-group-sm" role="group">
-          <button type="button" class="btn btn-outline-secondary active" id="btnGridMode" title="Rasteransicht"><i class="fa-solid fa-border-all"></i> Raster</button>
-          <button type="button" class="btn btn-outline-secondary" id="btnListMode" title="Listenansicht"><i class="fa-solid fa-list"></i> Liste</button>
+        <div class="d-flex align-items-center gap-2">
+          <div class="btn-group btn-group-sm" role="group">
+            <button type="button" class="btn btn-outline-secondary active" id="btnGridMode" title="Rasteransicht"><i class="fa-solid fa-border-all"></i> Raster</button>
+            <button type="button" class="btn btn-outline-secondary" id="btnListMode" title="Listenansicht"><i class="fa-solid fa-list"></i> Liste</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- High-Velocity Layer Quick-Filter Chips Bar -->
+      <div class="px-3 py-2 bg-white border-bottom d-flex align-items-center justify-content-between flex-wrap gap-2">
+        <div class="layer-chips-container" id="layerChipsBar">
+          <button type="button" class="layer-chip active" data-layer="ALL">
+            <span>Alle Schichten</span>
+            <span class="chip-kbd">0</span>
+          </button>
+          <button type="button" class="layer-chip" data-layer="1">
+            <span style="color: var(--color-layer-1);"><i class="fa-solid fa-satellite-dish me-1"></i>1. Sensorik</span>
+            <span class="chip-kbd">1</span>
+          </button>
+          <button type="button" class="layer-chip" data-layer="2">
+            <span style="color: var(--color-layer-2);"><i class="fa-solid fa-cubes me-1"></i>2. CAD/BIM</span>
+            <span class="chip-kbd">2</span>
+          </button>
+          <button type="button" class="layer-chip" data-layer="3">
+            <span style="color: var(--color-layer-3);"><i class="fa-solid fa-network-wired me-1"></i>3. Middleware</span>
+            <span class="chip-kbd">3</span>
+          </button>
+          <button type="button" class="layer-chip" data-layer="4">
+            <span style="color: var(--color-layer-4);"><i class="fa-solid fa-brain me-1"></i>4. Simulation</span>
+            <span class="chip-kbd">4</span>
+          </button>
+          <button type="button" class="layer-chip" data-layer="5">
+            <span style="color: var(--color-layer-5);"><i class="fa-solid fa-vr-cardboard me-1"></i>5. Immersion</span>
+            <span class="chip-kbd">5</span>
+          </button>
+        </div>
+        <div class="small text-muted font-monospace d-none d-md-block" style="font-size: 11px;">
+          Tipp: Tasten <kbd class="search-kbd">1</kbd>–<kbd class="search-kbd">5</kbd> für Direktschaltung • <kbd class="search-kbd">?</kbd> für Hilfe
         </div>
       </div>
 
@@ -162,7 +187,7 @@
     </div>
   </div>
 
-  <!-- Compare Modal -->
+  <!-- Compare Modal with Enterprise Export -->
   <div class="modal fade" id="compareModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-scrollable">
       <div class="modal-content">
@@ -173,12 +198,26 @@
         <div class="modal-body" id="compareModalBody">
           <!-- Dynamisch gerendert via app.js -->
         </div>
+        <div class="modal-footer justify-content-between flex-wrap gap-2">
+          <div class="small text-muted font-monospace">Maximal 4 Technologien gleichzeitig</div>
+          <div class="d-flex align-items-center gap-2">
+            <button type="button" class="btn btn-outline-secondary btn-sm btn-export" id="btnExportMd">
+              <i class="fa-solid fa-file-lines me-1"></i> Als Markdown kopieren
+            </button>
+            <button type="button" class="btn btn-outline-secondary btn-sm btn-export" id="btnExportCsv">
+              <i class="fa-solid fa-file-csv me-1"></i> Als CSV herunterladen
+            </button>
+            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">
+              Schließen
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- Bootstrap 5 JS Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./data/index_data.js"></script>
   <script src="./app.js"></script>
 </body>

@@ -56,35 +56,51 @@
       "layerTitle": "Schicht 1: Erfassung & Sensorik",
       "refCode": "IND-META-2026-OPC-UA",
       "nodeName": "OPC UA / Modbus TCP",
-      "role": "OT-Sensor-Datenerfassung von der SPS"
+      "role": "OT-Sensor-Datenerfassung von der SPS & Feldebene",
+      "linkAnnotation": {
+        "protocol": "OPC UA Telemetrie & Feldbus-Sync",
+        "description": "Zyklische Übertragung von Echtzeit-Messwerten (Druck, Vibration, Temperatur) aus der SPS an die Verarbeitungslogik."
+      }
     },
     {
       "layer": "2",
       "layerTitle": "Schicht 2: Geometrie & CAD/BIM",
       "refCode": "IND-META-2026-AUTODESK-FUSION",
-      "nodeName": "CAD Asset Mesh",
-      "role": "Aufbereitete 3D-Baugruppen-Geometrie"
+      "nodeName": "Autodesk Fusion / CAD Mesh",
+      "role": "Aufbereitete 3D-Baugruppen-Geometrie & Explosionsansichten",
+      "linkAnnotation": {
+        "protocol": "CAD-zu-AR Formatkonvertierung",
+        "description": "Umwandlung schwerer CAD-Volumendaten in optimierte Polygon-Meshes mit Koordinaten-Referenzpunkten für AR-Targeting."
+      }
     },
     {
       "layer": "3",
       "layerTitle": "Schicht 3: Middleware & Integration",
       "refCode": "IND-META-2026-PTC-THINGWORX",
       "nodeName": "PTC ThingWorx / Vuforia",
-      "role": "AR-Autorensystem & IoT-Verknüpfung"
+      "role": "AR-Autorensystem & IoT-Telemetrieverknüpfung",
+      "linkAnnotation": {
+        "protocol": "Dynamische AR-Szenenkomposition",
+        "description": "Verknüpfung von 3D-Baugruppen mit interaktiven Schritt-für-Schritt-Anweisungen und Live-Sensor-Grenzwerten."
+      }
     },
     {
       "layer": "4",
       "layerTitle": "Schicht 4: Simulation & Verhalten",
       "refCode": null,
       "nodeName": "Work Instruction Engine",
-      "role": "Prozessablauf- & Logiksteuerung"
+      "role": "Prozessablauf-, Validierungs- & Logiksteuerung",
+      "linkAnnotation": {
+        "protocol": "Spatial HUD & Sprachsteuerungs-Stream",
+        "description": "Übermittlung der aktiven Arbeitsanweisung und visuellen Pfeile an die Datenbrille mit Sprachbefehlsrückmeldung."
+      }
     },
     {
       "layer": "5",
       "layerTitle": "Schicht 5: Immersion & Interaktion",
       "refCode": "IND-META-2026-REALWEAR-NAV520",
       "nodeName": "RealWear Nav-520 / Quest 3",
-      "role": "Freihändige AR-Visialisierung vor Ort"
+      "role": "Freihändige AR-Visualisierung & Werkerführung vor Ort"
     }
   ]
 }

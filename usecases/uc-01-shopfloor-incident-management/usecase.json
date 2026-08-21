@@ -61,35 +61,51 @@
       "layerTitle": "Schicht 1: Erfassung & Sensorik",
       "refCode": "IND-META-2026-FARO-ORBIS",
       "nodeName": "FARO Orbis / Matterport",
-      "role": "Mobile 360° LiDAR-Erfassung im Werk"
+      "role": "Mobile 360° LiDAR-Erfassung im laufenden Fabrikbetrieb",
+      "linkAnnotation": {
+        "protocol": "E57 / LAS Rohdaten-Transfer",
+        "description": "Mobile 360°-Scanner erfassen den Ist-Zustand der Störung und übertragen die Rohdaten via USB/WLAN-Sync an die Datenaufbereitung."
+      }
     },
     {
       "layer": "2",
       "layerTitle": "Schicht 2: Geometrie & CAD/BIM",
       "refCode": "IND-META-2026-E57-POINTCLOUD",
       "nodeName": "E57 / Panorama Scan",
-      "role": "Punktwolken & 360°-Bilddaten-Export"
+      "role": "Punktwolken- & 360°-Panoramadaten-Aufbereitung",
+      "linkAnnotation": {
+        "protocol": "Cloud / Edge REST-Upload",
+        "description": "Die aufbereiteten 3D-Punktwolken und Panoramen werden räumlich registriert und in die Kollaborationsplattform FARO Sphere XG synchronisiert."
+      }
     },
     {
       "layer": "3",
       "layerTitle": "Schicht 3: Middleware & Integration",
       "refCode": "IND-META-2026-FARO-SPHERE",
       "nodeName": "FARO Sphere XG",
-      "role": "Zentrale Cloud/On-Prem 3D-Plattform"
+      "role": "Zentrale räumliche Kollaborations- & Datenplattform",
+      "linkAnnotation": {
+        "protocol": "REST Webhook & Event-Trigger",
+        "description": "Bei Annotation einer Schadstelle wird automatisch ein Incident-Payload inklusive exakter 3D-Weltkoordinaten und Direktlink an das Ticket-System übermittelt."
+      }
     },
     {
       "layer": "4",
       "layerTitle": "Schicht 4: Simulation & Verhalten",
       "refCode": null,
-      "nodeName": "Jira / SAP PM",
-      "role": "Automatische Ticket- & Auftragserstellung"
+      "nodeName": "Jira Service Management / SAP PM",
+      "role": "Automatische Ticket-, Auftrags- & Eskalationssteuerung",
+      "linkAnnotation": {
+        "protocol": "Spatial WebGL / WebXR Stream",
+        "description": "Das Ticket wird mit interaktivem 3D-Befundungslink angereichert und auf mobilen Endgeräten des Instandhaltungsteams visualisiert."
+      }
     },
     {
       "layer": "5",
       "layerTitle": "Schicht 5: Immersion & Interaktion",
       "refCode": "IND-META-2026-GLTF-20",
       "nodeName": "WebXR / Web Inspection",
-      "role": "Interaktive 3D-Befundung am Tablet/PC"
+      "role": "Interaktive räumliche 3D-Befundung am Tablet und PC"
     }
   ]
 }

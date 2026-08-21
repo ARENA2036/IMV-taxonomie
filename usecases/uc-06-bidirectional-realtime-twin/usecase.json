@@ -56,35 +56,51 @@
       "layerTitle": "Schicht 1: Erfassung & Sensorik",
       "refCode": "IND-META-2026-PROFINET-TSN",
       "nodeName": "PROFINET TSN / Siemens PLC",
-      "role": "Operative SPS-Echtzeit-Steuerung"
+      "role": "Operative SPS-Echtzeit-Steuerung & deterministische Sensor-Aktor-Signale",
+      "linkAnnotation": {
+        "protocol": "STEP AP242 / JT Kinematik-Mapping",
+        "description": "Verknüpfung der zyklischen SPS-Drehgeber- und Achswerte mit den CAD-Kinematikbaugruppen."
+      }
     },
     {
       "layer": "2",
       "layerTitle": "Schicht 2: Geometrie & CAD/BIM",
       "refCode": "IND-META-2026-SIEMENS-NX",
       "nodeName": "Siemens NX / JT ISO14306",
-      "role": "Präzise Kinematik-Geometriedaten"
+      "role": "Präzise 3D-Baugruppengeometrie mit Gelenk- & Kinematik-Definitionen",
+      "linkAnnotation": {
+        "protocol": "OPC UA PubSub / Eclipse BaSyx AAS",
+        "description": "Millisekundengenaue bidirektionale Kopplung von Kinematikzuständen an die Verwaltungsschale (AAS IEC 63278)."
+      }
     },
     {
       "layer": "3",
       "layerTitle": "Schicht 3: Middleware & Integration",
       "refCode": "IND-META-2026-AAS-IEC63278",
       "nodeName": "Eclipse BaSyx AAS / EDC",
-      "role": "Bi-direktionaler Semantik- & Datenraum"
+      "role": "Bidirektionaler Semantik-Datenraum & sichere EDC-Kopplung",
+      "linkAnnotation": {
+        "protocol": "Hardware-in-the-Loop (HiL) Bus-Emulation",
+        "description": "Echtzeit-Austausch von Steuerungs- und Reaktionsdaten mit der virtuellen Inbetriebnahmesoftware (VIBn)."
+      }
     },
     {
       "layer": "4",
       "layerTitle": "Schicht 4: Simulation & Verhalten",
       "refCode": "IND-META-2026-ISG-VIRTUOS",
       "nodeName": "ISG-virtuos / Tecnomatix",
-      "role": "Hardware-in-the-Loop VIBn Simulation"
+      "role": "Deterministische Echtzeit-Verhaltenssimulation & SPS-Code-Validierung",
+      "linkAnnotation": {
+        "protocol": "Ultra-Low-Latency WebRTC / OpenUSD Stream",
+        "description": "Synchroner Bild- und Geometriedatenstrom an den Leitstand zur interaktiven Fernüberwachung und Steuerungsrückkopplung."
+      }
     },
     {
       "layer": "5",
       "layerTitle": "Schicht 5: Immersion & Interaktion",
       "refCode": "IND-META-2026-UNREAL-ENGINE-5",
       "nodeName": "Unreal Engine 5 / Omniverse",
-      "role": "Echtzeit 3D-Visualisierung & Monitoring"
+      "role": "Immersive Echtzeit-Visualisierung & Leitstand-Monitoring mit Override-Option"
     }
   ]
 }

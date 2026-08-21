@@ -1,7 +1,7 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Industrial Metaverse Technology Profile Schema",
-  "description": "Canonical 19-field schema standard for Industrial Metaverse technology profiles in profiles/*.json",
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "Industrial Metaverse Technology Profile",
+  "description": "Canonical schema definition for tool and technology profiles across the ARENA2036 5-layer tech stack.",
   "type": "object",
   "required": [
     "refCode",
@@ -30,65 +30,59 @@
     "refCode": {
       "type": "string",
       "pattern": "^IND-META-2026-[A-Z0-9-]+$",
-      "description": "Unique reference code identifier"
+      "description": "Unique uppercase reference code (e.g. IND-META-2026-FARO-ORBIS)."
     },
     "categoryCode": {
       "type": "string",
       "pattern": "^[1-5]\\.[1-8]$",
-      "description": "Decimal category code (1.1 to 5.2)"
+      "description": "Decimal category code representing Layer.Category (1.1 to 5.2)."
     },
     "categoryName": {
       "type": "string",
-      "description": "German category title"
+      "description": "Canonical name of the decimal category."
     },
     "name": {
       "type": "string",
-      "description": "Product / technology name"
+      "description": "Full commercial or open-source name of the tool or protocol."
     },
     "subtitle": {
       "type": "string",
-      "description": "Short German descriptive subtitle"
+      "description": "Concise German technical subtitle."
     },
     "vendor": {
       "type": "string",
-      "description": "Vendor / company / organization name"
+      "description": "Vendor, consortium, foundation or creator entity."
     },
     "hq": {
       "type": "string",
-      "description": "Country or location of headquarters"
+      "description": "Geographical location or country of origin."
     },
     "businessModel": {
       "type": "string",
-      "description": "Commercial, subscription, or open source model"
+      "description": "Commercial, Subscription, Open Source, or Hybrid."
     },
     "url": {
       "type": "string",
       "format": "uri",
-      "description": "Official product web URL"
+      "description": "Official documentation or product URL."
     },
     "tier": {
       "type": "string",
       "enum": ["Tier 1", "Tier 2", "Tier 3"],
-      "description": "Investment tier (Tier 1: <= €30k, Tier 2: <= €100k, Tier 3: > €100k)"
+      "description": "Investment class tier (Tier 1, Tier 2, Tier 3)."
     },
     "costLabel": {
       "type": "string",
-      "description": "Financial cost label indicator"
+      "description": "Indicative budget bracket (e.g. ≤ €30k, ≤ €100k, > €100k)."
     },
     "status": {
       "type": "string",
-      "enum": [
-        "INDEXIERT",
-        "GEPRÜFT",
-        "USE CASE IMPLEMENTIERT",
-        "EXTERN VALIDIERT",
-        "COMMUNITY BEITRAG"
-      ],
-      "description": "Community verification lifecycle status"
+      "enum": ["INDEXIERT", "GEPRÜFT", "USE CASE IMPLEMENTIERT", "EXTERN VALIDIERT", "COMMUNITY BEITRAG"],
+      "description": "Taxonomy validation status."
     },
     "overview": {
       "type": "string",
-      "description": "Detailed German overview text"
+      "description": "Comprehensive technical description in German."
     },
     "features": {
       "type": "array",
@@ -99,19 +93,23 @@
           "title": { "type": "string" },
           "desc": { "type": "string" }
         }
-      }
+      },
+      "description": "Key technical capability features."
     },
     "inputs": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": { "type": "string" },
+      "description": "Supported input formats and protocols."
     },
     "outputs": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": { "type": "string" },
+      "description": "Supported output formats and protocols."
     },
     "bridges": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": { "type": "string" },
+      "description": "Native connectors and ecosystem bridges."
     },
     "evaluations": {
       "type": "array",
@@ -122,7 +120,8 @@
           "title": { "type": "string" },
           "text": { "type": "string" }
         }
-      }
+      },
+      "description": "Field evaluation assessments."
     },
     "compliance": {
       "type": "object",
@@ -145,8 +144,8 @@
     },
     "staffing": {
       "type": "string",
-      "description": "Required engineering FTE staffing"
+      "description": "Recommended team profile and engineering capacity."
     }
   },
-  "additionalProperties": false
+  "additionalProperties": true
 }

@@ -30,31 +30,24 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm px-3 flex-shrink-0">
     <div class="container-fluid d-flex align-items-center justify-content-between">
       
-      <!-- Left: Logos -->
-      <div class="d-flex align-items-center" style="min-width: 180px;">
+      <!-- Brand Logo -->
+      <div class="d-flex align-items-center">
         <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="./index.html">
           <img src="./assets/Metaverse Logo bunt.svg" alt="Industrial Metaverse Logo" class="logo-img" title="Industrial Metaverse">
-          <div class="logo-divider"></div>
-          <img src="./assets/BaWue_WM_Absenderlogo_rgb_pos_Gefoerdert.svg" alt="Gefördert durch Baden-Württemberg" class="logo-img" title="Ministerium BW">
         </a>
       </div>
 
       <!-- Center: Title Text Centered -->
       <div class="text-center flex-grow-1 px-2">
         <span class="fw-black text-dark fs-6 d-none d-md-inline-block text-truncate" style="max-width: 90%;">
-          Orientierung & Praxis Leitfaden
+          Orientierung &amp; Praxis-Leitfaden
         </span>
       </div>
 
-      <!-- Right: Action Buttons & Hamburger Menu -->
-      <div class="d-flex align-items-center justify-content-end gap-2" style="min-width: 180px;">
-        <a href="./index.html" class="btn btn-outline-secondary btn-sm">
-          <i class="fa-solid fa-house me-1"></i> Startseite
-        </a>
-
-        <!-- Hamburger Dropdown Menu -->
+      <!-- Right: Hamburger Menu -->
+      <div class="d-flex align-items-center justify-content-end">
         <div class="dropdown">
-          <button class="btn btn-light btn-sm border dropdown-toggle" id="hamburgerBtn" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Menü">
+          <button class="btn btn-light btn-sm border" id="hamburgerBtn" type="button" aria-expanded="false" title="Menü">
             <i class="fa-solid fa-bars"></i>
           </button>
           <ul class="dropdown-menu dropdown-menu-end shadow-sm">
@@ -64,7 +57,7 @@
             <li><a class="dropdown-item" href="./usecases/index.html"><i class="fa-solid fa-sitemap text-muted me-2"></i>Use Cases Hub</a></li>
             <li><a class="dropdown-item" href="./architecture.html"><i class="fa-solid fa-diagram-project text-muted me-2"></i>Architektur Spezifikation</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="./impressum.html"><i class="fa-solid fa-scale-balanced text-muted me-2"></i>Impressum & Rechtliches</a></li>
+            <li><a class="dropdown-item" href="./impressum.html"><i class="fa-solid fa-scale-balanced text-muted me-2"></i>Impressum &amp; Rechtliches</a></li>
           </ul>
         </div>
       </div>
@@ -306,5 +299,9 @@
 
   <!-- Bootstrap 5 JavaScript Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Application Logic -->
+  <script src="data/index_data.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

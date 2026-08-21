@@ -3380,35 +3380,51 @@ window.INDEX_DATA = {
           "layerTitle": "Schicht 1: Erfassung & Sensorik",
           "refCode": "IND-META-2026-FARO-ORBIS",
           "nodeName": "FARO Orbis / Matterport",
-          "role": "Mobile 360° LiDAR-Erfassung im Werk"
+          "role": "Mobile 360° LiDAR-Erfassung im laufenden Fabrikbetrieb",
+          "linkAnnotation": {
+            "protocol": "E57 / LAS Rohdaten-Transfer",
+            "description": "Mobile 360°-Scanner erfassen den Ist-Zustand der Störung und übertragen die Rohdaten via USB/WLAN-Sync an die Datenaufbereitung."
+          }
         },
         {
           "layer": "2",
           "layerTitle": "Schicht 2: Geometrie & CAD/BIM",
           "refCode": "IND-META-2026-E57-POINTCLOUD",
           "nodeName": "E57 / Panorama Scan",
-          "role": "Punktwolken & 360°-Bilddaten-Export"
+          "role": "Punktwolken- & 360°-Panoramadaten-Aufbereitung",
+          "linkAnnotation": {
+            "protocol": "Cloud / Edge REST-Upload",
+            "description": "Die aufbereiteten 3D-Punktwolken und Panoramen werden räumlich registriert und in die Kollaborationsplattform FARO Sphere XG synchronisiert."
+          }
         },
         {
           "layer": "3",
           "layerTitle": "Schicht 3: Middleware & Integration",
           "refCode": "IND-META-2026-FARO-SPHERE",
           "nodeName": "FARO Sphere XG",
-          "role": "Zentrale Cloud/On-Prem 3D-Plattform"
+          "role": "Zentrale räumliche Kollaborations- & Datenplattform",
+          "linkAnnotation": {
+            "protocol": "REST Webhook & Event-Trigger",
+            "description": "Bei Annotation einer Schadstelle wird automatisch ein Incident-Payload inklusive exakter 3D-Weltkoordinaten und Direktlink an das Ticket-System übermittelt."
+          }
         },
         {
           "layer": "4",
           "layerTitle": "Schicht 4: Simulation & Verhalten",
           "refCode": null,
-          "nodeName": "Jira / SAP PM",
-          "role": "Automatische Ticket- & Auftragserstellung"
+          "nodeName": "Jira Service Management / SAP PM",
+          "role": "Automatische Ticket-, Auftrags- & Eskalationssteuerung",
+          "linkAnnotation": {
+            "protocol": "Spatial WebGL / WebXR Stream",
+            "description": "Das Ticket wird mit interaktivem 3D-Befundungslink angereichert und auf mobilen Endgeräten des Instandhaltungsteams visualisiert."
+          }
         },
         {
           "layer": "5",
           "layerTitle": "Schicht 5: Immersion & Interaktion",
           "refCode": "IND-META-2026-GLTF-20",
           "nodeName": "WebXR / Web Inspection",
-          "role": "Interaktive 3D-Befundung am Tablet/PC"
+          "role": "Interaktive räumliche 3D-Befundung am Tablet und PC"
         }
       ]
     },
@@ -3470,35 +3486,51 @@ window.INDEX_DATA = {
           "layerTitle": "Schicht 1: Erfassung & Sensorik",
           "refCode": "IND-META-2026-MATTERPORT-PRO3",
           "nodeName": "Matterport Pro3 / Scaniverse",
-          "role": "Fotogrammetrie & Panoramabilder"
+          "role": "Fotogrammetrische 360°-Hallenaufnahme & Tiefenerfassung",
+          "linkAnnotation": {
+            "protocol": "Mesh-Generierung & Textur-Baking",
+            "description": "Erfassung der Hallenlayout-Panoramen und automatische Überführung in optimierte, texturierte Dreiecksnetze."
+          }
         },
         {
           "layer": "2",
           "layerTitle": "Schicht 2: Geometrie & CAD/BIM",
           "refCode": "IND-META-2026-GLTF-20",
           "nodeName": "glTF 2.0 / USDZ",
-          "role": "Leichtgewichtige Web-3D-Formate"
+          "role": "Kompression in leichtgewichtige Web-3D-Geometrie",
+          "linkAnnotation": {
+            "protocol": "Semantische AAS IEC 63278 Bindung",
+            "description": "Verknüpfung der virtuellen 3D-Objektknoten mit standardisierten digitalen Typenschildern und Stammdaten der Verwaltungsschale."
+          }
         },
         {
           "layer": "3",
           "layerTitle": "Schicht 3: Middleware & Integration",
           "refCode": "IND-META-2026-AAS-IEC63278",
           "nodeName": "AAS Asset Tagging Engine",
-          "role": "Verknüpfung von 3D-Objekten mit Stammdaten"
+          "role": "Zentrale Verwaltungsschalen-Kopplung für Maschinen-Metadaten",
+          "linkAnnotation": {
+            "protocol": "Spatial Point Annotation API",
+            "description": "Verortung von interaktiven POIs, Wartungsdokumenten und Messpunkten direkt an den 3D-Koordinaten der Anlagen."
+          }
         },
         {
           "layer": "4",
           "layerTitle": "Schicht 4: Simulation & Verhalten",
           "refCode": null,
           "nodeName": "Spatial Point Annotator",
-          "role": "Räumliche Notizen & Messwerkzeuge"
+          "role": "Interaktive Messwerkzeuge & POI-Informationsschichten",
+          "linkAnnotation": {
+            "protocol": "WebXR / WebGL Render Pipeline",
+            "description": "Bereitstellung des vollständigen digitalen Zwillings als browserbasierte 3D-Begehung mit Multi-Device-Unterstützung."
+          }
         },
         {
           "layer": "5",
           "layerTitle": "Schicht 5: Immersion & Interaktion",
           "refCode": "IND-META-2026-GODOT-WEBXR",
           "nodeName": "WebXR / Three.js Viewer",
-          "role": "Immersive Browser-Begehung (PC/VR)"
+          "role": "Immersive 3D-Fabrikbegehung auf PC, Tablet und VR-Headsets"
         }
       ]
     },
@@ -3560,35 +3592,51 @@ window.INDEX_DATA = {
           "layerTitle": "Schicht 1: Erfassung & Sensorik",
           "refCode": "IND-META-2026-OPC-UA",
           "nodeName": "OPC UA / Modbus TCP",
-          "role": "OT-Sensor-Datenerfassung von der SPS"
+          "role": "OT-Sensor-Datenerfassung von der SPS & Feldebene",
+          "linkAnnotation": {
+            "protocol": "OPC UA Telemetrie & Feldbus-Sync",
+            "description": "Zyklische Übertragung von Echtzeit-Messwerten (Druck, Vibration, Temperatur) aus der SPS an die Verarbeitungslogik."
+          }
         },
         {
           "layer": "2",
           "layerTitle": "Schicht 2: Geometrie & CAD/BIM",
           "refCode": "IND-META-2026-AUTODESK-FUSION",
-          "nodeName": "CAD Asset Mesh",
-          "role": "Aufbereitete 3D-Baugruppen-Geometrie"
+          "nodeName": "Autodesk Fusion / CAD Mesh",
+          "role": "Aufbereitete 3D-Baugruppen-Geometrie & Explosionsansichten",
+          "linkAnnotation": {
+            "protocol": "CAD-zu-AR Formatkonvertierung",
+            "description": "Umwandlung schwerer CAD-Volumendaten in optimierte Polygon-Meshes mit Koordinaten-Referenzpunkten für AR-Targeting."
+          }
         },
         {
           "layer": "3",
           "layerTitle": "Schicht 3: Middleware & Integration",
           "refCode": "IND-META-2026-PTC-THINGWORX",
           "nodeName": "PTC ThingWorx / Vuforia",
-          "role": "AR-Autorensystem & IoT-Verknüpfung"
+          "role": "AR-Autorensystem & IoT-Telemetrieverknüpfung",
+          "linkAnnotation": {
+            "protocol": "Dynamische AR-Szenenkomposition",
+            "description": "Verknüpfung von 3D-Baugruppen mit interaktiven Schritt-für-Schritt-Anweisungen und Live-Sensor-Grenzwerten."
+          }
         },
         {
           "layer": "4",
           "layerTitle": "Schicht 4: Simulation & Verhalten",
           "refCode": null,
           "nodeName": "Work Instruction Engine",
-          "role": "Prozessablauf- & Logiksteuerung"
+          "role": "Prozessablauf-, Validierungs- & Logiksteuerung",
+          "linkAnnotation": {
+            "protocol": "Spatial HUD & Sprachsteuerungs-Stream",
+            "description": "Übermittlung der aktiven Arbeitsanweisung und visuellen Pfeile an die Datenbrille mit Sprachbefehlsrückmeldung."
+          }
         },
         {
           "layer": "5",
           "layerTitle": "Schicht 5: Immersion & Interaktion",
           "refCode": "IND-META-2026-REALWEAR-NAV520",
           "nodeName": "RealWear Nav-520 / Quest 3",
-          "role": "Freihändige AR-Visialisierung vor Ort"
+          "role": "Freihändige AR-Visualisierung & Werkerführung vor Ort"
         }
       ]
     },
@@ -3650,35 +3698,51 @@ window.INDEX_DATA = {
           "layerTitle": "Schicht 1: Erfassung & Sensorik",
           "refCode": "IND-META-2026-LEICA-RTC360",
           "nodeName": "Leica RTC360 / NavVis VLX",
-          "role": "Hochpräzise 3D-Punktwolken-Erfassung"
+          "role": "Hochpräzise terrestrische LiDAR- & SLAM-Punktwolkenerfassung",
+          "linkAnnotation": {
+            "protocol": "E57 / RCP Registrierung & Filterung",
+            "description": "Millimetergenaue Punktwolkensynchronisation und Rauschfilterung zur Vorbereitung des digitalen Bestandsaufmaßes."
+          }
         },
         {
           "layer": "2",
           "layerTitle": "Schicht 2: Geometrie & CAD/BIM",
           "refCode": "IND-META-2026-AUTODESK-REVIT",
           "nodeName": "Autodesk Revit / ReCap",
-          "role": "Point Cloud Processing & BIM-Modellierung"
+          "role": "Parametrische Scan-to-BIM Gebäudemodellierung & CAD-Bereinigung",
+          "linkAnnotation": {
+            "protocol": "IFC 4.3 & OpenUSD Export",
+            "description": "Konvertierung der BIM-Architektur (Wände, Stützen, Kabeltrassen) in neutrale offene Standardformate für den Gewerkeabgleich."
+          }
         },
         {
           "layer": "3",
           "layerTitle": "Schicht 3: Middleware & Integration",
           "refCode": "IND-META-2026-NEMETSCHEK-ALLPLAN",
           "nodeName": "IFC / OpenUSD Pipeline",
-          "role": "Offener Geometriedaten-Austausch"
+          "role": "Herstellerunabhängiger Multi-CAD- & BIM-Datenaustausch",
+          "linkAnnotation": {
+            "protocol": "Automatische Clash-Detection Pipeline",
+            "description": "Zusammenführung von Gebäude-BIM und neuen Fertigungszellen-CAD-Daten zur rechnerischen Kollisionsprüfung."
+          }
         },
         {
           "layer": "4",
           "layerTitle": "Schicht 4: Simulation & Verhalten",
           "refCode": "IND-META-2026-IPOLOG",
           "nodeName": "ipolog / Navisworks",
-          "role": "Automatisierte Clash-Detection & Layout"
+          "role": "Automatisierte Kollisionsprüfung, Materialfluss- & Layoutoptimierung",
+          "linkAnnotation": {
+            "protocol": "Echtzeit-Raytracing & Datasmith",
+            "description": "Überführung des freigegebenen Fabriklayouts in die fotorealistische Visualisierungs-Engine für Begehungen."
+          }
         },
         {
           "layer": "5",
           "layerTitle": "Schicht 5: Immersion & Interaktion",
           "refCode": "IND-META-2026-TWINMOTION",
           "nodeName": "Twinmotion / Unreal Engine",
-          "role": "Interaktive Freigabe-Visualisierung"
+          "role": "Interaktive fotorealistische Layout-Begehung & Management-Freigabe"
         }
       ]
     },
@@ -3740,35 +3804,51 @@ window.INDEX_DATA = {
           "layerTitle": "Schicht 1: Erfassung & Sensorik",
           "refCode": "IND-META-2026-YOLO26-EDGE",
           "nodeName": "Depth Camera / Edge Vision",
-          "role": "Sensordatenerfassung am Roboterarm"
+          "role": "Optische 3D-Sensorik & KI-Greifraum-Erfassung am Roboterarm",
+          "linkAnnotation": {
+            "protocol": "CAD-zu-SimReady OpenUSD Konvertierung",
+            "description": "Überführung der Werkstück-CAD-Modelle in physikfähige OpenUSD-Dateien mit Reibungs-, Schwerpunkt- und Materialparametern."
+          }
         },
         {
           "layer": "2",
           "layerTitle": "Schicht 2: Geometrie & CAD/BIM",
           "refCode": "IND-META-2026-OPENUSD",
           "nodeName": "OpenUSD / SimReady Assets",
-          "role": "Physikalisch annotierte 3D-Geometrien"
+          "role": "Physikalisch basierte 3D-Geometrien & Kinematik-Modelle",
+          "linkAnnotation": {
+            "protocol": "USD Stage Composition & LeRobot Pipeline",
+            "description": "Zusammenführung von Roboter, Greifer und Werkstücken in eine koordinierte NVIDIA Omniverse Simulations-Bühne."
+          }
         },
         {
           "layer": "3",
           "layerTitle": "Schicht 3: Middleware & Integration",
           "refCode": "IND-META-2026-HUGGINGFACE-LEROBOT",
           "nodeName": "HuggingFace LeRobot / ROS2",
-          "role": "KI-Pipeline & Telemetrie-Brücke"
+          "role": "KI-Trainings-Pipeline, Datensatz-Kuratierung & Telemetrie-Brücke",
+          "linkAnnotation": {
+            "protocol": "Domain Randomization & PhysX-Simulation",
+            "description": "Automatische Generierung von zehntausenden synthetischen Sensorbildern mit variierender Beleuchtung, Posen und Hintergründen."
+          }
         },
         {
           "layer": "4",
           "layerTitle": "Schicht 4: Simulation & Verhalten",
           "refCode": "IND-META-2026-NVIDIA-ISAAC",
           "nodeName": "NVIDIA Isaac Sim / PhysX",
-          "role": "Synthetische Data Generation (SDG)"
+          "role": "Synthetische Datengenerierung (SDG) & Physik-Validierung",
+          "linkAnnotation": {
+            "protocol": "RTX Sensor-Simulation & Ground-Truth Export",
+            "description": "Fotorealistisches Raytracing zur Erzeugung pixelgenauer Bounding-Boxes, Segmentierungsmasken und Tiefenkarten."
+          }
         },
         {
           "layer": "5",
           "layerTitle": "Schicht 5: Immersion & Interaktion",
           "refCode": "IND-META-2026-NVIDIA-OMNIVERSE",
           "nodeName": "Omniverse RTX Renderer",
-          "role": "Fotorealistisches Raytracing für Sensor-KI"
+          "role": "Fotorealistische Raytracing-Visualisierung & KI-Trainings-Monitoring"
         }
       ]
     },
@@ -3830,35 +3910,51 @@ window.INDEX_DATA = {
           "layerTitle": "Schicht 1: Erfassung & Sensorik",
           "refCode": "IND-META-2026-PROFINET-TSN",
           "nodeName": "PROFINET TSN / Siemens PLC",
-          "role": "Operative SPS-Echtzeit-Steuerung"
+          "role": "Operative SPS-Echtzeit-Steuerung & deterministische Sensor-Aktor-Signale",
+          "linkAnnotation": {
+            "protocol": "STEP AP242 / JT Kinematik-Mapping",
+            "description": "Verknüpfung der zyklischen SPS-Drehgeber- und Achswerte mit den CAD-Kinematikbaugruppen."
+          }
         },
         {
           "layer": "2",
           "layerTitle": "Schicht 2: Geometrie & CAD/BIM",
           "refCode": "IND-META-2026-SIEMENS-NX",
           "nodeName": "Siemens NX / JT ISO14306",
-          "role": "Präzise Kinematik-Geometriedaten"
+          "role": "Präzise 3D-Baugruppengeometrie mit Gelenk- & Kinematik-Definitionen",
+          "linkAnnotation": {
+            "protocol": "OPC UA PubSub / Eclipse BaSyx AAS",
+            "description": "Millisekundengenaue bidirektionale Kopplung von Kinematikzuständen an die Verwaltungsschale (AAS IEC 63278)."
+          }
         },
         {
           "layer": "3",
           "layerTitle": "Schicht 3: Middleware & Integration",
           "refCode": "IND-META-2026-AAS-IEC63278",
           "nodeName": "Eclipse BaSyx AAS / EDC",
-          "role": "Bi-direktionaler Semantik- & Datenraum"
+          "role": "Bidirektionaler Semantik-Datenraum & sichere EDC-Kopplung",
+          "linkAnnotation": {
+            "protocol": "Hardware-in-the-Loop (HiL) Bus-Emulation",
+            "description": "Echtzeit-Austausch von Steuerungs- und Reaktionsdaten mit der virtuellen Inbetriebnahmesoftware (VIBn)."
+          }
         },
         {
           "layer": "4",
           "layerTitle": "Schicht 4: Simulation & Verhalten",
           "refCode": "IND-META-2026-ISG-VIRTUOS",
           "nodeName": "ISG-virtuos / Tecnomatix",
-          "role": "Hardware-in-the-Loop VIBn Simulation"
+          "role": "Deterministische Echtzeit-Verhaltenssimulation & SPS-Code-Validierung",
+          "linkAnnotation": {
+            "protocol": "Ultra-Low-Latency WebRTC / OpenUSD Stream",
+            "description": "Synchroner Bild- und Geometriedatenstrom an den Leitstand zur interaktiven Fernüberwachung und Steuerungsrückkopplung."
+          }
         },
         {
           "layer": "5",
           "layerTitle": "Schicht 5: Immersion & Interaktion",
           "refCode": "IND-META-2026-UNREAL-ENGINE-5",
           "nodeName": "Unreal Engine 5 / Omniverse",
-          "role": "Echtzeit 3D-Visualisierung & Monitoring"
+          "role": "Immersive Echtzeit-Visualisierung & Leitstand-Monitoring mit Override-Option"
         }
       ]
     }

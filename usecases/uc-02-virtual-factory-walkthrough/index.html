@@ -48,27 +48,24 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm px-3 flex-shrink-0">
     <div class="container-fluid d-flex align-items-center justify-content-between">
       
-      <div class="d-flex align-items-center" style="min-width: 180px;">
+      <!-- Brand Logo -->
+      <div class="d-flex align-items-center">
         <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="../../index.html">
           <img src="../../assets/Metaverse Logo bunt.svg" alt="Industrial Metaverse Logo" class="logo-img" title="Industrial Metaverse">
-          <div class="logo-divider"></div>
-          <img src="../../assets/BaWue_WM_Absenderlogo_rgb_pos_Gefoerdert.svg" alt="Gefördert durch Baden-Württemberg" class="logo-img" title="Ministerium BW">
         </a>
       </div>
 
+      <!-- Center Title -->
       <div class="text-center flex-grow-1 px-2">
         <span class="fw-black text-dark fs-6 d-none d-md-inline-block text-truncate" style="max-width: 90%;">
           Use Case: Virtuelle Fabrikbegehung &amp; Asset-Tagging via WebXR
         </span>
       </div>
 
-      <div class="d-flex align-items-center justify-content-end gap-2" style="min-width: 180px;">
-        <a href="../index.html" class="btn btn-outline-secondary btn-sm">
-          <i class="fa-solid fa-arrow-left me-1"></i> Use Cases Hub
-        </a>
-
+      <!-- Hamburger Menu -->
+      <div class="d-flex align-items-center justify-content-end">
         <div class="dropdown">
-          <button class="btn btn-light btn-sm border dropdown-toggle" id="hamburgerBtn" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Menü">
+          <button class="btn btn-light btn-sm border" id="hamburgerBtn" type="button" aria-expanded="false" title="Menü">
             <i class="fa-solid fa-bars"></i>
           </button>
           <ul class="dropdown-menu dropdown-menu-end shadow-sm">
@@ -82,26 +79,28 @@
           </ul>
         </div>
       </div>
+
     </div>
   </nav>
 
-  <!-- Main Block-Based Container -->
-  <main class="container app-page-container py-4 flex-grow-1">
+  <!-- Main Content Container -->
+  <main class="container py-4 flex-grow-1" style="max-width: 1300px;">
     
-    <!-- BLOCK 1: Hero Header Block -->
-    <header class="card border-0 shadow-sm p-4 p-md-5 mb-4 bg-white">
+    <!-- BLOCK 1: Hero & Strategic Header Block -->
+    <header class="app-hero-card mb-4">
       <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
         <div class="d-flex align-items-center gap-2">
-          <span class="badge bg-primary text-white font-monospace px-2 py-1">UC-02-VIRTUAL-FACTORY-WALKTHROUGH</span>
-          <span class="badge bg-light text-dark border font-monospace px-2 py-1">Tier 1 (≤ €30k / Starter &amp; Open Source)</span>
+          <span class="badge bg-primary text-white font-monospace fs-6 px-3 py-1">UC-02-VIRTUAL-FACTORY-WALKTHROUGH</span>
+          <span class="badge bg-light text-dark border font-monospace fs-6 px-3 py-1">Tier 1 (≤ €30k / Starter &amp; Open Source)</span>
         </div>
-        <span class="small text-muted font-monospace"><i class="fa-solid fa-clock me-1"></i>3–5 Tage Einrichtungszeit</span>
+        <a href="../index.html" class="btn btn-outline-secondary btn-sm">
+          <i class="fa-solid fa-arrow-left me-1"></i> Zurück zum Use Cases Hub
+        </a>
       </div>
 
       <h1 class="h3 fw-black text-dark mb-2">Virtuelle Fabrikbegehung &amp; Asset-Tagging via WebXR</h1>
-      <h2 class="h6 fw-bold text-primary mb-3">Immersive Navigation im Werk per Browser &amp; VR</h2>
-      
-      <p class="text-secondary lead fs-6 m-0">Wie umsetzen? Zusammenführung von 360°-Fotogrammetrie (Matterport / Scaniverse) und OpenUSD/glTF-Modellen in einer browserbasierten WebXR-Umgebung. Externe Partner befahren die Fabrik ohne physische Anreise.</p>
+      <p class="lead text-primary fw-bold fs-6 mb-3">Immersive Navigation im Werk per Browser &amp; VR</p>
+      <p class="text-secondary m-0">Wie umsetzen? Zusammenführung von 360°-Fotogrammetrie (Matterport / Scaniverse) und OpenUSD/glTF-Modellen in einer browserbasierten WebXR-Umgebung. Externe Partner befahren die Fabrik ohne physische Anreise.</p>
     </header>
 
     
@@ -137,197 +136,346 @@
     </section>
   
     
-    <!-- BLOCK 5: Technical Specifications & 5-Layer Vertical Dual-Column Stack Block -->
-    <section class="card border-0 shadow-sm p-4 mb-4 bg-white">
-      <h2 class="h6 fw-bold text-dark mb-2">
-        <i class="fa-solid fa-layer-group text-primary me-2"></i>4. Vertikaler 5-Schichten Architekturbauplan
-      </h2>
-      <p class="text-muted small mb-4">
-        Parallele Übersicht der eingesetzten Werkzeuge (links) und ihrer konkreten Funktion auf der jeweiligen Ebene (rechts). Klicken Sie auf <strong>"Details anzeigen →"</strong>, um den vollständigen Technologie-Inspector im Browser zu öffnen:
-      </p>
+    <!-- BLOCK 3: Horizontal 5-Layer Architecture Flow Carousel -->
+    <section class="card border-0 shadow-sm p-4 mb-4 bg-white" id="useCaseArchitectureSection">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+        <div>
+          <h2 class="h6 fw-bold text-dark m-0">
+            <i class="fa-solid fa-diagram-project text-primary me-2"></i>2. 5-Schichten Architektur-Ablauf &amp; Integration
+          </h2>
+          <p class="text-muted small m-0 mt-1">
+            Strukturierter Daten- und Komponentenfluss von der Erfassung &amp; Sensorik (links) bis zur Immersion (rechts). In jeder Schicht sind die konkrete Rolle (oben) und die eingesetzte Technologie-Komponente (unten) zugeordnet.
+          </p>
+        </div>
+        
+        <div class="usecase-carousel-toolbar">
+          <div class="usecase-carousel-nav" id="usecaseCarouselNav">
+            <button type="button" class="btn btn-outline-secondary btn-sm" id="btnCarouselPrev" title="Vorherige Schicht">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="d-flex align-items-center gap-1" id="carouselLayerPills">
+              
+                <button type="button" class="usecase-layer-pill active" data-layer="1" data-index="0" title="Schicht 1: Erfassung &amp; Sensorik">
+                  S1
+                </button>
+              
+                <button type="button" class="usecase-layer-pill " data-layer="2" data-index="1" title="Schicht 2: Geometrie &amp; CAD/BIM">
+                  S2
+                </button>
+              
+                <button type="button" class="usecase-layer-pill " data-layer="3" data-index="2" title="Schicht 3: Middleware &amp; Integration">
+                  S3
+                </button>
+              
+                <button type="button" class="usecase-layer-pill " data-layer="4" data-index="3" title="Schicht 4: Simulation &amp; Verhalten">
+                  S4
+                </button>
+              
+                <button type="button" class="usecase-layer-pill " data-layer="5" data-index="4" title="Schicht 5: Immersion &amp; Interaktion">
+                  S5
+                </button>
+              
+            </div>
+            <button type="button" class="btn btn-outline-secondary btn-sm" id="btnCarouselNext" title="Nächste Schicht">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+
+          <button type="button" class="btn btn-outline-secondary btn-sm btn-carousel-control is-playing" id="btnCarouselPlayPause" title="Auto-Play pausieren / starten">
+            <i class="fa-solid fa-pause"></i> Auto-Play
+          </button>
+
+          <button type="button" class="btn btn-outline-secondary btn-sm btn-export-stack" data-uc-slug="uc-02-virtual-factory-walkthrough">
+            <i class="fa-solid fa-file-lines me-1"></i> Stack als Markdown kopieren
+          </button>
+        </div>
+      </div>
       
-      <div class="vertical-architecture-stack">
+      <div class="usecase-horizontal-flow has-active-focus" id="usecaseFlowContainer">
         
-    <div class="usecase-stack-row">
-      <div class="row g-3 align-items-center">
-        
-        <!-- Left Column: Tool/Product Name, RefCode & Detail Inspector Trigger -->
-        <div class="col-md-5">
-          <div class="d-flex align-items-center gap-2 mb-2">
-            <span class="badge bg-primary text-white font-monospace px-2 py-1">SCHICHT 1</span>
-            <span class="fw-bold text-muted uppercase font-monospace small">Schicht 1: Erfassung &amp; Sensorik</span>
-          </div>
+      <div class="graph-col-stage is-active-layer" data-layer="1" data-index="0" style="border-top: 3px solid var(--color-layer-1);">
+        <div class="graph-col-header">
+          <span class="graph-col-badge" style="background-color: var(--color-layer-1);">
+            SCHICHT 1
+          </span>
+          <span class="graph-col-title" title="Schicht 1: Erfassung &amp; Sensorik">
+            Erfassung &amp; Sensorik
+          </span>
+        </div>
 
-          <h3 class="h6 fw-black text-dark mb-2">Matterport Pro3 / Scaniverse</h3>
-
-          <div class="d-flex align-items-center gap-2 flex-wrap">
-            
-              <span class="badge bg-light text-dark border font-monospace">IND-META-2026-MATTERPORT-PRO3</span>
-              <button type="button" class="btn btn-outline-primary btn-sm py-1 px-2 btn-inspect" data-ref="IND-META-2026-MATTERPORT-PRO3" onclick="if(window.appOpenProfileModal){window.appOpenProfileModal('IND-META-2026-MATTERPORT-PRO3');}">
-                <i class="fa-solid fa-eye me-1"></i> Details anzeigen →
-              </button>
-            
+        <div class="graph-col-role">
+          <div>
+            <div class="graph-col-role-label">
+              <i class="fa-solid fa-crosshairs me-1"></i> Rolle &amp; Systemaufgabe:
+            </div>
+            <div>Fotogrammetrische 360°-Hallenaufnahme &amp; Tiefenerfassung</div>
           </div>
         </div>
 
-        <!-- Right Column: Parallel Layer Function & Task Description -->
-        <div class="col-md-7">
-          <div class="usecase-stack-right">
-            <div class="usecase-stack-label"><i class="fa-solid fa-gear text-primary me-1"></i> Aufgabe &amp; Funktion auf Schicht 1:</div>
-            <p class="text-secondary small m-0 leading-relaxed">Fotogrammetrie &amp; Panoramabilder</p>
+        <div class="graph-col-component">
+          
+      <div class="card-item" onclick="if(window.appOpenProfileModal){window.appOpenProfileModal('IND-META-2026-MATTERPORT-PRO3');}" style="cursor: pointer;">
+        <div>
+          <div class="card-header-bar">
+            <span class="card-category">KAT 1.5: 360°-Erfassung &amp; GIS-Kartierung</span>
+            <span class="tier-badge tier-2">Tier 2</span>
+          </div>
+          <h3 class="card-title">Matterport Pro3 &amp; 360 Spatial Platform</h3>
+          <div class="card-subtitle">360° LiDAR-Kamera &amp; Virtuelle Rundgänge</div>
+          <p class="card-overview">Führende Plattform für virtuelle 360°-Begehungen. Nutzt die Pro3 LiDAR-Kamera für schnelle Rundgänge in Innen- und Außenbereichen.</p>
+          <div class="card-tags">
+            <span class="tag ">Pro3 LiDAR Scan</span><span class="tag ">Sphärische 360° Fotos</span>
+            <span class="tag tag-bridge ">Autodesk Construction Cloud</span><span class="tag tag-bridge ">AWS IoT TwinMaker</span>
           </div>
         </div>
 
+        <div class="card-footer">
+          <div class="d-flex align-items-center gap-2">
+            <span class="card-vendor"><i class="fa-solid fa-building me-1 text-muted"></i> Matterport Inc.</span>
+          </div>
+          <button type="button" class="btn btn-outline-primary btn-sm btn-inspect py-1 px-2" data-ref="IND-META-2026-MATTERPORT-PRO3" style="font-size: 11px;">
+            Details →
+          </button>
+        </div>
+      </div>
+    
+        </div>
+      </div>
+      
+      <div class="graph-flow-arrow" title="Datenfluss zu Schicht 2">
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+    
+    
+      <div class="graph-col-stage " data-layer="2" data-index="1" style="border-top: 3px solid var(--color-layer-2);">
+        <div class="graph-col-header">
+          <span class="graph-col-badge" style="background-color: var(--color-layer-2);">
+            SCHICHT 2
+          </span>
+          <span class="graph-col-title" title="Schicht 2: Geometrie &amp; CAD/BIM">
+            Geometrie &amp; CAD/BIM
+          </span>
+        </div>
+
+        <div class="graph-col-role">
+          <div>
+            <div class="graph-col-role-label">
+              <i class="fa-solid fa-crosshairs me-1"></i> Rolle &amp; Systemaufgabe:
+            </div>
+            <div>Kompression in leichtgewichtige Web-3D-Geometrie</div>
+          </div>
+        </div>
+
+        <div class="graph-col-component">
+          
+      <div class="card-item" onclick="if(window.appOpenProfileModal){window.appOpenProfileModal('IND-META-2026-GLTF-20');}" style="cursor: pointer;">
+        <div>
+          <div class="card-header-bar">
+            <span class="card-category">KAT 2.4: Datenformate &amp; OpenUSD-Standards</span>
+            <span class="tier-badge tier-1">Tier 1</span>
+          </div>
+          <h3 class="card-title">glTF 2.0 (Khronos Group - Runtime 3D Asset)</h3>
+          <div class="card-subtitle">Das &quot;JPEG für 3D&quot; im Web &amp; Mobile</div>
+          <p class="card-overview">Lizenzfreie Spezifikation für die effiziente Übertragung und das schnelle Laden von 3D-Szenen und PBR-Modellen im Webbrowser und auf Mobilgeräten.</p>
+          <div class="card-tags">
+            <span class="tag ">Blender</span><span class="tag ">3ds Max</span>
+            <span class="tag tag-bridge ">WebXR</span><span class="tag tag-bridge ">Godot Engine</span>
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <div class="d-flex align-items-center gap-2">
+            <span class="card-vendor"><i class="fa-solid fa-building me-1 text-muted"></i> Khronos Group</span>
+          </div>
+          <button type="button" class="btn btn-outline-primary btn-sm btn-inspect py-1 px-2" data-ref="IND-META-2026-GLTF-20" style="font-size: 11px;">
+            Details →
+          </button>
+        </div>
+      </div>
+    
+        </div>
+      </div>
+      
+      <div class="graph-flow-arrow" title="Datenfluss zu Schicht 3">
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+    
+    
+      <div class="graph-col-stage " data-layer="3" data-index="2" style="border-top: 3px solid var(--color-layer-3);">
+        <div class="graph-col-header">
+          <span class="graph-col-badge" style="background-color: var(--color-layer-3);">
+            SCHICHT 3
+          </span>
+          <span class="graph-col-title" title="Schicht 3: Middleware &amp; Integration">
+            Middleware &amp; Integration
+          </span>
+        </div>
+
+        <div class="graph-col-role">
+          <div>
+            <div class="graph-col-role-label">
+              <i class="fa-solid fa-crosshairs me-1"></i> Rolle &amp; Systemaufgabe:
+            </div>
+            <div>Zentrale Verwaltungsschalen-Kopplung für Maschinen-Metadaten</div>
+          </div>
+        </div>
+
+        <div class="graph-col-component">
+          
+      <div class="card-item" onclick="if(window.appOpenProfileModal){window.appOpenProfileModal('IND-META-2026-AAS-IEC63278');}" style="cursor: pointer;">
+        <div>
+          <div class="card-header-bar">
+            <span class="card-category">KAT 3.1: Verwaltungsschale &amp; Zwillings-Standards</span>
+            <span class="tier-badge tier-1">Tier 1</span>
+          </div>
+          <h3 class="card-title">Asset Administration Shell / AAS (IEC 63278)</h3>
+          <div class="card-subtitle">RAMI 4.0 Standard für digitale Verwaltungsschalen</div>
+          <p class="card-overview">Der offizielle RAMI 4.0 Standard für digitale Zwillings-Metadaten. Kapselt technische Dokumentationen, Zertifikate, CAD-Modelle, CO2-Fußabdrücke und Sensorpunkte eines Industrie-Assets.</p>
+          <div class="card-tags">
+            <span class="tag ">XML</span><span class="tag ">JSON</span>
+            <span class="tag tag-bridge ">Siemens Operations X</span><span class="tag tag-bridge ">Collectu Engine</span>
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <div class="d-flex align-items-center gap-2">
+            <span class="card-vendor"><i class="fa-solid fa-building me-1 text-muted"></i> IDTA / Plattform Industrie 4.0</span>
+          </div>
+          <button type="button" class="btn btn-outline-primary btn-sm btn-inspect py-1 px-2" data-ref="IND-META-2026-AAS-IEC63278" style="font-size: 11px;">
+            Details →
+          </button>
+        </div>
+      </div>
+    
+        </div>
+      </div>
+      
+      <div class="graph-flow-arrow" title="Datenfluss zu Schicht 4">
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+    
+    
+      <div class="graph-col-stage " data-layer="4" data-index="3" style="border-top: 3px solid var(--color-layer-4);">
+        <div class="graph-col-header">
+          <span class="graph-col-badge" style="background-color: var(--color-layer-4);">
+            SCHICHT 4
+          </span>
+          <span class="graph-col-title" title="Schicht 4: Simulation &amp; Verhalten">
+            Simulation &amp; Verhalten
+          </span>
+        </div>
+
+        <div class="graph-col-role">
+          <div>
+            <div class="graph-col-role-label">
+              <i class="fa-solid fa-crosshairs me-1"></i> Rolle &amp; Systemaufgabe:
+            </div>
+            <div>Interaktive Messwerkzeuge &amp; POI-Informationsschichten</div>
+          </div>
+        </div>
+
+        <div class="graph-col-component">
+          
+    <div class="card-item" style="cursor: default;">
+      <div>
+        <div class="card-header-bar">
+          <span class="card-category">SCHICHT 4: IT &amp; ENTERPRISE</span>
+          <span class="badge bg-secondary font-monospace" style="font-size: 10px;">EXTERN</span>
+        </div>
+        <h3 class="card-title">Spatial Point Annotator</h3>
+        <div class="card-subtitle">Enterprise IT / Bestandsinfrastruktur</div>
+        <p class="card-overview">Nahtlos über Standard-Schnittstellen (REST API, Webhook, OPC UA) angebundenes Subsystem zur Abbildung operativer Geschäftsprozesse.</p>
+        <div class="card-tags">
+          <span class="tag tag-opcua">REST API</span>
+          <span class="tag tag-bridge">Webhook</span>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <div class="d-flex align-items-center gap-2">
+          <span class="card-vendor"><i class="fa-solid fa-server me-1 text-muted"></i> Enterprise IT</span>
+        </div>
+        <span class="badge bg-light text-muted border font-monospace" style="font-size: 10px;">
+          Bestandssystem
+        </span>
       </div>
     </div>
   
-    <div class="usecase-stack-row">
-      <div class="row g-3 align-items-center">
-        
-        <!-- Left Column: Tool/Product Name, RefCode & Detail Inspector Trigger -->
-        <div class="col-md-5">
-          <div class="d-flex align-items-center gap-2 mb-2">
-            <span class="badge bg-primary text-white font-monospace px-2 py-1">SCHICHT 2</span>
-            <span class="fw-bold text-muted uppercase font-monospace small">Schicht 2: Geometrie &amp; CAD/BIM</span>
-          </div>
-
-          <h3 class="h6 fw-black text-dark mb-2">glTF 2.0 / USDZ</h3>
-
-          <div class="d-flex align-items-center gap-2 flex-wrap">
-            
-              <span class="badge bg-light text-dark border font-monospace">IND-META-2026-GLTF-20</span>
-              <button type="button" class="btn btn-outline-primary btn-sm py-1 px-2 btn-inspect" data-ref="IND-META-2026-GLTF-20" onclick="if(window.appOpenProfileModal){window.appOpenProfileModal('IND-META-2026-GLTF-20');}">
-                <i class="fa-solid fa-eye me-1"></i> Details anzeigen →
-              </button>
-            
-          </div>
         </div>
-
-        <!-- Right Column: Parallel Layer Function & Task Description -->
-        <div class="col-md-7">
-          <div class="usecase-stack-right">
-            <div class="usecase-stack-label"><i class="fa-solid fa-gear text-primary me-1"></i> Aufgabe &amp; Funktion auf Schicht 2:</div>
-            <p class="text-secondary small m-0 leading-relaxed">Leichtgewichtige Web-3D-Formate</p>
-          </div>
-        </div>
-
       </div>
-    </div>
-  
-    <div class="usecase-stack-row">
-      <div class="row g-3 align-items-center">
-        
-        <!-- Left Column: Tool/Product Name, RefCode & Detail Inspector Trigger -->
-        <div class="col-md-5">
-          <div class="d-flex align-items-center gap-2 mb-2">
-            <span class="badge bg-primary text-white font-monospace px-2 py-1">SCHICHT 3</span>
-            <span class="fw-bold text-muted uppercase font-monospace small">Schicht 3: Middleware &amp; Integration</span>
-          </div>
-
-          <h3 class="h6 fw-black text-dark mb-2">AAS Asset Tagging Engine</h3>
-
-          <div class="d-flex align-items-center gap-2 flex-wrap">
-            
-              <span class="badge bg-light text-dark border font-monospace">IND-META-2026-AAS-IEC63278</span>
-              <button type="button" class="btn btn-outline-primary btn-sm py-1 px-2 btn-inspect" data-ref="IND-META-2026-AAS-IEC63278" onclick="if(window.appOpenProfileModal){window.appOpenProfileModal('IND-META-2026-AAS-IEC63278');}">
-                <i class="fa-solid fa-eye me-1"></i> Details anzeigen →
-              </button>
-            
-          </div>
-        </div>
-
-        <!-- Right Column: Parallel Layer Function & Task Description -->
-        <div class="col-md-7">
-          <div class="usecase-stack-right">
-            <div class="usecase-stack-label"><i class="fa-solid fa-gear text-primary me-1"></i> Aufgabe &amp; Funktion auf Schicht 3:</div>
-            <p class="text-secondary small m-0 leading-relaxed">Verknüpfung von 3D-Objekten mit Stammdaten</p>
-          </div>
-        </div>
-
+      
+      <div class="graph-flow-arrow" title="Datenfluss zu Schicht 5">
+        <i class="fa-solid fa-arrow-right"></i>
       </div>
-    </div>
-  
-    <div class="usecase-stack-row">
-      <div class="row g-3 align-items-center">
-        
-        <!-- Left Column: Tool/Product Name, RefCode & Detail Inspector Trigger -->
-        <div class="col-md-5">
-          <div class="d-flex align-items-center gap-2 mb-2">
-            <span class="badge bg-primary text-white font-monospace px-2 py-1">SCHICHT 4</span>
-            <span class="fw-bold text-muted uppercase font-monospace small">Schicht 4: Simulation &amp; Verhalten</span>
-          </div>
+    
+    
+      <div class="graph-col-stage " data-layer="5" data-index="4" style="border-top: 3px solid var(--color-layer-5);">
+        <div class="graph-col-header">
+          <span class="graph-col-badge" style="background-color: var(--color-layer-5);">
+            SCHICHT 5
+          </span>
+          <span class="graph-col-title" title="Schicht 5: Immersion &amp; Interaktion">
+            Immersion &amp; Interaktion
+          </span>
+        </div>
 
-          <h3 class="h6 fw-black text-dark mb-2">Spatial Point Annotator</h3>
-
-          <div class="d-flex align-items-center gap-2 flex-wrap">
-            
-              <span class="badge bg-light text-muted border font-monospace">EXTERN / IT SYSTEM</span>
-            
+        <div class="graph-col-role">
+          <div>
+            <div class="graph-col-role-label">
+              <i class="fa-solid fa-crosshairs me-1"></i> Rolle &amp; Systemaufgabe:
+            </div>
+            <div>Immersive 3D-Fabrikbegehung auf PC, Tablet und VR-Headsets</div>
           </div>
         </div>
 
-        <!-- Right Column: Parallel Layer Function & Task Description -->
-        <div class="col-md-7">
-          <div class="usecase-stack-right">
-            <div class="usecase-stack-label"><i class="fa-solid fa-gear text-primary me-1"></i> Aufgabe &amp; Funktion auf Schicht 4:</div>
-            <p class="text-secondary small m-0 leading-relaxed">Räumliche Notizen &amp; Messwerkzeuge</p>
+        <div class="graph-col-component">
+          
+      <div class="card-item" onclick="if(window.appOpenProfileModal){window.appOpenProfileModal('IND-META-2026-GODOT-WEBXR');}" style="cursor: pointer;">
+        <div>
+          <div class="card-header-bar">
+            <span class="card-category">KAT 5.1: Echtzeit-3D &amp; Spatial Engines</span>
+            <span class="tier-badge tier-1">Tier 1</span>
+          </div>
+          <h3 class="card-title">Godot Engine / WebXR</h3>
+          <div class="card-subtitle">Leichtgewichtige Open-Source 3D/Web Engine</div>
+          <p class="card-overview">Schlanke, lizenzfreie Open-Source 3D-Engine. Ideal für Web-eingebettete 3D-Dashboards, WebXR-Brillen und leichte Shopfloor-Displays.</p>
+          <div class="card-tags">
+            <span class="tag tag-gltf">glTF 2.0 (Native)</span><span class="tag ">OBJ</span>
+            <span class="tag tag-bridge tag-opcua">MQTT WebSockets</span><span class="tag tag-bridge tag-opcua">OPC UA REST Gateways</span>
           </div>
         </div>
 
+        <div class="card-footer">
+          <div class="d-flex align-items-center gap-2">
+            <span class="card-vendor"><i class="fa-solid fa-building me-1 text-muted"></i> Godot Foundation</span>
+          </div>
+          <button type="button" class="btn btn-outline-primary btn-sm btn-inspect py-1 px-2" data-ref="IND-META-2026-GODOT-WEBXR" style="font-size: 11px;">
+            Details →
+          </button>
+        </div>
       </div>
-    </div>
-  
-    <div class="usecase-stack-row">
-      <div class="row g-3 align-items-center">
-        
-        <!-- Left Column: Tool/Product Name, RefCode & Detail Inspector Trigger -->
-        <div class="col-md-5">
-          <div class="d-flex align-items-center gap-2 mb-2">
-            <span class="badge bg-primary text-white font-monospace px-2 py-1">SCHICHT 5</span>
-            <span class="fw-bold text-muted uppercase font-monospace small">Schicht 5: Immersion &amp; Interaktion</span>
-          </div>
-
-          <h3 class="h6 fw-black text-dark mb-2">WebXR / Three.js Viewer</h3>
-
-          <div class="d-flex align-items-center gap-2 flex-wrap">
-            
-              <span class="badge bg-light text-dark border font-monospace">IND-META-2026-GODOT-WEBXR</span>
-              <button type="button" class="btn btn-outline-primary btn-sm py-1 px-2 btn-inspect" data-ref="IND-META-2026-GODOT-WEBXR" onclick="if(window.appOpenProfileModal){window.appOpenProfileModal('IND-META-2026-GODOT-WEBXR');}">
-                <i class="fa-solid fa-eye me-1"></i> Details anzeigen →
-              </button>
-            
-          </div>
+    
         </div>
-
-        <!-- Right Column: Parallel Layer Function & Task Description -->
-        <div class="col-md-7">
-          <div class="usecase-stack-right">
-            <div class="usecase-stack-label"><i class="fa-solid fa-gear text-primary me-1"></i> Aufgabe &amp; Funktion auf Schicht 5:</div>
-            <p class="text-secondary small m-0 leading-relaxed">Immersive Browser-Begehung (PC/VR)</p>
-          </div>
-        </div>
-
       </div>
-    </div>
-  
+      
+    
       </div>
     </section>
   
     
-    <!-- BLOCK 3: Overview & Extended Description Block -->
+    <!-- BLOCK 4: Overview & Extended Description Block -->
     <section class="card border-0 shadow-sm p-4 mb-4 bg-white">
       <h2 class="h6 fw-bold text-dark mb-3">
-        <i class="fa-solid fa-align-left text-primary me-2"></i>2. Szenario-Beschreibung &amp; Systemkontext
+        <i class="fa-solid fa-align-left text-primary me-2"></i>3. Szenario-Beschreibung &amp; Systemkontext
       </h2>
-      <p class="text-secondary small leading-relaxed mb-4">Dieser Use Case ermöglicht weltweit verteilten Planungsteams, Zulieferern und Dienstleistern virtuelle Rundgänge durch reale Werksstrukturen. Anstelle zeitintensiver und kostenintensiver Anreisen können Werksbereiche in Fotorealismus (3D-Gaussian Splatting / Photogrammetrie) begutachtet werden. Interaktive Hotspots und Asset-Tags verknüpfen 3D-Objekte direkt mit technischen Datenblättern, Betriebsleistungen oder Wartungshistorien.</p>
+      <p class="text-secondary leading-relaxed mb-4">Dieser Use Case ermöglicht weltweit verteilten Planungsteams, Zulieferern und Dienstleistern virtuelle Rundgänge durch reale Werksstrukturen. Anstelle zeitintensiver und kostenintensiver Anreisen können Werksbereiche in Fotorealismus (3D-Gaussian Splatting / Photogrammetrie) begutachtet werden. Interaktive Hotspots und Asset-Tags verknüpfen 3D-Objekte direkt mit technischen Datenblättern, Betriebsleistungen oder Wartungshistorien.</p>
       
-      <div class="row g-4">
+      <div class="row g-3">
         
           <div class="col-md-6">
-            <div class="p-3 bg-light rounded border h-100">
-              <h3 class="h6 fw-bold text-dark mb-3"><i class="fa-solid fa-star text-primary me-2"></i>Kern-Vorteile &amp; Nutzen</h3>
-              <ul class="list-unstyled small text-secondary m-0 ps-0">
-                
+            <div class="p-3 rounded bg-light border h-100">
+              <div class="fw-bold small text-dark mb-2 uppercase font-monospace">Kernvorteile im Betrieb:</div>
+              <ul class="list-unstyled mb-0 small text-secondary">
     <li class="mb-2">
       <i class="fa-solid fa-circle-check text-primary me-2"></i>Plattformunabhängiger Zugriff via Webbrowser (WebXR) am PC, Tablet oder VR-Headset
     </li>
@@ -343,18 +491,16 @@
     <li class="mb-2">
       <i class="fa-solid fa-circle-check text-primary me-2"></i>Keine Installation von Spezial-Software erforderlich (Zero-Client-Footprint)
     </li>
-  
-              </ul>
+  </ul>
             </div>
           </div>
         
-        
+
         
           <div class="col-md-6">
-            <div class="p-3 bg-light rounded border h-100">
-              <h3 class="h6 fw-bold text-dark mb-3"><i class="fa-solid fa-list-check text-primary me-2"></i>Voraussetzungen &amp; Tools</h3>
-              <ul class="list-unstyled small text-secondary m-0 ps-0">
-                
+            <div class="p-3 rounded bg-light border h-100">
+              <div class="fw-bold small text-dark mb-2 uppercase font-monospace">Erforderliche Infrastruktur:</div>
+              <ul class="list-unstyled mb-0 small text-secondary">
     <li class="mb-2">
       <i class="fa-solid fa-screwdriver-wrench text-secondary me-2"></i>Fotogrammetrie-Scanner, 360°-Kamera oder Smartphone mit Scaniverse / Epic RealityScan
     </li>
@@ -366,8 +512,7 @@
     <li class="mb-2">
       <i class="fa-solid fa-screwdriver-wrench text-secondary me-2"></i>Standard glTF 2.0 / OpenUSD Konverter
     </li>
-  
-              </ul>
+  </ul>
             </div>
           </div>
         
@@ -375,10 +520,10 @@
     </section>
   
     
-    <!-- BLOCK 4: Media & Rich Content Block -->
+    <!-- BLOCK 5: Media & Rich Content Block -->
     <section class="card border-0 shadow-sm p-4 mb-4 bg-white">
       <h2 class="h6 fw-bold text-dark mb-3">
-        <i class="fa-solid fa-photo-film text-primary me-2"></i>3. Demonstration &amp; Medien-Dokumentation
+        <i class="fa-solid fa-photo-film text-primary me-2"></i>4. Demonstration &amp; Medien-Dokumentation
       </h2>
       
     <div class="mb-4">
@@ -416,15 +561,20 @@
     </section>
   
 
-    <!-- BLOCK 7: Action Footer Navigation Block -->
-    <footer class="card border-0 shadow-sm p-3 bg-white mb-4">
+    <!-- BLOCK 7: Action & Navigation Footer Block -->
+    <footer class="card border-0 shadow-sm p-4 bg-white">
       <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
         <a href="../index.html" class="btn btn-outline-secondary btn-sm">
-          <i class="fa-solid fa-arrow-left me-1"></i> Zurück zum Use Cases Hub
+          <i class="fa-solid fa-arrow-left me-1"></i> Zurück zur Übersicht aller Use Cases
         </a>
-        <a href="./usecase.json" target="_blank" class="btn btn-outline-primary btn-sm">
-          <i class="fa-solid fa-code me-1"></i> JSON Quelltext
-        </a>
+        <div class="d-flex gap-2">
+          <button type="button" class="btn btn-outline-secondary btn-sm btn-export-stack" data-uc-slug="uc-02-virtual-factory-walkthrough">
+            <i class="fa-solid fa-file-lines me-1"></i> Stack als Markdown kopieren
+          </button>
+          <a href="./usecase.json" target="_blank" class="btn btn-outline-primary btn-sm">
+            <i class="fa-solid fa-code me-1"></i> JSON Quelltext
+          </a>
+        </div>
       </div>
     </footer>
 

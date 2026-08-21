@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Use Cases Hub | Industrial Metaverse Taxonomie</title>
-  <meta name="description" content="Konsolidierter Baukasten Use Cases Hub der Industrial Metaverse Technologie-Taxonomie im Projekt Reallabor 2.0 am Forschungscampus ARENA2036.">
+  <meta name="description" content="Konsolidierter Use Cases Hub der Industrial Metaverse Technologie-Taxonomie.">
   
   <!-- OpenGraph & Social Media -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Use Cases Hub | Industrial Metaverse Taxonomie">
-  <meta property="og:description" content="Konsolidierter Baukasten Use Cases Hub der Industrial Metaverse Technologie-Taxonomie im Projekt Reallabor 2.0 am Forschungscampus ARENA2036.">
+  <meta property="og:description" content="Konsolidierter Use Cases Hub der Industrial Metaverse Technologie-Taxonomie.">
   <meta property="og:image" content="https://arena2036.github.io/IMV-taxonomie/assets/ARENA2036_combinationmark_orange_black.png">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -40,28 +40,28 @@
 </head>
 <body class="bg-light text-dark min-vh-100 d-flex flex-column">
 
+  <!-- Top Navigation Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm px-3 flex-shrink-0">
     <div class="container-fluid d-flex align-items-center justify-content-between">
-      <div class="d-flex align-items-center" style="min-width: 180px;">
+      
+      <!-- Brand Logo -->
+      <div class="d-flex align-items-center">
         <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="../index.html">
           <img src="../assets/Metaverse Logo bunt.svg" alt="Industrial Metaverse Logo" class="logo-img" title="Industrial Metaverse">
-          <div class="logo-divider"></div>
-          <img src="../assets/BaWue_WM_Absenderlogo_rgb_pos_Gefoerdert.svg" alt="Gefördert durch Baden-Württemberg" class="logo-img" title="Ministerium BW">
         </a>
       </div>
 
+      <!-- Center Title -->
       <div class="text-center flex-grow-1 px-2">
         <span class="fw-black text-dark fs-6 d-none d-md-inline-block">
-          Use Cases Hub: Baukasten Architekturen
+          Use Cases Hub
         </span>
       </div>
 
-      <div class="d-flex align-items-center justify-content-end gap-2" style="min-width: 180px;">
-        <a href="../index.html" class="btn btn-outline-secondary btn-sm">
-          <i class="fa-solid fa-house me-1"></i> Startseite
-        </a>
+      <!-- Hamburger Menu -->
+      <div class="d-flex align-items-center justify-content-end">
         <div class="dropdown">
-          <button class="btn btn-light btn-sm border dropdown-toggle" id="hamburgerBtn" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Menü">
+          <button class="btn btn-light btn-sm border" id="hamburgerBtn" type="button" aria-expanded="false" title="Menü">
             <i class="fa-solid fa-bars"></i>
           </button>
           <ul class="dropdown-menu dropdown-menu-end shadow-sm">
@@ -75,485 +75,594 @@
           </ul>
         </div>
       </div>
+
     </div>
   </nav>
 
-  <main class="container app-page-container py-4 flex-grow-1">
+  <!-- Main Content Container -->
+  <main class="container py-4 flex-grow-1" style="max-width: 1200px;">
     
-    <div class="card border-0 shadow-sm p-4 p-md-5 mb-4 bg-white">
-      <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-3">
+    <!-- Hero Canvas Header -->
+    <div class="card shadow-sm border-0 mb-4 bg-white p-4 p-md-5">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
         <div>
-          <h1 class="h3 fw-black text-dark m-0 mb-2">Baukasten-Use-Cases: Umsetzung, Kosten &amp; Nutzen</h1>
+          <span class="badge bg-primary text-white font-monospace mb-2">USE CASES HUB</span>
+          <h1 class="h3 fw-black text-dark m-0 mb-2">Use Cases Hub</h1>
           <p class="text-secondary small m-0" style="max-width: 850px;">
-            Konsolidierter Hub für alle 6 auditierte Baukasten-Use-Cases. Jeder Use Case beantwortet konkret: <strong>Wie erfolgt die Umsetzung über die 5 Schichten? Welcher Investitionsrahmen (Tier 1 bis 3) ist zu erwarten? Und welche betrieblichen Nutzenpotenziale entstehen?</strong>
+            Konsolidierter Hub für alle 6 auditierte Industrial Metaverse Referenz-Architekturen. Erforschen Sie das Zusammenspiel aller 5 Schichten von der Erfassung bis zur Immersion, unterteilt in transparente Investitionsklassen.
           </p>
         </div>
-        <a href="https://github.com/ARENA2036/IMV-taxonomie/pulls" target="_blank" class="btn btn-primary btn-sm px-3">
-          <i class="fa-brands fa-github me-1"></i> Use Case via PR beitragen
+        <a href="https://github.com/ARENA2036/IMV-taxonomie/pulls" target="_blank" class="btn btn-outline-dark btn-sm px-3">
+          <i class="fa-brands fa-github me-1"></i> Use Case einreichen
         </a>
       </div>
     </div>
 
-    <!-- Search & Tier Filter Toolbar -->
-    <div class="card border-0 shadow-sm p-3 mb-4 bg-white">
-      <div class="row g-2 align-items-center">
-        <div class="col-md-7">
-          <div class="input-group input-group-sm">
-            <span class="input-group-text bg-light border-end-0"><i class="fa-solid fa-magnifying-glass text-muted"></i></span>
-            <input type="text" id="hubSearchInput" class="form-control border-start-0" placeholder="Use Case, Technologie oder Nutzen suchen..." autocomplete="off">
-            <button class="btn btn-outline-secondary" type="button" id="hubSearchClearBtn" title="Zurücksetzen"><i class="fa-solid fa-xmark"></i></button>
+    <!-- Filter & Toolbar Card -->
+    <div class="card shadow-sm border-0 mb-4 bg-white p-3">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+        <!-- Live Search Input -->
+        <div class="input-group input-group-sm flex-grow-1" style="max-width: 450px;">
+          <span class="input-group-text bg-light border-end-0"><i class="fa-solid fa-magnifying-glass text-muted"></i></span>
+          <input type="text" id="ucSearchInput" class="form-control border-start-0 border-end-0" placeholder="Use Case, Technologie oder Ziel suchen..." autocomplete="off">
+          <button class="btn btn-outline-secondary" type="button" id="ucSearchClearBtn" title="Zurücksetzen"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <!-- View Mode Toggle -->
+        <div class="d-flex align-items-center gap-2">
+          <div class="btn-group btn-group-sm" role="group">
+            <button type="button" class="btn btn-outline-secondary active" id="btnUcGridMode" title="Rasteransicht"><i class="fa-solid fa-border-all"></i> Raster</button>
+            <button type="button" class="btn btn-outline-secondary" id="btnUcListMode" title="Listenansicht"><i class="fa-solid fa-list"></i> Liste</button>
           </div>
         </div>
+      </div>
 
-        <div class="col-md-3">
-          <select id="hubFilterTier" class="form-select form-select-sm">
-            <option value="ALL">Alle Kostengruppen</option>
-            <option value="Tier 1">Tier 1 (≤ €30k / Starter &amp; Open Source)</option>
-            <option value="Tier 2">Tier 2 (≤ €100k / Skalierbar &amp; Modular)</option>
-            <option value="Tier 3">Tier 3 (> €100k / Enterprise OEM)</option>
-          </select>
+      <!-- Horizontal Tier Category Chips Bar -->
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 pt-2 border-top">
+        <div class="layer-chips-container" id="ucChipsBar">
+          <button class="layer-chip active" data-tier="ALL"><i class="fa-solid fa-layer-group me-1"></i> Alle Use Cases (6)</button>
+          <button class="layer-chip" data-tier="Tier 1"><i class="fa-solid fa-seedling text-success me-1"></i> Tier 1: Starter (≤ €30k)</button>
+          <button class="layer-chip" data-tier="Tier 2"><i class="fa-solid fa-cubes text-primary me-1"></i> Tier 2: Modular (≤ €100k)</button>
+          <button class="layer-chip" data-tier="Tier 3"><i class="fa-solid fa-building text-warning me-1"></i> Tier 3: OEM (> €100k)</button>
         </div>
-
-        <div class="col-md-2 text-md-end small fw-bold text-secondary">
-          Zeige <span id="hubCountBadge" class="text-primary fw-black">6</span> Use Cases
+        <div class="small text-muted" id="ucStatusBar">
+          Zeige <strong>6</strong> Use Cases
         </div>
       </div>
     </div>
 
-    <div class="row" id="useCaseCardsContainer">
+    <!-- Main Content Container: Grid & List -->
+    <div id="ucGridView" class="row">
       
-      <div class="col-12 mb-4 usecase-card-item" data-tier="Tier 1" data-text="digitales shopfloor-incident-management wie umsetzen? schnelle optische 360°-bestandserfassung im shopfloor ohne maschinenstillstand. die aufnahmen werden in faro sphere xg verortet und lösen automatisiert instandhaltungstickets im enterprise-system (jira / sap pm) aus. betrieblicher nutzen: schnelle 3d-fehlerortung im werk ohne manuelle wegezeiten zur beschleunigung des instandhaltungsprozesses. (indikativer forschungs-benchmark, keine finanzberatung).">
-        <div class="card border-0 shadow-sm p-4 bg-white hover-shadow transition">
-          
-          <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
-            <div class="d-flex align-items-center gap-2">
-              <span class="badge bg-primary text-white font-monospace">UC-01-SHOPFLOOR-INCIDENT-MANAGEMENT</span>
-              <span class="badge bg-light text-dark border font-monospace">Tier 1</span>
+      <div class="col-lg-6 col-12 mb-3 uc-card-item" data-tier="Tier 1" data-text="digitales shopfloor-incident-management wie umsetzen? schnelle optische 360°-bestandserfassung im shopfloor ohne maschinenstillstand. die aufnahmen werden in faro sphere xg verortet und lösen automatisiert instandhaltungstickets im enterprise-system (jira / sap pm) aus. betrieblicher nutzen: schnelle 3d-fehlerortung im werk ohne manuelle wegezeiten zur beschleunigung des instandhaltungsprozesses. (indikativer forschungs-benchmark, keine finanzberatung). faro orbis / matterport e57 / panorama scan faro sphere xg jira service management / sap pm webxr / web inspection">
+        <div class="usecase-card-item">
+          <div>
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
+              <div class="d-flex align-items-center gap-2">
+                <span class="badge bg-primary text-white font-monospace">UC-01-SHOPFLOOR-INCIDENT-MANAGEMENT</span>
+                <span class="badge bg-light text-dark border font-monospace">Tier 1 (≤ €30k / Starter &amp; Open Source)</span>
+              </div>
+              <a href="./uc-01-shopfloor-incident-management/index.html" class="btn btn-outline-primary btn-sm py-1 px-2 fw-bold" style="font-size: 11px;">
+                Architektur &amp; Ablauf →
+              </a>
             </div>
-            <a href="./uc-01-shopfloor-incident-management/index.html" class="btn btn-primary btn-sm fw-bold">
-              Use Case öffnen <i class="fa-solid fa-arrow-right ms-1"></i>
-            </a>
-          </div>
 
-          <h2 class="h5 fw-bold text-dark mb-2">Digitales Shopfloor-Incident-Management</h2>
-          <p class="text-secondary small mb-3">Wie umsetzen? Schnelle optische 360°-Bestandserfassung im Shopfloor ohne Maschinenstillstand. Die Aufnahmen werden in FARO Sphere XG verortet und lösen automatisiert Instandhaltungstickets im Enterprise-System (Jira / SAP PM) aus.</p>
+            <h3 class="h6 fw-bold text-dark mb-1">Digitales Shopfloor-Incident-Management</h3>
+            <p class="text-secondary small mb-2">Wie umsetzen? Schnelle optische 360°-Bestandserfassung im Shopfloor ohne Maschinenstillstand. Die Aufnahmen werden in FARO Sphere XG verortet und lösen automatisiert Instandhaltungstickets im Enterprise-System (Jira / SAP PM) aus.</p>
 
-          <!-- 5-Layer Sequence Preview -->
-          <div class="mb-3">
-            <div class="fw-bold text-muted uppercase mb-2 small"><i class="fa-solid fa-sitemap text-primary me-1"></i>5-Schichten Ablauf-Sequenz:</div>
-            <div class="row g-2">
+            <div class="usecase-mini-sequence">
               
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S1</div>
-          <div class="fw-bold text-dark text-truncate small" title="FARO Orbis / Matterport">FARO Orbis / Matterport</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 1: FARO Orbis / Matterport">
+        <span class="badge" style="background-color: var(--color-layer-1); color: white; font-size: 8px; padding: 2px 4px;">S1</span>
+        FARO Orbis / Matterport
+      </span>
     
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S2</div>
-          <div class="fw-bold text-dark text-truncate small" title="E57 / Panorama Scan">E57 / Panorama Scan</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 2: E57 / Panorama Scan">
+        <span class="badge" style="background-color: var(--color-layer-2); color: white; font-size: 8px; padding: 2px 4px;">S2</span>
+        E57 / Panorama Scan
+      </span>
     
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S3</div>
-          <div class="fw-bold text-dark text-truncate small" title="FARO Sphere XG">FARO Sphere XG</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 3: FARO Sphere XG">
+        <span class="badge" style="background-color: var(--color-layer-3); color: white; font-size: 8px; padding: 2px 4px;">S3</span>
+        FARO Sphere XG
+      </span>
     
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S4</div>
-          <div class="fw-bold text-dark text-truncate small" title="Jira / SAP PM">Jira / SAP PM</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 4: Jira Service Management / SAP PM">
+        <span class="badge" style="background-color: var(--color-layer-4); color: white; font-size: 8px; padding: 2px 4px;">S4</span>
+        Jira Service Management / SAP PM
+      </span>
     
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S5</div>
-          <div class="fw-bold text-dark text-truncate small" title="WebXR / Web Inspection">WebXR / Web Inspection</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 5: WebXR / Web Inspection">
+        <span class="badge" style="background-color: var(--color-layer-5); color: white; font-size: 8px; padding: 2px 4px;">S5</span>
+        WebXR / Web Inspection
+      </span>
     
             </div>
+
+            <div class="d-flex gap-1 flex-wrap mb-2">
+      <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace" style="font-size: 10px;">
+        Einsparung Wegezeiten: bis zu 65%
+      </span>
+    
+      <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace" style="font-size: 10px;">
+        Beschleunigung Entstörung: &lt; 45 Min
+      </span>
+    
+      <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace" style="font-size: 10px;">
+        Reduzierung Fehldiagnosen: -80%
+      </span>
+    </div>
           </div>
 
-          
-            <div class="d-flex gap-2 mb-3 flex-wrap">
-              <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace">Einsparung Wegezeiten: bis zu 65%</span><span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace">Beschleunigung Entstörung: &lt; 45 Min</span><span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace">Reduzierung Fehldiagnosen: -80%</span>
-            </div>
-          
-
-          <div class="p-2 rounded bg-light border-start border-3 border-primary small text-secondary">
-            <strong class="text-primary me-1"><i class="fa-solid fa-bullseye"></i> Betrieblicher Nutzen:</strong> Betrieblicher Nutzen: Schnelle 3D-Fehlerortung im Werk ohne manuelle Wegezeiten zur Beschleunigung des Instandhaltungsprozesses. (Indikativer Forschungs-Benchmark, keine Finanzberatung).
+          <div class="p-2 rounded bg-light border-start border-3 border-primary small text-secondary mt-2">
+            <strong class="text-primary me-1"><i class="fa-solid fa-bullseye"></i> Ziel:</strong> Betrieblicher Nutzen: Schnelle 3D-Fehlerortung im Werk ohne manuelle Wegezeiten zur Beschleunigung des Instandhaltungsprozesses. (Indikativer Forschungs-Benchmark, keine Finanzberatung).
           </div>
-
         </div>
       </div>
     
-      <div class="col-12 mb-4 usecase-card-item" data-tier="Tier 1" data-text="virtuelle fabrikbegehung &amp; asset-tagging via webxr wie umsetzen? zusammenführung von 360°-fotogrammetrie (matterport / scaniverse) und openusd/gltf-modellen in einer browserbasierten webxr-umgebung. externe partner befahren die fabrik ohne physische anreise. betrieblicher nutzen: erheblich reduzierte reisekosten für audits und vorort-planungstermine. demokratisierter 3d-zugriff ohne high-end cad-workstations. (indikativer forschungs-benchmark).">
-        <div class="card border-0 shadow-sm p-4 bg-white hover-shadow transition">
-          
-          <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
-            <div class="d-flex align-items-center gap-2">
-              <span class="badge bg-primary text-white font-monospace">UC-02-VIRTUAL-FACTORY-WALKTHROUGH</span>
-              <span class="badge bg-light text-dark border font-monospace">Tier 1</span>
+      <div class="col-lg-6 col-12 mb-3 uc-card-item" data-tier="Tier 1" data-text="virtuelle fabrikbegehung &amp; asset-tagging via webxr wie umsetzen? zusammenführung von 360°-fotogrammetrie (matterport / scaniverse) und openusd/gltf-modellen in einer browserbasierten webxr-umgebung. externe partner befahren die fabrik ohne physische anreise. betrieblicher nutzen: erheblich reduzierte reisekosten für audits und vorort-planungstermine. demokratisierter 3d-zugriff ohne high-end cad-workstations. (indikativer forschungs-benchmark). matterport pro3 / scaniverse gltf 2.0 / usdz aas asset tagging engine spatial point annotator webxr / three.js viewer">
+        <div class="usecase-card-item">
+          <div>
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
+              <div class="d-flex align-items-center gap-2">
+                <span class="badge bg-primary text-white font-monospace">UC-02-VIRTUAL-FACTORY-WALKTHROUGH</span>
+                <span class="badge bg-light text-dark border font-monospace">Tier 1 (≤ €30k / Starter &amp; Open Source)</span>
+              </div>
+              <a href="./uc-02-virtual-factory-walkthrough/index.html" class="btn btn-outline-primary btn-sm py-1 px-2 fw-bold" style="font-size: 11px;">
+                Architektur &amp; Ablauf →
+              </a>
             </div>
-            <a href="./uc-02-virtual-factory-walkthrough/index.html" class="btn btn-primary btn-sm fw-bold">
-              Use Case öffnen <i class="fa-solid fa-arrow-right ms-1"></i>
-            </a>
-          </div>
 
-          <h2 class="h5 fw-bold text-dark mb-2">Virtuelle Fabrikbegehung &amp; Asset-Tagging via WebXR</h2>
-          <p class="text-secondary small mb-3">Wie umsetzen? Zusammenführung von 360°-Fotogrammetrie (Matterport / Scaniverse) und OpenUSD/glTF-Modellen in einer browserbasierten WebXR-Umgebung. Externe Partner befahren die Fabrik ohne physische Anreise.</p>
+            <h3 class="h6 fw-bold text-dark mb-1">Virtuelle Fabrikbegehung &amp; Asset-Tagging via WebXR</h3>
+            <p class="text-secondary small mb-2">Wie umsetzen? Zusammenführung von 360°-Fotogrammetrie (Matterport / Scaniverse) und OpenUSD/glTF-Modellen in einer browserbasierten WebXR-Umgebung. Externe Partner befahren die Fabrik ohne physische Anreise.</p>
 
-          <!-- 5-Layer Sequence Preview -->
-          <div class="mb-3">
-            <div class="fw-bold text-muted uppercase mb-2 small"><i class="fa-solid fa-sitemap text-primary me-1"></i>5-Schichten Ablauf-Sequenz:</div>
-            <div class="row g-2">
+            <div class="usecase-mini-sequence">
               
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S1</div>
-          <div class="fw-bold text-dark text-truncate small" title="Matterport Pro3 / Scaniverse">Matterport Pro3 / Scaniverse</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 1: Matterport Pro3 / Scaniverse">
+        <span class="badge" style="background-color: var(--color-layer-1); color: white; font-size: 8px; padding: 2px 4px;">S1</span>
+        Matterport Pro3 / Scaniverse
+      </span>
     
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S2</div>
-          <div class="fw-bold text-dark text-truncate small" title="glTF 2.0 / USDZ">glTF 2.0 / USDZ</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 2: glTF 2.0 / USDZ">
+        <span class="badge" style="background-color: var(--color-layer-2); color: white; font-size: 8px; padding: 2px 4px;">S2</span>
+        glTF 2.0 / USDZ
+      </span>
     
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S3</div>
-          <div class="fw-bold text-dark text-truncate small" title="AAS Asset Tagging Engine">AAS Asset Tagging Engine</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 3: AAS Asset Tagging Engine">
+        <span class="badge" style="background-color: var(--color-layer-3); color: white; font-size: 8px; padding: 2px 4px;">S3</span>
+        AAS Asset Tagging Engine
+      </span>
     
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S4</div>
-          <div class="fw-bold text-dark text-truncate small" title="Spatial Point Annotator">Spatial Point Annotator</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 4: Spatial Point Annotator">
+        <span class="badge" style="background-color: var(--color-layer-4); color: white; font-size: 8px; padding: 2px 4px;">S4</span>
+        Spatial Point Annotator
+      </span>
     
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S5</div>
-          <div class="fw-bold text-dark text-truncate small" title="WebXR / Three.js Viewer">WebXR / Three.js Viewer</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 5: WebXR / Three.js Viewer">
+        <span class="badge" style="background-color: var(--color-layer-5); color: white; font-size: 8px; padding: 2px 4px;">S5</span>
+        WebXR / Three.js Viewer
+      </span>
     
             </div>
+
+            <div class="d-flex gap-1 flex-wrap mb-2">
+      <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace" style="font-size: 10px;">
+        Einsparung Reisekosten: 75%
+      </span>
+    
+      <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace" style="font-size: 10px;">
+        Besprechungs-Effizienz: +50%
+      </span>
+    
+      <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace" style="font-size: 10px;">
+        Auditzugang: 24/7 Weltweit
+      </span>
+    </div>
           </div>
 
-          
-            <div class="d-flex gap-2 mb-3 flex-wrap">
-              <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace">Einsparung Reisekosten: 75%</span><span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace">Besprechungs-Effizienz: +50%</span><span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace">Auditzugang: 24/7 Weltweit</span>
-            </div>
-          
-
-          <div class="p-2 rounded bg-light border-start border-3 border-primary small text-secondary">
-            <strong class="text-primary me-1"><i class="fa-solid fa-bullseye"></i> Betrieblicher Nutzen:</strong> Betrieblicher Nutzen: Erheblich reduzierte Reisekosten für Audits und Vorort-Planungstermine. Demokratisierter 3D-Zugriff ohne High-End CAD-Workstations. (Indikativer Forschungs-Benchmark).
+          <div class="p-2 rounded bg-light border-start border-3 border-primary small text-secondary mt-2">
+            <strong class="text-primary me-1"><i class="fa-solid fa-bullseye"></i> Ziel:</strong> Betrieblicher Nutzen: Erheblich reduzierte Reisekosten für Audits und Vorort-Planungstermine. Demokratisierter 3D-Zugriff ohne High-End CAD-Workstations. (Indikativer Forschungs-Benchmark).
           </div>
-
         </div>
       </div>
     
-      <div class="col-12 mb-4 usecase-card-item" data-tier="Tier 2" data-text="ar-gestützte werkerassistenz mit iot-echtzeitdaten wie umsetzen? anbindung von opc ua / mqtt telemetriefeldbussen an ar-brillen (realwear / meta quest 3). instandhalter sehen schritt-für-schritt-anleitungen und live-temperatur/vibrationswerte direkt im sichtfeld. betrieblicher nutzen: drastische reduzierung der einarbeitungszeit neuer mitarbeiter und einhaltung von qualitäts-checklisten. minimierte fehlerquote bei komplexen reparaturen. (indikativer forschungs-benchmark).">
-        <div class="card border-0 shadow-sm p-4 bg-white hover-shadow transition">
-          
-          <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
-            <div class="d-flex align-items-center gap-2">
-              <span class="badge bg-primary text-white font-monospace">UC-03-AR-WORKER-ASSISTANCE</span>
-              <span class="badge bg-light text-dark border font-monospace">Tier 2</span>
+      <div class="col-lg-6 col-12 mb-3 uc-card-item" data-tier="Tier 2" data-text="ar-gestützte werkerassistenz mit iot-echtzeitdaten wie umsetzen? anbindung von opc ua / mqtt telemetriefeldbussen an ar-brillen (realwear / meta quest 3). instandhalter sehen schritt-für-schritt-anleitungen und live-temperatur/vibrationswerte direkt im sichtfeld. betrieblicher nutzen: drastische reduzierung der einarbeitungszeit neuer mitarbeiter und einhaltung von qualitäts-checklisten. minimierte fehlerquote bei komplexen reparaturen. (indikativer forschungs-benchmark). opc ua / modbus tcp autodesk fusion / cad mesh ptc thingworx / vuforia work instruction engine realwear nav-520 / quest 3">
+        <div class="usecase-card-item">
+          <div>
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
+              <div class="d-flex align-items-center gap-2">
+                <span class="badge bg-primary text-white font-monospace">UC-03-AR-WORKER-ASSISTANCE</span>
+                <span class="badge bg-light text-dark border font-monospace">Tier 2 (≤ €100k / Skalierbar &amp; Modular)</span>
+              </div>
+              <a href="./uc-03-ar-worker-assistance/index.html" class="btn btn-outline-primary btn-sm py-1 px-2 fw-bold" style="font-size: 11px;">
+                Architektur &amp; Ablauf →
+              </a>
             </div>
-            <a href="./uc-03-ar-worker-assistance/index.html" class="btn btn-primary btn-sm fw-bold">
-              Use Case öffnen <i class="fa-solid fa-arrow-right ms-1"></i>
-            </a>
-          </div>
 
-          <h2 class="h5 fw-bold text-dark mb-2">AR-gestützte Werkerassistenz mit IoT-Echtzeitdaten</h2>
-          <p class="text-secondary small mb-3">Wie umsetzen? Anbindung von OPC UA / MQTT Telemetriefeldbussen an AR-Brillen (RealWear / Meta Quest 3). Instandhalter sehen Schritt-für-Schritt-Anleitungen und Live-Temperatur/Vibrationswerte direkt im Sichtfeld.</p>
+            <h3 class="h6 fw-bold text-dark mb-1">AR-gestützte Werkerassistenz mit IoT-Echtzeitdaten</h3>
+            <p class="text-secondary small mb-2">Wie umsetzen? Anbindung von OPC UA / MQTT Telemetriefeldbussen an AR-Brillen (RealWear / Meta Quest 3). Instandhalter sehen Schritt-für-Schritt-Anleitungen und Live-Temperatur/Vibrationswerte direkt im Sichtfeld.</p>
 
-          <!-- 5-Layer Sequence Preview -->
-          <div class="mb-3">
-            <div class="fw-bold text-muted uppercase mb-2 small"><i class="fa-solid fa-sitemap text-primary me-1"></i>5-Schichten Ablauf-Sequenz:</div>
-            <div class="row g-2">
+            <div class="usecase-mini-sequence">
               
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S1</div>
-          <div class="fw-bold text-dark text-truncate small" title="OPC UA / Modbus TCP">OPC UA / Modbus TCP</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 1: OPC UA / Modbus TCP">
+        <span class="badge" style="background-color: var(--color-layer-1); color: white; font-size: 8px; padding: 2px 4px;">S1</span>
+        OPC UA / Modbus TCP
+      </span>
     
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S2</div>
-          <div class="fw-bold text-dark text-truncate small" title="CAD Asset Mesh">CAD Asset Mesh</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 2: Autodesk Fusion / CAD Mesh">
+        <span class="badge" style="background-color: var(--color-layer-2); color: white; font-size: 8px; padding: 2px 4px;">S2</span>
+        Autodesk Fusion / CAD Mesh
+      </span>
     
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S3</div>
-          <div class="fw-bold text-dark text-truncate small" title="PTC ThingWorx / Vuforia">PTC ThingWorx / Vuforia</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 3: PTC ThingWorx / Vuforia">
+        <span class="badge" style="background-color: var(--color-layer-3); color: white; font-size: 8px; padding: 2px 4px;">S3</span>
+        PTC ThingWorx / Vuforia
+      </span>
     
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S4</div>
-          <div class="fw-bold text-dark text-truncate small" title="Work Instruction Engine">Work Instruction Engine</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 4: Work Instruction Engine">
+        <span class="badge" style="background-color: var(--color-layer-4); color: white; font-size: 8px; padding: 2px 4px;">S4</span>
+        Work Instruction Engine
+      </span>
     
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S5</div>
-          <div class="fw-bold text-dark text-truncate small" title="RealWear Nav-520 / Quest 3">RealWear Nav-520 / Quest 3</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 5: RealWear Nav-520 / Quest 3">
+        <span class="badge" style="background-color: var(--color-layer-5); color: white; font-size: 8px; padding: 2px 4px;">S5</span>
+        RealWear Nav-520 / Quest 3
+      </span>
     
             </div>
+
+            <div class="d-flex gap-1 flex-wrap mb-2">
+      <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace" style="font-size: 10px;">
+        Montagefehler-Reduzierung: -85%
+      </span>
+    
+      <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace" style="font-size: 10px;">
+        Einarbeitungszeit: -50%
+      </span>
+    
+      <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace" style="font-size: 10px;">
+        Erstlösungs-Quote: +40%
+      </span>
+    </div>
           </div>
 
-          
-            <div class="d-flex gap-2 mb-3 flex-wrap">
-              <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace">Montagefehler-Reduzierung: -85%</span><span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace">Einarbeitungszeit: -50%</span><span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace">Erstlösungs-Quote: +40%</span>
-            </div>
-          
-
-          <div class="p-2 rounded bg-light border-start border-3 border-primary small text-secondary">
-            <strong class="text-primary me-1"><i class="fa-solid fa-bullseye"></i> Betrieblicher Nutzen:</strong> Betrieblicher Nutzen: Drastische Reduzierung der Einarbeitungszeit neuer Mitarbeiter und Einhaltung von Qualitäts-Checklisten. Minimierte Fehlerquote bei komplexen Reparaturen. (Indikativer Forschungs-Benchmark).
+          <div class="p-2 rounded bg-light border-start border-3 border-primary small text-secondary mt-2">
+            <strong class="text-primary me-1"><i class="fa-solid fa-bullseye"></i> Ziel:</strong> Betrieblicher Nutzen: Drastische Reduzierung der Einarbeitungszeit neuer Mitarbeiter und Einhaltung von Qualitäts-Checklisten. Minimierte Fehlerquote bei komplexen Reparaturen. (Indikativer Forschungs-Benchmark).
           </div>
-
         </div>
       </div>
     
-      <div class="col-12 mb-4 usecase-card-item" data-tier="Tier 2" data-text="punktwolken-vergleich für die fabrik-layoutplanung wie umsetzen? hochpräzises terrestrik-scanning (leica rtc360 / faro focus) der bestehenden hallenstruktur. überlagerung mit neuen cad-planungsmodellen in autodesk revit / navisworks zur vermeidung teurer umbaufehler. betrieblicher nutzen: 100%ige vermeidung von kollisionen neuer fördertechnik mit bestehenden rohren und trägern im brownfield vor der montage. (indikativer forschungs-benchmark).">
-        <div class="card border-0 shadow-sm p-4 bg-white hover-shadow transition">
-          
-          <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
-            <div class="d-flex align-items-center gap-2">
-              <span class="badge bg-primary text-white font-monospace">UC-04-POINTCLOUD-LAYOUT-PLANNING</span>
-              <span class="badge bg-light text-dark border font-monospace">Tier 2</span>
+      <div class="col-lg-6 col-12 mb-3 uc-card-item" data-tier="Tier 2" data-text="punktwolken-vergleich für die fabrik-layoutplanung wie umsetzen? hochpräzises terrestrik-scanning (leica rtc360 / faro focus) der bestehenden hallenstruktur. überlagerung mit neuen cad-planungsmodellen in autodesk revit / navisworks zur vermeidung teurer umbaufehler. betrieblicher nutzen: 100%ige vermeidung von kollisionen neuer fördertechnik mit bestehenden rohren und trägern im brownfield vor der montage. (indikativer forschungs-benchmark). leica rtc360 / navvis vlx autodesk revit / recap ifc / openusd pipeline ipolog / navisworks twinmotion / unreal engine">
+        <div class="usecase-card-item">
+          <div>
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
+              <div class="d-flex align-items-center gap-2">
+                <span class="badge bg-primary text-white font-monospace">UC-04-POINTCLOUD-LAYOUT-PLANNING</span>
+                <span class="badge bg-light text-dark border font-monospace">Tier 2 (≤ €100k / Skalierbar &amp; Modular)</span>
+              </div>
+              <a href="./uc-04-pointcloud-layout-planning/index.html" class="btn btn-outline-primary btn-sm py-1 px-2 fw-bold" style="font-size: 11px;">
+                Architektur &amp; Ablauf →
+              </a>
             </div>
-            <a href="./uc-04-pointcloud-layout-planning/index.html" class="btn btn-primary btn-sm fw-bold">
-              Use Case öffnen <i class="fa-solid fa-arrow-right ms-1"></i>
-            </a>
-          </div>
 
-          <h2 class="h5 fw-bold text-dark mb-2">Punktwolken-Vergleich für die Fabrik-Layoutplanung</h2>
-          <p class="text-secondary small mb-3">Wie umsetzen? Hochpräzises Terrestrik-Scanning (Leica RTC360 / Faro Focus) der bestehenden Hallenstruktur. Überlagerung mit neuen CAD-Planungsmodellen in Autodesk Revit / Navisworks zur Vermeidung teurer Umbaufehler.</p>
+            <h3 class="h6 fw-bold text-dark mb-1">Punktwolken-Vergleich für die Fabrik-Layoutplanung</h3>
+            <p class="text-secondary small mb-2">Wie umsetzen? Hochpräzises Terrestrik-Scanning (Leica RTC360 / Faro Focus) der bestehenden Hallenstruktur. Überlagerung mit neuen CAD-Planungsmodellen in Autodesk Revit / Navisworks zur Vermeidung teurer Umbaufehler.</p>
 
-          <!-- 5-Layer Sequence Preview -->
-          <div class="mb-3">
-            <div class="fw-bold text-muted uppercase mb-2 small"><i class="fa-solid fa-sitemap text-primary me-1"></i>5-Schichten Ablauf-Sequenz:</div>
-            <div class="row g-2">
+            <div class="usecase-mini-sequence">
               
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S1</div>
-          <div class="fw-bold text-dark text-truncate small" title="Leica RTC360 / NavVis VLX">Leica RTC360 / NavVis VLX</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 1: Leica RTC360 / NavVis VLX">
+        <span class="badge" style="background-color: var(--color-layer-1); color: white; font-size: 8px; padding: 2px 4px;">S1</span>
+        Leica RTC360 / NavVis VLX
+      </span>
     
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S2</div>
-          <div class="fw-bold text-dark text-truncate small" title="Autodesk Revit / ReCap">Autodesk Revit / ReCap</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 2: Autodesk Revit / ReCap">
+        <span class="badge" style="background-color: var(--color-layer-2); color: white; font-size: 8px; padding: 2px 4px;">S2</span>
+        Autodesk Revit / ReCap
+      </span>
     
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S3</div>
-          <div class="fw-bold text-dark text-truncate small" title="IFC / OpenUSD Pipeline">IFC / OpenUSD Pipeline</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 3: IFC / OpenUSD Pipeline">
+        <span class="badge" style="background-color: var(--color-layer-3); color: white; font-size: 8px; padding: 2px 4px;">S3</span>
+        IFC / OpenUSD Pipeline
+      </span>
     
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S4</div>
-          <div class="fw-bold text-dark text-truncate small" title="ipolog / Navisworks">ipolog / Navisworks</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 4: ipolog / Navisworks">
+        <span class="badge" style="background-color: var(--color-layer-4); color: white; font-size: 8px; padding: 2px 4px;">S4</span>
+        ipolog / Navisworks
+      </span>
     
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S5</div>
-          <div class="fw-bold text-dark text-truncate small" title="Twinmotion / Unreal Engine">Twinmotion / Unreal Engine</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 5: Twinmotion / Unreal Engine">
+        <span class="badge" style="background-color: var(--color-layer-5); color: white; font-size: 8px; padding: 2px 4px;">S5</span>
+        Twinmotion / Unreal Engine
+      </span>
     
             </div>
+
+            <div class="d-flex gap-1 flex-wrap mb-2">
+      <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace" style="font-size: 10px;">
+        Vermeidung Umbaufehler: 100%
+      </span>
+    
+      <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace" style="font-size: 10px;">
+        Kollisions-Erkennung: Vor Montage
+      </span>
+    
+      <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace" style="font-size: 10px;">
+        Planungsbeschleunigung: +40%
+      </span>
+    </div>
           </div>
 
-          
-            <div class="d-flex gap-2 mb-3 flex-wrap">
-              <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace">Vermeidung Umbaufehler: 100%</span><span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace">Kollisions-Erkennung: Vor Montage</span><span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace">Planungsbeschleunigung: +40%</span>
-            </div>
-          
-
-          <div class="p-2 rounded bg-light border-start border-3 border-primary small text-secondary">
-            <strong class="text-primary me-1"><i class="fa-solid fa-bullseye"></i> Betrieblicher Nutzen:</strong> Betrieblicher Nutzen: 100%ige Vermeidung von Kollisionen neuer Fördertechnik mit bestehenden Rohren und Trägern im Brownfield vor der Montage. (Indikativer Forschungs-Benchmark).
+          <div class="p-2 rounded bg-light border-start border-3 border-primary small text-secondary mt-2">
+            <strong class="text-primary me-1"><i class="fa-solid fa-bullseye"></i> Ziel:</strong> Betrieblicher Nutzen: 100%ige Vermeidung von Kollisionen neuer Fördertechnik mit bestehenden Rohren und Trägern im Brownfield vor der Montage. (Indikativer Forschungs-Benchmark).
           </div>
-
         </div>
       </div>
     
-      <div class="col-12 mb-4 usecase-card-item" data-tier="Tier 3" data-text="synthetische datengenerierung &amp; roboter-ki-training wie umsetzen? simulation physikalisch korrekter sensordaten (kameras, lidar, depth) in nvidia isaac sim / omniverse. roboter-ki-modelle lernen objekterkennung und greifpunkte komplett virtuell vor der inbetriebnahme. betrieblicher nutzen: 100x schnellere generierung perfekt annotierter ki-trainingsdaten im vergleich zu manueller kennzeichnung in der realität. (indikativer forschungs-benchmark).">
-        <div class="card border-0 shadow-sm p-4 bg-white hover-shadow transition">
-          
-          <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
-            <div class="d-flex align-items-center gap-2">
-              <span class="badge bg-primary text-white font-monospace">UC-05-SYNTHETIC-DATA-ROBOTIC-TRAINING</span>
-              <span class="badge bg-light text-dark border font-monospace">Tier 3</span>
+      <div class="col-lg-6 col-12 mb-3 uc-card-item" data-tier="Tier 3" data-text="synthetische datengenerierung &amp; roboter-ki-training wie umsetzen? simulation physikalisch korrekter sensordaten (kameras, lidar, depth) in nvidia isaac sim / omniverse. roboter-ki-modelle lernen objekterkennung und greifpunkte komplett virtuell vor der inbetriebnahme. betrieblicher nutzen: 100x schnellere generierung perfekt annotierter ki-trainingsdaten im vergleich zu manueller kennzeichnung in der realität. (indikativer forschungs-benchmark). depth camera / edge vision openusd / simready assets huggingface lerobot / ros2 nvidia isaac sim / physx omniverse rtx renderer">
+        <div class="usecase-card-item">
+          <div>
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
+              <div class="d-flex align-items-center gap-2">
+                <span class="badge bg-primary text-white font-monospace">UC-05-SYNTHETIC-DATA-ROBOTIC-TRAINING</span>
+                <span class="badge bg-light text-dark border font-monospace">Tier 3 (&gt; €100k / Enterprise OEM)</span>
+              </div>
+              <a href="./uc-05-synthetic-data-robotic-training/index.html" class="btn btn-outline-primary btn-sm py-1 px-2 fw-bold" style="font-size: 11px;">
+                Architektur &amp; Ablauf →
+              </a>
             </div>
-            <a href="./uc-05-synthetic-data-robotic-training/index.html" class="btn btn-primary btn-sm fw-bold">
-              Use Case öffnen <i class="fa-solid fa-arrow-right ms-1"></i>
-            </a>
-          </div>
 
-          <h2 class="h5 fw-bold text-dark mb-2">Synthetische Datengenerierung &amp; Roboter-KI-Training</h2>
-          <p class="text-secondary small mb-3">Wie umsetzen? Simulation physikalisch korrekter Sensordaten (Kameras, LiDAR, Depth) in NVIDIA Isaac Sim / Omniverse. Roboter-KI-Modelle lernen Objekterkennung und Greifpunkte komplett virtuell vor der Inbetriebnahme.</p>
+            <h3 class="h6 fw-bold text-dark mb-1">Synthetische Datengenerierung &amp; Roboter-KI-Training</h3>
+            <p class="text-secondary small mb-2">Wie umsetzen? Simulation physikalisch korrekter Sensordaten (Kameras, LiDAR, Depth) in NVIDIA Isaac Sim / Omniverse. Roboter-KI-Modelle lernen Objekterkennung und Greifpunkte komplett virtuell vor der Inbetriebnahme.</p>
 
-          <!-- 5-Layer Sequence Preview -->
-          <div class="mb-3">
-            <div class="fw-bold text-muted uppercase mb-2 small"><i class="fa-solid fa-sitemap text-primary me-1"></i>5-Schichten Ablauf-Sequenz:</div>
-            <div class="row g-2">
+            <div class="usecase-mini-sequence">
               
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S1</div>
-          <div class="fw-bold text-dark text-truncate small" title="Depth Camera / Edge Vision">Depth Camera / Edge Vision</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 1: Depth Camera / Edge Vision">
+        <span class="badge" style="background-color: var(--color-layer-1); color: white; font-size: 8px; padding: 2px 4px;">S1</span>
+        Depth Camera / Edge Vision
+      </span>
     
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S2</div>
-          <div class="fw-bold text-dark text-truncate small" title="OpenUSD / SimReady Assets">OpenUSD / SimReady Assets</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 2: OpenUSD / SimReady Assets">
+        <span class="badge" style="background-color: var(--color-layer-2); color: white; font-size: 8px; padding: 2px 4px;">S2</span>
+        OpenUSD / SimReady Assets
+      </span>
     
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S3</div>
-          <div class="fw-bold text-dark text-truncate small" title="HuggingFace LeRobot / ROS2">HuggingFace LeRobot / ROS2</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 3: HuggingFace LeRobot / ROS2">
+        <span class="badge" style="background-color: var(--color-layer-3); color: white; font-size: 8px; padding: 2px 4px;">S3</span>
+        HuggingFace LeRobot / ROS2
+      </span>
     
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S4</div>
-          <div class="fw-bold text-dark text-truncate small" title="NVIDIA Isaac Sim / PhysX">NVIDIA Isaac Sim / PhysX</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 4: NVIDIA Isaac Sim / PhysX">
+        <span class="badge" style="background-color: var(--color-layer-4); color: white; font-size: 8px; padding: 2px 4px;">S4</span>
+        NVIDIA Isaac Sim / PhysX
+      </span>
     
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S5</div>
-          <div class="fw-bold text-dark text-truncate small" title="Omniverse RTX Renderer">Omniverse RTX Renderer</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 5: Omniverse RTX Renderer">
+        <span class="badge" style="background-color: var(--color-layer-5); color: white; font-size: 8px; padding: 2px 4px;">S5</span>
+        Omniverse RTX Renderer
+      </span>
     
             </div>
+
+            <div class="d-flex gap-1 flex-wrap mb-2">
+      <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace" style="font-size: 10px;">
+        Trainingsdaten-Speedup: 100x
+      </span>
+    
+      <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace" style="font-size: 10px;">
+        Beschriftungs-Kosten: -95%
+      </span>
+    
+      <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace" style="font-size: 10px;">
+        Greif-Erfolgsquote: &gt; 99%
+      </span>
+    </div>
           </div>
 
-          
-            <div class="d-flex gap-2 mb-3 flex-wrap">
-              <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace">Trainingsdaten-Speedup: 100x</span><span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace">Beschriftungs-Kosten: -95%</span><span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace">Greif-Erfolgsquote: &gt; 99%</span>
-            </div>
-          
-
-          <div class="p-2 rounded bg-light border-start border-3 border-primary small text-secondary">
-            <strong class="text-primary me-1"><i class="fa-solid fa-bullseye"></i> Betrieblicher Nutzen:</strong> Betrieblicher Nutzen: 100x schnellere Generierung perfekt annotierter KI-Trainingsdaten im Vergleich zu manueller Kennzeichnung in der Realität. (Indikativer Forschungs-Benchmark).
+          <div class="p-2 rounded bg-light border-start border-3 border-primary small text-secondary mt-2">
+            <strong class="text-primary me-1"><i class="fa-solid fa-bullseye"></i> Ziel:</strong> Betrieblicher Nutzen: 100x schnellere Generierung perfekt annotierter KI-Trainingsdaten im Vergleich zu manueller Kennzeichnung in der Realität. (Indikativer Forschungs-Benchmark).
           </div>
-
         </div>
       </div>
     
-      <div class="col-12 mb-4 usecase-card-item" data-tier="Tier 3" data-text="bi-direktionaler echtzeit-digitaler-zwilling einer produktionslinie wie umsetzen? vollständige kopplung realer produktionsstraßen mit digitalen 3d-zwillingsmodellen in isg-virtuos oder siemens tecnomatix via profinet / opc ua. steuerungsbefehle wirken bi-direktional in beide richtungen. betrieblicher nutzen: hardware-in-the-loop vibn vor auslieferung. drastisch reduzierte ausfallzeiten durch prädiktive fehlersimulation am digitalen schatten. (indikativer forschungs-benchmark).">
-        <div class="card border-0 shadow-sm p-4 bg-white hover-shadow transition">
-          
-          <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
-            <div class="d-flex align-items-center gap-2">
-              <span class="badge bg-primary text-white font-monospace">UC-06-BIDIRECTIONAL-REALTIME-TWIN</span>
-              <span class="badge bg-light text-dark border font-monospace">Tier 3</span>
+      <div class="col-lg-6 col-12 mb-3 uc-card-item" data-tier="Tier 3" data-text="bi-direktionaler echtzeit-digitaler-zwilling einer produktionslinie wie umsetzen? vollständige kopplung realer produktionsstraßen mit digitalen 3d-zwillingsmodellen in isg-virtuos oder siemens tecnomatix via profinet / opc ua. steuerungsbefehle wirken bi-direktional in beide richtungen. betrieblicher nutzen: hardware-in-the-loop vibn vor auslieferung. drastisch reduzierte ausfallzeiten durch prädiktive fehlersimulation am digitalen schatten. (indikativer forschungs-benchmark). profinet tsn / siemens plc siemens nx / jt iso14306 eclipse basyx aas / edc isg-virtuos / tecnomatix unreal engine 5 / omniverse">
+        <div class="usecase-card-item">
+          <div>
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
+              <div class="d-flex align-items-center gap-2">
+                <span class="badge bg-primary text-white font-monospace">UC-06-BIDIRECTIONAL-REALTIME-TWIN</span>
+                <span class="badge bg-light text-dark border font-monospace">Tier 3 (&gt; €100k / Enterprise OEM)</span>
+              </div>
+              <a href="./uc-06-bidirectional-realtime-twin/index.html" class="btn btn-outline-primary btn-sm py-1 px-2 fw-bold" style="font-size: 11px;">
+                Architektur &amp; Ablauf →
+              </a>
             </div>
-            <a href="./uc-06-bidirectional-realtime-twin/index.html" class="btn btn-primary btn-sm fw-bold">
-              Use Case öffnen <i class="fa-solid fa-arrow-right ms-1"></i>
-            </a>
-          </div>
 
-          <h2 class="h5 fw-bold text-dark mb-2">Bi-direktionaler Echtzeit-Digitaler-Zwilling einer Produktionslinie</h2>
-          <p class="text-secondary small mb-3">Wie umsetzen? Vollständige Kopplung realer Produktionsstraßen mit digitalen 3D-Zwillingsmodellen in ISG-virtuos oder Siemens Tecnomatix via PROFINET / OPC UA. Steuerungsbefehle wirken bi-direktional in Beide Richtungen.</p>
+            <h3 class="h6 fw-bold text-dark mb-1">Bi-direktionaler Echtzeit-Digitaler-Zwilling einer Produktionslinie</h3>
+            <p class="text-secondary small mb-2">Wie umsetzen? Vollständige Kopplung realer Produktionsstraßen mit digitalen 3D-Zwillingsmodellen in ISG-virtuos oder Siemens Tecnomatix via PROFINET / OPC UA. Steuerungsbefehle wirken bi-direktional in Beide Richtungen.</p>
 
-          <!-- 5-Layer Sequence Preview -->
-          <div class="mb-3">
-            <div class="fw-bold text-muted uppercase mb-2 small"><i class="fa-solid fa-sitemap text-primary me-1"></i>5-Schichten Ablauf-Sequenz:</div>
-            <div class="row g-2">
+            <div class="usecase-mini-sequence">
               
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S1</div>
-          <div class="fw-bold text-dark text-truncate small" title="PROFINET TSN / Siemens PLC">PROFINET TSN / Siemens PLC</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 1: PROFINET TSN / Siemens PLC">
+        <span class="badge" style="background-color: var(--color-layer-1); color: white; font-size: 8px; padding: 2px 4px;">S1</span>
+        PROFINET TSN / Siemens PLC
+      </span>
     
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S2</div>
-          <div class="fw-bold text-dark text-truncate small" title="Siemens NX / JT ISO14306">Siemens NX / JT ISO14306</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 2: Siemens NX / JT ISO14306">
+        <span class="badge" style="background-color: var(--color-layer-2); color: white; font-size: 8px; padding: 2px 4px;">S2</span>
+        Siemens NX / JT ISO14306
+      </span>
     
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S3</div>
-          <div class="fw-bold text-dark text-truncate small" title="Eclipse BaSyx AAS / EDC">Eclipse BaSyx AAS / EDC</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 3: Eclipse BaSyx AAS / EDC">
+        <span class="badge" style="background-color: var(--color-layer-3); color: white; font-size: 8px; padding: 2px 4px;">S3</span>
+        Eclipse BaSyx AAS / EDC
+      </span>
     
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S4</div>
-          <div class="fw-bold text-dark text-truncate small" title="ISG-virtuos / Tecnomatix">ISG-virtuos / Tecnomatix</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 4: ISG-virtuos / Tecnomatix">
+        <span class="badge" style="background-color: var(--color-layer-4); color: white; font-size: 8px; padding: 2px 4px;">S4</span>
+        ISG-virtuos / Tecnomatix
+      </span>
     
-      <div class="col-6 col-md">
-        <div class="p-2 rounded bg-light border text-center h-100">
-          <div class="badge bg-primary text-white font-monospace mb-1" style="font-size: 9px;">S5</div>
-          <div class="fw-bold text-dark text-truncate small" title="Unreal Engine 5 / Omniverse">Unreal Engine 5 / Omniverse</div>
-        </div>
-      </div>
+      <span class="usecase-mini-chip" title="Schicht 5: Unreal Engine 5 / Omniverse">
+        <span class="badge" style="background-color: var(--color-layer-5); color: white; font-size: 8px; padding: 2px 4px;">S5</span>
+        Unreal Engine 5 / Omniverse
+      </span>
     
             </div>
+
+            <div class="d-flex gap-1 flex-wrap mb-2">
+      <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace" style="font-size: 10px;">
+        VIBn-Zeiteinsparung: 70%
+      </span>
+    
+      <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace" style="font-size: 10px;">
+        Latenz Spiegelung: &lt; 10 ms
+      </span>
+    
+      <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace" style="font-size: 10px;">
+        Stillstands-Risiko: Nahe 0%
+      </span>
+    </div>
           </div>
 
-          
-            <div class="d-flex gap-2 mb-3 flex-wrap">
-              <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace">VIBn-Zeiteinsparung: 70%</span><span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace">Latenz Spiegelung: &lt; 10 ms</span><span class="badge bg-primary-subtle text-primary border border-primary-subtle font-monospace">Stillstands-Risiko: Nahe 0%</span>
-            </div>
-          
-
-          <div class="p-2 rounded bg-light border-start border-3 border-primary small text-secondary">
-            <strong class="text-primary me-1"><i class="fa-solid fa-bullseye"></i> Betrieblicher Nutzen:</strong> Betrieblicher Nutzen: Hardware-in-the-Loop VIBn vor Auslieferung. Drastisch reduzierte Ausfallzeiten durch prädiktive Fehlersimulation am digitalen Schatten. (Indikativer Forschungs-Benchmark).
+          <div class="p-2 rounded bg-light border-start border-3 border-primary small text-secondary mt-2">
+            <strong class="text-primary me-1"><i class="fa-solid fa-bullseye"></i> Ziel:</strong> Betrieblicher Nutzen: Hardware-in-the-Loop VIBn vor Auslieferung. Drastisch reduzierte Ausfallzeiten durch prädiktive Fehlersimulation am digitalen Schatten. (Indikativer Forschungs-Benchmark).
           </div>
-
         </div>
       </div>
     
+    </div>
+
+    <div id="ucListView" class="bg-white rounded border shadow-sm d-none mb-4">
+      <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+          <thead class="table-light small text-uppercase">
+            <tr>
+              <th style="width: 100px;">ID</th>
+              <th>Use Case Titel &amp; Kurzbeschreibung</th>
+              <th style="width: 120px;">Tier</th>
+              <th>5-Schichten Ablauf-Stack</th>
+              <th style="width: 110px;" class="text-end">Aktion</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+      <tr class="uc-table-row" data-tier="Tier 1" data-text="digitales shopfloor-incident-management wie umsetzen? schnelle optische 360°-bestandserfassung im shopfloor ohne maschinenstillstand. die aufnahmen werden in faro sphere xg verortet und lösen automatisiert instandhaltungstickets im enterprise-system (jira / sap pm) aus. betrieblicher nutzen: schnelle 3d-fehlerortung im werk ohne manuelle wegezeiten zur beschleunigung des instandhaltungsprozesses. (indikativer forschungs-benchmark, keine finanzberatung).">
+        <td class="font-monospace fw-bold text-primary">UC-01-SHOPFLOOR-INCIDENT-MANAGEMENT</td>
+        <td>
+          <a href="./uc-01-shopfloor-incident-management/index.html" class="fw-bold text-dark text-decoration-none">
+            Digitales Shopfloor-Incident-Management
+          </a>
+          <div class="text-muted small">Wie umsetzen? Schnelle optische 360°-Bestandserfassung im Shopfloor ohne Maschinenstillstand. Die Aufnahmen werden in FARO Sphere XG verortet und lösen automatisiert Instandhaltungstickets im Enterprise-System (Jira / SAP PM) aus.</div>
+        </td>
+        <td><span class="badge bg-light text-dark border font-monospace">Tier 1</span></td>
+        <td class="small text-secondary font-monospace" style="max-width: 320px; white-space: normal;">
+          S1: FARO Orbis / Matterport ➔ S2: E57 / Panorama Scan ➔ S3: FARO Sphere XG ➔ S4: Jira Service Management / SAP PM ➔ S5: WebXR / Web Inspection
+        </td>
+        <td class="text-end">
+          <a href="./uc-01-shopfloor-incident-management/index.html" class="btn btn-outline-primary btn-sm py-1 px-2" style="font-size: 11px;">
+            Öffnen →
+          </a>
+        </td>
+      </tr>
+    
+      <tr class="uc-table-row" data-tier="Tier 1" data-text="virtuelle fabrikbegehung &amp; asset-tagging via webxr wie umsetzen? zusammenführung von 360°-fotogrammetrie (matterport / scaniverse) und openusd/gltf-modellen in einer browserbasierten webxr-umgebung. externe partner befahren die fabrik ohne physische anreise. betrieblicher nutzen: erheblich reduzierte reisekosten für audits und vorort-planungstermine. demokratisierter 3d-zugriff ohne high-end cad-workstations. (indikativer forschungs-benchmark).">
+        <td class="font-monospace fw-bold text-primary">UC-02-VIRTUAL-FACTORY-WALKTHROUGH</td>
+        <td>
+          <a href="./uc-02-virtual-factory-walkthrough/index.html" class="fw-bold text-dark text-decoration-none">
+            Virtuelle Fabrikbegehung &amp; Asset-Tagging via WebXR
+          </a>
+          <div class="text-muted small">Wie umsetzen? Zusammenführung von 360°-Fotogrammetrie (Matterport / Scaniverse) und OpenUSD/glTF-Modellen in einer browserbasierten WebXR-Umgebung. Externe Partner befahren die Fabrik ohne physische Anreise.</div>
+        </td>
+        <td><span class="badge bg-light text-dark border font-monospace">Tier 1</span></td>
+        <td class="small text-secondary font-monospace" style="max-width: 320px; white-space: normal;">
+          S1: Matterport Pro3 / Scaniverse ➔ S2: glTF 2.0 / USDZ ➔ S3: AAS Asset Tagging Engine ➔ S4: Spatial Point Annotator ➔ S5: WebXR / Three.js Viewer
+        </td>
+        <td class="text-end">
+          <a href="./uc-02-virtual-factory-walkthrough/index.html" class="btn btn-outline-primary btn-sm py-1 px-2" style="font-size: 11px;">
+            Öffnen →
+          </a>
+        </td>
+      </tr>
+    
+      <tr class="uc-table-row" data-tier="Tier 2" data-text="ar-gestützte werkerassistenz mit iot-echtzeitdaten wie umsetzen? anbindung von opc ua / mqtt telemetriefeldbussen an ar-brillen (realwear / meta quest 3). instandhalter sehen schritt-für-schritt-anleitungen und live-temperatur/vibrationswerte direkt im sichtfeld. betrieblicher nutzen: drastische reduzierung der einarbeitungszeit neuer mitarbeiter und einhaltung von qualitäts-checklisten. minimierte fehlerquote bei komplexen reparaturen. (indikativer forschungs-benchmark).">
+        <td class="font-monospace fw-bold text-primary">UC-03-AR-WORKER-ASSISTANCE</td>
+        <td>
+          <a href="./uc-03-ar-worker-assistance/index.html" class="fw-bold text-dark text-decoration-none">
+            AR-gestützte Werkerassistenz mit IoT-Echtzeitdaten
+          </a>
+          <div class="text-muted small">Wie umsetzen? Anbindung von OPC UA / MQTT Telemetriefeldbussen an AR-Brillen (RealWear / Meta Quest 3). Instandhalter sehen Schritt-für-Schritt-Anleitungen und Live-Temperatur/Vibrationswerte direkt im Sichtfeld.</div>
+        </td>
+        <td><span class="badge bg-light text-dark border font-monospace">Tier 2</span></td>
+        <td class="small text-secondary font-monospace" style="max-width: 320px; white-space: normal;">
+          S1: OPC UA / Modbus TCP ➔ S2: Autodesk Fusion / CAD Mesh ➔ S3: PTC ThingWorx / Vuforia ➔ S4: Work Instruction Engine ➔ S5: RealWear Nav-520 / Quest 3
+        </td>
+        <td class="text-end">
+          <a href="./uc-03-ar-worker-assistance/index.html" class="btn btn-outline-primary btn-sm py-1 px-2" style="font-size: 11px;">
+            Öffnen →
+          </a>
+        </td>
+      </tr>
+    
+      <tr class="uc-table-row" data-tier="Tier 2" data-text="punktwolken-vergleich für die fabrik-layoutplanung wie umsetzen? hochpräzises terrestrik-scanning (leica rtc360 / faro focus) der bestehenden hallenstruktur. überlagerung mit neuen cad-planungsmodellen in autodesk revit / navisworks zur vermeidung teurer umbaufehler. betrieblicher nutzen: 100%ige vermeidung von kollisionen neuer fördertechnik mit bestehenden rohren und trägern im brownfield vor der montage. (indikativer forschungs-benchmark).">
+        <td class="font-monospace fw-bold text-primary">UC-04-POINTCLOUD-LAYOUT-PLANNING</td>
+        <td>
+          <a href="./uc-04-pointcloud-layout-planning/index.html" class="fw-bold text-dark text-decoration-none">
+            Punktwolken-Vergleich für die Fabrik-Layoutplanung
+          </a>
+          <div class="text-muted small">Wie umsetzen? Hochpräzises Terrestrik-Scanning (Leica RTC360 / Faro Focus) der bestehenden Hallenstruktur. Überlagerung mit neuen CAD-Planungsmodellen in Autodesk Revit / Navisworks zur Vermeidung teurer Umbaufehler.</div>
+        </td>
+        <td><span class="badge bg-light text-dark border font-monospace">Tier 2</span></td>
+        <td class="small text-secondary font-monospace" style="max-width: 320px; white-space: normal;">
+          S1: Leica RTC360 / NavVis VLX ➔ S2: Autodesk Revit / ReCap ➔ S3: IFC / OpenUSD Pipeline ➔ S4: ipolog / Navisworks ➔ S5: Twinmotion / Unreal Engine
+        </td>
+        <td class="text-end">
+          <a href="./uc-04-pointcloud-layout-planning/index.html" class="btn btn-outline-primary btn-sm py-1 px-2" style="font-size: 11px;">
+            Öffnen →
+          </a>
+        </td>
+      </tr>
+    
+      <tr class="uc-table-row" data-tier="Tier 3" data-text="synthetische datengenerierung &amp; roboter-ki-training wie umsetzen? simulation physikalisch korrekter sensordaten (kameras, lidar, depth) in nvidia isaac sim / omniverse. roboter-ki-modelle lernen objekterkennung und greifpunkte komplett virtuell vor der inbetriebnahme. betrieblicher nutzen: 100x schnellere generierung perfekt annotierter ki-trainingsdaten im vergleich zu manueller kennzeichnung in der realität. (indikativer forschungs-benchmark).">
+        <td class="font-monospace fw-bold text-primary">UC-05-SYNTHETIC-DATA-ROBOTIC-TRAINING</td>
+        <td>
+          <a href="./uc-05-synthetic-data-robotic-training/index.html" class="fw-bold text-dark text-decoration-none">
+            Synthetische Datengenerierung &amp; Roboter-KI-Training
+          </a>
+          <div class="text-muted small">Wie umsetzen? Simulation physikalisch korrekter Sensordaten (Kameras, LiDAR, Depth) in NVIDIA Isaac Sim / Omniverse. Roboter-KI-Modelle lernen Objekterkennung und Greifpunkte komplett virtuell vor der Inbetriebnahme.</div>
+        </td>
+        <td><span class="badge bg-light text-dark border font-monospace">Tier 3</span></td>
+        <td class="small text-secondary font-monospace" style="max-width: 320px; white-space: normal;">
+          S1: Depth Camera / Edge Vision ➔ S2: OpenUSD / SimReady Assets ➔ S3: HuggingFace LeRobot / ROS2 ➔ S4: NVIDIA Isaac Sim / PhysX ➔ S5: Omniverse RTX Renderer
+        </td>
+        <td class="text-end">
+          <a href="./uc-05-synthetic-data-robotic-training/index.html" class="btn btn-outline-primary btn-sm py-1 px-2" style="font-size: 11px;">
+            Öffnen →
+          </a>
+        </td>
+      </tr>
+    
+      <tr class="uc-table-row" data-tier="Tier 3" data-text="bi-direktionaler echtzeit-digitaler-zwilling einer produktionslinie wie umsetzen? vollständige kopplung realer produktionsstraßen mit digitalen 3d-zwillingsmodellen in isg-virtuos oder siemens tecnomatix via profinet / opc ua. steuerungsbefehle wirken bi-direktional in beide richtungen. betrieblicher nutzen: hardware-in-the-loop vibn vor auslieferung. drastisch reduzierte ausfallzeiten durch prädiktive fehlersimulation am digitalen schatten. (indikativer forschungs-benchmark).">
+        <td class="font-monospace fw-bold text-primary">UC-06-BIDIRECTIONAL-REALTIME-TWIN</td>
+        <td>
+          <a href="./uc-06-bidirectional-realtime-twin/index.html" class="fw-bold text-dark text-decoration-none">
+            Bi-direktionaler Echtzeit-Digitaler-Zwilling einer Produktionslinie
+          </a>
+          <div class="text-muted small">Wie umsetzen? Vollständige Kopplung realer Produktionsstraßen mit digitalen 3D-Zwillingsmodellen in ISG-virtuos oder Siemens Tecnomatix via PROFINET / OPC UA. Steuerungsbefehle wirken bi-direktional in Beide Richtungen.</div>
+        </td>
+        <td><span class="badge bg-light text-dark border font-monospace">Tier 3</span></td>
+        <td class="small text-secondary font-monospace" style="max-width: 320px; white-space: normal;">
+          S1: PROFINET TSN / Siemens PLC ➔ S2: Siemens NX / JT ISO14306 ➔ S3: Eclipse BaSyx AAS / EDC ➔ S4: ISG-virtuos / Tecnomatix ➔ S5: Unreal Engine 5 / Omniverse
+        </td>
+        <td class="text-end">
+          <a href="./uc-06-bidirectional-realtime-twin/index.html" class="btn btn-outline-primary btn-sm py-1 px-2" style="font-size: 11px;">
+            Öffnen →
+          </a>
+        </td>
+      </tr>
+    
+          </tbody>
+        </table>
+      </div>
     </div>
 
   </main>
@@ -561,6 +670,7 @@
   <!-- Site Footer -->
   <footer class="py-3 text-center small text-muted border-top bg-white">
     ARENA2036 Industrial Metaverse Taxonomy | 
+    <a href="../index.html" class="text-muted text-decoration-none font-weight-bold">Startseite</a> | 
     <a href="./index.html" class="text-muted text-decoration-none font-weight-bold">Use Cases Hub</a> | 
     <a href="../browser.html" class="text-muted text-decoration-none font-weight-bold">Browser</a> | 
     <a href="../architecture.html" class="text-muted text-decoration-none font-weight-bold">Architektur</a> | 
@@ -568,48 +678,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Hub Live Search & Filter Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const searchInput = document.getElementById('hubSearchInput');
-      const searchClear = document.getElementById('hubSearchClearBtn');
-      const filterTier = document.getElementById('hubFilterTier');
-      const countBadge = document.getElementById('hubCountBadge');
-      const cards = document.querySelectorAll('.usecase-card-item');
-
-      function filterHubCards() {
-        const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
-        const tier = filterTier ? filterTier.value : 'ALL';
-        let visibleCount = 0;
-
-        cards.forEach(card => {
-          const cardTier = card.getAttribute('data-tier') || '';
-          const cardText = card.getAttribute('data-text') || '';
-
-          const matchesTier = (tier === 'ALL' || cardTier === tier);
-          const matchesQuery = (query === '' || cardText.includes(query));
-
-          if (matchesTier && matchesQuery) {
-            card.style.display = 'block';
-            visibleCount++;
-          } else {
-            card.style.display = 'none';
-          }
-        });
-
-        if (countBadge) countBadge.textContent = visibleCount;
-      }
-
-      if (searchInput) searchInput.addEventListener('input', filterHubCards);
-      if (filterTier) filterTier.addEventListener('change', filterHubCards);
-      if (searchClear && searchInput) {
-        searchClear.addEventListener('click', () => {
-          searchInput.value = '';
-          filterHubCards();
-        });
-      }
-    });
-  </script>
+  <script src="../data/index_data.js"></script>
+  <script src="../app.js"></script>
 </body>
 </html>

@@ -56,35 +56,51 @@
       "layerTitle": "Schicht 1: Erfassung & Sensorik",
       "refCode": "IND-META-2026-MATTERPORT-PRO3",
       "nodeName": "Matterport Pro3 / Scaniverse",
-      "role": "Fotogrammetrie & Panoramabilder"
+      "role": "Fotogrammetrische 360°-Hallenaufnahme & Tiefenerfassung",
+      "linkAnnotation": {
+        "protocol": "Mesh-Generierung & Textur-Baking",
+        "description": "Erfassung der Hallenlayout-Panoramen und automatische Überführung in optimierte, texturierte Dreiecksnetze."
+      }
     },
     {
       "layer": "2",
       "layerTitle": "Schicht 2: Geometrie & CAD/BIM",
       "refCode": "IND-META-2026-GLTF-20",
       "nodeName": "glTF 2.0 / USDZ",
-      "role": "Leichtgewichtige Web-3D-Formate"
+      "role": "Kompression in leichtgewichtige Web-3D-Geometrie",
+      "linkAnnotation": {
+        "protocol": "Semantische AAS IEC 63278 Bindung",
+        "description": "Verknüpfung der virtuellen 3D-Objektknoten mit standardisierten digitalen Typenschildern und Stammdaten der Verwaltungsschale."
+      }
     },
     {
       "layer": "3",
       "layerTitle": "Schicht 3: Middleware & Integration",
       "refCode": "IND-META-2026-AAS-IEC63278",
       "nodeName": "AAS Asset Tagging Engine",
-      "role": "Verknüpfung von 3D-Objekten mit Stammdaten"
+      "role": "Zentrale Verwaltungsschalen-Kopplung für Maschinen-Metadaten",
+      "linkAnnotation": {
+        "protocol": "Spatial Point Annotation API",
+        "description": "Verortung von interaktiven POIs, Wartungsdokumenten und Messpunkten direkt an den 3D-Koordinaten der Anlagen."
+      }
     },
     {
       "layer": "4",
       "layerTitle": "Schicht 4: Simulation & Verhalten",
       "refCode": null,
       "nodeName": "Spatial Point Annotator",
-      "role": "Räumliche Notizen & Messwerkzeuge"
+      "role": "Interaktive Messwerkzeuge & POI-Informationsschichten",
+      "linkAnnotation": {
+        "protocol": "WebXR / WebGL Render Pipeline",
+        "description": "Bereitstellung des vollständigen digitalen Zwillings als browserbasierte 3D-Begehung mit Multi-Device-Unterstützung."
+      }
     },
     {
       "layer": "5",
       "layerTitle": "Schicht 5: Immersion & Interaktion",
       "refCode": "IND-META-2026-GODOT-WEBXR",
       "nodeName": "WebXR / Three.js Viewer",
-      "role": "Immersive Browser-Begehung (PC/VR)"
+      "role": "Immersive 3D-Fabrikbegehung auf PC, Tablet und VR-Headsets"
     }
   ]
 }
