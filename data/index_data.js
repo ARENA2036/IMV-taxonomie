@@ -1,5 +1,27 @@
 /** Auto-generated static dataset for zero-CORS local execution */
 window.INDEX_DATA = {
+  "layers": [
+    {
+      "code": "1",
+      "name": "Schicht 1: Erfassung & Sensorik"
+    },
+    {
+      "code": "2",
+      "name": "Schicht 2: Geometrie & CAD/BIM"
+    },
+    {
+      "code": "3",
+      "name": "Schicht 3: Middleware & Integration"
+    },
+    {
+      "code": "4",
+      "name": "Schicht 4: Simulation & Verhalten"
+    },
+    {
+      "code": "5",
+      "name": "Schicht 5: Immersion & Interaktion"
+    }
+  ],
   "categories": [
     {
       "code": "1.1",
