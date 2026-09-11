@@ -54,28 +54,13 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // ==========================================
-  // 2. CANONICAL LAYER DEFINITIONS & CONSTANTS
+  // 2. REACTIVE STATE STORE
   // ==========================================
-  const LAYER_NAMES = Object.freeze({
-    '1': 'Schicht 1: Erfassung & Sensorik',
-    '2': 'Schicht 2: Geometrie & CAD/BIM',
-    '3': 'Schicht 3: Middleware & Integration',
-    '4': 'Schicht 4: Simulation & Verhalten',
-    '5': 'Schicht 5: Immersion & Interaktion'
-  });
-
-  const LAYER_CATEGORY_MAP = Object.freeze({
-    '1': ['1.1', '1.2', '1.3', '1.4', '1.5', '1.6', '1.7', '1.8'],
-    '2': ['2.1', '2.2', '2.3', '2.4'],
-    '3': ['3.1', '3.2', '3.3'],
-    '4': ['4.1', '4.2', '4.3', '4.4'],
-    '5': ['5.1', '5.2']
-  });
-
-  // ==========================================
-  // 3. REACTIVE STATE STORE
-  // ==========================================
+  // Layer titles (StateStore.layers) and the layer→category grouping are not
+  // hardcoded here — they come from taxonomy.config.json via data/index.json,
+  // the single source of truth for the taxonomy. See DataManager.loadIndex().
   const StateStore = {
+    layers: [],
     categories: [],
     dbItems: [],
     usecases: [],
@@ -144,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // ==========================================
-  // 4. DATA MANAGER (DUAL-MODE HYDRATION)
+  // 3. DATA MANAGER (DUAL-MODE HYDRATION)
   // ==========================================
   const DataManager = {
     async loadIndex() {
@@ -152,12 +137,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const res = await fetch('./data/index.json');
         if (!res.ok) throw new Error(`HTTP status ${res.status}`);
         const data = await res.json();
+        StateStore.layers = data.layers || [];
         StateStore.categories = data.categories || [];
         StateStore.dbItems = data.items || [];
         StateStore.usecases = data.usecases || [];
       } catch (err) {
         console.warn('Fallback auf window.INDEX_DATA (file:// Protokoll):', err.message);
         if (window.INDEX_DATA) {
+          StateStore.layers = window.INDEX_DATA.layers || [];
           StateStore.categories = window.INDEX_DATA.categories || [];
           StateStore.dbItems = window.INDEX_DATA.items || [];
           StateStore.usecases = window.INDEX_DATA.usecases || [];
@@ -189,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // ==========================================
-  // 5. PURE FILTER ENGINE
+  // 4. PURE FILTER ENGINE
   // ==========================================
   const FilterEngine = {
     filterItems(items, state) {
@@ -201,10 +188,10 @@ document.addEventListener('DOMContentLoaded', () => {
           return false;
         }
 
-        // Layer check
-        if (selectedLayer !== 'ALL') {
-          const allowedCats = LAYER_CATEGORY_MAP[selectedLayer] || [];
-          if (!allowedCats.includes(item.categoryCode)) return false;
+        // Layer check (derived from the categoryCode's "layer.category" convention,
+        // e.g. '3.1' belongs to layer '3' — see taxonomy.config.json)
+        if (selectedLayer !== 'ALL' && item.categoryCode.split('.')[0] !== selectedLayer) {
+          return false;
         }
 
         // Tier check
@@ -256,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // ==========================================
-  // 6. DECLARATIVE VIEW RENDERER
+  // 5. DECLARATIVE VIEW RENDERER
   // ==========================================
   const ViewRenderer = {
     escapeHtml(str) {
@@ -318,14 +305,14 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       `;
 
-      ['1', '2', '3', '4', '5'].forEach(layerKey => {
-        const catCodes = LAYER_CATEGORY_MAP[layerKey] || [];
-        const layerCats = state.categories.filter(c => catCodes.includes(c.code));
+      state.layers.forEach(layer => {
+        const layerKey = layer.code;
+        const layerCats = state.categories.filter(c => c.layer === layerKey);
         layerCats.sort((a, b) => a.code.localeCompare(b.code, undefined, { numeric: true }));
 
         html += `
           <div class="sidebar-layer-group">
-            <div class="sidebar-layer-title">${LAYER_NAMES[layerKey]}</div>
+            <div class="sidebar-layer-title">${layer.name}</div>
         `;
 
         layerCats.forEach(cat => {
@@ -595,7 +582,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // ==========================================
-  // 7. ACCESSIBLE MODAL MANAGER
+  // 6. ACCESSIBLE MODAL MANAGER
   // ==========================================
   const ModalManager = {
     show(el) {
@@ -721,7 +708,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // ==========================================
-  // 8. ENTERPRISE EXPORT ENGINE
+  // 7. ENTERPRISE EXPORT ENGINE
   // ==========================================
   const ExportManager = {
     async getSelectedProfiles() {
@@ -810,7 +797,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.appOpenProfileModal = (refCode) => ModalManager.openProfile(refCode);
 
   // ==========================================
-  // 9. APPLICATION CONTROLLER & VELOCITY SHORTCUTS
+  // 8. APPLICATION CONTROLLER & VELOCITY SHORTCUTS
   // ==========================================
   const AppController = {
     async init() {

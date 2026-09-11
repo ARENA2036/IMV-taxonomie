@@ -3,7 +3,8 @@
  * ARENA2036 Reallabor 2.0 Project
  * 
  * Scans canonical profile JSON files from profiles/ and usecase JSON files from usecases/.
- * Validates schemas against the canonical 19-field specification standard and compiles:
+ * Loads the canonical taxonomy from taxonomy.config.json and validates profiles against
+ * .github/schema/tool-taxonomy.schema.json (the single sources of truth for both), then compiles:
  * 1. data/index.json  (JSON manifest for HTTP fetch requests)
  * 2. data/index_data.js (Window wrapper for zero-CORS file:// protocol execution)
  * 3. usecases/index.html & usecases/[slug]/index.html (Static Use Case pages)
@@ -24,65 +25,32 @@ const usecasesDir = path.join(rootDir, 'usecases');
 const dataDir = path.join(rootDir, 'data');
 
 /**
- * Canonical 21 technology category taxonomy across the 5 ARENA2036 layers.
- * Strictly aligned with the standardized 5-Layer Stack Titles.
- * @type {Array<{code: string, name: string, desc: string, layer: string}>}
+ * Canonical 5-layer / 21-category taxonomy, loaded from the single source of
+ * truth at taxonomy.config.json. Do not hardcode layer/category data here or
+ * anywhere else — edit taxonomy.config.json and rebuild.
  */
-const CATEGORIES = [
-  // Layer 1: Erfassung & Sensorik
-  { code: '1.1', name: 'Mobile & Wearable SLAM-Scanner', desc: 'Tragbare Mobile-Mapping-Systeme mit Echtzeit-SLAM.', layer: '1' },
-  { code: '1.2', name: 'Terrestrisches Laserscanning (TLS)', desc: 'Hochpräzise stationäre 3D-Laserscanner.', layer: '1' },
-  { code: '1.3', name: 'Autonome Drohnen & AMR-Roboter', desc: 'Autonome Erfassung per Drohnen und Roboterplattformen.', layer: '1' },
-  { code: '1.4', name: 'Handheld 3DGS & Photogrammetrie', desc: 'Handgeführte 3D-Gaussian-Splatting Scanner.', layer: '1' },
-  { code: '1.5', name: '360°-Erfassung & GIS-Kartierung', desc: 'Panorama-Bilddokumentation und Geoinformationssysteme.', layer: '1' },
-  { code: '1.6', name: 'Spatial Perzeption & KI-Erkennung', desc: 'KI-gestützte Objekt- und Raumsegmentierung.', layer: '1' },
-  { code: '1.7', name: 'OT & Sensorik-Feldbusse', desc: 'Operative Feldbus-Systeme und SPS-Kommunikation.', layer: '1' },
-  { code: '1.8', name: 'Industrial IoT-Protokolle', desc: 'Nachrichtenprotokolle für industrielle IoT-Netzwerke.', layer: '1' },
-
-  // Layer 2: Geometrie & CAD/BIM
-  { code: '2.1', name: 'Mechanisches CAD (MCAD)', desc: 'Parametrische 3D-CAD-Systeme für den Maschinen- und Fahrzeugbau.', layer: '2' },
-  { code: '2.2', name: 'BIM, Bauwesen & Infrastruktur (AEC)', desc: 'Bauwerksdatenmodellierung für Fabrik- und Gebäudestrukturen.', layer: '2' },
-  { code: '2.3', name: 'DCC & Generatives 3D-Design', desc: 'Digital Content Creation und prozedurale 3D-Modellierung.', layer: '2' },
-  { code: '2.4', name: 'Datenformate & OpenUSD-Standards', desc: 'Offene Datenformate und Szenen-Spezifikationen.', layer: '2' },
-
-  // Layer 3: Middleware & Integration
-  { code: '3.1', name: 'Verwaltungsschale & Zwillings-Standards', desc: 'Asset Administration Shell (AAS) und Interoperabilitäts-Standards.', layer: '3' },
-  { code: '3.2', name: 'KI-Datenmotoren & Pipeline-Bridges', desc: 'KI-Trainings-Pipelines und Datenbrücken.', layer: '3' },
-  { code: '3.3', name: 'Enterprise Cloud-Zwillinge', desc: 'Skalierbare Cloud-Plattformen für digitale Zwillinge.', layer: '3' },
-
-  // Layer 4: Simulation & Verhalten
-  { code: '4.1', name: 'CAE & Multiphysik-Simulation', desc: 'Numerische Berechnungen, FEM und Strömungsmechanik.', layer: '4' },
-  { code: '4.2', name: 'Echtzeit Physik-Engines', desc: 'Physikalische Echtzeitsimulation für Kollision und Dynamik.', layer: '4' },
-  { code: '4.3', name: 'Umwelt- & Strömungssimulation', desc: 'Klima-, Lüftungs- und Umweltbedingungssimulation.', layer: '4' },
-  { code: '4.4', name: 'Robotik & Fabriksimulation', desc: 'Kinematik-, Roboter- und Materialfluss-Simulation.', layer: '4' },
-
-  // Layer 5: Immersion & Interaktion
-  { code: '5.1', name: 'Echtzeit-3D & Spatial Engines', desc: 'Echtzeit-Rendering und 3D-Visualisierungs-Engines.', layer: '5' },
-  { code: '5.2', name: 'Spatial XR & VR/AR Headsets', desc: 'Immersive Headsets und Spatial-Computing-Hardware.', layer: '5' }
-];
+const taxonomyPath = path.join(rootDir, 'taxonomy.config.json');
+const taxonomy = JSON.parse(fs.readFileSync(taxonomyPath, 'utf-8'));
+const LAYERS = taxonomy.layers;
+const CATEGORIES = taxonomy.categories;
 
 CATEGORIES.sort((a, b) => a.code.localeCompare(b.code, undefined, { numeric: true }));
+
+/**
+ * Required fields and enum constraints, loaded from the canonical JSON Schema
+ * so validation can never drift from the schema contributors are told to follow.
+ */
+const schemaPath = path.join(rootDir, '.github', 'schema', 'tool-taxonomy.schema.json');
+const schema = JSON.parse(fs.readFileSync(schemaPath, 'utf-8'));
 
 if (!fs.existsSync(profilesDir)) fs.mkdirSync(profilesDir, { recursive: true });
 if (!fs.existsSync(usecasesDir)) fs.mkdirSync(usecasesDir, { recursive: true });
 
 console.log('Scanne und validiere kanonische JSON-Profil-Dateien in profiles/ und usecases/...');
 
-const REQUIRED_PROFILE_FIELDS = [
-  'refCode', 'categoryCode', 'categoryName', 'name', 'subtitle',
-  'vendor', 'hq', 'businessModel', 'url', 'tier', 'costLabel',
-  'status', 'overview', 'features', 'inputs', 'outputs', 'bridges',
-  'evaluations', 'compliance', 'deployment', 'staffing'
-];
-
-const VALID_TIERS = new Set(['Tier 1', 'Tier 2', 'Tier 3']);
-const VALID_STATUSES = new Set([
-  'INDEXIERT',
-  'GEPRÜFT',
-  'USE CASE IMPLEMENTIERT',
-  'EXTERN VALIDIERT',
-  'COMMUNITY BEITRAG'
-]);
+const REQUIRED_PROFILE_FIELDS = schema.required;
+const VALID_TIERS = new Set(schema.properties.tier.enum);
+const VALID_STATUSES = new Set(schema.properties.status.enum);
 
 const files = fs.readdirSync(profilesDir).filter(f => f.endsWith('.json'));
 
@@ -185,6 +153,7 @@ if (fs.existsSync(usecasesDir)) {
 usecases.sort((a, b) => a.id.localeCompare(b.id));
 
 const indexData = {
+  layers: LAYERS,
   categories: CATEGORIES,
   items: items,
   usecases: usecases

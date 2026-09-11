@@ -23,6 +23,7 @@ This repository contains the open research taxonomy and interactive web browser 
 The data architecture is **100% JSON-driven** without external database requirements:
 
 ```
+taxonomy.config.json          <- Canonical 5-layer / 21-category taxonomy (SINGLE SOURCE)
 profiles/*.json               <- Canonical JSON profile specifications (91 profiles)
 usecases/[slug]/usecase.json  <- Canonical Baukasten Use Case specifications & media assets
        │
@@ -39,6 +40,7 @@ usecases/
 ### Accessing & Modifying Data:
 - **To add or update a technology profile**: Modify or create the corresponding `.json` file inside `profiles/`.
 - **To add or update a Use Case**: Modify or create a `usecase.json` inside a dedicated subfolder `usecases/[slug]/`.
+- **To add, rename, or re-describe a layer or category**: Edit `taxonomy.config.json` only. It is the single source of truth — `app.js` and `scripts/generate_profiles.js` both derive their layer/category data from it at runtime/build time. Never hardcode a layer name or category list anywhere else.
 - **To rebuild the index manifest & static pages**: Run `node scripts/generate_profiles.js` or `npm run build`.
 - Do **NOT** manually edit `data/index.json`, `data/index_data.js`, `usecases/index.html`, or `usecases/*/index.html`: they are auto-generated build deliverables.
 

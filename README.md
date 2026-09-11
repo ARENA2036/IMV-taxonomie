@@ -57,6 +57,7 @@ Rather than reinventing proprietary wheels, this project is built 100% on establ
 The application is **100% JSON-driven** without external database overhead:
 
 ```
+taxonomy.config.json          <- Canonical 5-layer / 21-category taxonomy (SINGLE SOURCE)
 profiles/*.json               <- Canonical JSON profile specifications (91 profiles)
 usecases/[slug]/usecase.json  <- Canonical Baukasten Use Case specifications & media assets
        │

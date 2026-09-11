@@ -1,0 +1,37 @@
+{
+  "$note": "Single source of truth for the ARENA2036 5-Layer Industrial Metaverse Stack. Consumed by scripts/generate_profiles.js at build time and compiled into data/index.json + data/index_data.js for runtime use by app.js. Do NOT hardcode layer or category names anywhere else — edit this file and rebuild.",
+  "layers": [
+    { "code": "1", "name": "Schicht 1: Erfassung & Sensorik" },
+    { "code": "2", "name": "Schicht 2: Geometrie & CAD/BIM" },
+    { "code": "3", "name": "Schicht 3: Middleware & Integration" },
+    { "code": "4", "name": "Schicht 4: Simulation & Verhalten" },
+    { "code": "5", "name": "Schicht 5: Immersion & Interaktion" }
+  ],
+  "categories": [
+    { "code": "1.1", "name": "Mobile & Wearable SLAM-Scanner", "desc": "Tragbare Mobile-Mapping-Systeme mit Echtzeit-SLAM.", "layer": "1" },
+    { "code": "1.2", "name": "Terrestrisches Laserscanning (TLS)", "desc": "Hochpräzise stationäre 3D-Laserscanner.", "layer": "1" },
+    { "code": "1.3", "name": "Autonome Drohnen & AMR-Roboter", "desc": "Autonome Erfassung per Drohnen und Roboterplattformen.", "layer": "1" },
+    { "code": "1.4", "name": "Handheld 3DGS & Photogrammetrie", "desc": "Handgeführte 3D-Gaussian-Splatting Scanner.", "layer": "1" },
+    { "code": "1.5", "name": "360°-Erfassung & GIS-Kartierung", "desc": "Panorama-Bilddokumentation und Geoinformationssysteme.", "layer": "1" },
+    { "code": "1.6", "name": "Spatial Perzeption & KI-Erkennung", "desc": "KI-gestützte Objekt- und Raumsegmentierung.", "layer": "1" },
+    { "code": "1.7", "name": "OT & Sensorik-Feldbusse", "desc": "Operative Feldbus-Systeme und SPS-Kommunikation.", "layer": "1" },
+    { "code": "1.8", "name": "Industrial IoT-Protokolle", "desc": "Nachrichtenprotokolle für industrielle IoT-Netzwerke.", "layer": "1" },
+
+    { "code": "2.1", "name": "Mechanisches CAD (MCAD)", "desc": "Parametrische 3D-CAD-Systeme für den Maschinen- und Fahrzeugbau.", "layer": "2" },
+    { "code": "2.2", "name": "BIM, Bauwesen & Infrastruktur (AEC)", "desc": "Bauwerksdatenmodellierung für Fabrik- und Gebäudestrukturen.", "layer": "2" },
+    { "code": "2.3", "name": "DCC & Generatives 3D-Design", "desc": "Digital Content Creation und prozedurale 3D-Modellierung.", "layer": "2" },
+    { "code": "2.4", "name": "Datenformate & OpenUSD-Standards", "desc": "Offene Datenformate und Szenen-Spezifikationen.", "layer": "2" },
+
+    { "code": "3.1", "name": "Verwaltungsschale & Zwillings-Standards", "desc": "Asset Administration Shell (AAS) und Interoperabilitäts-Standards.", "layer": "3" },
+    { "code": "3.2", "name": "KI-Datenmotoren & Pipeline-Bridges", "desc": "KI-Trainings-Pipelines und Datenbrücken.", "layer": "3" },
+    { "code": "3.3", "name": "Enterprise Cloud-Zwillinge", "desc": "Skalierbare Cloud-Plattformen für digitale Zwillinge.", "layer": "3" },
+
+    { "code": "4.1", "name": "CAE & Multiphysik-Simulation", "desc": "Numerische Berechnungen, FEM und Strömungsmechanik.", "layer": "4" },
+    { "code": "4.2", "name": "Echtzeit Physik-Engines", "desc": "Physikalische Echtzeitsimulation für Kollision und Dynamik.", "layer": "4" },
+    { "code": "4.3", "name": "Umwelt- & Strömungssimulation", "desc": "Klima-, Lüftungs- und Umweltbedingungssimulation.", "layer": "4" },
+    { "code": "4.4", "name": "Robotik & Fabriksimulation", "desc": "Kinematik-, Roboter- und Materialfluss-Simulation.", "layer": "4" },
+
+    { "code": "5.1", "name": "Echtzeit-3D & Spatial Engines", "desc": "Echtzeit-Rendering und 3D-Visualisierungs-Engines.", "layer": "5" },
+    { "code": "5.2", "name": "Spatial XR & VR/AR Headsets", "desc": "Immersive Headsets und Spatial-Computing-Hardware.", "layer": "5" }
+  ]
+}

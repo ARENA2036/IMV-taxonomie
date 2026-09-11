@@ -31,6 +31,7 @@ The architecture categorizes numerous audited technologies, standards, and proto
 The application is 100% JSON-driven without external database dependencies:
 
 ```
+taxonomy.config.json            (canonical 5-layer / 21-category taxonomy — SINGLE SOURCE)
 profiles/*.json                 (91 canonical technology profile JSON specifications)
 usecases/[slug]/usecase.json    (6 canonical Baukasten Use Case specifications & media assets)
        │
